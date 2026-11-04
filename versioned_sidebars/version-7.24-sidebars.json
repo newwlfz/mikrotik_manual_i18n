@@ -1,0 +1,12 @@
+{
+  "docs": [
+    {
+      "type": "doc",
+      "id": "introduction"
+    },
+    {
+      "type": "doc",
+      "id": "cli-reference/compare-versions"
+    }
+  ]
+}

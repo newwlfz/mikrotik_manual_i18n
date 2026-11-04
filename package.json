@@ -1,0 +1,36 @@
+{
+  "name": "mikrotik-manual-mirror",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Source-faithful, incrementally synchronised mirror of manual.mikrotik.com",
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "serve": "docusaurus serve",
+    "clear": "docusaurus clear",
+    "sync": "node pipeline/sync.mjs",
+    "verify:visual": "node pipeline/verify/visual.mjs",
+    "archive:session": "python3 pipeline/archive/export_session.py --session-id \"$DSH_SESSION_ID\" --out session-archive/sessions/$(date +%F)-session"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.10.1",
+    "@docusaurus/plugin-content-blog": "3.10.1",
+    "@docusaurus/plugin-content-docs": "3.10.1",
+    "@docusaurus/preset-classic": "3.10.1",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^2.0.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "3.10.1",
+    "@docusaurus/tsconfig": "3.10.1",
+    "@docusaurus/types": "3.10.1",
+    "typescript": "~5.6.2"
+  },
+  "engines": {
+    "node": ">=20.0"
+  }
+}

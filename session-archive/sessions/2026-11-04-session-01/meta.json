@@ -1,0 +1,14 @@
+{
+  "session_id": "session-1da523fb-3a00-4238-90c4-c37d34034607",
+  "cwd": "/home/evan/mikrotik_manual_i18n",
+  "created_at": 1793803941256,
+  "created_at_local": "2026-11-04 22:52:21 CST",
+  "title": "🛑 【最高纪律与红线：动手",
+  "turns": 2,
+  "tool_calls": 50,
+  "transcript": "transcript.md",
+  "tool_log": "tool-log.md",
+  "source_log": "/home/evan/.dsh/sessions/--home-evan-mikrotik_manual_i18n--/session-1da523fb-3a00-4238-90c4-c37d34034607/session.v4.jsonl.zstd",
+  "source_bytes": 410585,
+  "exported_at": "2026-11-04 23:23:31 CST"
+}
