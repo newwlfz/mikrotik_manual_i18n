@@ -1,0 +1,40 @@
+# Translation provider policy.
+# The workflow reads the API key from the environment variable named below.
+schema: 1
+
+provider: deepseek
+model: deepseek-chat
+api_key_env: DEEPSEEK_API_KEY
+base_url_env: DEEPSEEK_BASE_URL
+
+glossary: config/glossary/zh-Hans.yml
+batch_size: 8
+max_retries: 2
+temperature: 0
+
+# These structures are copied verbatim, never translated.
+preserve:
+  - frontmatter_keys
+  - code_fences
+  - inline_code
+  - urls
+  - cli_paths
+  - mdx_component_names
+  - image_paths
+
+frontmatter_keys:
+  - id
+  - slug
+  - sidebar_position
+  - sidebar_class_name
+  - displayed_sidebar
+  - tags
+  - keywords
+  - image
+  - draft
+
+# Only these frontmatter values may be translated.
+translatable_frontmatter:
+  - title
+  - sidebar_label
+  - description

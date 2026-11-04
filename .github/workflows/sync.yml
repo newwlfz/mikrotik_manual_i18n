@@ -1,0 +1,67 @@
+name: Sync official content
+
+# Deliberately feature-flagged. Set repository variable ENABLE_SYNC=true only
+# after `npm run sync` and `npm run translate` are implemented and verified.
+# The schedule then checks the official site daily, updates content, translates
+# enabled locales, builds, and commits the result. The push triggers pages.yml.
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Ignore source hashes and refresh everything
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    if: vars.ENABLE_SYNC == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Install Chromium for rendered sections
+        run: npx playwright install --with-deps chromium
+
+      - name: Detect and update official content
+        run: npm run sync -- --update ${{ inputs.force && '--force' || '' }}
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+          BASE_URL: ${{ vars.BASE_URL }}
+
+      - name: Translate enabled locales
+        run: npm run translate -- --changed
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_BASE_URL: ${{ vars.DEEPSEEK_BASE_URL }}
+
+      - name: Build before committing
+        run: npm run build
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+          BASE_URL: ${{ vars.BASE_URL }}
+
+      - name: Commit content and state
+        run: |
+          git config user.name "mikrotik-mirror-bot"
+          git config user.email "mikrotik-mirror-bot@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "No content changes."
+            exit 0
+          fi
+          git add versioned_docs hardware blog changelog i18n static data state
+          git commit -m "chore: sync official content"
+          git push

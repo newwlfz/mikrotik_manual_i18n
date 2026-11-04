@@ -1,13 +1,12 @@
-# MikroTik Manual Mirror — site repository
+# MikroTik Manual Mirror
 
-This repository is the **Docusaurus site only**. It is the directory pushed to
-GitHub.
+A source-faithful, version-aware mirror of <https://manual.mikrotik.com/>.
 
-Synchronisation code, raw state, reports, the conversation archive, official
-asset snapshots and scratch space live one level above this repository, in the
-workspace root. They are deliberately not committed here.
+This repository is the complete automation project: the Docusaurus site, the
+synchronisation/translation tools, the workflow configuration, and the state
+needed to detect changes. It is not a build-output-only repository.
 
-## Scope
+## Scope of phase 1
 
 - RouterOS documentation, version **7.24** only.
 - Hardware Guides.
@@ -15,7 +14,9 @@ workspace root. They are deliberately not committed here.
 - Docs Changes (`/changelog/`).
 - CLI comparison at the literal official URL
   `/docs/cli-reference/compare-versions/`.
-- English only in phase 1. No language switcher, no GitHub Actions.
+- English only. Translation is configured but disabled.
+- GitHub Actions are present: CI, Pages deploy, and a feature-flagged sync
+  workflow. The sync workflow stays disabled until its tools are implemented.
 
 ## Commands
 
@@ -23,6 +24,16 @@ workspace root. They are deliberately not committed here.
 npm ci
 npm run build
 npm run serve
+```
+
+Automation commands (implemented under `tools/`):
+
+```bash
+npm run sync -- --check
+npm run sync -- --update
+npm run sync -- --repair
+npm run translate -- --changed
+npm run verify
 ```
 
 ## Route map
@@ -35,29 +46,26 @@ npm run serve
 | Docs Changes | `/changelog/...` |
 | CLI compare | `/docs/cli-reference/compare-versions/` |
 
-The CLI compare route is a phase-1 pages shim because the official page lives
-inside the current 7.26 docs, while this mirror publishes only 7.24. The data
-model is shared and the shim can be replaced when multiple versions exist.
+The CLI compare route is a pages shim because the official page lives inside
+the current 7.26 docs, while this mirror publishes only 7.24. The data model is
+shared and the shim can be replaced when multiple versions exist.
 
-## Layout
+## Automation
 
-```text
-repo/
-├─ docusaurus.config.ts
-├─ sidebars.ts
-├─ sidebars-hardware.ts
-├─ versions.json
-├─ versioned_docs/version-7.24/
-├─ versioned_sidebars/
-├─ hardware/
-├─ blog/
-├─ changelog/
-├─ i18n/<locale>/            # phase 2
-├─ src/{pages,components,theme,css}
-├─ static/{img,hardware,blog}
-├─ package.json
-└─ package-lock.json
-```
+- `config/mirror.yml` — source, versions, sections, locale switches.
+- `config/translation.yml` — provider, model, glossary, preserved structures.
+- `state/` — committed source/translation hashes.
+- `data/cli/7.24/` — generated CLI model.
+- `tools/` — sync, translate and verify code.
+- `.github/workflows/` — CI, Pages, scheduled sync.
 
-See [ARCHITECTURE.md](ARCHITECTURE.md) for plugin routing, multilingual layout,
-asset policy and the incremental workflow.
+To enable a language later:
+
+1. set `locales.<locale>.enabled: true` and `translate: true` in
+   `config/mirror.yml`;
+2. set `translation.enabled: true`;
+3. add `DEEPSEEK_API_KEY` as a repository secret;
+4. run the sync workflow once. It creates the `i18n/<locale>/` overlay and
+   builds the locale routes.
+
+See [ARCHITECTURE.md](ARCHITECTURE.md) for the full design.

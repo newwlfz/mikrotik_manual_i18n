@@ -2,6 +2,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+const siteUrl = process.env.SITE_URL || 'https://mirror.invalid';
+const baseUrl = process.env.BASE_URL || '/';
+
 const config: Config = {
   title: 'RouterOS Manual',
   tagline: 'MikroTik RouterOS documentation, hardware guides, news and CLI reference',
@@ -9,8 +12,8 @@ const config: Config = {
 
   // The public mirror URL is intentionally not the official origin. It is
   // replaced when the repository is deployed.
-  url: 'https://mirror.invalid',
-  baseUrl: '/',
+  url: siteUrl,
+  baseUrl,
 
   onBrokenLinks: 'throw',
   markdown: {

@@ -1,0 +1,27 @@
+# Terms that must survive translation unchanged.
+# Extend this file instead of editing prompts in code.
+terms:
+  - source: RouterOS
+    target: RouterOS
+  - source: MikroTik
+    target: MikroTik
+  - source: WinBox
+    target: WinBox
+  - source: WebFig
+    target: WebFig
+  - source: CAPsMAN
+    target: CAPsMAN
+  - source: PoE
+    target: PoE
+  - source: SFP
+    target: SFP
+  - source: VLAN
+    target: VLAN
+  - source: VPN
+    target: VPN
+  - source: BGP
+    target: BGP
+  - source: OSPF
+    target: OSPF
+  - source: MPLS
+    target: MPLS

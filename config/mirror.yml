@@ -1,0 +1,51 @@
+# Mirror source, versions and locale policy.
+# This file is the single switchboard for the automated workflow.
+schema: 1
+
+source:
+  base_url: https://manual.mikrotik.com
+  versions:
+    - "7.24"
+  sections:
+    - docs
+    - hardware
+    - blog
+    - changelog
+
+sync:
+  state_file: state/sync_state.json
+  manifest_dir: data/manifests
+  work_dir: .work
+  concurrency: 4
+  request_timeout_seconds: 60
+  retry_limit: 3
+  user_agent: mikrotik-manual-mirror/1.0 (+https://github.com/)
+
+assets:
+  root: static
+  download_external: true
+  hash_algorithm: sha256
+
+site:
+  # Production values can be overridden by SITE_URL / BASE_URL in CI.
+  url: https://example.github.io
+  base_url: /
+  default_locale: en
+  organization: example
+  project: mikrotik-manual-mirror
+
+locales:
+  en:
+    label: English
+    enabled: true
+    translate: false
+  zh-Hans:
+    label: 简体中文
+    enabled: false
+    translate: true
+
+# Translation is off in phase 1. Flip this to true and enable a locale above
+# to let the workflow create i18n overlays and build that locale.
+translation:
+  file: config/translation.yml
+  enabled: false
