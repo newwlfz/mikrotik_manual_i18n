@@ -1,347 +1,242 @@
 # Architecture
 
-This document is the reference for the repository layout. It is deliberately
-written before content is imported so that the same rules apply to every later
-incremental run.
+This document describes the site repository and its relationship to the
+workspace around it. The repository is intentionally site-only.
 
-## 1. Ground rules
+## 1. Workspace layout
 
-1. **Official mechanism first.** The site runs Docusaurus **3.10.1**. This
-   repository pins that version and uses `@docusaurus/preset-classic` plus the
-   same plugin families the official site uses:
-   - default docs plugin: versioned RouterOS docs;
-   - a second docs plugin instance, id `hardware`, route `/hardware`;
-   - a blog plugin instance for `/blog`;
-   - a second blog plugin instance for `/changelog`;
-   - the pages plugin for the home page and the CLI comparison shell.
-2. **Content is not duplicated.** The Docusaurus content directories are the
-   canonical English source. `data/` stores manifests, hashes, CLI indexes and
-   sync state, not a second copy of every page.
-3. **Every write is idempotent.** Re-running a sync step must produce the same
-   bytes and the same state entry unless the official source changed.
-4. **Nothing temporary enters content directories.** Throwaway downloads go to
-   a system temporary directory. Resumable intermediate artefacts go to
-   `work/`, which is git-ignored.
-5. **The old sibling directories are invisible.** No script, glob, search, or
-   build step may enter them.
+```text
+~/mikrotik_manual_i18n/
+├─ repo/                    # GitHub repository: Docusaurus site only
+├─ pipeline/                # fetch, transform, CLI, state, verify
+├─ data/                    # sync state, manifests, CLI JSON
+├─ reports/                 # build, sync and visual evidence
+├─ session-archive/         # transcript, summaries, fragments, index
+├─ vendor/                  # official CSS/JS/static snapshots, browsers
+├─ work/                    # resumable scratch, git-ignored
+├─ incoming/                # audited legacy extraction staging
+├─ mikrotik-docs-i18n/      # legacy, to delete
+└─ mikrotik_manual_i18n/    # legacy, to delete
+```
+
+`repo/` is the only directory intended for a Git remote. Everything else is a
+sibling and must not be copied into the repository.
+
+Consequence: the GitHub repository contains the site and its content, not the
+synchronisation tooling. If the tooling must be published later, it becomes a
+second repository; it does not move into `repo/`.
 
 ## 2. Repository layout
 
 ```text
-mikrotik-manual-mirror/                 # dedicated GitHub repository
-├─ .git/
-├─ README.md
-├─ ARCHITECTURE.md
-├─ package.json                         # Docusaurus app + command entry points
-├─ package-lock.json
+repo/
 ├─ docusaurus.config.ts
 ├─ sidebars.ts
-├─ versions.json                        # ["7.24"] in phase 1
-├─ tsconfig.json
-│
+├─ sidebars-hardware.ts
+├─ versions.json                        # ["7.24"]
 ├─ versioned_docs/
-│  └─ version-7.24/                     # English RouterOS 7.24 (canonical)
-│     ├─ introduction.md
-│     ├─ getting-started/...
-│     └─ cli-reference/...
+│  └─ version-7.24/                     # English RouterOS 7.24
 ├─ versioned_sidebars/
-│  └─ version-7.24-sidebars.json        # generated from the official sidebar
-│
-├─ hardware/                            # English Hardware Guides (canonical)
-├─ blog/                                # English Product news (canonical)
-├─ changelog/                           # English Docs Changes (canonical)
-│
-├─ i18n/                                # translations only; empty in phase 1
-│  └─ <locale>/
-│     ├─ docusaurus-plugin-content-docs/version-7.24/...
-│     ├─ docusaurus-plugin-content-docs-hardware/current/...
-│     ├─ docusaurus-plugin-content-blog/...
-│     ├─ docusaurus-plugin-content-blog-changelog/...
-│     ├─ docusaurus-theme-classic/{navbar,footer}.json
-│     └─ code.json
-│
+│  └─ version-7.24-sidebars.json
+├─ hardware/                            # English Hardware Guides
+├─ blog/                                # English Product news
+├─ changelog/                           # English Docs Changes
+├─ i18n/<locale>/                       # phase-2 translation overlays
 ├─ src/
-│  ├─ pages/index.tsx                   # home page
-│  ├─ components/
-│  │  ├─ ArgTable/                      # official CLI table component
-│  │  └─ CliCompare/                    # official comparison UI
-│  ├─ theme/                            # only when an official component needs
-│  │  └─ ...                            # a faithful local implementation
-│  └─ css/custom.css                    # official custom CSS, if separable
-│
+│  ├─ pages/index.tsx                   # home
+│  ├─ pages/docs/cli-reference/compare-versions.tsx
+│  ├─ components/ArgTable/
+│  ├─ components/CliCompare/
+│  ├─ theme/
+│  └─ css/custom.css
 ├─ static/
-│  ├─ img/                              # logo, favicon, shared images
-│  ├─ hardware/                         # product images
-│  ├─ blog/                             # newsletter images
-│  └─ changelog/                        # changelog images, if any
-│
-├─ data/
-│  ├─ sync_state.json                   # authoritative incremental state
-│  ├─ manifests/
-│  │  ├─ site.json                      # source inventory + hashes
-│  │  ├─ docs-7.24.json
-│  │  ├─ hardware.json
-│  │  ├─ blog.json
-│  │  └─ changelog.json
-│  ├─ cli/
-│  │  └─ 7.24/
-│  │     ├─ en.json                     # parsed CLI model
-│  │     └─ zh-Hans.json                # future translation
-│  └─ schema/                           # JSON schemas for the above
-│
-├─ pipeline/                            # all fetching/transformation code
-│  ├─ archive/                          # DSH session exporter
-│  ├─ fetch/                            # HTTP, Playwright, retry, rate limit
-│  ├─ transform/                        # .md normalisation, HTML→MDX
-│  ├─ assets/                           # download, hash, rewrite references
-│  ├─ cli/                              # ArgTable → JSON → diff
-│  ├─ state/                            # sync_state read/write/lock
-│  └─ verify/                           # link, hash, DOM and screenshot checks
-│
-├─ vendor/
-│  └─ official/
-│     └─ 3.10.1/                        # snapshots for fidelity comparison
-│        ├─ css/
-│        ├─ js/
-│        └─ manifest.json               # URL + SHA-256 of every snapshot
-│
-├─ session-archive/                     # conversation history + retrieval index
-│  ├─ index.json
-│  ├─ README.md
-│  ├─ summaries/
-│  ├─ fragments/
-│  └─ sessions/
-│
-├─ reports/
-│  ├─ visual/                           # Playwright screenshots + report.html
-│  ├─ sync/                             # repair/diff reports
-│  └─ build/                            # link and asset audit
-│
-└─ work/                                # git-ignored, resumable only
-   ├─ html/                             # rendered hardware/blog snapshots
-   ├─ queue/                            # failed/remaining URLs
-   └─ logs/
+│  ├─ img/
+│  ├─ hardware/
+│  └─ blog/
+├─ package.json
+├─ package-lock.json
+├─ tsconfig.json
+└─ README.md
 ```
 
-`work/` is never committed. `data/cache/` and `vendor/cache/` are also ignored.
-A one-off download should use `mkdtemp()` under the system temporary directory.
+No `pipeline/`, `data/`, `reports/`, `session-archive/`, `vendor/` or `work/`
+inside this tree.
 
 ## 3. Docusaurus plugin routing
 
 ### 3.1 RouterOS docs
 
+Default docs plugin, versioned:
+
 ```ts
-{
-  id: 'default',
-  path: 'versioned_docs/version-7.24',   // resolved through versioning
+docs: {
   routeBasePath: 'docs',
-  sidebarPath: 'versioned_sidebars/version-7.24-sidebars.json',
+  sidebarPath: './sidebars.ts',
+  lastVersion: '7.24',
+  onlyIncludeVersions: ['7.24'],
 }
 ```
 
 - `versions.json`: `["7.24"]`
-- `lastVersion: '7.24'`
-- `onlyIncludeVersions: ['7.24']`
-- Public URLs: `/docs/7.24/...`
-- The current (unversioned) docs version is not published in phase 1.
+- Public URL: `/docs/7.24/...`
+- `/docs/` is not published.
+- `docs/index.md` is a current-version placeholder that the version filter
+  excludes. It exists only because the docs plugin expects a current source
+  directory.
 
-A two-page spike has already proved that Docusaurus 3.10.1 emits
-`/docs/7.24/...` with this configuration. The evidence is in
-`reports/build/route-spike.md`; `/docs/` is absent as intended.
+A build spike proved that Docusaurus 3.10.1 produces the required routes:
+`/docs/7.24/introduction/`, `/hardware/`, `/blog/`, `/changelog/`.
 
-### 3.2 Hardware Guides
+### 3.2 Hardware
 
-A second `@docusaurus/plugin-content-docs` instance:
+Separate `@docusaurus/plugin-content-docs` instance:
 
 ```ts
 {
   id: 'hardware',
   path: 'hardware',
   routeBasePath: 'hardware',
-  sidebarPath: 'sidebars-hardware.ts',
+  sidebarPath: './sidebars-hardware.ts',
 }
 ```
-
-This is why the official page carries `plugin-id-hardware` and
-`docs-version-current`. It is not a blog and not a custom route.
 
 ### 3.3 Product news
 
-```ts
-{
-  id: 'blog',
-  routeBasePath: 'blog',
-  path: 'blog',
-}
-```
+`@docusaurus/plugin-content-blog`, route `/blog`, path `blog`.
 
 ### 3.4 Docs Changes
 
-A second blog instance:
+Second blog plugin instance:
 
 ```ts
 {
   id: 'changelog',
-  routeBasePath: 'changelog',
   path: 'changelog',
+  routeBasePath: 'changelog',
   blogTitle: 'Docs Changes',
 }
 ```
 
-The two instances have separate sidebars, feeds and archive pages. They do not
-share route state.
+The two blog instances have separate feeds, archives and sidebars.
 
-### 3.5 CLI comparison
+### 3.5 CLI Compare
 
-The official page is an MDX document containing `<CliCompare />`. It exists
-only in the current 7.26 docs; `/docs/7.24/cli-reference/compare-versions/`
-returns 404 upstream. The comparison data is generated from the versioned CLI
-pages, not from RouterOS itself.
+Official page: `/docs/cli-reference/compare-versions/`, MDX with
+`<CliCompare />`, hosted upstream inside the current 7.26 docs.
 
-In this single-version mirror the page will be reachable at:
+Because phase 1 has no current docs version, the literal URL is served by a
+standard pages route:
 
 ```text
-/docs/7.24/cli-reference/compare-versions/
+repo/src/pages/docs/cli-reference/compare-versions.tsx
+→ /docs/cli-reference/compare-versions/
 ```
 
-The navigation label stays **Compare Versions**. The URL decision is recorded
-in the session archive; it can be changed without touching the data model.
+This is a compatibility shim, not a new content mechanism. It shares the CLI
+data model with the future versioned page. The earlier 7.24-scoped spike page
+was removed to avoid two public URLs.
 
 ## 4. Multilingual layout
 
-Docusaurus i18n has one canonical locale (English) and translated overlays.
-The repository does **not** keep two parallel content trees.
+English is canonical and lives in the normal Docusaurus directories. Every
+other locale is an overlay with the same relative paths.
 
-| Section | English (default) | Translation overlay | URL example |
+| Section | English source | Translation overlay | Route |
 | --- | --- | --- | --- |
-| RouterOS 7.24 | `versioned_docs/version-7.24/` | `i18n/<locale>/docusaurus-plugin-content-docs/version-7.24/` | `/docs/7.24/introduction` |
-| Hardware | `hardware/` | `i18n/<locale>/docusaurus-plugin-content-docs-hardware/current/` | `/hardware/netmetal-ax` |
-| Product news | `blog/` | `i18n/<locale>/docusaurus-plugin-content-blog/` | `/blog/news135` |
-| Docs Changes | `changelog/` | `i18n/<locale>/docusaurus-plugin-content-blog-changelog/` | `/changelog/changelog-2026-11-03` |
-| CLI compare data | `data/cli/7.24/en.json` | `data/cli/7.24/<locale>.json` | `/docs/7.24/cli-reference/compare-versions/` |
+| RouterOS 7.24 | `versioned_docs/version-7.24/` | `i18n/<locale>/docusaurus-plugin-content-docs/version-7.24/` | `/<locale>/docs/7.24/...` |
+| Hardware | `hardware/` | `i18n/<locale>/docusaurus-plugin-content-docs-hardware/current/` | `/<locale>/hardware/...` |
+| Product news | `blog/` | `i18n/<locale>/docusaurus-plugin-content-blog/` | `/<locale>/blog/...` |
+| Docs Changes | `changelog/` | `i18n/<locale>/docusaurus-plugin-content-blog-changelog/` | `/<locale>/changelog/...` |
+| CLI compare | `data/cli/7.24/en.json` (outside repo) | `data/cli/7.24/<locale>.json` | `/<locale>/docs/cli-reference/compare-versions/` |
 | Navbar/footer | theme config | `i18n/<locale>/docusaurus-theme-classic/` | locale-prefixed |
 | UI strings | source strings | `i18n/<locale>/code.json` | locale-prefixed |
 
-With `defaultLocale: 'en'` and `locales: ['en', 'zh-Hans']`, the translated
-routes become `/zh-Hans/docs/7.24/...`, `/zh-Hans/hardware/...`, etc.
-
 Rules:
 
-1. Every translated page keeps the English file path and slug. This keeps
-   cross-links, the CLI comparison, and future version diffs stable.
-2. Model numbers, CLI tokens and command paths are not translated. Prose,
-   headings, table descriptions and UI labels are.
-3. A missing translation falls back to English. Partial translations are
-   allowed.
-4. The CLI comparison reads the locale-specific JSON; if a locale JSON is
-   absent, it falls back to English and labels that fact in the report.
-5. No language switcher is enabled in phase 1. The directories and config keys
-   are prepared, but `locales` may remain `['en']` until phase 2.
+- Same file names and slugs as English.
+- Model numbers, CLI tokens, command paths and type names stay unchanged.
+- Prose, headings, table descriptions, navigation labels and compare legend
+  are translated.
+- Missing translations fall back to English; partial locales are valid.
+- No language switcher in phase 1. `locales` stays `['en']` until phase 2.
+- The exact plugin-folder suffix for the `hardware` and `changelog` instances
+  is verified during translation scaffolding.
 
-The exact `docusaurus-plugin-content-*` folder suffix for a non-default plugin
-id is verified during the scaffold step, not guessed in content scripts.
-
-## 5. Official CSS and JavaScript policy
-
-The goal is visual and structural fidelity, not copying a compiled application
-that would load the wrong data.
+## 5. Official CSS and JavaScript
 
 **Reused verbatim where safe**
 
-- `/img/logo.svg`, favicon, fonts, icons, Open Graph images and other static
-  assets.
+- Logo, favicon, fonts, icons, Open Graph images.
 - Standalone third-party assets that do not embed the official route map.
-- Custom CSS rules that can be separated from the generated bundle.
-- Official favicon and theme colour metadata.
+- Separable custom CSS rules and theme variables.
 
-**Regenerated with the same toolchain**
+**Regenerated**
 
-- Docusaurus `main.js` and `runtime~main.js`. The official bundles contain the
-  official route/chunk map and the 7.24/7.25/7.26 content manifest. Injecting
-  them into this repository would try to load the official site's data.
-- CSS Modules with build-hashed class names. The official
-  `styles.b36e0801.css` is kept as a comparison baseline; the local build is
-  expected to produce equivalent rules from the same Docusaurus version.
+- Docusaurus `main.js` and `runtime~main.js`.
+- CSS Modules with build-hashed class names.
 
-**Snapshots**
+There is no supported JavaScript override layer equivalent to CSS. Official
+bundles contain the official route/chunk map and the 7.24/7.25/7.26 content
+manifest. Injecting them into this build would create a second runtime and
+request official data. The lower-work, lower-risk path is:
 
-`vendor/official/3.10.1/manifest.json` records the source URL, byte count and
-SHA-256 of every official CSS/JS/static file used for comparison. This makes
-"we used the official file" auditable rather than a claim in prose.
+1. pin the exact Docusaurus version;
+2. regenerate the runtime;
+3. use official CSS/DOM as the comparison baseline;
+4. copy the small custom layer that is separable.
 
-The visual verifier compares computed styles and DOM landmarks, not only
-screenshots. A byte-identical CSS file is not useful if its hashed class names
-do not match the rendered DOM.
+Official snapshots and SHA-256 values live in
+`../vendor/official/3.10.1/manifest.json`. They are not part of the site build.
 
-## 6. Incremental synchronisation
+## 6. Incremental workflow
 
-`data/sync_state.json` is the single source of truth for what has been
-mirrored. It is written atomically (temporary file + rename) and is safe to
-commit.
+The synchroniser lives in `../pipeline/`. It writes state to
+`../data/sync_state.json` and never writes scratch into `repo/`.
 
-```json
-{
-  "schema": 1,
-  "source": "https://manual.mikrotik.com",
-  "generated_at": "2026-11-04T23:00:00+08:00",
-  "entries": {
-    "docs:7.24:introduction": {
-      "kind": "docs",
-      "section": "routeros",
-      "source_url": "https://manual.mikrotik.com/docs/7.24/introduction.md",
-      "source_hash": "sha256:...",
-      "local_path": "versioned_docs/version-7.24/introduction.md",
-      "local_hash": "sha256:...",
-      "assets": [],
-      "etag": null,
-      "last_modified": null,
-      "synced_at": "2026-11-04T23:00:00+08:00"
-    }
-  }
-}
-```
+Modes:
 
-Pipeline modes:
+- `--full` — fetch all inventory items.
+- `--check` — compare state, local files and remote validators.
+- `--repair` — restore missing or hash-mismatched files.
+- `--only=docs,hardware,blog,changelog,assets` — bounded runs.
+- `--dry-run` — report only.
 
-- `--full`: fetch every inventory item, transform, write, then rebuild state.
-- `--check`: compare state, local files and remote validators; write a report
-  only.
-- `--repair`: for each missing or hash-mismatched local file, re-fetch from its
-  recorded source URL, transform, verify, and update state.
-- `--only=docs,hardware,blog,changelog,assets`: bounded runs.
-- `--dry-run`: report actions without writing content.
+For HTML-only sections (Hardware, Blog, Changelog), the stored hash is the hash
+of the normalised Markdown, not raw HTML. Raw snapshots live in
+`../work/html/`.
 
-A missing local file is always repairable even when the remote page is
-byte-identical. That is the behaviour the phase-1 deletion drill tests.
+A missing local file is always repairable, even when the remote page is
+unchanged. This is the deletion drill requirement.
 
-For HTML-only sections (Hardware, Blog, Changelog), the recorded hash is the
-hash of the **normalised Markdown**, not the raw HTML. Raw HTML contains
-build-specific nonces and navigation that would make every run look changed.
-The raw snapshot lives in `work/html/` for audit and can be discarded.
+## 7. Legacy content reuse
 
-## 7. Build and verification gates
+The old `mikrotik_manual_i18n/repo/site` is read-only input, not authority.
 
-A build is accepted only when:
+| Section | Legacy | Official target | Gap |
+| --- | ---: | ---: | ---: |
+| 7.24 docs | 1,412 | 1,418 | 6 |
+| Hardware | 250 | 250 | 0 |
+| Product news | 6 | 10 | 4 |
+| Docs Changes | 97 | 132 | 35 |
 
-1. `npm run build` completes with `onBrokenLinks: 'throw'` and
-   `onBrokenMarkdownLinks: 'throw'`.
-2. every image referenced by content exists under `static/`;
-3. `data/sync_state.json` covers every inventory item;
-4. Playwright captures local and official pages at the same viewport;
-5. the DOM report shows matching navbar order, sidebar hierarchy, article
-   landmarks and footer columns;
-6. the screenshot report is attached with a list of known visual differences
-   (fonts, dynamic dates, external badges).
+Promotion rules:
+
+1. Copy candidates to `../incoming/legacy/`, never directly into `repo/`.
+2. Normalise the body and compare its hash with the official source.
+3. Promote only hash-matching content; re-fetch changed or missing pages.
+4. Move `source` / `captured_at` metadata into manifests or strip it.
+5. Leave the old directories untouched.
+
+Before the old directories are deleted, copy
+`mikrotik_manual_i18n/.browsers/chrome-linux64/` to
+`../vendor/browsers/chrome-linux64/` so the visual verifier can run offline.
 
 ## 8. Git policy
 
-- Repository root: `mikrotik-manual-mirror/`.
+- Repository root: `repo/`.
 - Branch: `main`.
-- No remote is configured during phase 1.
+- No remote during phase 1.
 - No GitHub Actions.
-- `work/`, build output and caches are ignored.
-- Content, manifests, pipeline code, reports and the session archive are
-  committed.
-- Large media is compressed only when it does not change rendered pixels; if
-  the repository approaches GitHub limits, Git LFS is introduced explicitly,
-  not silently.
+- Only site code and content are committed.
+- `node_modules/`, `build/`, `.docusaurus/` and logs are ignored.
+- Tooling, state, reports and the session archive are outside the repository.

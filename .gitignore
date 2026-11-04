@@ -1,6 +1,5 @@
 # Dependencies and build output
 node_modules/
-.npm/
 build/
 .docusaurus/
 .cache-loader/
@@ -10,16 +9,8 @@ build/
 .env.*
 !.env.example
 
-# Resumable sync work, raw HTML, queues and logs
-work/
-tmp/
+# Logs and browser artefacts
 *.log
-
-# Generated caches
-data/cache/
-vendor/cache/
-
-# Playwright artefacts
 playwright-report/
 test-results/
 blob-report/
@@ -29,6 +20,3 @@ blob-report/
 Thumbs.db
 .idea/
 .vscode/
-
-# Local exports of a chat that were not curated into session-archive
-dsh-chat-exports/

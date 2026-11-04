@@ -8,10 +8,7 @@
     "start": "docusaurus start",
     "build": "docusaurus build",
     "serve": "docusaurus serve",
-    "clear": "docusaurus clear",
-    "sync": "node pipeline/sync.mjs",
-    "verify:visual": "node pipeline/verify/visual.mjs",
-    "archive:session": "python3 pipeline/archive/export_session.py --session-id \"$DSH_SESSION_ID\" --out session-archive/sessions/$(date +%F)-session"
+    "clear": "docusaurus clear"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.1",

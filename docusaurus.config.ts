@@ -100,7 +100,7 @@ const config: Config = {
           position: 'left',
         },
         {
-          to: '/docs/7.24/cli-reference/compare-versions/',
+          to: '/docs/cli-reference/compare-versions/',
           label: 'Compare Versions',
           position: 'left',
         },

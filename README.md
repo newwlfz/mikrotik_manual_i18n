@@ -1,39 +1,63 @@
-# MikroTik Manual Mirror
+# MikroTik Manual Mirror — site repository
 
-A source-faithful, incrementally synchronised mirror of <https://manual.mikrotik.com/>.
+This repository is the **Docusaurus site only**. It is the directory pushed to
+GitHub.
 
-**Status: foundation / architecture phase.** No production content has been
-scraped yet. The old sibling directories `mikrotik-docs-i18n/` and
-`mikrotik_manual_i18n/` are out of scope and must never be read, changed, or
-used as input.
+Synchronisation code, raw state, reports, the conversation archive, official
+asset snapshots and scratch space live one level above this repository, in the
+workspace root. They are deliberately not committed here.
 
-## Scope of phase 1
+## Scope
 
 - RouterOS documentation, version **7.24** only.
 - Hardware Guides.
 - Product news (`/blog/`).
 - Docs Changes (`/changelog/`).
-- CLI Reference comparison, 7.24 against itself (zero differences).
-- English only. No translation and no language switcher in this phase.
-- No GitHub Actions and no remote configured.
+- CLI comparison at the literal official URL
+  `/docs/cli-reference/compare-versions/`.
+- English only in phase 1. No language switcher, no GitHub Actions.
 
-## Planned commands
+## Commands
 
 ```bash
 npm ci
-npm run sync -- --full       # populate the mirror from the official site
-npm run sync -- --check      # report missing/changed local files
-npm run sync -- --repair     # restore missing files and update state
 npm run build
 npm run serve
-npm run verify:visual        # Playwright DOM + screenshot comparison
 ```
 
-These commands are introduced as the implementation lands.
+## Route map
 
-## Repository map
+| Section | Route |
+| --- | --- |
+| RouterOS 7.24 | `/docs/7.24/...` |
+| Hardware | `/hardware/...` |
+| Product news | `/blog/...` |
+| Docs Changes | `/changelog/...` |
+| CLI compare | `/docs/cli-reference/compare-versions/` |
 
-See [ARCHITECTURE.md](ARCHITECTURE.md) for the full layout, plugin
-configuration, multilingual plan, asset policy, and incremental-sync design.
-See [session-archive/README.md](session-archive/README.md) for the conversation
-archive and its retrieval index.
+The CLI compare route is a phase-1 pages shim because the official page lives
+inside the current 7.26 docs, while this mirror publishes only 7.24. The data
+model is shared and the shim can be replaced when multiple versions exist.
+
+## Layout
+
+```text
+repo/
+├─ docusaurus.config.ts
+├─ sidebars.ts
+├─ sidebars-hardware.ts
+├─ versions.json
+├─ versioned_docs/version-7.24/
+├─ versioned_sidebars/
+├─ hardware/
+├─ blog/
+├─ changelog/
+├─ i18n/<locale>/            # phase 2
+├─ src/{pages,components,theme,css}
+├─ static/{img,hardware,blog}
+├─ package.json
+└─ package-lock.json
+```
+
+See [ARCHITECTURE.md](ARCHITECTURE.md) for plugin routing, multilingual layout,
+asset policy and the incremental workflow.
