@@ -1,0 +1,9 @@
+{
+  "key": "wireless-systems",
+  "label": "Wireless systems",
+  "position": 13,
+  "link": {
+    "type": "doc",
+    "id": "wireless-systems/basebox-series"
+  }
+}

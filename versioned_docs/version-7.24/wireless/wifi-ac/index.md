@@ -1,0 +1,33 @@
+---
+sidebar_key: "wireless/wifi-ac/index"
+sidebar_position: 1
+title: "Wi-Fi 5 (802.11ac)"
+source: https://manual.mikrotik.com/docs/7.24/wireless/wifi-ac
+captured_at: '2026-11-04T11:35:47+08:00'
+---
+
+This section covers MikroTik **802.11ac (Wi-Fi 5)** ARM-based devices. These products are special: the **same hardware can be configured through either of two RouterOS menus**, depending on which driver package is installed. Pick the one that matches the features you need.
+:::warning
+`wifi-qcom-ac` drivers are very resource-heavy. We suggest using our WiFi 5 (802.11ac) devices with their original `wireless` drivers as they are lightweight.
+:::
+
+## Two ways to run an 802.11ac device
+
+| If you need… | Install package | Configure under | Documentation |
+| :-- | :-- | :-- | :-- |
+| WPA3, fast roaming (802.11r), the new CAPsMAN | `routeros` + `wifi-qcom-ac` | `/interface/wifi` | [Wi-Fi 6 / 7 (802.11ax/be)](https://manual.mikrotik.com/docs/7.24/wifi/index) — the `/interface/wifi` menu is shared |
+| Nstreme, Nv2, WDS, HWMP+ mesh, the old CAPsMAN | `routeros` + `wireless` | `/interface/wireless` | [802.11 a/b/g/n](https://manual.mikrotik.com/docs/7.24/abgn/index) — the `/interface/wireless` menu is shared |
+
+You cannot use both packages at the same time on the built-in radios — see [Replacing the 'wireless' package](https://manual.mikrotik.com/docs/7.24/wifi/index) for how to switch.
+
+:::info
+The new `/interface/wifi` menu manages **Wi-Fi 5 wave2 and newer** interfaces, so 802.11ac devices running `wifi-qcom-ac` use exactly the same configuration as the 802.11ax/be devices documented under [Wi-Fi 6 / 7 (802.11ax/be)](https://manual.mikrotik.com/docs/7.24/wifi/index). This section therefore links to that reference rather than duplicating it.
+:::
+
+## Devices with a choice of driver
+
+The following 802.11ac ARM models can run either `wifi-qcom-ac` (new `/interface/wifi` menu) or `wireless` (legacy `/interface/wireless` menu):
+
+> Audience, Audience LTE kit, Chateau (all variants of D53), hAP ac², hAP ac³, cAP ac, cAP XL ac, LDF 5 ac, LHG XL 5 ac, LHG XL 52 ac, NetMetal ac², mANTBox 52 15s, wAP ac (RBwAPG-5HacD2HnD), SXTsq 5 ac
+
+For choosing packages by device type and CAPsMAN scenario, see the decision tables on the [Wireless overview](https://manual.mikrotik.com/docs/7.24/index).

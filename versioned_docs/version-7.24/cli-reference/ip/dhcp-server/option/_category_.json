@@ -1,0 +1,11 @@
+{
+  "position": 7,
+  "label": "Option",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/dhcp-server/option/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/dhcp-server/option"
+}

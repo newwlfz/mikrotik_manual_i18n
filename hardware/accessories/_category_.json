@@ -1,0 +1,9 @@
+{
+  "key": "accessories",
+  "label": "Accessories",
+  "position": 3,
+  "link": {
+    "type": "doc",
+    "id": "accessories/apa-1"
+  }
+}

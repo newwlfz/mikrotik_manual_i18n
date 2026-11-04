@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Mangle",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ipv6/firewall/mangle/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ipv6/firewall/mangle"
+}

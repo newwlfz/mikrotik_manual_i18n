@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "GPIO",
+  "key": "internet-of-things/gpio",
+  "link": {
+    "type": "doc",
+    "id": "internet-of-things/gpio/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

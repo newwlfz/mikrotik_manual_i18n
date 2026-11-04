@@ -1,0 +1,11 @@
+{
+  "position": 10,
+  "label": "Nat",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/bridge/nat/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/bridge/nat"
+}

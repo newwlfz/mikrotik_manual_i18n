@@ -1,0 +1,26 @@
+---
+sidebar_key: "cli-reference/interface/wireless/sniffer/index"
+sidebar_position: 1
+title: "sniffer"
+source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/sniffer
+captured_at: '2026-11-01T21:28:03+08:00'
+---
+
+-----------
+
+## interface/wireless/sniffer 
+**Package:** wireless-rep
+**Type:** Settings Directory
+
+<ArgTable c1="Argument" c2="Type" c3="Description">
+<ArgTableRow arg="multiple-channels" typ="bool"></ArgTableRow>
+<ArgTableRow arg="channel-time" typ="time"></ArgTableRow>
+<ArgTableRow arg="only-headers" typ="bool"></ArgTableRow>
+<ArgTableRow arg="receive-errors" typ="bool"></ArgTableRow>
+<ArgTableRow arg="memory-limit" typ="num"></ArgTableRow>
+<ArgTableRow arg="file-name" typ="string"></ArgTableRow>
+<ArgTableRow arg="file-limit" typ="num"></ArgTableRow>
+<ArgTableRow arg="streaming-enabled" typ="bool"></ArgTableRow>
+<ArgTableRow arg="streaming-server" typ="ipAddr"></ArgTableRow>
+<ArgTableRow arg="streaming-max-rate" typ="num"></ArgTableRow>
+</ArgTable>

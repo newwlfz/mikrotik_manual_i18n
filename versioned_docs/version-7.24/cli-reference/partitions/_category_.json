@@ -1,0 +1,11 @@
+{
+  "position": 14,
+  "label": "partitions",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/partitions/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/partitions"
+}

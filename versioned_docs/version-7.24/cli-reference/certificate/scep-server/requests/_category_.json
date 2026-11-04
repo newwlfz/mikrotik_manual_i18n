@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Requests",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/certificate/scep-server/requests/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/certificate/scep-server/requests"
+}

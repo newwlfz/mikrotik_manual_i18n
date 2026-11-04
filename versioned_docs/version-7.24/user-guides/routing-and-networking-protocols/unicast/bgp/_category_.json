@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "Bgp",
+  "key": "routing-and-networking-protocols/unicast/bgp",
+  "link": {
+    "type": "doc",
+    "id": "routing-and-networking-protocols/unicast/bgp/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

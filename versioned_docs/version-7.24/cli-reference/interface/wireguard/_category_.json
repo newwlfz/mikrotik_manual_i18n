@@ -1,0 +1,11 @@
+{
+  "position": 43,
+  "label": "Wireguard",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/wireguard/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/wireguard"
+}

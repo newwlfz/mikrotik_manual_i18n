@@ -264,31 +264,31 @@ of the normalised Markdown, not raw HTML. Raw snapshots go to `.work/`.
 A missing local file is always repairable, even when the remote page is
 unchanged. This is the deletion drill requirement.
 
-## 9. Legacy content reuse
+## 9. Current inventory and legacy reuse
 
-The old `mikrotik_manual_i18n/repo/site` is read-only input, not authority.
+The legacy project was used as the localised image/body baseline, then the
+official gaps were fetched. Current imported inventory:
 
-| Section | Legacy | Official target | Gap |
-| --- | ---: | ---: | ---: |
-| 7.24 docs | 1,412 | 1,418 | 6 |
-| Hardware | 250 | 250 | 0 |
-| Product news | 6 | 10 | 4 |
-| Docs Changes | 97 | 132 | 35 |
+| Section | Local | Official target | Status |
+| --- | ---: | ---: | --- |
+| RouterOS 7.24 | 1,422 | 1,418 | complete, including compatibility pages |
+| Hardware | 250 | 250 | complete |
+| Product news | 6 | 6 | complete |
+| Docs Changes | 108 | 108 | complete |
+| CLI Reference | 1,054 commands | 1,055 commands | one root-level command pending |
 
-Decision: **fill all gaps before publishing**. Do not ship an incomplete site
-as a workflow test fixture. Workflow validation uses a throwaway branch or a
-local deletion drill instead.
+`STRICT_LINKS=true npm run build` succeeds with zero broken links. Pagefind
+indexes 1,810 output pages.
 
-Promotion rules:
+Deletion drill:
 
-1. Copy candidates to `../incoming/legacy/`, never directly into `repo/`.
-2. Normalise the body and compare its hash with the official source.
-3. Promote only hash-matching content; re-fetch changed or missing pages.
-4. Move `source` / `captured_at` metadata into manifests or strip it.
-5. Leave the old directories untouched.
+1. remove one docs, one hardware and one blog file;
+2. `node tools/sync/index.mjs --check` reports exactly three missing entries;
+3. `node tools/sync/index.mjs --repair` restores all three;
+4. `--check` returns `missing=0 changed=0`.
 
-The old Chrome binary is preserved at
-`../vendor/browsers/chrome-linux64/chrome`.
+Promotion rules remain: legacy content is read-only input, and only verified
+content is copied into the repository.
 
 ## 10. Git policy
 

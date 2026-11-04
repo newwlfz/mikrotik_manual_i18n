@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "System Information and Utilities",
+  "key": "system-information-and-utilities",
+  "link": {
+    "type": "doc",
+    "id": "system-information-and-utilities/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

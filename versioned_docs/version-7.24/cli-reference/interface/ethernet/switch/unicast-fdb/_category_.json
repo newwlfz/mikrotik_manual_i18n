@@ -1,0 +1,11 @@
+{
+  "position": 27,
+  "label": "Unicast Fdb",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/ethernet/switch/unicast-fdb/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/ethernet/switch/unicast-fdb"
+}

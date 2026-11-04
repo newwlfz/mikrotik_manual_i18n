@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "User Guides",
+  "key": "internet-of-things/lora/user-guides",
+  "link": {
+    "type": "doc",
+    "id": "internet-of-things/lora/user-guides/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

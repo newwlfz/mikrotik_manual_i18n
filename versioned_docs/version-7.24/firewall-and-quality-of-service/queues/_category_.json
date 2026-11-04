@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Queues",
+  "key": "firewall-and-quality-of-service/queues",
+  "link": {
+    "type": "doc",
+    "id": "firewall-and-quality-of-service/queues/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

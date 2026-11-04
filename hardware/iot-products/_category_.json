@@ -1,0 +1,9 @@
+{
+  "key": "iot-products",
+  "label": "IoT products",
+  "position": 9,
+  "link": {
+    "type": "doc",
+    "id": "iot-products/cme22-2n-bg77"
+  }
+}

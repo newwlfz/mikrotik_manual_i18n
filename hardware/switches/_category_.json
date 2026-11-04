@@ -1,0 +1,9 @@
+{
+  "key": "switches",
+  "label": "Switches",
+  "position": 12,
+  "link": {
+    "type": "doc",
+    "id": "switches/crs-series"
+  }
+}

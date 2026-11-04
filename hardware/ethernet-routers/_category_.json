@@ -1,0 +1,9 @@
+{
+  "key": "ethernet-routers",
+  "label": "Ethernet routers",
+  "position": 6,
+  "link": {
+    "type": "doc",
+    "id": "ethernet-routers/ccr1009-7g-1c-1s-plus-pc"
+  }
+}

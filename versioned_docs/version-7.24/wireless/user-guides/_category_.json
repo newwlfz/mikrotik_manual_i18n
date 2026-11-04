@@ -1,0 +1,11 @@
+{
+  "position": 5,
+  "label": "User Guides",
+  "key": "wireless/user-guides",
+  "link": {
+    "type": "doc",
+    "id": "wireless/user-guides/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

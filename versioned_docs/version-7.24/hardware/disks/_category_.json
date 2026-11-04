@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Disks",
+  "key": "hardware/disks",
+  "link": {
+    "type": "doc",
+    "id": "hardware/disks/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "Option",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ipv6/dhcp-server/option/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ipv6/dhcp-server/option"
+}

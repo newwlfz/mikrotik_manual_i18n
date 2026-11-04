@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "Mikrotik Beacon Manager",
+  "key": "internet-of-things/bluetooth/mikrotik-beacon-manager",
+  "link": {
+    "type": "doc",
+    "id": "internet-of-things/bluetooth/mikrotik-beacon-manager/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

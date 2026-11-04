@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Active Peers",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/ipsec/active-peers/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/ipsec/active-peers"
+}

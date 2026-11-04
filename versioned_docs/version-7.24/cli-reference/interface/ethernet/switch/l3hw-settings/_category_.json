@@ -1,0 +1,11 @@
+{
+  "position": 10,
+  "label": "L3Hw Settings",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/ethernet/switch/l3hw-settings/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/ethernet/switch/l3hw-settings"
+}

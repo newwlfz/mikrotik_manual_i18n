@@ -1,0 +1,11 @@
+{
+  "position": 19,
+  "label": "radius",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/radius/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/radius"
+}

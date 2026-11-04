@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "Lora",
+  "key": "internet-of-things/lora",
+  "link": {
+    "type": "doc",
+    "id": "internet-of-things/lora/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

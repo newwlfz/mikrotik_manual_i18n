@@ -1,0 +1,11 @@
+{
+  "position": 5,
+  "label": "MQTT",
+  "key": "internet-of-things/mqtt",
+  "link": {
+    "type": "doc",
+    "id": "internet-of-things/mqtt/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

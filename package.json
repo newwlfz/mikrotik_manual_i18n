@@ -6,12 +6,13 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "docusaurus build",
+    "build": "npm run cli:build && docusaurus build && pagefind --site build",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
     "sync": "node tools/sync/index.mjs",
     "translate": "node tools/translate/index.mjs",
-    "verify": "node tools/verify/index.mjs"
+    "verify": "node tools/verify/index.mjs",
+    "cli:build": "node tools/cli/build-cli-data.mjs && cp data/cli/7.24/en.json static/cli/7.24.json"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.1",
@@ -29,6 +30,10 @@
     "@docusaurus/module-type-aliases": "3.10.1",
     "@docusaurus/tsconfig": "3.10.1",
     "@docusaurus/types": "3.10.1",
+    "pagefind": "^1.6.0",
+    "playwright-core": "^1.64.1",
+    "turndown": "^7.2.5",
+    "turndown-plugin-gfm": "^1.0.2",
     "typescript": "~5.6.2"
   },
   "engines": {

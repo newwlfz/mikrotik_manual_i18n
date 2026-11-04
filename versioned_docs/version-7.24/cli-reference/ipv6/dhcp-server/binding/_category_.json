@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Binding",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ipv6/dhcp-server/binding/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ipv6/dhcp-server/binding"
+}

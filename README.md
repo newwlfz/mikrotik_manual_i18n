@@ -72,3 +72,12 @@ To enable a language later:
    builds the locale routes.
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for the full design.
+
+## Current status
+
+- 1,422 RouterOS 7.24 docs, 250 hardware guides, 6 news posts, 108 changelog posts.
+- Strict build passes with zero broken links.
+- Pagefind search, Widen/Narrow, day/night mode and accordion sidebar are implemented.
+- Deletion/repair drill passes for docs, hardware and blog.
+- Local-vs-official visual report is in `../reports/visual/report.html`.
+- `tools/sync --update` is still disabled; the workflow is gated by `ENABLE_SYNC`.

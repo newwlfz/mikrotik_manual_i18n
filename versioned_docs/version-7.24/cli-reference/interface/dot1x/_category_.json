@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "Dot1X",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/dot1x/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/dot1x"
+}

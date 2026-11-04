@@ -1,0 +1,11 @@
+{
+  "position": 14,
+  "label": "User Profile",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/user-manager/user-profile/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/user-manager/user-profile"
+}

@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "Sync",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/file/sync/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/file/sync"
+}

@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Capsman",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/wifi/capsman/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/wifi/capsman"
+}

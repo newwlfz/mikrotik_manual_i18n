@@ -1,0 +1,11 @@
+{
+  "position": 21,
+  "label": "Snooper",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/wireless/snooper/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/wireless/snooper"
+}

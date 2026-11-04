@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "Simple",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/queue/simple/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/queue/simple"
+}

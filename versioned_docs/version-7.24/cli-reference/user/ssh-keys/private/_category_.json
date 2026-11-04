@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "Private",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/user/ssh-keys/private/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/user/ssh-keys/private"
+}

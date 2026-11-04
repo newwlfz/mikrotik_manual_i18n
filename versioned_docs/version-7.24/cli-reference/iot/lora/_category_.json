@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "Lora",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/iot/lora/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/iot/lora"
+}

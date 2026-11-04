@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "Database",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/user-manager/database/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/user-manager/database"
+}

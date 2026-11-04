@@ -1,0 +1,9 @@
+{
+  "key": "lte-products",
+  "label": "LTE products",
+  "position": 10,
+  "link": {
+    "type": "doc",
+    "id": "lte-products/atlgm-and-eg18-ea"
+  }
+}

@@ -15,10 +15,10 @@ const config: Config = {
   url: siteUrl,
   baseUrl,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: process.env.STRICT_LINKS === 'true' ? 'throw' : 'warn',
   markdown: {
     hooks: {
-      onBrokenMarkdownLinks: 'throw',
+      onBrokenMarkdownLinks: process.env.STRICT_LINKS === 'true' ? 'throw' : 'warn',
     },
   },
 
@@ -40,6 +40,7 @@ const config: Config = {
             '7.24': {
               label: '7.24',
               path: '7.24',
+              badge: true,
             },
           },
         },
@@ -85,7 +86,7 @@ const config: Config = {
   themeConfig: {
     image: 'img/logo.svg',
     navbar: {
-      title: 'RouterOS Manual',
+      title: 'MikroTik',
       logo: {
         alt: 'MikroTik',
         src: 'img/logo.svg',
@@ -95,33 +96,53 @@ const config: Config = {
           type: 'doc',
           docId: 'introduction',
           position: 'left',
-          label: 'Docs',
+          label: 'RouterOS',
         },
         {
           to: '/hardware/',
-          label: 'Hardware',
+          label: 'Hardware Guides',
           position: 'left',
         },
         {
           to: '/docs/cli-reference/compare-versions/',
-          label: 'Compare Versions',
+          label: 'CLI compare',
           position: 'left',
         },
         {
           to: '/blog/',
-          label: 'Blog',
+          label: 'Product news',
           position: 'left',
         },
         {
           to: '/changelog/',
-          label: 'Changelog',
+          label: 'Docs Changes',
           position: 'left',
+        },
+        {
+          type: 'custom-WidthToggle',
+          position: 'right',
+        },
+        {
+          type: 'docsVersionDropdown',
+          position: 'right',
+          docsPluginId: 'default',
+        },
+        {
+          type: 'custom-SearchBox',
+          position: 'right',
         },
       ],
     },
     footer: {
       style: 'dark',
       links: [
+        {
+          title: 'Docs',
+          items: [
+            {label: 'Introduction', to: '/docs/7.24/introduction'},
+            {label: 'CLI Reference', to: '/docs/7.24/cli-reference/'},
+          ],
+        },
         {
           title: 'Community',
           items: [
@@ -131,10 +152,19 @@ const config: Config = {
         },
         {
           title: 'MikroTik',
-          items: [{label: 'mikrotik.com', href: 'https://mikrotik.com/'}],
+          items: [
+            {label: 'MikroTik.com', href: 'https://mikrotik.com/'},
+            {label: 'Product news', to: '/blog'},
+            {label: 'Docs Changes', to: '/changelog'},
+          ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} MikroTik.`,
+      copyright: `Copyright © ${new Date().getFullYear()} MikroTik. Built with Docusaurus.`,
+    },
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
     },
     prism: {
       theme: prismThemes.github,

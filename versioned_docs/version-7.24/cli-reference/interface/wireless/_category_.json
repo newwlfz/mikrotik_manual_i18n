@@ -1,0 +1,11 @@
+{
+  "position": 44,
+  "label": "Wireless",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/wireless/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/wireless"
+}

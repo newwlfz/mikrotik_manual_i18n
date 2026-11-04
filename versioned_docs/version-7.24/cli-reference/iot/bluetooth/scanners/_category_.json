@@ -1,0 +1,11 @@
+{
+  "position": 7,
+  "label": "Scanners",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/iot/bluetooth/scanners/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/iot/bluetooth/scanners"
+}

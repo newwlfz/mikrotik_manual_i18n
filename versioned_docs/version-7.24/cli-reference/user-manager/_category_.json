@@ -1,0 +1,11 @@
+{
+  "position": 28,
+  "label": "user-manager",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/user-manager/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/user-manager"
+}

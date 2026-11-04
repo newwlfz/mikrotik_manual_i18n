@@ -1,0 +1,11 @@
+{
+  "position": 7,
+  "label": "Wired Connections",
+  "key": "wired-connections",
+  "link": {
+    "type": "doc",
+    "id": "wired-connections/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

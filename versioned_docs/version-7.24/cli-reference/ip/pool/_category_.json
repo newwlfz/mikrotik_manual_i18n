@@ -1,0 +1,11 @@
+{
+  "position": 16,
+  "label": "Pool",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/pool/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/pool"
+}

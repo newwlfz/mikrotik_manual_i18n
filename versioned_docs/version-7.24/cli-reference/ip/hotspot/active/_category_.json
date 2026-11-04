@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Active",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/hotspot/active/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/hotspot/active"
+}

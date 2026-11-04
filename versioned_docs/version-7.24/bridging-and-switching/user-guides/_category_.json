@@ -1,0 +1,11 @@
+{
+  "position": 10,
+  "label": "User Guides",
+  "key": "bridging-and-switching/user-guides",
+  "link": {
+    "type": "doc",
+    "id": "bridging-and-switching/user-guides/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}
