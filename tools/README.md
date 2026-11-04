@@ -10,15 +10,17 @@ npm run sync -- --check          # detect remote changes, no writes
 npm run sync -- --update         # fetch normalise and write content
 npm run sync -- --repair         # restore missing or changed local files
 npm run sync -- --only=docs,hardware,blog,changelog
-npm run translate -- --changed   # translate only stale locale files
-npm run translate -- --locale=zh-Hans --force
+# Phase 2 only:
+# npm run translate -- --changed
+# npm run translate -- --locale=zh-Hans --force
 npm run verify                   # link, asset and inventory checks
 ```
 
 Directories:
 
 - `sync/` — inventory, HTTP fetch, Playwright render, transform, state.
-- `translate/` — config-driven Markdown translation and translation state.
+- `translate/` — phase 2 only; config-driven Markdown translation. Not
+  implemented or invoked in phase 1.
 - `verify/` — link/asset/state checks used by CI.
 
 Implementation rules:

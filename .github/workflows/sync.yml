@@ -1,9 +1,9 @@
 name: Sync official content
 
 # Deliberately feature-flagged. Set repository variable ENABLE_SYNC=true only
-# after `npm run sync` and `npm run translate` are implemented and verified.
-# The schedule then checks the official site daily, updates content, translates
-# enabled locales, builds, and commits the result. The push triggers pages.yml.
+# after `npm run sync` is implemented and verified.
+# Phase 1 is English-only: this workflow syncs, builds and commits. It does not
+# translate. Translation is phase 2 and will be a separate step.
 on:
   schedule:
     - cron: "17 3 * * *"
@@ -41,12 +41,6 @@ jobs:
         env:
           SITE_URL: ${{ vars.SITE_URL }}
           BASE_URL: ${{ vars.BASE_URL }}
-
-      - name: Translate enabled locales
-        run: npm run translate -- --changed
-        env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          DEEPSEEK_BASE_URL: ${{ vars.DEEPSEEK_BASE_URL }}
 
       - name: Build before committing
         run: npm run build

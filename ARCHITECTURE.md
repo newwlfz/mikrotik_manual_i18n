@@ -206,16 +206,18 @@ deploy. This is the only deployment path.
 ### `sync.yml`
 
 Scheduled daily and manually dispatchable. It is feature-flagged with the
-repository variable `ENABLE_SYNC=true`; it stays disabled until the sync and
-translate tools are implemented and verified.
+repository variable `ENABLE_SYNC=true`; it stays disabled until the sync tool
+is implemented and verified.
 
-When enabled:
+When enabled in phase 1:
 
-1. check the official site and update content;
-2. translate stale pages for enabled locales;
-3. build;
-4. commit content + state if anything changed;
-5. the push triggers `pages.yml`.
+1. check the official site and update English content;
+2. build;
+3. commit content + state if anything changed;
+4. the push triggers `pages.yml`.
+
+Translation is a separate phase-2 step. It is not part of the phase-1
+workflow.
 
 This avoids a bot commit loop: `sync.yml` runs on a schedule/manual dispatch,
 while `pages.yml` runs on the resulting push.

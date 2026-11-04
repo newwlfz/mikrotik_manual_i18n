@@ -14,7 +14,8 @@ needed to detect changes. It is not a build-output-only repository.
 - Docs Changes (`/changelog/`).
 - CLI comparison at the literal official URL
   `/docs/cli-reference/compare-versions/`.
-- English only. Translation is configured but disabled.
+- English only. Translation is configured but disabled and not implemented
+  in phase 1.
 - GitHub Actions are present: CI, Pages deploy, and a feature-flagged sync
   workflow. The sync workflow stays disabled until its tools are implemented.
 
@@ -26,15 +27,17 @@ npm run build
 npm run serve
 ```
 
-Automation commands (implemented under `tools/`):
+Phase 1 automation commands (implemented under `tools/`):
 
 ```bash
 npm run sync -- --check
 npm run sync -- --update
 npm run sync -- --repair
-npm run translate -- --changed
 npm run verify
 ```
+
+Translation (`npm run translate`) is phase 2 and is not invoked by the phase-1
+workflow.
 
 ## Route map
 
