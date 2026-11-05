@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ipv6/firewall/mangle/index"
 sidebar_position: 1
 title: "mangle"
+description: 'RouterOS directory reference for /ipv6/firewall/mangle.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/firewall/mangle
 captured_at: '2026-11-01T21:29:07+08:00'
 ---

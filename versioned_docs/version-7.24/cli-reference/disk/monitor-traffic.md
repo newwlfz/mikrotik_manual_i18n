@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/disk/monitor-traffic"
 sidebar_position: 8
 title: "monitor-traffic"
+description: 'RouterOS command reference for /disk/monitor-traffic.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/disk/monitor-traffic
 captured_at: '2026-11-01T21:26:46+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/sup-output"
 sidebar_position: 32
 title: "sup-output"
+description: 'RouterOS command reference for /system/sup-output.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/sup-output
 captured_at: '2026-11-01T21:30:07+08:00'
 ---

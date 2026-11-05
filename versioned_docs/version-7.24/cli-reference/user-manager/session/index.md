@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user-manager/session/index"
 sidebar_position: 2
 title: "session"
+description: 'RouterOS directory reference for /user-manager/session.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/session
 captured_at: '2026-11-01T21:30:32+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/caps-man/aaa"
 sidebar_position: 1
 title: "aaa"
+description: 'RouterOS settings reference for /caps-man/aaa.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/caps-man/aaa
 captured_at: '2026-11-01T21:26:18+08:00'
 ---

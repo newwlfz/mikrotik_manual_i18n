@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/mqtt/mqtt-and-thingsboard-configuration"
 sidebar_position: 4
 title: "MQTT and ThingsBoard configuration"
+description: 'This page guides MikroTik RouterOS users through configuring MQTT data publishing to ThingsBoard, covering device setup, authentication scenarios (access tokens, basic credentials, SSL/TLS), and certificate...'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/mqtt/mqtt-and-thingsboard-configuration
 captured_at: '2026-11-04T11:32:01+08:00'
 ---

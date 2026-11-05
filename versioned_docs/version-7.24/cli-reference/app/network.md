@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/app/network"
 sidebar_position: 3
 title: "network"
+description: 'RouterOS directory reference for /app/network.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/app/network
 captured_at: '2026-11-01T21:26:17+08:00'
 ---

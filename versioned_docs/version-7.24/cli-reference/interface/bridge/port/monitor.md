@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/bridge/port/monitor"
 sidebar_position: 2
 title: "monitor"
+description: 'RouterOS command reference for /interface/bridge/port/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bridge/port/monitor
 captured_at: '2026-11-01T21:27:01+08:00'
 ---

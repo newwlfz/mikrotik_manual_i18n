@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/smb/index"
 sidebar_position: 1
 title: "smb"
+description: 'RouterOS settings reference for /ip/smb.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/smb
 captured_at: '2026-11-01T21:28:57+08:00'
 ---

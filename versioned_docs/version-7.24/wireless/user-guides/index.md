@@ -2,6 +2,7 @@
 sidebar_key: "wireless/user-guides/index"
 sidebar_position: 2
 title: "Case studies"
+description: 'Cross-driver wireless case studies for MikroTik RouterOS: practical designs and workflows that apply to both the /interface/wireless and /interface/wifi menus, covering wireless station modes and enterprise wireless...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/user-guides
 captured_at: '2026-11-04T11:35:32+08:00'
 ---

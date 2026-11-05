@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/qos/map/vlan"
 sidebar_position: 3
 title: "vlan"
+description: 'RouterOS directory reference for /interface/ethernet/switch/qos/map/vlan.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/qos/map/vlan
 captured_at: '2026-11-01T21:27:17+08:00'
 ---

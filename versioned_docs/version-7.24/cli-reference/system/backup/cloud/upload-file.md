@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/backup/cloud/upload-file"
 sidebar_position: 4
 title: "upload-file"
+description: 'RouterOS command reference for /system/backup/cloud/upload-file.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/backup/cloud/upload-file
 captured_at: '2026-11-01T21:29:44+08:00'
 ---

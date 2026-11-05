@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/torch"
 sidebar_position: 23
 title: "torch"
+description: 'RouterOS command reference for /tool/torch.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/torch
 captured_at: '2026-11-01T21:30:24+08:00'
 ---

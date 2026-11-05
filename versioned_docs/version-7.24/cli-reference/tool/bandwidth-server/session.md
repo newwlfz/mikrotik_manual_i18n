@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/bandwidth-server/session"
 sidebar_position: 2
 title: "session"
+description: 'RouterOS directory reference for /tool/bandwidth-server/session.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/bandwidth-server/session
 captured_at: '2026-11-01T21:30:13+08:00'
 ---

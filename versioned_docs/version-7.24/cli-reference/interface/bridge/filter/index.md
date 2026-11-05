@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/bridge/filter/index"
 sidebar_position: 1
 title: "filter"
+description: 'RouterOS directory reference for /interface/bridge/filter.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bridge/filter
 captured_at: '2026-11-01T21:26:57+08:00'
 ---

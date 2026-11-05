@@ -2,6 +2,7 @@
 sidebar_key: "storage/raid/index"
 sidebar_position: 3
 title: "RAID"
+description: 'RAID technology in RouterOS enables data storage across multiple drives with improved performance and protection, supporting RAID levels 0,1,4,5,6, linear, and nested configurations. The page details properties like...'
 source: https://manual.mikrotik.com/docs/7.24/storage/raid
 captured_at: '2026-11-04T11:33:48+08:00'
 ---

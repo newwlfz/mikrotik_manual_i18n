@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/traceroute"
 sidebar_position: 24
 title: "traceroute"
+description: 'RouterOS command reference for /tool/traceroute.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/traceroute
 captured_at: '2026-11-01T21:30:24+08:00'
 ---

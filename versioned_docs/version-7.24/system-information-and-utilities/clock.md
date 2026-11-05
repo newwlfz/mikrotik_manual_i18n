@@ -2,6 +2,7 @@
 sidebar_key: "system-information-and-utilities/clock"
 sidebar_position: 1
 title: "Clock"
+description: 'The page describes MikroTik RouterOS clock configuration, detailing time zone settings including automatic detection and manual adjustments, GMT offsets, daylight saving rules, and warnings about internal clock...'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/clock
 captured_at: '2026-11-04T11:33:21+08:00'
 ---

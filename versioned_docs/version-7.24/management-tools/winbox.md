@@ -2,6 +2,7 @@
 sidebar_key: "management-tools/winbox"
 sidebar_position: 2
 title: "WinBox"
+description: 'WinBox is a GUI utility for administering MikroTik RouterOS with Linux/macOS support via Wine, offering secure connections through AES128-CBC-SHA encryption and ECSRP authentication. It provides simple and advanced...'
 source: https://manual.mikrotik.com/docs/7.24/management-tools/winbox
 captured_at: '2026-11-04T11:32:48+08:00'
 ---

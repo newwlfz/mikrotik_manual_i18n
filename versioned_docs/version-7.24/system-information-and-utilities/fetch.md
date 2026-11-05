@@ -2,6 +2,7 @@
 sidebar_key: "system-information-and-utilities/fetch"
 sidebar_position: 4
 title: "Fetch"
+description: 'Fetch is a RouterOS utility for transferring files via HTTP, HTTPS, FTP, TFTP, and SFTP with configurable authentication, compression, redirects, and variable storage options. It supports both download/upload modes...'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/fetch
 captured_at: '2026-11-04T11:33:26+08:00'
 ---

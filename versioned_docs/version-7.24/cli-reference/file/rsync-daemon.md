@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/file/rsync-daemon"
 sidebar_position: 5
 title: "rsync-daemon"
+description: 'RouterOS settings reference for /file/rsync-daemon.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/file/rsync-daemon
 captured_at: '2026-11-01T21:26:55+08:00'
 ---

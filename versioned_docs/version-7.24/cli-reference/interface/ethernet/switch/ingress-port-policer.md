@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/ingress-port-policer"
 sidebar_position: 8
 title: "ingress-port-policer"
+description: 'RouterOS directory reference for /interface/ethernet/switch/ingress-port-policer.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/ingress-port-policer
 captured_at: '2026-11-01T21:27:12+08:00'
 ---

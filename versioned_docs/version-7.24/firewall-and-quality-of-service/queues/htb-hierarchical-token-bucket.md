@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/queues/htb-hierarchical-token-bucket"
 sidebar_position: 1
 title: "HTB (Hierarchical Token Bucket)"
+description: 'HTB (Hierarchical Token Bucket) is a queuing discipline in RouterOS for rate limiting and burst handling, using a token bucket algorithm to manage data rates with configurable capacity and limits.'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/queues/htb-hierarchical-token-bucket
 captured_at: '2026-11-04T11:28:23+08:00'
 ---

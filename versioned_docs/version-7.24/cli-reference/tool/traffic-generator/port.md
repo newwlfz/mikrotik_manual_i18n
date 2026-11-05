@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/traffic-generator/port"
 sidebar_position: 5
 title: "port"
+description: 'RouterOS directory reference for /tool/traffic-generator/port.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/traffic-generator/port
 captured_at: '2026-11-01T21:30:23+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/user-guides/index"
 sidebar_position: 6
 title: "Firewall and QoS Case Studies"
+description: 'This page presents practical case studies for configuring firewall and QoS rules in MikroTik RouterOS, covering brute-force prevention, DDoS protection, connection rate limiting, port knocking, and advanced firewall...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/user-guides
 captured_at: '2026-11-04T11:28:19+08:00'
 ---

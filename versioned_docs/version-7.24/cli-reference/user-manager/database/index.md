@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user-manager/database/index"
 sidebar_position: 1
 title: "database"
+description: 'RouterOS settings reference for /user-manager/database.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/database
 captured_at: '2026-11-01T21:30:30+08:00'
 ---

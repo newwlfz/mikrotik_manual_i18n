@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/ipsec/settings"
 sidebar_position: 10
 title: "settings"
+description: 'RouterOS settings reference for /ip/ipsec/settings.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/ipsec/settings
 captured_at: '2026-11-01T21:28:47+08:00'
 ---

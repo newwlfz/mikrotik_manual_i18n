@@ -2,6 +2,7 @@
 sidebar_key: "system-information-and-utilities/ntp"
 sidebar_position: 10
 title: "NTP"
+description: 'RouterOS documentation for NTP covers client and server configurations including enabled modes, server lists with IPv4/IPv6 support, VRF settings, authentication keys, and status monitoring like frequency drift and...'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/ntp
 captured_at: '2026-11-04T11:33:38+08:00'
 ---

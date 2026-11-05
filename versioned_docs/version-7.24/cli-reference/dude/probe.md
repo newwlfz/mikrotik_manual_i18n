@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/dude/probe"
 sidebar_position: 8
 title: "probe"
+description: 'RouterOS directory reference for /dude/probe.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/dude/probe
 captured_at: '2026-11-01T21:26:49+08:00'
 ---

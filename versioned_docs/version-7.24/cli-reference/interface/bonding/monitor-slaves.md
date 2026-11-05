@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/bonding/monitor-slaves"
 sidebar_position: 3
 title: "monitor-slaves"
+description: 'RouterOS command reference for /interface/bonding/monitor-slaves.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bonding/monitor-slaves
 captured_at: '2026-11-01T21:26:56+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/index"
 sidebar_position: 12
 title: "Bridging and Switching"
+description: 'Ethernet-like networks (Ethernet, Ethernet over IP, IEEE 802.11 in ap-bridge or bridge mode, WDS, VLAN) can be connected together using MAC bridges. The bridge feature allows the interconnection of hosts connected to...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching
 captured_at: '2026-11-04T11:27:55+08:00'
 ---

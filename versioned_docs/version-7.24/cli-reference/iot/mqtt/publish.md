@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/mqtt/publish"
 sidebar_position: 5
 title: "publish"
+description: 'RouterOS command reference for /iot/mqtt/publish.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/mqtt/publish
 captured_at: '2026-11-01T21:28:19+08:00'
 ---

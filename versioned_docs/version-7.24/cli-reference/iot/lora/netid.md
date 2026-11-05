@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/lora/netid"
 sidebar_position: 4
 title: "netid"
+description: 'RouterOS directory reference for /iot/lora/netid.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/lora/netid
 captured_at: '2026-11-01T21:28:20+08:00'
 ---

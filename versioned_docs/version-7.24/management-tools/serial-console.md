@@ -2,6 +2,7 @@
 sidebar_key: "management-tools/serial-console"
 sidebar_position: 5
 title: "Serial Console"
+description: 'The Serial Console and Terminal tools enable direct device communication via serial ports for initial or recovery configuration, supporting up to 132 devices. The page explains null-modem cable configurations for...'
 source: https://manual.mikrotik.com/docs/7.24/management-tools/serial-console
 captured_at: '2026-11-04T11:32:08+08:00'
 ---

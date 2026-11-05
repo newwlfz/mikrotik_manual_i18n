@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/sniffer/index"
 sidebar_position: 3
 title: "sniffer"
+description: 'RouterOS settings reference for /tool/sniffer.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/sniffer
 captured_at: '2026-11-01T21:30:20+08:00'
 ---

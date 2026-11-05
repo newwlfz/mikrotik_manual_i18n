@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/ipsec/mode-config"
 sidebar_position: 5
 title: "mode-config"
+description: 'RouterOS directory reference for /ip/ipsec/mode-config.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/ipsec/mode-config
 captured_at: '2026-11-01T21:28:47+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/disk/check"
 sidebar_position: 3
 title: "check"
+description: 'RouterOS command reference for /disk/check.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/disk/check
 captured_at: '2026-11-01T21:26:43+08:00'
 ---

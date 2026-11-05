@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/bfd/authentication"
 sidebar_position: 1
 title: "authentication"
+description: 'RouterOS directory reference for /routing/bfd/authentication.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/bfd/authentication
 captured_at: '2026-11-01T21:29:26+08:00'
 ---

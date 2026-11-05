@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/socks/users"
 sidebar_position: 4
 title: "users"
+description: 'RouterOS directory reference for /ip/socks/users.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/socks/users
 captured_at: '2026-11-01T21:28:57+08:00'
 ---

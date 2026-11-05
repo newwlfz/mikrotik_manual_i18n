@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/vlan"
 sidebar_position: 8
 title: "VLAN"
+description: 'This page introduces VLAN functionality in MikroTik RouterOS, explaining how to create and manage Virtual LANs using IEEE 802.1Q standards for efficient network segmentation, with details on VLAN interfaces,...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/vlan
 captured_at: '2026-11-04T11:27:34+08:00'
 ---

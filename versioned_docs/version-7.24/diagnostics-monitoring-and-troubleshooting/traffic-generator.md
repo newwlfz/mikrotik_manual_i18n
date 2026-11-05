@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/traffic-generator"
 sidebar_position: 9
 title: "Traffic Generator"
+description: 'Traffic Generator is a MikroTik RouterOS tool for evaluating device performance by generating and sending raw packets over ports, collecting latency, jitter, throughput, and packet loss data. It supports advanced...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/traffic-generator
 captured_at: '2026-11-04T11:28:12+08:00'
 ---

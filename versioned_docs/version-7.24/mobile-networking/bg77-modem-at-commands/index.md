@@ -2,6 +2,7 @@
 sidebar_key: "mobile-networking/bg77-modem-at-commands/index"
 sidebar_position: 2
 title: "BG77 modem AT commands"
+description: 'This short guide will help you understand how to troubleshoot issues/problems with the CAT-M/NB-IoT connection. A lot of information about the connection can be obtained using modem "AT" commands. By definition, "AT"...'
 source: https://manual.mikrotik.com/docs/7.24/mobile-networking/bg77-modem-at-commands
 captured_at: '2026-11-04T11:32:14+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "virtual-private-networks/pppoe/index"
 sidebar_position: 2
 title: "PPPoE"
+description: 'PPPoE enables IPv6 prefix delegation over PPP and MLPPP across Ethernet links, supporting both client-to-server and server-to-client configurations. It operates in discovery and session phases, with LCP/CHAP...'
 source: https://manual.mikrotik.com/docs/7.24/virtual-private-networks/pppoe
 captured_at: '2026-11-04T11:34:45+08:00'
 ---

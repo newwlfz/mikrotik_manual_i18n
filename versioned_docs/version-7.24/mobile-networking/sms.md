@@ -2,6 +2,7 @@
 sidebar_key: "mobile-networking/sms"
 sidebar_position: 4
 title: "SMS"
+description: 'This page documents SMS functionality in MikroTik RouterOS, enabling GSM modem communication for sending and receiving SMS messages via AT commands. It covers sending methods, parameters like port, phone number,...'
 source: https://manual.mikrotik.com/docs/7.24/mobile-networking/sms
 captured_at: '2026-11-04T11:32:24+08:00'
 ---

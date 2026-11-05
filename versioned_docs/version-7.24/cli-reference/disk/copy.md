@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/disk/copy"
 sidebar_position: 4
 title: "copy"
+description: 'RouterOS command reference for /disk/copy.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/disk/copy
 captured_at: '2026-11-01T21:26:44+08:00'
 ---

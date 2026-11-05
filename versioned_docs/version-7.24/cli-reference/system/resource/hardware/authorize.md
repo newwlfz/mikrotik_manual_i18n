@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/resource/hardware/authorize"
 sidebar_position: 1
 title: "authorize"
+description: 'RouterOS command reference for /system/resource/hardware/authorize.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/resource/hardware/authorize
 captured_at: '2026-11-01T21:30:03+08:00'
 ---

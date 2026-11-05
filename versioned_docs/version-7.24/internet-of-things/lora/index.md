@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/lora/index"
 sidebar_position: 3
 title: "Lora"
+description: 'This page introduces MikroTik RouterOS LoRa and LoRaWAN configuration, covering gateway setup, general properties, server integration, and non-LoRaWAN payload forwarding with MQTT/HTTP. It details supported hardware,...'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/lora
 captured_at: '2026-11-04T11:31:15+08:00'
 ---

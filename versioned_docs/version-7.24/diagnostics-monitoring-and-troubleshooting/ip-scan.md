@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/ip-scan"
 sidebar_position: 16
 title: "IP Scan"
+description: 'The IP Scan tool in RouterOS scans networks for active devices, collecting IP addresses, MAC addresses, response times, DNS names, SNMP strings, and NET-BIOS names. It can scan by IPv4 prefix or interface listening,...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/ip-scan
 captured_at: '2026-11-04T11:27:56+08:00'
 ---

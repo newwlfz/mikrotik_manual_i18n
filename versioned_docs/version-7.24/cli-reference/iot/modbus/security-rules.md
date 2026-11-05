@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/modbus/security-rules"
 sidebar_position: 3
 title: "security-rules"
+description: 'RouterOS directory reference for /iot/modbus/security-rules.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/modbus/security-rules
 captured_at: '2026-11-01T21:28:16+08:00'
 ---

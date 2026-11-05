@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/user-guides/bridge-igmp-mld-snooping"
 sidebar_position: 2
 title: "Bridge IGMP/MLD snooping"
+description: 'This page documents MikroTik RouterOS bridge features for IGMP/MLD snooping, enabling efficient multicast traffic forwarding by filtering streams to subscribed ports. It covers configuration options for IGMP/MLD...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/user-guides/bridge-igmp-mld-snooping
 captured_at: '2026-11-04T11:27:26+08:00'
 ---

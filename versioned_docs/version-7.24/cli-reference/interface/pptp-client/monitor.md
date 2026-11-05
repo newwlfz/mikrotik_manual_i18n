@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/pptp-client/monitor"
 sidebar_position: 2
 title: "monitor"
+description: 'RouterOS command reference for /interface/pptp-client/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/pptp-client/monitor
 captured_at: '2026-11-01T21:27:35+08:00'
 ---

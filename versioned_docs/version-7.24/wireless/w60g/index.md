@@ -2,6 +2,7 @@
 sidebar_key: "wireless/w60g/index"
 sidebar_position: 6
 title: "W60G"
+description: 'This page documents MikroTik RouterOS W60G wireless interface configuration, covering setup for 60GHz point-to-point/multipoint links, ARP/MAC settings, encryption, and station management with detailed stats monitoring.'
 source: https://manual.mikrotik.com/docs/7.24/wireless/w60g
 captured_at: '2026-11-04T11:35:41+08:00'
 ---

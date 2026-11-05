@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/swos/save-config"
 sidebar_position: 5
 title: "save-config"
+description: 'RouterOS command reference for /system/swos/save-config.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/swos/save-config
 captured_at: '2026-11-01T21:30:10+08:00'
 ---

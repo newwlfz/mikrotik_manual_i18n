@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ipipv6"
 sidebar_position: 14
 title: "ipipv6"
+description: 'RouterOS directory reference for /interface/ipipv6.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ipipv6
 captured_at: '2026-11-01T21:27:22+08:00'
 ---

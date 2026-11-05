@@ -2,6 +2,7 @@
 sidebar_key: "virtual-private-networks/ipsec/ikev2-eap-between-nordvpn-and-routeros"
 sidebar_position: 1
 title: "IKEv2 EAP between NordVPN and RouterOS"
+description: 'This page guides users through configuring an IKEv2 secured tunnel to NordVPN servers using EAP authentication in RouterOS v6.45+, covering root CA installation, server hostname lookup, IPsec tunnel setup with Phase...'
 source: https://manual.mikrotik.com/docs/7.24/virtual-private-networks/ipsec/ikev2-eap-between-nordvpn-and-routeros
 captured_at: '2026-11-04T11:34:40+08:00'
 ---

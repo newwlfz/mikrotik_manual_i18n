@@ -2,6 +2,7 @@
 sidebar_key: "network-management/cloud/file-share"
 sidebar_position: 3
 title: "File share"
+description: 'The file share function enables secure internet-accessible storage on MikroTik routers by allowing USB/NVME drives to be shared via HTTPS with optional file uploads, using automatically generated domains and...'
 source: https://manual.mikrotik.com/docs/7.24/network-management/cloud/file-share
 captured_at: '2026-11-04T11:32:57+08:00'
 ---

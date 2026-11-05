@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/route"
 sidebar_position: 14
 title: "route"
+description: 'A read-only table that lists routes from all the address families as well as all filtered routes with all possible route attributes.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/route
 captured_at: '2026-11-01T21:29:40+08:00'
 ---

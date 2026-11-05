@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/dns-update"
 sidebar_position: 4
 title: "dns-update"
+description: 'RouterOS command reference for /tool/dns-update.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/dns-update
 captured_at: '2026-11-01T21:30:14+08:00'
 ---

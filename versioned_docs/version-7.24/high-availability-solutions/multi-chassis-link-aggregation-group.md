@@ -2,6 +2,7 @@
 sidebar_key: "high-availability-solutions/multi-chassis-link-aggregation-group"
 sidebar_position: 3
 title: "Multi-chassis Link Aggregation Group"
+description: 'MLAG in RouterOS enables physical redundancy by configuring LACP bonds across two devices, allowing the client to perceive a single connection while ensuring failover. It uses ICCP for peer communication, supports...'
 source: https://manual.mikrotik.com/docs/7.24/high-availability-solutions/multi-chassis-link-aggregation-group
 captured_at: '2026-11-04T11:29:58+08:00'
 ---

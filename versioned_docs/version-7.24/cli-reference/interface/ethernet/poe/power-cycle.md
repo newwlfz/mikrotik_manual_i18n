@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/poe/power-cycle"
 sidebar_position: 3
 title: "power-cycle"
+description: 'RouterOS command reference for /interface/ethernet/poe/power-cycle.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/poe/power-cycle
 captured_at: '2026-11-01T21:27:06+08:00'
 ---

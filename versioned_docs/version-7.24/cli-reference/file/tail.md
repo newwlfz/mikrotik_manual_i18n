@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/file/tail"
 sidebar_position: 7
 title: "tail"
+description: 'RouterOS command reference for /file/tail.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/file/tail
 captured_at: '2026-11-01T21:26:56+08:00'
 ---

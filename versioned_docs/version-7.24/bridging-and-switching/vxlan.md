@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/vxlan"
 sidebar_position: 6
 title: "VXLAN"
+description: 'This page documents MikroTik RouterOS''s VXLAN implementation, covering its purpose in expanding VLAN IDs, configuration options for VXLAN interfaces and VTEPs, and forwarding table monitoring. It details settings...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/vxlan
 captured_at: '2026-11-04T11:27:34+08:00'
 ---

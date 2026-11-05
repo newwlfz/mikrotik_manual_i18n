@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/bluetooth/connections/characteristics"
 sidebar_position: 2
 title: "characteristics"
+description: 'RouterOS directory reference for /iot/bluetooth/connections/characteristics.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/bluetooth/connections/characteristics
 captured_at: '2026-11-01T21:28:11+08:00'
 ---

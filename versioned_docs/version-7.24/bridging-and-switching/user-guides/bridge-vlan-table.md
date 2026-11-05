@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/user-guides/bridge-vlan-table"
 sidebar_position: 3
 title: "Bridge VLAN Table"
+description: 'This page introduces MikroTik RouterOS''s Bridge VLAN Table feature, explaining how to configure VLAN filtering in bridges using tagged/untagged ports, PVIDs, and ingress/egress rules. It includes setup examples for...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/user-guides/bridge-vlan-table
 captured_at: '2026-11-04T11:27:29+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wifi/steering/neighbor-group"
 sidebar_position: 2
 title: "neighbor-group"
+description: 'RouterOS directory reference for /interface/wifi/steering/neighbor-group.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/steering/neighbor-group
 captured_at: '2026-11-01T21:27:53+08:00'
 ---

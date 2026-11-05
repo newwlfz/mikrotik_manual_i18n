@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/sniffer/packet"
 sidebar_position: 2
 title: "packet"
+description: 'RouterOS directory reference for /interface/wireless/sniffer/packet.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/sniffer/packet
 captured_at: '2026-11-01T21:28:04+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ipip"
 sidebar_position: 13
 title: "ipip"
+description: 'RouterOS directory reference for /interface/ipip.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ipip
 captured_at: '2026-11-01T21:27:22+08:00'
 ---

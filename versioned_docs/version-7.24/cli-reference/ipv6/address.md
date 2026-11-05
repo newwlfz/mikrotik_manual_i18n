@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ipv6/address"
 sidebar_position: 1
 title: "address"
+description: 'RouterOS directory reference for /ipv6/address.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/address
 captured_at: '2026-11-01T21:29:02+08:00'
 ---

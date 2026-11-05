@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ipv6/nd/proxy"
 sidebar_position: 3
 title: "proxy"
+description: 'An IPv6 Neighbor Discovery Proxy allows a router or host to respond to Neighbor Discovery (RFC 4861) messages on behalf of another node. This enables communication across different network segments as if they were on...'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/nd/proxy
 captured_at: '2026-11-01T21:29:09+08:00'
 ---

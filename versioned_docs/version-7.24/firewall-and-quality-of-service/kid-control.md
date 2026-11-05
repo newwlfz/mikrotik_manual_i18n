@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/kid-control"
 sidebar_position: 5
 title: "Kid Control"
+description: 'Kid Control is a RouterOS feature allowing parental control over LAN devices by setting daily internet access schedules, bandwidth limits, and device-specific restrictions through profiles and firewall rules.'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/kid-control
 captured_at: '2026-11-04T11:28:13+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ipv6/firewall/filter/index"
 sidebar_position: 1
 title: "filter"
+description: 'RouterOS directory reference for /ipv6/firewall/filter.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/firewall/filter
 captured_at: '2026-11-01T21:29:07+08:00'
 ---

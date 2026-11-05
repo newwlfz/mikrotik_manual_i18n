@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wifi/network/radio"
 sidebar_position: 2
 title: "radio"
+description: 'RouterOS directory reference for /interface/wifi/network/radio.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/network/radio
 captured_at: '2026-11-01T21:27:51+08:00'
 ---

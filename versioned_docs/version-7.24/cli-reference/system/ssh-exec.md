@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/ssh-exec"
 sidebar_position: 31
 title: "ssh-exec"
+description: 'RouterOS command reference for /system/ssh-exec.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/ssh-exec
 captured_at: '2026-11-01T21:30:08+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/swos/index"
 sidebar_position: 1
 title: "swos"
+description: 'RouterOS settings reference for /system/swos.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/swos
 captured_at: '2026-11-01T21:30:10+08:00'
 ---

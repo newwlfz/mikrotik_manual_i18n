@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/hotspot/setup"
 sidebar_position: 9
 title: "setup"
+description: 'RouterOS command reference for /ip/hotspot/setup.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/hotspot/setup
 captured_at: '2026-11-01T21:28:41+08:00'
 ---

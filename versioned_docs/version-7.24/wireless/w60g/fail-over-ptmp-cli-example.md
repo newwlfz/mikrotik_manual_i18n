@@ -2,6 +2,7 @@
 sidebar_key: "wireless/w60g/fail-over-ptmp-cli-example"
 sidebar_position: 2
 title: "Fail-over PtMP CLI example"
+description: 'This page provides a step-by-step CLI guide for configuring automatic failover between 60Ghz and 5Ghz wireless links using MikroTik RouterOS, including bridge setup, interface bonding, and W60G device connection...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/w60g/fail-over-ptmp-cli-example
 captured_at: '2026-11-04T11:35:39+08:00'
 ---

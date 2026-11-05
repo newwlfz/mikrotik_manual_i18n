@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/lte/apn"
 sidebar_position: 1
 title: "apn"
+description: 'RouterOS directory reference for /interface/lte/apn.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/lte/apn
 captured_at: '2026-11-01T21:27:25+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/disk/btrfs/transfer"
 sidebar_position: 4
 title: "transfer"
+description: 'RouterOS directory reference for /disk/btrfs/transfer.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/disk/btrfs/transfer
 captured_at: '2026-11-01T21:26:44+08:00'
 ---

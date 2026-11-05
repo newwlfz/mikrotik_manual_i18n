@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/list/index"
 sidebar_position: 1
 title: "list"
+description: 'RouterOS directory reference for /interface/list.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/list
 captured_at: '2026-11-01T21:27:23+08:00'
 ---

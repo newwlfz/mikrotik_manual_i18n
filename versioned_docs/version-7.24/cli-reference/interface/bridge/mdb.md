@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/bridge/mdb"
 sidebar_position: 5
 title: "mdb"
+description: 'RouterOS directory reference for /interface/bridge/mdb.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bridge/mdb
 captured_at: '2026-11-01T21:26:59+08:00'
 ---

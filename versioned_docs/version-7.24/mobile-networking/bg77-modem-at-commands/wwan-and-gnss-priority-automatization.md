@@ -2,6 +2,7 @@
 sidebar_key: "mobile-networking/bg77-modem-at-commands/wwan-and-gnss-priority-automatization"
 sidebar_position: 3
 title: "WWAN and GNSS priority automatization"
+description: 'Cellular connection and GNSS can not work simultaneously (WWAN and GNSS Rx chains in the BG77 module share certain hardware blocks, meaning the module does not support concurrent operation of WWAN and GNSS.). That is...'
 source: https://manual.mikrotik.com/docs/7.24/mobile-networking/bg77-modem-at-commands/wwan-and-gnss-priority-automatization
 captured_at: '2026-11-04T11:32:24+08:00'
 ---

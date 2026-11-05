@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/kid-control/index"
 sidebar_position: 2
 title: "kid-control"
+description: 'RouterOS directory reference for /ip/kid-control.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/kid-control
 captured_at: '2026-11-01T21:28:48+08:00'
 ---

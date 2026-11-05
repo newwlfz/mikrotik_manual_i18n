@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/disk/index"
 sidebar_position: 7
 title: "disk"
+description: 'RouterOS directory reference for /disk.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/disk
 captured_at: '2026-11-01T21:26:42+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wifi/channel"
 sidebar_position: 5
 title: "channel"
+description: 'RouterOS directory reference for /interface/wifi/channel.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/channel
 captured_at: '2026-11-01T21:27:46+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/traffic-flow/index"
 sidebar_position: 1
 title: "traffic-flow"
+description: 'RouterOS settings reference for /ip/traffic-flow.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/traffic-flow
 captured_at: '2026-11-01T21:28:58+08:00'
 ---

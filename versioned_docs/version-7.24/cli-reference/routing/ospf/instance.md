@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/ospf/instance"
 sidebar_position: 2
 title: "instance"
+description: 'RouterOS directory reference for /routing/ospf/instance.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/ospf/instance
 captured_at: '2026-11-01T21:29:35+08:00'
 ---

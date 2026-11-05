@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/acl/index"
 sidebar_position: 1
 title: "acl"
+description: 'RouterOS directory reference for /interface/ethernet/switch/acl.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/acl
 captured_at: '2026-11-01T21:27:11+08:00'
 ---

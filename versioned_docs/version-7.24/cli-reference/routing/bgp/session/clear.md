@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/bgp/session/clear"
 sidebar_position: 1
 title: "clear"
+description: 'Clear the session flags. For example, to be able to re-establish a session after the prefix limit is reached "limit-exceeded" flag must be cleared. It can be done by specifying flag parameter, which is able to take...'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/bgp/session/clear
 captured_at: '2026-11-01T21:29:27+08:00'
 ---

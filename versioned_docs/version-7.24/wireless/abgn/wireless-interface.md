@@ -2,6 +2,7 @@
 sidebar_key: "wireless/abgn/wireless-interface"
 sidebar_position: 9
 title: "Wireless Interface"
+description: 'RouterOS wireless interface supports IEEE 802.11 standards with comprehensive features including multiple modes (client, AP, bridge), encryption protocols, channel width adjustments, and advanced transmission...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/abgn/wireless-interface
 captured_at: '2026-11-04T11:35:57+08:00'
 ---

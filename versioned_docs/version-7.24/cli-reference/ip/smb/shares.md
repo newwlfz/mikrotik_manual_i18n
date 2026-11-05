@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/smb/shares"
 sidebar_position: 2
 title: "shares"
+description: 'RouterOS directory reference for /ip/smb/shares.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/smb/shares
 captured_at: '2026-11-01T21:28:56+08:00'
 ---

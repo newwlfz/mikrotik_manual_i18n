@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/nstreme-dual/reset-counters"
 sidebar_position: 3
 title: "reset-counters"
+description: 'RouterOS command reference for /interface/wireless/nstreme-dual/reset-counters.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/nstreme-dual/reset-counters
 captured_at: '2026-11-01T21:28:01+08:00'
 ---

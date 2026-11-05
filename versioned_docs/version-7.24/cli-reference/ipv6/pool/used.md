@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ipv6/pool/used"
 sidebar_position: 2
 title: "used"
+description: 'RouterOS directory reference for /ipv6/pool/used.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/pool/used
 captured_at: '2026-11-01T21:29:10+08:00'
 ---

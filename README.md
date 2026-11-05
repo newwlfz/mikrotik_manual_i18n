@@ -77,7 +77,9 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for the full design.
 
 - 1,422 RouterOS 7.24 docs, 250 hardware guides, 6 news posts, 108 changelog posts.
 - Strict build passes with zero broken links.
-- Pagefind search, Widen/Narrow, day/night mode and accordion sidebar are implemented.
+- Pagefind search (93+ result sets, CLI grouping, subresults and Show more), Widen/Narrow persistence, day/night mode and native accordion/hideable sidebar are implemented.
+- `docusaurus-plugin-llms` generates `/llms.txt`, `/llms-full.txt` and per-page `.md` files.
+- `/docs/*` redirects to the latest version (currently 7.24); the rule is regenerated from `versioned_docs`.
 - Deletion/repair drill passes for docs, hardware and blog.
 - Local-vs-official visual report is in `../reports/visual/report.html`.
 - `tools/sync --update` is still disabled; the workflow is gated by `ENABLE_SYNC`.

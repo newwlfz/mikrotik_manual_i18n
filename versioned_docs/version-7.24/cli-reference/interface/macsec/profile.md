@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/macsec/profile"
 sidebar_position: 3
 title: "profile"
+description: 'RouterOS directory reference for /interface/macsec/profile.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/macsec/profile
 captured_at: '2026-11-01T21:27:29+08:00'
 ---

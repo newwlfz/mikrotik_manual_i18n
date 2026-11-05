@@ -2,6 +2,7 @@
 sidebar_key: "storage/nvme-over-tcp"
 sidebar_position: 6
 title: "NVMe over TCP"
+description: 'NVMe over TCP enables network-attached NVMe storage access for both initiators and targets, with configurable IP addresses, ports, passwords, and host-based access control. Examples demonstrate mounting a disk from a...'
 source: https://manual.mikrotik.com/docs/7.24/storage/nvme-over-tcp
 captured_at: '2026-11-04T11:33:05+08:00'
 ---

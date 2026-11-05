@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/ntp/monitor-peers"
 sidebar_position: 3
 title: "monitor-peers"
+description: 'RouterOS command reference for /system/ntp/monitor-peers.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/ntp/monitor-peers
 captured_at: '2026-11-01T21:29:56+08:00'
 ---

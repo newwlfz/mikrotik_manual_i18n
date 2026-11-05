@@ -2,6 +2,7 @@
 sidebar_key: "virtual-private-networks/zerotier"
 sidebar_position: 12
 title: "ZeroTier"
+description: 'ZeroTier is a network virtualization engine for MikroTik RouterOS that enables secure, cross-network device connectivity via Ethernet virtualization and cryptographic peer-to-peer networks. It supports gaming, LAN...'
 source: https://manual.mikrotik.com/docs/7.24/virtual-private-networks/zerotier
 captured_at: '2026-11-04T11:35:20+08:00'
 ---

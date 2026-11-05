@@ -1,13 +1,37 @@
 import React, {useEffect, useRef, useState} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-type Result = {
-  data: {
-    url: string;
-    excerpt: string;
-    meta?: {title?: string};
-  };
+type SubResult = {
+  title: string;
+  url: string;
 };
+
+type ResultData = {
+  url: string;
+  excerpt: string;
+  meta?: {title?: string};
+  sub_results?: SubResult[];
+};
+
+const PAGE_SIZE = 10;
+const INITIAL_MAIN = 7;
+const INITIAL_CLI = 3;
+
+function isCli(url: string) {
+  return url.includes('/cli-reference/');
+}
+
+function displayTitle(result: ResultData) {
+  return result.meta?.title ?? result.url;
+}
+
+function subResults(result: ResultData) {
+  return (result.sub_results ?? [])
+    .filter((sub) => sub.url !== result.url)
+    .map((sub) => ({...sub, title: sub.title.replace(/\u200b/g, '').trim()}))
+    .filter((sub) => sub.title)
+    .slice(0, 3);
+}
 
 export default function SearchBox() {
   const {siteConfig} = useDocusaurusContext();
@@ -16,7 +40,8 @@ export default function SearchBox() {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [unavailable, setUnavailable] = useState(false);
-  const [results, setResults] = useState<Result[]>([]);
+  const [results, setResults] = useState<ResultData[]>([]);
+  const [visible, setVisible] = useState({main: INITIAL_MAIN, cli: INITIAL_CLI});
   const [active, setActive] = useState(0);
   const rootRef = useRef<HTMLDivElement>(null);
   const pagefindRef = useRef<any>(null);
@@ -28,7 +53,6 @@ export default function SearchBox() {
       // Pagefind is generated only after a production build.
       const mod = await import(/* webpackIgnore: true */ `${baseUrl}pagefind/pagefind.js`);
       await mod.init();
-      await mod.options({ranking: {termSaturation: 0}});
       pagefindRef.current = mod;
       return mod;
     } catch (error) {
@@ -49,11 +73,19 @@ export default function SearchBox() {
     setLoading(true);
     try {
       const found = await pagefind.search(value);
-      const rows: Result[] = [];
-      for (const item of found.results.slice(0, 20)) {
-        rows.push({data: await item.data()});
-      }
-      if (current === seq.current) setResults(rows);
+      const rows = await Promise.all(
+        found.results.map((item: {data: () => Promise<ResultData>}) => item.data()),
+      );
+      if (current !== seq.current) return;
+      const q = value.trim().toLowerCase();
+      rows.sort((a: ResultData, b: ResultData) => {
+        const exactA = displayTitle(a).toLowerCase() === q ? 1 : 0;
+        const exactB = displayTitle(b).toLowerCase() === q ? 1 : 0;
+        return exactB - exactA;
+      });
+      setResults(rows);
+      setVisible({main: INITIAL_MAIN, cli: INITIAL_CLI});
+      setActive(0);
     } finally {
       if (current === seq.current) setLoading(false);
     }
@@ -83,7 +115,49 @@ export default function SearchBox() {
     (onChange as any).timer = window.setTimeout(() => void runSearch(value), 200);
   }
 
-  const firstUrl = results[0]?.data.url;
+  const mainResults = results.filter((result) => !isCli(result.url));
+  const cliResults = results.filter((result) => isCli(result.url));
+  const shownMain = mainResults.slice(0, visible.main);
+  const shownCli = cliResults.slice(0, visible.cli);
+  const shown = [...shownMain, ...shownCli];
+  const hasMore = shown.length < results.length;
+  const firstUrl = shown[0]?.url;
+
+  function more() {
+    setVisible((current) => ({
+      main: current.main + PAGE_SIZE,
+      cli: current.cli + PAGE_SIZE,
+    }));
+  }
+
+  function renderResult(result: ResultData, index: number) {
+    const subs = subResults(result);
+    return (
+      <li className="site-search__result" key={result.url}>
+        <a
+          className="site-search__result-link"
+          href={result.url}
+          onMouseEnter={() => setActive(index)}>
+          <span className="site-search__result-title">{displayTitle(result)}</span>
+          <span
+            className="site-search__result-excerpt"
+            dangerouslySetInnerHTML={{__html: result.excerpt}}
+          />
+        </a>
+        {subs.length ? (
+          <ul className="site-search__subresults">
+            {subs.map((sub) => (
+              <li key={sub.url + sub.title}>
+                <a className="site-search__subresult-link" href={sub.url}>
+                  {sub.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : null}
+      </li>
+    );
+  }
 
   return (
     <div className="site-search" ref={rootRef}>
@@ -102,7 +176,7 @@ export default function SearchBox() {
           if (event.key === 'Enter' && firstUrl) window.location.href = firstUrl;
           if (event.key === 'ArrowDown') {
             event.preventDefault();
-            setActive((value) => Math.min(value + 1, results.length - 1));
+            setActive((value) => Math.min(value + 1, shown.length - 1));
           }
           if (event.key === 'ArrowUp') {
             event.preventDefault();
@@ -122,23 +196,21 @@ export default function SearchBox() {
                 : `${results.length} result${results.length === 1 ? '' : 's'}`}
           </div>
           <ul className="site-search__results">
-            {results.map((result, index) => (
-              <li className="site-search__result" key={result.data.url}>
-                <a
-                  className="site-search__result-link"
-                  href={result.data.url}
-                  onMouseEnter={() => setActive(index)}>
-                  <span className="site-search__result-title">
-                    {result.data.meta?.title ?? result.data.url}
-                  </span>
-                  <span
-                    className="site-search__result-excerpt"
-                    dangerouslySetInnerHTML={{__html: result.data.excerpt}}
-                  />
-                </a>
-              </li>
-            ))}
+            {shownMain.map((result, index) => renderResult(result, index))}
+            {shownCli.length ? (
+              <>
+                <li className="site-search__section">CLI reference</li>
+                {shownCli.map((result, index) =>
+                  renderResult(result, shownMain.length + index),
+                )}
+              </>
+            ) : null}
           </ul>
+          {hasMore ? (
+            <button type="button" className="site-search__more" onClick={more}>
+              Show more results
+            </button>
+          ) : null}
         </div>
       ) : null}
     </div>

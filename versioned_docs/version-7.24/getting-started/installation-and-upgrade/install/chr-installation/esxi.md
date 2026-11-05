@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/installation-and-upgrade/install/chr-installation/esxi"
 sidebar_position: 2
 title: "CHR: VMWare ESXi Installation"
+description: 'This page documents the installation and configuration of MikroTik CHR on VMware ESXi, covering supported network interfaces (vmxnet3, E1000) and disk controllers (IDE, VMware Paravirtual SCSI), along with...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/install/chr-installation/esxi
 captured_at: '2026-11-04T11:28:33+08:00'
 ---

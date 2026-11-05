@@ -2,6 +2,7 @@
 sidebar_key: "management-tools/quick-set"
 sidebar_position: 7
 title: "Quick Set"
+description: 'Quickset is a simplified configuration wizard for MikroTik routers, offering quick setup via HomeAP, CPE, CAP, and other modes for home or enterprise use. It includes wireless networking, internet connectivity, local...'
 source: https://manual.mikrotik.com/docs/7.24/management-tools/quick-set
 captured_at: '2026-11-04T11:32:07+08:00'
 ---

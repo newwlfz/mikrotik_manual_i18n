@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/lora/user-guides/step-by-step-installation"
 sidebar_position: 5
 title: "Step by step installation"
+description: 'This page provides a step-by-step guide for installing and configuring LoRa mini-PCIe cards on MikroTik RouterOS, including hardware installation, GUI setup, package management, and initial network server configuration.'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/lora/user-guides/step-by-step-installation
 captured_at: '2026-11-04T11:32:02+08:00'
 ---

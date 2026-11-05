@@ -2,6 +2,7 @@
 sidebar_key: "management-tools/romon"
 sidebar_position: 9
 title: "RoMON"
+description: 'RoMON is a Router Management Overlay Network that establishes an independent MAC layer network for secure router management, using EtherType 0x88bf and DST-MAC 01:80:c2:00:88:bf. It allows ports to participate with...'
 source: https://manual.mikrotik.com/docs/7.24/management-tools/romon
 captured_at: '2026-11-04T11:32:05+08:00'
 ---

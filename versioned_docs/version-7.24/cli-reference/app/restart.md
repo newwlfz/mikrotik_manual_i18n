@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/app/restart"
 sidebar_position: 5
 title: "restart"
+description: 'Restarts the specified running application.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/app/restart
 captured_at: '2026-11-01T21:26:17+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/firewall/nat"
 sidebar_position: 8
 title: "NAT"
+description: 'NAT in MikroTik RouterOS enables IPv4 address translation between private and public networks, supporting both source NAT (masquerading) for hiding internal IPs and destination NAT for redirecting external traffic to...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/firewall/nat
 captured_at: '2026-11-04T11:28:24+08:00'
 ---

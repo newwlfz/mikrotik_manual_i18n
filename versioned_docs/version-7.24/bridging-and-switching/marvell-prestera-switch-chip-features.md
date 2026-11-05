@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/marvell-prestera-switch-chip-features"
 sidebar_position: 1
 title: "Marvell Prestera switch chip features"
+description: 'MikroTik devices with Marvell Prestera switch chip offer high-performance Layer 2 and Layer 3 features including advanced forwarding, routing offloading, VLAN support, QoS, mirroring, and PTP synchronization for...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/marvell-prestera-switch-chip-features
 captured_at: '2026-11-04T11:27:24+08:00'
 ---

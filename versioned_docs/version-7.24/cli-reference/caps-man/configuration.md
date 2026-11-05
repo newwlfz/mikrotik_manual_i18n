@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/caps-man/configuration"
 sidebar_position: 5
 title: "configuration"
+description: 'RouterOS directory reference for /caps-man/configuration.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/caps-man/configuration
 captured_at: '2026-11-01T21:26:21+08:00'
 ---

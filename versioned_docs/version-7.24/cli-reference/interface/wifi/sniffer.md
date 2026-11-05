@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wifi/sniffer"
 sidebar_position: 23
 title: "sniffer"
+description: 'RouterOS command reference for /interface/wifi/sniffer.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/sniffer
 captured_at: '2026-11-01T21:27:53+08:00'
 ---

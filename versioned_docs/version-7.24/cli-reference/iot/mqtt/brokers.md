@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/mqtt/brokers"
 sidebar_position: 1
 title: "brokers"
+description: 'RouterOS directory reference for /iot/mqtt/brokers.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/mqtt/brokers
 captured_at: '2026-11-01T21:28:18+08:00'
 ---

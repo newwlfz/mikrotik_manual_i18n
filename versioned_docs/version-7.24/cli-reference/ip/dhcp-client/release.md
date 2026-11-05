@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/dhcp-client/release"
 sidebar_position: 3
 title: "release"
+description: 'RouterOS command reference for /ip/dhcp-client/release.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dhcp-client/release
 captured_at: '2026-11-01T21:28:26+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/queues/queue-types/index"
 sidebar_position: 2
 title: "Queue types"
+description: 'Queue types in MikroTik RouterOS define queuing disciplines for managing packet flow, with options like BFIFO and PFIFO offering basic FIFO behavior, while advanced types such as CAKE and FQCoDel provide latency...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/queues/queue-types
 captured_at: '2026-11-04T11:28:16+08:00'
 ---

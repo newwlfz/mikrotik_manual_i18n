@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/lora/radios"
 sidebar_position: 5
 title: "radios"
+description: 'RouterOS directory reference for /iot/lora/radios.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/lora/radios
 captured_at: '2026-11-01T21:28:13+08:00'
 ---

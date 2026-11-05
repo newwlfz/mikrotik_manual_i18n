@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/scheduler"
 sidebar_position: 26
 title: "scheduler"
+description: 'RouterOS directory reference for /system/scheduler.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/scheduler
 captured_at: '2026-11-01T21:30:06+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/container/mounts"
 sidebar_position: 7
 title: "mounts"
+description: 'RouterOS directory reference for /container/mounts.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/container/mounts
 captured_at: '2026-11-01T21:26:38+08:00'
 ---

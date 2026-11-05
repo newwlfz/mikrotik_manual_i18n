@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/user-guides/bruteforce-prevention"
 sidebar_position: 1
 title: "Bruteforce prevention"
+description: 'This page explains how to configure bruteforce prevention on MikroTik RouterOS by using firewall filters to block SSH login attempts after multiple failed attempts, with varying timeouts for each attempt level and a...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/user-guides/bruteforce-prevention
 captured_at: '2026-11-04T11:28:22+08:00'
 ---

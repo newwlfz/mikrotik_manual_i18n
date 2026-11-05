@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/ipsec/active-peers/index"
 sidebar_position: 1
 title: "active-peers"
+description: 'RouterOS directory reference for /ip/ipsec/active-peers.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/ipsec/active-peers
 captured_at: '2026-11-01T21:28:43+08:00'
 ---

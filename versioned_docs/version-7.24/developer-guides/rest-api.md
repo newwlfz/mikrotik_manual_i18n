@@ -2,6 +2,7 @@
 sidebar_key: "developer-guides/rest-api"
 sidebar_position: 2
 title: "REST API"
+description: 'REST API with examples for developers.'
 source: https://manual.mikrotik.com/docs/7.24/developer-guides/rest-api
 captured_at: '2026-11-04T11:27:50+08:00'
 ---

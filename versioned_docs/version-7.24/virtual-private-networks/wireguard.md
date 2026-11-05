@@ -2,6 +2,7 @@
 sidebar_key: "virtual-private-networks/wireguard"
 sidebar_position: 11
 title: "WireGuard"
+description: 'WireGuard is a modern VPN solution offering fast, secure encryption across platforms with detailed configuration options including private/public keys, VRF routing, and peer management for establishing encrypted...'
 source: https://manual.mikrotik.com/docs/7.24/virtual-private-networks/wireguard
 captured_at: '2026-11-04T11:35:21+08:00'
 ---

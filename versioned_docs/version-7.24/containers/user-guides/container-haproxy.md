@@ -2,6 +2,7 @@
 sidebar_key: "containers/user-guides/container-haproxy"
 sidebar_position: 2
 title: "Container - HAProxy"
+description: 'This page documents configuring HAProxy as a Container in MikroTik RouterOS, providing step-by-step instructions for setting up reverse proxy and load balancing with HTTPS support using Certbot.'
 source: https://manual.mikrotik.com/docs/7.24/containers/user-guides/container-haproxy
 captured_at: '2026-11-04T11:27:39+08:00'
 ---

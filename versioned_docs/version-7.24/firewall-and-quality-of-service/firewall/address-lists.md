@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/firewall/address-lists"
 sidebar_position: 1
 title: "Address-lists"
+description: 'This page explains how to create and manage address lists in MikroTik RouterOS for firewall rules, including adding static entries and dynamic ones based on connection attempts, with timeouts to control traffic...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/firewall/address-lists
 captured_at: '2026-11-04T11:28:07+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/mpls/vpls/control-word"
 sidebar_position: 1
 title: "Control Word"
+description: 'VPLS uses Control Words (CW) for packet fragmentation and reassembly in RouterOS, adding 4-byte overhead to handle L2MTU limitations. CW fields include flags, fragmentation indicators, length, and sequence numbers...'
 slug: /user-guides/routing-and-networking-protocols/mpls/vpls/control-word
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/mpls/vpls/control-word
 captured_at: '2026-11-04T11:33:59+08:00'

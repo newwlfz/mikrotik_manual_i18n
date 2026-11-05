@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/file/index"
 sidebar_position: 3
 title: "file"
+description: 'RouterOS directory reference for /file.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/file
 captured_at: '2026-11-01T21:26:52+08:00'
 ---

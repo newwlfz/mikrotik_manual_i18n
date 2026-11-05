@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/netwatch"
 sidebar_position: 13
 title: "netwatch"
+description: 'RouterOS directory reference for /tool/netwatch.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/netwatch
 captured_at: '2026-11-01T21:30:18+08:00'
 ---

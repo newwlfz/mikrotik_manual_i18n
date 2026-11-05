@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/hotspot/host/index"
 sidebar_position: 1
 title: "host"
+description: 'RouterOS directory reference for /ip/hotspot/host.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/hotspot/host
 captured_at: '2026-11-01T21:28:38+08:00'
 ---

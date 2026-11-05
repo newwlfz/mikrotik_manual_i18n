@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/user-guides/wireless-vlan-trunk"
 sidebar_position: 10
 title: "Wireless VLAN Trunk"
+description: 'This page explains how to configure Wireless VLAN Trunking on MikroTik RouterOS using bridge VLAN filtering, allowing selective forwarding of specific VLANs over a wireless PtP link while blocking others. It covers...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/user-guides/wireless-vlan-trunk
 captured_at: '2026-11-04T11:27:29+08:00'
 ---

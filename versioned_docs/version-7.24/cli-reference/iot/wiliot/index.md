@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/wiliot/index"
 sidebar_position: 5
 title: "wiliot"
+description: 'RouterOS settings reference for /iot/wiliot.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/wiliot
 captured_at: '2026-11-01T21:28:20+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wifi/frequency-scan"
 sidebar_position: 10
 title: "frequency-scan"
+description: 'RouterOS command reference for /interface/wifi/frequency-scan.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/frequency-scan
 captured_at: '2026-11-01T21:27:49+08:00'
 ---

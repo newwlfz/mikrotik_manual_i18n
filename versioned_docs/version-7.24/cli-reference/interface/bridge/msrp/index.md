@@ -1,5 +1,6 @@
 ---
 title: "msrp"
+description: '<ArgTable c1="Flag" c2="Name" c3="Description">'
 sidebar_label: "msrp"
 sidebar_position: 999
 ---

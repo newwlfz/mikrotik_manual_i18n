@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/container/index"
 sidebar_position: 3
 title: "container"
+description: 'RouterOS directory reference for /container.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/container
 captured_at: '2026-11-01T21:26:37+08:00'
 ---

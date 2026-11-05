@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/configuration-management/default-configuration-passwords"
 sidebar_position: 2
 title: "Default Configuration Passwords"
+description: 'Find the default login credentials for MikroTik RouterOS devices fresh from the factory or after a full reset.'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/configuration-management/default-configuration-passwords
 captured_at: '2026-11-04T11:28:30+08:00'
 ---

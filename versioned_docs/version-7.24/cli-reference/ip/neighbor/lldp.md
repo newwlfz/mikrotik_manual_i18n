@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/neighbor/lldp"
 sidebar_position: 3
 title: "lldp"
+description: 'RouterOS directory reference for /ip/neighbor/lldp.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/neighbor/lldp
 captured_at: '2026-11-01T21:28:51+08:00'
 ---

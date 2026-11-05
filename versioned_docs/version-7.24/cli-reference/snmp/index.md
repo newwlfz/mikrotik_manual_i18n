@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/snmp/index"
 sidebar_position: 2
 title: "snmp"
+description: 'RouterOS settings reference for /snmp.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/snmp
 captured_at: '2026-11-01T21:29:44+08:00'
 ---

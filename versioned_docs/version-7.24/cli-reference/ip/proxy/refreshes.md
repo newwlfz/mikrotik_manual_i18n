@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/proxy/refreshes"
 sidebar_position: 11
 title: "refreshes"
+description: 'RouterOS settings reference for /ip/proxy/refreshes.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/proxy/refreshes
 captured_at: '2026-11-01T21:28:56+08:00'
 ---

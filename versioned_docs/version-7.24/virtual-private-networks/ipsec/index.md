@@ -2,6 +2,7 @@
 sidebar_key: "virtual-private-networks/ipsec/index"
 sidebar_position: 3
 title: "IPsec"
+description: 'This section covers IPsec examples and integrations. Use it to configure IKEv2, pre-shared-key and post-quantum key workflows, and third-party VPN connectivity.'
 source: https://manual.mikrotik.com/docs/7.24/virtual-private-networks/ipsec
 captured_at: '2026-11-04T11:35:59+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/bluetooth/connections/async-data/index"
 sidebar_position: 2
 title: "async-data"
+description: 'RouterOS directory reference for /iot/bluetooth/connections/async-data.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/bluetooth/connections/async-data
 captured_at: '2026-11-01T21:28:06+08:00'
 ---

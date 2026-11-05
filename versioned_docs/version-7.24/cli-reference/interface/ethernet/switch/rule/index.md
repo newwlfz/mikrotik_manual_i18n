@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/rule/index"
 sidebar_position: 1
 title: "rule"
+description: 'RouterOS directory reference for /interface/ethernet/switch/rule.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/rule
 captured_at: '2026-11-01T21:27:18+08:00'
 ---

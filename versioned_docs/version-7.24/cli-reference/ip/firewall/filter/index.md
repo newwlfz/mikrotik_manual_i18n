@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/firewall/filter/index"
 sidebar_position: 1
 title: "filter"
+description: 'RouterOS directory reference for /ip/firewall/filter.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/firewall/filter
 captured_at: '2026-11-01T21:28:34+08:00'
 ---

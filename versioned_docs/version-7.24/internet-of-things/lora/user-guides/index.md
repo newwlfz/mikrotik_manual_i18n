@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/lora/user-guides/index"
 sidebar_position: 4
 title: "User Guides"
+description: 'This section provides user guides for MikroTik LoRa devices and gateways, including step-by-step installation instructions, AWS LoRaWAN and The Things Stack configuration examples, and the TG-LR sensor tag setup guide.'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/lora/user-guides
 captured_at: '2026-11-04T11:31:20+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/container/kill"
 sidebar_position: 4
 title: "kill"
+description: 'RouterOS command reference for /container/kill.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/container/kill
 captured_at: '2026-11-01T21:26:37+08:00'
 ---

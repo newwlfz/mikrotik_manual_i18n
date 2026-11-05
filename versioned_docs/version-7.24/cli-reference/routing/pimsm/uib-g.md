@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/pimsm/uib-g"
 sidebar_position: 9
 title: "uib-g"
+description: 'The upstream information base menus show the any-source multicast (\,G) and source-specific multicast (S,G) groups and their statuses. These menus contain only read-only entries.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/pimsm/uib-g
 captured_at: '2026-11-01T21:29:39+08:00'
 ---

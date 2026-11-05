@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/policy-routing"
 sidebar_position: 6
 title: "Policy Routing"
+description: 'Policy routing in RouterOS allows steering traffic based on criteria to specific gateways, using custom routing tables and rules. It supports dynamic routing decisions with firewall mangle marking or basic routing...'
 slug: /user-guides/routing-and-networking-protocols/policy-routing
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/policy-routing
 captured_at: '2026-11-04T11:33:55+08:00'

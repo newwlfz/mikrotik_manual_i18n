@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/pimsm/interface-template"
 sidebar_position: 6
 title: "interface-template"
+description: 'The interface template menu defines which interfaces will participate in PIM and what per-interface configuration will be used.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/pimsm/interface-template
 captured_at: '2026-11-01T21:29:37+08:00'
 ---

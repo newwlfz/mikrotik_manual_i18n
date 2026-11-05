@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/radius/incoming/monitor"
 sidebar_position: 2
 title: "monitor"
+description: 'RouterOS command reference for /radius/incoming/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/radius/incoming/monitor
 captured_at: '2026-11-01T21:29:24+08:00'
 ---

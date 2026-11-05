@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/policer-qos-map"
 sidebar_position: 14
 title: "policer-qos-map"
+description: 'RouterOS directory reference for /interface/ethernet/switch/policer-qos-map.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/policer-qos-map
 captured_at: '2026-11-01T21:27:17+08:00'
 ---

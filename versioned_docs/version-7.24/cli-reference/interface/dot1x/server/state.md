@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/dot1x/server/state"
 sidebar_position: 3
 title: "state"
+description: 'RouterOS directory reference for /interface/dot1x/server/state.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/dot1x/server/state
 captured_at: '2026-11-01T21:27:06+08:00'
 ---

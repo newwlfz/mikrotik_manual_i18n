@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user-manager/database/save"
 sidebar_position: 5
 title: "save"
+description: 'RouterOS command reference for /user-manager/database/save.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/database/save
 captured_at: '2026-11-01T21:30:31+08:00'
 ---

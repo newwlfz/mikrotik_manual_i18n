@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/disk/format"
 sidebar_position: 6
 title: "format"
+description: 'RouterOS command reference for /disk/format.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/disk/format
 captured_at: '2026-11-01T21:26:45+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/ipsec/proposal"
 sidebar_position: 9
 title: "proposal"
+description: 'RouterOS directory reference for /ip/ipsec/proposal.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/ipsec/proposal
 captured_at: '2026-11-01T21:28:47+08:00'
 ---

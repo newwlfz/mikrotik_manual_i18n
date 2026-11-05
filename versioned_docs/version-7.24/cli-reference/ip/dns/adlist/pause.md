@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/dns/adlist/pause"
 sidebar_position: 2
 title: "pause"
+description: 'RouterOS command reference for /ip/dns/adlist/pause.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dns/adlist/pause
 captured_at: '2026-11-01T21:28:30+08:00'
 ---

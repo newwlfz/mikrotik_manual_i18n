@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/port/remote-access"
 sidebar_position: 2
 title: "remote-access"
+description: 'RouterOS directory reference for /port/remote-access.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/port/remote-access
 captured_at: '2026-11-01T21:29:20+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/service/index"
 sidebar_position: 1
 title: "service"
+description: 'RouterOS directory reference for /ip/service.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/service
 captured_at: '2026-11-01T21:28:56+08:00'
 ---

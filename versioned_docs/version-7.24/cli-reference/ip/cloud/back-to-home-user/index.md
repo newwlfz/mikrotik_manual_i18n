@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/cloud/back-to-home-user/index"
 sidebar_position: 1
 title: "back-to-home-user"
+description: 'RouterOS directory reference for /ip/cloud/back-to-home-user.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/cloud/back-to-home-user
 captured_at: '2026-11-01T21:28:24+08:00'
 ---

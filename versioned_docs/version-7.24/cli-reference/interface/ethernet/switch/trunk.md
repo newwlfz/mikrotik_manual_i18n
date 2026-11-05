@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/trunk"
 sidebar_position: 26
 title: "trunk"
+description: 'RouterOS directory reference for /interface/ethernet/switch/trunk.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/trunk
 captured_at: '2026-11-01T21:27:23+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/proxy/direct/index"
 sidebar_position: 1
 title: "direct"
+description: 'RouterOS directory reference for /ip/proxy/direct.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/proxy/direct
 captured_at: '2026-11-01T21:28:54+08:00'
 ---

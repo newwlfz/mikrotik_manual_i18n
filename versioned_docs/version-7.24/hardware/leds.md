@@ -2,6 +2,7 @@
 sidebar_key: "hardware/leds"
 sidebar_position: 4
 title: "LEDs"
+description: 'RouterOS allows customizing LED behavior for wireless strength, interface traffic activity, and other status indicators across supported devices. Users can configure individual LEDs for specific functions like...'
 source: https://manual.mikrotik.com/docs/7.24/hardware/leds
 captured_at: '2026-11-04T11:29:24+08:00'
 ---

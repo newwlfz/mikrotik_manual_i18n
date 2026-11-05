@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/user-guides/wmm-and-vlan-priority"
 sidebar_position: 11
 title: "WMM and VLAN priority"
+description: 'This page explains how MikroTik RouterOS implements WMM (Wi-Fi MultiMedia) and VLAN priority for QoS, detailing how traffic is categorized into access categories (background, best effort, video, voice), VLAN priority...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/user-guides/wmm-and-vlan-priority
 captured_at: '2026-11-04T11:27:30+08:00'
 ---

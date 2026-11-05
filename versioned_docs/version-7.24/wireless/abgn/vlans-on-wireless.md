@@ -2,6 +2,7 @@
 sidebar_key: "wireless/abgn/vlans-on-wireless"
 sidebar_position: 8
 title: "VLANs on Wireless"
+description: 'This page explains how to configure VLANs on MikroTik RouterOS wireless interfaces, enabling Layer2 segmentation between different Virtual APs and networks. It includes setup examples for isolating Guest and Work APs...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/abgn/vlans-on-wireless
 captured_at: '2026-11-04T11:35:37+08:00'
 ---

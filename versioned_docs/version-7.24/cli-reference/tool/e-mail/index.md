@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/e-mail/index"
 sidebar_position: 1
 title: "e-mail"
+description: 'RouterOS settings reference for /tool/e-mail.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/e-mail
 captured_at: '2026-11-01T21:30:14+08:00'
 ---

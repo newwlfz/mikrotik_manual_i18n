@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/bgp/evpn"
 sidebar_position: 3
 title: "evpn"
+description: 'See EVPN documentation.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/bgp/evpn
 captured_at: '2026-11-01T21:29:27+08:00'
 ---

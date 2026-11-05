@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/lcd/take-screenshot"
 sidebar_position: 8
 title: "take-screenshot"
+description: 'RouterOS command reference for /lcd/take-screenshot.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/lcd/take-screenshot
 captured_at: '2026-11-01T21:29:13+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/zerotier/index"
 sidebar_position: 2
 title: "zerotier"
+description: 'RouterOS directory reference for /zerotier.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/zerotier
 captured_at: '2026-11-01T21:30:37+08:00'
 ---

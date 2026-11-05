@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/pppoe-client/scan"
 sidebar_position: 3
 title: "scan"
+description: 'RouterOS command reference for /interface/pppoe-client/scan.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/pppoe-client/scan
 captured_at: '2026-11-01T21:27:34+08:00'
 ---

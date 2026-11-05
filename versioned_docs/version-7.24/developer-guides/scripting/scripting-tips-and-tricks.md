@@ -2,6 +2,7 @@
 sidebar_key: "developer-guides/scripting/scripting-tips-and-tricks"
 sidebar_position: 3
 title: "Scripting Tips and Tricks"
+description: 'This page provides scripting tips for MikroTik RouterOS, emphasizing the importance of using internal IDs instead of literal values to avoid errors when objects are renumbered. It explains how to correctly reference...'
 source: https://manual.mikrotik.com/docs/7.24/developer-guides/scripting/scripting-tips-and-tricks
 captured_at: '2026-11-04T11:27:51+08:00'
 ---

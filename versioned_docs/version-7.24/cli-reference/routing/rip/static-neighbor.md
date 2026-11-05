@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/rip/static-neighbor"
 sidebar_position: 6
 title: "static-neighbor"
+description: 'RouterOS directory reference for /routing/rip/static-neighbor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/rip/static-neighbor
 captured_at: '2026-11-01T21:29:40+08:00'
 ---

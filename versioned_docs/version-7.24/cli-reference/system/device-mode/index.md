@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/device-mode/index"
 sidebar_position: 1
 title: "device-mode"
+description: 'RouterOS settings reference for /system/device-mode.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/device-mode
 captured_at: '2026-11-01T21:29:49+08:00'
 ---

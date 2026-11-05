@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/container/repull"
 sidebar_position: 8
 title: "repull"
+description: 'RouterOS command reference for /container/repull.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/container/repull
 captured_at: '2026-11-01T21:26:39+08:00'
 ---

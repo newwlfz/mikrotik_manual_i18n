@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/bluetooth/connections/write-no-resp"
 sidebar_position: 10
 title: "write-no-resp"
+description: 'RouterOS command reference for /iot/bluetooth/connections/write-no-resp.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/bluetooth/connections/write-no-resp
 captured_at: '2026-11-01T21:28:09+08:00'
 ---

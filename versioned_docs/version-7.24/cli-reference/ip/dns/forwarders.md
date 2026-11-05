@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/dns/forwarders"
 sidebar_position: 3
 title: "forwarders"
+description: 'RouterOS directory reference for /ip/dns/forwarders.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dns/forwarders
 captured_at: '2026-11-01T21:28:31+08:00'
 ---

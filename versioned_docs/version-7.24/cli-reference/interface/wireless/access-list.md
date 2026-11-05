@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/access-list"
 sidebar_position: 1
 title: "access-list"
+description: 'RouterOS directory reference for /interface/wireless/access-list.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/access-list
 captured_at: '2026-11-01T21:27:56+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "wireless/w60g/fail-over-ptp-gui-example"
 sidebar_position: 4
 title: "Fail-over PtP GUI example"
+description: 'This guide demonstrates configuring automatic failover between a 60GHz wireless bridge and a bonded 5GHz interface using MikroTik RouterOS GUI, including bridge setup, wireless mode selection, and security profile...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/w60g/fail-over-ptp-gui-example
 captured_at: '2026-11-04T11:36:18+08:00'
 ---

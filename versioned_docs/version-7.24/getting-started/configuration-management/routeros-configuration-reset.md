@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/configuration-management/routeros-configuration-reset"
 sidebar_position: 7
 title: "RouterOS configuration reset"
+description: 'This page provides comprehensive instructions for resetting MikroTik RouterOS configurations, covering both physical button methods and GUI/CLI commands. It details LED indicators for each reset action, backup loader...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/configuration-management/routeros-configuration-reset
 captured_at: '2026-11-04T11:28:42+08:00'
 ---

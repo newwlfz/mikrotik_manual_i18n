@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/bgp/instance"
 sidebar_position: 5
 title: "instance"
+description: 'RouterOS directory reference for /routing/bgp/instance.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/bgp/instance
 captured_at: '2026-11-01T21:29:27+08:00'
 ---

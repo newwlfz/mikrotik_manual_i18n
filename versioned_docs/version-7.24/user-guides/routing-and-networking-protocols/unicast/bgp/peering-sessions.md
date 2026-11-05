@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/unicast/bgp/peering-sessions"
 sidebar_position: 5
 title: "Peering Sessions"
+description: 'Introduction on how to establish BGP sessions.'
 slug: /user-guides/routing-and-networking-protocols/unicast/bgp/peering-sessions
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/bgp/peering-sessions
 captured_at: '2026-11-04T11:34:12+08:00'

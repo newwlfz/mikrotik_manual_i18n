@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/cloud/back-to-home-user/show-client-config"
 sidebar_position: 2
 title: "show-client-config"
+description: 'RouterOS command reference for /ip/cloud/back-to-home-user/show-client-config.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/cloud/back-to-home-user/show-client-config
 captured_at: '2026-11-01T21:28:26+08:00'
 ---

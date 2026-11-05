@@ -1,5 +1,6 @@
 ---
 title: "Interface Lists"
+description: 'Allows defining a set of interfaces for easier interface management in the different interface-based configuration sections such as Neighbor Discovery, Firewall, Bridge, and Internet Detect.'
 sidebar_label: "Interface Lists"
 sidebar_position: 999
 ---

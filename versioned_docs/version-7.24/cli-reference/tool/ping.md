@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/ping"
 sidebar_position: 14
 title: "ping"
+description: 'See Ping for the full documentation.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/ping
 captured_at: '2026-11-01T21:30:19+08:00'
 ---

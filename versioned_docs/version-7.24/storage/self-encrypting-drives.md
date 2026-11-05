@@ -2,6 +2,7 @@
 sidebar_key: "storage/self-encrypting-drives"
 sidebar_position: 10
 title: "Self-encrypting drives (SED)"
+description: 'This page documents MikroTik RouterOS''s Self-Encrypting Drive (SED) support, requiring the Storage package. It explains Opal compliance, displays supported drives with flags (o/O), and provides commands to set or...'
 source: https://manual.mikrotik.com/docs/7.24/storage/self-encrypting-drives
 captured_at: '2026-11-04T11:33:14+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/ospf/area/range"
 sidebar_position: 2
 title: "range"
+description: 'RouterOS directory reference for /routing/ospf/area/range.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/ospf/area/range
 captured_at: '2026-11-01T21:29:34+08:00'
 ---

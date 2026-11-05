@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/snmp-get"
 sidebar_position: 20
 title: "snmp-get"
+description: 'RouterOS command reference for /tool/snmp-get.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/snmp-get
 captured_at: '2026-11-01T21:30:22+08:00'
 ---

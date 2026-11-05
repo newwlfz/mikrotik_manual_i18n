@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/lte/show-capabilities"
 sidebar_position: 10
 title: "show-capabilities"
+description: 'RouterOS command reference for /interface/lte/show-capabilities.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/lte/show-capabilities
 captured_at: '2026-11-01T21:27:28+08:00'
 ---

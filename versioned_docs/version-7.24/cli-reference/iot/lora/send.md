@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/lora/send"
 sidebar_position: 7
 title: "send"
+description: 'RouterOS command reference for /iot/lora/send.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/lora/send
 captured_at: '2026-11-01T21:28:15+08:00'
 ---

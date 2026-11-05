@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/ospf/area/index"
 sidebar_position: 1
 title: "area"
+description: 'RouterOS directory reference for /routing/ospf/area.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/ospf/area
 captured_at: '2026-11-01T21:29:34+08:00'
 ---

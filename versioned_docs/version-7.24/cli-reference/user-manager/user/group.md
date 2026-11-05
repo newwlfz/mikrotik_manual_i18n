@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user-manager/user/group"
 sidebar_position: 3
 title: "group"
+description: 'RouterOS directory reference for /user-manager/user/group.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/user/group
 captured_at: '2026-11-01T21:30:34+08:00'
 ---

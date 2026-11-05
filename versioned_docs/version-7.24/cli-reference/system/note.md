@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/note"
 sidebar_position: 16
 title: "note"
+description: 'RouterOS settings reference for /system/note.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/note
 captured_at: '2026-11-01T21:29:55+08:00'
 ---

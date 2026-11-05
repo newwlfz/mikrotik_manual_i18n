@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/lte/index"
 sidebar_position: 6
 title: "lte"
+description: 'RouterOS directory reference for /interface/lte.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/lte
 captured_at: '2026-11-01T21:27:23+08:00'
 ---

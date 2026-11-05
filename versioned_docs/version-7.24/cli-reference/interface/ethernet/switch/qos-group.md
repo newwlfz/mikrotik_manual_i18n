@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/qos-group"
 sidebar_position: 20
 title: "qos-group"
+description: 'RouterOS directory reference for /interface/ethernet/switch/qos-group.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/qos-group
 captured_at: '2026-11-01T21:27:14+08:00'
 ---

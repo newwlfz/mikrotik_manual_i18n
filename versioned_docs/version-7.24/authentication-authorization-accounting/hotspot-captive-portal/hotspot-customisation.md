@@ -2,6 +2,7 @@
 sidebar_key: "authentication-authorization-accounting/hotspot-captive-portal/hotspot-customisation"
 sidebar_position: 1
 title: "Hotspot customisation"
+description: 'Customize HotSpot authentication pages by overriding default HTML files stored on the router''s FTP server, specifying custom directories via ''html-directory-override'' in HotSpot profiles. Choose from predefined pages...'
 source: https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting/hotspot-captive-portal/hotspot-customisation
 captured_at: '2026-11-04T11:27:04+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "containers/user-guides/container-thingsboard-mqtt-http-server"
 sidebar_position: 7
 title: "Container - ThingsBoard MQTT/HTTP server"
+description: 'This page introduces the container feature in MikroTik RouterOS, enabling users to run servers like ThingsBoard MQTT/HTTP IoT platform directly on the router. It explains how to configure container mode, networking...'
 source: https://manual.mikrotik.com/docs/7.24/containers/user-guides/container-thingsboard-mqtt-http-server
 captured_at: '2026-11-04T11:27:53+08:00'
 ---

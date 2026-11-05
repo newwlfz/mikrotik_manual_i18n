@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/hotspot/ip-binding"
 sidebar_position: 5
 title: "ip-binding"
+description: 'RouterOS directory reference for /ip/hotspot/ip-binding.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/hotspot/ip-binding
 captured_at: '2026-11-01T21:28:40+08:00'
 ---

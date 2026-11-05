@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/rpki/index"
 sidebar_position: 1
 title: "rpki"
+description: 'RouterOS directory reference for /routing/rpki.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/rpki
 captured_at: '2026-11-01T21:29:40+08:00'
 ---

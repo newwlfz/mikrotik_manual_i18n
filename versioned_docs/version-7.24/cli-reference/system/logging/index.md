@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/logging/index"
 sidebar_position: 2
 title: "logging"
+description: 'RouterOS directory reference for /system/logging.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/logging
 captured_at: '2026-11-01T21:29:54+08:00'
 ---

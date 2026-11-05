@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/security-profiles"
 sidebar_position: 18
 title: "security-profiles"
+description: 'RouterOS directory reference for /interface/wireless/security-profiles.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/security-profiles
 captured_at: '2026-11-01T21:28:04+08:00'
 ---

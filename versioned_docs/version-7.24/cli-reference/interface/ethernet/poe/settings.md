@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/poe/settings"
 sidebar_position: 4
 title: "settings"
+description: 'RouterOS settings reference for /interface/ethernet/poe/settings.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/poe/settings
 captured_at: '2026-11-01T21:27:06+08:00'
 ---

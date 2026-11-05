@@ -2,6 +2,7 @@
 sidebar_key: "system-information-and-utilities/ups"
 sidebar_position: 16
 title: "UPS"
+description: 'UPS monitor feature for APC UPS units supports serial/USB connections, enabling graceful power outage handling with hibernate and safe reboot capabilities. It monitors battery status, runs tests, logs power changes,...'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/ups
 captured_at: '2026-11-04T11:33:44+08:00'
 ---

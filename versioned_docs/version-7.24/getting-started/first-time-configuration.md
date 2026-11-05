@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/first-time-configuration"
 sidebar_position: 1
 title: "First Time Configuration"
+description: 'This page provides a step-by-step guide for first-time MikroTik RouterOS configuration, covering prerequisites, connection setup, and key concepts like DHCP, NAT, and firewall. It includes both WinBox graphical and...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/first-time-configuration
 captured_at: '2026-11-04T11:28:44+08:00'
 ---

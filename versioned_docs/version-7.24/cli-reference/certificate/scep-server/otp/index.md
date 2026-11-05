@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/certificate/scep-server/otp/index"
 sidebar_position: 2
 title: "otp"
+description: 'RouterOS directory reference for /certificate/scep-server/otp.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/certificate/scep-server/otp
 captured_at: '2026-11-01T21:26:27+08:00'
 ---

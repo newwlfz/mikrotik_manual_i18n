@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/filter/chain"
 sidebar_position: 1
 title: "chain"
+description: 'Dynamic list of filter rule chains that can be referenced in BGP/OSPF or other routing protocol configuration.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/filter/chain
 captured_at: '2026-11-01T21:29:29+08:00'
 ---

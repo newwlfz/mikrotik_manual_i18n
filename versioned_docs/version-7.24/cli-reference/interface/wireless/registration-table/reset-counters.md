@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/registration-table/reset-counters"
 sidebar_position: 2
 title: "reset-counters"
+description: 'RouterOS command reference for /interface/wireless/registration-table/reset-counters.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/registration-table/reset-counters
 captured_at: '2026-11-01T21:28:03+08:00'
 ---

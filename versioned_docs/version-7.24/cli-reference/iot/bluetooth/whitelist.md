@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/bluetooth/whitelist"
 sidebar_position: 8
 title: "whitelist"
+description: 'RouterOS directory reference for /iot/bluetooth/whitelist.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/bluetooth/whitelist
 captured_at: '2026-11-01T21:28:12+08:00'
 ---

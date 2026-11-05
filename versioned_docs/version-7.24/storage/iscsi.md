@@ -2,6 +2,7 @@
 sidebar_key: "storage/iscsi"
 sidebar_position: 4
 title: "iSCSI"
+description: 'iSCSI enables IP-based storage access with RouterOS supporting both target and initiator modes, featuring properties like iSCSI address, IQN identifiers, and configurable ports for both client and server roles.'
 source: https://manual.mikrotik.com/docs/7.24/storage/iscsi
 captured_at: '2026-11-04T11:33:13+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/mpls/ldp/neighbor"
 sidebar_position: 6
 title: "neighbor"
+description: 'List of discovered and statically configured LDP neighbors.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/mpls/ldp/neighbor
 captured_at: '2026-11-01T21:29:15+08:00'
 ---

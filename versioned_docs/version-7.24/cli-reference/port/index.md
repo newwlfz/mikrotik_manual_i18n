@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/port/index"
 sidebar_position: 1
 title: "port"
+description: 'RouterOS directory reference for /port.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/port
 captured_at: '2026-11-01T21:29:20+08:00'
 ---

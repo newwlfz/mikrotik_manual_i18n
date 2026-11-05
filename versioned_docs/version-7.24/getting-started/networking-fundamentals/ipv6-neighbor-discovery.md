@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/networking-fundamentals/ipv6-neighbor-discovery"
 sidebar_position: 4
 title: "IPv6 Neighbor Discovery"
+description: 'RouterOS supports IPv6 Neighbor Discovery and stateless address autoconfiguration using RADVD, adhering to RFC 4861 and 4862. It enables hosts to automatically configure IPv6 addresses via Router Advertisements, with...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/networking-fundamentals/ipv6-neighbor-discovery
 captured_at: '2026-11-04T11:28:53+08:00'
 ---

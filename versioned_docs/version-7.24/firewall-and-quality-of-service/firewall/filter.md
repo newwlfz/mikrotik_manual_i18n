@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/firewall/filter"
 sidebar_position: 3
 title: "Filter"
+description: 'Firewall filters in MikroTik RouterOS control packet flow by allowing or blocking traffic through predefined chains (input, forward, output) with options to accept specific services or drop malicious packets....'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/firewall/filter
 captured_at: '2026-11-04T11:28:11+08:00'
 ---

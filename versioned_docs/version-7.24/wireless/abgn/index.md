@@ -2,6 +2,7 @@
 sidebar_key: "wireless/abgn/index"
 sidebar_position: 4
 title: "802.11 a/b/g/n"
+description: 'MikroTik 802.11 a/b/g/n devices use the legacy /interface/wireless menu provided by the wireless package. This section covers the wireless interface, MikroTik-proprietary protocols (Nstreme, Nv2), HWMP+ mesh,...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/abgn
 captured_at: '2026-11-04T11:35:00+08:00'
 ---

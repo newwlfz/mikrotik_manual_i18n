@@ -2,6 +2,7 @@
 sidebar_key: "virtual-private-networks/ipsec/qkd-integration-in-routeros-ipsec-ppk"
 sidebar_position: 4
 title: "QKD Integration in RouterOS IPsec (PPK)"
+description: 'This page introduces RouterOS IPsec''s Post-Quantum Pre-shared Key (PPK) feature, detailing its integration with Quantum Key Distribution (QKD), supported key sources (static, PSK, QKD), security recommendations, and...'
 source: https://manual.mikrotik.com/docs/7.24/virtual-private-networks/ipsec/qkd-integration-in-routeros-ipsec-ppk
 captured_at: '2026-11-04T11:35:56+08:00'
 ---

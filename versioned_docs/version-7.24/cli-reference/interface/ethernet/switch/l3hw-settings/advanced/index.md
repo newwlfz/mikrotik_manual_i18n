@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/l3hw-settings/advanced/index"
 sidebar_position: 1
 title: "advanced"
+description: 'RouterOS settings reference for /interface/ethernet/switch/l3hw-settings/advanced.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/l3hw-settings/advanced
 captured_at: '2026-11-01T21:27:12+08:00'
 ---

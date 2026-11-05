@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ipv6/dhcp-relay/option"
 sidebar_position: 3
 title: "option"
+description: 'RouterOS directory reference for /ipv6/dhcp-relay/option.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/dhcp-relay/option
 captured_at: '2026-11-01T21:29:02+08:00'
 ---

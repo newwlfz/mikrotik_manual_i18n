@@ -2,6 +2,7 @@
 sidebar_key: "system-information-and-utilities/tftp"
 sidebar_position: 15
 title: "TFTP"
+description: 'The TFTP page describes MikroTik RouterOS''s implementation of the Trivial File Transfer Protocol, detailing configuration options for TFTP server access rules including IP address ranges, filename handling, block...'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/tftp
 captured_at: '2026-11-04T11:33:40+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/disk/btrfs/subvolume"
 sidebar_position: 3
 title: "subvolume"
+description: 'RouterOS directory reference for /disk/btrfs/subvolume.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/disk/btrfs/subvolume
 captured_at: '2026-11-01T21:26:47+08:00'
 ---

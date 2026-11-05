@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/caps-man/manager/interface"
 sidebar_position: 2
 title: "interface"
+description: 'RouterOS directory reference for /caps-man/manager/interface.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/caps-man/manager/interface
 captured_at: '2026-11-01T21:26:21+08:00'
 ---

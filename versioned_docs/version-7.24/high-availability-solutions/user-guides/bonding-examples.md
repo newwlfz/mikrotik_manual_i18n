@@ -2,6 +2,7 @@
 sidebar_key: "high-availability-solutions/user-guides/bonding-examples"
 sidebar_position: 1
 title: "Bonding Examples"
+description: 'This page demonstrates how to bond EoIP tunnels over two wireless links using MikroTik RouterOS, showing configuration steps for creating bonded interfaces and verifying traffic distribution across the links.'
 source: https://manual.mikrotik.com/docs/7.24/high-availability-solutions/user-guides/bonding-examples
 captured_at: '2026-11-04T11:29:56+08:00'
 ---

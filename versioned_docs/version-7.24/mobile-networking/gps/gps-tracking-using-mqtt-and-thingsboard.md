@@ -2,6 +2,7 @@
 sidebar_key: "mobile-networking/gps/gps-tracking-using-mqtt-and-thingsboard"
 sidebar_position: 2
 title: "GPS-tracking using MQTT and ThingsBoard"
+description: 'This page documents configuring GPS-tracking on MikroTik RouterOS using MQTT and ThingsBoard, detailing setup steps for GPS-enabled devices to send location data to a server. It covers broker configuration, device...'
 source: https://manual.mikrotik.com/docs/7.24/mobile-networking/gps/gps-tracking-using-mqtt-and-thingsboard
 captured_at: '2026-11-04T11:35:25+08:00'
 ---

@@ -1,5 +1,6 @@
 ---
 title: "DHCP"
+description: 'DHCP (Dynamic Host Configuration Protocol) is used for the easy distribution of IP addresses in a network. The MikroTik RouterOS implementation includes both server and client parts and is compliant with RFC 2131.'
 sidebar_label: "DHCP"
 sidebar_position: 999
 ---

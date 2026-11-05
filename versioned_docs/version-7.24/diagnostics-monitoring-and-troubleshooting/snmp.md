@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/snmp"
 sidebar_position: 12
 title: "SNMP"
+description: 'This page documents SNMP configuration in MikroTik RouterOS, covering enabling the service, general settings like contact info and trap configurations, community access rights for SNMPv1/2c/3, and warnings about...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/snmp
 captured_at: '2026-11-04T11:28:02+08:00'
 ---

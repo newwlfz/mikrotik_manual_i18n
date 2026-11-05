@@ -2,6 +2,7 @@
 sidebar_key: "mobile-networking/dual-sim-application"
 sidebar_position: 7
 title: "Dual SIM Application"
+description: 'The page describes how to configure and automate SIM card switching in MikroTik RouterOS for dual SIM LTE devices, including initial setup steps, roaming status checks, and sample scripts to switch between...'
 source: https://manual.mikrotik.com/docs/7.24/mobile-networking/dual-sim-application
 captured_at: '2026-11-04T11:32:20+08:00'
 ---

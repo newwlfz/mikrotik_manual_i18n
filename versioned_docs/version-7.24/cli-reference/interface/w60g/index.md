@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/w60g/index"
 sidebar_position: 2
 title: "w60g"
+description: 'RouterOS directory reference for /interface/w60g.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/w60g
 captured_at: '2026-11-01T21:27:46+08:00'
 ---

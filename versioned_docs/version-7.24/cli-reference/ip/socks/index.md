@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/socks/index"
 sidebar_position: 3
 title: "socks"
+description: 'RouterOS settings reference for /ip/socks.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/socks
 captured_at: '2026-11-01T21:28:57+08:00'
 ---

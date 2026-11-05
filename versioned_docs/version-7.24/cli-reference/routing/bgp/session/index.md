@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/bgp/session/index"
 sidebar_position: 3
 title: "session"
+description: 'List of BGP already established, not yet connected or disconnected sessions.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/bgp/session
 captured_at: '2026-11-01T21:29:28+08:00'
 ---

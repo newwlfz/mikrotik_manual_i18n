@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/bgp/vpls"
 sidebar_position: 8
 title: "vpls"
+description: 'This menu lists all the configured BGP-based VPLS instances. These instances allow the router to advertise VPLS BGP NLRI and indicate that the router belongs to a specific customer VPLS network.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/bgp/vpls
 captured_at: '2026-11-01T21:29:29+08:00'
 ---

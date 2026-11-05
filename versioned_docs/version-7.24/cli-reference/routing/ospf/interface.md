@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/ospf/interface"
 sidebar_position: 3
 title: "interface"
+description: 'RouterOS directory reference for /routing/ospf/interface.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/ospf/interface
 captured_at: '2026-11-01T21:29:34+08:00'
 ---

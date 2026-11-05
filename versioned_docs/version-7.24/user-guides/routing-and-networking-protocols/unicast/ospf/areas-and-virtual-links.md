@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/unicast/ospf/areas-and-virtual-links"
 sidebar_position: 1
 title: "Areas and Virtual Links"
+description: 'Understand the concept of OSPF areas and virtual links.'
 slug: /user-guides/routing-and-networking-protocols/unicast/ospf/areas-and-virtual-links
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/ospf/areas-and-virtual-links
 captured_at: '2026-11-04T11:34:47+08:00'

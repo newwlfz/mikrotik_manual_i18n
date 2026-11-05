@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/keymat-provider/index"
 sidebar_position: 1
 title: "keymat-provider"
+description: 'RouterOS directory reference for /system/keymat-provider.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/keymat-provider
 captured_at: '2026-11-01T21:29:51+08:00'
 ---

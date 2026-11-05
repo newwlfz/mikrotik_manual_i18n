@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/index"
 sidebar_position: 12
 title: "interface"
+description: 'RouterOS directory reference for /interface.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface
 captured_at: '2026-11-01T21:26:56+08:00'
 ---

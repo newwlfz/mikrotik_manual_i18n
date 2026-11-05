@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/pool/index"
 sidebar_position: 1
 title: "pool"
+description: 'IP pools are used to define a range of IP addresses that can be used by various RouterOS utilities, for example, DHCP server, Point-to-Point servers and more. Separate lists for IPv4 and IPv6 are available. Whenever...'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/pool
 captured_at: '2026-11-01T21:28:51+08:00'
 ---

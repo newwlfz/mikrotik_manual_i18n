@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/connection-tracking"
 sidebar_position: 3
 title: "Connection tracking"
+description: 'Connection tracking in MikroTik RouterOS enables stateful firewall functionality by monitoring logical network connections, supporting NAT and various firewall features. It assigns packets to states like new,...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/connection-tracking
 captured_at: '2026-11-04T11:28:09+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/info/country-list"
 sidebar_position: 3
 title: "country-list"
+description: 'RouterOS command reference for /interface/wireless/info/country-list.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/info/country-list
 captured_at: '2026-11-01T21:27:59+08:00'
 ---

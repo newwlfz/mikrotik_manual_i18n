@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/pwr-line/upgrade-firmware"
 sidebar_position: 9
 title: "upgrade-firmware"
+description: 'RouterOS command reference for /interface/pwr-line/upgrade-firmware.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/pwr-line/upgrade-firmware
 captured_at: '2026-11-01T21:27:40+08:00'
 ---

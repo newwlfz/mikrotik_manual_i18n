@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/caps-man/provisioning"
 sidebar_position: 9
 title: "provisioning"
+description: 'RouterOS directory reference for /caps-man/provisioning.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/caps-man/provisioning
 captured_at: '2026-11-01T21:26:22+08:00'
 ---

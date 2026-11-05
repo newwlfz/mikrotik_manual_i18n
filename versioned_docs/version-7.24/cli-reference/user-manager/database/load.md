@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user-manager/database/load"
 sidebar_position: 2
 title: "load"
+description: 'RouterOS command reference for /user-manager/database/load.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/database/load
 captured_at: '2026-11-01T21:30:29+08:00'
 ---

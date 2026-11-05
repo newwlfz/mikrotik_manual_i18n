@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/ipsec/key/rsa/index"
 sidebar_position: 4
 title: "rsa"
+description: 'RouterOS directory reference for /ip/ipsec/key/rsa.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/ipsec/key/rsa
 captured_at: '2026-11-01T21:28:44+08:00'
 ---

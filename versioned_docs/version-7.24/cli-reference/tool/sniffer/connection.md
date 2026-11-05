@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/sniffer/connection"
 sidebar_position: 1
 title: "connection"
+description: 'RouterOS directory reference for /tool/sniffer/connection.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/sniffer/connection
 captured_at: '2026-11-01T21:30:20+08:00'
 ---

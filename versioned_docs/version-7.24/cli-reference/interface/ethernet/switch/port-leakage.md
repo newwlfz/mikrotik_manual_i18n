@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/port-leakage"
 sidebar_position: 17
 title: "port-leakage"
+description: 'RouterOS directory reference for /interface/ethernet/switch/port-leakage.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/port-leakage
 captured_at: '2026-11-01T21:27:13+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/macvlan"
 sidebar_position: 21
 title: "macvlan"
+description: 'RouterOS directory reference for /interface/macvlan.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/macvlan
 captured_at: '2026-11-01T21:27:29+08:00'
 ---

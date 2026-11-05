@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/log/syslog-with-elasticsearch"
 sidebar_position: 3
 title: "Syslog with Elasticsearch"
+description: 'This guide explains how to configure Syslog data collection and analysis using Elasticsearch, Kibana, and Fleet Server with MikroTik RouterOS devices. It covers prerequisites, setup steps for both Elastic and...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/log/syslog-with-elasticsearch
 captured_at: '2026-11-04T11:28:01+08:00'
 ---

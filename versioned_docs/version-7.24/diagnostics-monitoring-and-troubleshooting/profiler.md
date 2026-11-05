@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/profiler"
 sidebar_position: 15
 title: "Profiler"
+description: 'The Profiler tool in RouterOS displays CPU usage for each process, helping identify resource-intensive processes. It supports per-core monitoring and classifies CPU usage by process type for efficient debugging.'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/profiler
 captured_at: '2026-11-04T11:28:00+08:00'
 ---

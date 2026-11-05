@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/firewall/address-list"
 sidebar_position: 1
 title: "address-list"
+description: 'Firewall address lists allow a user to create lists of IP addresses grouped together under a common name. Firewall filter, mangle, and NAT facilities can then use those address lists to match packets against them.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/firewall/address-list
 captured_at: '2026-11-01T21:28:34+08:00'
 ---

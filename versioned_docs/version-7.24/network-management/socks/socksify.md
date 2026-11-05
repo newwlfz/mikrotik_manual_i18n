@@ -2,6 +2,7 @@
 sidebar_key: "network-management/socks/socksify"
 sidebar_position: 2
 title: "Socksify"
+description: 'Socksify enables routing specific traffic through a SOCKS proxy server, allowing applications without native proxy support to use one. It supports multiple services and can be configured with firewall filters for...'
 source: https://manual.mikrotik.com/docs/7.24/network-management/socks/socksify
 captured_at: '2026-11-04T11:32:48+08:00'
 ---

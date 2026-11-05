@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/fantasy"
 sidebar_position: 4
 title: "fantasy"
+description: 'Fantasy menu is a fancy way to generate large amount of routes for testing purposes. Main benefits of this approach compared to a script are the generation speed and simplicity. It is easy to remove all fantasy...'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/fantasy
 captured_at: '2026-11-01T21:29:29+08:00'
 ---

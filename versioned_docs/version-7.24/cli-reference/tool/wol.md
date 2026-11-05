@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/wol"
 sidebar_position: 27
 title: "wol"
+description: 'See Wake on LAN for the full documentation.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/wol
 captured_at: '2026-11-01T21:30:27+08:00'
 ---

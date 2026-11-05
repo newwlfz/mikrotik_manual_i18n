@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/multicast/igmp-proxy"
 sidebar_position: 2
 title: "IGMP Proxy"
+description: 'The IGMP Proxy feature in RouterOS enables multicast routing by forwarding IGMP frames, offering a simpler alternative to PIM-SM for certain topologies. It supports basic multicast forwarding with minimal resource...'
 slug: /user-guides/routing-and-networking-protocols/multicast/igmp-proxy
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/multicast/igmp-proxy
 captured_at: '2026-11-04T11:33:54+08:00'

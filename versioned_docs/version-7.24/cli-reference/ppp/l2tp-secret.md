@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ppp/l2tp-secret"
 sidebar_position: 3
 title: "l2tp-secret"
+description: 'RouterOS directory reference for /ppp/l2tp-secret.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ppp/l2tp-secret
 captured_at: '2026-11-01T21:29:21+08:00'
 ---

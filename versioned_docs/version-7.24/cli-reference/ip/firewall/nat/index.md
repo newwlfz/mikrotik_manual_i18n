@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/firewall/nat/index"
 sidebar_position: 1
 title: "nat"
+description: 'RouterOS directory reference for /ip/firewall/nat.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/firewall/nat
 captured_at: '2026-11-01T21:28:38+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/snmp-walk"
 sidebar_position: 21
 title: "snmp-walk"
+description: 'RouterOS command reference for /tool/snmp-walk.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/snmp-walk
 captured_at: '2026-11-01T21:30:22+08:00'
 ---

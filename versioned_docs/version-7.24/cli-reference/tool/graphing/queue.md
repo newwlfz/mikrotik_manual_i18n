@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/graphing/queue"
 sidebar_position: 3
 title: "queue"
+description: 'RouterOS directory reference for /tool/graphing/queue.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/graphing/queue
 captured_at: '2026-11-01T21:30:18+08:00'
 ---

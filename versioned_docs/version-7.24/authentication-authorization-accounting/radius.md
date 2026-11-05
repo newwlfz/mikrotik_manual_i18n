@@ -2,6 +2,7 @@
 sidebar_key: "authentication-authorization-accounting/radius"
 sidebar_position: 5
 title: "RADIUS"
+description: 'RADIUS enables centralized authentication and accounting for PPP, HotSpot, and other services in MikroTik RouterOS by connecting to a RADIUS server via UDP or RadSec protocol, with configurable ports, shared secrets,...'
 source: https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting/radius
 captured_at: '2026-11-04T11:27:01+08:00'
 ---

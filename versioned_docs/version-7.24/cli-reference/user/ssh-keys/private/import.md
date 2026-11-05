@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user/ssh-keys/private/import"
 sidebar_position: 1
 title: "import"
+description: 'RouterOS command reference for /user/ssh-keys/private/import.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user/ssh-keys/private/import
 captured_at: '2026-11-01T21:30:36+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/queues/pcq-example"
 sidebar_position: 4
 title: "PCQ example"
+description: 'Per Connection Queue (PCQ) is a RouterOS queuing method for equalizing bandwidth among users, with examples showing how to set download/upload limits using Queue Tree and Simple Queues.'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/queues/pcq-example
 captured_at: '2026-11-04T11:28:15+08:00'
 ---

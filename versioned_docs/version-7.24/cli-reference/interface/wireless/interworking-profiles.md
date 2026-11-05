@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/interworking-profiles"
 sidebar_position: 9
 title: "interworking-profiles"
+description: 'RouterOS directory reference for /interface/wireless/interworking-profiles.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/interworking-profiles
 captured_at: '2026-11-01T21:28:00+08:00'
 ---

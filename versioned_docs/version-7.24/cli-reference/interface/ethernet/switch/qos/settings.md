@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/qos/settings"
 sidebar_position: 7
 title: "settings"
+description: 'RouterOS settings reference for /interface/ethernet/switch/qos/settings.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/qos/settings
 captured_at: '2026-11-01T21:27:17+08:00'
 ---

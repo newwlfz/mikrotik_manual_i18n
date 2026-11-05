@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/dhcp-server/setup"
 sidebar_position: 8
 title: "setup"
+description: 'RouterOS command reference for /ip/dhcp-server/setup.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dhcp-server/setup
 captured_at: '2026-11-01T21:28:30+08:00'
 ---

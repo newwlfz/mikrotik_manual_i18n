@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/firewall/connection/index"
 sidebar_position: 1
 title: "connection"
+description: 'RouterOS directory reference for /ip/firewall/connection.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/firewall/connection
 captured_at: '2026-11-01T21:28:32+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/queue/interface"
 sidebar_position: 1
 title: "interface"
+description: 'RouterOS directory reference for /queue/interface.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/queue/interface
 captured_at: '2026-11-01T21:29:21+08:00'
 ---

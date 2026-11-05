@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/lte/esim/delete"
 sidebar_position: 3
 title: "delete"
+description: 'RouterOS command reference for /interface/lte/esim/delete.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/lte/esim/delete
 captured_at: '2026-11-01T21:27:25+08:00'
 ---

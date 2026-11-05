@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/cloud/index"
 sidebar_position: 5
 title: "cloud"
+description: 'RouterOS settings reference for /ip/cloud.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/cloud
 captured_at: '2026-11-01T21:28:24+08:00'
 ---

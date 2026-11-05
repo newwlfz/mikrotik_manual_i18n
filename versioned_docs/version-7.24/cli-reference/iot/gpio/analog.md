@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/gpio/analog"
 sidebar_position: 1
 title: "analog"
+description: 'RouterOS directory reference for /iot/gpio/analog.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/gpio/analog
 captured_at: '2026-11-01T21:28:13+08:00'
 ---

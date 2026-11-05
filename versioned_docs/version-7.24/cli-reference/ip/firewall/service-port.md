@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/firewall/service-port"
 sidebar_position: 9
 title: "service-port"
+description: 'RouterOS directory reference for /ip/firewall/service-port.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/firewall/service-port
 captured_at: '2026-11-01T21:28:38+08:00'
 ---

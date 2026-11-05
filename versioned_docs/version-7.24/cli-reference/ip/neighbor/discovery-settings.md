@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/neighbor/discovery-settings"
 sidebar_position: 1
 title: "discovery-settings"
+description: 'RouterOS settings reference for /ip/neighbor/discovery-settings.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/neighbor/discovery-settings
 captured_at: '2026-11-01T21:28:50+08:00'
 ---

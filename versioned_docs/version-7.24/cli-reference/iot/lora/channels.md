@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/lora/channels"
 sidebar_position: 1
 title: "channels"
+description: 'RouterOS directory reference for /iot/lora/channels.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/lora/channels
 captured_at: '2026-11-01T21:28:13+08:00'
 ---

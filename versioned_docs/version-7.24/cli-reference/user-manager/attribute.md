@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user-manager/attribute"
 sidebar_position: 2
 title: "attribute"
+description: 'RouterOS directory reference for /user-manager/attribute.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/attribute
 captured_at: '2026-11-01T21:30:29+08:00'
 ---

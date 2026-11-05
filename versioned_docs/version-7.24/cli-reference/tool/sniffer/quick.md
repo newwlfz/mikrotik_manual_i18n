@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/sniffer/quick"
 sidebar_position: 6
 title: "quick"
+description: 'RouterOS command reference for /tool/sniffer/quick.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/sniffer/quick
 captured_at: '2026-11-01T21:30:22+08:00'
 ---

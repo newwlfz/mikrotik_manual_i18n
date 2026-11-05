@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/dns/cache/all"
 sidebar_position: 1
 title: "all"
+description: 'RouterOS directory reference for /ip/dns/cache/all.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dns/cache/all
 captured_at: '2026-11-01T21:28:32+08:00'
 ---

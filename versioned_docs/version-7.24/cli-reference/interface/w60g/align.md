@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/w60g/align"
 sidebar_position: 1
 title: "align"
+description: 'RouterOS command reference for /interface/w60g/align.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/w60g/align
 captured_at: '2026-11-01T21:27:44+08:00'
 ---

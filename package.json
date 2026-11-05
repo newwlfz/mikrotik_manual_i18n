@@ -12,7 +12,10 @@
     "sync": "node tools/sync/index.mjs",
     "translate": "node tools/translate/index.mjs",
     "verify": "node tools/verify/index.mjs",
-    "cli:build": "node tools/cli/build-cli-data.mjs && cp data/cli/7.24/en.json static/cli/7.24.json"
+    "cli:build": "node tools/cli/build-cli-data.mjs && cp data/cli/7.24/en.json static/cli/7.24.json",
+    "current:build": "node tools/sync/materialize-current.mjs",
+    "prebuild": "npm run current:build",
+    "prestart": "npm run current:build"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.1",
@@ -28,8 +31,10 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.10.1",
+    "@docusaurus/plugin-client-redirects": "3.10.1",
     "@docusaurus/tsconfig": "3.10.1",
     "@docusaurus/types": "3.10.1",
+    "docusaurus-plugin-llms": "0.6.1",
     "pagefind": "^1.6.0",
     "playwright-core": "^1.64.1",
     "turndown": "^7.2.5",

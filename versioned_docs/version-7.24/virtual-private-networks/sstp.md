@@ -2,6 +2,7 @@
 sidebar_key: "virtual-private-networks/sstp"
 sidebar_position: 10
 title: "SSTP"
+description: 'SSTP provides secure remote access over HTTPS using TLS encryption, enabling VPN connections through firewalls and NAT devices. The page details SSTP client and server properties including authentication, encryption...'
 source: https://manual.mikrotik.com/docs/7.24/virtual-private-networks/sstp
 captured_at: '2026-11-04T11:34:48+08:00'
 ---

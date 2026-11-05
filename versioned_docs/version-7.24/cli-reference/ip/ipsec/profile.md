@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/ipsec/profile"
 sidebar_position: 8
 title: "profile"
+description: 'RouterOS directory reference for /ip/ipsec/profile.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/ipsec/profile
 captured_at: '2026-11-01T21:28:46+08:00'
 ---

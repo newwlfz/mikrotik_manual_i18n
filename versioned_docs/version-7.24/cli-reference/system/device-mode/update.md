@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/device-mode/update"
 sidebar_position: 2
 title: "update"
+description: 'RouterOS command reference for /system/device-mode/update.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/device-mode/update
 captured_at: '2026-11-01T21:29:50+08:00'
 ---

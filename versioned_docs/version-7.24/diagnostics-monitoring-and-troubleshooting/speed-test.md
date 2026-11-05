@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/speed-test"
 sidebar_position: 6
 title: "Speed Test"
+description: 'The Speed Test tool measures ping, jitter, and TCP/UDP throughput between MikroTik devices using configurable properties like address, connection count, password, test duration, and user credentials. It provides...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/speed-test
 captured_at: '2026-11-04T11:28:01+08:00'
 ---

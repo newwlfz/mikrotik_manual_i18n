@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/bridge/msrp/domain/attributes"
 sidebar_position: 1
 title: "attributes"
+description: 'RouterOS directory reference for /interface/bridge/msrp/domain/attributes.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bridge/msrp/domain/attributes
 captured_at: '2026-11-02T09:09:03+08:00'
 ---

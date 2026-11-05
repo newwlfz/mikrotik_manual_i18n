@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/configuration-management/index"
 sidebar_position: 5
 title: "Configuration Management"
+description: 'This page explains configuration management in MikroTik RouterOS, detailing how to undo and redo actions using the /system/history interface or CLI commands, with examples for firewall rule modifications.'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/configuration-management
 captured_at: '2026-11-04T11:28:35+08:00'
 ---

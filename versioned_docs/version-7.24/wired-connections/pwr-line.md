@@ -2,6 +2,7 @@
 sidebar_key: "wired-connections/pwr-line"
 sidebar_position: 3
 title: "PWR Line"
+description: 'The PWR-Line page describes MikroTik RouterOS devices that enable Ethernet-like connectivity over power lines using the HomePlug AV standard, detailing interface properties like ARP modes and bandwidth limits, along...'
 source: https://manual.mikrotik.com/docs/7.24/wired-connections/pwr-line
 captured_at: '2026-11-04T11:34:55+08:00'
 ---

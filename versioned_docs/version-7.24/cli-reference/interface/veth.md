@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/veth"
 sidebar_position: 36
 title: "veth"
+description: 'RouterOS directory reference for /interface/veth.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/veth
 captured_at: '2026-11-01T21:27:41+08:00'
 ---

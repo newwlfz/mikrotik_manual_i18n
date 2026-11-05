@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/ups/monitor"
 sidebar_position: 3
 title: "monitor"
+description: 'RouterOS command reference for /system/ups/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/ups/monitor
 captured_at: '2026-11-01T21:30:11+08:00'
 ---

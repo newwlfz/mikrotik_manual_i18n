@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/task/index"
 sidebar_position: 2
 title: "task"
+description: 'RouterOS directory reference for /task.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/task
 captured_at: '2026-11-01T21:30:12+08:00'
 ---

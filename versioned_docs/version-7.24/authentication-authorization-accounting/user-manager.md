@@ -2,6 +2,7 @@
 sidebar_key: "authentication-authorization-accounting/user-manager"
 sidebar_position: 6
 title: "User Manager"
+description: 'User Manager in RouterOS provides centralized RADIUS authentication and authorization for services like DHCP, Hotspot, and PPP with support for multiple authentication methods. It includes customizable RADIUS...'
 source: https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting/user-manager
 captured_at: '2026-11-04T11:27:17+08:00'
 ---

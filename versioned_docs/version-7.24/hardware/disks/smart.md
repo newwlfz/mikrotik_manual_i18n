@@ -2,6 +2,7 @@
 sidebar_key: "hardware/disks/smart"
 sidebar_position: 2
 title: "S.M.A.R.T. info"
+description: 'RouterOS now supports S.M.A.R.T. monitoring for attached storage devices, allowing users to retrieve diagnostic attributes like drive health and error rates via the /disk smart-info CLI command.'
 source: https://manual.mikrotik.com/docs/7.24/hardware/disks/smart
 captured_at: '2026-11-04T11:29:16+08:00'
 ---

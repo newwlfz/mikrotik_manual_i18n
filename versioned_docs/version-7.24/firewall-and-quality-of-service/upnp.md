@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/upnp"
 sidebar_position: 7
 title: "UPnP"
+description: 'MikroTik RouterOS supports UPnP for transparent peer-to-peer connectivity, enabling dynamic network discovery and NAT traversal. The documentation covers general properties like interface types (internal/external)...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/upnp
 captured_at: '2026-11-04T11:28:26+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/pptp-server/server"
 sidebar_position: 3
 title: "server"
+description: 'RouterOS settings reference for /interface/pptp-server/server.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/pptp-server/server
 captured_at: '2026-11-01T21:27:36+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "system-information-and-utilities/ip-packing"
 sidebar_position: 7
 title: "IP packing"
+description: 'IP Packing enables packet aggregation and compression on network links in RouterOS, requiring symmetric configuration with discovery protocol enabled. It supports different actions like simple aggregation or...'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/ip-packing
 captured_at: '2026-11-04T11:33:29+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/traffic-generator/inject-pcap"
 sidebar_position: 3
 title: "inject-pcap"
+description: 'RouterOS command reference for /tool/traffic-generator/inject-pcap.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/traffic-generator/inject-pcap
 captured_at: '2026-11-01T21:30:23+08:00'
 ---

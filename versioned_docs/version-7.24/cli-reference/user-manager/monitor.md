@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user-manager/monitor"
 sidebar_position: 7
 title: "monitor"
+description: 'RouterOS command reference for /user-manager/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/monitor
 captured_at: '2026-11-01T21:30:30+08:00'
 ---

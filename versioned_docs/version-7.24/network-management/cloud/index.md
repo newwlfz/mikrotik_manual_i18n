@@ -2,6 +2,7 @@
 sidebar_key: "network-management/cloud/index"
 sidebar_position: 5
 title: "Cloud"
+description: 'MikroTik Cloud section provides configuration for Back To Home, DDNS, file sharing, and other cloud-assisted services with detailed instructions on enabling/disabling DDNS, triggering updates, and managing IP...'
 source: https://manual.mikrotik.com/docs/7.24/network-management/cloud
 captured_at: '2026-11-04T11:32:31+08:00'
 ---

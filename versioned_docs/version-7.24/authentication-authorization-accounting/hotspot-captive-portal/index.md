@@ -2,6 +2,7 @@
 sidebar_key: "authentication-authorization-accounting/hotspot-captive-portal/index"
 sidebar_position: 2
 title: "HotSpot - Captive portal"
+description: 'The MikroTik HotSpot Gateway enables client authentication for public networks with features like DHCP address pools, multiple authentication methods, and walled-garden access. It requires IPv4 and has specific...'
 source: https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting/hotspot-captive-portal
 captured_at: '2026-11-04T11:27:19+08:00'
 ---

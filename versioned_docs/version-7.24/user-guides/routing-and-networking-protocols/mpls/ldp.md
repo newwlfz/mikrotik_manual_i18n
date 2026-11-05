@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/mpls/ldp"
 sidebar_position: 3
 title: "LDP"
+description: 'This page introduces MikroTik RouterOS''s Label Distribution Protocol (LDP) for establishing IPv4/IPv6 Label Switched Paths (LSPs), detailing prerequisites like loopback IP addresses and IP connectivity, along with an...'
 slug: /user-guides/routing-and-networking-protocols/mpls/ldp
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/mpls/ldp
 captured_at: '2026-11-04T11:33:51+08:00'

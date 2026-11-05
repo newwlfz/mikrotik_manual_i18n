@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/unicast/evpn"
 sidebar_position: 3
 title: "EVPN"
+description: 'This page introduces EVPN technology for Layer 2 and 3 VPN services, detailing BGP control planes, MPLS/VXLAN encapsulations, and EVPN route types (Type-1 to Type-5). It explains NVO terminology like NVE, VNI, and...'
 slug: /user-guides/routing-and-networking-protocols/unicast/evpn
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/evpn
 captured_at: '2026-11-04T11:34:27+08:00'

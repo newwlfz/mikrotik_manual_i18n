@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/graphing"
 sidebar_position: 11
 title: "Graphing"
+description: 'Graphing is a RouterOS tool for monitoring CPU, memory, disk usage, and interface/queue traffic over time through visual graphs accessible via web browser or menu. Configuration options include data collection...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/graphing
 captured_at: '2026-11-04T11:28:00+08:00'
 ---

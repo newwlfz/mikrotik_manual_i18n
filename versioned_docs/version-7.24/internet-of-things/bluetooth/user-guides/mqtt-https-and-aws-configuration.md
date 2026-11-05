@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/bluetooth/user-guides/mqtt-https-and-aws-configuration"
 sidebar_position: 7
 title: "MQTT/HTTPS and AWS configuration"
+description: 'Forward MikroTik Bluetooth tag data to Amazon AWS using MQTT over HTTPS, covering AWS account setup, certificates, and broker configuration.'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/bluetooth/user-guides/mqtt-https-and-aws-configuration
 captured_at: '2026-11-04T11:31:33+08:00'
 ---

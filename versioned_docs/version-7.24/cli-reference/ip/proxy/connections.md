@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/proxy/connections"
 sidebar_position: 5
 title: "connections"
+description: 'RouterOS directory reference for /ip/proxy/connections.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/proxy/connections
 captured_at: '2026-11-01T21:28:54+08:00'
 ---

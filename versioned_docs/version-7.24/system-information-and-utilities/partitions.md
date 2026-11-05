@@ -2,6 +2,7 @@
 sidebar_key: "system-information-and-utilities/partitions"
 sidebar_position: 11
 title: "Partitions"
+description: 'RouterOS allows repartitioning NAND flash on compatible devices to enable multiple OS installations with automatic fallback, ensuring system reliability during upgrades. The feature supports up to 8 partitions,...'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/partitions
 captured_at: '2026-11-04T11:33:36+08:00'
 ---

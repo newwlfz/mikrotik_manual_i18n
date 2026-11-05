@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/resource/hardware/index"
 sidebar_position: 2
 title: "hardware"
+description: 'RouterOS directory reference for /system/resource/hardware.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/resource/hardware
 captured_at: '2026-11-01T21:30:02+08:00'
 ---

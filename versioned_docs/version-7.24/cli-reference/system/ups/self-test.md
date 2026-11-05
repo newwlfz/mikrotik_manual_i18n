@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/ups/self-test"
 sidebar_position: 5
 title: "self-test"
+description: 'RouterOS command reference for /system/ups/self-test.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/ups/self-test
 captured_at: '2026-11-01T21:30:11+08:00'
 ---

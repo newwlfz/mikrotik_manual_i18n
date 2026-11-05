@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/ping-speed"
 sidebar_position: 15
 title: "ping-speed"
+description: 'RouterOS command reference for /tool/ping-speed.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/ping-speed
 captured_at: '2026-11-01T21:30:18+08:00'
 ---

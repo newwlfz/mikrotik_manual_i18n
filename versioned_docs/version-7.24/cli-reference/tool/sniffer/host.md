@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/sniffer/host"
 sidebar_position: 2
 title: "host"
+description: 'RouterOS directory reference for /tool/sniffer/host.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/sniffer/host
 captured_at: '2026-11-01T21:30:21+08:00'
 ---

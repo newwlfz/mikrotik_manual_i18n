@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/e-mail/send"
 sidebar_position: 2
 title: "send"
+description: 'RouterOS command reference for /tool/e-mail/send.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/e-mail/send
 captured_at: '2026-11-01T21:30:14+08:00'
 ---

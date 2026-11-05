@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user-manager/index"
 sidebar_position: 5
 title: "user-manager"
+description: 'RouterOS settings reference for /user-manager.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager
 captured_at: '2026-11-01T21:30:29+08:00'
 ---

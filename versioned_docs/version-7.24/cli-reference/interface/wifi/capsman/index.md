@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wifi/capsman/index"
 sidebar_position: 1
 title: "capsman"
+description: 'RouterOS settings reference for /interface/wifi/capsman.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/capsman
 captured_at: '2026-11-01T21:27:46+08:00'
 ---

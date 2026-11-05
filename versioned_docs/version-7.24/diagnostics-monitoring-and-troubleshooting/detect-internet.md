@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/detect-internet"
 sidebar_position: 17
 title: "Detect Internet"
+description: 'Detect Internet is a RouterOS tool that categorizes monitored interfaces into states like Internet, WAN, LAN, and unknown, with warnings about DHCP client installation and state transitions based on link status and...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/detect-internet
 captured_at: '2026-11-04T11:27:56+08:00'
 ---

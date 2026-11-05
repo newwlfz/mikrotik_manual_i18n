@@ -2,6 +2,7 @@
 sidebar_key: "virtual-private-networks/index"
 sidebar_position: 14
 title: "Virtual Private Networks"
+description: 'VPN documentation provides comprehensive guides for configuring secure and encapsulated connectivity using RouterOS tunnel technologies such as IPsec, L2TP, PPTP, OpenVPN, WireGuard, and others.'
 source: https://manual.mikrotik.com/docs/7.24/virtual-private-networks
 captured_at: '2026-11-04T11:34:27+08:00'
 ---

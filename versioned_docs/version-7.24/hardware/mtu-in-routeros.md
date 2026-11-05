@@ -2,6 +2,7 @@
 sidebar_key: "hardware/mtu-in-routeros"
 sidebar_position: 5
 title: "MTU in RouterOS"
+description: 'This page introduces Maximum Transmission Unit (MTU) configuration in MikroTik RouterOS, explaining its importance for network efficiency and compatibility. It covers different MTU types, including Layer-2/L3 MTU and...'
 source: https://manual.mikrotik.com/docs/7.24/hardware/mtu-in-routeros
 captured_at: '2026-11-04T11:29:52+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/disk/btrfs/filesystem/add-device"
 sidebar_position: 1
 title: "add-device"
+description: 'RouterOS command reference for /disk/btrfs/filesystem/add-device.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/disk/btrfs/filesystem/add-device
 captured_at: '2026-11-01T21:26:41+08:00'
 ---

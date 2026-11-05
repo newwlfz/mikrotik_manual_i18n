@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/pwr-line/monitor"
 sidebar_position: 6
 title: "monitor"
+description: 'RouterOS command reference for /interface/pwr-line/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/pwr-line/monitor
 captured_at: '2026-11-01T21:27:37+08:00'
 ---

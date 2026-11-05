@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/resource/cpu"
 sidebar_position: 1
 title: "cpu"
+description: 'RouterOS directory reference for /system/resource/cpu.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/resource/cpu
 captured_at: '2026-11-01T21:30:03+08:00'
 ---

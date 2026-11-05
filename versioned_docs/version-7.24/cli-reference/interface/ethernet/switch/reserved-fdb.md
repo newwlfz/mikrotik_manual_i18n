@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/reserved-fdb"
 sidebar_position: 21
 title: "reserved-fdb"
+description: 'RouterOS directory reference for /interface/ethernet/switch/reserved-fdb.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/reserved-fdb
 captured_at: '2026-11-01T21:27:18+08:00'
 ---

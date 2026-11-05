@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/monitor"
 sidebar_position: 4
 title: "monitor"
+description: 'RouterOS command reference for /interface/ethernet/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/monitor
 captured_at: '2026-11-01T21:27:05+08:00'
 ---

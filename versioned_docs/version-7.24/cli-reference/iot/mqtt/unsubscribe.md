@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/mqtt/unsubscribe"
 sidebar_position: 8
 title: "unsubscribe"
+description: 'RouterOS command reference for /iot/mqtt/unsubscribe.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/mqtt/unsubscribe
 captured_at: '2026-11-01T21:28:21+08:00'
 ---

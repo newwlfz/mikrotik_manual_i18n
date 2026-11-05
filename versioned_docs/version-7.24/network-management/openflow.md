@@ -2,6 +2,7 @@
 sidebar_key: "network-management/openflow"
 sidebar_position: 4
 title: "Openflow"
+description: 'RouterOS supports OpenFlow protocols 1.0 and 1.3 for SDN integration, enabling centralized traffic management via controller applications that access switch data paths. It includes basic statistics support and...'
 source: https://manual.mikrotik.com/docs/7.24/network-management/openflow
 captured_at: '2026-11-04T11:32:45+08:00'
 ---

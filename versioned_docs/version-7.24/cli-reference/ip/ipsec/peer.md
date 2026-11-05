@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/ipsec/peer"
 sidebar_position: 6
 title: "peer"
+description: 'RouterOS directory reference for /ip/ipsec/peer.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/ipsec/peer
 captured_at: '2026-11-01T21:28:46+08:00'
 ---

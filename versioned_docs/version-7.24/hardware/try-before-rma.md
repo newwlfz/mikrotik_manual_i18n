@@ -2,6 +2,7 @@
 sidebar_key: "hardware/try-before-rma"
 sidebar_position: 12
 title: "Try Before RMA"
+description: 'A pre-RMA diagnostic checklist for MikroTik hardware. Rule out common power, boot, connectivity, and LTE issues before submitting a warranty request.'
 source: https://manual.mikrotik.com/docs/7.24/hardware/try-before-rma
 captured_at: '2026-11-04T11:29:35+08:00'
 ---

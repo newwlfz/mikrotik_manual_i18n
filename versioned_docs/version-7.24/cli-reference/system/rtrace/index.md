@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/rtrace/index"
 sidebar_position: 1
 title: "rtrace"
+description: 'RouterOS settings reference for /system/rtrace.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/rtrace
 captured_at: '2026-11-01T21:30:06+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/bandwidth-test"
 sidebar_position: 2
 title: "bandwidth-test"
+description: 'RouterOS command reference for /tool/bandwidth-test.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/bandwidth-test
 captured_at: '2026-11-01T21:30:13+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/dhcp-server/lease/index"
 sidebar_position: 2
 title: "lease"
+description: 'RouterOS directory reference for /ip/dhcp-server/lease.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dhcp-server/lease
 captured_at: '2026-11-01T21:28:27+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/multicast/index"
 sidebar_position: 4
 title: "Multicast Routing Protocols"
+description: 'This section provides configuration guidance for RouterOS multicast routing protocols including IGMP Proxy, PIM-SM, and group management features to manage multicast traffic flows.'
 slug: /user-guides/routing-and-networking-protocols/multicast/
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/multicast
 captured_at: '2026-11-04T11:33:52+08:00'

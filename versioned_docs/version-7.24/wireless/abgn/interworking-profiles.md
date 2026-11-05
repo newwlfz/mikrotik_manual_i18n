@@ -2,6 +2,7 @@
 sidebar_key: "wireless/abgn/interworking-profiles"
 sidebar_position: 5
 title: "Interworking Profiles"
+description: 'This page describes MikroTik RouterOS interworking profiles for wireless networks, enabling devices to exchange information via IEEE 802.11u and Hotspot 2.0 standards. It details configuration properties like network...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/abgn/interworking-profiles
 captured_at: '2026-11-04T11:35:31+08:00'
 ---

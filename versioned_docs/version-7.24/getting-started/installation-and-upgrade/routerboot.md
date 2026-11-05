@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/installation-and-upgrade/routerboot"
 sidebar_position: 6
 title: "RouterBOOT"
+description: 'RouterBOOT manages RouterOS startup on MikroTik hardware, featuring a main and backup loader with force-backup-booter option. The reset button has multiple functions including configuration reset, CAPs mode...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/routerboot
 captured_at: '2026-11-04T11:28:49+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/bgp/connection"
 sidebar_position: 2
 title: "connection"
+description: 'A list of all connection-specific parameters can be seen in the table below.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/bgp/connection
 captured_at: '2026-11-01T21:29:27+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/swos/load-config"
 sidebar_position: 2
 title: "load-config"
+description: 'RouterOS command reference for /system/swos/load-config.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/swos/load-config
 captured_at: '2026-11-01T21:30:12+08:00'
 ---

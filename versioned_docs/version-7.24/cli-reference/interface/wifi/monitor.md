@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wifi/monitor"
 sidebar_position: 14
 title: "monitor"
+description: 'RouterOS command reference for /interface/wifi/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/monitor
 captured_at: '2026-11-01T21:27:49+08:00'
 ---

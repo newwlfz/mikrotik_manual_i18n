@@ -2,6 +2,7 @@
 sidebar_key: "high-availability-solutions/load-balancing/failover-wan-backup"
 sidebar_position: 1
 title: "Failover (WAN Backup)"
+description: 'This page explains how to configure failover for WAN connections using recursive routing in MikroTik RouterOS, detailing setup steps with basic and improved monitoring configurations for reliable link switching.'
 source: https://manual.mikrotik.com/docs/7.24/high-availability-solutions/load-balancing/failover-wan-backup
 captured_at: '2026-11-04T11:29:55+08:00'
 ---

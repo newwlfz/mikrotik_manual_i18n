@@ -2,6 +2,7 @@
 sidebar_key: "developer-guides/api/index"
 sidebar_position: 1
 title: "API"
+description: 'The API page introduces RouterOS''s Application Programming Interface for secure communication with routers, detailing syntax rules, sentence structure, encoding methods, and supported commands like login and cancel...'
 source: https://manual.mikrotik.com/docs/7.24/developer-guides/api
 captured_at: '2026-11-04T11:27:47+08:00'
 ---

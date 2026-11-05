@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/bluetooth/connections/write"
 sidebar_position: 9
 title: "write"
+description: 'RouterOS command reference for /iot/bluetooth/connections/write.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/bluetooth/connections/write
 captured_at: '2026-11-01T21:28:10+08:00'
 ---

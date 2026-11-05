@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/special-login"
 sidebar_position: 23
 title: "special-login"
+description: 'RouterOS directory reference for /special-login.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/special-login
 captured_at: '2026-11-01T21:29:46+08:00'
 ---

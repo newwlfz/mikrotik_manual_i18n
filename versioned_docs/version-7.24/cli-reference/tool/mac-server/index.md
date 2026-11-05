@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/mac-server/index"
 sidebar_position: 1
 title: "mac-server"
+description: 'RouterOS settings reference for /tool/mac-server.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/mac-server
 captured_at: '2026-11-01T21:30:17+08:00'
 ---

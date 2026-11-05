@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/lora/user-guides/the-things-stack"
 sidebar_position: 7
 title: "The Things Stack"
+description: 'This page guides MikroTik RouterOS users through registering LoRaWAN gateways with The Things Stack, covering UDP and LNS/CUPS protocols. It explains how to find Gateway EUI values, configure server settings,...'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/lora/user-guides/the-things-stack
 captured_at: '2026-11-04T11:32:34+08:00'
 ---

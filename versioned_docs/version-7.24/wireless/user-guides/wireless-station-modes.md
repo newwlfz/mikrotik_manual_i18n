@@ -2,6 +2,7 @@
 sidebar_key: "wireless/user-guides/wireless-station-modes"
 sidebar_position: 3
 title: "Wireless Station Modes"
+description: 'This page describes MikroTik RouterOS wireless station modes, explaining their differences in L2 address handling and suitability for bridging. It covers standard station mode, station-wds for WDS connections, and...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/user-guides/wireless-station-modes
 captured_at: '2026-11-04T11:35:40+08:00'
 ---

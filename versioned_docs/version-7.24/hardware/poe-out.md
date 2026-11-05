@@ -2,6 +2,7 @@
 sidebar_key: "hardware/poe-out"
 sidebar_position: 7
 title: "PoE"
+description: 'This page documents PoE (Power over Ethernet) on MikroTik devices: supported standards and power classes, configuring and monitoring PoE out (PSE) and PoE in (PD) ports in RouterOS and SwOS, logging, warnings,...'
 source: https://manual.mikrotik.com/docs/7.24/hardware/poe-out
 captured_at: '2026-11-04T11:29:29+08:00'
 ---

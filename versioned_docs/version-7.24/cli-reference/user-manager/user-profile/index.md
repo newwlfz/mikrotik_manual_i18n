@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user-manager/user-profile/index"
 sidebar_position: 2
 title: "user-profile"
+description: 'RouterOS directory reference for /user-manager/user-profile.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/user-profile
 captured_at: '2026-11-01T21:30:34+08:00'
 ---

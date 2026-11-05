@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/mpls/ldp/remote-mapping"
 sidebar_position: 7
 title: "remote-mapping"
+description: 'The Sub-menu shows label bindings for routes received from other routers. Static mapping can be configured if there is no intention to use LDP dynamically. This table is used to build the Forwarding Table'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/mpls/ldp/remote-mapping
 captured_at: '2026-11-01T21:29:15+08:00'
 ---

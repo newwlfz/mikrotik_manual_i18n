@@ -2,6 +2,7 @@
 sidebar_key: "containers/user-guides/container-homeassistant"
 sidebar_position: 3
 title: "Container - HomeAssistant"
+description: 'This page introduces the container feature in MikroTik RouterOS, enabling users to run servers like HomeAssistant directly on the router. It provides step-by-step instructions for enabling container mode, configuring...'
 source: https://manual.mikrotik.com/docs/7.24/containers/user-guides/container-homeassistant
 captured_at: '2026-11-04T11:27:41+08:00'
 ---

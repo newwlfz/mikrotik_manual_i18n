@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/backup/load"
 sidebar_position: 2
 title: "load"
+description: 'RouterOS command reference for /system/backup/load.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/backup/load
 captured_at: '2026-11-01T21:29:45+08:00'
 ---

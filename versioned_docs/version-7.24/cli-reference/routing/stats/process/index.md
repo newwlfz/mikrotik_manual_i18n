@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/stats/process/index"
 sidebar_position: 1
 title: "process"
+description: 'This menu allows you to monitor debugging information of all the routing processes.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/stats/process
 captured_at: '2026-11-01T21:29:42+08:00'
 ---

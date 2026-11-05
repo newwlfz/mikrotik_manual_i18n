@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/dscp-to-dscp"
 sidebar_position: 3
 title: "dscp-to-dscp"
+description: 'RouterOS directory reference for /interface/ethernet/switch/dscp-to-dscp.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/dscp-to-dscp
 captured_at: '2026-11-01T21:27:11+08:00'
 ---

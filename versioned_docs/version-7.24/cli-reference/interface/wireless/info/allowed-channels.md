@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/info/allowed-channels"
 sidebar_position: 1
 title: "allowed-channels"
+description: 'RouterOS command reference for /interface/wireless/info/allowed-channels.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/info/allowed-channels
 captured_at: '2026-11-01T21:28:00+08:00'
 ---

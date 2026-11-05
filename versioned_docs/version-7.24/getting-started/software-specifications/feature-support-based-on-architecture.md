@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/software-specifications/feature-support-based-on-architecture"
 sidebar_position: 1
 title: "Feature support based on architecture"
+description: 'This page outlines feature support differences across MikroTik RouterOS architectures, listing which features are unsupported or exclusively available for each platform like ARM, MIPS, and PPC. It also references...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/software-specifications/feature-support-based-on-architecture
 captured_at: '2026-11-04T11:29:04+08:00'
 ---

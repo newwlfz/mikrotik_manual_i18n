@@ -2,6 +2,7 @@
 sidebar_key: "management-tools/branding"
 sidebar_position: 13
 title: "Branding"
+description: 'RouterOS Branding package enables customization of system elements including router name, company URLs, ASCII logos, and WebFig interfaces. It supports custom file inclusion for login pages, skins, and hotspot logos...'
 source: https://manual.mikrotik.com/docs/7.24/management-tools/branding
 captured_at: '2026-11-04T11:31:54+08:00'
 ---

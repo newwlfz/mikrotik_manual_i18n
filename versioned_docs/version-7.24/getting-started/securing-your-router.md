@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/securing-your-router"
 sidebar_position: 3
 title: "Securing your router"
+description: 'This page provides security recommendations for MikroTik RouterOS, including upgrading RouterOS versions, changing default usernames and passwords, securing access with firewall rules and VPNs, disabling unnecessary...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/securing-your-router
 captured_at: '2026-11-04T11:29:05+08:00'
 ---

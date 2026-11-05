@@ -2,6 +2,7 @@
 sidebar_key: "wireless/wifi/configuring-standalone-access-point"
 sidebar_position: 4
 title: "Configuring standalone access point"
+description: 'This guide provides instructions for configuring standalone access points (APs) using MikroTik RouterOS''s wifi-qcom package, detailing setup steps for 2.4/5 GHz networks, antenna selection, and bridge configurations...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/wifi/configuring-standalone-access-point
 captured_at: '2026-11-04T11:35:53+08:00'
 ---

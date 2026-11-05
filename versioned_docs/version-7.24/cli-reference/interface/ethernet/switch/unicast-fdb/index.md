@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/unicast-fdb/index"
 sidebar_position: 2
 title: "unicast-fdb"
+description: 'RouterOS directory reference for /interface/ethernet/switch/unicast-fdb.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/unicast-fdb
 captured_at: '2026-11-01T21:27:19+08:00'
 ---

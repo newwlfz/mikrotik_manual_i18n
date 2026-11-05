@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/registration-table/index"
 sidebar_position: 1
 title: "registration-table"
+description: 'RouterOS directory reference for /interface/wireless/registration-table.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/registration-table
 captured_at: '2026-11-01T21:28:02+08:00'
 ---

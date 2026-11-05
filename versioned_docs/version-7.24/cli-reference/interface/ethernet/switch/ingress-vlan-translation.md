@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/ingress-vlan-translation"
 sidebar_position: 9
 title: "ingress-vlan-translation"
+description: 'RouterOS directory reference for /interface/ethernet/switch/ingress-vlan-translation.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/ingress-vlan-translation
 captured_at: '2026-11-01T21:27:12+08:00'
 ---

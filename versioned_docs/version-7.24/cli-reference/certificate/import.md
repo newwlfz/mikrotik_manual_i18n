@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/certificate/import"
 sidebar_position: 11
 title: "import"
+description: 'RouterOS command reference for /certificate/import.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/certificate/import
 captured_at: '2026-11-01T21:26:26+08:00'
 ---

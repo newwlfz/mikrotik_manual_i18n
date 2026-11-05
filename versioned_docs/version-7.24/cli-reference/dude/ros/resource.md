@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/dude/ros/resource"
 sidebar_position: 10
 title: "resource"
+description: 'RouterOS directory reference for /dude/ros/resource.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/dude/ros/resource
 captured_at: '2026-11-01T21:26:51+08:00'
 ---

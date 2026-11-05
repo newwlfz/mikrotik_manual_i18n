@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/caps-man/interface/possible-channels"
 sidebar_position: 3
 title: "possible-channels"
+description: 'RouterOS command reference for /caps-man/interface/possible-channels.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/caps-man/interface/possible-channels
 captured_at: '2026-11-01T21:26:19+08:00'
 ---

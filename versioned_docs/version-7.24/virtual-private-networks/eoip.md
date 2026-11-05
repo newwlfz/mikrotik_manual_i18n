@@ -2,6 +2,7 @@
 sidebar_key: "virtual-private-networks/eoip"
 sidebar_position: 2
 title: "EoIP"
+description: 'Ethernet over IP (EoIP) Tunneling in MikroTik RouterOS creates secure Layer 2 bridges over IP networks using GRE encapsulation, supporting flexible topologies like LAN extension and encrypted connections with IPsec.'
 source: https://manual.mikrotik.com/docs/7.24/virtual-private-networks/eoip
 captured_at: '2026-11-04T11:34:29+08:00'
 ---

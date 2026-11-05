@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/certificate/export-certificate"
 sidebar_position: 10
 title: "export-certificate"
+description: 'RouterOS command reference for /certificate/export-certificate.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/certificate/export-certificate
 captured_at: '2026-11-01T21:26:26+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/lora/joineui"
 sidebar_position: 3
 title: "joineui"
+description: 'RouterOS directory reference for /iot/lora/joineui.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/lora/joineui
 captured_at: '2026-11-01T21:28:13+08:00'
 ---

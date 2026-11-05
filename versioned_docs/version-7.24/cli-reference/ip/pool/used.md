@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/pool/used"
 sidebar_position: 2
 title: "used"
+description: 'Menu lists all used IP addresses from IP pools.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/pool/used
 captured_at: '2026-11-01T21:28:52+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/pppoe-client/monitor"
 sidebar_position: 2
 title: "monitor"
+description: 'RouterOS command reference for /interface/pppoe-client/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/pppoe-client/monitor
 captured_at: '2026-11-01T21:27:36+08:00'
 ---

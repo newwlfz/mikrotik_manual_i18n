@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/sstp-client/index"
 sidebar_position: 1
 title: "sstp-client"
+description: 'RouterOS directory reference for /interface/sstp-client.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/sstp-client
 captured_at: '2026-11-01T21:27:40+08:00'
 ---

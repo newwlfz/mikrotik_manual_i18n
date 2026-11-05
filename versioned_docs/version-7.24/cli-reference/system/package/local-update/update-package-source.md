@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/package/local-update/update-package-source"
 sidebar_position: 6
 title: "update-package-source"
+description: 'The server from which to get the package is defined in this list.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/package/local-update/update-package-source
 captured_at: '2026-11-01T21:29:58+08:00'
 ---

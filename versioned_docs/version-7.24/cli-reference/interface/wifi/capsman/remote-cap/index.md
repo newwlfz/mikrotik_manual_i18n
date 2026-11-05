@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wifi/capsman/remote-cap/index"
 sidebar_position: 1
 title: "remote-cap"
+description: 'RouterOS directory reference for /interface/wifi/capsman/remote-cap.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/capsman/remote-cap
 captured_at: '2026-11-01T21:27:45+08:00'
 ---

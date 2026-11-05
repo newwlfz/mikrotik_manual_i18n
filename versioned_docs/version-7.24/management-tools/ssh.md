@@ -2,6 +2,7 @@
 sidebar_key: "management-tools/ssh"
 sidebar_position: 6
 title: "SSH"
+description: 'RouterOS includes a built-in SSH server with customizable settings such as cipher configurations, key types, and forwarding options. It supports password and public-key authentication, with commands to export/import...'
 source: https://manual.mikrotik.com/docs/7.24/management-tools/ssh
 captured_at: '2026-11-04T11:32:05+08:00'
 ---

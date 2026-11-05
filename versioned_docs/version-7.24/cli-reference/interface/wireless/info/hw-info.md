@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/info/hw-info"
 sidebar_position: 5
 title: "hw-info"
+description: 'RouterOS command reference for /interface/wireless/info/hw-info.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/info/hw-info
 captured_at: '2026-11-01T21:28:00+08:00'
 ---

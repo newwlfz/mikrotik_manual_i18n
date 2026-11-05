@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/ipsec/identity"
 sidebar_position: 2
 title: "identity"
+description: 'RouterOS directory reference for /ip/ipsec/identity.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/ipsec/identity
 captured_at: '2026-11-01T21:28:43+08:00'
 ---

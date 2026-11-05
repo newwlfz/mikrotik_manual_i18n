@@ -2,6 +2,7 @@
 sidebar_key: "authentication-authorization-accounting/user"
 sidebar_position: 7
 title: "User"
+description: 'MikroTik RouterOS User management page details user authentication via local or RADIUS servers, password complexity settings, user group policies defining access rights, and router user database properties including...'
 source: https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting/user
 captured_at: '2026-11-04T11:27:00+08:00'
 ---

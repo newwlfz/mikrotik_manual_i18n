@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/queue/simple/index"
 sidebar_position: 1
 title: "simple"
+description: 'RouterOS directory reference for /queue/simple.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/queue/simple
 captured_at: '2026-11-01T21:29:21+08:00'
 ---

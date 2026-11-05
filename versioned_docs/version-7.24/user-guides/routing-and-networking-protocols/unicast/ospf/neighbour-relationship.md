@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/unicast/ospf/neighbour-relationship"
 sidebar_position: 5
 title: "Neighbor Relationship"
+description: 'Introduction on how neighbor relationships and adjacencies are formed.'
 slug: /user-guides/routing-and-networking-protocols/unicast/ospf/neighbour-relationship
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/ospf/neighbour-relationship
 captured_at: '2026-11-04T11:34:20+08:00'

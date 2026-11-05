@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/hotspot/service-port"
 sidebar_position: 8
 title: "service-port"
+description: 'RouterOS directory reference for /ip/hotspot/service-port.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/hotspot/service-port
 captured_at: '2026-11-01T21:28:39+08:00'
 ---

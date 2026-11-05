@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-beacon-manager-for-ios-devices"
 sidebar_position: 4
 title: "MikroTik Beacon Manager for iOS devices"
+description: 'MikroTik Beacon Manager application is designed for Bluetooth tag (TG-BT5-XX) configuration. Since the tags are Bluetooth-based devices, you have to enable Bluetooth on the phone before proceeding with the configuration.'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-beacon-manager-for-ios-devices
 captured_at: '2026-11-04T11:31:39+08:00'
 ---

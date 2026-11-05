@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/rpki/session"
 sidebar_position: 4
 title: "session"
+description: 'RouterOS directory reference for /routing/rpki/session.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/rpki/session
 captured_at: '2026-11-01T21:29:40+08:00'
 ---

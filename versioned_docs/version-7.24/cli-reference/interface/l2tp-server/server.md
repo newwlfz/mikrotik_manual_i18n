@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/l2tp-server/server"
 sidebar_position: 3
 title: "server"
+description: 'RouterOS settings reference for /interface/l2tp-server/server.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/l2tp-server/server
 captured_at: '2026-11-01T21:27:23+08:00'
 ---

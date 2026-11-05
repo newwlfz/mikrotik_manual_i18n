@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/filter/select-rule"
 sidebar_position: 8
 title: "select-rule"
+description: 'RouterOS directory reference for /routing/filter/select-rule.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/filter/select-rule
 captured_at: '2026-11-01T21:29:31+08:00'
 ---

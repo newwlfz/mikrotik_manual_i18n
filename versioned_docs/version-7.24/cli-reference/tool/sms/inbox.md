@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/sms/inbox"
 sidebar_position: 1
 title: "inbox"
+description: 'RouterOS directory reference for /tool/sms/inbox.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/sms/inbox
 captured_at: '2026-11-01T21:30:22+08:00'
 ---

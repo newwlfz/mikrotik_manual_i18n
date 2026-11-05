@@ -2,6 +2,7 @@
 sidebar_key: "virtual-private-networks/l2tp/lac-and-lns-setup-with-cisco-as-lac"
 sidebar_position: 3
 title: "LAC and LNS setup with Cisco as LAC"
+description: 'This page explains how to configure a MikroTik RouterOS device as an L2TP Network Server (LNS) to establish VPDN connections with a Cisco router acting as an LAC. It includes basic configuration examples for PPPoE...'
 source: https://manual.mikrotik.com/docs/7.24/virtual-private-networks/l2tp/lac-and-lns-setup-with-cisco-as-lac
 captured_at: '2026-11-04T11:34:39+08:00'
 ---

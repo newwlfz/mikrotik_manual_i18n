@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/sstp-server/server"
 sidebar_position: 3
 title: "server"
+description: 'RouterOS settings reference for /interface/sstp-server/server.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/sstp-server/server
 captured_at: '2026-11-01T21:27:39+08:00'
 ---

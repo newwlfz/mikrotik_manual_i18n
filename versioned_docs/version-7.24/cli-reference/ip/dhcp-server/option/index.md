@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/dhcp-server/option/index"
 sidebar_position: 1
 title: "option"
+description: 'RouterOS directory reference for /ip/dhcp-server/option.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dhcp-server/option
 captured_at: '2026-11-01T21:28:29+08:00'
 ---

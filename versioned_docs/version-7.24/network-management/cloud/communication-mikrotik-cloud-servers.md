@@ -2,6 +2,7 @@
 sidebar_key: "network-management/cloud/communication-mikrotik-cloud-servers"
 sidebar_position: 2
 title: "Communication with MikroTik Cloud Services"
+description: 'This page details MikroTik RouterOS connections to cloud servers and Mikrotik services, listing sub-menus, domain names, default statuses, and methods to disable communication for each connection type.'
 source: https://manual.mikrotik.com/docs/7.24/network-management/cloud/communication-mikrotik-cloud-servers
 captured_at: '2026-11-04T11:32:29+08:00'
 ---

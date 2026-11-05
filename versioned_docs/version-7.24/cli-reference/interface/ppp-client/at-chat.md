@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ppp-client/at-chat"
 sidebar_position: 1
 title: "at-chat"
+description: 'RouterOS command reference for /interface/ppp-client/at-chat.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ppp-client/at-chat
 captured_at: '2026-11-01T21:27:33+08:00'
 ---

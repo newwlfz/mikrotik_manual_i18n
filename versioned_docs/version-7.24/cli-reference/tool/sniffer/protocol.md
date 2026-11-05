@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/sniffer/protocol"
 sidebar_position: 5
 title: "protocol"
+description: 'RouterOS directory reference for /tool/sniffer/protocol.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/sniffer/protocol
 captured_at: '2026-11-01T21:30:21+08:00'
 ---

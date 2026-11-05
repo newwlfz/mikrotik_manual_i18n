@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/bluetooth/scanners/index"
 sidebar_position: 2
 title: "scanners"
+description: 'RouterOS directory reference for /iot/bluetooth/scanners.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/bluetooth/scanners
 captured_at: '2026-11-01T21:28:11+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user-manager/router/index"
 sidebar_position: 1
 title: "router"
+description: 'RouterOS directory reference for /user-manager/router.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/router
 captured_at: '2026-11-01T21:30:31+08:00'
 ---

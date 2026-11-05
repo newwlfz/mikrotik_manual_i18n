@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/w60g/scan"
 sidebar_position: 5
 title: "scan"
+description: 'RouterOS command reference for /interface/w60g/scan.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/w60g/scan
 captured_at: '2026-11-01T21:27:43+08:00'
 ---

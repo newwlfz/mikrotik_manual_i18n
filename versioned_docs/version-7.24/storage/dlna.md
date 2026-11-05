@@ -2,6 +2,7 @@
 sidebar_key: "storage/dlna"
 sidebar_position: 2
 title: "DLNA Media Server"
+description: 'The page introduces DLNA media server functionality in MikroTik RouterOS, explaining how it enables networked devices to share digital media using UPnP protocols. It details server settings such as allowed hosts, IP...'
 source: https://manual.mikrotik.com/docs/7.24/storage/dlna
 captured_at: '2026-11-04T11:33:00+08:00'
 ---

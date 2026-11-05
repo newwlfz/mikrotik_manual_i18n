@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/ipsec/key/psk/index"
 sidebar_position: 2
 title: "psk"
+description: 'RouterOS directory reference for /ip/ipsec/key/psk.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/ipsec/key/psk
 captured_at: '2026-11-01T21:28:48+08:00'
 ---

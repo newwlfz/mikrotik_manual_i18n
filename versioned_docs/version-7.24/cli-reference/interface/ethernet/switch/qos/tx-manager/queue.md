@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/qos/tx-manager/queue"
 sidebar_position: 2
 title: "queue"
+description: 'RouterOS directory reference for /interface/ethernet/switch/qos/tx-manager/queue.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/qos/tx-manager/queue
 captured_at: '2026-11-01T21:27:18+08:00'
 ---

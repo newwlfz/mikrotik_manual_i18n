@@ -2,6 +2,7 @@
 sidebar_key: "network-management/socks/index"
 sidebar_position: 1
 title: "SOCKS"
+description: 'This page documents the SOCKS proxy configuration in MikroTik RouterOS, covering settings like connection timeouts, port assignments, access lists for security, and active connections monitoring. It explains how to...'
 source: https://manual.mikrotik.com/docs/7.24/network-management/socks
 captured_at: '2026-11-04T11:32:53+08:00'
 ---

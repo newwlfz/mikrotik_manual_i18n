@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/calea"
 sidebar_position: 3
 title: "calea"
+description: 'RouterOS directory reference for /tool/calea.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/calea
 captured_at: '2026-11-01T21:30:14+08:00'
 ---

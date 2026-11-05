@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/media/settings"
 sidebar_position: 2
 title: "settings"
+description: 'RouterOS settings reference for /ip/media/settings.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/media/settings
 captured_at: '2026-11-01T21:28:50+08:00'
 ---

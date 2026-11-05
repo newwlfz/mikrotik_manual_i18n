@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/ping"
 sidebar_position: 1
 title: "Ping"
+description: 'The page documents the MikroTik RouterOS Ping tool, which uses ICMP Echo messages to test host connectivity and measure round-trip delays. It explains parameters like TTL, interval, count, and supports both IPv4/IPv6...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/ping
 captured_at: '2026-11-04T11:28:00+08:00'
 ---

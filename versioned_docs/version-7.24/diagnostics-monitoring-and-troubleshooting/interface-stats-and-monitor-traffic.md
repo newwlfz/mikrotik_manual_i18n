@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/interface-stats-and-monitor-traffic"
 sidebar_position: 8
 title: "Interface stats and monitor-traffic"
+description: 'This page documents MikroTik RouterOS interface statistics and monitor-traffic tools for real-time monitoring of network utilization, hardware performance, packet rates, and bitrates across physical and virtual...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/interface-stats-and-monitor-traffic
 captured_at: '2026-11-04T11:27:57+08:00'
 ---

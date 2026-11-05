@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/dude/ros/queue"
 sidebar_position: 8
 title: "queue"
+description: 'RouterOS directory reference for /dude/ros/queue.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/dude/ros/queue
 captured_at: '2026-11-01T21:26:51+08:00'
 ---

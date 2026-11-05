@@ -2,6 +2,7 @@
 sidebar_key: "wireless/abgn/spectral-scan"
 sidebar_position: 7
 title: "Spectral scan"
+description: 'The Spectral Scan feature in MikroTik RouterOS allows continuous monitoring and visualization of wireless spectrum activity, including interference detection across 2.4GHz and 5GHz bands using spectral snapshots with...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/abgn/spectral-scan
 captured_at: '2026-11-04T11:35:30+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/speed-test"
 sidebar_position: 22
 title: "speed-test"
+description: 'RouterOS command reference for /tool/speed-test.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/speed-test
 captured_at: '2026-11-01T21:30:23+08:00'
 ---

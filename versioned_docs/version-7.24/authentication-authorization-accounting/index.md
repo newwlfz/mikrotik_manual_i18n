@@ -2,6 +2,7 @@
 sidebar_key: "authentication-authorization-accounting/index"
 sidebar_position: 9
 title: "AAA and User Management"
+description: 'This page provides comprehensive guidance on configuring authentication, authorization, and accounting (AAA) in MikroTik RouterOS. It covers local users, certificates, RADIUS, 802.1X, PPP AAA, User Manager, and...'
 source: https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting
 captured_at: '2026-11-04T11:26:59+08:00'
 ---

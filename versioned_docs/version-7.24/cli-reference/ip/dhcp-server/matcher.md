@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/dhcp-server/matcher"
 sidebar_position: 5
 title: "matcher"
+description: 'RouterOS directory reference for /ip/dhcp-server/matcher.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dhcp-server/matcher
 captured_at: '2026-11-01T21:28:28+08:00'
 ---

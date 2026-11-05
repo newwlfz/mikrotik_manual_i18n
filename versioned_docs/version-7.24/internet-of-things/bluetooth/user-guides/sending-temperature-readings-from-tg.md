@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/bluetooth/user-guides/sending-temperature-readings-from-tg"
 sidebar_position: 8
 title: "Sending temperature readings from the TG-BT5-OUT tag to ThingsBoard"
+description: 'Our TG-BT5-OUT Bluetooth tag model has a temperature sensor built in. This means that it can be used to measure the surrounding temperature.'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/bluetooth/user-guides/sending-temperature-readings-from-tg
 captured_at: '2026-11-04T11:31:30+08:00'
 ---

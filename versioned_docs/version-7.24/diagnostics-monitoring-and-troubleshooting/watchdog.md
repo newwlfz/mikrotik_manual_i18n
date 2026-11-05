@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/watchdog"
 sidebar_position: 19
 title: "Watchdog"
+description: 'The Watchdog page in RouterOS configuration allows setting up system reboots triggered by unresponsive IP addresses or software lockups, with options for ping monitoring and automatic support output file generation...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/watchdog
 captured_at: '2026-11-04T11:28:06+08:00'
 ---

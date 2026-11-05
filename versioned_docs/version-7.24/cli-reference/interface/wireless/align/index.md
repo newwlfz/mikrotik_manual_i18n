@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/align/index"
 sidebar_position: 1
 title: "align"
+description: 'RouterOS settings reference for /interface/wireless/align.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/align
 captured_at: '2026-11-01T21:27:58+08:00'
 ---

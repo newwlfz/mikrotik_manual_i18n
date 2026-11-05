@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/snooper/index"
 sidebar_position: 2
 title: "snooper"
+description: 'RouterOS settings reference for /interface/wireless/snooper.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/snooper
 captured_at: '2026-11-01T21:28:04+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/lte/firmware-upgrade"
 sidebar_position: 5
 title: "firmware-upgrade"
+description: 'RouterOS command reference for /interface/lte/firmware-upgrade.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/lte/firmware-upgrade
 captured_at: '2026-11-01T21:27:27+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ipv6/nd/index"
 sidebar_position: 1
 title: "nd"
+description: 'IPv6 Neighbor Discovery (ND) protocol is configured.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/nd
 captured_at: '2026-11-01T21:29:08+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/acl/policer"
 sidebar_position: 2
 title: "policer"
+description: 'RouterOS directory reference for /interface/ethernet/switch/acl/policer.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/acl/policer
 captured_at: '2026-11-01T21:27:08+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ipv6/firewall/raw/index"
 sidebar_position: 1
 title: "raw"
+description: 'RouterOS directory reference for /ipv6/firewall/raw.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/firewall/raw
 captured_at: '2026-11-01T21:29:09+08:00'
 ---

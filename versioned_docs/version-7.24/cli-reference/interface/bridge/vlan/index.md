@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/bridge/vlan/index"
 sidebar_position: 1
 title: "vlan"
+description: 'RouterOS directory reference for /interface/bridge/vlan.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bridge/vlan
 captured_at: '2026-11-01T21:27:10+08:00'
 ---

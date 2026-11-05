@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/proxy/monitor"
 sidebar_position: 10
 title: "monitor"
+description: 'RouterOS command reference for /ip/proxy/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/proxy/monitor
 captured_at: '2026-11-01T21:28:55+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/log/cef-with-elasticsearch"
 sidebar_position: 1
 title: "CEF with Elasticsearch"
+description: 'This guide explains how to configure CEF log collection and analysis using Elasticsearch, Kibana, and Fleet Server with MikroTik RouterOS devices. It covers prerequisites, setup steps for both Elastic and RouterOS...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/log/cef-with-elasticsearch
 captured_at: '2026-11-04T11:28:00+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "system-information-and-utilities/device-mode"
 sidebar_position: 2
 title: "Device-mode"
+description: 'The device-mode feature restricts router access and limits configuration options to enhance security, available in advanced, home, basic, or ros modes depending on device type and RouterOS version. Changes require...'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/device-mode
 captured_at: '2026-11-04T11:33:29+08:00'
 ---

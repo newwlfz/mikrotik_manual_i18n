@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/dude/ros/neighbor"
 sidebar_position: 7
 title: "neighbor"
+description: 'RouterOS directory reference for /dude/ros/neighbor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/dude/ros/neighbor
 captured_at: '2026-11-01T21:26:51+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/mesh/traceroute"
 sidebar_position: 4
 title: "traceroute"
+description: 'RouterOS command reference for /interface/mesh/traceroute.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/mesh/traceroute
 captured_at: '2026-11-01T21:27:30+08:00'
 ---

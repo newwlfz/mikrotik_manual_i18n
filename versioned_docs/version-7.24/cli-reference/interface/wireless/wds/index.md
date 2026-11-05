@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/wds/index"
 sidebar_position: 1
 title: "wds"
+description: 'RouterOS directory reference for /interface/wireless/wds.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/wds
 captured_at: '2026-11-01T21:28:05+08:00'
 ---

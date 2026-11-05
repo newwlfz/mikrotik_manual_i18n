@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ovpn-client/index"
 sidebar_position: 2
 title: "ovpn-client"
+description: 'RouterOS directory reference for /interface/ovpn-client.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ovpn-client
 captured_at: '2026-11-01T21:27:30+08:00'
 ---

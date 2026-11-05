@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/ssh"
 sidebar_position: 30
 title: "ssh"
+description: 'RouterOS command reference for /system/ssh.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/ssh
 captured_at: '2026-11-01T21:30:08+08:00'
 ---

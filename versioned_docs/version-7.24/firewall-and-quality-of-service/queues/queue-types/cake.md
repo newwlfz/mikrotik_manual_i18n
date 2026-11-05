@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/queues/queue-types/cake"
 sidebar_position: 1
 title: "CAKE"
+description: 'CAKE (Common Applications Kept Enhanced) is an advanced queue management algorithm for RouterOS that optimizes network traffic handling through bandwidth shaping, flow isolation, and RTT-based congestion control. It...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/queues/queue-types/cake
 captured_at: '2026-11-04T11:28:17+08:00'
 ---

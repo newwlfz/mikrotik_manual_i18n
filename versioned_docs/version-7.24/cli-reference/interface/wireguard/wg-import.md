@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireguard/wg-import"
 sidebar_position: 4
 title: "wg-import"
+description: 'RouterOS command reference for /interface/wireguard/wg-import.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireguard/wg-import
 captured_at: '2026-11-01T21:27:55+08:00'
 ---

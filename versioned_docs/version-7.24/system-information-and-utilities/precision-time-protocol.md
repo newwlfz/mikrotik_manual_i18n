@@ -2,6 +2,7 @@
 sidebar_key: "system-information-and-utilities/precision-time-protocol"
 sidebar_position: 12
 title: "Precision Time Protocol"
+description: 'MikroTik RouterOS documentation introduces Precision Time Protocol (PTP) for sub-microsecond clock synchronization across networks, supporting IEEE 1588-2008 with hardware timestamping and multiple profile options...'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/precision-time-protocol
 captured_at: '2026-11-04T11:33:34+08:00'
 ---

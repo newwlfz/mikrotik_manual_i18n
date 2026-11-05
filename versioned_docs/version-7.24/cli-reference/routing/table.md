@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/table"
 sidebar_position: 19
 title: "table"
+description: 'RouterOS directory reference for /routing/table.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/table
 captured_at: '2026-11-01T21:29:43+08:00'
 ---

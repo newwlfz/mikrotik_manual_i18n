@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/dns/static"
 sidebar_position: 5
 title: "static"
+description: 'RouterOS directory reference for /ip/dns/static.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dns/static
 captured_at: '2026-11-01T21:28:31+08:00'
 ---

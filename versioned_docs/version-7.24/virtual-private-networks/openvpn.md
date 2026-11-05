@@ -2,6 +2,7 @@
 sidebar_key: "virtual-private-networks/openvpn"
 sidebar_position: 7
 title: "OpenVPN"
+description: 'OpenVPN is a secure VPN protocol offering Layer 2/3 tunneling, IPv4/IPv6 support, and flexible transport protocols (UDP/TCP). It supports client-server deployments with configurable authentication, encryption...'
 source: https://manual.mikrotik.com/docs/7.24/virtual-private-networks/openvpn
 captured_at: '2026-11-04T11:34:48+08:00'
 ---

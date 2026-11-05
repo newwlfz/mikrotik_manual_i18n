@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/manual-tx-power-table"
 sidebar_position: 10
 title: "manual-tx-power-table"
+description: 'RouterOS directory reference for /interface/wireless/manual-tx-power-table.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/manual-tx-power-table
 captured_at: '2026-11-01T21:28:01+08:00'
 ---

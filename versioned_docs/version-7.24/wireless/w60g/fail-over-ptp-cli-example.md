@@ -2,6 +2,7 @@
 sidebar_key: "wireless/w60g/fail-over-ptp-cli-example"
 sidebar_position: 3
 title: "Fail-over PtP CLI example"
+description: 'This page provides a step-by-step CLI example for configuring automatic failover between 60Ghz and 5Ghz wireless links using bonding, including bridge setup and W60G interface configuration for both bridge and...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/w60g/fail-over-ptp-cli-example
 captured_at: '2026-11-04T11:35:41+08:00'
 ---

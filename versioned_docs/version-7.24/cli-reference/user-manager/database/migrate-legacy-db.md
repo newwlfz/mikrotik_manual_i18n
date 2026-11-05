@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user-manager/database/migrate-legacy-db"
 sidebar_position: 3
 title: "migrate-legacy-db"
+description: 'RouterOS command reference for /user-manager/database/migrate-legacy-db.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/database/migrate-legacy-db
 captured_at: '2026-11-01T21:30:33+08:00'
 ---

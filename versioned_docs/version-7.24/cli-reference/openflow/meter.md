@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/openflow/meter"
 sidebar_position: 4
 title: "meter"
+description: 'RouterOS directory reference for /openflow/meter.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/openflow/meter
 captured_at: '2026-11-01T21:29:18+08:00'
 ---

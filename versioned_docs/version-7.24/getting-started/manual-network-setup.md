@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/manual-network-setup"
 sidebar_position: 2
 title: "Manual Network Setup (No Default Configuration)"
+description: 'How to manually set up a MikroTik router that has no default configuration: reset to a clean state, create a bridge, assign a LAN IP address, and configure a DHCP server using CLI or WinBox/WebFig.'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/manual-network-setup
 captured_at: '2026-11-04T11:29:12+08:00'
 ---

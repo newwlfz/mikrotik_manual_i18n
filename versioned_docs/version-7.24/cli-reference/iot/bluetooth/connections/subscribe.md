@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/bluetooth/connections/subscribe"
 sidebar_position: 7
 title: "subscribe"
+description: 'RouterOS command reference for /iot/bluetooth/connections/subscribe.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/bluetooth/connections/subscribe
 captured_at: '2026-11-01T21:28:08+08:00'
 ---

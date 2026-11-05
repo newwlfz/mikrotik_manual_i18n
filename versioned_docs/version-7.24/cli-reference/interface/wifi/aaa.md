@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wifi/aaa"
 sidebar_position: 1
 title: "aaa"
+description: 'RouterOS directory reference for /interface/wifi/aaa.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/aaa
 captured_at: '2026-11-01T21:27:44+08:00'
 ---

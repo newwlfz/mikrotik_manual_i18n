@@ -2,6 +2,7 @@
 sidebar_key: "containers/user-guides/container-freeradius-server"
 sidebar_position: 1
 title: "Container - freeradius server"
+description: 'This page introduces the container feature in MikroTik RouterOS for running servers like RADIUS within the router, detailing setup steps including container mode activation, networking configuration, and image...'
 source: https://manual.mikrotik.com/docs/7.24/containers/user-guides/container-freeradius-server
 captured_at: '2026-11-04T11:27:39+08:00'
 ---

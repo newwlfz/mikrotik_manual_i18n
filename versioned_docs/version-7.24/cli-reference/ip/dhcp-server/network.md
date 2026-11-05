@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/dhcp-server/network"
 sidebar_position: 6
 title: "network"
+description: 'RouterOS directory reference for /ip/dhcp-server/network.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dhcp-server/network
 captured_at: '2026-11-01T21:28:31+08:00'
 ---

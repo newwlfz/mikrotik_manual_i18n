@@ -2,6 +2,7 @@
 sidebar_key: "wireless/w60g/ptp-cli-example"
 sidebar_position: 7
 title: "PtP CLI example"
+description: 'This page provides a step-by-step CLI example for configuring a transparent wireless bridge between two MikroTik W60G devices, including connecting via MAC-Telnet, setting up a bridge with interface members, and...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/w60g/ptp-cli-example
 captured_at: '2026-11-04T11:35:42+08:00'
 ---

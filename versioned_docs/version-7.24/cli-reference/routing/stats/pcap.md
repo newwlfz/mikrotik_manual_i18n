@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/stats/pcap"
 sidebar_position: 3
 title: "pcap"
+description: 'RouterOS directory reference for /routing/stats/pcap.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/stats/pcap
 captured_at: '2026-11-01T21:29:41+08:00'
 ---

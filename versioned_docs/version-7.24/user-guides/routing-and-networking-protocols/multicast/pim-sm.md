@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/multicast/pim-sm"
 sidebar_position: 5
 title: "PIM-SM"
+description: 'This page introduces IP Multicast and Protocol Independent Multicast - Sparse Mode (PIM-SM) in MikroTik RouterOS, explaining how it enables efficient data sharing across networks. It covers basic PIM-SM configuration...'
 slug: /user-guides/routing-and-networking-protocols/multicast/pim-sm
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/multicast/pim-sm
 captured_at: '2026-11-04T11:34:04+08:00'

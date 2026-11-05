@@ -2,6 +2,7 @@
 sidebar_key: "hardware/s-plus-rj10-general-guidance"
 sidebar_position: 11
 title: "S+RJ10 general guidance"
+description: 'S+RJ10 is a MikroTik 6-speed RJ45 SFP+ module offering 10 Gbps speeds via copper cables, with guidance on its use in MikroTik devices, including recommended placement to prevent overheating when used alongside...'
 source: https://manual.mikrotik.com/docs/7.24/hardware/s-plus-rj10-general-guidance
 captured_at: '2026-11-04T11:31:59+08:00'
 ---

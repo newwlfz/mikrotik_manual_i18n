@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/user-guides/loop-protect"
 sidebar_position: 8
 title: "Loop Protect"
+description: 'Loop Protect prevents Layer2 loops by detecting and disabling interfaces receiving their own loop-protect packets, with configurable intervals and disable times. It supports Ethernet, VLAN, EoIP, and VxLAN...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/user-guides/loop-protect
 captured_at: '2026-11-04T11:27:24+08:00'
 ---

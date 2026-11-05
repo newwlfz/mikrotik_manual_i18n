@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wifi/radio/reg-info"
 sidebar_position: 3
 title: "reg-info"
+description: 'RouterOS command reference for /interface/wifi/radio/reg-info.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/radio/reg-info
 captured_at: '2026-11-01T21:27:52+08:00'
 ---

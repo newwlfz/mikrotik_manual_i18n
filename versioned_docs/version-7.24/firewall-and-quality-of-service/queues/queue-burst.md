@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/queues/queue-burst"
 sidebar_position: 5
 title: "Queue Burst"
+description: 'Queue Burst feature allows temporary bandwidth bursts beyond configured limits when average traffic stays below a threshold, using burst-limit and burst-time parameters to control the burst duration and size.'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/queues/queue-burst
 captured_at: '2026-11-04T11:28:22+08:00'
 ---

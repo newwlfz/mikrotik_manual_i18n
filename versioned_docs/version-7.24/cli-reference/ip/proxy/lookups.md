@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/proxy/lookups"
 sidebar_position: 9
 title: "lookups"
+description: 'RouterOS settings reference for /ip/proxy/lookups.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/proxy/lookups
 captured_at: '2026-11-01T21:28:55+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/ssh/index"
 sidebar_position: 3
 title: "ssh"
+description: 'RouterOS settings reference for /ip/ssh.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/ssh
 captured_at: '2026-11-01T21:28:58+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "containers/user-guides/container-matrix-synapse"
 sidebar_position: 4
 title: "Container - Matrix (Synapse)"
+description: 'This page documents setting up a Synapse Matrix server as a container on MikroTik RouterOS, covering prerequisites like container network configuration and PostgreSQL environment setup for secure federated...'
 source: https://manual.mikrotik.com/docs/7.24/containers/user-guides/container-matrix-synapse
 captured_at: '2026-11-04T11:27:42+08:00'
 ---

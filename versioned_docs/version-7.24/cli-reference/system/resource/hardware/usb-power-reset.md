@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/resource/hardware/usb-power-reset"
 sidebar_position: 3
 title: "usb-power-reset"
+description: 'RouterOS command reference for /system/resource/hardware/usb-power-reset.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/resource/hardware/usb-power-reset
 captured_at: '2026-11-01T21:30:04+08:00'
 ---

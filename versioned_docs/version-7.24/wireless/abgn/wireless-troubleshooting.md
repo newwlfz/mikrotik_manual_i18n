@@ -2,6 +2,7 @@
 sidebar_key: "wireless/abgn/wireless-troubleshooting"
 sidebar_position: 10
 title: "Wireless Troubleshooting"
+description: 'This page explains how to troubleshoot wireless connectivity issues in MikroTik RouterOS by enabling and analyzing detailed debug logs for client connections, disconnections, and security events like MIC failures or...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/abgn/wireless-troubleshooting
 captured_at: '2026-11-04T11:35:36+08:00'
 ---

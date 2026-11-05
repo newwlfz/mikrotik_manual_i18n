@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/pptp-client/index"
 sidebar_position: 1
 title: "pptp-client"
+description: 'RouterOS directory reference for /interface/pptp-client.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/pptp-client
 captured_at: '2026-11-01T21:27:38+08:00'
 ---

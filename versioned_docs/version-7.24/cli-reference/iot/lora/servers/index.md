@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/lora/servers/index"
 sidebar_position: 1
 title: "servers"
+description: 'RouterOS directory reference for /iot/lora/servers.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/lora/servers
 captured_at: '2026-11-01T21:28:15+08:00'
 ---

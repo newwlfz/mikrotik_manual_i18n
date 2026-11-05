@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/lte/esim/index"
 sidebar_position: 5
 title: "esim"
+description: 'RouterOS directory reference for /interface/lte/esim.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/lte/esim
 captured_at: '2026-11-01T21:27:24+08:00'
 ---

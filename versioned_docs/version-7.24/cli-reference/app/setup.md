@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/app/setup"
 sidebar_position: 7
 title: "setup"
+description: 'Starts the setup wizard that automates networking, storage, and registry configuration for the App system.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/app/setup
 captured_at: '2026-11-01T21:26:18+08:00'
 ---

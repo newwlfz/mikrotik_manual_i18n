@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/unicast/bfd"
 sidebar_position: 1
 title: "BFD"
+description: 'Bidirectional Forwarding Detection (BFD) is a low-latency protocol for detecting faults in network paths, operating independently of routing protocols. It uses UDP encapsulation with configurable ports and supports...'
 slug: /user-guides/routing-and-networking-protocols/unicast/bfd
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/bfd
 captured_at: '2026-11-04T11:34:04+08:00'

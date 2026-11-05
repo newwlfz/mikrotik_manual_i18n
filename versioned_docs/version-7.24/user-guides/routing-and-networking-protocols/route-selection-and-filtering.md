@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/route-selection-and-filtering"
 sidebar_position: 8
 title: "Route Selection and Filtering"
+description: 'Route filtering in MikroTik RouterOS uses script-like syntax to match prefixes and modify routing distances based on conditions, with properties categorized as readable or readable/writable for matchers and actions.'
 slug: /user-guides/routing-and-networking-protocols/route-selection-and-filtering
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/route-selection-and-filtering
 captured_at: '2026-11-04T11:33:59+08:00'

@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/lora/user-guides/chirpstack"
 sidebar_position: 2
 title: "ChirpStack"
+description: 'This page guides MikroTik RouterOS users through registering LoRaWAN gateways with ChiprStack open-source server.'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/lora/user-guides/chirpstack
 captured_at: '2026-11-04T11:31:47+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ppp-client/info"
 sidebar_position: 4
 title: "info"
+description: 'RouterOS command reference for /interface/ppp-client/info.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ppp-client/info
 captured_at: '2026-11-01T21:27:32+08:00'
 ---

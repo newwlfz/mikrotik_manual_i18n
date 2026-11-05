@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/file/read"
 sidebar_position: 4
 title: "read"
+description: 'RouterOS command reference for /file/read.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/file/read
 captured_at: '2026-11-01T21:26:55+08:00'
 ---

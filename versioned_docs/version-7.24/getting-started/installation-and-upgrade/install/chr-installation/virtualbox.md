@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/installation-and-upgrade/install/chr-installation/virtualbox"
 sidebar_position: 9
 title: "CHR: VirtualBox Installation"
+description: 'This page provides a step-by-step guide for installing MikroTik RouterOS Cloud Hosted Router (CHR) in VirtualBox, covering VM creation, configuration, and initial setup with login instructions.'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/install/chr-installation/virtualbox
 captured_at: '2026-11-04T11:32:04+08:00'
 ---

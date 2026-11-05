@@ -2,6 +2,7 @@
 sidebar_key: "virtual-private-networks/pppoe/ipv6-pd-over-ppp"
 sidebar_position: 3
 title: "IPv6 PD over PPP"
+description: 'This page demonstrates configuring IPv6 Prefix Delegation over PPPoE in RouterOS, showing how to set up DHCPv6-PD pools on servers and clients, including interface configuration and verification of dynamic prefix...'
 source: https://manual.mikrotik.com/docs/7.24/virtual-private-networks/pppoe/ipv6-pd-over-ppp
 captured_at: '2026-11-04T11:34:38+08:00'
 ---

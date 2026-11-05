@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/rip/keys"
 sidebar_position: 4
 title: "keys"
+description: 'MD5 authentication key chains.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/rip/keys
 captured_at: '2026-11-01T21:29:38+08:00'
 ---

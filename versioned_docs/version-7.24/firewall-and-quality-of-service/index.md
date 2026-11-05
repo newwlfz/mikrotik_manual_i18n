@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/index"
 sidebar_position: 10
 title: "Firewall and Quality of Service"
+description: 'This section provides an overview of RouterOS firewall capabilities including NAT, connection tracking, and QoS features for securing traffic, classifying packets, and managing bandwidth.'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service
 captured_at: '2026-11-04T11:28:07+08:00'
 ---

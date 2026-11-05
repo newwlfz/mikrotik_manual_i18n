@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/mpls/vpls/index"
 sidebar_position: 3
 title: "VPLS"
+description: 'The VPLS page introduces MikroTik RouterOS''s Virtual Private LAN Service (VPLS) interface, detailing its use as a transparent ethernet tunnel with LDP or MP-BGP protocols. It covers VPLS features like pseudowire...'
 slug: /user-guides/routing-and-networking-protocols/mpls/vpls/
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/mpls/vpls
 captured_at: '2026-11-04T11:33:52+08:00'

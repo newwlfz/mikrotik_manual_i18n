@@ -2,6 +2,7 @@
 sidebar_key: "high-availability-solutions/load-balancing/per-connection-classifier"
 sidebar_position: 4
 title: "Per connection classifier"
+description: 'Per connection classifier (PCC) in MikroTik RouterOS divides traffic into streams using IP header fields like source/destination addresses and ports to distribute connections across links, with hashing for load...'
 source: https://manual.mikrotik.com/docs/7.24/high-availability-solutions/load-balancing/per-connection-classifier
 captured_at: '2026-11-04T11:29:50+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/installation-and-upgrade/netinstall/netinstall-linux"
 sidebar_position: 3
 title: "Netinstall for Linux"
+description: 'This page documents netinstall-cli, the Linux command-line version of the MikroTik Netinstall utility, covering all command-line options for single and multiple device reinstallation, scripting and configuration...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/netinstall/netinstall-linux
 captured_at: '2026-11-04T11:28:43+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/ntp/client/reset-freq-drift"
 sidebar_position: 2
 title: "reset-freq-drift"
+description: 'RouterOS command reference for /system/ntp/client/reset-freq-drift.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/ntp/client/reset-freq-drift
 captured_at: '2026-11-01T21:29:54+08:00'
 ---

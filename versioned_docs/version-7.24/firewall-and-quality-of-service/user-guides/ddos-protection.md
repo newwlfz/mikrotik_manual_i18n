@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/user-guides/ddos-protection"
 sidebar_position: 4
 title: "DDoS Protection"
+description: 'This page explains MikroTik RouterOS DDoS protection configuration, covering firewall rules for detecting and blocking various attack types like HTTP floods, SYN floods, and DNS amplification. It includes detailed...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/user-guides/ddos-protection
 captured_at: '2026-11-04T11:28:28+08:00'
 ---

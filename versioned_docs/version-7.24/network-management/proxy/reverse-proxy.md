@@ -2,6 +2,7 @@
 sidebar_key: "network-management/proxy/reverse-proxy"
 sidebar_position: 3
 title: "Reverse Proxy"
+description: 'Reverse proxy service on MikroTik RouterOS allows routing HTTPS traffic to servers or apps using a simple URL instead of NAT rules, with configurable IP/port and SNI settings, but requires disabling default www-ssl...'
 source: https://manual.mikrotik.com/docs/7.24/network-management/proxy/reverse-proxy
 captured_at: '2026-11-04T11:32:43+08:00'
 ---

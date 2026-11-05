@@ -2,6 +2,7 @@
 sidebar_key: "hardware/peripherals"
 sidebar_position: 6
 title: "Peripherals"
+description: 'This article describes supported add-on peripherals for RouterBOARD hardware devices.'
 source: https://manual.mikrotik.com/docs/7.24/hardware/peripherals
 captured_at: '2026-11-04T11:29:33+08:00'
 ---

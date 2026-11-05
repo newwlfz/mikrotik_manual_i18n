@@ -2,6 +2,7 @@
 sidebar_key: "hardware/ports"
 sidebar_position: 8
 title: "Ports"
+description: 'This page documents MikroTik RouterOS port configuration options, covering serial and USB ports for initial setup, 3G modem connections, remote access via RFC 2217, and detailed port properties like baud rate, flow...'
 source: https://manual.mikrotik.com/docs/7.24/hardware/ports
 captured_at: '2026-11-04T11:29:26+08:00'
 ---

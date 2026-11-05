@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/mpls/ldp/accept-filter"
 sidebar_position: 1
 title: "accept-filter"
+description: 'List of label bindings that should be accepted from LDP neighbors.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/mpls/ldp/accept-filter
 captured_at: '2026-11-01T21:29:15+08:00'
 ---

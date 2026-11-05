@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/upgrading-to-v7"
 sidebar_position: 9
 title: "Upgrading to v7"
+description: 'This page outlines the steps and considerations for upgrading MikroTik RouterOS to version 7, detailing compatibility with features like BGP, OSPF, MPLS, and user manager settings. It highlights mandatory parameters...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/upgrading-to-v7
 captured_at: '2026-11-04T11:29:11+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user/ssh-keys/index"
 sidebar_position: 2
 title: "ssh-keys"
+description: 'RouterOS directory reference for /user/ssh-keys.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user/ssh-keys
 captured_at: '2026-11-01T21:30:36+08:00'
 ---

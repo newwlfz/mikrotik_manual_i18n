@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/firewall/connection/tracking"
 sidebar_position: 2
 title: "tracking"
+description: 'RouterOS settings reference for /ip/firewall/connection/tracking.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/firewall/connection/tracking
 captured_at: '2026-11-01T21:28:33+08:00'
 ---

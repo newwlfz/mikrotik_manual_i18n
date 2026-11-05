@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/bonding/monitor"
 sidebar_position: 2
 title: "monitor"
+description: 'RouterOS command reference for /interface/bonding/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bonding/monitor
 captured_at: '2026-11-01T21:26:57+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/user-guides/connection-rate"
 sidebar_position: 3
 title: "Connection rate"
+description: 'Connection Rate is a MikroTik RouterOS firewall feature that monitors and filters traffic based on connection speed, using ''connection-bytes'' and ''connection-rate'' to detect high-speed connections for prioritization...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/user-guides/connection-rate
 captured_at: '2026-11-04T11:28:22+08:00'
 ---

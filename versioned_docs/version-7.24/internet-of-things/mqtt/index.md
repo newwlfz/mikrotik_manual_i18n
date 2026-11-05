@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/mqtt/index"
 sidebar_position: 2
 title: "MQTT"
+description: 'This page documents MQTT integration in MikroTik RouterOS, covering publisher/subscriber workflows for IoT platforms like Kaa and ThingsBoard. It explains MQTT protocol basics, RouterOS capabilities as an MQTT...'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/mqtt
 captured_at: '2026-11-04T11:31:40+08:00'
 ---

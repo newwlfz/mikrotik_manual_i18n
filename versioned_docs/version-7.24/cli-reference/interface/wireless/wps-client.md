@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/wps-client"
 sidebar_position: 24
 title: "wps-client"
+description: 'RouterOS command reference for /interface/wireless/wps-client.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/wps-client
 captured_at: '2026-11-01T21:28:06+08:00'
 ---

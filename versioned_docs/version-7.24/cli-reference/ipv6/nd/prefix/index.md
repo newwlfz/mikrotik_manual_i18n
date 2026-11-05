@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ipv6/nd/prefix/index"
 sidebar_position: 2
 title: "prefix"
+description: 'Prefix information sent in router advertisement (RA) messages used for stateless address autoconfiguration (RFC 4862). By default, autoconfiguration applies only to hosts and not routers.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/nd/prefix
 captured_at: '2026-11-01T21:29:08+08:00'
 ---

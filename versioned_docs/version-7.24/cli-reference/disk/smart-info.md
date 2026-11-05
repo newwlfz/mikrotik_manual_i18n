@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/disk/smart-info"
 sidebar_position: 16
 title: "smart-info"
+description: 'RouterOS command reference for /disk/smart-info.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/disk/smart-info
 captured_at: '2026-11-01T21:26:47+08:00'
 ---

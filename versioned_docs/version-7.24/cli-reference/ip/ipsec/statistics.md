@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/ipsec/statistics"
 sidebar_position: 11
 title: "statistics"
+description: 'RouterOS settings reference for /ip/ipsec/statistics.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/ipsec/statistics
 captured_at: '2026-11-01T21:28:47+08:00'
 ---

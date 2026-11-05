@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/traffic-flow/netflow-analysis-with-elasticsearch"
 sidebar_position: 3
 title: "NetFlow analysis with Elasticsearch"
+description: 'This guide explains how to set up NetFlow analysis with Elasticsearch on MikroTik RouterOS by configuring data collection from RouterOS devices to an Elasticsearch server, including Kibana integration and Fleet...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/traffic-flow/netflow-analysis-with-elasticsearch
 captured_at: '2026-11-04T11:28:14+08:00'
 ---

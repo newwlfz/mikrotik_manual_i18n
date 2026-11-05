@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/configuration-management/default-configurations"
 sidebar_position: 3
 title: "Default configurations"
+description: 'This page describes default configurations for various MikroTik RouterOS devices, including CPE routers, LTE CPE AP routers, and other interface types. It outlines specific settings for each configuration type, such...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/configuration-management/default-configurations
 captured_at: '2026-11-04T11:28:28+08:00'
 ---

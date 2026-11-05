@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/zerotier/peer/index"
 sidebar_position: 2
 title: "peer"
+description: 'RouterOS directory reference for /zerotier/peer.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/zerotier/peer
 captured_at: '2026-11-01T21:30:38+08:00'
 ---

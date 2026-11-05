@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/routing-protocol-multi-core-support"
 sidebar_position: 10
 title: "Routing Protocol Multi-core Support"
+description: 'RouterOS v7 enables multi-core routing by distributing tasks like FIB updates, BGP processing, and protocol handling across separate processes. Each sub-task uses private or shared memory, with BGP input/output...'
 slug: /user-guides/routing-and-networking-protocols/routing-protocol-multi-core-support
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/routing-protocol-multi-core-support
 captured_at: '2026-11-04T11:34:20+08:00'

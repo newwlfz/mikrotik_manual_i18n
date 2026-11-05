@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/dhcp-server/config"
 sidebar_position: 2
 title: "config"
+description: 'RouterOS settings reference for /ip/dhcp-server/config.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dhcp-server/config
 captured_at: '2026-11-01T21:28:28+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/default-configuration/wps-sync-mode-script"
 sidebar_position: 5
 title: "wps-sync-mode-script"
+description: 'RouterOS settings reference for /system/default-configuration/wps-sync-mode-script.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/default-configuration/wps-sync-mode-script
 captured_at: '2026-11-01T21:29:49+08:00'
 ---

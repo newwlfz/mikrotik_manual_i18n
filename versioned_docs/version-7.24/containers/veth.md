@@ -2,6 +2,7 @@
 sidebar_key: "containers/veth"
 sidebar_position: 2
 title: "VETH"
+description: 'VETH (Virtual Ethernet) provides network connectivity for containers in RouterOS, acting as a virtual interface that supports static and DHCP-assigned IPs, SLAAC, and can be integrated into bridges or routing setups.'
 source: https://manual.mikrotik.com/docs/7.24/containers/veth
 captured_at: '2026-11-04T11:27:46+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "hardware/lcd-touchscreen"
 sidebar_position: 3
 title: "LCD Touchscreen"
+description: 'The page documents the LCD touchscreen functionality on MikroTik RouterOS, covering configuration options like backlight timeout, color schemes, and screen defaults. It explains calibration procedures, screenshot...'
 source: https://manual.mikrotik.com/docs/7.24/hardware/lcd-touchscreen
 captured_at: '2026-11-04T11:29:30+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/dude/vacuum-db"
 sidebar_position: 12
 title: "vacuum-db"
+description: 'RouterOS command reference for /dude/vacuum-db.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/dude/vacuum-db
 captured_at: '2026-11-01T21:26:54+08:00'
 ---

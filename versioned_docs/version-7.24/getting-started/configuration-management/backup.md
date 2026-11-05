@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/configuration-management/backup"
 sidebar_position: 1
 title: "Backup"
+description: 'The RouterOS backup feature enables saving and restoring router configurations, including MAC addresses, with options for encrypted or unencrypted storage. It supports saving backups to files and loading them back...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/configuration-management/backup
 captured_at: '2026-11-04T11:28:29+08:00'
 ---

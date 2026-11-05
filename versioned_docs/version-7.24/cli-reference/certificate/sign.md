@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/certificate/sign"
 sidebar_position: 17
 title: "sign"
+description: 'RouterOS command reference for /certificate/sign.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/certificate/sign
 captured_at: '2026-11-01T21:26:30+08:00'
 ---

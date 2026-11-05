@@ -2,6 +2,7 @@
 sidebar_key: "mobile-networking/gps/index"
 sidebar_position: 4
 title: "GPS"
+description: 'This page documents GPS configuration and monitoring in MikroTik RouterOS, covering properties like channel selection, coordinate formats, GPS initialization strings, and monitoring commands with parameters such as...'
 source: https://manual.mikrotik.com/docs/7.24/mobile-networking/gps
 captured_at: '2026-11-04T11:32:12+08:00'
 ---

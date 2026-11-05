@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/package/update/install"
 sidebar_position: 5
 title: "install"
+description: 'RouterOS command reference for /system/package/update/install.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/package/update/install
 captured_at: '2026-11-01T21:30:00+08:00'
 ---

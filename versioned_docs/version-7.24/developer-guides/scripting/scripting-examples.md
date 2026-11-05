@@ -2,6 +2,7 @@
 sidebar_key: "developer-guides/scripting/scripting-examples"
 sidebar_position: 2
 title: "Scripting examples"
+description: 'This page provides scripting examples for MikroTik RouterOS, demonstrating how to create and modify files, append text, check IP changes, strip netmasks, and resolve hostnames using RouterOS scripting commands.'
 source: https://manual.mikrotik.com/docs/7.24/developer-guides/scripting/scripting-examples
 captured_at: '2026-11-04T11:27:51+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "containers/apps/available-apps"
 sidebar_position: 1
 title: "List of available Apps"
+description: 'Reference list of container apps that run on RouterOS, with a short description of each and the MikroTik hardware it suits.'
 source: https://manual.mikrotik.com/docs/7.24/containers/apps/available-apps
 captured_at: '2026-11-04T11:27:35+08:00'
 ---

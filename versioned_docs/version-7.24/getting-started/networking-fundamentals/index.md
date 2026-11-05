@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/networking-fundamentals/index"
 sidebar_position: 2
 title: "Networking Fundamentals"
+description: 'This page introduces networking fundamentals in MikroTik RouterOS, covering the OSI and TCP/IP models, their layers, protocols, and Ethernet communication details including MAC addresses and frame forwarding types.'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/networking-fundamentals
 captured_at: '2026-11-04T11:28:59+08:00'
 ---

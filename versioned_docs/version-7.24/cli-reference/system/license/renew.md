@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/license/renew"
 sidebar_position: 4
 title: "renew"
+description: 'RouterOS command reference for /system/license/renew.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/license/renew
 captured_at: '2026-11-01T21:29:55+08:00'
 ---

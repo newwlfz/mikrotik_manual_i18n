@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/qos/tx-manager/index"
 sidebar_position: 1
 title: "tx-manager"
+description: 'RouterOS directory reference for /interface/ethernet/switch/qos/tx-manager.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/qos/tx-manager
 captured_at: '2026-11-01T21:27:17+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/ipsec/active-peers/kill-connections"
 sidebar_position: 2
 title: "kill-connections"
+description: 'RouterOS command reference for /ip/ipsec/active-peers/kill-connections.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/ipsec/active-peers/kill-connections
 captured_at: '2026-11-01T21:28:45+08:00'
 ---

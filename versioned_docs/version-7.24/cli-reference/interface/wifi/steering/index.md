@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wifi/steering/index"
 sidebar_position: 1
 title: "steering"
+description: 'RouterOS directory reference for /interface/wifi/steering.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/steering
 captured_at: '2026-11-01T21:27:53+08:00'
 ---

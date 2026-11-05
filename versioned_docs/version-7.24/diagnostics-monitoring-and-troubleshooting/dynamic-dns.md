@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/dynamic-dns"
 sidebar_position: 18
 title: "Dynamic DNS"
+description: 'Dynamic DNS Update Tool enables secure updates to domain name records for dynamic IP addresses using RFC-compliant algorithms, supporting only hmac-md5. It requires BIND DNS server and works with specified properties...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/dynamic-dns
 captured_at: '2026-11-04T11:27:55+08:00'
 ---

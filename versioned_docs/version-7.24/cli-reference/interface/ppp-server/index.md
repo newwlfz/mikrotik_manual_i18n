@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ppp-server/index"
 sidebar_position: 1
 title: "ppp-server"
+description: 'RouterOS directory reference for /interface/ppp-server.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ppp-server
 captured_at: '2026-11-01T21:27:33+08:00'
 ---

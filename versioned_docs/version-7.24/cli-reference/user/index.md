@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user/index"
 sidebar_position: 5
 title: "user"
+description: 'RouterOS directory reference for /user.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user
 captured_at: '2026-11-01T21:30:28+08:00'
 ---

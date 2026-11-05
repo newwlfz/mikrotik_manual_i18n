@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/sms/index"
 sidebar_position: 2
 title: "sms"
+description: 'RouterOS settings reference for /tool/sms.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/sms
 captured_at: '2026-11-01T21:30:20+08:00'
 ---

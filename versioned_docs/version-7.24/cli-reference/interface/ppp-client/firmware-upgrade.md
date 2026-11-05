@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ppp-client/firmware-upgrade"
 sidebar_position: 2
 title: "firmware-upgrade"
+description: 'RouterOS command reference for /interface/ppp-client/firmware-upgrade.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ppp-client/firmware-upgrade
 captured_at: '2026-11-01T21:27:33+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/routerboard/usb/index"
 sidebar_position: 1
 title: "usb"
+description: 'RouterOS settings reference for /system/routerboard/usb.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/routerboard/usb
 captured_at: '2026-11-01T21:30:05+08:00'
 ---

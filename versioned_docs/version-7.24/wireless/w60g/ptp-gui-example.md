@@ -2,6 +2,7 @@
 sidebar_key: "wireless/w60g/ptp-gui-example"
 sidebar_position: 8
 title: "PtP GUI example"
+description: 'This guide demonstrates configuring a transparent wireless bridge between two MikroTik W60G devices using WinBox, covering interface setup, bridge creation, wireless mode configuration for both bridge and station...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/w60g/ptp-gui-example
 captured_at: '2026-11-04T11:35:58+08:00'
 ---

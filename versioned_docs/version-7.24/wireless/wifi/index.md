@@ -2,6 +2,7 @@
 sidebar_key: "wireless/wifi/index"
 sidebar_position: 6
 title: "Wi-Fi 6 / 7 (802.11ax/be)"
+description: 'This page introduces the WiFi configuration menu in RouterOS, covering basic setup for password-protected and OWE transition mode access points. It explains configuration profiles, security settings, and includes...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/wifi
 captured_at: '2026-11-04T11:36:05+08:00'
 ---

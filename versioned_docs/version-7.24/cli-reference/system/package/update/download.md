@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/package/update/download"
 sidebar_position: 3
 title: "download"
+description: 'RouterOS command reference for /system/package/update/download.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/package/update/download
 captured_at: '2026-11-01T21:30:01+08:00'
 ---

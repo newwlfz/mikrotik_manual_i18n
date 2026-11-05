@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/romon/port"
 sidebar_position: 4
 title: "port"
+description: 'RouterOS directory reference for /tool/romon/port.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/romon/port
 captured_at: '2026-11-01T21:30:19+08:00'
 ---

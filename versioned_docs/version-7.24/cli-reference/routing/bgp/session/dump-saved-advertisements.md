@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/bgp/session/dump-saved-advertisements"
 sidebar_position: 2
 title: "dump-saved-advertisements"
+description: 'Dump saved advertisements from specified BGP session in the \.pcap file.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/bgp/session/dump-saved-advertisements
 captured_at: '2026-11-01T21:29:28+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/graphing/resource"
 sidebar_position: 4
 title: "resource"
+description: 'RouterOS directory reference for /tool/graphing/resource.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/graphing/resource
 captured_at: '2026-11-01T21:30:16+08:00'
 ---

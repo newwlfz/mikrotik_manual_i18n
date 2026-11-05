@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/user-guides/building-advanced-firewall"
 sidebar_position: 2
 title: "Building Advanced Firewall"
+description: 'This page guides building an advanced firewall on MikroTik RouterOS by configuring interface lists, filtering rules for IPv4 and IPv6, accepting ICMP/DHCPv6 while blocking invalid addresses, and managing traffic...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/user-guides/building-advanced-firewall
 captured_at: '2026-11-04T11:28:36+08:00'
 ---

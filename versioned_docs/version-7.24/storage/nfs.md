@@ -2,6 +2,7 @@
 sidebar_key: "storage/nfs"
 sidebar_position: 5
 title: "NFS"
+description: 'NFS enables network directory sharing in RouterOS using NFS v4, requiring the Storage package. It uses port 2049 and includes configuration properties like nfs-address, nfs-share, and nfs-sharing. Example...'
 source: https://manual.mikrotik.com/docs/7.24/storage/nfs
 captured_at: '2026-11-04T11:33:03+08:00'
 ---

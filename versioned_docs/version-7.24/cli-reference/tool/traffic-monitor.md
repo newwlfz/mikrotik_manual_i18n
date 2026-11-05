@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/traffic-monitor"
 sidebar_position: 26
 title: "traffic-monitor"
+description: 'RouterOS directory reference for /tool/traffic-monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/traffic-monitor
 captured_at: '2026-11-01T21:30:27+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/igmp-proxy/mfc"
 sidebar_position: 3
 title: "mfc"
+description: 'Multicast forwarding cache (MFC) status.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/igmp-proxy/mfc
 captured_at: '2026-11-01T21:29:32+08:00'
 ---

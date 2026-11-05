@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/ipsec/key/rsa/generate-key"
 sidebar_position: 2
 title: "generate-key"
+description: 'RouterOS command reference for /ip/ipsec/key/rsa/generate-key.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/ipsec/key/rsa/generate-key
 captured_at: '2026-11-01T21:28:46+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/traffic-generator/stop"
 sidebar_position: 10
 title: "stop"
+description: 'RouterOS command reference for /tool/traffic-generator/stop.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/traffic-generator/stop
 captured_at: '2026-11-01T21:30:28+08:00'
 ---

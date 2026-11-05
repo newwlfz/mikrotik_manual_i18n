@@ -2,6 +2,7 @@
 sidebar_key: "authentication-authorization-accounting/certificates"
 sidebar_position: 1
 title: "Certificates"
+description: 'This page documents the Certificate management menu in MikroTik RouterOS, covering certificate template creation, configuration properties such as key size and usage, and certificate management including ACME client...'
 source: https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting/certificates
 captured_at: '2026-11-04T11:27:02+08:00'
 ---

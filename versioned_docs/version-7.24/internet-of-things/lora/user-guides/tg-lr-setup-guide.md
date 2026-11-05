@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/lora/user-guides/tg-lr-setup-guide"
 sidebar_position: 6
 title: "TG-LR setup guide"
+description: 'This page is the setup guide for MikroTik TG-LR82 and TG-LR92 LoRaWAN sensor tags, covering activation, network join, telemetry and sensor configuration, magnet switch commands, command encoding for downlinks, data...'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/lora/user-guides/tg-lr-setup-guide
 captured_at: '2026-11-04T11:31:39+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "high-availability-solutions/load-balancing/index"
 sidebar_position: 3
 title: "Load Balancing"
+description: 'Network load balancing in MikroTik RouterOS allows distributing traffic across multiple links without dynamic routing, with options for per-connection or per-packet methods. The documentation includes setup examples...'
 source: https://manual.mikrotik.com/docs/7.24/high-availability-solutions/load-balancing
 captured_at: '2026-11-04T11:29:44+08:00'
 ---

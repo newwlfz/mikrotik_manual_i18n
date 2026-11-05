@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/resource"
 sidebar_position: 14
 title: "Resource"
+description: 'The Resource menu in RouterOS provides overview of system statistics including uptime, memory, disk usage, and hardware details like CPU model and frequency. It also offers submenus for detailed per-CPU usage, IRQ,...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/resource
 captured_at: '2026-11-04T11:28:01+08:00'
 ---

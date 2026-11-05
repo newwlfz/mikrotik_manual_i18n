@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/mesh/port"
 sidebar_position: 3
 title: "port"
+description: 'RouterOS directory reference for /interface/mesh/port.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/mesh/port
 captured_at: '2026-11-01T21:27:31+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/bridge/host"
 sidebar_position: 3
 title: "host"
+description: 'RouterOS directory reference for /interface/bridge/host.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bridge/host
 captured_at: '2026-11-01T21:26:59+08:00'
 ---

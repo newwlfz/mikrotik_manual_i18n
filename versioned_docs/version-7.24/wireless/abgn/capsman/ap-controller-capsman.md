@@ -2,6 +2,7 @@
 sidebar_key: "wireless/abgn/capsman/ap-controller-capsman"
 sidebar_position: 1
 title: "AP Controller (CAPsMAN)"
+description: 'CAPsMAN (Controlled Access Point System Manager) centralizes wireless network management by allowing a RouterOS server to configure multiple access points, handling client authentication and data forwarding. It...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/abgn/capsman/ap-controller-capsman
 captured_at: '2026-11-04T11:35:31+08:00'
 ---

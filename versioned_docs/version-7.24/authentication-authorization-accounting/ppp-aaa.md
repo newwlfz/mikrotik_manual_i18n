@@ -2,6 +2,7 @@
 sidebar_key: "authentication-authorization-accounting/ppp-aaa"
 sidebar_position: 4
 title: "PPP AAA"
+description: 'MikroTik RouterOS PPP AAA functionality provides authentication, authorization, and accounting with local and RADIUS support. PPP profiles define default settings for user access records, including bridge...'
 source: https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting/ppp-aaa
 captured_at: '2026-11-04T11:26:59+08:00'
 ---

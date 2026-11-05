@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/dns/adlist/index"
 sidebar_position: 1
 title: "adlist"
+description: 'RouterOS directory reference for /ip/dns/adlist.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dns/adlist
 captured_at: '2026-11-01T21:28:29+08:00'
 ---

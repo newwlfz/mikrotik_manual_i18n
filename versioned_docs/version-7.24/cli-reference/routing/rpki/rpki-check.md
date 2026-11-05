@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/rpki/rpki-check"
 sidebar_position: 2
 title: "rpki-check"
+description: 'RouterOS command reference for /routing/rpki/rpki-check.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/rpki/rpki-check
 captured_at: '2026-11-01T21:29:40+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "system-information-and-utilities/wake-on-lan"
 sidebar_position: 17
 title: "Wake on LAN"
+description: 'Wake on LAN (WoL) enables powering on remote devices via UDP Magic Packet sent to their MAC address, requiring proper interface and hardware configuration.'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/wake-on-lan
 captured_at: '2026-11-04T11:33:40+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/filter/community-large-list"
 sidebar_position: 3
 title: "community-large-list"
+description: 'RouterOS directory reference for /routing/filter/community-large-list.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/filter/community-large-list
 captured_at: '2026-11-01T21:29:29+08:00'
 ---

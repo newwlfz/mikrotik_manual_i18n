@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user/aaa"
 sidebar_position: 1
 title: "aaa"
+description: 'RouterOS settings reference for /user/aaa.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user/aaa
 captured_at: '2026-11-01T21:30:35+08:00'
 ---

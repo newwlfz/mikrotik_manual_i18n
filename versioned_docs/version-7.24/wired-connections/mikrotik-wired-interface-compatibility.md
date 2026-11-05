@@ -2,6 +2,7 @@
 sidebar_key: "wired-connections/mikrotik-wired-interface-compatibility"
 sidebar_position: 2
 title: "MikroTik wired interface compatibility"
+description: 'This article shows the compatibility of MikroTik devices with SFP, SFP+, SFP28, QSFP+, QSFP28 and QSFP56-DD transceivers. It features detailed compatibility tables that provide valuable insights into which...'
 source: https://manual.mikrotik.com/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility
 captured_at: '2026-11-04T11:35:02+08:00'
 ---

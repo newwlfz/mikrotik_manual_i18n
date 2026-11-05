@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/hotspot/profile"
 sidebar_position: 6
 title: "profile"
+description: 'RouterOS directory reference for /ip/hotspot/profile.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/hotspot/profile
 captured_at: '2026-11-01T21:28:40+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/default-configuration/index"
 sidebar_position: 3
 title: "default-configuration"
+description: 'RouterOS settings reference for /system/default-configuration.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/default-configuration
 captured_at: '2026-11-01T21:29:48+08:00'
 ---

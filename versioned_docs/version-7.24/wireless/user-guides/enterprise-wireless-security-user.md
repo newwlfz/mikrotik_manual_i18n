@@ -2,6 +2,7 @@
 sidebar_key: "wireless/user-guides/enterprise-wireless-security-user"
 sidebar_position: 1
 title: "Enterprise wireless security with User Manager v5"
+description: 'This guide explains how to configure MikroTik RouterOS User Manager v5 as an authentication server for enterprise wireless networks, covering installation, TLS certificate generation for secure EAP methods like PEAP...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/user-guides/enterprise-wireless-security-user
 captured_at: '2026-11-04T11:35:42+08:00'
 ---

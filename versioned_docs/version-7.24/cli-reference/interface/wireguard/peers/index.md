@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireguard/peers/index"
 sidebar_position: 1
 title: "peers"
+description: 'RouterOS directory reference for /interface/wireguard/peers.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireguard/peers
 captured_at: '2026-11-01T21:27:55+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/unicast/rip"
 sidebar_position: 8
 title: "RIP"
+description: 'MikroTik RouterOS supports RIP version 2 for exchanging routing information within autonomous systems, selecting optimal paths based on hop count. Configuration is available under /routing/rip.'
 slug: /user-guides/routing-and-networking-protocols/unicast/rip
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/rip
 captured_at: '2026-11-04T11:34:17+08:00'

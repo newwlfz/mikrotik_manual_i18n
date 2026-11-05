@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/snooper/flat-snoop"
 sidebar_position: 1
 title: "flat-snoop"
+description: 'RouterOS command reference for /interface/wireless/snooper/flat-snoop.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/snooper/flat-snoop
 captured_at: '2026-11-01T21:28:04+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/mpls/index"
 sidebar_position: 2
 title: "MPLS"
+description: 'MPLS is a routing technology that uses labels for faster packet forwarding instead of IP header analysis, with RouterOS supporting MPLS switching, LDP/RSVP-TE protocols, VPLS, and MP-BGP VPNs while excluding certain...'
 slug: /user-guides/routing-and-networking-protocols/mpls/
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/mpls
 captured_at: '2026-11-04T11:33:50+08:00'

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/mac-scan"
 sidebar_position: 10
 title: "mac-scan"
+description: 'RouterOS command reference for /tool/mac-scan.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/mac-scan
 captured_at: '2026-11-01T21:30:17+08:00'
 ---

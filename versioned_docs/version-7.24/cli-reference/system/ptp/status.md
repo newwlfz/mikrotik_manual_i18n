@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/ptp/status"
 sidebar_position: 4
 title: "status"
+description: 'RouterOS directory reference for /system/ptp/status.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/ptp/status
 captured_at: '2026-11-01T21:30:02+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/traceroute"
 sidebar_position: 2
 title: "Traceroute"
+description: 'Traceroute displays the path a packet takes to reach a remote host by analyzing TTL values and ICMP ''Time Exceeded'' messages, helping identify routing issues or bottlenecks in multi-hop networks.'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/traceroute
 captured_at: '2026-11-04T11:28:05+08:00'
 ---

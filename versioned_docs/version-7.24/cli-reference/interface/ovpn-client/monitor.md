@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ovpn-client/monitor"
 sidebar_position: 3
 title: "monitor"
+description: 'RouterOS command reference for /interface/ovpn-client/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ovpn-client/monitor
 captured_at: '2026-11-01T21:27:31+08:00'
 ---

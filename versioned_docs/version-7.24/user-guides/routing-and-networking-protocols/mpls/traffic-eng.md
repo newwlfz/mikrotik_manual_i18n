@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/mpls/traffic-eng"
 sidebar_position: 4
 title: "Traffic Eng"
+description: 'This page documents MikroTik RouterOS Traffic Engineering (TE) tunnel functionality, covering monitoring commands like monitor to track TE tunnel status and paths, along with reoptimization techniques using...'
 slug: /user-guides/routing-and-networking-protocols/mpls/traffic-eng
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/mpls/traffic-eng
 captured_at: '2026-11-04T11:33:49+08:00'

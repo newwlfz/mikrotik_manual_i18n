@@ -2,6 +2,7 @@
 sidebar_key: "network-management/dns"
 sidebar_position: 3
 title: "DNS"
+description: 'This page introduces DNS functionality in MikroTik RouterOS, explaining how to configure the router as a DNS cache or primary server with options for remote requests, caching policies, and dynamic server integration....'
 source: https://manual.mikrotik.com/docs/7.24/network-management/dns
 captured_at: '2026-11-04T11:32:42+08:00'
 ---

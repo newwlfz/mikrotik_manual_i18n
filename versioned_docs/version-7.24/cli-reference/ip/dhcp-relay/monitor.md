@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/dhcp-relay/monitor"
 sidebar_position: 2
 title: "monitor"
+description: 'RouterOS command reference for /ip/dhcp-relay/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dhcp-relay/monitor
 captured_at: '2026-11-01T21:28:27+08:00'
 ---

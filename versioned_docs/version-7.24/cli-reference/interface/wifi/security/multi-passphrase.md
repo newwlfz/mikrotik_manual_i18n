@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wifi/security/multi-passphrase"
 sidebar_position: 2
 title: "multi-passphrase"
+description: 'RouterOS directory reference for /interface/wifi/security/multi-passphrase.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/security/multi-passphrase
 captured_at: '2026-11-01T21:27:52+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user-manager/profile-limitation"
 sidebar_position: 10
 title: "profile-limitation"
+description: 'RouterOS directory reference for /user-manager/profile-limitation.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/profile-limitation
 captured_at: '2026-11-01T21:30:32+08:00'
 ---

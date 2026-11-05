@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/downgrading-routeros"
 sidebar_position: 20
 title: "Downgrading RouterOS"
+description: 'Learn how to downgrade RouterOS to a previous version, including pre-downgrade checks, architecture verification, and step-by-step instructions.'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/downgrading-routeros
 captured_at: '2026-11-04T11:27:54+08:00'
 ---

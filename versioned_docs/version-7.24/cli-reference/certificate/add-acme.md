@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/certificate/add-acme"
 sidebar_position: 2
 title: "add-acme"
+description: 'RouterOS command reference for /certificate/add-acme.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/certificate/add-acme
 captured_at: '2026-11-01T21:26:25+08:00'
 ---

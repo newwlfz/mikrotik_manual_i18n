@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/installation-and-upgrade/packages"
 sidebar_position: 5
 title: "Packages"
+description: 'RouterOS organizes features into packages with .npk extensions, including the core routeros bundle and optional extras like Containers or The Dude. Wireless devices require specific packages depending on hardware,...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/packages
 captured_at: '2026-11-04T11:31:45+08:00'
 ---

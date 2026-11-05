@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/console/inspect"
 sidebar_position: 1
 title: "inspect"
+description: 'RouterOS command reference for /console/inspect.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/console/inspect
 captured_at: '2026-11-01T21:26:36+08:00'
 ---

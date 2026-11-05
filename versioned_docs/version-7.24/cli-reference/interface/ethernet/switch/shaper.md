@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/shaper"
 sidebar_position: 24
 title: "shaper"
+description: 'RouterOS directory reference for /interface/ethernet/switch/shaper.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/shaper
 captured_at: '2026-11-01T21:27:19+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/mac-server/sessions"
 sidebar_position: 4
 title: "sessions"
+description: 'RouterOS directory reference for /tool/mac-server/sessions.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/mac-server/sessions
 captured_at: '2026-11-01T21:30:17+08:00'
 ---

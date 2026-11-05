@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-tag-advertisement-formats"
 sidebar_position: 6
 title: "MikroTik Tag advertisement formats"
+description: 'TG-BT5-XX tags can operate in 4 different modes:'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-tag-advertisement-formats
 captured_at: '2026-11-04T11:30:12+08:00'
 ---

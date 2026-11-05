@@ -2,6 +2,7 @@
 sidebar_key: "wireless/abgn/capsman/capsman-with-vlans"
 sidebar_position: 2
 title: "CAPsMAN with VLANs"
+description: 'This page explains configuring CAPsMAN with VLANs in MikroTik RouterOS, enabling centralized wireless management and VLAN tagging for different client groups. It covers Local Forwarding Mode setup, provisioning...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/abgn/capsman/capsman-with-vlans
 captured_at: '2026-11-04T11:35:15+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/certificate/settings"
 sidebar_position: 16
 title: "settings"
+description: 'RouterOS settings reference for /certificate/settings.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/certificate/settings
 captured_at: '2026-11-01T21:26:28+08:00'
 ---

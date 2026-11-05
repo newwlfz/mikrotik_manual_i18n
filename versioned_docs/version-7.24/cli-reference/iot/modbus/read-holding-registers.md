@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/modbus/read-holding-registers"
 sidebar_position: 2
 title: "read-holding-registers"
+description: 'RouterOS command reference for /iot/modbus/read-holding-registers.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/modbus/read-holding-registers
 captured_at: '2026-11-01T21:28:17+08:00'
 ---

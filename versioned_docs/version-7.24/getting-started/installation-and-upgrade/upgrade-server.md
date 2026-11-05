@@ -1,5 +1,6 @@
 ---
 title: "Upgrade Server"
+description: 'When you check for updates, RouterOS contacts `upgrade.mikrotik.com` to determine the latest available version for your device and license tier. If the server cannot be reached or the DNS name does not resolve, the upgrade check fails or returns outdated information.'
 sidebar_label: "Upgrade Server"
 sidebar_position: 999
 ---

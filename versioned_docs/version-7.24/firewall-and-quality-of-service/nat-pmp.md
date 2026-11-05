@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/nat-pmp"
 sidebar_position: 6
 title: "NAT-PMP"
+description: 'NAT-PMP is a protocol enabling transparent peer-to-peer connectivity by mapping internal IPv4 addresses to external ones via dynamic NAT rules, using UDP ports 5350 and 5351 on client and server sides respectively.'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/nat-pmp
 captured_at: '2026-11-04T11:28:13+08:00'
 ---

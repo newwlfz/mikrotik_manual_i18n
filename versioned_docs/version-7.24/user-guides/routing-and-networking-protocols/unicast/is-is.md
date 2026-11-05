@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/unicast/is-is"
 sidebar_position: 6
 title: "IS-IS"
+description: 'IS-IS is an Interior Gateway Protocol used for distributing IP routing information within a single Autonomous System, operating as a link-state protocol that exchanges topology data between neighbors. It supports...'
 slug: /user-guides/routing-and-networking-protocols/unicast/is-is
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/is-is
 captured_at: '2026-11-04T11:34:12+08:00'

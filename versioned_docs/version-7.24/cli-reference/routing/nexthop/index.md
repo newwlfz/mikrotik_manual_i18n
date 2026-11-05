@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/nexthop/index"
 sidebar_position: 2
 title: "nexthop"
+description: 'RouterOS directory reference for /routing/nexthop.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/nexthop
 captured_at: '2026-11-01T21:29:33+08:00'
 ---

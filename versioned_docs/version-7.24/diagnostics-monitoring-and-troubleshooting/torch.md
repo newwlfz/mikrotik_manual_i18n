@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/torch"
 sidebar_position: 3
 title: "Torch"
+description: 'MikroTik Torch is a real-time traffic monitoring tool that observes network flow through interfaces, allowing analysis of source/destination addresses, ports, protocols, MACs, VLAN IDs, and DSCP values for...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/torch
 captured_at: '2026-11-04T11:28:04+08:00'
 ---

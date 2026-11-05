@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/networking-fundamentals/ipv6-addresses"
 sidebar_position: 3
 title: "IPv6 Addresses"
+description: 'This page introduces IPv6 addressing in MikroTik RouterOS, covering its benefits over IPv4, address types and syntax, simplified representation with zero compression, prefix notation, and the absence of broadcast...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/networking-fundamentals/ipv6-addresses
 captured_at: '2026-11-04T11:28:56+08:00'
 ---

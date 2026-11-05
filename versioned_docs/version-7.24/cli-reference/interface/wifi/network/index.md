@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wifi/network/index"
 sidebar_position: 1
 title: "network"
+description: 'RouterOS directory reference for /interface/wifi/network.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/network
 captured_at: '2026-11-01T21:27:52+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/traffic-generator/stream"
 sidebar_position: 11
 title: "stream"
+description: 'RouterOS directory reference for /tool/traffic-generator/stream.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/traffic-generator/stream
 captured_at: '2026-11-01T21:30:27+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/zerotier/peer/hint"
 sidebar_position: 1
 title: "hint"
+description: 'RouterOS directory reference for /zerotier/peer/hint.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/zerotier/peer/hint
 captured_at: '2026-11-01T21:30:37+08:00'
 ---

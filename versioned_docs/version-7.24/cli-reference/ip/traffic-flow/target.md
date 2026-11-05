@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/traffic-flow/target"
 sidebar_position: 4
 title: "target"
+description: 'RouterOS directory reference for /ip/traffic-flow/target.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/traffic-flow/target
 captured_at: '2026-11-01T21:28:59+08:00'
 ---

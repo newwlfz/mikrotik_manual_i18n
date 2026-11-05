@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/packet-flow-in-routeros"
 sidebar_position: 2
 title: "Packet Flow in RouterOS"
+description: 'This page explains how data packets flow through MikroTik RouterOS, detailing the interaction between bridging, routing, MPLS decisions, and firewall chains. It includes diagrams illustrating packet processing stages...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/packet-flow-in-routeros
 captured_at: '2026-11-04T11:30:00+08:00'
 ---

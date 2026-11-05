@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/disk/btrfs/filesystem/remove-device"
 sidebar_position: 5
 title: "remove-device"
+description: 'RouterOS command reference for /disk/btrfs/filesystem/remove-device.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/disk/btrfs/filesystem/remove-device
 captured_at: '2026-11-01T21:26:42+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "system-information-and-utilities/identity"
 sidebar_position: 6
 title: "Identity"
+description: 'The page documents configuring the System Identity in MikroTik RouterOS, which sets a unique identifier for network communication and services like DHCP. It explains how to set the identity via CLI or SNMP, with a...'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/identity
 captured_at: '2026-11-04T11:33:27+08:00'
 ---

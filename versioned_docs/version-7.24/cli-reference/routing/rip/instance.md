@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/rip/instance"
 sidebar_position: 1
 title: "instance"
+description: 'The maximum metric of a RIP route is 15. A metric higher than 15 is considered ''infinity'' and routes with such a metric are considered unreachable. Thus RIP cannot be used on networks with more than 15 hops between...'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/rip/instance
 captured_at: '2026-11-01T21:29:38+08:00'
 ---

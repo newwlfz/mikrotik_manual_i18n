@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/bridge/vlan/mvrp"
 sidebar_position: 2
 title: "mvrp"
+description: 'RouterOS directory reference for /interface/bridge/vlan/mvrp.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bridge/vlan/mvrp
 captured_at: '2026-11-01T21:27:02+08:00'
 ---

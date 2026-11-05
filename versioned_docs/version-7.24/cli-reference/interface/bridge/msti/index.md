@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/bridge/msti/index"
 sidebar_position: 1
 title: "msti"
+description: 'RouterOS directory reference for /interface/bridge/msti.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bridge/msti
 captured_at: '2026-11-01T21:26:59+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/ntp/client/index"
 sidebar_position: 1
 title: "client"
+description: 'RouterOS settings reference for /system/ntp/client.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/ntp/client
 captured_at: '2026-11-01T21:29:54+08:00'
 ---

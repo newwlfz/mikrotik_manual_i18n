@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/cable-test"
 sidebar_position: 2
 title: "cable-test"
+description: 'RouterOS command reference for /interface/ethernet/cable-test.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/cable-test
 captured_at: '2026-11-01T21:27:05+08:00'
 ---

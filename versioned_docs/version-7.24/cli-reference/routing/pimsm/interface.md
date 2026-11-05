@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/pimsm/interface"
 sidebar_position: 5
 title: "interface"
+description: 'The interface menu shows all interfaces that are currently participating in PIM and their statuses. This menu contains dynamic and read-only entries that get created by defined interface templates.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/pimsm/interface
 captured_at: '2026-11-01T21:29:37+08:00'
 ---

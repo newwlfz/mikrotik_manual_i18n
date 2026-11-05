@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user/active"
 sidebar_position: 2
 title: "active"
+description: 'RouterOS directory reference for /user/active.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user/active
 captured_at: '2026-11-01T21:30:35+08:00'
 ---

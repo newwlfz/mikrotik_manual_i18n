@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/routeros-licensing/x86/index"
 sidebar_position: 2
 title: "x86 Licensing"
+description: 'This page explains x86 system licensing for MikroTik RouterOS, covering license key acquisition, Software ID requirements, system prerequisites, and license level details including features and pricing for trial,...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/routeros-licensing/x86
 captured_at: '2026-11-04T11:29:18+08:00'
 ---

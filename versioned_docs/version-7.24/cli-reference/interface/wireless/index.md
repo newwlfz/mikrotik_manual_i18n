@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/index"
 sidebar_position: 7
 title: "wireless"
+description: 'RouterOS directory reference for /interface/wireless.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless
 captured_at: '2026-11-01T21:27:59+08:00'
 ---

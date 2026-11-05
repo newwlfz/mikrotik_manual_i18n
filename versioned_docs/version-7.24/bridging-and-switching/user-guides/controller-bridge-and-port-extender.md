@@ -1,5 +1,6 @@
 ---
 title: "Controller Bridge and Port Extender"
+description: 'The feature has been removed from RouterOS since v7.18.'
 sidebar_label: "Controller Bridge and Port Extender"
 sidebar_position: 999
 ---

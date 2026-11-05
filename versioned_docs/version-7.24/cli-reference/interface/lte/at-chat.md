@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/lte/at-chat"
 sidebar_position: 2
 title: "at-chat"
+description: 'RouterOS command reference for /interface/lte/at-chat.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/lte/at-chat
 captured_at: '2026-11-01T21:27:26+08:00'
 ---

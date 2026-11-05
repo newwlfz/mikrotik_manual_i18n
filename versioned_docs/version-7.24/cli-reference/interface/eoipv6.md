@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/eoipv6"
 sidebar_position: 8
 title: "eoipv6"
+description: 'RouterOS directory reference for /interface/eoipv6.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/eoipv6
 captured_at: '2026-11-01T21:27:08+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "system-information-and-utilities/files"
 sidebar_position: 5
 title: "Files"
+description: 'The File menu in MikroTik RouterOS allows managing user space files, including creating/editing/deleting files and directories, viewing package details for .npk files, and storing critical files in the ''flash''...'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/files
 captured_at: '2026-11-04T11:33:29+08:00'
 ---

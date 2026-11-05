@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/snmp/send-trap"
 sidebar_position: 3
 title: "send-trap"
+description: 'RouterOS command reference for /snmp/send-trap.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/snmp/send-trap
 captured_at: '2026-11-01T21:29:43+08:00'
 ---

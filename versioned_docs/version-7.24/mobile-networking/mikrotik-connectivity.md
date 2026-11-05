@@ -2,6 +2,7 @@
 sidebar_key: "mobile-networking/mikrotik-connectivity"
 sidebar_position: 3
 title: "MikroTik Connectivity"
+description: 'MikroTik Connectivity introduces an eSIM solution for seamless device connectivity without physical SIM swaps, featuring activation steps through the MikroTik account portal and RouterOS CLI/WinBox interfaces.'
 source: https://manual.mikrotik.com/docs/7.24/mobile-networking/mikrotik-connectivity
 captured_at: '2026-11-04T11:32:57+08:00'
 ---

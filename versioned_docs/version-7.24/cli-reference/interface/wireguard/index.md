@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireguard/index"
 sidebar_position: 1
 title: "wireguard"
+description: 'RouterOS directory reference for /interface/wireguard.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireguard
 captured_at: '2026-11-01T21:27:54+08:00'
 ---

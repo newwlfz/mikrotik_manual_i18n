@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/flood-ping"
 sidebar_position: 7
 title: "flood-ping"
+description: 'RouterOS command reference for /tool/flood-ping.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/flood-ping
 captured_at: '2026-11-01T21:30:15+08:00'
 ---

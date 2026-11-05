@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/swos/crs3"
 sidebar_position: 1
 title: "CRS3xx and CSS3xx Series Manual"
+description: 'SwOS is an operating system designed specifically for the administration of MikroTik switch products. It provides fundamental managed switch functionalities alongside advanced features such as port-to-port...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/swos/crs3
 captured_at: '2026-11-04T11:27:59+08:00'
 ---

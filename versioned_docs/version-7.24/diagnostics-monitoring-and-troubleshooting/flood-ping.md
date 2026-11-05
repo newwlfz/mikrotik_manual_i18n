@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/flood-ping"
 sidebar_position: 7
 title: "Flood Ping"
+description: 'The Flood Ping tool in RouterOS sends continuous ICMP echo requests to test network stability, measure packet loss, and analyze latency under heavy traffic conditions with real-time statistics on sent/received...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/flood-ping
 captured_at: '2026-11-04T11:27:55+08:00'
 ---

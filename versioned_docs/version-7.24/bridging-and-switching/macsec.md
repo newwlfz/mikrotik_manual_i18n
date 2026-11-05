@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/macsec"
 sidebar_position: 4
 title: "MACsec"
+description: 'MACsec is a security protocol for Ethernet networks providing confidentiality, integrity, and authenticity using GCM-AES-128 encryption. RouterOS supports MACsec with manual key configuration and limited hardware...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/macsec
 captured_at: '2026-11-04T11:27:01+08:00'
 ---

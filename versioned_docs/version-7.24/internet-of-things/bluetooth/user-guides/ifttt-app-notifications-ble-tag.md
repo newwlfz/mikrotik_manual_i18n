@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/bluetooth/user-guides/ifttt-app-notifications-ble-tag"
 sidebar_position: 4
 title: "IFTTT app notifications on BLE tag appearance in KNOT's range"
+description: 'Our Bluetooth tags and the KNOT can be used in different scenarios for IoT asset tracking.'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/bluetooth/user-guides/ifttt-app-notifications-ble-tag
 captured_at: '2026-11-04T11:30:46+08:00'
 ---

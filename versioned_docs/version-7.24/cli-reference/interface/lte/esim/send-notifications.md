@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/lte/esim/send-notifications"
 sidebar_position: 8
 title: "send-notifications"
+description: 'RouterOS command reference for /interface/lte/esim/send-notifications.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/lte/esim/send-notifications
 captured_at: '2026-11-01T21:27:26+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "wireless/wifi-ac/index"
 sidebar_position: 1
 title: "Wi-Fi 5 (802.11ac)"
+description: 'MikroTik 802.11ac (Wi-Fi 5) ARM devices can be driven two ways: through the new /interface/wifi menu using the wifi-qcom-ac package (WPA3, fast roaming, new CAPsMAN) or through the legacy /interface/wireless menu...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/wifi-ac
 captured_at: '2026-11-04T11:35:47+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/user-guides/spanning-tree-protocol"
 sidebar_position: 9
 title: "Spanning Tree Protocol"
+description: 'This page explains the Spanning Tree Protocol (STP) in MikroTik RouterOS, detailing how it prevents network loops by selecting a root bridge and optimizing port usage through Bridge Protocol Data Units (BPDUs). It...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/user-guides/spanning-tree-protocol
 captured_at: '2026-11-04T11:27:37+08:00'
 ---

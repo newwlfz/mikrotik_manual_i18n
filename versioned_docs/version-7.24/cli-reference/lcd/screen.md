@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/lcd/screen"
 sidebar_position: 6
 title: "screen"
+description: 'RouterOS directory reference for /lcd/screen.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/lcd/screen
 captured_at: '2026-11-01T21:29:15+08:00'
 ---

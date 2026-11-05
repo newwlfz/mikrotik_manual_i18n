@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user-manager/user/generate-voucher"
 sidebar_position: 2
 title: "generate-voucher"
+description: 'RouterOS command reference for /user-manager/user/generate-voucher.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/user/generate-voucher
 captured_at: '2026-11-01T21:30:34+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/traffic-flow/index"
 sidebar_position: 2
 title: "Traffic Flow"
+description: 'MikroTik Traffic-Flow provides network monitoring and accounting by collecting statistical information about packets passing through the router, supporting NetFlow versions 1, 5, 9, and IPFIX for flexible flow...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/traffic-flow
 captured_at: '2026-11-04T11:28:04+08:00'
 ---

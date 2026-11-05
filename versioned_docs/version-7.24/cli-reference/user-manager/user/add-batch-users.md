@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user-manager/user/add-batch-users"
 sidebar_position: 1
 title: "add-batch-users"
+description: 'RouterOS command reference for /user-manager/user/add-batch-users.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/user/add-batch-users
 captured_at: '2026-11-01T21:30:34+08:00'
 ---

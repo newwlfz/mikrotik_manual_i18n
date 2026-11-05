@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/routerboard/wps-button"
 sidebar_position: 7
 title: "wps-button"
+description: 'RouterOS settings reference for /system/routerboard/wps-button.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/routerboard/wps-button
 captured_at: '2026-11-01T21:30:05+08:00'
 ---

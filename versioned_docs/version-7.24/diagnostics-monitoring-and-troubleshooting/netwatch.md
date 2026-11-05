@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/netwatch"
 sidebar_position: 10
 title: "Netwatch"
+description: 'Netwatch monitors network hosts using multiple probe types including ICMP, TCP, HTTP, DNS, and simple pings. It allows custom scripts for state changes and supports VRFs and link-local IPv6 addresses, with...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/netwatch
 captured_at: '2026-11-04T11:28:09+08:00'
 ---

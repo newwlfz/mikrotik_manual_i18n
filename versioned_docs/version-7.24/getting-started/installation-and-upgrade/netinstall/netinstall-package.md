@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/installation-and-upgrade/netinstall/netinstall-package"
 sidebar_position: 4
 title: "Netinstall package"
+description: 'This page documents the RouterOS Netinstall package, which allows reinstalling RouterOS on MikroTik devices remotely from another router running RouterOS 7.24beta1 or newer, covering prerequisites, the...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/netinstall/netinstall-package
 captured_at: '2026-11-04T11:28:48+08:00'
 ---

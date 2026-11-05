@@ -2,6 +2,7 @@
 sidebar_key: "wireless/abgn/hwmpplus-mesh"
 sidebar_position: 2
 title: "HWMPplus mesh"
+description: 'This page documents the HWMP+ mesh protocol in MikroTik RouterOS, a layer-2 routing solution for wireless mesh networks using Hybrid Wireless Mesh Protocol. It covers interface properties, port configurations, FDB...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/abgn/hwmpplus-mesh
 captured_at: '2026-11-04T11:35:34+08:00'
 ---

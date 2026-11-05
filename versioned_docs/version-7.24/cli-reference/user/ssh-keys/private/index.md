@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user/ssh-keys/private/index"
 sidebar_position: 2
 title: "private"
+description: 'RouterOS directory reference for /user/ssh-keys/private.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user/ssh-keys/private
 captured_at: '2026-11-01T21:30:36+08:00'
 ---

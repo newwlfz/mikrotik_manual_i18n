@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/pimsm/bsr/rp-set"
 sidebar_position: 4
 title: "rp-set"
+description: 'RouterOS directory reference for /routing/pimsm/bsr/rp-set.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/pimsm/bsr/rp-set
 captured_at: '2026-11-01T21:29:35+08:00'
 ---

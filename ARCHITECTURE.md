@@ -264,6 +264,20 @@ of the normalised Markdown, not raw HTML. Raw snapshots go to `.work/`.
 A missing local file is always repairable, even when the remote page is
 unchanged. This is the deletion drill requirement.
 
+## 8.1 Version/current rule
+
+`versioned_docs/version-*` is the source of truth produced by the external
+content workflow. The Docusaurus build discovers the newest semver directory
+and uses it for:
+
+- the `/docs/*` client redirect (currently to `/docs/7.24/*`);
+- the current `llms.txt` / `.md` source (`.generated/current-docs`);
+- the next version automatically, without editing route tables.
+
+The versioned routes stay addressable. `tools/sync/materialize-current.mjs`
+only rewrites `/docs/<latest>/` links to `/docs/` for the current LLM copies;
+it does not duplicate HTML pages.
+
 ## 9. Current inventory and legacy reuse
 
 The legacy project was used as the localised image/body baseline, then the

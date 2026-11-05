@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/bridge/msrp/domain/monitor"
 sidebar_position: 2
 title: "monitor"
+description: 'RouterOS command reference for /interface/bridge/msrp/domain/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bridge/msrp/domain/monitor
 captured_at: '2026-11-02T09:09:04+08:00'
 ---

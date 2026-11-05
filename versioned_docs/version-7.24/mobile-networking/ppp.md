@@ -2,6 +2,7 @@
 sidebar_key: "mobile-networking/ppp"
 sidebar_position: 5
 title: "PPP"
+description: 'PPP in RouterOS enables point-to-point protocol communication for transporting multi-protocol datagrams, featuring LCP and NCP components. It supports PPP client and server configurations with examples like...'
 source: https://manual.mikrotik.com/docs/7.24/mobile-networking/ppp
 captured_at: '2026-11-04T11:32:24+08:00'
 ---

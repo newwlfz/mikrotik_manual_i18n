@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/gpio/digital"
 sidebar_position: 2
 title: "digital"
+description: 'RouterOS directory reference for /iot/gpio/digital.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/gpio/digital
 captured_at: '2026-11-01T21:28:12+08:00'
 ---

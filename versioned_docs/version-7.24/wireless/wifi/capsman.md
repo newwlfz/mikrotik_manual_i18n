@@ -2,6 +2,7 @@
 sidebar_key: "wireless/wifi/capsman"
 sidebar_position: 1
 title: "WiFi CAPsMAN"
+description: 'WiFi CAPsMAN (Controlled Access Point system Manager) for the wifi-qcom / wifi-qcom-ac packages centralizes management of multiple WiFi access points. Covers CAP discovery, radio provisioning, datapath/forwarding...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/wifi/capsman
 captured_at: '2026-11-04T11:35:57+08:00'
 ---

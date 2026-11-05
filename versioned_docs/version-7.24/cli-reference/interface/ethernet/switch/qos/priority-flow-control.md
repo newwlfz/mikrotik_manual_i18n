@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/qos/priority-flow-control"
 sidebar_position: 5
 title: "priority-flow-control"
+description: 'RouterOS directory reference for /interface/ethernet/switch/qos/priority-flow-control.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/qos/priority-flow-control
 captured_at: '2026-11-01T21:27:17+08:00'
 ---

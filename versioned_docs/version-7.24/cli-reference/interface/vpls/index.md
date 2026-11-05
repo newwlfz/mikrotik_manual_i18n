@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/vpls/index"
 sidebar_position: 1
 title: "vpls"
+description: 'List of all VPLS interfaces. This menu also shows dynamically created BGP-based VPLS interfaces.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/vpls
 captured_at: '2026-11-01T21:27:43+08:00'
 ---

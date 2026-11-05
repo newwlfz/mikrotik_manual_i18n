@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/certificate/add-scep"
 sidebar_position: 3
 title: "add-scep"
+description: 'RouterOS command reference for /certificate/add-scep.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/certificate/add-scep
 captured_at: '2026-11-01T21:26:24+08:00'
 ---

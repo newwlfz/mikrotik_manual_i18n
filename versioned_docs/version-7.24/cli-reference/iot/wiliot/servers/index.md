@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/wiliot/servers/index"
 sidebar_position: 2
 title: "servers"
+description: 'RouterOS directory reference for /iot/wiliot/servers.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/wiliot/servers
 captured_at: '2026-11-01T21:28:22+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ipv6/settings"
 sidebar_position: 10
 title: "settings"
+description: 'This menu allows you to configure various IPv6-related kernel and system-wide network parameters. These settings control how the operating system handles IP traffic and network communications.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/settings
 captured_at: '2026-11-01T21:29:11+08:00'
 ---

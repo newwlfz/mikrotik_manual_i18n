@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/packing"
 sidebar_position: 15
 title: "packing"
+description: 'RouterOS directory reference for /ip/packing.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/packing
 captured_at: '2026-11-01T21:28:52+08:00'
 ---

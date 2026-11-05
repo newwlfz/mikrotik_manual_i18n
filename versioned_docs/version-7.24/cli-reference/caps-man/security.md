@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/caps-man/security"
 sidebar_position: 14
 title: "security"
+description: 'RouterOS directory reference for /caps-man/security.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/caps-man/security
 captured_at: '2026-11-01T21:26:23+08:00'
 ---

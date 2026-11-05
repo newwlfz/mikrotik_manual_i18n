@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/ups/index"
 sidebar_position: 2
 title: "ups"
+description: 'RouterOS directory reference for /system/ups.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/ups
 captured_at: '2026-11-01T21:30:11+08:00'
 ---

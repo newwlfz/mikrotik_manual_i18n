@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/quality-of-service"
 sidebar_position: 3
 title: "Quality of Service"
+description: 'This documentation introduces Quality of Service (QoS) features in MikroTik RouterOS for devices with Marvell Prestera switch chips, detailing QoS prioritization, traffic shaping, and congestion management. It covers...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/quality-of-service
 captured_at: '2026-11-04T11:27:19+08:00'
 ---

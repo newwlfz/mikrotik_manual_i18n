@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/filter/filter-wizard"
 sidebar_position: 5
 title: "filter-wizard"
+description: 'RouterOS command reference for /routing/filter/filter-wizard.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/filter/filter-wizard
 captured_at: '2026-11-01T21:29:30+08:00'
 ---

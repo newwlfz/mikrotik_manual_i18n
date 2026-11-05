@@ -2,7 +2,8 @@
   "docs": [
     {
       "type": "doc",
-      "id": "introduction"
+      "id": "introduction",
+      "label": "Introduction"
     },
     {
       "type": "category",
@@ -14,15 +15,18 @@
       "items": [
         {
           "type": "doc",
-          "id": "getting-started/first-time-configuration"
+          "id": "getting-started/first-time-configuration",
+          "label": "First Time Configuration"
         },
         {
           "type": "doc",
-          "id": "getting-started/manual-network-setup"
+          "id": "getting-started/manual-network-setup",
+          "label": "Manual Network Setup"
         },
         {
           "type": "doc",
-          "id": "getting-started/securing-your-router"
+          "id": "getting-started/securing-your-router",
+          "label": "Securing your router"
         },
         {
           "type": "category",
@@ -34,11 +38,13 @@
           "items": [
             {
               "type": "doc",
-              "id": "getting-started/networking-fundamentals/ipv6-addresses"
+              "id": "getting-started/networking-fundamentals/ipv6-addresses",
+              "label": "IPv6 Addresses"
             },
             {
               "type": "doc",
-              "id": "getting-started/networking-fundamentals/ipv6-neighbor-discovery"
+              "id": "getting-started/networking-fundamentals/ipv6-neighbor-discovery",
+              "label": "IPv6 Neighbor Discovery"
             }
           ]
         },
@@ -60,17 +66,20 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "getting-started/installation-and-upgrade/install/x86-installation"
+                  "id": "getting-started/installation-and-upgrade/install/x86-installation",
+                  "label": "x86 Installation"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "getting-started/installation-and-upgrade/upgrade"
+              "id": "getting-started/installation-and-upgrade/upgrade",
+              "label": "Upgrade"
             },
             {
               "type": "doc",
-              "id": "getting-started/installation-and-upgrade/upgrade-server"
+              "id": "getting-started/installation-and-upgrade/upgrade-server",
+              "label": "Upgrade Server"
             },
             {
               "type": "category",
@@ -82,25 +91,30 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "getting-started/installation-and-upgrade/netinstall/netinstall-windows"
+                  "id": "getting-started/installation-and-upgrade/netinstall/netinstall-windows",
+                  "label": "Netinstall for Windows"
                 },
                 {
                   "type": "doc",
-                  "id": "getting-started/installation-and-upgrade/netinstall/netinstall-linux"
+                  "id": "getting-started/installation-and-upgrade/netinstall/netinstall-linux",
+                  "label": "Netinstall for Linux"
                 },
                 {
                   "type": "doc",
-                  "id": "getting-started/installation-and-upgrade/netinstall/netinstall-package"
+                  "id": "getting-started/installation-and-upgrade/netinstall/netinstall-package",
+                  "label": "Netinstall package"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "getting-started/installation-and-upgrade/packages"
+              "id": "getting-started/installation-and-upgrade/packages",
+              "label": "Packages"
             },
             {
               "type": "doc",
-              "id": "getting-started/installation-and-upgrade/routerboot"
+              "id": "getting-started/installation-and-upgrade/routerboot",
+              "label": "RouterBOOT"
             }
           ]
         },
@@ -114,23 +128,28 @@
           "items": [
             {
               "type": "doc",
-              "id": "getting-started/configuration-management/backup"
+              "id": "getting-started/configuration-management/backup",
+              "label": "Backup"
             },
             {
               "type": "doc",
-              "id": "getting-started/configuration-management/default-configuration-passwords"
+              "id": "getting-started/configuration-management/default-configuration-passwords",
+              "label": "Default Configuration Passwords"
             },
             {
               "type": "doc",
-              "id": "getting-started/configuration-management/default-configurations"
+              "id": "getting-started/configuration-management/default-configurations",
+              "label": "Default configurations"
             },
             {
               "type": "doc",
-              "id": "getting-started/configuration-management/list-of-menus-with-sensitive-parameters"
+              "id": "getting-started/configuration-management/list-of-menus-with-sensitive-parameters",
+              "label": "List of menus with sensitive parameters"
             },
             {
               "type": "doc",
-              "id": "getting-started/configuration-management/routeros-configuration-reset"
+              "id": "getting-started/configuration-management/routeros-configuration-reset",
+              "label": "RouterOS configuration reset"
             }
           ]
         },
@@ -152,17 +171,20 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "getting-started/routeros-licensing/chr/chr-licensing"
+                  "id": "getting-started/routeros-licensing/chr/chr-licensing",
+                  "label": "CHR: Licensing"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "getting-started/routeros-licensing/mikrotik-hardware/index"
+              "id": "getting-started/routeros-licensing/mikrotik-hardware/index",
+              "label": "MikroTik Hardware Licensing"
             },
             {
               "type": "doc",
-              "id": "getting-started/routeros-licensing/x86/index"
+              "id": "getting-started/routeros-licensing/x86/index",
+              "label": "x86 Licensing"
             }
           ]
         },
@@ -176,17 +198,20 @@
           "items": [
             {
               "type": "doc",
-              "id": "getting-started/software-specifications/feature-support-based-on-architecture"
+              "id": "getting-started/software-specifications/feature-support-based-on-architecture",
+              "label": "Feature support based on architecture"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "getting-started/upgrading-to-v7"
+          "id": "getting-started/upgrading-to-v7",
+          "label": "Upgrading to v7"
         },
         {
           "type": "doc",
-          "id": "getting-started/supout-rif"
+          "id": "getting-started/supout-rif",
+          "label": "Supout.rif"
         }
       ]
     },
@@ -200,55 +225,68 @@
       "items": [
         {
           "type": "doc",
-          "id": "management-tools/webfig"
+          "id": "management-tools/webfig",
+          "label": "WebFig"
         },
         {
           "type": "doc",
-          "id": "management-tools/winbox"
+          "id": "management-tools/winbox",
+          "label": "WinBox"
         },
         {
           "type": "doc",
-          "id": "management-tools/mikrotik-mobile-app"
+          "id": "management-tools/mikrotik-mobile-app",
+          "label": "MikroTik mobile app"
         },
         {
           "type": "doc",
-          "id": "management-tools/console"
+          "id": "management-tools/console",
+          "label": "Console"
         },
         {
           "type": "doc",
-          "id": "management-tools/serial-console"
+          "id": "management-tools/serial-console",
+          "label": "Serial Console"
         },
         {
           "type": "doc",
-          "id": "management-tools/ssh"
+          "id": "management-tools/ssh",
+          "label": "SSH"
         },
         {
           "type": "doc",
-          "id": "management-tools/quick-set"
+          "id": "management-tools/quick-set",
+          "label": "Quick Set"
         },
         {
           "type": "doc",
-          "id": "management-tools/flashfig"
+          "id": "management-tools/flashfig",
+          "label": "FlashFig"
         },
         {
           "type": "doc",
-          "id": "management-tools/romon"
+          "id": "management-tools/romon",
+          "label": "RoMON"
         },
         {
           "type": "doc",
-          "id": "management-tools/mac-server"
+          "id": "management-tools/mac-server",
+          "label": "MAC server"
         },
         {
           "type": "doc",
-          "id": "management-tools/tr-069"
+          "id": "management-tools/tr-069",
+          "label": "TR-069"
         },
         {
           "type": "doc",
-          "id": "management-tools/dude"
+          "id": "management-tools/dude",
+          "label": "Dude"
         },
         {
           "type": "doc",
-          "id": "management-tools/branding"
+          "id": "management-tools/branding",
+          "label": "Branding"
         }
       ]
     },
@@ -262,75 +300,93 @@
       "items": [
         {
           "type": "doc",
-          "id": "system-information-and-utilities/clock"
+          "id": "system-information-and-utilities/clock",
+          "label": "Clock"
         },
         {
           "type": "doc",
-          "id": "system-information-and-utilities/device-mode"
+          "id": "system-information-and-utilities/device-mode",
+          "label": "Device-mode"
         },
         {
           "type": "doc",
-          "id": "system-information-and-utilities/e-mail"
+          "id": "system-information-and-utilities/e-mail",
+          "label": "E-mail"
         },
         {
           "type": "doc",
-          "id": "system-information-and-utilities/fetch"
+          "id": "system-information-and-utilities/fetch",
+          "label": "Fetch"
         },
         {
           "type": "doc",
-          "id": "system-information-and-utilities/files"
+          "id": "system-information-and-utilities/files",
+          "label": "Files"
         },
         {
           "type": "doc",
-          "id": "system-information-and-utilities/identity"
+          "id": "system-information-and-utilities/identity",
+          "label": "Identity"
         },
         {
           "type": "doc",
-          "id": "system-information-and-utilities/interface-lists"
+          "id": "system-information-and-utilities/interface-lists",
+          "label": "Interface Lists"
         },
         {
           "type": "doc",
-          "id": "system-information-and-utilities/ip-packing"
+          "id": "system-information-and-utilities/ip-packing",
+          "label": "IP packing"
         },
         {
           "type": "doc",
-          "id": "system-information-and-utilities/neighbor-discovery"
+          "id": "system-information-and-utilities/neighbor-discovery",
+          "label": "Neighbor discovery"
         },
         {
           "type": "doc",
-          "id": "system-information-and-utilities/note"
+          "id": "system-information-and-utilities/note",
+          "label": "Note"
         },
         {
           "type": "doc",
-          "id": "system-information-and-utilities/ntp"
+          "id": "system-information-and-utilities/ntp",
+          "label": "NTP"
         },
         {
           "type": "doc",
-          "id": "system-information-and-utilities/partitions"
+          "id": "system-information-and-utilities/partitions",
+          "label": "Partitions"
         },
         {
           "type": "doc",
-          "id": "system-information-and-utilities/precision-time-protocol"
+          "id": "system-information-and-utilities/precision-time-protocol",
+          "label": "Precision Time Protocol"
         },
         {
           "type": "doc",
-          "id": "system-information-and-utilities/scheduler"
+          "id": "system-information-and-utilities/scheduler",
+          "label": "Scheduler"
         },
         {
           "type": "doc",
-          "id": "system-information-and-utilities/services"
+          "id": "system-information-and-utilities/services",
+          "label": "Services"
         },
         {
           "type": "doc",
-          "id": "system-information-and-utilities/tftp"
+          "id": "system-information-and-utilities/tftp",
+          "label": "TFTP"
         },
         {
           "type": "doc",
-          "id": "system-information-and-utilities/ups"
+          "id": "system-information-and-utilities/ups",
+          "label": "UPS"
         },
         {
           "type": "doc",
-          "id": "system-information-and-utilities/wake-on-lan"
+          "id": "system-information-and-utilities/wake-on-lan",
+          "label": "Wake on LAN"
         }
       ]
     },
@@ -344,83 +400,103 @@
       "items": [
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/ping"
+          "id": "diagnostics-monitoring-and-troubleshooting/ping",
+          "label": "Ping"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/traceroute"
+          "id": "diagnostics-monitoring-and-troubleshooting/traceroute",
+          "label": "Traceroute"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/torch"
+          "id": "diagnostics-monitoring-and-troubleshooting/torch",
+          "label": "Torch"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/packet-sniffer"
+          "id": "diagnostics-monitoring-and-troubleshooting/packet-sniffer",
+          "label": "Packet Sniffer"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/bandwidth-test"
+          "id": "diagnostics-monitoring-and-troubleshooting/bandwidth-test",
+          "label": "Bandwidth Test"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/speed-test"
+          "id": "diagnostics-monitoring-and-troubleshooting/speed-test",
+          "label": "Speed Test"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/flood-ping"
+          "id": "diagnostics-monitoring-and-troubleshooting/flood-ping",
+          "label": "Flood Ping"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/interface-stats-and-monitor-traffic"
+          "id": "diagnostics-monitoring-and-troubleshooting/interface-stats-and-monitor-traffic",
+          "label": "Interface stats and monitor-traffic"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/traffic-generator"
+          "id": "diagnostics-monitoring-and-troubleshooting/traffic-generator",
+          "label": "Traffic Generator"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/netwatch"
+          "id": "diagnostics-monitoring-and-troubleshooting/netwatch",
+          "label": "Netwatch"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/graphing"
+          "id": "diagnostics-monitoring-and-troubleshooting/graphing",
+          "label": "Graphing"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/snmp"
+          "id": "diagnostics-monitoring-and-troubleshooting/snmp",
+          "label": "SNMP"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/health"
+          "id": "diagnostics-monitoring-and-troubleshooting/health",
+          "label": "Health"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/resource"
+          "id": "diagnostics-monitoring-and-troubleshooting/resource",
+          "label": "Resource"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/profiler"
+          "id": "diagnostics-monitoring-and-troubleshooting/profiler",
+          "label": "Profiler"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/ip-scan"
+          "id": "diagnostics-monitoring-and-troubleshooting/ip-scan",
+          "label": "IP Scan"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/detect-internet"
+          "id": "diagnostics-monitoring-and-troubleshooting/detect-internet",
+          "label": "Detect Internet"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/dynamic-dns"
+          "id": "diagnostics-monitoring-and-troubleshooting/dynamic-dns",
+          "label": "Dynamic DNS"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/watchdog"
+          "id": "diagnostics-monitoring-and-troubleshooting/watchdog",
+          "label": "Watchdog"
         },
         {
           "type": "doc",
-          "id": "diagnostics-monitoring-and-troubleshooting/downgrading-routeros"
+          "id": "diagnostics-monitoring-and-troubleshooting/downgrading-routeros",
+          "label": "Downgrading RouterOS"
         },
         {
           "type": "category",
@@ -432,11 +508,13 @@
           "items": [
             {
               "type": "doc",
-              "id": "diagnostics-monitoring-and-troubleshooting/log/cef-with-elasticsearch"
+              "id": "diagnostics-monitoring-and-troubleshooting/log/cef-with-elasticsearch",
+              "label": "CEF with Elasticsearch"
             },
             {
               "type": "doc",
-              "id": "diagnostics-monitoring-and-troubleshooting/log/syslog-with-elasticsearch"
+              "id": "diagnostics-monitoring-and-troubleshooting/log/syslog-with-elasticsearch",
+              "label": "Syslog with Elasticsearch"
             }
           ]
         },
@@ -450,7 +528,8 @@
           "items": [
             {
               "type": "doc",
-              "id": "diagnostics-monitoring-and-troubleshooting/traffic-flow/netflow-analysis-with-elasticsearch"
+              "id": "diagnostics-monitoring-and-troubleshooting/traffic-flow/netflow-analysis-with-elasticsearch",
+              "label": "NetFlow analysis with Elasticsearch"
             }
           ]
         }
@@ -474,57 +553,70 @@
           "items": [
             {
               "type": "doc",
-              "id": "hardware/disks/smart"
+              "id": "hardware/disks/smart",
+              "label": "S.M.A.R.T. info"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "hardware/grounding"
+          "id": "hardware/grounding",
+          "label": "Grounding"
         },
         {
           "type": "doc",
-          "id": "hardware/lcd-touchscreen"
+          "id": "hardware/lcd-touchscreen",
+          "label": "LCD Touchscreen"
         },
         {
           "type": "doc",
-          "id": "hardware/leds"
+          "id": "hardware/leds",
+          "label": "LEDs"
         },
         {
           "type": "doc",
-          "id": "hardware/mtu-in-routeros"
+          "id": "hardware/mtu-in-routeros",
+          "label": "MTU in RouterOS"
         },
         {
           "type": "doc",
-          "id": "hardware/peripherals"
+          "id": "hardware/peripherals",
+          "label": "Peripherals"
         },
         {
           "type": "doc",
-          "id": "hardware/poe-out"
+          "id": "hardware/poe-out",
+          "label": "PoE"
         },
         {
           "type": "doc",
-          "id": "hardware/ports"
+          "id": "hardware/ports",
+          "label": "Ports"
         },
         {
           "type": "doc",
-          "id": "hardware/product-naming"
+          "id": "hardware/product-naming",
+          "label": "Product Naming"
         },
         {
           "type": "doc",
-          "id": "hardware/routerboard"
+          "id": "hardware/routerboard",
+          "label": "RouterBOARD"
         },
         {
           "type": "doc",
-          "id": "hardware/s-plus-rj10-general-guidance"
+          "id": "hardware/s-plus-rj10-general-guidance",
+          "label": "S+RJ10 general guidance"
         },
         {
           "type": "doc",
-          "id": "hardware/try-before-rma"
+          "id": "hardware/try-before-rma",
+          "label": "Try Before RMA"
         },
         {
           "type": "doc",
-          "id": "hardware/usb-features"
+          "id": "hardware/usb-features",
+          "label": "USB Features"
         }
       ]
     },
@@ -538,15 +630,18 @@
       "items": [
         {
           "type": "doc",
-          "id": "wired-connections/ethernet"
+          "id": "wired-connections/ethernet",
+          "label": "Ethernet"
         },
         {
           "type": "doc",
-          "id": "wired-connections/mikrotik-wired-interface-compatibility"
+          "id": "wired-connections/mikrotik-wired-interface-compatibility",
+          "label": "MikroTik wired interface compatibility"
         },
         {
           "type": "doc",
-          "id": "wired-connections/pwr-line"
+          "id": "wired-connections/pwr-line",
+          "label": "PWR Line"
         }
       ]
     },
@@ -568,29 +663,35 @@
           "items": [
             {
               "type": "doc",
-              "id": "wireless/wifi/capsman"
+              "id": "wireless/wifi/capsman",
+              "label": "WiFi CAPsMAN"
             },
             {
               "type": "doc",
-              "id": "wireless/wifi/configuring-outdoor-cpe-to-ap-links"
+              "id": "wireless/wifi/configuring-outdoor-cpe-to-ap-links",
+              "label": "Configuring outdoor CPE to AP links"
             },
             {
               "type": "doc",
-              "id": "wireless/wifi/configuring-repeater"
+              "id": "wireless/wifi/configuring-repeater",
+              "label": "Configuring a wireless repeater"
             },
             {
               "type": "doc",
-              "id": "wireless/wifi/configuring-standalone-access-point"
+              "id": "wireless/wifi/configuring-standalone-access-point",
+              "label": "Configuring standalone access point"
             },
             {
               "type": "doc",
-              "id": "wireless/wifi/interworking-for-wifi6"
+              "id": "wireless/wifi/interworking-for-wifi6",
+              "label": "Interworking for WiFi6"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "wireless/wifi-ac/index"
+          "id": "wireless/wifi-ac/index",
+          "label": "Wi-Fi 5 (802.11ac)"
         },
         {
           "type": "category",
@@ -610,41 +711,50 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "wireless/abgn/capsman/ap-controller-capsman"
+                  "id": "wireless/abgn/capsman/ap-controller-capsman",
+                  "label": "AP Controller (CAPsMAN)"
                 },
                 {
                   "type": "doc",
-                  "id": "wireless/abgn/capsman/capsman-with-vlans"
+                  "id": "wireless/abgn/capsman/capsman-with-vlans",
+                  "label": "CAPsMAN with VLANs"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "wireless/abgn/hwmpplus-mesh"
+              "id": "wireless/abgn/hwmpplus-mesh",
+              "label": "HWMPplus mesh"
             },
             {
               "type": "doc",
-              "id": "wireless/abgn/interworking-profiles"
+              "id": "wireless/abgn/interworking-profiles",
+              "label": "Interworking Profiles"
             },
             {
               "type": "doc",
-              "id": "wireless/abgn/nv2"
+              "id": "wireless/abgn/nv2",
+              "label": "Nv2"
             },
             {
               "type": "doc",
-              "id": "wireless/abgn/spectral-scan"
+              "id": "wireless/abgn/spectral-scan",
+              "label": "Spectral scan"
             },
             {
               "type": "doc",
-              "id": "wireless/abgn/vlans-on-wireless"
+              "id": "wireless/abgn/vlans-on-wireless",
+              "label": "VLANs on Wireless"
             },
             {
               "type": "doc",
-              "id": "wireless/abgn/wireless-interface"
+              "id": "wireless/abgn/wireless-interface",
+              "label": "Wireless Interface"
             },
             {
               "type": "doc",
-              "id": "wireless/abgn/wireless-troubleshooting"
+              "id": "wireless/abgn/wireless-troubleshooting",
+              "label": "Wireless Troubleshooting"
             }
           ]
         },
@@ -658,27 +768,33 @@
           "items": [
             {
               "type": "doc",
-              "id": "wireless/w60g/distance-guide"
+              "id": "wireless/w60g/distance-guide",
+              "label": "Distance guide"
             },
             {
               "type": "doc",
-              "id": "wireless/w60g/fail-over-ptmp-cli-example"
+              "id": "wireless/w60g/fail-over-ptmp-cli-example",
+              "label": "Fail-over PtMP CLI example"
             },
             {
               "type": "doc",
-              "id": "wireless/w60g/fail-over-ptp-cli-example"
+              "id": "wireless/w60g/fail-over-ptp-cli-example",
+              "label": "Fail-over PtP CLI example"
             },
             {
               "type": "doc",
-              "id": "wireless/w60g/fail-over-ptp-gui-example"
+              "id": "wireless/w60g/fail-over-ptp-gui-example",
+              "label": "Fail-over PtP GUI example"
             },
             {
               "type": "doc",
-              "id": "wireless/w60g/ptp-cli-example"
+              "id": "wireless/w60g/ptp-cli-example",
+              "label": "PtP CLI example"
             },
             {
               "type": "doc",
-              "id": "wireless/w60g/ptp-gui-example"
+              "id": "wireless/w60g/ptp-gui-example",
+              "label": "PtP GUI example"
             }
           ]
         },
@@ -692,11 +808,13 @@
           "items": [
             {
               "type": "doc",
-              "id": "wireless/user-guides/enterprise-wireless-security-user"
+              "id": "wireless/user-guides/enterprise-wireless-security-user",
+              "label": "Enterprise wireless security with User Manager v5"
             },
             {
               "type": "doc",
-              "id": "wireless/user-guides/wireless-station-modes"
+              "id": "wireless/user-guides/wireless-station-modes",
+              "label": "Wireless Station Modes"
             }
           ]
         }
@@ -712,7 +830,8 @@
       "items": [
         {
           "type": "doc",
-          "id": "mobile-networking/lte-5g"
+          "id": "mobile-networking/lte-5g",
+          "label": "LTE/5G"
         },
         {
           "type": "category",
@@ -724,25 +843,30 @@
           "items": [
             {
               "type": "doc",
-              "id": "mobile-networking/gps/gps-tracking-using-http-post"
+              "id": "mobile-networking/gps/gps-tracking-using-http-post",
+              "label": "GPS-tracking using HTTP POST"
             },
             {
               "type": "doc",
-              "id": "mobile-networking/gps/gps-tracking-using-mqtt-and-thingsboard"
+              "id": "mobile-networking/gps/gps-tracking-using-mqtt-and-thingsboard",
+              "label": "GPS-tracking using MQTT and ThingsBoard"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "mobile-networking/mikrotik-connectivity"
+          "id": "mobile-networking/mikrotik-connectivity",
+          "label": "MikroTik Connectivity"
         },
         {
           "type": "doc",
-          "id": "mobile-networking/sms"
+          "id": "mobile-networking/sms",
+          "label": "SMS"
         },
         {
           "type": "doc",
-          "id": "mobile-networking/ppp"
+          "id": "mobile-networking/ppp",
+          "label": "PPP"
         },
         {
           "type": "category",
@@ -754,7 +878,8 @@
           "items": [
             {
               "type": "doc",
-              "id": "mobile-networking/dual-sim-application"
+              "id": "mobile-networking/dual-sim-application",
+              "label": "Dual SIM Application"
             }
           ]
         }
@@ -770,39 +895,48 @@
       "items": [
         {
           "type": "doc",
-          "id": "bridging-and-switching/marvell-prestera-switch-chip-features"
+          "id": "bridging-and-switching/marvell-prestera-switch-chip-features",
+          "label": "Marvell Prestera switch chip features"
         },
         {
           "type": "doc",
-          "id": "bridging-and-switching/l3-hardware-offloading"
+          "id": "bridging-and-switching/l3-hardware-offloading",
+          "label": "L3 Hardware Offloading"
         },
         {
           "type": "doc",
-          "id": "bridging-and-switching/quality-of-service"
+          "id": "bridging-and-switching/quality-of-service",
+          "label": "Quality of Service"
         },
         {
           "type": "doc",
-          "id": "bridging-and-switching/macsec"
+          "id": "bridging-and-switching/macsec",
+          "label": "MACsec"
         },
         {
           "type": "doc",
-          "id": "bridging-and-switching/macvlan"
+          "id": "bridging-and-switching/macvlan",
+          "label": "MACVLAN"
         },
         {
           "type": "doc",
-          "id": "bridging-and-switching/vxlan"
+          "id": "bridging-and-switching/vxlan",
+          "label": "VXLAN"
         },
         {
           "type": "doc",
-          "id": "bridging-and-switching/switch-chip-features"
+          "id": "bridging-and-switching/switch-chip-features",
+          "label": "Other Switch Chip Features"
         },
         {
           "type": "doc",
-          "id": "bridging-and-switching/crs1xx-and-2xx-series-switches"
+          "id": "bridging-and-switching/crs1xx-and-2xx-series-switches",
+          "label": "CRS1xx and 2xx series switches"
         },
         {
           "type": "doc",
-          "id": "bridging-and-switching/vlan"
+          "id": "bridging-and-switching/vlan",
+          "label": "VLAN"
         },
         {
           "type": "category",
@@ -814,23 +948,28 @@
           "items": [
             {
               "type": "doc",
-              "id": "bridging-and-switching/swos/crs3"
+              "id": "bridging-and-switching/swos/crs3",
+              "label": "CRS3xx and CSS3xx Series Manual"
             },
             {
               "type": "doc",
-              "id": "bridging-and-switching/swos/css106"
+              "id": "bridging-and-switching/swos/css106",
+              "label": "CSS106 (RB260) series Manual"
             },
             {
               "type": "doc",
-              "id": "bridging-and-switching/swos/css610"
+              "id": "bridging-and-switching/swos/css610",
+              "label": "CSS610 series Manual"
             },
             {
               "type": "doc",
-              "id": "bridging-and-switching/swos/gpen21"
+              "id": "bridging-and-switching/swos/gpen21",
+              "label": "GPEN21 series Manual"
             },
             {
               "type": "doc",
-              "id": "bridging-and-switching/swos/troubleshooting"
+              "id": "bridging-and-switching/swos/troubleshooting",
+              "label": "Cannot upgrade SwOS"
             }
           ]
         },
@@ -844,43 +983,53 @@
           "items": [
             {
               "type": "doc",
-              "id": "bridging-and-switching/user-guides/basic-vlan-switching"
+              "id": "bridging-and-switching/user-guides/basic-vlan-switching",
+              "label": "Basic VLAN switching"
             },
             {
               "type": "doc",
-              "id": "bridging-and-switching/user-guides/bridge-igmp-mld-snooping"
+              "id": "bridging-and-switching/user-guides/bridge-igmp-mld-snooping",
+              "label": "Bridge IGMP/MLD snooping"
             },
             {
               "type": "doc",
-              "id": "bridging-and-switching/user-guides/bridge-vlan-table"
+              "id": "bridging-and-switching/user-guides/bridge-vlan-table",
+              "label": "Bridge VLAN Table"
             },
             {
               "type": "doc",
-              "id": "bridging-and-switching/user-guides/controller-bridge-and-port-extender"
+              "id": "bridging-and-switching/user-guides/controller-bridge-and-port-extender",
+              "label": "Controller Bridge and Port Extender"
             },
             {
               "type": "doc",
-              "id": "bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples"
+              "id": "bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples",
+              "label": "CRS1xx/2xx series switches examples"
             },
             {
               "type": "doc",
-              "id": "bridging-and-switching/user-guides/layer2-misconfiguration"
+              "id": "bridging-and-switching/user-guides/layer2-misconfiguration",
+              "label": "Layer2 misconfiguration"
             },
             {
               "type": "doc",
-              "id": "bridging-and-switching/user-guides/loop-protect"
+              "id": "bridging-and-switching/user-guides/loop-protect",
+              "label": "Loop Protect"
             },
             {
               "type": "doc",
-              "id": "bridging-and-switching/user-guides/spanning-tree-protocol"
+              "id": "bridging-and-switching/user-guides/spanning-tree-protocol",
+              "label": "Spanning Tree Protocol"
             },
             {
               "type": "doc",
-              "id": "bridging-and-switching/user-guides/wireless-vlan-trunk"
+              "id": "bridging-and-switching/user-guides/wireless-vlan-trunk",
+              "label": "Wireless VLAN Trunk"
             },
             {
               "type": "doc",
-              "id": "bridging-and-switching/user-guides/wmm-and-vlan-priority"
+              "id": "bridging-and-switching/user-guides/wmm-and-vlan-priority",
+              "label": "WMM and VLAN priority"
             }
           ]
         }
@@ -896,7 +1045,8 @@
       "items": [
         {
           "type": "doc",
-          "id": "network-management/arp"
+          "id": "network-management/arp",
+          "label": "ARP"
         },
         {
           "type": "category",
@@ -908,29 +1058,35 @@
           "items": [
             {
               "type": "doc",
-              "id": "network-management/cloud/back-to-home"
+              "id": "network-management/cloud/back-to-home",
+              "label": "Back To Home"
             },
             {
               "type": "doc",
-              "id": "network-management/cloud/communication-mikrotik-cloud-servers"
+              "id": "network-management/cloud/communication-mikrotik-cloud-servers",
+              "label": "Communication with MikroTik Cloud Services"
             },
             {
               "type": "doc",
-              "id": "network-management/cloud/file-share"
+              "id": "network-management/cloud/file-share",
+              "label": "File share"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "network-management/dhcp"
+          "id": "network-management/dhcp",
+          "label": "DHCP"
         },
         {
           "type": "doc",
-          "id": "network-management/dns"
+          "id": "network-management/dns",
+          "label": "DNS"
         },
         {
           "type": "doc",
-          "id": "network-management/openflow"
+          "id": "network-management/openflow",
+          "label": "Openflow"
         },
         {
           "type": "category",
@@ -942,7 +1098,8 @@
           "items": [
             {
               "type": "doc",
-              "id": "network-management/proxy/reverse-proxy"
+              "id": "network-management/proxy/reverse-proxy",
+              "label": "Reverse Proxy"
             }
           ]
         },
@@ -956,7 +1113,8 @@
           "items": [
             {
               "type": "doc",
-              "id": "network-management/socks/socksify"
+              "id": "network-management/socks/socksify",
+              "label": "Socksify"
             }
           ]
         }
@@ -972,23 +1130,28 @@
       "items": [
         {
           "type": "doc",
-          "id": "user-guides/routing-and-networking-protocols/routing-decision"
+          "id": "user-guides/routing-and-networking-protocols/routing-decision",
+          "label": "Routing Decision"
         },
         {
           "type": "doc",
-          "id": "user-guides/routing-and-networking-protocols/moving-from-rosv6-to-rosv7"
+          "id": "user-guides/routing-and-networking-protocols/moving-from-rosv6-to-rosv7",
+          "label": "Moving from ROSv6 to ROSv7"
         },
         {
           "type": "doc",
-          "id": "user-guides/routing-and-networking-protocols/routing-protocol-multi-core-support"
+          "id": "user-guides/routing-and-networking-protocols/routing-protocol-multi-core-support",
+          "label": "Routing Protocol Multi-core Support"
         },
         {
           "type": "doc",
-          "id": "user-guides/routing-and-networking-protocols/policy-routing"
+          "id": "user-guides/routing-and-networking-protocols/policy-routing",
+          "label": "Policy Routing"
         },
         {
           "type": "doc",
-          "id": "user-guides/routing-and-networking-protocols/vrf"
+          "id": "user-guides/routing-and-networking-protocols/vrf",
+          "label": "VRF"
         },
         {
           "type": "category",
@@ -1000,7 +1163,8 @@
           "items": [
             {
               "type": "doc",
-              "id": "user-guides/routing-and-networking-protocols/unicast/bfd"
+              "id": "user-guides/routing-and-networking-protocols/unicast/bfd",
+              "label": "BFD"
             },
             {
               "type": "category",
@@ -1012,29 +1176,35 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "user-guides/routing-and-networking-protocols/unicast/bgp/understanding-bgp"
+                  "id": "user-guides/routing-and-networking-protocols/unicast/bgp/understanding-bgp",
+                  "label": "Understanding BGP"
                 },
                 {
                   "type": "doc",
-                  "id": "user-guides/routing-and-networking-protocols/unicast/bgp/peering-sessions"
+                  "id": "user-guides/routing-and-networking-protocols/unicast/bgp/peering-sessions",
+                  "label": "Peering Sessions"
                 },
                 {
                   "type": "doc",
-                  "id": "user-guides/routing-and-networking-protocols/unicast/bgp/nexthop-selection"
+                  "id": "user-guides/routing-and-networking-protocols/unicast/bgp/nexthop-selection",
+                  "label": "Nexthop Selection"
                 },
                 {
                   "type": "doc",
-                  "id": "user-guides/routing-and-networking-protocols/unicast/bgp/faq"
+                  "id": "user-guides/routing-and-networking-protocols/unicast/bgp/faq",
+                  "label": "FAQ"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "user-guides/routing-and-networking-protocols/unicast/evpn"
+              "id": "user-guides/routing-and-networking-protocols/unicast/evpn",
+              "label": "EVPN"
             },
             {
               "type": "doc",
-              "id": "user-guides/routing-and-networking-protocols/unicast/is-is"
+              "id": "user-guides/routing-and-networking-protocols/unicast/is-is",
+              "label": "IS-IS"
             },
             {
               "type": "category",
@@ -1046,33 +1216,40 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "user-guides/routing-and-networking-protocols/unicast/ospf/understanding-ospf"
+                  "id": "user-guides/routing-and-networking-protocols/unicast/ospf/understanding-ospf",
+                  "label": "Understanding OSPF"
                 },
                 {
                   "type": "doc",
-                  "id": "user-guides/routing-and-networking-protocols/unicast/ospf/neighbour-relationship"
+                  "id": "user-guides/routing-and-networking-protocols/unicast/ospf/neighbour-relationship",
+                  "label": "Neighbor Relationship"
                 },
                 {
                   "type": "doc",
-                  "id": "user-guides/routing-and-networking-protocols/unicast/ospf/routing-calculation"
+                  "id": "user-guides/routing-and-networking-protocols/unicast/ospf/routing-calculation",
+                  "label": "Routing Table Calculation"
                 },
                 {
                   "type": "doc",
-                  "id": "user-guides/routing-and-networking-protocols/unicast/ospf/areas-and-virtual-links"
+                  "id": "user-guides/routing-and-networking-protocols/unicast/ospf/areas-and-virtual-links",
+                  "label": "Areas and Virtual Links"
                 },
                 {
                   "type": "doc",
-                  "id": "user-guides/routing-and-networking-protocols/unicast/ospf/faq"
+                  "id": "user-guides/routing-and-networking-protocols/unicast/ospf/faq",
+                  "label": "FAQ"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "user-guides/routing-and-networking-protocols/unicast/rip"
+              "id": "user-guides/routing-and-networking-protocols/unicast/rip",
+              "label": "RIP"
             },
             {
               "type": "doc",
-              "id": "user-guides/routing-and-networking-protocols/unicast/rpki"
+              "id": "user-guides/routing-and-networking-protocols/unicast/rpki",
+              "label": "RPKI"
             }
           ]
         },
@@ -1086,15 +1263,18 @@
           "items": [
             {
               "type": "doc",
-              "id": "user-guides/routing-and-networking-protocols/mpls/exp-bit-and-mpls-queuing"
+              "id": "user-guides/routing-and-networking-protocols/mpls/exp-bit-and-mpls-queuing",
+              "label": "EXP bit and MPLS Queuing"
             },
             {
               "type": "doc",
-              "id": "user-guides/routing-and-networking-protocols/mpls/ldp"
+              "id": "user-guides/routing-and-networking-protocols/mpls/ldp",
+              "label": "LDP"
             },
             {
               "type": "doc",
-              "id": "user-guides/routing-and-networking-protocols/mpls/traffic-eng"
+              "id": "user-guides/routing-and-networking-protocols/mpls/traffic-eng",
+              "label": "Traffic Eng"
             },
             {
               "type": "category",
@@ -1106,7 +1286,8 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "user-guides/routing-and-networking-protocols/mpls/vpls/control-word"
+                  "id": "user-guides/routing-and-networking-protocols/mpls/vpls/control-word",
+                  "label": "Control Word"
                 }
               ]
             }
@@ -1122,25 +1303,30 @@
           "items": [
             {
               "type": "doc",
-              "id": "user-guides/routing-and-networking-protocols/multicast/group-management-protocol"
+              "id": "user-guides/routing-and-networking-protocols/multicast/group-management-protocol",
+              "label": "Group Management Protocol"
             },
             {
               "type": "doc",
-              "id": "user-guides/routing-and-networking-protocols/multicast/igmp-proxy"
+              "id": "user-guides/routing-and-networking-protocols/multicast/igmp-proxy",
+              "label": "IGMP Proxy"
             },
             {
               "type": "doc",
-              "id": "user-guides/routing-and-networking-protocols/multicast/pim-sm"
+              "id": "user-guides/routing-and-networking-protocols/multicast/pim-sm",
+              "label": "PIM-SM"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "user-guides/routing-and-networking-protocols/route-distinguisher-and-route-target"
+          "id": "user-guides/routing-and-networking-protocols/route-distinguisher-and-route-target",
+          "label": "Route Distinguisher and Route Target"
         },
         {
           "type": "doc",
-          "id": "user-guides/routing-and-networking-protocols/route-selection-and-filtering"
+          "id": "user-guides/routing-and-networking-protocols/route-selection-and-filtering",
+          "label": "Route Selection and Filtering"
         }
       ]
     },
@@ -1162,37 +1348,45 @@
           "items": [
             {
               "type": "doc",
-              "id": "firewall-and-quality-of-service/firewall/address-lists"
+              "id": "firewall-and-quality-of-service/firewall/address-lists",
+              "label": "Address-lists"
             },
             {
               "type": "doc",
-              "id": "firewall-and-quality-of-service/firewall/common-firewall-matchers-and-actions"
+              "id": "firewall-and-quality-of-service/firewall/common-firewall-matchers-and-actions",
+              "label": "Common Firewall Matchers and Actions"
             },
             {
               "type": "doc",
-              "id": "firewall-and-quality-of-service/firewall/filter"
+              "id": "firewall-and-quality-of-service/firewall/filter",
+              "label": "Filter"
             },
             {
               "type": "doc",
-              "id": "firewall-and-quality-of-service/firewall/layer7"
+              "id": "firewall-and-quality-of-service/firewall/layer7",
+              "label": "Layer7"
             },
             {
               "type": "doc",
-              "id": "firewall-and-quality-of-service/firewall/mangle"
+              "id": "firewall-and-quality-of-service/firewall/mangle",
+              "label": "Mangle"
             },
             {
               "type": "doc",
-              "id": "firewall-and-quality-of-service/firewall/nat"
+              "id": "firewall-and-quality-of-service/firewall/nat",
+              "label": "NAT"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "firewall-and-quality-of-service/packet-flow-in-routeros"
+          "id": "firewall-and-quality-of-service/packet-flow-in-routeros",
+          "label": "Packet Flow in RouterOS"
         },
         {
           "type": "doc",
-          "id": "firewall-and-quality-of-service/connection-tracking"
+          "id": "firewall-and-quality-of-service/connection-tracking",
+          "label": "Connection tracking"
         },
         {
           "type": "category",
@@ -1204,19 +1398,23 @@
           "items": [
             {
               "type": "doc",
-              "id": "firewall-and-quality-of-service/queues/htb-hierarchical-token-bucket"
+              "id": "firewall-and-quality-of-service/queues/htb-hierarchical-token-bucket",
+              "label": "HTB (Hierarchical Token Bucket)"
             },
             {
               "type": "doc",
-              "id": "firewall-and-quality-of-service/queues/pcq-example"
+              "id": "firewall-and-quality-of-service/queues/pcq-example",
+              "label": "PCQ example"
             },
             {
               "type": "doc",
-              "id": "firewall-and-quality-of-service/queues/queue-burst"
+              "id": "firewall-and-quality-of-service/queues/queue-burst",
+              "label": "Queue Burst"
             },
             {
               "type": "doc",
-              "id": "firewall-and-quality-of-service/queues/queue-size"
+              "id": "firewall-and-quality-of-service/queues/queue-size",
+              "label": "Queue size"
             },
             {
               "type": "category",
@@ -1228,11 +1426,13 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "firewall-and-quality-of-service/queues/queue-types/cake"
+                  "id": "firewall-and-quality-of-service/queues/queue-types/cake",
+                  "label": "CAKE"
                 },
                 {
                   "type": "doc",
-                  "id": "firewall-and-quality-of-service/queues/queue-types/pfifo-bfifo"
+                  "id": "firewall-and-quality-of-service/queues/queue-types/pfifo-bfifo",
+                  "label": "PFIFO,BFIFO"
                 }
               ]
             }
@@ -1240,15 +1440,18 @@
         },
         {
           "type": "doc",
-          "id": "firewall-and-quality-of-service/kid-control"
+          "id": "firewall-and-quality-of-service/kid-control",
+          "label": "Kid Control"
         },
         {
           "type": "doc",
-          "id": "firewall-and-quality-of-service/nat-pmp"
+          "id": "firewall-and-quality-of-service/nat-pmp",
+          "label": "NAT-PMP"
         },
         {
           "type": "doc",
-          "id": "firewall-and-quality-of-service/upnp"
+          "id": "firewall-and-quality-of-service/upnp",
+          "label": "UPnP"
         },
         {
           "type": "category",
@@ -1260,23 +1463,28 @@
           "items": [
             {
               "type": "doc",
-              "id": "firewall-and-quality-of-service/user-guides/bruteforce-prevention"
+              "id": "firewall-and-quality-of-service/user-guides/bruteforce-prevention",
+              "label": "Bruteforce prevention"
             },
             {
               "type": "doc",
-              "id": "firewall-and-quality-of-service/user-guides/building-advanced-firewall"
+              "id": "firewall-and-quality-of-service/user-guides/building-advanced-firewall",
+              "label": "Building Advanced Firewall"
             },
             {
               "type": "doc",
-              "id": "firewall-and-quality-of-service/user-guides/connection-rate"
+              "id": "firewall-and-quality-of-service/user-guides/connection-rate",
+              "label": "Connection rate"
             },
             {
               "type": "doc",
-              "id": "firewall-and-quality-of-service/user-guides/ddos-protection"
+              "id": "firewall-and-quality-of-service/user-guides/ddos-protection",
+              "label": "DDoS Protection"
             },
             {
               "type": "doc",
-              "id": "firewall-and-quality-of-service/user-guides/port-knocking"
+              "id": "firewall-and-quality-of-service/user-guides/port-knocking",
+              "label": "Port knocking"
             }
           ]
         }
@@ -1292,19 +1500,23 @@
       "items": [
         {
           "type": "doc",
-          "id": "virtual-private-networks/6to4"
+          "id": "virtual-private-networks/6to4",
+          "label": "6to4"
         },
         {
           "type": "doc",
-          "id": "virtual-private-networks/eoip"
+          "id": "virtual-private-networks/eoip",
+          "label": "EoIP"
         },
         {
           "type": "doc",
-          "id": "virtual-private-networks/gre"
+          "id": "virtual-private-networks/gre",
+          "label": "GRE"
         },
         {
           "type": "doc",
-          "id": "virtual-private-networks/ipip"
+          "id": "virtual-private-networks/ipip",
+          "label": "IPIP"
         },
         {
           "type": "category",
@@ -1316,11 +1528,13 @@
           "items": [
             {
               "type": "doc",
-              "id": "virtual-private-networks/ipsec/ikev2-eap-between-nordvpn-and-routeros"
+              "id": "virtual-private-networks/ipsec/ikev2-eap-between-nordvpn-and-routeros",
+              "label": "IKEv2 EAP between NordVPN and RouterOS"
             },
             {
               "type": "doc",
-              "id": "virtual-private-networks/ipsec/qkd-integration-in-routeros-ipsec-ppk"
+              "id": "virtual-private-networks/ipsec/qkd-integration-in-routeros-ipsec-ppk",
+              "label": "QKD Integration in RouterOS IPsec (PPK)"
             }
           ]
         },
@@ -1334,13 +1548,15 @@
           "items": [
             {
               "type": "doc",
-              "id": "virtual-private-networks/l2tp/lac-and-lns-setup-with-cisco-as-lac"
+              "id": "virtual-private-networks/l2tp/lac-and-lns-setup-with-cisco-as-lac",
+              "label": "LAC and LNS setup with Cisco as LAC"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "virtual-private-networks/openvpn"
+          "id": "virtual-private-networks/openvpn",
+          "label": "OpenVPN"
         },
         {
           "type": "category",
@@ -1352,29 +1568,35 @@
           "items": [
             {
               "type": "doc",
-              "id": "virtual-private-networks/pppoe/ipv6-pd-over-ppp"
+              "id": "virtual-private-networks/pppoe/ipv6-pd-over-ppp",
+              "label": "IPv6 PD over PPP"
             },
             {
               "type": "doc",
-              "id": "virtual-private-networks/pppoe/mlppp-over-single-and-multiple-links"
+              "id": "virtual-private-networks/pppoe/mlppp-over-single-and-multiple-links",
+              "label": "MLPPP over single and multiple links"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "virtual-private-networks/pptp"
+          "id": "virtual-private-networks/pptp",
+          "label": "PPTP"
         },
         {
           "type": "doc",
-          "id": "virtual-private-networks/sstp"
+          "id": "virtual-private-networks/sstp",
+          "label": "SSTP"
         },
         {
           "type": "doc",
-          "id": "virtual-private-networks/wireguard"
+          "id": "virtual-private-networks/wireguard",
+          "label": "WireGuard"
         },
         {
           "type": "doc",
-          "id": "virtual-private-networks/zerotier"
+          "id": "virtual-private-networks/zerotier",
+          "label": "ZeroTier"
         }
       ]
     },
@@ -1388,11 +1610,13 @@
       "items": [
         {
           "type": "doc",
-          "id": "authentication-authorization-accounting/certificates"
+          "id": "authentication-authorization-accounting/certificates",
+          "label": "Certificates"
         },
         {
           "type": "doc",
-          "id": "authentication-authorization-accounting/dot1x"
+          "id": "authentication-authorization-accounting/dot1x",
+          "label": "Dot1X"
         },
         {
           "type": "category",
@@ -1404,25 +1628,30 @@
           "items": [
             {
               "type": "doc",
-              "id": "authentication-authorization-accounting/hotspot-captive-portal/hotspot-customisation"
+              "id": "authentication-authorization-accounting/hotspot-captive-portal/hotspot-customisation",
+              "label": "Hotspot customisation"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "authentication-authorization-accounting/ppp-aaa"
+          "id": "authentication-authorization-accounting/ppp-aaa",
+          "label": "PPP AAA"
         },
         {
           "type": "doc",
-          "id": "authentication-authorization-accounting/radius"
+          "id": "authentication-authorization-accounting/radius",
+          "label": "RADIUS"
         },
         {
           "type": "doc",
-          "id": "authentication-authorization-accounting/user-manager"
+          "id": "authentication-authorization-accounting/user-manager",
+          "label": "User Manager"
         },
         {
           "type": "doc",
-          "id": "authentication-authorization-accounting/user"
+          "id": "authentication-authorization-accounting/user",
+          "label": "User"
         }
       ]
     },
@@ -1436,7 +1665,8 @@
       "items": [
         {
           "type": "doc",
-          "id": "high-availability-solutions/bonding"
+          "id": "high-availability-solutions/bonding",
+          "label": "Bonding"
         },
         {
           "type": "category",
@@ -1448,17 +1678,20 @@
           "items": [
             {
               "type": "doc",
-              "id": "high-availability-solutions/load-balancing/failover-wan-backup"
+              "id": "high-availability-solutions/load-balancing/failover-wan-backup",
+              "label": "Failover (WAN Backup)"
             },
             {
               "type": "doc",
-              "id": "high-availability-solutions/load-balancing/per-connection-classifier"
+              "id": "high-availability-solutions/load-balancing/per-connection-classifier",
+              "label": "Per connection classifier"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "high-availability-solutions/multi-chassis-link-aggregation-group"
+          "id": "high-availability-solutions/multi-chassis-link-aggregation-group",
+          "label": "Multi-chassis Link Aggregation Group"
         },
         {
           "type": "category",
@@ -1471,7 +1704,8 @@
         },
         {
           "type": "doc",
-          "id": "high-availability-solutions/vrrp"
+          "id": "high-availability-solutions/vrrp",
+          "label": "VRRP"
         }
       ]
     },
@@ -1501,19 +1735,23 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-beacon-manager-android-devices"
+                  "id": "internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-beacon-manager-android-devices",
+                  "label": "MikroTik Beacon Manager for Android devices"
                 },
                 {
                   "type": "doc",
-                  "id": "internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-beacon-manager-for-ios-devices"
+                  "id": "internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-beacon-manager-for-ios-devices",
+                  "label": "MikroTik Beacon Manager for iOS devices"
                 },
                 {
                   "type": "doc",
-                  "id": "internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-bluetooth-tg-bt5-xx-tag"
+                  "id": "internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-bluetooth-tg-bt5-xx-tag",
+                  "label": "MikroTik Bluetooth TG-BT5-XX tag changelog"
                 },
                 {
                   "type": "doc",
-                  "id": "internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-tag-advertisement-formats"
+                  "id": "internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-tag-advertisement-formats",
+                  "label": "MikroTik Tag advertisement formats"
                 }
               ]
             }
@@ -1529,7 +1767,8 @@
           "items": [
             {
               "type": "doc",
-              "id": "internet-of-things/gpio/using-gpio-as-pulse-input-from-meter"
+              "id": "internet-of-things/gpio/using-gpio-as-pulse-input-from-meter",
+              "label": "Using the GPIO as pulse input from a meter device"
             }
           ]
         },
@@ -1543,7 +1782,8 @@
           "items": [
             {
               "type": "doc",
-              "id": "internet-of-things/lora/general-properties"
+              "id": "internet-of-things/lora/general-properties",
+              "label": "General Properties"
             },
             {
               "type": "category",
@@ -1555,23 +1795,28 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "internet-of-things/lora/user-guides/aws-lorawan-configuration"
+                  "id": "internet-of-things/lora/user-guides/aws-lorawan-configuration",
+                  "label": "AWS LoRaWAN configuration"
                 },
                 {
                   "type": "doc",
-                  "id": "internet-of-things/lora/user-guides/chirpstack"
+                  "id": "internet-of-things/lora/user-guides/chirpstack",
+                  "label": "ChirpStack"
                 },
                 {
                   "type": "doc",
-                  "id": "internet-of-things/lora/user-guides/step-by-step-installation"
+                  "id": "internet-of-things/lora/user-guides/step-by-step-installation",
+                  "label": "Step by step installation"
                 },
                 {
                   "type": "doc",
-                  "id": "internet-of-things/lora/user-guides/tg-lr-setup-guide"
+                  "id": "internet-of-things/lora/user-guides/tg-lr-setup-guide",
+                  "label": "TG-LR setup guide"
                 },
                 {
                   "type": "doc",
-                  "id": "internet-of-things/lora/user-guides/the-things-stack"
+                  "id": "internet-of-things/lora/user-guides/the-things-stack",
+                  "label": "The Things Stack"
                 }
               ]
             }
@@ -1579,7 +1824,8 @@
         },
         {
           "type": "doc",
-          "id": "internet-of-things/modbus"
+          "id": "internet-of-things/modbus",
+          "label": "Modbus"
         },
         {
           "type": "category",
@@ -1591,17 +1837,20 @@
           "items": [
             {
               "type": "doc",
-              "id": "internet-of-things/mqtt/kaa-iot-setup"
+              "id": "internet-of-things/mqtt/kaa-iot-setup",
+              "label": "Kaa IoT setup"
             },
             {
               "type": "doc",
-              "id": "internet-of-things/mqtt/mqtt-and-thingsboard-configuration"
+              "id": "internet-of-things/mqtt/mqtt-and-thingsboard-configuration",
+              "label": "MQTT and ThingsBoard configuration"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "internet-of-things/wiliot"
+          "id": "internet-of-things/wiliot",
+          "label": "Wiliot"
         }
       ]
     },
@@ -1623,37 +1872,45 @@
           "items": [
             {
               "type": "doc",
-              "id": "storage/btrfs/maintenance"
+              "id": "storage/btrfs/maintenance",
+              "label": "Btrfs maintenance"
             },
             {
               "type": "doc",
-              "id": "storage/btrfs/raid"
+              "id": "storage/btrfs/raid",
+              "label": "Btrfs RAID"
             },
             {
               "type": "doc",
-              "id": "storage/btrfs/snapshots"
+              "id": "storage/btrfs/snapshots",
+              "label": "Btrfs subvolumes and snapshots"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "storage/dlna"
+          "id": "storage/dlna",
+          "label": "DLNA Media Server"
         },
         {
           "type": "doc",
-          "id": "storage/encrypted-storage"
+          "id": "storage/encrypted-storage",
+          "label": "Encrypted storage (dm-crypt)"
         },
         {
           "type": "doc",
-          "id": "storage/iscsi"
+          "id": "storage/iscsi",
+          "label": "iSCSI"
         },
         {
           "type": "doc",
-          "id": "storage/nfs"
+          "id": "storage/nfs",
+          "label": "NFS"
         },
         {
           "type": "doc",
-          "id": "storage/nvme-over-tcp"
+          "id": "storage/nvme-over-tcp",
+          "label": "NVMe over TCP"
         },
         {
           "type": "category",
@@ -1665,33 +1922,40 @@
           "items": [
             {
               "type": "doc",
-              "id": "storage/raid/hot-spare"
+              "id": "storage/raid/hot-spare",
+              "label": "Setting a hot spare disk"
             },
             {
               "type": "doc",
-              "id": "storage/raid/moving-array"
+              "id": "storage/raid/moving-array",
+              "label": "Moving your RAID array to a different device"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "storage/ramdisk"
+          "id": "storage/ramdisk",
+          "label": "Ramdisk"
         },
         {
           "type": "doc",
-          "id": "storage/rsync"
+          "id": "storage/rsync",
+          "label": "Rsync"
         },
         {
           "type": "doc",
-          "id": "storage/self-encrypting-drives"
+          "id": "storage/self-encrypting-drives",
+          "label": "Self-encrypting drives (SED)"
         },
         {
           "type": "doc",
-          "id": "storage/smb"
+          "id": "storage/smb",
+          "label": "SMB"
         },
         {
           "type": "doc",
-          "id": "storage/tmpfs"
+          "id": "storage/tmpfs",
+          "label": "Tmpfs"
         }
       ]
     },
@@ -1713,13 +1977,15 @@
           "items": [
             {
               "type": "doc",
-              "id": "containers/apps/available-apps"
+              "id": "containers/apps/available-apps",
+              "label": "List of available Apps"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "containers/veth"
+          "id": "containers/veth",
+          "label": "VETH"
         }
       ]
     },
@@ -1741,13 +2007,15 @@
           "items": [
             {
               "type": "doc",
-              "id": "developer-guides/api/python3-example"
+              "id": "developer-guides/api/python3-example",
+              "label": "Python3 Example"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "developer-guides/rest-api"
+          "id": "developer-guides/rest-api",
+          "label": "REST API"
         },
         {
           "type": "category",
@@ -1759,11 +2027,13 @@
           "items": [
             {
               "type": "doc",
-              "id": "developer-guides/scripting/scripting-examples"
+              "id": "developer-guides/scripting/scripting-examples",
+              "label": "Scripting examples"
             },
             {
               "type": "doc",
-              "id": "developer-guides/scripting/scripting-tips-and-tricks"
+              "id": "developer-guides/scripting/scripting-tips-and-tricks",
+              "label": "Scripting Tips and Tricks"
             }
           ]
         }
@@ -1787,41 +2057,50 @@
           "items": [
             {
               "type": "doc",
-              "id": "cli-reference/app/cleanup"
+              "id": "cli-reference/app/cleanup",
+              "label": "cleanup"
             },
             {
               "type": "doc",
-              "id": "cli-reference/app/network"
+              "id": "cli-reference/app/network",
+              "label": "network"
             },
             {
               "type": "doc",
-              "id": "cli-reference/app/remove"
+              "id": "cli-reference/app/remove",
+              "label": "remove"
             },
             {
               "type": "doc",
-              "id": "cli-reference/app/restart"
+              "id": "cli-reference/app/restart",
+              "label": "restart"
             },
             {
               "type": "doc",
-              "id": "cli-reference/app/settings"
+              "id": "cli-reference/app/settings",
+              "label": "settings"
             },
             {
               "type": "doc",
-              "id": "cli-reference/app/setup"
+              "id": "cli-reference/app/setup",
+              "label": "setup"
             },
             {
               "type": "doc",
-              "id": "cli-reference/app/update"
+              "id": "cli-reference/app/update",
+              "label": "update"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "cli-reference/beep"
+          "id": "cli-reference/beep",
+          "label": "beep"
         },
         {
           "type": "doc",
-          "id": "cli-reference/blink"
+          "id": "cli-reference/blink",
+          "label": "blink"
         },
         {
           "type": "category",
@@ -1833,31 +2112,38 @@
           "items": [
             {
               "type": "doc",
-              "id": "cli-reference/certificate/acme-renew"
+              "id": "cli-reference/certificate/acme-renew",
+              "label": "acme-renew"
             },
             {
               "type": "doc",
-              "id": "cli-reference/certificate/add-acme"
+              "id": "cli-reference/certificate/add-acme",
+              "label": "add-acme"
             },
             {
               "type": "doc",
-              "id": "cli-reference/certificate/add-scep"
+              "id": "cli-reference/certificate/add-scep",
+              "label": "add-scep"
             },
             {
               "type": "doc",
-              "id": "cli-reference/certificate/builtin"
+              "id": "cli-reference/certificate/builtin",
+              "label": "builtin"
             },
             {
               "type": "doc",
-              "id": "cli-reference/certificate/card-reinstall"
+              "id": "cli-reference/certificate/card-reinstall",
+              "label": "card-reinstall"
             },
             {
               "type": "doc",
-              "id": "cli-reference/certificate/card-verify"
+              "id": "cli-reference/certificate/card-verify",
+              "label": "card-verify"
             },
             {
               "type": "doc",
-              "id": "cli-reference/certificate/create-certificate-request"
+              "id": "cli-reference/certificate/create-certificate-request",
+              "label": "create-certificate-request"
             },
             {
               "type": "category",
@@ -1869,33 +2155,40 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/certificate/crl/download"
+                  "id": "cli-reference/certificate/crl/download",
+                  "label": "download"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/certificate/crl/flush"
+                  "id": "cli-reference/certificate/crl/flush",
+                  "label": "flush"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "cli-reference/certificate/enable-ssl-certificate"
+              "id": "cli-reference/certificate/enable-ssl-certificate",
+              "label": "enable-ssl-certificate"
             },
             {
               "type": "doc",
-              "id": "cli-reference/certificate/export-certificate"
+              "id": "cli-reference/certificate/export-certificate",
+              "label": "export-certificate"
             },
             {
               "type": "doc",
-              "id": "cli-reference/certificate/import"
+              "id": "cli-reference/certificate/import",
+              "label": "import"
             },
             {
               "type": "doc",
-              "id": "cli-reference/certificate/issued-revoke"
+              "id": "cli-reference/certificate/issued-revoke",
+              "label": "issued-revoke"
             },
             {
               "type": "doc",
-              "id": "cli-reference/certificate/scep-renew"
+              "id": "cli-reference/certificate/scep-renew",
+              "label": "scep-renew"
             },
             {
               "type": "category",
@@ -1915,7 +2208,8 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/certificate/scep-server/otp/generate"
+                      "id": "cli-reference/certificate/scep-server/otp/generate",
+                      "label": "generate"
                     }
                   ]
                 },
@@ -1929,7 +2223,8 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/certificate/scep-server/ra/renew"
+                      "id": "cli-reference/certificate/scep-server/ra/renew",
+                      "label": "renew"
                     }
                   ]
                 },
@@ -1943,7 +2238,8 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/certificate/scep-server/requests/grant"
+                      "id": "cli-reference/certificate/scep-server/requests/grant",
+                      "label": "grant"
                     }
                   ]
                 }
@@ -1951,15 +2247,18 @@
             },
             {
               "type": "doc",
-              "id": "cli-reference/certificate/settings"
+              "id": "cli-reference/certificate/settings",
+              "label": "settings"
             },
             {
               "type": "doc",
-              "id": "cli-reference/certificate/sign-certificate-request"
+              "id": "cli-reference/certificate/sign-certificate-request",
+              "label": "sign-certificate-request"
             },
             {
               "type": "doc",
-              "id": "cli-reference/certificate/sign"
+              "id": "cli-reference/certificate/sign",
+              "label": "sign"
             }
           ]
         },
@@ -1973,51 +2272,63 @@
           "items": [
             {
               "type": "doc",
-              "id": "cli-reference/container/config"
+              "id": "cli-reference/container/config",
+              "label": "config"
             },
             {
               "type": "doc",
-              "id": "cli-reference/container/envs"
+              "id": "cli-reference/container/envs",
+              "label": "envs"
             },
             {
               "type": "doc",
-              "id": "cli-reference/container/kill"
+              "id": "cli-reference/container/kill",
+              "label": "kill"
             },
             {
               "type": "doc",
-              "id": "cli-reference/container/layers"
+              "id": "cli-reference/container/layers",
+              "label": "layers"
             },
             {
               "type": "doc",
-              "id": "cli-reference/container/log"
+              "id": "cli-reference/container/log",
+              "label": "log"
             },
             {
               "type": "doc",
-              "id": "cli-reference/container/mounts"
+              "id": "cli-reference/container/mounts",
+              "label": "mounts"
             },
             {
               "type": "doc",
-              "id": "cli-reference/container/repull"
+              "id": "cli-reference/container/repull",
+              "label": "repull"
             },
             {
               "type": "doc",
-              "id": "cli-reference/container/restart"
+              "id": "cli-reference/container/restart",
+              "label": "restart"
             },
             {
               "type": "doc",
-              "id": "cli-reference/container/save"
+              "id": "cli-reference/container/save",
+              "label": "save"
             },
             {
               "type": "doc",
-              "id": "cli-reference/container/start"
+              "id": "cli-reference/container/start",
+              "label": "start"
             },
             {
               "type": "doc",
-              "id": "cli-reference/container/stop"
+              "id": "cli-reference/container/stop",
+              "label": "stop"
             },
             {
               "type": "doc",
-              "id": "cli-reference/container/update"
+              "id": "cli-reference/container/update",
+              "label": "update"
             }
           ]
         },
@@ -2031,7 +2342,8 @@
           "items": [
             {
               "type": "doc",
-              "id": "cli-reference/disk/blink"
+              "id": "cli-reference/disk/blink",
+              "label": "blink"
             },
             {
               "type": "category",
@@ -2051,111 +2363,137 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/disk/btrfs/filesystem/add-device"
+                      "id": "cli-reference/disk/btrfs/filesystem/add-device",
+                      "label": "add-device"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/disk/btrfs/filesystem/balance-cancel"
+                      "id": "cli-reference/disk/btrfs/filesystem/balance-cancel",
+                      "label": "balance-cancel"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/disk/btrfs/filesystem/balance-start"
+                      "id": "cli-reference/disk/btrfs/filesystem/balance-start",
+                      "label": "balance-start"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/disk/btrfs/filesystem/remove-device"
+                      "id": "cli-reference/disk/btrfs/filesystem/remove-device",
+                      "label": "remove-device"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/disk/btrfs/filesystem/replace-cancel"
+                      "id": "cli-reference/disk/btrfs/filesystem/replace-cancel",
+                      "label": "replace-cancel"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/disk/btrfs/filesystem/replace-device"
+                      "id": "cli-reference/disk/btrfs/filesystem/replace-device",
+                      "label": "replace-device"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/disk/btrfs/filesystem/reset-counters"
+                      "id": "cli-reference/disk/btrfs/filesystem/reset-counters",
+                      "label": "reset-counters"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/disk/btrfs/filesystem/scrub-cancel"
+                      "id": "cli-reference/disk/btrfs/filesystem/scrub-cancel",
+                      "label": "scrub-cancel"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/disk/btrfs/filesystem/scrub-start"
+                      "id": "cli-reference/disk/btrfs/filesystem/scrub-start",
+                      "label": "scrub-start"
                     }
                   ]
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/disk/btrfs/subvolume"
+                  "id": "cli-reference/disk/btrfs/subvolume",
+                  "label": "subvolume"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/disk/btrfs/transfer"
+                  "id": "cli-reference/disk/btrfs/transfer",
+                  "label": "transfer"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "cli-reference/disk/check"
+              "id": "cli-reference/disk/check",
+              "label": "check"
             },
             {
               "type": "doc",
-              "id": "cli-reference/disk/copy"
+              "id": "cli-reference/disk/copy",
+              "label": "copy"
             },
             {
               "type": "doc",
-              "id": "cli-reference/disk/eject"
+              "id": "cli-reference/disk/eject",
+              "label": "eject"
             },
             {
               "type": "doc",
-              "id": "cli-reference/disk/format"
+              "id": "cli-reference/disk/format",
+              "label": "format"
             },
             {
               "type": "doc",
-              "id": "cli-reference/disk/monitor-traffic"
+              "id": "cli-reference/disk/monitor-traffic",
+              "label": "monitor-traffic"
             },
             {
               "type": "doc",
-              "id": "cli-reference/disk/nvme-discover"
+              "id": "cli-reference/disk/nvme-discover",
+              "label": "nvme-discover"
             },
             {
               "type": "doc",
-              "id": "cli-reference/disk/raid-scrub-cancel"
+              "id": "cli-reference/disk/raid-scrub-cancel",
+              "label": "raid-scrub-cancel"
             },
             {
               "type": "doc",
-              "id": "cli-reference/disk/raid-scrub"
+              "id": "cli-reference/disk/raid-scrub",
+              "label": "raid-scrub"
             },
             {
               "type": "doc",
-              "id": "cli-reference/disk/repair"
+              "id": "cli-reference/disk/repair",
+              "label": "repair"
             },
             {
               "type": "doc",
-              "id": "cli-reference/disk/reset-counters"
+              "id": "cli-reference/disk/reset-counters",
+              "label": "reset-counters"
             },
             {
               "type": "doc",
-              "id": "cli-reference/disk/scan"
+              "id": "cli-reference/disk/scan",
+              "label": "scan"
             },
             {
               "type": "doc",
-              "id": "cli-reference/disk/settings"
+              "id": "cli-reference/disk/settings",
+              "label": "settings"
             },
             {
               "type": "doc",
-              "id": "cli-reference/disk/smart-info"
+              "id": "cli-reference/disk/smart-info",
+              "label": "smart-info"
             },
             {
               "type": "doc",
-              "id": "cli-reference/disk/test"
+              "id": "cli-reference/disk/test",
+              "label": "test"
             },
             {
               "type": "doc",
-              "id": "cli-reference/disk/trim"
+              "id": "cli-reference/disk/trim",
+              "label": "trim"
             }
           ]
         },
@@ -2169,31 +2507,38 @@
           "items": [
             {
               "type": "doc",
-              "id": "cli-reference/dude/agent"
+              "id": "cli-reference/dude/agent",
+              "label": "agent"
             },
             {
               "type": "doc",
-              "id": "cli-reference/dude/device-type"
+              "id": "cli-reference/dude/device-type",
+              "label": "device-type"
             },
             {
               "type": "doc",
-              "id": "cli-reference/dude/device"
+              "id": "cli-reference/dude/device",
+              "label": "device"
             },
             {
               "type": "doc",
-              "id": "cli-reference/dude/export-db"
+              "id": "cli-reference/dude/export-db",
+              "label": "export-db"
             },
             {
               "type": "doc",
-              "id": "cli-reference/dude/import-db"
+              "id": "cli-reference/dude/import-db",
+              "label": "import-db"
             },
             {
               "type": "doc",
-              "id": "cli-reference/dude/notification"
+              "id": "cli-reference/dude/notification",
+              "label": "notification"
             },
             {
               "type": "doc",
-              "id": "cli-reference/dude/probe"
+              "id": "cli-reference/dude/probe",
+              "label": "probe"
             },
             {
               "type": "category",
@@ -2205,67 +2550,82 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/dude/ros/address"
+                  "id": "cli-reference/dude/ros/address",
+                  "label": "address"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/dude/ros/arp"
+                  "id": "cli-reference/dude/ros/arp",
+                  "label": "arp"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/dude/ros/health"
+                  "id": "cli-reference/dude/ros/health",
+                  "label": "health"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/dude/ros/interface"
+                  "id": "cli-reference/dude/ros/interface",
+                  "label": "interface"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/dude/ros/lease"
+                  "id": "cli-reference/dude/ros/lease",
+                  "label": "lease"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/dude/ros/neighbor"
+                  "id": "cli-reference/dude/ros/neighbor",
+                  "label": "neighbor"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/dude/ros/queue"
+                  "id": "cli-reference/dude/ros/queue",
+                  "label": "queue"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/dude/ros/registration-table"
+                  "id": "cli-reference/dude/ros/registration-table",
+                  "label": "registration-table"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/dude/ros/resource"
+                  "id": "cli-reference/dude/ros/resource",
+                  "label": "resource"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/dude/ros/route"
+                  "id": "cli-reference/dude/ros/route",
+                  "label": "route"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/dude/ros/routerboard"
+                  "id": "cli-reference/dude/ros/routerboard",
+                  "label": "routerboard"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "cli-reference/dude/service"
+              "id": "cli-reference/dude/service",
+              "label": "service"
             },
             {
               "type": "doc",
-              "id": "cli-reference/dude/settings"
+              "id": "cli-reference/dude/settings",
+              "label": "settings"
             },
             {
               "type": "doc",
-              "id": "cli-reference/dude/vacuum-db"
+              "id": "cli-reference/dude/vacuum-db",
+              "label": "vacuum-db"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "cli-reference/environment"
+          "id": "cli-reference/environment",
+          "label": "environment"
         },
         {
           "type": "category",
@@ -2277,19 +2637,23 @@
           "items": [
             {
               "type": "doc",
-              "id": "cli-reference/file/copy"
+              "id": "cli-reference/file/copy",
+              "label": "copy"
             },
             {
               "type": "doc",
-              "id": "cli-reference/file/head"
+              "id": "cli-reference/file/head",
+              "label": "head"
             },
             {
               "type": "doc",
-              "id": "cli-reference/file/read"
+              "id": "cli-reference/file/read",
+              "label": "read"
             },
             {
               "type": "doc",
-              "id": "cli-reference/file/rsync-daemon"
+              "id": "cli-reference/file/rsync-daemon",
+              "label": "rsync-daemon"
             },
             {
               "type": "category",
@@ -2301,19 +2665,22 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/file/sync/monitor"
+                  "id": "cli-reference/file/sync/monitor",
+                  "label": "monitor"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "cli-reference/file/tail"
+              "id": "cli-reference/file/tail",
+              "label": "tail"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "cli-reference/import"
+          "id": "cli-reference/import",
+          "label": "import"
         },
         {
           "type": "category",
@@ -2325,11 +2692,13 @@
           "items": [
             {
               "type": "doc",
-              "id": "cli-reference/interface/6to4"
+              "id": "cli-reference/interface/6to4",
+              "label": "6to4"
             },
             {
               "type": "doc",
-              "id": "cli-reference/interface/blink"
+              "id": "cli-reference/interface/blink",
+              "label": "blink"
             },
             {
               "type": "category",
@@ -2341,11 +2710,13 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/bonding/monitor-slaves"
+                  "id": "cli-reference/interface/bonding/monitor-slaves",
+                  "label": "monitor-slaves"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/bonding/monitor"
+                  "id": "cli-reference/interface/bonding/monitor",
+                  "label": "monitor"
                 }
               ]
             },
@@ -2367,11 +2738,13 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/bridge/calea/reset-counters-all"
+                      "id": "cli-reference/interface/bridge/calea/reset-counters-all",
+                      "label": "reset-counters-all"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/bridge/calea/reset-counters"
+                      "id": "cli-reference/interface/bridge/calea/reset-counters",
+                      "label": "reset-counters"
                     }
                   ]
                 },
@@ -2385,25 +2758,30 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/bridge/filter/reset-counters-all"
+                      "id": "cli-reference/interface/bridge/filter/reset-counters-all",
+                      "label": "reset-counters-all"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/bridge/filter/reset-counters"
+                      "id": "cli-reference/interface/bridge/filter/reset-counters",
+                      "label": "reset-counters"
                     }
                   ]
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/bridge/host"
+                  "id": "cli-reference/interface/bridge/host",
+                  "label": "host"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/bridge/mdb"
+                  "id": "cli-reference/interface/bridge/mdb",
+                  "label": "mdb"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/bridge/monitor"
+                  "id": "cli-reference/interface/bridge/monitor",
+                  "label": "monitor"
                 },
                 {
                   "type": "category",
@@ -2415,7 +2793,8 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/bridge/msrp/attributes"
+                      "id": "cli-reference/interface/bridge/msrp/attributes",
+                      "label": "attributes"
                     },
                     {
                       "type": "category",
@@ -2427,11 +2806,13 @@
                       "items": [
                         {
                           "type": "doc",
-                          "id": "cli-reference/interface/bridge/msrp/domain/attributes"
+                          "id": "cli-reference/interface/bridge/msrp/domain/attributes",
+                          "label": "attributes"
                         },
                         {
                           "type": "doc",
-                          "id": "cli-reference/interface/bridge/msrp/domain/monitor"
+                          "id": "cli-reference/interface/bridge/msrp/domain/monitor",
+                          "label": "monitor"
                         }
                       ]
                     }
@@ -2447,7 +2828,8 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/bridge/msti/monitor"
+                      "id": "cli-reference/interface/bridge/msti/monitor",
+                      "label": "monitor"
                     }
                   ]
                 },
@@ -2461,11 +2843,13 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/bridge/nat/reset-counters-all"
+                      "id": "cli-reference/interface/bridge/nat/reset-counters-all",
+                      "label": "reset-counters-all"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/bridge/nat/reset-counters"
+                      "id": "cli-reference/interface/bridge/nat/reset-counters",
+                      "label": "reset-counters"
                     }
                   ]
                 },
@@ -2479,7 +2863,8 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/bridge/port/monitor"
+                      "id": "cli-reference/interface/bridge/port/monitor",
+                      "label": "monitor"
                     },
                     {
                       "type": "category",
@@ -2491,7 +2876,8 @@
                       "items": [
                         {
                           "type": "doc",
-                          "id": "cli-reference/interface/bridge/port/mst-override/monitor"
+                          "id": "cli-reference/interface/bridge/port/mst-override/monitor",
+                          "label": "monitor"
                         }
                       ]
                     }
@@ -2499,7 +2885,8 @@
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/bridge/settings"
+                  "id": "cli-reference/interface/bridge/settings",
+                  "label": "settings"
                 },
                 {
                   "type": "category",
@@ -2511,7 +2898,8 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/bridge/vlan/mvrp"
+                      "id": "cli-reference/interface/bridge/vlan/mvrp",
+                      "label": "mvrp"
                     }
                   ]
                 }
@@ -2527,7 +2915,8 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/detect-internet/state"
+                  "id": "cli-reference/interface/detect-internet/state",
+                  "label": "state"
                 }
               ]
             },
@@ -2541,7 +2930,8 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/dot1x/client"
+                  "id": "cli-reference/interface/dot1x/client",
+                  "label": "client"
                 },
                 {
                   "type": "category",
@@ -2553,11 +2943,13 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/dot1x/server/active"
+                      "id": "cli-reference/interface/dot1x/server/active",
+                      "label": "active"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/dot1x/server/state"
+                      "id": "cli-reference/interface/dot1x/server/state",
+                      "label": "state"
                     }
                   ]
                 }
@@ -2565,11 +2957,13 @@
             },
             {
               "type": "doc",
-              "id": "cli-reference/interface/eoip"
+              "id": "cli-reference/interface/eoip",
+              "label": "eoip"
             },
             {
               "type": "doc",
-              "id": "cli-reference/interface/eoipv6"
+              "id": "cli-reference/interface/eoipv6",
+              "label": "eoipv6"
             },
             {
               "type": "category",
@@ -2581,15 +2975,18 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/ethernet/blink"
+                  "id": "cli-reference/interface/ethernet/blink",
+                  "label": "blink"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/ethernet/cable-test"
+                  "id": "cli-reference/interface/ethernet/cable-test",
+                  "label": "cable-test"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/ethernet/monitor"
+                  "id": "cli-reference/interface/ethernet/monitor",
+                  "label": "monitor"
                 },
                 {
                   "type": "category",
@@ -2601,25 +2998,30 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/poe/monitor"
+                      "id": "cli-reference/interface/ethernet/poe/monitor",
+                      "label": "monitor"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/poe/power-cycle"
+                      "id": "cli-reference/interface/ethernet/poe/power-cycle",
+                      "label": "power-cycle"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/poe/settings"
+                      "id": "cli-reference/interface/ethernet/poe/settings",
+                      "label": "settings"
                     }
                   ]
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/ethernet/reset-counters"
+                  "id": "cli-reference/interface/ethernet/reset-counters",
+                  "label": "reset-counters"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/ethernet/reset-mac-address"
+                  "id": "cli-reference/interface/ethernet/reset-mac-address",
+                  "label": "reset-mac-address"
                 },
                 {
                   "type": "category",
@@ -2639,37 +3041,45 @@
                       "items": [
                         {
                           "type": "doc",
-                          "id": "cli-reference/interface/ethernet/switch/acl/policer"
+                          "id": "cli-reference/interface/ethernet/switch/acl/policer",
+                          "label": "policer"
                         }
                       ]
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/dscp-qos-map"
+                      "id": "cli-reference/interface/ethernet/switch/dscp-qos-map",
+                      "label": "dscp-qos-map"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/dscp-to-dscp"
+                      "id": "cli-reference/interface/ethernet/switch/dscp-to-dscp",
+                      "label": "dscp-to-dscp"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/egress-vlan-tag"
+                      "id": "cli-reference/interface/ethernet/switch/egress-vlan-tag",
+                      "label": "egress-vlan-tag"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/egress-vlan-translation"
+                      "id": "cli-reference/interface/ethernet/switch/egress-vlan-translation",
+                      "label": "egress-vlan-translation"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/host"
+                      "id": "cli-reference/interface/ethernet/switch/host",
+                      "label": "host"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/ingress-port-policer"
+                      "id": "cli-reference/interface/ethernet/switch/ingress-port-policer",
+                      "label": "ingress-port-policer"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/ingress-vlan-translation"
+                      "id": "cli-reference/interface/ethernet/switch/ingress-vlan-translation",
+                      "label": "ingress-vlan-translation"
                     },
                     {
                       "type": "category",
@@ -2689,31 +3099,37 @@
                           "items": [
                             {
                               "type": "doc",
-                              "id": "cli-reference/interface/ethernet/switch/l3hw-settings/advanced/monitor"
+                              "id": "cli-reference/interface/ethernet/switch/l3hw-settings/advanced/monitor",
+                              "label": "monitor"
                             }
                           ]
                         },
                         {
                           "type": "doc",
-                          "id": "cli-reference/interface/ethernet/switch/l3hw-settings/monitor"
+                          "id": "cli-reference/interface/ethernet/switch/l3hw-settings/monitor",
+                          "label": "monitor"
                         }
                       ]
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/mac-based-vlan"
+                      "id": "cli-reference/interface/ethernet/switch/mac-based-vlan",
+                      "label": "mac-based-vlan"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/multicast-fdb"
+                      "id": "cli-reference/interface/ethernet/switch/multicast-fdb",
+                      "label": "multicast-fdb"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/one2one-vlan-switching"
+                      "id": "cli-reference/interface/ethernet/switch/one2one-vlan-switching",
+                      "label": "one2one-vlan-switching"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/policer-qos-map"
+                      "id": "cli-reference/interface/ethernet/switch/policer-qos-map",
+                      "label": "policer-qos-map"
                     },
                     {
                       "type": "category",
@@ -2725,21 +3141,25 @@
                       "items": [
                         {
                           "type": "doc",
-                          "id": "cli-reference/interface/ethernet/switch/port/reset-counters/index"
+                          "id": "cli-reference/interface/ethernet/switch/port/reset-counters/index",
+                          "label": "reset-counters"
                         }
                       ]
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/port-isolation/index"
+                      "id": "cli-reference/interface/ethernet/switch/port-isolation/index",
+                      "label": "port-isolation"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/port-leakage"
+                      "id": "cli-reference/interface/ethernet/switch/port-leakage",
+                      "label": "port-leakage"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/protocol-based-vlan"
+                      "id": "cli-reference/interface/ethernet/switch/protocol-based-vlan",
+                      "label": "protocol-based-vlan"
                     },
                     {
                       "type": "category",
@@ -2759,17 +3179,20 @@
                           "items": [
                             {
                               "type": "doc",
-                              "id": "cli-reference/interface/ethernet/switch/qos/map/ip"
+                              "id": "cli-reference/interface/ethernet/switch/qos/map/ip",
+                              "label": "ip"
                             },
                             {
                               "type": "doc",
-                              "id": "cli-reference/interface/ethernet/switch/qos/map/vlan"
+                              "id": "cli-reference/interface/ethernet/switch/qos/map/vlan",
+                              "label": "vlan"
                             }
                           ]
                         },
                         {
                           "type": "doc",
-                          "id": "cli-reference/interface/ethernet/switch/qos/monitor"
+                          "id": "cli-reference/interface/ethernet/switch/qos/monitor",
+                          "label": "monitor"
                         },
                         {
                           "type": "category",
@@ -2781,21 +3204,25 @@
                           "items": [
                             {
                               "type": "doc",
-                              "id": "cli-reference/interface/ethernet/switch/qos/port/reset-counters"
+                              "id": "cli-reference/interface/ethernet/switch/qos/port/reset-counters",
+                              "label": "reset-counters"
                             }
                           ]
                         },
                         {
                           "type": "doc",
-                          "id": "cli-reference/interface/ethernet/switch/qos/priority-flow-control"
+                          "id": "cli-reference/interface/ethernet/switch/qos/priority-flow-control",
+                          "label": "priority-flow-control"
                         },
                         {
                           "type": "doc",
-                          "id": "cli-reference/interface/ethernet/switch/qos/profile"
+                          "id": "cli-reference/interface/ethernet/switch/qos/profile",
+                          "label": "profile"
                         },
                         {
                           "type": "doc",
-                          "id": "cli-reference/interface/ethernet/switch/qos/settings"
+                          "id": "cli-reference/interface/ethernet/switch/qos/settings",
+                          "label": "settings"
                         },
                         {
                           "type": "category",
@@ -2807,7 +3234,8 @@
                           "items": [
                             {
                               "type": "doc",
-                              "id": "cli-reference/interface/ethernet/switch/qos/tx-manager/queue"
+                              "id": "cli-reference/interface/ethernet/switch/qos/tx-manager/queue",
+                              "label": "queue"
                             }
                           ]
                         }
@@ -2815,31 +3243,38 @@
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/qos-group"
+                      "id": "cli-reference/interface/ethernet/switch/qos-group",
+                      "label": "qos-group"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/reserved-fdb"
+                      "id": "cli-reference/interface/ethernet/switch/reserved-fdb",
+                      "label": "reserved-fdb"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/reset-counters/index"
+                      "id": "cli-reference/interface/ethernet/switch/reset-counters/index",
+                      "label": "reset-counters"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/rule"
+                      "id": "cli-reference/interface/ethernet/switch/rule",
+                      "label": "rule"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/shaper"
+                      "id": "cli-reference/interface/ethernet/switch/shaper",
+                      "label": "shaper"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/stats"
+                      "id": "cli-reference/interface/ethernet/switch/stats",
+                      "label": "stats"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/trunk"
+                      "id": "cli-reference/interface/ethernet/switch/trunk",
+                      "label": "trunk"
                     },
                     {
                       "type": "category",
@@ -2851,13 +3286,15 @@
                       "items": [
                         {
                           "type": "doc",
-                          "id": "cli-reference/interface/ethernet/switch/unicast-fdb/flush"
+                          "id": "cli-reference/interface/ethernet/switch/unicast-fdb/flush",
+                          "label": "flush"
                         }
                       ]
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/vlan/index"
+                      "id": "cli-reference/interface/ethernet/switch/vlan/index",
+                      "label": "vlan"
                     }
                   ]
                 }
@@ -2865,19 +3302,23 @@
             },
             {
               "type": "doc",
-              "id": "cli-reference/interface/gre"
+              "id": "cli-reference/interface/gre",
+              "label": "gre"
             },
             {
               "type": "doc",
-              "id": "cli-reference/interface/gre6"
+              "id": "cli-reference/interface/gre6",
+              "label": "gre6"
             },
             {
               "type": "doc",
-              "id": "cli-reference/interface/ipip"
+              "id": "cli-reference/interface/ipip",
+              "label": "ipip"
             },
             {
               "type": "doc",
-              "id": "cli-reference/interface/ipipv6"
+              "id": "cli-reference/interface/ipipv6",
+              "label": "ipipv6"
             },
             {
               "type": "category",
@@ -2889,7 +3330,8 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/l2tp-client/monitor"
+                  "id": "cli-reference/interface/l2tp-client/monitor",
+                  "label": "monitor"
                 }
               ]
             },
@@ -2903,7 +3345,8 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/l2tp-ether/monitor"
+                  "id": "cli-reference/interface/l2tp-ether/monitor",
+                  "label": "monitor"
                 }
               ]
             },
@@ -2917,11 +3360,13 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/l2tp-server/monitor"
+                  "id": "cli-reference/interface/l2tp-server/monitor",
+                  "label": "monitor"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/l2tp-server/server"
+                  "id": "cli-reference/interface/l2tp-server/server",
+                  "label": "server"
                 }
               ]
             },
@@ -2935,7 +3380,8 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/list/member"
+                  "id": "cli-reference/interface/list/member",
+                  "label": "member"
                 }
               ]
             },
@@ -2949,15 +3395,18 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/lte/apn"
+                  "id": "cli-reference/interface/lte/apn",
+                  "label": "apn"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/lte/at-chat"
+                  "id": "cli-reference/interface/lte/at-chat",
+                  "label": "at-chat"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/lte/cell-monitor"
+                  "id": "cli-reference/interface/lte/cell-monitor",
+                  "label": "cell-monitor"
                 },
                 {
                   "type": "category",
@@ -2969,57 +3418,70 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/lte/esim/activate"
+                      "id": "cli-reference/interface/lte/esim/activate",
+                      "label": "activate"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/lte/esim/deactivate"
+                      "id": "cli-reference/interface/lte/esim/deactivate",
+                      "label": "deactivate"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/lte/esim/delete"
+                      "id": "cli-reference/interface/lte/esim/delete",
+                      "label": "delete"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/lte/esim/esim-id"
+                      "id": "cli-reference/interface/lte/esim/esim-id",
+                      "label": "esim-id"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/lte/esim/provision"
+                      "id": "cli-reference/interface/lte/esim/provision",
+                      "label": "provision"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/lte/esim/refresh-profile-list"
+                      "id": "cli-reference/interface/lte/esim/refresh-profile-list",
+                      "label": "refresh-profile-list"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/lte/esim/send-notifications"
+                      "id": "cli-reference/interface/lte/esim/send-notifications",
+                      "label": "send-notifications"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/lte/esim/set-nickname"
+                      "id": "cli-reference/interface/lte/esim/set-nickname",
+                      "label": "set-nickname"
                     }
                   ]
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/lte/firmware-upgrade"
+                  "id": "cli-reference/interface/lte/firmware-upgrade",
+                  "label": "firmware-upgrade"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/lte/monitor"
+                  "id": "cli-reference/interface/lte/monitor",
+                  "label": "monitor"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/lte/scan"
+                  "id": "cli-reference/interface/lte/scan",
+                  "label": "scan"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/lte/settings"
+                  "id": "cli-reference/interface/lte/settings",
+                  "label": "settings"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/lte/show-capabilities"
+                  "id": "cli-reference/interface/lte/show-capabilities",
+                  "label": "show-capabilities"
                 }
               ]
             },
@@ -3033,17 +3495,20 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/macsec/monitor"
+                  "id": "cli-reference/interface/macsec/monitor",
+                  "label": "monitor"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/macsec/profile"
+                  "id": "cli-reference/interface/macsec/profile",
+                  "label": "profile"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "cli-reference/interface/macvlan"
+              "id": "cli-reference/interface/macvlan",
+              "label": "macvlan"
             },
             {
               "type": "category",
@@ -3055,21 +3520,25 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/mesh/fdb"
+                  "id": "cli-reference/interface/mesh/fdb",
+                  "label": "fdb"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/mesh/port"
+                  "id": "cli-reference/interface/mesh/port",
+                  "label": "port"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/mesh/traceroute"
+                  "id": "cli-reference/interface/mesh/traceroute",
+                  "label": "traceroute"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "cli-reference/interface/monitor-traffic"
+              "id": "cli-reference/interface/monitor-traffic",
+              "label": "monitor-traffic"
             },
             {
               "type": "category",
@@ -3081,11 +3550,13 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/ovpn-client/import-ovpn-configuration"
+                  "id": "cli-reference/interface/ovpn-client/import-ovpn-configuration",
+                  "label": "import-ovpn-configuration"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/ovpn-client/monitor"
+                  "id": "cli-reference/interface/ovpn-client/monitor",
+                  "label": "monitor"
                 }
               ]
             },
@@ -3099,7 +3570,8 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/ovpn-server/monitor"
+                  "id": "cli-reference/interface/ovpn-server/monitor",
+                  "label": "monitor"
                 },
                 {
                   "type": "category",
@@ -3111,7 +3583,8 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/ovpn-server/server/export-client-configuration"
+                      "id": "cli-reference/interface/ovpn-server/server/export-client-configuration",
+                      "label": "export-client-configuration"
                     }
                   ]
                 }
@@ -3127,23 +3600,28 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/ppp-client/at-chat"
+                  "id": "cli-reference/interface/ppp-client/at-chat",
+                  "label": "at-chat"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/ppp-client/firmware-upgrade"
+                  "id": "cli-reference/interface/ppp-client/firmware-upgrade",
+                  "label": "firmware-upgrade"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/ppp-client/info"
+                  "id": "cli-reference/interface/ppp-client/info",
+                  "label": "info"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/ppp-client/monitor"
+                  "id": "cli-reference/interface/ppp-client/monitor",
+                  "label": "monitor"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/ppp-client/scan"
+                  "id": "cli-reference/interface/ppp-client/scan",
+                  "label": "scan"
                 }
               ]
             },
@@ -3157,7 +3635,8 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/ppp-server/monitor"
+                  "id": "cli-reference/interface/ppp-server/monitor",
+                  "label": "monitor"
                 }
               ]
             },
@@ -3171,11 +3650,13 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/pppoe-client/monitor"
+                  "id": "cli-reference/interface/pppoe-client/monitor",
+                  "label": "monitor"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/pppoe-client/scan"
+                  "id": "cli-reference/interface/pppoe-client/scan",
+                  "label": "scan"
                 }
               ]
             },
@@ -3189,11 +3670,13 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/pppoe-server/monitor"
+                  "id": "cli-reference/interface/pppoe-server/monitor",
+                  "label": "monitor"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/pppoe-server/server"
+                  "id": "cli-reference/interface/pppoe-server/server",
+                  "label": "server"
                 }
               ]
             },
@@ -3207,7 +3690,8 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/pptp-client/monitor"
+                  "id": "cli-reference/interface/pptp-client/monitor",
+                  "label": "monitor"
                 }
               ]
             },
@@ -3221,11 +3705,13 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/pptp-server/monitor"
+                  "id": "cli-reference/interface/pptp-server/monitor",
+                  "label": "monitor"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/pptp-server/server"
+                  "id": "cli-reference/interface/pptp-server/server",
+                  "label": "server"
                 }
               ]
             },
@@ -3239,41 +3725,50 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/pwr-line/blink"
+                  "id": "cli-reference/interface/pwr-line/blink",
+                  "label": "blink"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/pwr-line/configure"
+                  "id": "cli-reference/interface/pwr-line/configure",
+                  "label": "configure"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/pwr-line/join"
+                  "id": "cli-reference/interface/pwr-line/join",
+                  "label": "join"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/pwr-line/leave"
+                  "id": "cli-reference/interface/pwr-line/leave",
+                  "label": "leave"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/pwr-line/monitor"
+                  "id": "cli-reference/interface/pwr-line/monitor",
+                  "label": "monitor"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/pwr-line/reset-counters"
+                  "id": "cli-reference/interface/pwr-line/reset-counters",
+                  "label": "reset-counters"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/pwr-line/reset-mac-address"
+                  "id": "cli-reference/interface/pwr-line/reset-mac-address",
+                  "label": "reset-mac-address"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/pwr-line/upgrade-firmware"
+                  "id": "cli-reference/interface/pwr-line/upgrade-firmware",
+                  "label": "upgrade-firmware"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "cli-reference/interface/reset-counters"
+              "id": "cli-reference/interface/reset-counters",
+              "label": "reset-counters"
             },
             {
               "type": "category",
@@ -3285,7 +3780,8 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/sstp-client/monitor"
+                  "id": "cli-reference/interface/sstp-client/monitor",
+                  "label": "monitor"
                 }
               ]
             },
@@ -3299,21 +3795,25 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/sstp-server/monitor"
+                  "id": "cli-reference/interface/sstp-server/monitor",
+                  "label": "monitor"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/sstp-server/server"
+                  "id": "cli-reference/interface/sstp-server/server",
+                  "label": "server"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "cli-reference/interface/veth"
+              "id": "cli-reference/interface/veth",
+              "label": "veth"
             },
             {
               "type": "doc",
-              "id": "cli-reference/interface/vlan"
+              "id": "cli-reference/interface/vlan",
+              "label": "vlan"
             },
             {
               "type": "category",
@@ -3325,13 +3825,15 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/vpls/monitor"
+                  "id": "cli-reference/interface/vpls/monitor",
+                  "label": "monitor"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "cli-reference/interface/vrrp"
+              "id": "cli-reference/interface/vrrp",
+              "label": "vrrp"
             },
             {
               "type": "category",
@@ -3343,11 +3845,13 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/vxlan/fdb"
+                  "id": "cli-reference/interface/vxlan/fdb",
+                  "label": "fdb"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/vxlan/vteps"
+                  "id": "cli-reference/interface/vxlan/vteps",
+                  "label": "vteps"
                 }
               ]
             },
@@ -3361,19 +3865,23 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/w60g/align"
+                  "id": "cli-reference/interface/w60g/align",
+                  "label": "align"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/w60g/monitor"
+                  "id": "cli-reference/interface/w60g/monitor",
+                  "label": "monitor"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/w60g/reset-configuration"
+                  "id": "cli-reference/interface/w60g/reset-configuration",
+                  "label": "reset-configuration"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/w60g/scan"
+                  "id": "cli-reference/interface/w60g/scan",
+                  "label": "scan"
                 },
                 {
                   "type": "category",
@@ -3385,7 +3893,8 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/w60g/station/monitor"
+                      "id": "cli-reference/interface/w60g/station/monitor",
+                      "label": "monitor"
                     }
                   ]
                 }
@@ -3401,15 +3910,18 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/aaa"
+                  "id": "cli-reference/interface/wifi/aaa",
+                  "label": "aaa"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/access-list"
+                  "id": "cli-reference/interface/wifi/access-list",
+                  "label": "access-list"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/cap"
+                  "id": "cli-reference/interface/wifi/cap",
+                  "label": "cap"
                 },
                 {
                   "type": "category",
@@ -3429,15 +3941,18 @@
                       "items": [
                         {
                           "type": "doc",
-                          "id": "cli-reference/interface/wifi/capsman/remote-cap/provision"
+                          "id": "cli-reference/interface/wifi/capsman/remote-cap/provision",
+                          "label": "provision"
                         },
                         {
                           "type": "doc",
-                          "id": "cli-reference/interface/wifi/capsman/remote-cap/set-identity"
+                          "id": "cli-reference/interface/wifi/capsman/remote-cap/set-identity",
+                          "label": "set-identity"
                         },
                         {
                           "type": "doc",
-                          "id": "cli-reference/interface/wifi/capsman/remote-cap/upgrade"
+                          "id": "cli-reference/interface/wifi/capsman/remote-cap/upgrade",
+                          "label": "upgrade"
                         }
                       ]
                     }
@@ -3445,39 +3960,48 @@
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/channel"
+                  "id": "cli-reference/interface/wifi/channel",
+                  "label": "channel"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/configuration"
+                  "id": "cli-reference/interface/wifi/configuration",
+                  "label": "configuration"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/datapath"
+                  "id": "cli-reference/interface/wifi/datapath",
+                  "label": "datapath"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/devel"
+                  "id": "cli-reference/interface/wifi/devel",
+                  "label": "devel"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/flat-snoop"
+                  "id": "cli-reference/interface/wifi/flat-snoop",
+                  "label": "flat-snoop"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/frequency-scan"
+                  "id": "cli-reference/interface/wifi/frequency-scan",
+                  "label": "frequency-scan"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/interworking"
+                  "id": "cli-reference/interface/wifi/interworking",
+                  "label": "interworking"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/liberate"
+                  "id": "cli-reference/interface/wifi/liberate",
+                  "label": "liberate"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/monitor"
+                  "id": "cli-reference/interface/wifi/monitor",
+                  "label": "monitor"
                 },
                 {
                   "type": "category",
@@ -3489,13 +4013,15 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wifi/network/radio"
+                      "id": "cli-reference/interface/wifi/network/radio",
+                      "label": "radio"
                     }
                   ]
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/provisioning"
+                  "id": "cli-reference/interface/wifi/provisioning",
+                  "label": "provisioning"
                 },
                 {
                   "type": "category",
@@ -3507,33 +4033,40 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wifi/radio/provision"
+                      "id": "cli-reference/interface/wifi/radio/provision",
+                      "label": "provision"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wifi/radio/reg-info"
+                      "id": "cli-reference/interface/wifi/radio/reg-info",
+                      "label": "reg-info"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wifi/radio/settings"
+                      "id": "cli-reference/interface/wifi/radio/settings",
+                      "label": "settings"
                     }
                   ]
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/registration-table"
+                  "id": "cli-reference/interface/wifi/registration-table",
+                  "label": "registration-table"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/reset-mac-address"
+                  "id": "cli-reference/interface/wifi/reset-mac-address",
+                  "label": "reset-mac-address"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/roam"
+                  "id": "cli-reference/interface/wifi/roam",
+                  "label": "roam"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/scan"
+                  "id": "cli-reference/interface/wifi/scan",
+                  "label": "scan"
                 },
                 {
                   "type": "category",
@@ -3545,17 +4078,20 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wifi/security/multi-passphrase"
+                      "id": "cli-reference/interface/wifi/security/multi-passphrase",
+                      "label": "multi-passphrase"
                     }
                   ]
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/sniffer"
+                  "id": "cli-reference/interface/wifi/sniffer",
+                  "label": "sniffer"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/spectral-scan"
+                  "id": "cli-reference/interface/wifi/spectral-scan",
+                  "label": "spectral-scan"
                 },
                 {
                   "type": "category",
@@ -3567,21 +4103,25 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wifi/steering/neighbor-group"
+                      "id": "cli-reference/interface/wifi/steering/neighbor-group",
+                      "label": "neighbor-group"
                     }
                   ]
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/trigger-radar"
+                  "id": "cli-reference/interface/wifi/trigger-radar",
+                  "label": "trigger-radar"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/wps-client"
+                  "id": "cli-reference/interface/wifi/wps-client",
+                  "label": "wps-client"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wifi/wps-push-button"
+                  "id": "cli-reference/interface/wifi/wps-push-button",
+                  "label": "wps-push-button"
                 }
               ]
             },
@@ -3603,17 +4143,20 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wireguard/peers/show-client-config"
+                      "id": "cli-reference/interface/wireguard/peers/show-client-config",
+                      "label": "show-client-config"
                     }
                   ]
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireguard/wg-export"
+                  "id": "cli-reference/interface/wireguard/wg-export",
+                  "label": "wg-export"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireguard/wg-import"
+                  "id": "cli-reference/interface/wireguard/wg-import",
+                  "label": "wg-import"
                 }
               ]
             },
@@ -3627,7 +4170,8 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireless/access-list"
+                  "id": "cli-reference/interface/wireless/access-list",
+                  "label": "access-list"
                 },
                 {
                   "type": "category",
@@ -3639,29 +4183,35 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wireless/align/monitor"
+                      "id": "cli-reference/interface/wireless/align/monitor",
+                      "label": "monitor"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wireless/align/test-audio"
+                      "id": "cli-reference/interface/wireless/align/test-audio",
+                      "label": "test-audio"
                     }
                   ]
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireless/cap"
+                  "id": "cli-reference/interface/wireless/cap",
+                  "label": "cap"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireless/channels"
+                  "id": "cli-reference/interface/wireless/channels",
+                  "label": "channels"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireless/connect-list"
+                  "id": "cli-reference/interface/wireless/connect-list",
+                  "label": "connect-list"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireless/frequency-monitor"
+                  "id": "cli-reference/interface/wireless/frequency-monitor",
+                  "label": "frequency-monitor"
                 },
                 {
                   "type": "category",
@@ -3673,41 +4223,50 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wireless/info/allowed-channels"
+                      "id": "cli-reference/interface/wireless/info/allowed-channels",
+                      "label": "allowed-channels"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wireless/info/country-info"
+                      "id": "cli-reference/interface/wireless/info/country-info",
+                      "label": "country-info"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wireless/info/country-list"
+                      "id": "cli-reference/interface/wireless/info/country-list",
+                      "label": "country-list"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wireless/info/default-scan-list"
+                      "id": "cli-reference/interface/wireless/info/default-scan-list",
+                      "label": "default-scan-list"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wireless/info/hw-info"
+                      "id": "cli-reference/interface/wireless/info/hw-info",
+                      "label": "hw-info"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wireless/info/scan-list"
+                      "id": "cli-reference/interface/wireless/info/scan-list",
+                      "label": "scan-list"
                     }
                   ]
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireless/interworking-profiles"
+                  "id": "cli-reference/interface/wireless/interworking-profiles",
+                  "label": "interworking-profiles"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireless/manual-tx-power-table"
+                  "id": "cli-reference/interface/wireless/manual-tx-power-table",
+                  "label": "manual-tx-power-table"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireless/monitor"
+                  "id": "cli-reference/interface/wireless/monitor",
+                  "label": "monitor"
                 },
                 {
                   "type": "category",
@@ -3719,17 +4278,20 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wireless/nstreme-dual/monitor"
+                      "id": "cli-reference/interface/wireless/nstreme-dual/monitor",
+                      "label": "monitor"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wireless/nstreme-dual/reset-counters"
+                      "id": "cli-reference/interface/wireless/nstreme-dual/reset-counters",
+                      "label": "reset-counters"
                     }
                   ]
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireless/nstreme"
+                  "id": "cli-reference/interface/wireless/nstreme",
+                  "label": "nstreme"
                 },
                 {
                   "type": "category",
@@ -3741,29 +4303,35 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wireless/registration-table/reset-counters"
+                      "id": "cli-reference/interface/wireless/registration-table/reset-counters",
+                      "label": "reset-counters"
                     }
                   ]
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireless/reset-configuration"
+                  "id": "cli-reference/interface/wireless/reset-configuration",
+                  "label": "reset-configuration"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireless/reset-mac-address"
+                  "id": "cli-reference/interface/wireless/reset-mac-address",
+                  "label": "reset-mac-address"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireless/scan"
+                  "id": "cli-reference/interface/wireless/scan",
+                  "label": "scan"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireless/security-profiles"
+                  "id": "cli-reference/interface/wireless/security-profiles",
+                  "label": "security-profiles"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireless/setup-repeater"
+                  "id": "cli-reference/interface/wireless/setup-repeater",
+                  "label": "setup-repeater"
                 },
                 {
                   "type": "category",
@@ -3775,15 +4343,18 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wireless/sniffer/packet"
+                      "id": "cli-reference/interface/wireless/sniffer/packet",
+                      "label": "packet"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wireless/sniffer/save"
+                      "id": "cli-reference/interface/wireless/sniffer/save",
+                      "label": "save"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wireless/sniffer/sniff"
+                      "id": "cli-reference/interface/wireless/sniffer/sniff",
+                      "label": "sniff"
                     }
                   ]
                 },
@@ -3797,17 +4368,20 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wireless/snooper/flat-snoop"
+                      "id": "cli-reference/interface/wireless/snooper/flat-snoop",
+                      "label": "flat-snoop"
                     },
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wireless/snooper/snoop"
+                      "id": "cli-reference/interface/wireless/snooper/snoop",
+                      "label": "snoop"
                     }
                   ]
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireless/spectral-scan"
+                  "id": "cli-reference/interface/wireless/spectral-scan",
+                  "label": "spectral-scan"
                 },
                 {
                   "type": "category",
@@ -3819,17 +4393,20 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/interface/wireless/wds/monitor"
+                      "id": "cli-reference/interface/wireless/wds/monitor",
+                      "label": "monitor"
                     }
                   ]
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireless/wps-client"
+                  "id": "cli-reference/interface/wireless/wps-client",
+                  "label": "wps-client"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/interface/wireless/wps-push-button"
+                  "id": "cli-reference/interface/wireless/wps-push-button",
+                  "label": "wps-push-button"
                 }
               ]
             }
@@ -3845,7 +4422,8 @@
           "items": [
             {
               "type": "doc",
-              "id": "cli-reference/lcd/backlight"
+              "id": "cli-reference/lcd/backlight",
+              "label": "backlight"
             },
             {
               "type": "category",
@@ -3857,43 +4435,52 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/lcd/interface/default-wireless"
+                  "id": "cli-reference/lcd/interface/default-wireless",
+                  "label": "default-wireless"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/lcd/interface/display"
+                  "id": "cli-reference/lcd/interface/display",
+                  "label": "display"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/lcd/interface/pages"
+                  "id": "cli-reference/lcd/interface/pages",
+                  "label": "pages"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "cli-reference/lcd/pin"
+              "id": "cli-reference/lcd/pin",
+              "label": "pin"
             },
             {
               "type": "doc",
-              "id": "cli-reference/lcd/recalibrate"
+              "id": "cli-reference/lcd/recalibrate",
+              "label": "recalibrate"
             },
             {
               "type": "doc",
-              "id": "cli-reference/lcd/screen"
+              "id": "cli-reference/lcd/screen",
+              "label": "screen"
             },
             {
               "type": "doc",
-              "id": "cli-reference/lcd/show"
+              "id": "cli-reference/lcd/show",
+              "label": "show"
             },
             {
               "type": "doc",
-              "id": "cli-reference/lcd/take-screenshot"
+              "id": "cli-reference/lcd/take-screenshot",
+              "label": "take-screenshot"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "cli-reference/log"
+          "id": "cli-reference/log",
+          "label": "log"
         },
         {
           "type": "category",
@@ -3905,19 +4492,23 @@
           "items": [
             {
               "type": "doc",
-              "id": "cli-reference/openflow/flow"
+              "id": "cli-reference/openflow/flow",
+              "label": "flow"
             },
             {
               "type": "doc",
-              "id": "cli-reference/openflow/group"
+              "id": "cli-reference/openflow/group",
+              "label": "group"
             },
             {
               "type": "doc",
-              "id": "cli-reference/openflow/meter"
+              "id": "cli-reference/openflow/meter",
+              "label": "meter"
             },
             {
               "type": "doc",
-              "id": "cli-reference/openflow/port"
+              "id": "cli-reference/openflow/port",
+              "label": "port"
             }
           ]
         },
@@ -3931,29 +4522,35 @@
           "items": [
             {
               "type": "doc",
-              "id": "cli-reference/partitions/activate"
+              "id": "cli-reference/partitions/activate",
+              "label": "activate"
             },
             {
               "type": "doc",
-              "id": "cli-reference/partitions/copy-to"
+              "id": "cli-reference/partitions/copy-to",
+              "label": "copy-to"
             },
             {
               "type": "doc",
-              "id": "cli-reference/partitions/repartition"
+              "id": "cli-reference/partitions/repartition",
+              "label": "repartition"
             },
             {
               "type": "doc",
-              "id": "cli-reference/partitions/restore-config-from"
+              "id": "cli-reference/partitions/restore-config-from",
+              "label": "restore-config-from"
             },
             {
               "type": "doc",
-              "id": "cli-reference/partitions/save-config-to"
+              "id": "cli-reference/partitions/save-config-to",
+              "label": "save-config-to"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "cli-reference/password"
+          "id": "cli-reference/password",
+          "label": "password"
         },
         {
           "type": "category",
@@ -3965,13 +4562,15 @@
           "items": [
             {
               "type": "doc",
-              "id": "cli-reference/port/remote-access"
+              "id": "cli-reference/port/remote-access",
+              "label": "remote-access"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "cli-reference/quit"
+          "id": "cli-reference/quit",
+          "label": "quit"
         },
         {
           "type": "category",
@@ -3991,31 +4590,37 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/radius/incoming/monitor"
+                  "id": "cli-reference/radius/incoming/monitor",
+                  "label": "monitor"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/radius/incoming/reset-counters"
+                  "id": "cli-reference/radius/incoming/reset-counters",
+                  "label": "reset-counters"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "cli-reference/radius/monitor"
+              "id": "cli-reference/radius/monitor",
+              "label": "monitor"
             },
             {
               "type": "doc",
-              "id": "cli-reference/radius/reset-counters"
+              "id": "cli-reference/radius/reset-counters",
+              "label": "reset-counters"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "cli-reference/redo"
+          "id": "cli-reference/redo",
+          "label": "redo"
         },
         {
           "type": "doc",
-          "id": "cli-reference/safe-mode"
+          "id": "cli-reference/safe-mode",
+          "label": "safe-mode"
         },
         {
           "type": "category",
@@ -4027,17 +4632,20 @@
           "items": [
             {
               "type": "doc",
-              "id": "cli-reference/snmp/community"
+              "id": "cli-reference/snmp/community",
+              "label": "community"
             },
             {
               "type": "doc",
-              "id": "cli-reference/snmp/send-trap"
+              "id": "cli-reference/snmp/send-trap",
+              "label": "send-trap"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "cli-reference/special-login"
+          "id": "cli-reference/special-login",
+          "label": "special-login"
         },
         {
           "type": "category",
@@ -4049,15 +4657,18 @@
           "items": [
             {
               "type": "doc",
-              "id": "cli-reference/task/add"
+              "id": "cli-reference/task/add",
+              "label": "add"
             },
             {
               "type": "doc",
-              "id": "cli-reference/task/next"
+              "id": "cli-reference/task/next",
+              "label": "next"
             },
             {
               "type": "doc",
-              "id": "cli-reference/task/terminate"
+              "id": "cli-reference/task/terminate",
+              "label": "terminate"
             }
           ]
         },
@@ -4071,13 +4682,15 @@
           "items": [
             {
               "type": "doc",
-              "id": "cli-reference/tr069-client/reset-tr069-config"
+              "id": "cli-reference/tr069-client/reset-tr069-config",
+              "label": "reset-tr069-config"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "cli-reference/undo"
+          "id": "cli-reference/undo",
+          "label": "undo"
         },
         {
           "type": "category",
@@ -4089,23 +4702,28 @@
           "items": [
             {
               "type": "doc",
-              "id": "cli-reference/user/aaa"
+              "id": "cli-reference/user/aaa",
+              "label": "aaa"
             },
             {
               "type": "doc",
-              "id": "cli-reference/user/active"
+              "id": "cli-reference/user/active",
+              "label": "active"
             },
             {
               "type": "doc",
-              "id": "cli-reference/user/expire-password"
+              "id": "cli-reference/user/expire-password",
+              "label": "expire-password"
             },
             {
               "type": "doc",
-              "id": "cli-reference/user/group"
+              "id": "cli-reference/user/group",
+              "label": "group"
             },
             {
               "type": "doc",
-              "id": "cli-reference/user/settings"
+              "id": "cli-reference/user/settings",
+              "label": "settings"
             },
             {
               "type": "category",
@@ -4117,7 +4735,8 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/user/ssh-keys/import"
+                  "id": "cli-reference/user/ssh-keys/import",
+                  "label": "import"
                 },
                 {
                   "type": "category",
@@ -4129,7 +4748,8 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "cli-reference/user/ssh-keys/private/import"
+                      "id": "cli-reference/user/ssh-keys/private/import",
+                      "label": "import"
                     }
                   ]
                 }
@@ -4147,11 +4767,13 @@
           "items": [
             {
               "type": "doc",
-              "id": "cli-reference/user-manager/advanced"
+              "id": "cli-reference/user-manager/advanced",
+              "label": "advanced"
             },
             {
               "type": "doc",
-              "id": "cli-reference/user-manager/attribute"
+              "id": "cli-reference/user-manager/attribute",
+              "label": "attribute"
             },
             {
               "type": "category",
@@ -4163,45 +4785,55 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/user-manager/database/load"
+                  "id": "cli-reference/user-manager/database/load",
+                  "label": "load"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/user-manager/database/migrate-legacy-db"
+                  "id": "cli-reference/user-manager/database/migrate-legacy-db",
+                  "label": "migrate-legacy-db"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/user-manager/database/optimize-db"
+                  "id": "cli-reference/user-manager/database/optimize-db",
+                  "label": "optimize-db"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/user-manager/database/save"
+                  "id": "cli-reference/user-manager/database/save",
+                  "label": "save"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "cli-reference/user-manager/generate-report"
+              "id": "cli-reference/user-manager/generate-report",
+              "label": "generate-report"
             },
             {
               "type": "doc",
-              "id": "cli-reference/user-manager/limitation"
+              "id": "cli-reference/user-manager/limitation",
+              "label": "limitation"
             },
             {
               "type": "doc",
-              "id": "cli-reference/user-manager/monitor"
+              "id": "cli-reference/user-manager/monitor",
+              "label": "monitor"
             },
             {
               "type": "doc",
-              "id": "cli-reference/user-manager/payment"
+              "id": "cli-reference/user-manager/payment",
+              "label": "payment"
             },
             {
               "type": "doc",
-              "id": "cli-reference/user-manager/profile-limitation"
+              "id": "cli-reference/user-manager/profile-limitation",
+              "label": "profile-limitation"
             },
             {
               "type": "doc",
-              "id": "cli-reference/user-manager/profile"
+              "id": "cli-reference/user-manager/profile",
+              "label": "profile"
             },
             {
               "type": "category",
@@ -4213,11 +4845,13 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/user-manager/router/monitor"
+                  "id": "cli-reference/user-manager/router/monitor",
+                  "label": "monitor"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/user-manager/router/reset-counters"
+                  "id": "cli-reference/user-manager/router/reset-counters",
+                  "label": "reset-counters"
                 }
               ]
             },
@@ -4231,7 +4865,8 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/user-manager/session/close-session"
+                  "id": "cli-reference/user-manager/session/close-session",
+                  "label": "close-session"
                 }
               ]
             },
@@ -4245,19 +4880,23 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/user-manager/user/add-batch-users"
+                  "id": "cli-reference/user-manager/user/add-batch-users",
+                  "label": "add-batch-users"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/user-manager/user/generate-voucher"
+                  "id": "cli-reference/user-manager/user/generate-voucher",
+                  "label": "generate-voucher"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/user-manager/user/group"
+                  "id": "cli-reference/user-manager/user/group",
+                  "label": "group"
                 },
                 {
                   "type": "doc",
-                  "id": "cli-reference/user-manager/user/monitor"
+                  "id": "cli-reference/user-manager/user/monitor",
+                  "label": "monitor"
                 }
               ]
             },
@@ -4271,7 +4910,8 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/user-manager/user-profile/activate-user-profile"
+                  "id": "cli-reference/user-manager/user-profile/activate-user-profile",
+                  "label": "activate-user-profile"
                 }
               ]
             }
@@ -4295,13 +4935,15 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/zerotier/controller/member"
+                  "id": "cli-reference/zerotier/controller/member",
+                  "label": "member"
                 }
               ]
             },
             {
               "type": "doc",
-              "id": "cli-reference/zerotier/interface"
+              "id": "cli-reference/zerotier/interface",
+              "label": "interface"
             },
             {
               "type": "category",
@@ -4313,7 +4955,8 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "cli-reference/zerotier/peer/hint"
+                  "id": "cli-reference/zerotier/peer/hint",
+                  "label": "hint"
                 }
               ]
             }

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/wiliot/enable"
 sidebar_position: 4
 title: "enable"
+description: 'RouterOS command reference for /iot/wiliot/enable.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/wiliot/enable
 captured_at: '2026-11-01T21:28:21+08:00'
 ---

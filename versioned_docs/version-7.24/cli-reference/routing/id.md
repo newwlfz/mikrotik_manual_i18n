@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/id"
 sidebar_position: 7
 title: "id"
+description: 'Global Router ID election configuration. The Router ID can be configured explicitly or elected from one of the router''s IP addresses.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/id
 captured_at: '2026-11-01T21:29:33+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "wireless/index"
 sidebar_position: 6
 title: "Wireless"
+description: 'This section introduces MikroTik RouterOS wireless configuration, covering package selection for different CPU types and frequency bands (2.4GHz, 5GHz, 60GHz), use cases for home access points and industrial links,...'
 source: https://manual.mikrotik.com/docs/7.24/wireless
 captured_at: '2026-11-04T11:34:57+08:00'
 ---

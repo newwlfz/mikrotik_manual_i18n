@@ -2,6 +2,7 @@
 sidebar_key: "storage/rsync"
 sidebar_position: 9
 title: "Rsync"
+description: 'Rsync in RouterOS allows efficient file synchronization between systems using ipsec encryption, with configurable local/remote paths and modes for upload/download. Dynamic IPsec entries are created when a password is...'
 source: https://manual.mikrotik.com/docs/7.24/storage/rsync
 captured_at: '2026-11-04T11:33:15+08:00'
 ---

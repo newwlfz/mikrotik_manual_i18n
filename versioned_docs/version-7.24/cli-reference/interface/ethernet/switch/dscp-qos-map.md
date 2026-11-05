@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/dscp-qos-map"
 sidebar_position: 2
 title: "dscp-qos-map"
+description: 'RouterOS directory reference for /interface/ethernet/switch/dscp-qos-map.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/dscp-qos-map
 captured_at: '2026-11-01T21:27:09+08:00'
 ---

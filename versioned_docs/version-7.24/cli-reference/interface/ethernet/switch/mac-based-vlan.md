@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/mac-based-vlan"
 sidebar_position: 11
 title: "mac-based-vlan"
+description: 'RouterOS directory reference for /interface/ethernet/switch/mac-based-vlan.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/mac-based-vlan
 captured_at: '2026-11-01T21:27:12+08:00'
 ---

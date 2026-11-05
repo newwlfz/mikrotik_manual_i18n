@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/bonding/index"
 sidebar_position: 1
 title: "bonding"
+description: 'RouterOS directory reference for /interface/bonding.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bonding
 captured_at: '2026-11-01T21:26:59+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "storage/tmpfs"
 sidebar_position: 12
 title: "Tmpfs"
+description: 'Tmpfs enables using RAM as a filesystem, with configurable maximum size but cleared on reboot or power loss.'
 source: https://manual.mikrotik.com/docs/7.24/storage/tmpfs
 captured_at: '2026-11-04T11:33:20+08:00'
 ---

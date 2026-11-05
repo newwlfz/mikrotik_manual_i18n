@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/nstreme-dual/index"
 sidebar_position: 1
 title: "nstreme-dual"
+description: 'RouterOS directory reference for /interface/wireless/nstreme-dual.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/nstreme-dual
 captured_at: '2026-11-01T21:28:02+08:00'
 ---

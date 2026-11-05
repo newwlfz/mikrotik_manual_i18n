@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/filter/community-list"
 sidebar_position: 4
 title: "community-list"
+description: 'RouterOS directory reference for /routing/filter/community-list.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/filter/community-list
 captured_at: '2026-11-01T21:29:30+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/bgp/session/resend"
 sidebar_position: 5
 title: "resend"
+description: 'Resend prefixes to a specified BGP session. The command takes two arguments:'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/bgp/session/resend
 captured_at: '2026-11-01T21:29:28+08:00'
 ---

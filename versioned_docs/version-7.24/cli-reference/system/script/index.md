@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/script/index"
 sidebar_position: 2
 title: "script"
+description: 'RouterOS directory reference for /system/script.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/script
 captured_at: '2026-11-01T21:30:06+08:00'
 ---

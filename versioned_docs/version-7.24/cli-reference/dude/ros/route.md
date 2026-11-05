@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/dude/ros/route"
 sidebar_position: 11
 title: "route"
+description: 'RouterOS directory reference for /dude/ros/route.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/dude/ros/route
 captured_at: '2026-11-01T21:26:52+08:00'
 ---

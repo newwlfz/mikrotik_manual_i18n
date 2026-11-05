@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/health"
 sidebar_position: 13
 title: "Health"
+description: 'This page documents MikroTik RouterOS hardware health monitoring features, detailing metrics like temperature, voltage, fan speed, and CPU status for supported devices. It includes CLI examples, warnings about device...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/health
 captured_at: '2026-11-04T11:27:55+08:00'
 ---

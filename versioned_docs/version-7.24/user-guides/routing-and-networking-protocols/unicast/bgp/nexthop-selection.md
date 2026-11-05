@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/unicast/bgp/nexthop-selection"
 sidebar_position: 4
 title: "Nexthop Selection"
+description: 'BGP nexthop selection procedures on input and output.'
 slug: /user-guides/routing-and-networking-protocols/unicast/bgp/nexthop-selection
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/bgp/nexthop-selection
 captured_at: '2026-11-04T11:34:07+08:00'

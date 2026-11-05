@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/route-distinguisher-and-route-target"
 sidebar_position: 7
 title: "Route Distinguisher and Route Target"
+description: 'Route Distinguisher (RD) adds unique prefixes to customer addresses for VRF differentiation, while Route Targets control BGP routing information exchange between instances.'
 slug: /user-guides/routing-and-networking-protocols/route-distinguisher-and-route-target
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/route-distinguisher-and-route-target
 captured_at: '2026-11-04T11:33:58+08:00'

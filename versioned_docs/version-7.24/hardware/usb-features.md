@@ -2,6 +2,7 @@
 sidebar_key: "hardware/usb-features"
 sidebar_position: 13
 title: "USB Features"
+description: 'This page documents USB features in MikroTik RouterOS, including USB power reset functionality with configurable duration and bus selection, USB port type routing options (auto/USB-type-A/mini-PCIe), and micro USB...'
 source: https://manual.mikrotik.com/docs/7.24/hardware/usb-features
 captured_at: '2026-11-04T11:29:36+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/kid-control/pause"
 sidebar_position: 3
 title: "pause"
+description: 'RouterOS command reference for /ip/kid-control/pause.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/kid-control/pause
 captured_at: '2026-11-01T21:28:49+08:00'
 ---

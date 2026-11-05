@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/bgp/template"
 sidebar_position: 7
 title: "template"
+description: 'RouterOS directory reference for /routing/bgp/template.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/bgp/template
 captured_at: '2026-11-01T21:29:28+08:00'
 ---

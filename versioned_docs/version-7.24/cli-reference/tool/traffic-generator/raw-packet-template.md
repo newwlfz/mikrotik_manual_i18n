@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/traffic-generator/raw-packet-template"
 sidebar_position: 7
 title: "raw-packet-template"
+description: 'RouterOS directory reference for /tool/traffic-generator/raw-packet-template.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/traffic-generator/raw-packet-template
 captured_at: '2026-11-01T21:30:27+08:00'
 ---

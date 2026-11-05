@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/firewall/common-firewall-matchers-and-actions"
 sidebar_position: 2
 title: "Common Firewall Matchers and Actions"
+description: 'This page explains MikroTik RouterOS firewall statistics and commands, detailing how to view matching stats for IPv4/IPv6 rules, reset counters, and lists common matchers like MAC addresses, interfaces, IP ranges,...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/firewall/common-firewall-matchers-and-actions
 captured_at: '2026-11-04T11:28:08+08:00'
 ---

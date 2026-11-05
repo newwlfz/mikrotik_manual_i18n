@@ -2,6 +2,7 @@
 sidebar_key: "mobile-networking/lte-5g"
 sidebar_position: 1
 title: "LTE/5G"
+description: 'This page documents LTE and 5G configuration in MikroTik RouterOS, covering interface setup, APN profiles, LTE settings, and operational modes including MBIM support in RouterOS v7. It includes CLI commands for...'
 source: https://manual.mikrotik.com/docs/7.24/mobile-networking/lte-5g
 captured_at: '2026-11-04T11:32:53+08:00'
 ---

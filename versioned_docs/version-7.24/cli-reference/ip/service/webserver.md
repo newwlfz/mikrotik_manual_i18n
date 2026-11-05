@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/service/webserver"
 sidebar_position: 2
 title: "webserver"
+description: 'RouterOS settings reference for /ip/service/webserver.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/service/webserver
 captured_at: '2026-11-01T21:28:56+08:00'
 ---

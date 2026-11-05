@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user-manager/generate-report"
 sidebar_position: 4
 title: "generate-report"
+description: 'RouterOS command reference for /user-manager/generate-report.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/generate-report
 captured_at: '2026-11-01T21:30:30+08:00'
 ---

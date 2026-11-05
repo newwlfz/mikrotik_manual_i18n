@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/ntp/client/servers"
 sidebar_position: 3
 title: "servers"
+description: 'RouterOS directory reference for /system/ntp/client/servers.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/ntp/client/servers
 captured_at: '2026-11-01T21:29:55+08:00'
 ---

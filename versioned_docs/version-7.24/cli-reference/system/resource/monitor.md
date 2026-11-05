@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/resource/monitor"
 sidebar_position: 5
 title: "monitor"
+description: 'RouterOS command reference for /system/resource/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/resource/monitor
 captured_at: '2026-11-01T21:30:05+08:00'
 ---

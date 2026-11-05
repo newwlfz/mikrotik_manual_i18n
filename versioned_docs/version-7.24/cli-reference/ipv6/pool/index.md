@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ipv6/pool/index"
 sidebar_position: 1
 title: "pool"
+description: 'IP pools are used to define ipv6 prefixes that can be used by various RouterOS utilities, for example, DHCP server, Point-to-Point servers and more. Whenever possible, the same IPv6 prefix is given out to each client...'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/pool
 captured_at: '2026-11-01T21:29:09+08:00'
 ---

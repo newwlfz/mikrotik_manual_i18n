@@ -2,6 +2,7 @@
 sidebar_key: "storage/index"
 sidebar_position: 13
 title: "Storage"
+description: 'This page documents RouterOS storage features including disk encryption, RAID configurations, Btrfs/XFS filesystems, network protocols like iSCSI and NFS, media sharing via DLNA, file synchronization with rsync, and...'
 source: https://manual.mikrotik.com/docs/7.24/storage
 captured_at: '2026-11-04T11:32:50+08:00'
 ---

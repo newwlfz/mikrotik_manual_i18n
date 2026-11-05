@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/cloud/back-to-home-file/settings/index"
 sidebar_position: 1
 title: "settings"
+description: 'RouterOS settings reference for /ip/cloud/back-to-home-file/settings.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/cloud/back-to-home-file/settings
 captured_at: '2026-11-01T21:28:24+08:00'
 ---

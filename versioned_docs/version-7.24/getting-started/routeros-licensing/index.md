@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/routeros-licensing/index"
 sidebar_position: 2
 title: "RouterOS License Keys"
+description: 'RouterOS licensing is explained with details on Software ID and System ID for MikroTik hardware, CHR, and x86 systems. Separate guides cover licensing specifics for each platform along with installation instructions.'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/routeros-licensing
 captured_at: '2026-11-04T11:28:53+08:00'
 ---

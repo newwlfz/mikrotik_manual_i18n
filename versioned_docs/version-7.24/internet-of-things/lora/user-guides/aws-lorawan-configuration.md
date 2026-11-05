@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/lora/user-guides/aws-lorawan-configuration"
 sidebar_position: 1
 title: "AWS LoRaWAN configuration"
+description: 'This page guides users through configuring AWS LoRaWAN integration on MikroTik RouterOS, covering gateway registration in AWS IoT Core, certificate generation and importation, and server setup for LNS connectivity.'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/lora/user-guides/aws-lorawan-configuration
 captured_at: '2026-11-04T11:31:28+08:00'
 ---

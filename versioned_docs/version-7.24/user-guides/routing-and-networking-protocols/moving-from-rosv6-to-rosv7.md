@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/moving-from-rosv6-to-rosv7"
 sidebar_position: 3
 title: "Moving from ROSv6 to ROSv7"
+description: 'This page documents the transition from RouterOS v6 to v7, highlighting key changes such as increased routing table limits, new /routing/table and /routing/rule menus, improved route processing speed, and differences...'
 slug: /user-guides/routing-and-networking-protocols/moving-from-rosv6-to-rosv7
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/moving-from-rosv6-to-rosv7
 captured_at: '2026-11-04T11:34:06+08:00'

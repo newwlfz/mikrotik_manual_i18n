@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/installation-and-upgrade/install/chr-installation/index"
 sidebar_position: 6
 title: "CHR: Installation"
+description: 'This page provides an overview of installing and configuring Cloud Hosted Router (CHR) on virtual environments, covering system requirements, RAM calculations, disk image formats, download instructions, VM setup, and...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/install/chr-installation
 captured_at: '2026-11-04T11:28:35+08:00'
 ---

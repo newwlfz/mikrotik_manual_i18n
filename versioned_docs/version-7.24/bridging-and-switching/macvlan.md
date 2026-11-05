@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/macvlan"
 sidebar_position: 5
 title: "MACVLAN"
+description: 'MACVLAN allows creating multiple virtual network interfaces with unique MAC addresses on a physical interface, enabling efficient IP address management and distinct PPPoE connections. It operates at the MAC level...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/macvlan
 captured_at: '2026-11-04T11:27:06+08:00'
 ---

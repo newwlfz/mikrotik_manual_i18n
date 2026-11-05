@@ -2,6 +2,7 @@
 sidebar_key: "management-tools/dude"
 sidebar_position: 12
 title: "Dude"
+description: 'Dude is a legacy network management tool discontinued by MikroTik, now offered without further updates or enhancements. Users are advised to exercise caution and consider alternative solutions for network management...'
 source: https://manual.mikrotik.com/docs/7.24/management-tools/dude
 captured_at: '2026-11-04T11:32:00+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/pwr-line/configure"
 sidebar_position: 2
 title: "configure"
+description: 'RouterOS command reference for /interface/pwr-line/configure.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/pwr-line/configure
 captured_at: '2026-11-01T21:27:36+08:00'
 ---

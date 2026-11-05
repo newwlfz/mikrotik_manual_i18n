@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/qos/port/index"
 sidebar_position: 1
 title: "port"
+description: 'RouterOS directory reference for /interface/ethernet/switch/qos/port.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/qos/port
 captured_at: '2026-11-01T21:27:16+08:00'
 ---

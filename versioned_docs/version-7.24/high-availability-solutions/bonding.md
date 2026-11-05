@@ -2,6 +2,7 @@
 sidebar_key: "high-availability-solutions/bonding"
 sidebar_position: 1
 title: "Bonding"
+description: 'Bonding allows combining multiple ethernet interfaces into a single virtual link for higher bandwidth and failover, with MikroTik RouterOS supporting various modes including LACP and hardware offloading for specific...'
 source: https://manual.mikrotik.com/docs/7.24/high-availability-solutions/bonding
 captured_at: '2026-11-04T11:29:47+08:00'
 ---

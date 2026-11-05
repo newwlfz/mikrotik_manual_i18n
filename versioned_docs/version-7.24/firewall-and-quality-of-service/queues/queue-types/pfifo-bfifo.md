@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/queues/queue-types/pfifo-bfifo"
 sidebar_position: 3
 title: "PFIFO,BFIFO"
+description: 'PFIFO and BFIFO are MikroTik RouterOS queue management strategies following FIFO principles, with PFIFO prioritizing packets by arrival order and BFIFO managing byte-based bandwidth allocation. Both ensure fairness...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/queues/queue-types/pfifo-bfifo
 captured_at: '2026-11-04T11:28:18+08:00'
 ---

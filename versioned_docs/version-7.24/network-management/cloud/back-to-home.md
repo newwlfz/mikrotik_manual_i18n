@@ -2,6 +2,7 @@
 sidebar_key: "network-management/cloud/back-to-home"
 sidebar_position: 1
 title: "Back To Home"
+description: 'Back To Home enables secure VPN access from anywhere to your router, even if it lacks a public IP or is behind NAT. It uses MikroTik relay servers for indirect connections, ensuring end-to-end encryption without...'
 source: https://manual.mikrotik.com/docs/7.24/network-management/cloud/back-to-home
 captured_at: '2026-11-03T15:24:31+08:00'
 ---

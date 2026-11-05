@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/gpio/using-gpio-as-pulse-input-from-meter"
 sidebar_position: 3
 title: "Using the GPIO as pulse input from a meter device"
+description: 'Use a MikroTik device''s GPIO as a pulse input to read water, energy, or other meters, with a RouterOS script that counts the pulses.'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/gpio/using-gpio-as-pulse-input-from-meter
 captured_at: '2026-11-04T11:31:11+08:00'
 ---

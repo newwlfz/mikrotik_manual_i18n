@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/caps-man/manager/index"
 sidebar_position: 1
 title: "manager"
+description: 'RouterOS settings reference for /caps-man/manager.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/caps-man/manager
 captured_at: '2026-11-01T21:26:21+08:00'
 ---

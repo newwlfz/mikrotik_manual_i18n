@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/traffic-flow/ipfix"
 sidebar_position: 2
 title: "ipfix"
+description: 'RouterOS settings reference for /ip/traffic-flow/ipfix.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/traffic-flow/ipfix
 captured_at: '2026-11-01T21:29:00+08:00'
 ---

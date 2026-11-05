@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/pimsm/static-rp"
 sidebar_position: 8
 title: "static-rp"
+description: 'The static-rp menu allows manually defining the multicast group to RP mappings. Such a mechanism is not robust to failures but does at least provide a basic interoperability mechanism.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/pimsm/static-rp
 captured_at: '2026-11-01T21:29:38+08:00'
 ---

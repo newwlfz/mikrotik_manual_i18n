@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/ipsec/installed-sa/index"
 sidebar_position: 2
 title: "installed-sa"
+description: 'RouterOS directory reference for /ip/ipsec/installed-sa.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/ipsec/installed-sa
 captured_at: '2026-11-01T21:28:42+08:00'
 ---

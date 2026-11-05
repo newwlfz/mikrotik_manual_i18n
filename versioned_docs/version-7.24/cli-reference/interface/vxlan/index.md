@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/vxlan/index"
 sidebar_position: 2
 title: "vxlan"
+description: 'RouterOS directory reference for /interface/vxlan.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/vxlan
 captured_at: '2026-11-01T21:27:42+08:00'
 ---

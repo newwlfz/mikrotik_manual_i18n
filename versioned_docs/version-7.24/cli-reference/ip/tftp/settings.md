@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/tftp/settings"
 sidebar_position: 2
 title: "settings"
+description: 'RouterOS settings reference for /ip/tftp/settings.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/tftp/settings
 captured_at: '2026-11-01T21:28:58+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/one2one-vlan-switching"
 sidebar_position: 13
 title: "one2one-vlan-switching"
+description: 'RouterOS directory reference for /interface/ethernet/switch/one2one-vlan-switching.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/one2one-vlan-switching
 captured_at: '2026-11-01T21:27:14+08:00'
 ---

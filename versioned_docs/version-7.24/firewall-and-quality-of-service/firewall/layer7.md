@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/firewall/layer7"
 sidebar_position: 6
 title: "Layer7"
+description: 'Layer7 protocol inspection in MikroTik RouterOS searches for patterns in network traffic streams, collecting initial packet data to identify specific protocols. It requires careful configuration for bidirectional...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/firewall/layer7
 captured_at: '2026-11-04T11:28:09+08:00'
 ---

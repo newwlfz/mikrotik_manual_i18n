@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/romon/ssh"
 sidebar_position: 5
 title: "ssh"
+description: 'RouterOS command reference for /tool/romon/ssh.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/romon/ssh
 captured_at: '2026-11-01T21:30:20+08:00'
 ---

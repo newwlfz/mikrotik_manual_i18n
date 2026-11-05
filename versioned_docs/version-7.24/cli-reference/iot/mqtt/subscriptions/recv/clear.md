@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/mqtt/subscriptions/recv/clear"
 sidebar_position: 1
 title: "clear"
+description: 'RouterOS command reference for /iot/mqtt/subscriptions/recv/clear.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/mqtt/subscriptions/recv/clear
 captured_at: '2026-11-01T21:28:19+08:00'
 ---

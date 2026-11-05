@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/traffic-generator/start"
 sidebar_position: 8
 title: "start"
+description: 'RouterOS command reference for /tool/traffic-generator/start.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/traffic-generator/start
 captured_at: '2026-11-01T21:30:25+08:00'
 ---

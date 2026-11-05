@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/mqtt/connect"
 sidebar_position: 2
 title: "connect"
+description: 'RouterOS command reference for /iot/mqtt/connect.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/mqtt/connect
 captured_at: '2026-11-01T21:28:20+08:00'
 ---

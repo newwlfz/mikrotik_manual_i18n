@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/port-isolation/index"
 sidebar_position: 1
 title: "port-isolation"
+description: 'RouterOS directory reference for /interface/ethernet/switch/port-isolation.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/port-isolation
 captured_at: '2026-11-01T21:27:13+08:00'
 ---

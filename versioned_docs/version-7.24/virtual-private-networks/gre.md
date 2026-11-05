@@ -2,6 +2,7 @@
 sidebar_key: "virtual-private-networks/gre"
 sidebar_position: 3
 title: "GRE"
+description: 'Generic Routing Encapsulation (GRE) is a tunneling protocol for encapsulating various network protocols over IP, implemented as virtual interfaces in RouterOS with optional keepalive and properties like MTU, MSS...'
 source: https://manual.mikrotik.com/docs/7.24/virtual-private-networks/gre
 captured_at: '2026-11-04T11:34:29+08:00'
 ---

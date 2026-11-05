@@ -2,6 +2,7 @@
 sidebar_key: "hardware/grounding"
 sidebar_position: 2
 title: "Grounding"
+description: 'Grounding requirements for MikroTik RouterOS devices emphasize proper installation of shielded cables, lightning arresters, and reliable grounding infrastructure using 2.5-4 mm² Cu wire with corrosion-resistant...'
 source: https://manual.mikrotik.com/docs/7.24/hardware/grounding
 captured_at: '2026-11-04T11:31:26+08:00'
 ---

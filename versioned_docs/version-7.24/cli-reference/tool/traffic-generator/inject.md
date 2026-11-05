@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/traffic-generator/inject"
 sidebar_position: 2
 title: "inject"
+description: 'RouterOS command reference for /tool/traffic-generator/inject.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/traffic-generator/inject
 captured_at: '2026-11-01T21:30:24+08:00'
 ---

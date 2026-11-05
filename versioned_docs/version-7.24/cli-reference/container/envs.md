@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/container/envs"
 sidebar_position: 2
 title: "envs"
+description: 'RouterOS directory reference for /container/envs.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/container/envs
 captured_at: '2026-11-01T21:26:37+08:00'
 ---

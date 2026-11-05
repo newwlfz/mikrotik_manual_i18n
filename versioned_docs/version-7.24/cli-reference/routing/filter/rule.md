@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/filter/rule"
 sidebar_position: 7
 title: "rule"
+description: 'RouterOS directory reference for /routing/filter/rule.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/filter/rule
 captured_at: '2026-11-01T21:29:30+08:00'
 ---

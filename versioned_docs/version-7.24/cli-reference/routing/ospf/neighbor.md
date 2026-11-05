@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/ospf/neighbor"
 sidebar_position: 6
 title: "neighbor"
+description: 'List of currently active OSPF neighbors.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/ospf/neighbor
 captured_at: '2026-11-01T21:29:36+08:00'
 ---

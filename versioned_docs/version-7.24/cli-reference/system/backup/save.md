@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/backup/save"
 sidebar_position: 3
 title: "save"
+description: 'RouterOS command reference for /system/backup/save.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/backup/save
 captured_at: '2026-11-01T21:29:45+08:00'
 ---

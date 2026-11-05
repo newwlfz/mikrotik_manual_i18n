@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/multicast/group-management-protocol"
 sidebar_position: 1
 title: "Group Management Protocol"
+description: 'Group Management Protocol enables interfaces to receive multicast streams without dedicated clients, supporting IGMP and MLD protocols. It allows testing multicast routing by sending membership reports and responding...'
 slug: /user-guides/routing-and-networking-protocols/multicast/group-management-protocol
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/multicast/group-management-protocol
 captured_at: '2026-11-04T11:33:57+08:00'

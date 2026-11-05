@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/bluetooth/user-guides/email-notification-mikrotik-ble-tag-s"
 sidebar_position: 2
 title: "Email notification on the MikroTik BLE tag's accelerometer triggers"
+description: 'In this guide, we will show a quick step-by-step on how you can set up your KNOT to send an e-mail notification, whenever it detects a "triggered" condition reported by the TG-BT5-IN or TG-BT5-OUT tag.'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/bluetooth/user-guides/email-notification-mikrotik-ble-tag-s
 captured_at: '2026-11-04T11:30:55+08:00'
 ---

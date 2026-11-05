@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/history"
 sidebar_position: 10
 title: "history"
+description: 'RouterOS directory reference for /system/history.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/history
 captured_at: '2026-11-01T21:29:50+08:00'
 ---

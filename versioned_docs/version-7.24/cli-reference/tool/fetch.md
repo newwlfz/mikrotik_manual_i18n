@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/fetch"
 sidebar_position: 6
 title: "fetch"
+description: 'RouterOS command reference for /tool/fetch.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/fetch
 captured_at: '2026-11-01T21:30:17+08:00'
 ---

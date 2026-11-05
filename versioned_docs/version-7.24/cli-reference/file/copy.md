@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/file/copy"
 sidebar_position: 1
 title: "copy"
+description: 'RouterOS command reference for /file/copy.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/file/copy
 captured_at: '2026-11-01T21:26:54+08:00'
 ---

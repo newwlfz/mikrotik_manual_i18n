@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/mqtt/subscriptions/recv/index"
 sidebar_position: 2
 title: "recv"
+description: 'RouterOS directory reference for /iot/mqtt/subscriptions/recv.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/mqtt/subscriptions/recv
 captured_at: '2026-11-01T21:28:19+08:00'
 ---

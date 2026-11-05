@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/stats"
 sidebar_position: 25
 title: "stats"
+description: 'RouterOS settings reference for /interface/ethernet/switch/stats.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/stats
 captured_at: '2026-11-01T21:27:19+08:00'
 ---

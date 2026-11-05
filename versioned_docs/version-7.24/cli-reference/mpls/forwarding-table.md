@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/mpls/forwarding-table"
 sidebar_position: 1
 title: "forwarding-table"
+description: 'RouterOS directory reference for /mpls/forwarding-table.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/mpls/forwarding-table
 captured_at: '2026-11-01T21:29:13+08:00'
 ---

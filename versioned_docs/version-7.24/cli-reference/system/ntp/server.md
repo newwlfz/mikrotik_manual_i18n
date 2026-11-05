@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/ntp/server"
 sidebar_position: 4
 title: "server"
+description: 'RouterOS settings reference for /system/ntp/server.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/ntp/server
 captured_at: '2026-11-01T21:29:57+08:00'
 ---

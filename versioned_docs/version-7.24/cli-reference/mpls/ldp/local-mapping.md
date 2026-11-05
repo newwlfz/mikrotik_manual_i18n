@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/mpls/ldp/local-mapping"
 sidebar_position: 5
 title: "local-mapping"
+description: 'This sub-menu shows labels bound to the routes locally in the router. In this menu, static mappings can also be configured if there is no intention to use LDP dynamically.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/mpls/ldp/local-mapping
 captured_at: '2026-11-01T21:29:15+08:00'
 ---

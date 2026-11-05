@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/disk/test"
 sidebar_position: 17
 title: "test"
+description: 'RouterOS command reference for /disk/test.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/disk/test
 captured_at: '2026-11-01T21:26:48+08:00'
 ---

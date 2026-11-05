@@ -2,6 +2,7 @@
 sidebar_key: "storage/btrfs/maintenance"
 sidebar_position: 2
 title: "Btrfs maintenance"
+description: 'This page covers Btrfs maintenance tasks including periodic scrubbing to detect and correct data corruption in RAID arrays, balancing to optimize storage space usage, and creating snapshots for data recovery. It...'
 source: https://manual.mikrotik.com/docs/7.24/storage/btrfs/maintenance
 captured_at: '2026-11-04T11:33:25+08:00'
 ---

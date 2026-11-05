@@ -2,6 +2,7 @@
 sidebar_key: "wireless/abgn/capsman/index"
 sidebar_position: 4
 title: "CAPsMAN"
+description: 'This page documents CAPsMAN (Centralized Access Point Management) in RouterOS, covering configuration of wireless controller settings including AAA authentication, RADIUS server integration, access lists for client...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/abgn/capsman
 captured_at: '2026-11-04T11:35:26+08:00'
 ---

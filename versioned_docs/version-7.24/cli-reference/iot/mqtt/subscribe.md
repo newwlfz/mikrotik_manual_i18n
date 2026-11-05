@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/mqtt/subscribe"
 sidebar_position: 6
 title: "subscribe"
+description: 'RouterOS command reference for /iot/mqtt/subscribe.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/mqtt/subscribe
 captured_at: '2026-11-01T21:28:18+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "authentication-authorization-accounting/dot1x"
 sidebar_position: 2
 title: "Dot1X"
+description: 'This page documents MikroTik RouterOS''s Dot1X implementation, covering client and server configurations for IEEE 802.1X port-based network access control using EAP methods like TLS, TTLS, and PEAP.'
 source: https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting/dot1x
 captured_at: '2026-11-04T11:27:04+08:00'
 ---

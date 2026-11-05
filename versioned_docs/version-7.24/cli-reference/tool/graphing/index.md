@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/graphing/index"
 sidebar_position: 1
 title: "graphing"
+description: 'RouterOS settings reference for /tool/graphing.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/graphing
 captured_at: '2026-11-01T21:30:15+08:00'
 ---

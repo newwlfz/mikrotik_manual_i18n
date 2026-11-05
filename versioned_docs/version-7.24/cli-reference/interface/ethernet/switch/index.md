@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/index"
 sidebar_position: 7
 title: "switch"
+description: 'RouterOS settings reference for /interface/ethernet/switch.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch
 captured_at: '2026-11-01T21:27:08+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/mpls/traffic-eng/flow"
 sidebar_position: 1
 title: "flow"
+description: 'RouterOS directory reference for /mpls/traffic-eng/flow.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/mpls/traffic-eng/flow
 captured_at: '2026-11-01T21:29:16+08:00'
 ---

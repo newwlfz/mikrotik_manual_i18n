@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/lora/general-properties"
 sidebar_position: 1
 title: "General Properties"
+description: 'This page documents the configuration settings for setting up a LoRaWAN gateway on MikroTik RouterOS, including antenna gain, channel plans, server connections, and traffic forwarding rules. It explains how to enable...'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/lora/general-properties
 captured_at: '2026-11-04T11:31:13+08:00'
 ---

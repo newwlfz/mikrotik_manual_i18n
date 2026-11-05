@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/dot1x/server/active"
 sidebar_position: 1
 title: "active"
+description: 'RouterOS directory reference for /interface/dot1x/server/active.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/dot1x/server/active
 captured_at: '2026-11-01T21:27:03+08:00'
 ---

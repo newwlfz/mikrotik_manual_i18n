@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples"
 sidebar_position: 4
 title: "CRS1xx/2xx series switches examples"
+description: 'This page provides configuration examples and use cases for Cloud Router Switch features on CRS1xx/2xx series switches, covering port switching, management access setup with VLAN filtering, and security...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples
 captured_at: '2026-11-04T11:27:42+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/mqtt/kaa-iot-setup"
 sidebar_position: 3
 title: "Kaa IoT setup"
+description: 'This page introduces Kaa IoT setup for MikroTik RouterOS, covering MQTT and HTTP protocol support, system resource monitoring via scripting, and Kaa IoT portal configuration steps including application/device...'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/mqtt/kaa-iot-setup
 captured_at: '2026-11-04T11:31:51+08:00'
 ---

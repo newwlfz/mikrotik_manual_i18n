@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/installation-and-upgrade/install/chr-installation/vultr"
 sidebar_position: 10
 title: "CHR: Vultr Installation"
+description: 'This page guides users through deploying MikroTik CHR on Vultr by first setting up a SystemRescue server, then writing the CHR image to disk using wget and dd commands, and finally connecting via SSH to configure the...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/install/chr-installation/vultr
 captured_at: '2026-11-04T11:28:43+08:00'
 ---

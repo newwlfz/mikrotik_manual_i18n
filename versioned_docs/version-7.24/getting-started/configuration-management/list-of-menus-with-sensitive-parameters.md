@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/configuration-management/list-of-menus-with-sensitive-parameters"
 sidebar_position: 6
 title: "List of menus with sensitive parameters"
+description: 'This page lists MikroTik RouterOS menus where sensitive parameters such as passwords, keys, and secrets are configured, with links to detailed documentation for each.'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/configuration-management/list-of-menus-with-sensitive-parameters
 captured_at: '2026-11-04T11:28:31+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/bluetooth/connections/read"
 sidebar_position: 6
 title: "read"
+description: 'RouterOS command reference for /iot/bluetooth/connections/read.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/bluetooth/connections/read
 captured_at: '2026-11-01T21:28:08+08:00'
 ---

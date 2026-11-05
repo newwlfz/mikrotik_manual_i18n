@@ -2,6 +2,7 @@
 sidebar_key: "mobile-networking/index"
 sidebar_position: 9
 title: "Mobile Networking"
+description: 'Mobile networking documentation provides configuration guides for LTE, 5G, GPS, SMS, PPP, Dual SIM, and MikroTik connectivity features to set up cellular services on RouterOS.'
 source: https://manual.mikrotik.com/docs/7.24/mobile-networking
 captured_at: '2026-11-04T11:32:10+08:00'
 ---

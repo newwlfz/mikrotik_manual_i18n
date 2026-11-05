@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ovpn-server/server/export-client-configuration"
 sidebar_position: 1
 title: "export-client-configuration"
+description: 'RouterOS command reference for /interface/ovpn-server/server/export-client-configuration.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ovpn-server/server/export-client-configuration
 captured_at: '2026-11-01T21:27:31+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "introduction"
 sidebar_position: 1
 title: "Introduction"
+description: 'MikroTik RouterOS is a powerful network operating system for MikroTik devices, offering routing, firewalling, VPN, wireless management, QoS, automation, and monitoring tools in one platform for network building and...'
 source: https://manual.mikrotik.com/docs/7.24/introduction
 captured_at: '2026-11-04T11:31:53+08:00'
 ---

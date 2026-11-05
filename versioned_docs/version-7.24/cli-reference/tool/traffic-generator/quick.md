@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/traffic-generator/quick"
 sidebar_position: 6
 title: "quick"
+description: 'RouterOS command reference for /tool/traffic-generator/quick.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/traffic-generator/quick
 captured_at: '2026-11-01T21:30:24+08:00'
 ---

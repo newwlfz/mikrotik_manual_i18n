@@ -2,6 +2,7 @@
 sidebar_key: "system-information-and-utilities/index"
 sidebar_position: 19
 title: "System Information and Utilities"
+description: 'This page provides an overview of system information and utilities in RouterOS, covering device identity management, clock synchronization via NTP, scheduler tasks, interface lists, and tools for file operations and...'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities
 captured_at: '2026-11-04T11:33:20+08:00'
 ---

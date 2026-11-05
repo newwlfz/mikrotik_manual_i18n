@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/supout-rif"
 sidebar_position: 10
 title: "Supout.rif"
+description: 'A supout.rif file is a MikroTik binary diagnostic tool containing router configuration, logs, and details to help support teams resolve issues efficiently. It can be generated via WinBox, Webfig, or the console and...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/supout-rif
 captured_at: '2026-11-04T11:29:20+08:00'
 ---

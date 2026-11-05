@@ -2,6 +2,7 @@
 sidebar_key: "storage/raid/moving-array"
 sidebar_position: 4
 title: "Moving your RAID array to a different device"
+description: 'This page explains how to move a RAID 5 array from an old device to a new one by creating the RAID on the new device, assigning member slots, ejecting disks from the old device, and finally transferring them to the...'
 source: https://manual.mikrotik.com/docs/7.24/storage/raid/moving-array
 captured_at: '2026-11-04T11:33:10+08:00'
 ---

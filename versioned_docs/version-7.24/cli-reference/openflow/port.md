@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/openflow/port"
 sidebar_position: 5
 title: "port"
+description: 'RouterOS directory reference for /openflow/port.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/openflow/port
 captured_at: '2026-11-01T21:29:19+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/dot1x/client"
 sidebar_position: 1
 title: "client"
+description: 'RouterOS directory reference for /interface/dot1x/client.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/dot1x/client
 captured_at: '2026-11-01T21:27:02+08:00'
 ---

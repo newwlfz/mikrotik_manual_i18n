@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/sstp-client/monitor"
 sidebar_position: 2
 title: "monitor"
+description: 'RouterOS command reference for /interface/sstp-client/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/sstp-client/monitor
 captured_at: '2026-11-01T21:27:40+08:00'
 ---

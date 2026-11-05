@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/routeros-licensing/chr/index"
 sidebar_position: 3
 title: "Cloud Hosted Router, CHR"
+description: 'Cloud Hosted Router (CHR) is a virtualized RouterOS edition for x8664 environments, offering core routing, firewall, VPN, and management features with guides for installation and licensing.'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/routeros-licensing/chr
 captured_at: '2026-11-04T11:28:55+08:00'
 ---

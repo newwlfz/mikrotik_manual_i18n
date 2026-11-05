@@ -2,6 +2,7 @@
 sidebar_key: "wired-connections/ethernet"
 sidebar_position: 1
 title: "Ethernet"
+description: 'MikroTik RouterOS supports diverse Ethernet interfaces from 10Mbps to 100Gbps, including copper and fiber options with combo interfaces. It enables control over link speed, duplex mode, auto-negotiation, and SFP/QSFP...'
 source: https://manual.mikrotik.com/docs/7.24/wired-connections/ethernet
 captured_at: '2026-11-04T11:35:29+08:00'
 ---

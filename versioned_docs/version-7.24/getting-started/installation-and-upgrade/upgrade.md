@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/installation-and-upgrade/upgrade"
 sidebar_position: 7
 title: "Upgrade"
+description: 'This page documents RouterOS upgrade procedures for MikroTik devices, covering automatic updates via release chains (Long term, Stable, Testing, Development), manual upgrades through WinBox/WebFig/FTP, and bootloader...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/upgrade
 captured_at: '2026-11-04T11:29:08+08:00'
 ---

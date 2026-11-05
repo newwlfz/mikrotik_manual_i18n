@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/lora/traffic/index"
 sidebar_position: 2
 title: "traffic"
+description: 'RouterOS directory reference for /iot/lora/traffic.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/lora/traffic
 captured_at: '2026-11-01T21:28:15+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/nat-pmp/interfaces"
 sidebar_position: 2
 title: "interfaces"
+description: 'RouterOS directory reference for /ip/nat-pmp/interfaces.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/nat-pmp/interfaces
 captured_at: '2026-11-01T21:28:49+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/unicast/ospf/understanding-ospf"
 sidebar_position: 7
 title: "Understanding OSPF"
+description: 'Overview of OSPF protocol basics.'
 slug: /user-guides/routing-and-networking-protocols/unicast/ospf/understanding-ospf
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/ospf/understanding-ospf
 captured_at: '2026-11-04T11:34:19+08:00'

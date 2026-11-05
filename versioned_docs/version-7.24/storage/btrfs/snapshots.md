@@ -2,6 +2,7 @@
 sidebar_key: "storage/btrfs/snapshots"
 sidebar_position: 4
 title: "Btrfs subvolumes and snapshots"
+description: 'This page guides users through creating Btrfs subvolumes and snapshots on MikroTik RouterOS, explaining how to organize data, format disks, set up subvolumes like Documents and Photos, and create snapshots for...'
 source: https://manual.mikrotik.com/docs/7.24/storage/btrfs/snapshots
 captured_at: '2026-11-04T11:32:58+08:00'
 ---

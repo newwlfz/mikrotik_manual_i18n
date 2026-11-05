@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/wiliot/bluetooth-traffic/index"
 sidebar_position: 2
 title: "bluetooth-traffic"
+description: 'RouterOS directory reference for /iot/wiliot/bluetooth-traffic.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/wiliot/bluetooth-traffic
 captured_at: '2026-11-01T21:28:21+08:00'
 ---

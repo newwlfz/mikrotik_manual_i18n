@@ -2,6 +2,7 @@
 sidebar_key: "wireless/abgn/nv2"
 sidebar_position: 6
 title: "Nv2"
+description: 'Nv2 is a MikroTik proprietary wireless protocol using TDMA for efficient media access in PtMP networks, supporting both Atheros 802.11n and legacy devices without hardware upgrades. It offers dynamic rate selection,...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/abgn/nv2
 captured_at: '2026-11-04T11:35:25+08:00'
 ---

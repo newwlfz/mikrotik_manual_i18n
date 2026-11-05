@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/certificate/scep-server/otp/generate"
 sidebar_position: 1
 title: "generate"
+description: 'RouterOS command reference for /certificate/scep-server/otp/generate.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/certificate/scep-server/otp/generate
 captured_at: '2026-11-01T21:26:27+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "management-tools/mac-server"
 sidebar_position: 10
 title: "MAC server"
+description: 'The MAC server section in RouterOS enables configuring MAC Telnet, WinBox, and Ping servers for router access without IP addresses. It allows restricting access to specific interfaces and provides tools to manage...'
 source: https://manual.mikrotik.com/docs/7.24/management-tools/mac-server
 captured_at: '2026-11-04T11:32:00+08:00'
 ---

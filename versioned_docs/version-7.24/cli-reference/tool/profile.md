@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/profile"
 sidebar_position: 16
 title: "profile"
+description: 'RouterOS command reference for /tool/profile.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/profile
 captured_at: '2026-11-01T21:30:19+08:00'
 ---

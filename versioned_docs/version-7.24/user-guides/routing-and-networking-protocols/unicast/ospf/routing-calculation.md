@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/unicast/ospf/routing-calculation"
 sidebar_position: 6
 title: "Routing Table Calculation"
+description: 'Basic understanding of shortest path calculation.'
 slug: /user-guides/routing-and-networking-protocols/unicast/ospf/routing-calculation
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/ospf/routing-calculation
 captured_at: '2026-11-04T11:34:23+08:00'

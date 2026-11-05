@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/caps-man/rates"
 sidebar_position: 11
 title: "rates"
+description: 'RouterOS directory reference for /caps-man/rates.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/caps-man/rates
 captured_at: '2026-11-01T21:26:22+08:00'
 ---

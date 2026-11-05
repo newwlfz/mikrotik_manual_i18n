@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/bandwidth-test"
 sidebar_position: 5
 title: "Bandwidth Test"
+description: 'The Bandwidth Test feature in MikroTik RouterOS allows measuring network throughput between routers using TCP or UDP protocols, with detailed explanations of their behavior and limitations. It includes configuration...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/bandwidth-test
 captured_at: '2026-11-04T11:27:51+08:00'
 ---

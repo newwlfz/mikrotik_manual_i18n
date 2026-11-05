@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/igmp-proxy/interface"
 sidebar_position: 2
 title: "interface"
+description: 'Configure what interfaces will participate as IGMP proxy interfaces on the router. If an interface is not configured as an IGMP proxy interface, then all IGMP traffic received on it will be ignored.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/igmp-proxy/interface
 captured_at: '2026-11-01T21:29:32+08:00'
 ---

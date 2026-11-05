@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/routeros-licensing/chr/chr-licensing"
 sidebar_position: 1
 title: "CHR: Licensing"
+description: 'CHR offers four license levels—Free, P1 (Perpetual-1), P10 (Perpetual-10), and P-Unlimited—with trial periods available for paid options. Licenses are perpetual, tied to the CHR system ID, and require periodic...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/routeros-licensing/chr/chr-licensing
 captured_at: '2026-11-04T11:29:39+08:00'
 ---

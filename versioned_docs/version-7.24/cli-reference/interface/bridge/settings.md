@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/bridge/settings"
 sidebar_position: 12
 title: "settings"
+description: 'RouterOS settings reference for /interface/bridge/settings.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bridge/settings
 captured_at: '2026-11-01T21:27:01+08:00'
 ---

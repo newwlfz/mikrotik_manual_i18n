@@ -2,6 +2,7 @@
 sidebar_key: "containers/user-guides/container-postgres"
 sidebar_position: 6
 title: "Container - Postgres"
+description: 'This guide provides step-by-step instructions for setting up PostgreSQL and pgAdmin containers on MikroTik RouterOS, including creating mount points, configuring environment variables, and starting the containers...'
 source: https://manual.mikrotik.com/docs/7.24/containers/user-guides/container-postgres
 captured_at: '2026-11-04T11:27:43+08:00'
 ---

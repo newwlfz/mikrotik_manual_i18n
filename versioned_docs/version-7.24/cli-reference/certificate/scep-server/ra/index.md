@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/certificate/scep-server/ra/index"
 sidebar_position: 1
 title: "ra"
+description: 'RouterOS directory reference for /certificate/scep-server/ra.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/certificate/scep-server/ra
 captured_at: '2026-11-01T21:26:28+08:00'
 ---

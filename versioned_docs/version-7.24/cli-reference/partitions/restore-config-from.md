@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/partitions/restore-config-from"
 sidebar_position: 5
 title: "restore-config-from"
+description: 'RouterOS command reference for /partitions/restore-config-from.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/partitions/restore-config-from
 captured_at: '2026-11-01T21:29:19+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/gre6"
 sidebar_position: 11
 title: "gre6"
+description: 'RouterOS directory reference for /interface/gre6.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/gre6
 captured_at: '2026-11-01T21:27:20+08:00'
 ---

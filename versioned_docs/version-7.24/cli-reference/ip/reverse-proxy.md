@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/reverse-proxy"
 sidebar_position: 18
 title: "reverse-proxy"
+description: 'RouterOS directory reference for /ip/reverse-proxy.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/reverse-proxy
 captured_at: '2026-11-01T21:28:55+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/log/index"
 sidebar_position: 2
 title: "Log"
+description: 'This section provides an overview of MikroTik RouterOS logging capabilities, covering how to view and filter log messages in real-time using the /log menu, along with detailed configuration options for forwarding...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/log
 captured_at: '2026-11-04T11:27:59+08:00'
 ---

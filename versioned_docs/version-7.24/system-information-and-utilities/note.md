@@ -2,6 +2,7 @@
 sidebar_key: "system-information-and-utilities/note"
 sidebar_position: 9
 title: "Note"
+description: 'The system note feature in RouterOS allows users to assign custom text messages displayed upon login, with options to show them at CLI or FTP logins and configure their content through the /system/note menu or via an...'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/note
 captured_at: '2026-11-04T11:33:34+08:00'
 ---

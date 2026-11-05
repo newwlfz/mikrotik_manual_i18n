@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/l2tp-ether/index"
 sidebar_position: 1
 title: "l2tp-ether"
+description: 'RouterOS directory reference for /interface/l2tp-ether.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/l2tp-ether
 captured_at: '2026-11-01T21:27:21+08:00'
 ---

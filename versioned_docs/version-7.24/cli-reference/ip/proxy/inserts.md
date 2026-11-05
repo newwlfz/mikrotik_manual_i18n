@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/proxy/inserts"
 sidebar_position: 8
 title: "inserts"
+description: 'RouterOS settings reference for /ip/proxy/inserts.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/proxy/inserts
 captured_at: '2026-11-01T21:28:55+08:00'
 ---

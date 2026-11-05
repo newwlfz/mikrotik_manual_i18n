@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/routerboard/index"
 sidebar_position: 1
 title: "routerboard"
+description: 'RouterOS settings reference for /system/routerboard.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/routerboard
 captured_at: '2026-11-01T21:30:04+08:00'
 ---

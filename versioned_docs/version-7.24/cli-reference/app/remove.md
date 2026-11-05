@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/app/remove"
 sidebar_position: 4
 title: "remove"
+description: 'Removes the specified application from the system.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/app/remove
 captured_at: '2026-11-01T21:26:17+08:00'
 ---

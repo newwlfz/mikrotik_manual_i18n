@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/openflow/group"
 sidebar_position: 2
 title: "group"
+description: 'RouterOS directory reference for /openflow/group.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/openflow/group
 captured_at: '2026-11-01T21:29:17+08:00'
 ---

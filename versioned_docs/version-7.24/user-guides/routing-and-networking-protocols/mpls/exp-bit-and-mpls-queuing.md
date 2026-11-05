@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/mpls/exp-bit-and-mpls-queuing"
 sidebar_position: 1
 title: "EXP bit and MPLS Queuing"
+description: 'This page explains the EXP bit in MPLS packets and how RouterOS handles it for QoS, including priority marking, queuing strategies, and MPLS mangle rules. It details how EXP bits are treated during packet switching,...'
 slug: /user-guides/routing-and-networking-protocols/mpls/exp-bit-and-mpls-queuing
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/mpls/exp-bit-and-mpls-queuing
 captured_at: '2026-11-04T11:33:47+08:00'

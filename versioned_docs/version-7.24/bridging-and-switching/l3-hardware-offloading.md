@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/l3-hardware-offloading"
 sidebar_position: 2
 title: "L3 Hardware Offloading"
+description: 'L3 Hardware Offloading enables routing at wire speed by offloading CPU-intensive tasks to the switch chip. This page details how to configure L3HW for entire switches, individual ports, and global settings like IPv6...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/l3-hardware-offloading
 captured_at: '2026-11-04T11:27:10+08:00'
 ---

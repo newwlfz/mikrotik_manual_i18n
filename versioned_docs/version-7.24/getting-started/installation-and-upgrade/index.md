@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/installation-and-upgrade/index"
 sidebar_position: 2
 title: "Installation and Upgrade"
+description: 'This section provides guidance on installing and upgrading RouterOS using Netinstall, covering procedures for initial setup or system recovery.'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade
 captured_at: '2026-11-04T11:28:36+08:00'
 ---

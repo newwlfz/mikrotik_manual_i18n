@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/bfd/session"
 sidebar_position: 3
 title: "session"
+description: 'RouterOS directory reference for /routing/bfd/session.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/bfd/session
 captured_at: '2026-11-01T21:29:27+08:00'
 ---

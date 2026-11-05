@@ -2,6 +2,7 @@
 sidebar_key: "storage/btrfs/index"
 sidebar_position: 1
 title: "Btrfs"
+description: 'Btrfs is a stable, copy-on-write file system with features like bitrot protection, subvolumes, and snapshots. It is available in RouterOS v7.18beta2+ with the Storage package and supports RAID configurations,...'
 source: https://manual.mikrotik.com/docs/7.24/storage/btrfs
 captured_at: '2026-11-04T11:32:56+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/pimsm/uib-sg"
 sidebar_position: 10
 title: "uib-sg"
+description: 'RouterOS directory reference for /routing/pimsm/uib-sg.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/pimsm/uib-sg
 captured_at: '2026-11-01T21:29:38+08:00'
 ---

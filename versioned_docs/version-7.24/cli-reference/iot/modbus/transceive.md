@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/modbus/transceive"
 sidebar_position: 4
 title: "transceive"
+description: 'RouterOS command reference for /iot/modbus/transceive.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/modbus/transceive
 captured_at: '2026-11-01T21:28:17+08:00'
 ---

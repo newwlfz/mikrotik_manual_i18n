@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/lte/esim/provision"
 sidebar_position: 6
 title: "provision"
+description: 'RouterOS command reference for /interface/lte/esim/provision.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/lte/esim/provision
 captured_at: '2026-11-01T21:27:27+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/socks/connections"
 sidebar_position: 2
 title: "connections"
+description: 'RouterOS directory reference for /ip/socks/connections.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/socks/connections
 captured_at: '2026-11-01T21:28:57+08:00'
 ---

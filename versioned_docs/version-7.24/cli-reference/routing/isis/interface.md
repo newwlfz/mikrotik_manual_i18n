@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/isis/interface"
 sidebar_position: 2
 title: "interface"
+description: 'RouterOS directory reference for /routing/isis/interface.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/isis/interface
 captured_at: '2026-11-01T21:29:32+08:00'
 ---

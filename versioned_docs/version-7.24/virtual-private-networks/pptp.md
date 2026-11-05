@@ -2,6 +2,7 @@
 sidebar_key: "virtual-private-networks/pptp"
 sidebar_position: 9
 title: "PPTP"
+description: 'This page documents the PPTP (Point-to-Point Tunneling Protocol) implementation in MikroTik RouterOS, covering client and server configuration options including authentication methods, MTU/MRRU settings, and TCP port...'
 source: https://manual.mikrotik.com/docs/7.24/virtual-private-networks/pptp
 captured_at: '2026-11-04T11:34:56+08:00'
 ---

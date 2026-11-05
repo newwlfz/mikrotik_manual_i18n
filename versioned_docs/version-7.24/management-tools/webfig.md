@@ -2,6 +2,7 @@
 sidebar_key: "management-tools/webfig"
 sidebar_position: 1
 title: "WebFig"
+description: 'WebFig is a web-based RouterOS utility enabling monitoring, configuration, and troubleshooting without additional software. It supports HTTPS with certificate management, including wildcard certificates, and provides...'
 source: https://manual.mikrotik.com/docs/7.24/management-tools/webfig
 captured_at: '2026-11-04T11:32:24+08:00'
 ---

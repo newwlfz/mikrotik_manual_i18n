@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/license/index"
 sidebar_position: 2
 title: "license"
+description: 'RouterOS settings reference for /system/license.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/license
 captured_at: '2026-11-01T21:29:53+08:00'
 ---

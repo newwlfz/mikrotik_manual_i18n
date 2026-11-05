@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/arp"
 sidebar_position: 2
 title: "arp"
+description: 'RouterOS directory reference for /ip/arp.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/arp
 captured_at: '2026-11-01T21:28:24+08:00'
 ---

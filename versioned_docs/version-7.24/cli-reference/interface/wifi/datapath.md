@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wifi/datapath"
 sidebar_position: 7
 title: "datapath"
+description: 'RouterOS directory reference for /interface/wifi/datapath.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/datapath
 captured_at: '2026-11-01T21:27:47+08:00'
 ---

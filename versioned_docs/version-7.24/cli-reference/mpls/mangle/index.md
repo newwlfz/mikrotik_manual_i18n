@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/mpls/mangle/index"
 sidebar_position: 1
 title: "mangle"
+description: 'RouterOS directory reference for /mpls/mangle.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/mpls/mangle
 captured_at: '2026-11-01T21:29:17+08:00'
 ---

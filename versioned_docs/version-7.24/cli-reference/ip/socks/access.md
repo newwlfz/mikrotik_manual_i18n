@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/socks/access"
 sidebar_position: 1
 title: "access"
+description: 'RouterOS directory reference for /ip/socks/access.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/socks/access
 captured_at: '2026-11-01T21:28:57+08:00'
 ---

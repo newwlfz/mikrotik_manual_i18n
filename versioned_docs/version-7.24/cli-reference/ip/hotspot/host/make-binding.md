@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/hotspot/host/make-binding"
 sidebar_position: 2
 title: "make-binding"
+description: 'RouterOS command reference for /ip/hotspot/host/make-binding.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/hotspot/host/make-binding
 captured_at: '2026-11-01T21:28:42+08:00'
 ---

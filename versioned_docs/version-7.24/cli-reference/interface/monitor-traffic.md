@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/monitor-traffic"
 sidebar_position: 23
 title: "monitor-traffic"
+description: 'RouterOS command reference for /interface/monitor-traffic.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/monitor-traffic
 captured_at: '2026-11-01T21:27:30+08:00'
 ---

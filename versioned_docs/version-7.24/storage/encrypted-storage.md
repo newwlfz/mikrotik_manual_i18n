@@ -2,6 +2,7 @@
 sidebar_key: "storage/encrypted-storage"
 sidebar_position: 3
 title: "Encrypted storage (dm-crypt)"
+description: 'Encrypted storage (dm-crypt) enables transparent disk encryption using dmcrypt for block devices, with properties like slot name, encryption key, and backend drive. Examples show creating encrypted file systems on...'
 source: https://manual.mikrotik.com/docs/7.24/storage/encrypted-storage
 captured_at: '2026-11-04T11:33:05+08:00'
 ---

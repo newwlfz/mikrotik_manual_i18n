@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ppp/secret"
 sidebar_position: 5
 title: "secret"
+description: 'RouterOS directory reference for /ppp/secret.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ppp/secret
 captured_at: '2026-11-01T21:29:21+08:00'
 ---

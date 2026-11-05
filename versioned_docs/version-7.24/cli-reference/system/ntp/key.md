@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/ntp/key"
 sidebar_position: 2
 title: "key"
+description: 'RouterOS directory reference for /system/ntp/key.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/ntp/key
 captured_at: '2026-11-01T21:29:56+08:00'
 ---

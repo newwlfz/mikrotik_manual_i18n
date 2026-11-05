@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/proxy/access/index"
 sidebar_position: 1
 title: "access"
+description: 'RouterOS directory reference for /ip/proxy/access.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/proxy/access
 captured_at: '2026-11-01T21:28:51+08:00'
 ---

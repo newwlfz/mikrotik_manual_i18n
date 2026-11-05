@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/user-manager/advanced"
 sidebar_position: 1
 title: "advanced"
+description: 'RouterOS settings reference for /user-manager/advanced.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/advanced
 captured_at: '2026-11-01T21:30:29+08:00'
 ---

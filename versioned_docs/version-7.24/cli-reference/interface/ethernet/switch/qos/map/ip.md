@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/qos/map/ip"
 sidebar_position: 2
 title: "ip"
+description: 'RouterOS directory reference for /interface/ethernet/switch/qos/map/ip.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/qos/map/ip
 captured_at: '2026-11-01T21:27:15+08:00'
 ---

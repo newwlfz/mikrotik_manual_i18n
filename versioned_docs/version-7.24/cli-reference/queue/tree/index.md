@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/queue/tree/index"
 sidebar_position: 1
 title: "tree"
+description: 'RouterOS directory reference for /queue/tree.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/queue/tree
 captured_at: '2026-11-01T21:29:23+08:00'
 ---

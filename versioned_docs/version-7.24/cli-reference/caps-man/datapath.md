@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/caps-man/datapath"
 sidebar_position: 6
 title: "datapath"
+description: 'RouterOS directory reference for /caps-man/datapath.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/caps-man/datapath
 captured_at: '2026-11-01T21:26:19+08:00'
 ---

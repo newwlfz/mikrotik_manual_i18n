@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/routerboard/mode-button"
 sidebar_position: 2
 title: "mode-button"
+description: 'RouterOS settings reference for /system/routerboard/mode-button.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/routerboard/mode-button
 captured_at: '2026-11-01T21:30:05+08:00'
 ---

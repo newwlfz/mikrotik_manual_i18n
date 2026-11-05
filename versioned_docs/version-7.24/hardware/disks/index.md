@@ -2,6 +2,7 @@
 sidebar_key: "hardware/disks/index"
 sidebar_position: 1
 title: "Disks"
+description: 'This page documents disk management in MikroTik RouterOS, covering storage device detection, formatting, swap space, and S.M.A.R.T. monitoring. It explains how to add external drives, manage mount points, format...'
 source: https://manual.mikrotik.com/docs/7.24/hardware/disks
 captured_at: '2026-11-04T11:29:18+08:00'
 ---

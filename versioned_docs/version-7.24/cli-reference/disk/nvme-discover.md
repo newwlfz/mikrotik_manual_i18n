@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/disk/nvme-discover"
 sidebar_position: 9
 title: "nvme-discover"
+description: 'RouterOS command reference for /disk/nvme-discover.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/disk/nvme-discover
 captured_at: '2026-11-01T21:26:49+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/pimsm/neighbor"
 sidebar_position: 7
 title: "neighbor"
+description: 'The neighbor menu shows all detected neighbors that are running PIM and their statuses. This menu contains dynamic and read-only entries.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/pimsm/neighbor
 captured_at: '2026-11-01T21:29:37+08:00'
 ---

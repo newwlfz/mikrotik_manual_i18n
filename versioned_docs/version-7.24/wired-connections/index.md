@@ -2,6 +2,7 @@
 sidebar_key: "wired-connections/index"
 sidebar_position: 4
 title: "Wired Connections"
+description: 'Wired connection documentation provides guidance on configuring and troubleshooting Ethernet, PWR-Line, and MikroTik wired interfaces for reliable physical connectivity.'
 source: https://manual.mikrotik.com/docs/7.24/wired-connections
 captured_at: '2026-11-04T11:34:53+08:00'
 ---

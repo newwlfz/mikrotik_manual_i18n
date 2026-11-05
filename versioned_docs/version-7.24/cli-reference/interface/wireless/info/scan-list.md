@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/info/scan-list"
 sidebar_position: 7
 title: "scan-list"
+description: 'RouterOS command reference for /interface/wireless/info/scan-list.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/info/scan-list
 captured_at: '2026-11-01T21:28:01+08:00'
 ---

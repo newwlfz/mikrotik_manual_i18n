@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/installation-and-upgrade/install/chr-installation/hetzner"
 sidebar_position: 3
 title: "CHR: Hetzner Cloud Installation"
+description: 'This page provides an overview for deploying MikroTik RouterOS Cloud Hosted Router (CHR) on Hetzner Cloud, detailing the installation process including server creation, rescue system activation, CHR image deployment...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/install/chr-installation/hetzner
 captured_at: '2026-11-04T11:28:35+08:00'
 ---

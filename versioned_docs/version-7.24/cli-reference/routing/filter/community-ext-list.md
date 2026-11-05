@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/filter/community-ext-list"
 sidebar_position: 2
 title: "community-ext-list"
+description: 'RouterOS directory reference for /routing/filter/community-ext-list.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/filter/community-ext-list
 captured_at: '2026-11-01T21:29:30+08:00'
 ---

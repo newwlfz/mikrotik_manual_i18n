@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/software-specifications/index"
 sidebar_position: 2
 title: "Software Specifications"
+description: 'This page outlines RouterOS software specifications covering hardware compatibility, installation methods, configuration tools, backup/restore capabilities, firewall features, routing protocols, and MPLS support for...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/software-specifications
 captured_at: '2026-11-04T11:29:04+08:00'
 ---

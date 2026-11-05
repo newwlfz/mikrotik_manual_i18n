@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/hotspot/walled-garden/ip"
 sidebar_position: 2
 title: "ip"
+description: 'RouterOS directory reference for /ip/hotspot/walled-garden/ip.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/hotspot/walled-garden/ip
 captured_at: '2026-11-01T21:28:41+08:00'
 ---

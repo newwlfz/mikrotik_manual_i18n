@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/safe-mode"
 sidebar_position: 21
 title: "safe-mode"
+description: 'RouterOS settings reference for /safe-mode.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/safe-mode
 captured_at: '2026-11-01T21:29:43+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "wireless/w60g/distance-guide"
 sidebar_position: 1
 title: "Distance guide"
+description: 'This page provides a distance guide for Point To Multi Point applications using MikroTik devices, specifying required license levels and listing compatible products such as Cube-60ad, LHG-60ad, and wAPG-60ad-A.'
 source: https://manual.mikrotik.com/docs/7.24/wireless/w60g/distance-guide
 captured_at: '2026-11-04T11:36:20+08:00'
 ---

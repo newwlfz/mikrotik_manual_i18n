@@ -2,6 +2,7 @@
 sidebar_key: "management-tools/console"
 sidebar_position: 4
 title: "Console"
+description: 'The console provides text-based access to MikroTik RouterOS configuration and management features using text terminals, either remotely using a serial port, telnet, SSH, or console screen within WinBox, or directly...'
 source: https://manual.mikrotik.com/docs/7.24/management-tools/console
 captured_at: '2026-11-04T11:31:59+08:00'
 ---

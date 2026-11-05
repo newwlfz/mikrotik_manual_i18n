@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/certificate/index"
 sidebar_position: 12
 title: "certificate"
+description: 'RouterOS directory reference for /certificate.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/certificate
 captured_at: '2026-11-01T21:26:23+08:00'
 ---

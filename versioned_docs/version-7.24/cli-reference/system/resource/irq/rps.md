@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/resource/irq/rps"
 sidebar_position: 2
 title: "rps"
+description: 'RouterOS directory reference for /system/resource/irq/rps.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/resource/irq/rps
 captured_at: '2026-11-01T21:30:04+08:00'
 ---

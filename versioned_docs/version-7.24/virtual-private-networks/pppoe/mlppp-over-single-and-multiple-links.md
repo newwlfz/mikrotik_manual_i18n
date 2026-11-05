@@ -2,6 +2,7 @@
 sidebar_key: "virtual-private-networks/pppoe/mlppp-over-single-and-multiple-links"
 sidebar_position: 4
 title: "MLPPP over single and multiple links"
+description: 'MLPPP enhances PPP links by splitting and recombining data across multiple logical or physical links, increasing bandwidth without upgrading hardware. It supports both single-link (using MRRU) and multi-link...'
 source: https://manual.mikrotik.com/docs/7.24/virtual-private-networks/pppoe/mlppp-over-single-and-multiple-links
 captured_at: '2026-11-04T11:34:47+08:00'
 ---

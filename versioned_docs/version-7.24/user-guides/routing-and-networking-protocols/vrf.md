@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/vrf"
 sidebar_position: 12
 title: "VRF"
+description: 'RouterOS enables creating multiple Virtual Routing and Forwarding (VRF) instances for BGP-based MPLS VPNs, allowing separate routing tables and IP prefix isolation. VRF configurations are managed via the /ip/vrf...'
 slug: /user-guides/routing-and-networking-protocols/vrf
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/vrf
 captured_at: '2026-11-04T11:34:32+08:00'

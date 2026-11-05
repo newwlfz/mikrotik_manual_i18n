@@ -2,6 +2,7 @@
 sidebar_key: "storage/raid/hot-spare"
 sidebar_position: 1
 title: "Setting a hot spare disk"
+description: 'This page explains how to configure a hot spare disk for a RAID array in RouterOS, enabling automatic rebuild on disk failure by assigning a spare disk to the RAID setup.'
 source: https://manual.mikrotik.com/docs/7.24/storage/raid/hot-spare
 captured_at: '2026-11-04T11:33:06+08:00'
 ---

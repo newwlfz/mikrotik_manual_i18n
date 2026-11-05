@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/egress-vlan-translation"
 sidebar_position: 5
 title: "egress-vlan-translation"
+description: 'RouterOS directory reference for /interface/ethernet/switch/egress-vlan-translation.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/egress-vlan-translation
 captured_at: '2026-11-01T21:27:09+08:00'
 ---

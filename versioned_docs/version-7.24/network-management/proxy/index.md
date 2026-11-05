@@ -2,6 +2,7 @@
 sidebar_key: "network-management/proxy/index"
 sidebar_position: 2
 title: "Proxy"
+description: 'MikroTik RouterOS proxy features enable HTTP and FTP caching, transparent proxying, access control via source/destination lists, URL filtering, and logging. It supports direct connections, parent proxying, and...'
 source: https://manual.mikrotik.com/docs/7.24/network-management/proxy
 captured_at: '2026-11-04T11:32:49+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/pimsm/instance"
 sidebar_position: 4
 title: "instance"
+description: 'The instance menu defines the main PIM-SM settings. The instance is then used for all other PIM-related configurations like interface-template, static RP, and Bootstrap Router.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/pimsm/instance
 captured_at: '2026-11-01T21:29:37+08:00'
 ---

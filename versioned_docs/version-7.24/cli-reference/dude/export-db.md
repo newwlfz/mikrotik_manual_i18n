@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/dude/export-db"
 sidebar_position: 4
 title: "export-db"
+description: 'RouterOS command reference for /dude/export-db.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/dude/export-db
 captured_at: '2026-11-01T21:26:48+08:00'
 ---

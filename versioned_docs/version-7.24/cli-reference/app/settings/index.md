@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/app/settings/index"
 sidebar_position: 1
 title: "settings"
+description: 'RouterOS settings reference for /app/settings.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/app/settings
 captured_at: '2026-11-01T21:26:18+08:00'
 ---

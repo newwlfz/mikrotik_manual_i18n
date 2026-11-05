@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/ip-scan"
 sidebar_position: 9
 title: "ip-scan"
+description: 'RouterOS command reference for /tool/ip-scan.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/ip-scan
 captured_at: '2026-11-01T21:30:15+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/routing-decision"
 sidebar_position: 9
 title: "Routing Decision"
+description: 'Routing decision in MikroTik RouterOS involves selecting paths for packet transmission using FIB and RIB tables, managing connected networks, default routes, and hardware offloading for efficient packet forwarding.'
 slug: /user-guides/routing-and-networking-protocols/routing-decision
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/routing-decision
 captured_at: '2026-11-04T11:34:10+08:00'

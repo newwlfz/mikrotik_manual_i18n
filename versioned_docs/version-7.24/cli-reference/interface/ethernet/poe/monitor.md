@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/poe/monitor"
 sidebar_position: 2
 title: "monitor"
+description: 'RouterOS command reference for /interface/ethernet/poe/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/poe/monitor
 captured_at: '2026-11-01T21:27:07+08:00'
 ---

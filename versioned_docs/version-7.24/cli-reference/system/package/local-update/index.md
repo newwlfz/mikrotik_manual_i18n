@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/package/local-update/index"
 sidebar_position: 3
 title: "local-update"
+description: 'Instead of connecting directly to MikroTik servers, you can upload package files to one of your local RouterOS devices and use it as a local package server.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/package/local-update
 captured_at: '2026-11-01T21:29:57+08:00'
 ---

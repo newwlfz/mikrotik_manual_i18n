@@ -2,6 +2,7 @@
 sidebar_key: "storage/smb"
 sidebar_position: 11
 title: "SMB"
+description: 'RouterOS includes a built-in SMB server for file sharing over SMB/CIFS protocols, supporting SMB2.1, 3.0, and 3.1.1 with security warnings for SMB1 and SMIPS devices. Users can configure shares, set user permissions,...'
 source: https://manual.mikrotik.com/docs/7.24/storage/smb
 captured_at: '2026-11-04T11:33:17+08:00'
 ---

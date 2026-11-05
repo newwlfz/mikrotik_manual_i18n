@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/hotspot/user/index"
 sidebar_position: 1
 title: "user"
+description: 'RouterOS directory reference for /ip/hotspot/user.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/hotspot/user
 captured_at: '2026-11-01T21:28:40+08:00'
 ---

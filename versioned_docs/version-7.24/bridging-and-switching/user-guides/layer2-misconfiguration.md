@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/user-guides/layer2-misconfiguration"
 sidebar_position: 7
 title: "Layer2 misconfiguration"
+description: 'This page addresses Layer2 misconfigurations in MikroTik RouterOS, focusing on issues like improper bridge setups with hardware offloading and port isolation. It explains symptoms such as low throughput, high CPU...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/user-guides/layer2-misconfiguration
 captured_at: '2026-11-04T11:27:28+08:00'
 ---

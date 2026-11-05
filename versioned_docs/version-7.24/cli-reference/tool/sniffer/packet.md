@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/sniffer/packet"
 sidebar_position: 4
 title: "packet"
+description: 'RouterOS directory reference for /tool/sniffer/packet.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/sniffer/packet
 captured_at: '2026-11-01T21:30:22+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/cap"
 sidebar_position: 3
 title: "cap"
+description: 'RouterOS settings reference for /interface/wireless/cap.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/cap
 captured_at: '2026-11-01T21:27:57+08:00'
 ---

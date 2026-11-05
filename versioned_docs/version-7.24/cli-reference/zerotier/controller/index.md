@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/zerotier/controller/index"
 sidebar_position: 1
 title: "controller"
+description: 'RouterOS directory reference for /zerotier/controller.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/zerotier/controller
 captured_at: '2026-11-01T21:30:38+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/queues/index"
 sidebar_position: 3
 title: "Queues"
+description: 'This page introduces MikroTik RouterOS queueing and bandwidth management, covering HTB, PCQ, burst behavior, and queue types for traffic shaping. It explains how to configure simple and advanced queues using...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/queues
 captured_at: '2026-11-04T11:28:19+08:00'
 ---

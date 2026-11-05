@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tr069-client/index"
 sidebar_position: 1
 title: "tr069-client"
+description: 'RouterOS settings reference for /tr069-client.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tr069-client
 captured_at: '2026-11-01T21:30:27+08:00'
 ---

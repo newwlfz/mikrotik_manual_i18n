@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/default-configuration/script"
 sidebar_position: 4
 title: "script"
+description: 'RouterOS settings reference for /system/default-configuration/script.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/default-configuration/script
 captured_at: '2026-11-01T21:29:49+08:00'
 ---

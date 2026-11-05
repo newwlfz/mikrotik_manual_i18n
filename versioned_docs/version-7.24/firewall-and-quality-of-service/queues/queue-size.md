@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/queues/queue-size"
 sidebar_position: 6
 title: "Queue size"
+description: 'This page explains how to configure queue size limits in MikroTik RouterOS, detailing the impact of setting maximum packet counts on traffic shaping and scheduling. It includes examples comparing 100% shapers,...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/queues/queue-size
 captured_at: '2026-11-04T11:28:31+08:00'
 ---

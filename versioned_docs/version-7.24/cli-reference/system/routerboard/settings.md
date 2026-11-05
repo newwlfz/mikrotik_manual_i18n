@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/routerboard/settings"
 sidebar_position: 4
 title: "settings"
+description: 'This sub-menu configures RouterBOOT firmware settings. These settings control how the device starts and operates at the hardware level.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/routerboard/settings
 captured_at: '2026-11-01T21:30:05+08:00'
 ---

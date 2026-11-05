@@ -2,6 +2,7 @@
 sidebar_key: "system-information-and-utilities/services"
 sidebar_position: 14
 title: "Services"
+description: 'This page documents the IP/Services section in MikroTik RouterOS, detailing default services like Telnet, FTP, SSH, and WinBox along with their configuration properties such as address restrictions, ports, TLS...'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/services
 captured_at: '2026-11-04T11:33:46+08:00'
 ---

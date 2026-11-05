@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/package/apply-changes"
 sidebar_position: 1
 title: "apply-changes"
+description: 'Apply scheduled changes and reboot the device.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/package/apply-changes
 captured_at: '2026-11-01T21:29:56+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/dude/agent"
 sidebar_position: 1
 title: "agent"
+description: 'RouterOS directory reference for /dude/agent.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/dude/agent
 captured_at: '2026-11-01T21:26:48+08:00'
 ---

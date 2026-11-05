@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/index"
 sidebar_position: 2
 title: "Routing and Networking Protocols"
+description: 'This section provides guides for RouterOS routing and networking protocols, covering routing decisions, policy routing, VRF, route filtering, and major protocols like BGP, OSPF, RIP, EVPN, MPLS, along with migration...'
 slug: /user-guides/routing-and-networking-protocols/
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols
 captured_at: '2026-11-04T11:33:45+08:00'

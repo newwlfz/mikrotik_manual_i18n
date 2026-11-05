@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/lte/scan"
 sidebar_position: 8
 title: "scan"
+description: 'RouterOS command reference for /interface/lte/scan.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/lte/scan
 captured_at: '2026-11-01T21:27:29+08:00'
 ---

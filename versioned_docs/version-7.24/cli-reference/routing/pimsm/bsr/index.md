@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/pimsm/bsr/index"
 sidebar_position: 2
 title: "bsr"
+description: 'RouterOS directory reference for /routing/pimsm/bsr.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/pimsm/bsr
 captured_at: '2026-11-01T21:29:35+08:00'
 ---

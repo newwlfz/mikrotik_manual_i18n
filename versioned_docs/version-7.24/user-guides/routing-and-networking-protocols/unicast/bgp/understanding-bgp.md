@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/unicast/bgp/understanding-bgp"
 sidebar_position: 6
 title: "Understanding BGP"
+description: 'Overview of BGP protocol basics.'
 slug: /user-guides/routing-and-networking-protocols/unicast/bgp/understanding-bgp
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/bgp/understanding-bgp
 captured_at: '2026-11-04T11:34:12+08:00'

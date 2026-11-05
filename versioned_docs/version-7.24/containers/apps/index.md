@@ -2,6 +2,7 @@
 sidebar_key: "containers/apps/index"
 sidebar_position: 2
 title: "Apps"
+description: 'The Apps menu provides a catalog of pre-configured applications deployable via containers, with automatic RouterOS configuration and support for multiple container registries. It requires Container package...'
 source: https://manual.mikrotik.com/docs/7.24/containers/apps
 captured_at: '2026-11-04T11:27:37+08:00'
 ---

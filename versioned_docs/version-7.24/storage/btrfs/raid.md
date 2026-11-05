@@ -2,6 +2,7 @@
 sidebar_key: "storage/btrfs/raid"
 sidebar_position: 3
 title: "Btrfs RAID"
+description: 'This page provides step-by-step instructions for setting up a Btrfs RAID1 array using two disks in MikroTik RouterOS, covering disk preparation, formatting, adding devices, balancing data, and ensuring consistent...'
 source: https://manual.mikrotik.com/docs/7.24/storage/btrfs/raid
 captured_at: '2026-11-04T11:33:50+08:00'
 ---

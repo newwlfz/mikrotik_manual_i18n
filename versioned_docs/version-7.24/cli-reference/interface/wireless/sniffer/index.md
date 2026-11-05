@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/sniffer/index"
 sidebar_position: 1
 title: "sniffer"
+description: 'RouterOS settings reference for /interface/wireless/sniffer.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/sniffer
 captured_at: '2026-11-01T21:28:03+08:00'
 ---

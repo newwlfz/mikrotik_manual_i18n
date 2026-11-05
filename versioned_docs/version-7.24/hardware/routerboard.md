@@ -2,6 +2,7 @@
 sidebar_key: "hardware/routerboard"
 sidebar_position: 10
 title: "RouterBOARD"
+description: 'This page documents the /system/routerboard menu in MikroTik RouterOS, providing hardware and firmware information such as model, serial number, and current/upgrade firmware versions. It includes upgrade instructions...'
 source: https://manual.mikrotik.com/docs/7.24/hardware/routerboard
 captured_at: '2026-11-04T11:29:43+08:00'
 ---

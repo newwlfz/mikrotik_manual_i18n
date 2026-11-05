@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/installation-and-upgrade/netinstall/index"
 sidebar_position: 2
 title: "Netinstall"
+description: 'This page introduces Netinstall, the MikroTik utility for installing and reinstalling RouterOS, helps choose between the Windows, Linux, and Netinstall package methods, and describes the common device installation...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/netinstall
 captured_at: '2026-11-04T11:28:42+08:00'
 ---

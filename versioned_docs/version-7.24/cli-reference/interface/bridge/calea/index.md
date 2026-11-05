@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/bridge/calea/index"
 sidebar_position: 1
 title: "calea"
+description: 'RouterOS directory reference for /interface/bridge/calea.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bridge/calea
 captured_at: '2026-11-01T21:27:00+08:00'
 ---

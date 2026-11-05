@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/zerotier/controller/member"
 sidebar_position: 2
 title: "member"
+description: 'RouterOS directory reference for /zerotier/controller/member.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/zerotier/controller/member
 captured_at: '2026-11-01T21:30:40+08:00'
 ---

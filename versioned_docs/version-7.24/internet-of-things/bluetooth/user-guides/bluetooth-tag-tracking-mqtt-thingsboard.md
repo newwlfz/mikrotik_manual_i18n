@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/bluetooth/user-guides/bluetooth-tag-tracking-mqtt-thingsboard"
 sidebar_position: 1
 title: "Bluetooth tag-tracking using MQTT and ThingsBoard"
+description: 'This page documents Bluetooth tag-tracking using MikroTik RouterOS with MQTT and ThingsBoard, detailing how Bluetooth advertising packets are captured by KNOT devices, processed into MQTT messages, and visualized in...'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/bluetooth/user-guides/bluetooth-tag-tracking-mqtt-thingsboard
 captured_at: '2026-11-04T11:34:43+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/dhcp-server/alert/index"
 sidebar_position: 1
 title: "alert"
+description: 'RouterOS directory reference for /ip/dhcp-server/alert.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dhcp-server/alert
 captured_at: '2026-11-01T21:28:27+08:00'
 ---

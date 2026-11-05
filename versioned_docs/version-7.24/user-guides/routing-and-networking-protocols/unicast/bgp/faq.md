@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/unicast/bgp/faq"
 sidebar_position: 1
 title: "FAQ"
+description: 'Frequently asked questions.'
 slug: /user-guides/routing-and-networking-protocols/unicast/bgp/faq
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/bgp/faq
 captured_at: '2026-11-04T11:34:04+08:00'

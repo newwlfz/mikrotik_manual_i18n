@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/queue/type"
 sidebar_position: 5
 title: "type"
+description: 'RouterOS directory reference for /queue/type.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/queue/type
 captured_at: '2026-11-01T21:29:25+08:00'
 ---

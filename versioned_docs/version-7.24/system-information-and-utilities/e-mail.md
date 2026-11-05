@@ -2,6 +2,7 @@
 sidebar_key: "system-information-and-utilities/e-mail"
 sidebar_position: 3
 title: "E-mail"
+description: 'The E-mail tool in RouterOS enables sending emails directly from the device using SMTP with plain authentication or TLS encryption, supporting scheduled backups and customizable email content. It allows configuration...'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/e-mail
 captured_at: '2026-11-04T11:33:26+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/package/update/index"
 sidebar_position: 4
 title: "update"
+description: 'Manage the check-for-updates channel and perform RouterOS upgrades.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/package/update
 captured_at: '2026-11-01T21:29:59+08:00'
 ---

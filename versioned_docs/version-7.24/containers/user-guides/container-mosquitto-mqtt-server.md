@@ -2,6 +2,7 @@
 sidebar_key: "containers/user-guides/container-mosquitto-mqtt-server"
 sidebar_position: 5
 title: "Container - mosquitto MQTT server"
+description: 'This page introduces using MikroTik RouterOS containers to run an eclipse-mosquitto MQTT server for IoT applications, detailing container setup steps including networking, environment variables, and mounts with SSL...'
 source: https://manual.mikrotik.com/docs/7.24/containers/user-guides/container-mosquitto-mqtt-server
 captured_at: '2026-11-04T11:27:42+08:00'
 ---

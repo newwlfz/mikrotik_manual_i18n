@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/gps/index"
 sidebar_position: 1
 title: "gps"
+description: 'RouterOS settings reference for /system/gps.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/gps
 captured_at: '2026-11-01T21:29:49+08:00'
 ---

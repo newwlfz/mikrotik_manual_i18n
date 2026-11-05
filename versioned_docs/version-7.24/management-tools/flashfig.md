@@ -2,6 +2,7 @@
 sidebar_key: "management-tools/flashfig"
 sidebar_position: 8
 title: "FlashFig"
+description: 'FlashFig is a Windows utility for rapid, high-volume configuration of MikroTik RouterBOARDs by transmitting RouterOS settings via Layer-2 networks in seconds. It supports flash-boot mode for automated provisioning,...'
 source: https://manual.mikrotik.com/docs/7.24/management-tools/flashfig
 captured_at: '2026-11-04T11:32:10+08:00'
 ---

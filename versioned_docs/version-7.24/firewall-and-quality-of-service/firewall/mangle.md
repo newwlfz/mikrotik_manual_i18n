@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/firewall/mangle"
 sidebar_position: 7
 title: "Mangle"
+description: 'Mangle in RouterOS marks packets for advanced processing using special marks, enabling features like queue trees and NAT. It modifies IP header fields and operates through five predefined chains (PREROUTING, INPUT,...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/firewall/mangle
 captured_at: '2026-11-04T11:28:13+08:00'
 ---

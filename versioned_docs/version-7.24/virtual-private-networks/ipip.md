@@ -2,6 +2,7 @@
 sidebar_key: "virtual-private-networks/ipip"
 sidebar_position: 4
 title: "IPIP"
+description: 'IPIP (IP-in-IP) is a tunneling protocol in RouterOS for secure point-to-point connections over IP networks, supporting IPv4 encapsulation and interoperability with other platforms. It offers basic configuration...'
 source: https://manual.mikrotik.com/docs/7.24/virtual-private-networks/ipip
 captured_at: '2026-11-04T11:34:32+08:00'
 ---

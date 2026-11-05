@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/package/local-update/mirror/index"
 sidebar_position: 2
 title: "mirror"
+description: 'You can mirror packages (for all architectures) from your main local package server by using this menu. Downloaded packages are saved into the packs folder in the root directory.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/package/local-update/mirror
 captured_at: '2026-11-01T21:30:00+08:00'
 ---

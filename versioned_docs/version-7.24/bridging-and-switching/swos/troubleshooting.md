@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/swos/troubleshooting"
 sidebar_position: 7
 title: "Cannot upgrade SwOS"
+description: 'MikroTik switches that support SwOS store two separate firmware images in flash memory: a primary (active) image and a backup image. Under normal operation, the device boots from the primary image. When a firmware...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/swos/troubleshooting
 captured_at: '2026-11-04T11:27:12+08:00'
 ---

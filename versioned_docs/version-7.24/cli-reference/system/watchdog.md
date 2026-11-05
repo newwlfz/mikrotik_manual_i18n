@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/watchdog"
 sidebar_position: 36
 title: "watchdog"
+description: 'RouterOS settings reference for /system/watchdog.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/watchdog
 captured_at: '2026-11-01T21:30:12+08:00'
 ---

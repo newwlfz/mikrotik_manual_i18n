@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/installation-and-upgrade/install/chr-installation/aws"
 sidebar_position: 1
 title: "CHR: AWS Installation"
+description: 'This page guides users through deploying MikroTik CHR on Amazon Web Services (AWS) by importing a raw disk image as an AMI and launching an EC2 instance.'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/install/chr-installation/aws
 captured_at: '2026-11-04T11:28:37+08:00'
 ---

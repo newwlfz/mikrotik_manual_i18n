@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/telnet"
 sidebar_position: 34
 title: "telnet"
+description: 'RouterOS command reference for /system/telnet.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/telnet
 captured_at: '2026-11-01T21:30:11+08:00'
 ---

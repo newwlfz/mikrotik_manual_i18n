@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/traffic-generator/index"
 sidebar_position: 1
 title: "traffic-generator"
+description: 'RouterOS settings reference for /tool/traffic-generator.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/traffic-generator
 captured_at: '2026-11-01T21:30:26+08:00'
 ---

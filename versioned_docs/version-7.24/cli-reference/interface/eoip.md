@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/eoip"
 sidebar_position: 7
 title: "eoip"
+description: 'RouterOS directory reference for /interface/eoip.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/eoip
 captured_at: '2026-11-01T21:27:05+08:00'
 ---

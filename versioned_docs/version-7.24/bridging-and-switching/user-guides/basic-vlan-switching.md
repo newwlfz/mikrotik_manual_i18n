@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/user-guides/basic-vlan-switching"
 sidebar_position: 1
 title: "Basic VLAN switching"
+description: 'This page provides an overview of basic VLAN switching configuration on MikroTik RouterOS, covering setup for devices with Marvell Prestera and RTL8367/CRS series switch chips, including hardware-offloaded VLAN...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/user-guides/basic-vlan-switching
 captured_at: '2026-11-04T11:27:19+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/rip/interface-template"
 sidebar_position: 3
 title: "interface-template"
+description: 'RouterOS directory reference for /routing/rip/interface-template.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/rip/interface-template
 captured_at: '2026-11-01T21:29:47+08:00'
 ---

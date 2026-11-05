@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/user-guides/port-knocking"
 sidebar_position: 7
 title: "Port knocking"
+description: 'Port knocking is a security method to protect public IP addresses by requiring a specific sequence of port connections before granting access. The documentation provides setup examples, including firewall rule...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/user-guides/port-knocking
 captured_at: '2026-11-04T11:28:24+08:00'
 ---

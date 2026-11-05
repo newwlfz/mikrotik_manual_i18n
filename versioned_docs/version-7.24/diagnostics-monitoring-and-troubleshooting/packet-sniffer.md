@@ -2,6 +2,7 @@
 sidebar_key: "diagnostics-monitoring-and-troubleshooting/packet-sniffer"
 sidebar_position: 4
 title: "Packet Sniffer"
+description: 'Packet Sniffer is a MikroTik RouterOS tool for capturing and analyzing network packets to diagnose issues or detect security threats. It supports filtering by IP, MAC, port, protocol, and more, with options to save...'
 source: https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/packet-sniffer
 captured_at: '2026-11-04T11:28:03+08:00'
 ---

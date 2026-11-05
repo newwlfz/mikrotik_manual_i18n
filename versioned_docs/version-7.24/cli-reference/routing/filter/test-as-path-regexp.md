@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/filter/test-as-path-regexp"
 sidebar_position: 10
 title: "test-as-path-regexp"
+description: 'RouterOS command reference for /routing/filter/test-as-path-regexp.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/filter/test-as-path-regexp
 captured_at: '2026-11-01T21:29:31+08:00'
 ---

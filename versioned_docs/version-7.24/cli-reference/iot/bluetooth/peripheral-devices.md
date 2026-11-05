@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/iot/bluetooth/peripheral-devices"
 sidebar_position: 5
 title: "peripheral-devices"
+description: 'RouterOS directory reference for /iot/bluetooth/peripheral-devices.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/iot/bluetooth/peripheral-devices
 captured_at: '2026-11-01T21:28:09+08:00'
 ---

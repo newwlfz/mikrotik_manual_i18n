@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/qos/monitor"
 sidebar_position: 3
 title: "monitor"
+description: 'RouterOS command reference for /interface/ethernet/switch/qos/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/qos/monitor
 captured_at: '2026-11-01T21:27:16+08:00'
 ---

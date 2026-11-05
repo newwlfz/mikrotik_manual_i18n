@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/routeros-licensing/mikrotik-hardware/index"
 sidebar_position: 2
 title: "MikroTik Hardware Licensing"
+description: 'MikroTik hardware routers running RouterOS come with pre-installed licenses that determine features like tunnel limits and user sessions. License levels range from trial mode to unlimited functionality, with pricing...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/routeros-licensing/mikrotik-hardware
 captured_at: '2026-11-04T11:29:10+08:00'
 ---

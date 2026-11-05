@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/ssh/export-host-key"
 sidebar_position: 1
 title: "export-host-key"
+description: 'RouterOS command reference for /ip/ssh/export-host-key.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/ssh/export-host-key
 captured_at: '2026-11-01T21:28:58+08:00'
 ---

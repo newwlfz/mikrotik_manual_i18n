@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wireless/nstreme"
 sidebar_position: 12
 title: "nstreme"
+description: 'RouterOS directory reference for /interface/wireless/nstreme.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/nstreme
 captured_at: '2026-11-01T21:28:01+08:00'
 ---

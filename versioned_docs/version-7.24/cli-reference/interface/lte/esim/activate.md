@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/lte/esim/activate"
 sidebar_position: 1
 title: "activate"
+description: 'RouterOS command reference for /interface/lte/esim/activate.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/lte/esim/activate
 captured_at: '2026-11-01T21:27:25+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/firewall/layer7-protocol"
 sidebar_position: 5
 title: "layer7-protocol"
+description: 'RouterOS directory reference for /ip/firewall/layer7-protocol.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/firewall/layer7-protocol
 captured_at: '2026-11-01T21:28:37+08:00'
 ---

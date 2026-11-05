@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/l2tp-ether/monitor"
 sidebar_position: 2
 title: "monitor"
+description: 'RouterOS command reference for /interface/l2tp-ether/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/l2tp-ether/monitor
 captured_at: '2026-11-01T21:27:23+08:00'
 ---

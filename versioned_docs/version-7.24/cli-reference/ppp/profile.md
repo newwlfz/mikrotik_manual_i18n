@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ppp/profile"
 sidebar_position: 4
 title: "profile"
+description: 'RouterOS directory reference for /ppp/profile.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ppp/profile
 captured_at: '2026-11-01T21:29:22+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/dude/ros/interface"
 sidebar_position: 5
 title: "interface"
+description: 'RouterOS directory reference for /dude/ros/interface.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/dude/ros/interface
 captured_at: '2026-11-01T21:26:51+08:00'
 ---

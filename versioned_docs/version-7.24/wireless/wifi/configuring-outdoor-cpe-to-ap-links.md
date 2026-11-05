@@ -2,6 +2,7 @@
 sidebar_key: "wireless/wifi/configuring-outdoor-cpe-to-ap-links"
 sidebar_position: 2
 title: "Configuring outdoor CPE to AP links"
+description: 'Guide for configuring outdoor CPE-to-AP Wi-Fi links using MikroTik RouterOS''s wifi-qcom package, covering frequency selection, country regulations, AP mode setup, security, and distance considerations for long-range...'
 source: https://manual.mikrotik.com/docs/7.24/wireless/wifi/configuring-outdoor-cpe-to-ap-links
 captured_at: '2026-11-04T11:36:02+08:00'
 ---

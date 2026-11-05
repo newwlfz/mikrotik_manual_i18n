@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/route/index"
 sidebar_position: 2
 title: "route"
+description: 'RouterOS directory reference for /ip/route.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/route
 captured_at: '2026-11-01T21:28:55+08:00'
 ---

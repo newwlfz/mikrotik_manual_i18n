@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/caps-man/registration-table"
 sidebar_position: 12
 title: "registration-table"
+description: 'RouterOS directory reference for /caps-man/registration-table.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/caps-man/registration-table
 captured_at: '2026-11-01T21:26:23+08:00'
 ---

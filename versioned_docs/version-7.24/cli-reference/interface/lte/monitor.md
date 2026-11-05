@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/lte/monitor"
 sidebar_position: 7
 title: "monitor"
+description: 'RouterOS command reference for /interface/lte/monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/lte/monitor
 captured_at: '2026-11-01T21:27:28+08:00'
 ---

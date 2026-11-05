@@ -2,6 +2,7 @@
 sidebar_key: "bridging-and-switching/switch-chip-features"
 sidebar_position: 7
 title: "Switch Chip Features"
+description: 'This page introduces MikroTik RouterOS switch chip features, detailing supported functionalities like Port Switching and Mirroring across various models, along with limitations in bandwidth controls and VLAN...'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/switch-chip-features
 captured_at: '2026-11-04T11:27:29+08:00'
 ---

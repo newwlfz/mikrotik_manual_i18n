@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/lte/cell-monitor"
 sidebar_position: 3
 title: "cell-monitor"
+description: 'RouterOS command reference for /interface/lte/cell-monitor.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/lte/cell-monitor
 captured_at: '2026-11-01T21:27:24+08:00'
 ---

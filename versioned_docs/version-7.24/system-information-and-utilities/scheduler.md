@@ -2,6 +2,7 @@
 sidebar_key: "system-information-and-utilities/scheduler"
 sidebar_position: 13
 title: "Scheduler"
+description: 'The MikroTik RouterOS scheduler enables timed execution of scripts, allowing precise control over when and how often tasks run. It supports interval-based or one-time execution, with properties like start time,...'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/scheduler
 captured_at: '2026-11-04T11:33:38+08:00'
 ---

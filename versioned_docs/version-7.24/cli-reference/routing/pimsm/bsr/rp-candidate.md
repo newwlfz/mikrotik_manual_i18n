@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/pimsm/bsr/rp-candidate"
 sidebar_position: 3
 title: "rp-candidate"
+description: 'RouterOS directory reference for /routing/pimsm/bsr/rp-candidate.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/pimsm/bsr/rp-candidate
 captured_at: '2026-11-01T21:29:37+08:00'
 ---

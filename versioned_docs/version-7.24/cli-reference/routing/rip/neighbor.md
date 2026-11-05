@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/rip/neighbor"
 sidebar_position: 5
 title: "neighbor"
+description: 'This submenu is used to define neighboring routers to exchange routing information with. Normally there is no need to add the neighbors, if multicasting is working properly within the network. If there are problems...'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/rip/neighbor
 captured_at: '2026-11-01T21:29:39+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/system/package/update/check-for-updates"
 sidebar_position: 2
 title: "check-for-updates"
+description: 'RouterOS command reference for /system/package/update/check-for-updates.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/package/update/check-for-updates
 captured_at: '2026-11-01T21:29:59+08:00'
 ---

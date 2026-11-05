@@ -2,6 +2,7 @@
 sidebar_key: "high-availability-solutions/vrrp"
 sidebar_position: 4
 title: "VRRP"
+description: 'This page describes the Virtual Router Redundancy Protocol (VRRP) in MikroTik RouterOS, explaining how it provides router redundancy through IPv4/IPv6 multicast communication and prioritized election among routers....'
 source: https://manual.mikrotik.com/docs/7.24/high-availability-solutions/vrrp
 captured_at: '2026-11-04T11:29:58+08:00'
 ---

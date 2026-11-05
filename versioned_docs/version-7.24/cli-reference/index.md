@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/index"
 sidebar_position: 32
 title: "CLI Reference"
+description: 'The CLI reference documents RouterOS command menus and properties by console path. Use this section to look up command syntax, configuration objects, and operational commands for RouterOS features.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/
 captured_at: '2026-11-01T14:01:31+08:00'
 ---

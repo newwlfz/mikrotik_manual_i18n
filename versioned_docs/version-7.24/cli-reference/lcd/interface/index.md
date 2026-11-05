@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/lcd/interface/index"
 sidebar_position: 3
 title: "interface"
+description: 'RouterOS directory reference for /lcd/interface.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/lcd/interface
 captured_at: '2026-11-01T21:29:13+08:00'
 ---

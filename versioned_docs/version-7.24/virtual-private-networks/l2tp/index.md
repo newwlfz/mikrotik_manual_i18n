@@ -2,6 +2,7 @@
 sidebar_key: "virtual-private-networks/l2tp/index"
 sidebar_position: 2
 title: "L2TP"
+description: 'This page documents MikroTik RouterOS L2TP configuration, covering client and server setup with properties like authentication methods, MTU/MRRU settings, IPsec integration, and dynamic interface management for Layer...'
 source: https://manual.mikrotik.com/docs/7.24/virtual-private-networks/l2tp
 captured_at: '2026-11-04T11:34:37+08:00'
 ---

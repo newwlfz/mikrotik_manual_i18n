@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/bluetooth/index"
 sidebar_position: 1
 title: "Bluetooth"
+description: 'This page documents MikroTik RouterOS''s Bluetooth IoT functionality, covering Bluetooth channel structure, advertising packet formats, and configuration via the /iot/bluetooth submenu. It explains PDU types, antenna...'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/bluetooth
 captured_at: '2026-11-04T11:30:39+08:00'
 ---

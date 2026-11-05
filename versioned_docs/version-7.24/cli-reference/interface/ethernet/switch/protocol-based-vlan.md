@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/ethernet/switch/protocol-based-vlan"
 sidebar_position: 18
 title: "protocol-based-vlan"
+description: 'RouterOS directory reference for /interface/ethernet/switch/protocol-based-vlan.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/protocol-based-vlan
 captured_at: '2026-11-01T21:27:14+08:00'
 ---

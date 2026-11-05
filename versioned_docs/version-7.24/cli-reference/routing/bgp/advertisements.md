@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/bgp/advertisements"
 sidebar_position: 1
 title: "advertisements"
+description: 'RouterOS directory reference for /routing/bgp/advertisements.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/bgp/advertisements
 captured_at: '2026-11-01T21:29:26+08:00'
 ---

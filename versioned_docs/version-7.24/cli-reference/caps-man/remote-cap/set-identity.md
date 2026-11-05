@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/caps-man/remote-cap/set-identity"
 sidebar_position: 3
 title: "set-identity"
+description: 'RouterOS command reference for /caps-man/remote-cap/set-identity.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/caps-man/remote-cap/set-identity
 captured_at: '2026-11-01T21:26:23+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/caps-man/actual-interface-configuration"
 sidebar_position: 3
 title: "actual-interface-configuration"
+description: 'RouterOS directory reference for /caps-man/actual-interface-configuration.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/caps-man/actual-interface-configuration
 captured_at: '2026-11-01T21:26:19+08:00'
 ---

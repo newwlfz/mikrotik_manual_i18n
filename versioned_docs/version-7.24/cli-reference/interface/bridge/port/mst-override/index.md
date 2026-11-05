@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/bridge/port/mst-override/index"
 sidebar_position: 1
 title: "mst-override"
+description: 'RouterOS directory reference for /interface/bridge/port/mst-override.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bridge/port/mst-override
 captured_at: '2026-11-01T21:27:01+08:00'
 ---

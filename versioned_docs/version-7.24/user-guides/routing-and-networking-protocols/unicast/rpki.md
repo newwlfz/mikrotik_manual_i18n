@@ -2,6 +2,7 @@
 sidebar_key: "routing-and-networking-protocols/unicast/rpki"
 sidebar_position: 9
 title: "RPKI"
+description: 'RouterOS supports RPKI for BGP prefix validation using the Resource Public Key Infrastructure, enabling secure route origin verification via RTR protocol. Configuration includes setting up RTR servers and applying...'
 slug: /user-guides/routing-and-networking-protocols/unicast/rpki
 source: https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/rpki
 captured_at: '2026-11-04T11:34:17+08:00'

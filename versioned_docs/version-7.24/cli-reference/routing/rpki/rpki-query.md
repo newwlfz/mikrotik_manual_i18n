@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/routing/rpki/rpki-query"
 sidebar_position: 3
 title: "rpki-query"
+description: 'RouterOS command reference for /routing/rpki/rpki-query.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/routing/rpki/rpki-query
 captured_at: '2026-11-01T21:29:42+08:00'
 ---

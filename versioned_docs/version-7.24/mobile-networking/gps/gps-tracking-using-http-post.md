@@ -2,6 +2,7 @@
 sidebar_key: "mobile-networking/gps/gps-tracking-using-http-post"
 sidebar_position: 1
 title: "GPS-tracking using HTTP POST"
+description: 'This page explains how to set up a vehicle tracking system using MikroTik RouterOS GPS functionality and HTTP POST to send coordinates to a web server, which stores them in an SQLite3 database for visualization with...'
 source: https://manual.mikrotik.com/docs/7.24/mobile-networking/gps/gps-tracking-using-http-post
 captured_at: '2026-11-04T11:32:18+08:00'
 ---

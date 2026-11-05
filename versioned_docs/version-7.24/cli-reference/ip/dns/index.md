@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/dns/index"
 sidebar_position: 4
 title: "dns"
+description: 'RouterOS settings reference for /ip/dns.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dns
 captured_at: '2026-11-01T21:28:32+08:00'
 ---

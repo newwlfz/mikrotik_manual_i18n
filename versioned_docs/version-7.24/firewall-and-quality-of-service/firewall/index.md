@@ -2,6 +2,7 @@
 sidebar_key: "firewall-and-quality-of-service/firewall/index"
 sidebar_position: 5
 title: "Firewall"
+description: 'MikroTik RouterOS firewall provides stateful and stateless packet filtering, NAT, and advanced traffic classification to secure network data flow and prevent unauthorized access. It includes filter/raw, mangle, and...'
 source: https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/firewall
 captured_at: '2026-11-04T11:28:09+08:00'
 ---

@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/container/log"
 sidebar_position: 6
 title: "log"
+description: 'RouterOS directory reference for /container/log.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/container/log
 captured_at: '2026-11-01T21:26:39+08:00'
 ---

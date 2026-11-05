@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wifi/interworking"
 sidebar_position: 12
 title: "interworking"
+description: 'RouterOS directory reference for /interface/wifi/interworking.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/interworking
 captured_at: '2026-11-01T21:27:50+08:00'
 ---

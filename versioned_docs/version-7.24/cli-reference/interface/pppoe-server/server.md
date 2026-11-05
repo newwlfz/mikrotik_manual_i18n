@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/pppoe-server/server"
 sidebar_position: 3
 title: "server"
+description: 'RouterOS directory reference for /interface/pppoe-server/server.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/pppoe-server/server
 captured_at: '2026-11-01T21:27:34+08:00'
 ---

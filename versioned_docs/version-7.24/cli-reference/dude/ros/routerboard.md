@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/dude/ros/routerboard"
 sidebar_position: 12
 title: "routerboard"
+description: 'RouterOS directory reference for /dude/ros/routerboard.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/dude/ros/routerboard
 captured_at: '2026-11-01T21:26:54+08:00'
 ---

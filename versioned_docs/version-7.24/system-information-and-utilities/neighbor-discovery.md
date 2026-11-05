@@ -2,6 +2,7 @@
 sidebar_key: "system-information-and-utilities/neighbor-discovery"
 sidebar_position: 8
 title: "Neighbor discovery"
+description: 'Neighbor discovery protocols enable detection of devices using MNDP, CDP, or LLDP in Layer2 domains, displaying connected neighbors'' IP/MAC addresses and interfaces. Configuration options include protocol selection,...'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/neighbor-discovery
 captured_at: '2026-11-04T11:33:38+08:00'
 ---

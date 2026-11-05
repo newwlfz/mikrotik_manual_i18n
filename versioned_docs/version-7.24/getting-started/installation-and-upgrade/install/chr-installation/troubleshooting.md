@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/installation-and-upgrade/install/chr-installation/troubleshooting"
 sidebar_position: 8
 title: "CHR: Troubleshooting"
+description: 'This page covers troubleshooting for MikroTik RouterOS CHR, addressing IGMP snooping issues on Linux bridges, VLAN-related data flow problems between guests and the outside world, VLAN tagging requirements in...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/install/chr-installation/troubleshooting
 captured_at: '2026-11-04T11:28:43+08:00'
 ---

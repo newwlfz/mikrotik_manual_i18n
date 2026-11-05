@@ -2,6 +2,7 @@
 sidebar_key: "hardware/product-naming"
 sidebar_position: 9
 title: "Product Naming"
+description: 'MikroTik product naming follows a structured convention for RouterBOARD models, detailing board series, wired/wireless interfaces, CPU cores, and wireless features like bands and power levels to help users identify...'
 source: https://manual.mikrotik.com/docs/7.24/hardware/product-naming
 captured_at: '2026-11-04T11:29:29+08:00'
 ---

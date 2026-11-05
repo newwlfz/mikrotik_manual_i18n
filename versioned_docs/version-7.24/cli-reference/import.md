@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/import"
 sidebar_position: 10
 title: "import"
+description: 'RouterOS command reference for /import.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/import
 captured_at: '2026-11-01T21:26:54+08:00'
 ---

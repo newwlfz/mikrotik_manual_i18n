@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/dude/service"
 sidebar_position: 10
 title: "service"
+description: 'RouterOS directory reference for /dude/service.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/dude/service
 captured_at: '2026-11-01T21:26:52+08:00'
 ---

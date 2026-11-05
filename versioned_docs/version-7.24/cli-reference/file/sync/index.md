@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/file/sync/index"
 sidebar_position: 1
 title: "sync"
+description: 'RouterOS directory reference for /file/sync.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/file/sync
 captured_at: '2026-11-01T21:26:53+08:00'
 ---

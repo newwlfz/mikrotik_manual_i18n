@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/installation-and-upgrade/install/x86-installation"
 sidebar_position: 2
 title: "x86 Installation"
+description: 'This page provides a step-by-step guide for installing RouterOS on x86 hardware using USB or Netinstall, covering Windows/Linux/macOS methods, BIOS settings adjustments, and boot priority configurations for...'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/install/x86-installation
 captured_at: '2026-11-04T11:28:40+08:00'
 ---

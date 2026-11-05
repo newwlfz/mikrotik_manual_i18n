@@ -2,6 +2,7 @@
 sidebar_key: "getting-started/installation-and-upgrade/install/chr-installation/proxmox"
 sidebar_position: 7
 title: "CHR: Proxmox VE Installation"
+description: 'This page provides an overview and detailed installation steps for deploying MikroTik Cloud Hosted Router (CHR) on Proxmox VE virtual environments, covering VM creation, image handling, and configuration methods.'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/install/chr-installation/proxmox
 captured_at: '2026-11-04T11:28:44+08:00'
 ---

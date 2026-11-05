@@ -2,6 +2,7 @@
 sidebar_key: "containers/index"
 sidebar_position: 3
 title: "Container"
+description: 'This page documents MikroTik RouterOS container support, covering configuration, virtual interfaces, storage, and security considerations. It details properties like restart intervals, DNS settings, CPU allocation,...'
 source: https://manual.mikrotik.com/docs/7.24/containers
 captured_at: '2026-11-04T11:27:42+08:00'
 ---

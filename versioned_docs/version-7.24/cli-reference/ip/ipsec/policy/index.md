@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/ip/ipsec/policy/index"
 sidebar_position: 2
 title: "policy"
+description: 'RouterOS directory reference for /ip/ipsec/policy.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/ip/ipsec/policy
 captured_at: '2026-11-01T21:28:48+08:00'
 ---

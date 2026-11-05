@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/interface/wifi/security/index"
 sidebar_position: 1
 title: "security"
+description: 'RouterOS directory reference for /interface/wifi/security.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/security
 captured_at: '2026-11-01T21:27:53+08:00'
 ---

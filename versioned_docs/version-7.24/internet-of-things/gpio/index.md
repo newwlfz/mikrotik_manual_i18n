@@ -2,6 +2,7 @@
 sidebar_key: "internet-of-things/gpio/index"
 sidebar_position: 2
 title: "GPIO"
+description: 'GPIO allows configuring digital and analog input/output pins on MikroTik routers for tasks like voltage measurement, dry contact sensing, and relay control. Settings are managed via CLI under /iot/gpio with submenus...'
 source: https://manual.mikrotik.com/docs/7.24/internet-of-things/gpio
 captured_at: '2026-11-04T11:31:03+08:00'
 ---

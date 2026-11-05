@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/disk/scan"
 sidebar_position: 14
 title: "scan"
+description: 'RouterOS command reference for /disk/scan.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/disk/scan
 captured_at: '2026-11-01T21:26:46+08:00'
 ---

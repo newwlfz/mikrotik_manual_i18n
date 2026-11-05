@@ -2,6 +2,7 @@
 sidebar_key: "cli-reference/tool/bandwidth-server/index"
 sidebar_position: 1
 title: "bandwidth-server"
+description: 'RouterOS settings reference for /tool/bandwidth-server.'
 source: https://manual.mikrotik.com/docs/7.24/cli-reference/tool/bandwidth-server
 captured_at: '2026-11-01T21:30:14+08:00'
 ---

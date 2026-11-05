@@ -2,6 +2,7 @@
 sidebar_key: "developer-guides/api/python3-example"
 sidebar_position: 2
 title: "Python3 Example"
+description: 'This page provides a Python3 example client for interacting with MikroTik RouterOS via its API, demonstrating login and command execution using socket communication and MD5 hashing for authentication.'
 source: https://manual.mikrotik.com/docs/7.24/developer-guides/api/python3-example
 captured_at: '2026-11-04T11:27:48+08:00'
 ---
