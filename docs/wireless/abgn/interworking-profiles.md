@@ -8,8 +8,8 @@ tags:
   - 'interworking'
   - 'hotspot-20'
   - 'anqp'
-source: https://manual.mikrotik.com/docs/wireless/abgn/interworking-profiles
-captured_at: '2026-11-04T11:35:31+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/abgn/interworking-profiles
+captured_at: '2026-11-04T11:24:06+08:00'
 ---
 
 ## Interworking
@@ -137,7 +137,7 @@ Drag and drop the certificate in WinBox, and then use the import function for it
 
 ![](./img/interworking-profiles-01.webp)
 
-![](./img/image.webp)
+![](./img/image-e93c0b62.webp)
 
 ![](./img/image-2b9f3644.webp)
 

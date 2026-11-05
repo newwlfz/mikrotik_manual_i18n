@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ip/firewall/layer7-protocol"
 sidebar_position: 5
 title: "layer7-protocol"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/firewall/layer7-protocol
-captured_at: '2026-11-01T21:28:37+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/firewall/layer7-protocol
+captured_at: '2026-11-01T21:23:58+08:00'
 ---
 
 -----------

@@ -10,8 +10,8 @@ tags:
   - 'vxlan'
   - 'ospf'
 slug: /user-guides/routing-and-networking-protocols/unicast/evpn
-source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/evpn
-captured_at: '2026-11-04T11:34:27+08:00'
+source: https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/unicast/evpn
+captured_at: '2026-11-04T11:23:14+08:00'
 ---
 
 Ethernet Virtual Private Network (EVPN) is a technology that extends Layer 2 and Layer 3 connectivity between different network segments. MPLS or VXLAN encapsulations transfer Ethernet frames over MPLS or IP‑based networks.
@@ -108,7 +108,7 @@ add afi=evpn instance=evpn-inst local.address=203.0.113.1 .role=ebgp multihop=ye
 add instance=evpn-inst name=bgp-evpn-1o vni=100040
 ```
 
-For simple setups with only one VNI, there is no need to set a route distinguisher or [`import.route-targets`](/docs/cli-reference/routing/bgp/vpn#import.route-targets)/[`export.route-targets`](/docs/cli-reference/routing/bgp/vpn#export.route-targets).
+For simple setups with only one VNI, there is no need to set a route distinguisher or [`import.route-targets`](/docs/cli-reference/routing/bgp/evpn#import.route-targets)/[`export.route-targets`](/docs/cli-reference/routing/bgp/evpn#export.route-targets).
 
 :::info
 When [RTs](/docs/user-guides/routing-and-networking-protocols/route-distinguisher-and-route-target#route-targets) or [RD](/docs/user-guides/routing-and-networking-protocols/route-distinguisher-and-route-target#route-distinguisher) are not specified, values are derived automatically. Route targets are set to `<PE ASN>:<VNI>`, route distinguishers `<PE address>:<num derived from config id>`).
@@ -195,7 +195,7 @@ For the [BGP](/docs/user-guides/routing-and-networking-protocols/unicast/bgp/und
 
 To simplify configuration, use a BGP [`/routing/bgp/template`](/docs/cli-reference/routing/bgp/template) to set common parameters and configure the [`/routing/bgp/connection`](/docs/cli-reference/routing/bgp/connection) to listen on the entire loopback address range. This approach scales well: adding more leaf routers requires no changes on the spine routers.
 
-Also it is recommended to set [`nexthop-choice`](https://manual.mikrotik.com/docs/cli-reference/routing/bgp/bgp) to propagate especially if there is more than one spine. In case if iBGP is used as overlay then spines should be route reflectors and nexthop propagation is happening by default.
+Also it is recommended to set [`nexthop-choice`](/docs/cli-reference/routing/bgp/connection#nexthop-choice) to propagate especially if there is more than one spine. In case if iBGP is used as overlay then spines should be route reflectors and nexthop propagation is happening by default.
 
 **Ros\_Spine** — [`/routing/bgp/instance`](/docs/cli-reference/routing/bgp/instance)
 

@@ -1,10 +1,22 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const VERSION = JSON.parse(fs.readFileSync('data/manifests/current-version.json', 'utf8')).version;
-const ROOT = 'docs';
+const arg = (name, fallback) => {
+  const index = process.argv.indexOf(`--${name}`);
+  return index === -1 ? fallback : process.argv[index + 1];
+};
+
+const current = JSON.parse(
+  fs.readFileSync('data/manifests/current-version.json', 'utf8'),
+).version;
+const VERSION = arg('version', current);
+const ROOT = arg(
+  'docs',
+  VERSION === current ? 'docs' : `versioned_docs/version-${VERSION}`,
+);
 const CLI_ROOT = path.join(ROOT, 'cli-reference');
-const OUT = `data/cli/${VERSION}/en.json`;
+const OUT = arg('out', `data/cli/${VERSION}/en.json`);
+const ROUTE_PREFIX = VERSION === current ? '/docs/' : `/docs/${VERSION}/`;
 
 function text(value) {
   return value
@@ -68,7 +80,7 @@ for (const file of walk(CLI_ROOT)) {
   commands[commandPath] = {
     path: commandPath,
     title,
-    url: '/docs/7.24/cli-reference/' + rel.replace(/\/index$/, ''),
+    url: `${ROUTE_PREFIX}cli-reference/` + rel.replace(/\/index$/, ''),
     arguments: args,
     flags,
     readOnlyArguments: readOnly,
@@ -77,10 +89,12 @@ for (const file of walk(CLI_ROOT)) {
 
 const payload = {
   version: VERSION,
-  generatedFrom: 'versioned_docs/version-7.24/cli-reference',
+  generatedFrom: `${ROOT}/cli-reference`,
   commandCount: Object.keys(commands).length,
   commands,
 };
 fs.mkdirSync(path.dirname(OUT), {recursive: true});
 fs.writeFileSync(OUT, JSON.stringify(payload) + '\n');
-console.log('commands', payload.commandCount, 'bytes', fs.statSync(OUT).size);
+console.log(
+  `[${VERSION}] commands=${payload.commandCount} bytes=${fs.statSync(OUT).size} out=${OUT}`,
+);

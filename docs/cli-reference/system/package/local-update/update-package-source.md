@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/package/local-update/update-package-source"
 sidebar_position: 6
 title: "update-package-source"
-source: https://manual.mikrotik.com/docs/cli-reference/system/package/local-update/update-package-source
-captured_at: '2026-11-01T21:29:58+08:00'
+sidebar_label: 'update-package-source'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/package/local-update/update-package-source
+captured_at: '2026-11-01T21:25:36+08:00'
 ---
 
 -----------

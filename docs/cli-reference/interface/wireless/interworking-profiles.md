@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/interworking-profiles"
 sidebar_position: 9
 title: "interworking-profiles"
 sidebar_label: 'interworking-profiles'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/interworking-profiles
-captured_at: '2026-11-01T21:28:00+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/interworking-profiles
+captured_at: '2026-11-01T21:23:23+08:00'
 ---
 
 -----------

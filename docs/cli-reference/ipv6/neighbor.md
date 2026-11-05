@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ipv6/neighbor"
 sidebar_position: 7
 title: "neighbor"
-source: https://manual.mikrotik.com/docs/cli-reference/ipv6/neighbor
-captured_at: '2026-11-01T21:29:09+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ipv6/neighbor
+captured_at: '2026-11-01T21:24:41+08:00'
 ---
 
 -----------

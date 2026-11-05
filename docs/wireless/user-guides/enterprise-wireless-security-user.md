@@ -8,8 +8,8 @@ tags:
   - 'user-authentication'
   - 'tls-certificates'
   - 'eap'
-source: https://manual.mikrotik.com/docs/wireless/user-guides/enterprise-wireless-security-user
-captured_at: '2026-11-04T11:35:42+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/user-guides/enterprise-wireless-security-user
+captured_at: '2026-11-04T11:24:01+08:00'
 ---
 
 User Manager version 5 ( available for RouterOS v7 ) supports user authentication via the Extensible Authentication Protocol (EAP).

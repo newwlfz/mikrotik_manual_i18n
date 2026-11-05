@@ -8,8 +8,8 @@ tags:
   - 'wireless'
   - 'arp'
   - 'channel-width'
-source: https://manual.mikrotik.com/docs/wireless/abgn/wireless-interface
-captured_at: '2026-11-04T11:35:57+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/abgn/wireless-interface
+captured_at: '2026-11-04T11:24:00+08:00'
 ---
 
 ---
@@ -36,7 +36,7 @@ Wireless can operate in several modes: client (station), access point, wireless 
 | **antenna-gain** (*integer [0..4294967295]*; Default: **0**) | Antenna gain in dBi, used to calculate maximum transmit power according to **country** regulations. |
 | **antenna-mode** (*ant-a \| ant-b \| rxa-txb \| txa-rxb*; Default: ) | Select antenna to use for transmitting and for receiving*ant-a* - use only 'a' antenna*ant-b* - use only 'b' antenna*txa-rxb* - use antenna 'a' for transmitting, antenna 'b' for receiving*rxa-txb* - use antenna 'b' for transmitting, antenna 'a' for receiving |
 | **area** (*string*; Default: ) | Identifies group of wireless networks. This value is announced by AP, and can be matched in  [connect-list](/docs/wireless/abgn/wireless-interface#connect-list)  by **area-prefix**. This is a proprietary extension. |
-| **arp** (*disabled \| enabled \| proxy-arp \| reply-only*; Default: **enabled**) | [ARP](https://manual.mikrotik.com/docs/network-management/arp) |
+| **arp** (*disabled \| enabled \| proxy-arp \| reply-only*; Default: **enabled**) | [ARP](/docs/getting-started/networking-fundamentals/#arp-and-tying-it-all-together) |
 | **arp-timeout** (*auto \| integer*; Default: **auto**) | ARP timeout is time how long ARP record is kept in ARP table after no packets are received from IP. Value **auto** equals to the value of **arp-timeout** in **/ip/settings**, default is 30s |
 | **band** (*2ghz-b \| 2ghz-b/g \| 2ghz-b/g/n \| 2ghz-onlyg \| 2ghz-onlyn \| 5ghz-a \| 5ghz-a/n \| 5ghz-onlyn \| 5ghz-a/n/ac \| 5ghz-onlyac \| 5ghz-n/ac*; Default: ) | Defines set of used data rates, channel frequencies and widths. |
 | **basic-rates-a/g** (*12Mbps \| 18Mbps \| 24Mbps \| 36Mbps \| 48Mbps \| 54Mbps \| 6Mbps \| 9Mbps*; Default: **6Mbps**) | Similar to the **basic-rates-b** property, but used for 5ghz, 5ghz-10mhz, 5ghz-5mhz, 5ghz-turbo, 2.4ghz-b/g, 2.4ghz-onlyg, 2ghz-10mhz, 2ghz-5mhz and 2.4ghz-g-turbo bands. |
@@ -298,7 +298,7 @@ Then if the signal drops to -56, the client will be disconnected.
 | **comment** (*string*; Default: ) | Short description of an entry |
 | **disabled** (*yes \| no*; Default: **no**) |  |
 | **forwarding** (*yes \| no*; Default: **yes**) | *no* - Client cannot send frames to other stations that are connected to the same access point.*yes* - Client can send frames to other stations on the same access point. |
-| **interface** (*string \| any \| all*; Default: **any**) | Rules with **interface**=*any* are used for any wireless interface and the **interface**=*all* defines [interface list](https://manual.mikrotik.com/docs/system-information-and-utilities/interface-lists) “all” name. To make rule that applies only to one wireless interface, specify that interface as a value of this property. |
+| **interface** (*string \| any \| all*; Default: **any**) | Rules with **interface**=*any* are used for any wireless interface and the **interface**=*all* defines [interface list](/docs/cli-reference/interface/list) “all” name. To make rule that applies only to one wireless interface, specify that interface as a value of this property. |
 | **mac-address** (*MAC*; Default: **00:00:00:00:00:00**) | Rule matches client with the specified MAC address. Value *00:00:00:00:00:00* matches always. |
 | **management-protection-key** (*string*; Default: **""**) *[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* |  |
 | **private-algo** (*104bit-wep \| 40bit-wep \| aes-ccm \| none \| tkip*; Default: **none**) | Only for WEP modes. |
@@ -642,7 +642,7 @@ Two radios in nstreme-dual-slave mode can be grouped together to make a nstreme2
 
 | Property | Description |
 | :-- | :-- |
-| **arp** (*disabled \| enabled \| proxy-arp \| reply-only*; Default: **enabled**) | [ARP](https://manual.mikrotik.com/docs/network-management/arp) |
+| **arp** (*disabled \| enabled \| proxy-arp \| reply-only*; Default: **enabled**) | [ARP](/docs/getting-started/networking-fundamentals/#arp-and-tying-it-all-together) |
 | **comment** (*string*; Default: ) | Short description of an entry |
 | **disable-csma** (*yes \| no*; Default: **no**) | Disable CSMA/CA (better performance) |
 | **disable-running-check** (*yes \| no*; Default: **no**) | Whether the interface should always be treated as running even if there is no connection to a remote peer |

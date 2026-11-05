@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/certificate/add-acme"
 sidebar_position: 2
 title: "add-acme"
 sidebar_label: 'add-acme'
-source: https://manual.mikrotik.com/docs/cli-reference/certificate/add-acme
-captured_at: '2026-11-01T21:26:25+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/add-acme
+captured_at: '2026-11-01T21:21:48+08:00'
 ---
 
 -----------

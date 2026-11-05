@@ -8,8 +8,8 @@ tags:
   - 'routing'
   - 'ospf'
 slug: /user-guides/routing-and-networking-protocols/unicast/ospf/routing-calculation
-source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/ospf/routing-calculation
-captured_at: '2026-11-04T11:34:23+08:00'
+source: https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/unicast/ospf/routing-calculation
+captured_at: '2026-11-04T11:23:06+08:00'
 ---
 
 The link-state database describes the routers and links that interconnect them and are appropriate for forwarding. It also contains the cost (metric) of each link. This metric is used to calculate the shortest path to the destination network.

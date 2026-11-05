@@ -8,8 +8,8 @@ tags:
   - 'aws'
   - 'iot'
   - 'lora'
-source: https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides/aws-lorawan-configuration
-captured_at: '2026-11-04T11:31:28+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/lora/user-guides/aws-lorawan-configuration
+captured_at: '2026-11-04T11:18:44+08:00'
 ---
 
 :::info

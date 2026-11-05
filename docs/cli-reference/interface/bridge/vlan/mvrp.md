@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/bridge/vlan/mvrp"
 sidebar_position: 2
 title: "mvrp"
 sidebar_label: 'mvrp'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/bridge/vlan/mvrp
-captured_at: '2026-11-01T21:27:02+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/vlan/mvrp
+captured_at: '2026-11-01T21:22:26+08:00'
 ---
 
 -----------

@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/health/settings/index"
 sidebar_position: 2
 title: "settings"
-source: https://manual.mikrotik.com/docs/cli-reference/system/health/settings
-captured_at: '2026-11-01T21:29:50+08:00'
+sidebar_label: 'settings'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/health/settings
+captured_at: '2026-11-01T21:25:28+08:00'
 ---
 
 -----------

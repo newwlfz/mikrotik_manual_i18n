@@ -8,8 +8,8 @@ tags:
   - 'w60g'
   - 'wireless'
   - 'arp'
-source: https://manual.mikrotik.com/docs/wireless/w60g
-captured_at: '2026-11-04T11:35:41+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/w60g
+captured_at: '2026-11-04T11:24:07+08:00'
 ---
 
 This section covers 60 GHz wireless examples and guidance. Use it to configure W60G point-to-point and point-to-multipoint links, failover, and distance-related settings.
@@ -34,7 +34,7 @@ Wireless Wire kit devices come in pre-configured, connected pairs. Manual config
 
 | Property | Description |
 | :-- | :-- |
-| **arp** (*disabled \| enabled \| proxy-arp \| reply-only*; Default: **enabled**) | [`Read more >>`](/docs/network-management/arp#arp-modes) |
+| **arp** (*disabled \| enabled \| proxy-arp \| reply-only*; Default: **enabled**) | [`Read more >>`](/docs/getting-started/networking-fundamentals/#arp-and-tying-it-all-together) |
 | **arp-timeout** (*auto \| integer*; Default: **auto**) | ARP timeout is the time how long the ARP record is kept in the ARP table after no packets are received from IP. Value **auto** equals the value of **arp-timeout** in `/ip/settings`, default is 30s |
 | **comment** (*string*; Default: ) | Short description of the interface |
 | **disabled** (*yes \| no*; Default: **yes**) | Whether the interface is disabled |

@@ -3,8 +3,8 @@ sidebar_key: "bridging-and-switching/swos/troubleshooting"
 sidebar_position: 7
 title: "Cannot upgrade SwOS"
 sidebar_label: 'Cannot upgrade SwOS'
-source: https://manual.mikrotik.com/docs/bridging-and-switching/swos/troubleshooting
-captured_at: '2026-11-04T11:27:12+08:00'
+source: https://manual.mikrotik.com/docs/7.25/bridging-and-switching/swos/troubleshooting
+captured_at: '2026-11-04T11:14:27+08:00'
 ---
 
 ---

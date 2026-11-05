@@ -7,8 +7,8 @@ description: 'This page lists MikroTik RouterOS menus where sensitive parameters
 tags:
   - 'ipsec'
   - 'radius'
-source: https://manual.mikrotik.com/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters
-captured_at: '2026-11-04T11:28:31+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/configuration-management/list-of-menus-with-sensitive-parameters
+captured_at: '2026-11-04T11:16:08+08:00'
 ---
 
 Below you can find a list of menus where sensitive (shown only when [show-sensitive parameter](/docs/getting-started/configuration-management/#configuration-export) is used or alternatively hidden when "Hide password" is enabled in WinBox settings) parameters can be configured. For more detailed information, please refer to the corresponding menu documentation pages.
@@ -30,9 +30,9 @@ Below you can find a list of menus where sensitive (shown only when [show-sensit
 | `/interface/pppoe-client` | password | [PPPoE#PPPoEClient](/docs/virtual-private-networks/pppoe/) |
 | `/ppp/secret` | password | [PPP AAA#UserDatabase](/docs/authentication-authorization-accounting/ppp-aaa) |
 | `/ppp/l2tp-secret` | secret | Work in Progress |
-| `/ip/ssh/export-host-key`  `/ip/ssh/import-host-key` | passphrase | [SSH#SSHServer](/docs/management-tools/ssh) |
-| `/ip/ipsec` | auth-key, enc-key, ppk-secret, secret, password, passphrase, key | auth-key, enc-key - [IPsec#InstalledSAs](/docs/virtual-private-networks/ipsec/#installed-sas)  secret, password - [IPsec#Identities](/docs/virtual-private-networks/ipsec/#identities)  ppk-secret - Work in Progress [IPsec#Peers](/docs/virtual-private-networks/ipsec/#peers)  key, passphrase - Work in Progress [IPsec#Keys](/docs/virtual-private-networks/ipsec/#keys)|
-| `/system/ssh-exec` | password | [SSH#SSHexec](/docs/management-tools/ssh) |
+| `/ip/ssh/export-host-key`  `/ip/ssh/import-host-key` | passphrase | [SSH](/docs/management-tools/ssh#server-host-key) |
+| `/ip/ipsec` | auth-key, enc-key, ppk-secret, secret, password, passphrase, key | auth-key, enc-key - [IPsec InstalledSA](https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/installed-sa/installed-sa)  secret, password - [IPsec Identity](/docs/cli-reference/ip/ipsec/identity)  ppk-secret - Work in Progress [IPsec Peer](/docs/cli-reference/ip/ipsec/peer)  key, passphrase - Work in Progress IPsec Keys|
+| `/system/ssh-exec` | password | [SSH](/docs/management-tools/ssh#run-remote-commands-from-scripts) |
 | `/user` | password, passphrase | [User](/docs/authentication-authorization-accounting/user) |
 | `/disk` | nvme-tcp-server-password, nvme-tcp-password, smb-server-password, smb-password, self-encryption-password, encryption-key, sshfs-password | nvme-tcp-server-password, nvme-tcp-password - [NVMe over TCP](/docs/storage/nvme-over-tcp)  sshfs-password - Work in Progress  smb-server-password, smb-password - [SMB](/docs/storage/smb)  self-encryption-password, encryption-key - [Self-Encrypting Drives](/docs/storage/self-encrypting-drives)|
 | `/interface/vrrp` | password | [VRRP#Parameters](/docs/high-availability-solutions/vrrp) |
@@ -40,8 +40,8 @@ Below you can find a list of menus where sensitive (shown only when [show-sensit
 | `/interface/macsec` | cak | [MACsec#PropertyReference](/docs/bridging-and-switching/macsec) |
 | `/interface/wireguard` | private-key, preshared-key, \**show-client-config* | [WireGuard](/docs/virtual-private-networks/wireguard) |
 | `/interface/lte` | pin, password | [LTE/5G#LTEClient](/docs/mobile-networking/lte-5g#lte-client) |
-| `/socks/users` | password | [SOCKS](/docs/network-management/socks/) |
-| `/ip/cloud` | vpn-private-key, vpn-peer-private-key, private-key | [Back To Home#Propertyreference](/docs/network-management/cloud/back-to-home) |
+| `/ip/socks/users` | password | [SOCKS](/docs/network-management/socks/) |
+| `/ip/cloud` | vpn-private-key, vpn-peer-private-key, private-key | [Back To Home](/docs/network-management/cloud/back-to-home) |
 | `/ip/smb` | password | [SMB#Usersetup](/docs/storage/smb) |
 | `/password` | old-password, new-password, confirm-new-password | Password change command; no dedicated documentation page available. |
 | `/radius` | secret | [RADIUS#RADIUSClient](/docs/authentication-authorization-accounting/radius) |

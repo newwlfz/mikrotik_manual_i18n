@@ -3,174 +3,167 @@ sidebar_key: "network-management/cloud/back-to-home"
 sidebar_position: 1
 title: "Back To Home"
 sidebar_label: 'Back To Home'
-description: 'Back To Home enables secure VPN access from anywhere to your router, even if it lacks a public IP or is behind NAT. It uses MikroTik relay servers for indirect connections, ensuring end-to-end encryption without exposing keys. The feature supports both smartphone apps and manual RouterOS configuration, including sharing tunnels with guests or via WireGuard for computers.'
+description: 'Back To Home turns a RouterOS device into a WireGuard VPN server you can reach from anywhere, also behind NAT through a MikroTik relay. Set it up with the phone app, share tunnels with other people and computers, or manage users in RouterOS.'
 tags:
   - 'cloud'
   - 'back-to-home'
   - 'vpn'
-source: https://manual.mikrotik.com/docs/network-management/cloud/back-to-home
-captured_at: '2026-11-03T15:24:31+08:00'
+source: https://manual.mikrotik.com/docs/7.25/network-management/cloud/back-to-home
+captured_at: '2026-11-04T11:25:56+08:00'
 ---
 
-**Sub-menu:** `/ip/cloud` **Packages required:** `routeros`  
-**RouterOS version required:** v7.12 and newer  
-**Hardware requirements:** ARM/ARM64/TILE architecture devices
+:::info
+Back To Home works on devices with an ARM, ARM64 or TILE CPU, in RouterOS 7.12 and later.
+:::
 
-Back To Home is a convenience feature that configures your device for secure VPN access from anywhere in the world to your router and your network, even if your router does not have a public IP address, is behind NAT or Firewall.
+Back To Home turns the router into a WireGuard VPN server that you can reach from anywhere, even when the router has no public IP address or is behind NAT. You set it up with the Back To Home app ([Android](https://play.google.com/store/apps/details?id=com.mikrotik.android.freevpn), [iPhone](https://apps.apple.com/lv/app/mikrotik-back-to-home/id6450679198)), and the app can also share access with other people and computers.
 
-Configuration is done with the MikroTik Back to Home app ([Android](https://play.google.com/store/apps/details?id=com.mikrotik.android.freevpn), [iPhone](https://apps.apple.com/lv/app/mikrotik-back-to-home/id6450679198)).
+When the router has a public IP address, the phone connects to it directly. Otherwise, the connection goes through a MikroTik relay server. The connection is end-to-end encrypted in both cases, and the relay cannot read the traffic (see [How the router reaches the cloud](/docs/network-management/cloud/#how-the-router-reaches-the-cloud)). Through the relay, the speed can be lower. Your traffic leaves to the internet from your router, so websites see your home address.
 
-If the VPN server (your home router) has a public IP address, the VPN app will create a direct VPN connection between the phone and the router. However, if the router is not directly reachable from the internet, the connection will be made through the MikroTik relay servers. The connection is always end-to-end encrypted. The relay server or any other device does not have access to the encryption keys. In essence, the relay only helps your device to reach the router. The connection will appear as going out from your router, not from the relay. *In case of going through the relay, speed could be limited.*
+Back To Home is meant for simple access to your home network, not for anonymity. For finer control over VPN access, configure [WireGuard](/docs/virtual-private-networks/wireguard) yourself.
 
-This feature is a convenient option to access your home network or view content available in your home country, from locations where some content is not available. It is not meant for anonymity; it is for simple one click access to your home network. For more granular security controls, we recommend you manually configure and secure a VPN connection using the advanced RouterOS options.
+## Set up Back To Home with the app
 
-#### Enabling BTH using the app
+You need a phone with the Back To Home app, connected to the router's local network, for example its Wi-Fi.
 
-To set up Back to Home, you should have a smartphone with the BTH app and should be inside your home, connected to your router's WiFi network.
+1. Connect the phone to the router's Wi-Fi network.
+2. Open the Back To Home app.
+3. Select **Create new**.
+4. Enter the router's local IP address (`192.168.88.1` in the default configuration) and the user name and password of the router, and select **Connect**.
+5. Enter a name for the tunnel and select **Create tunnel**.
+6. Allow the phone to add the VPN configuration.
 
-- Connect to the router's Wi-Fi using your phone.
-- Open the Back to Home application ([Android](https://play.google.com/store/apps/details?id=com.mikrotik.android.freevpn), [iPhone](https://apps.apple.com/lv/app/mikrotik-back-to-home/id6450679198)).
-- Tap "Create new".
-- Enter your local router IP address (most likely `192.168.88.1`), username, and password of your router, and tap "Connect".
-- Give the tunnel a name, then tap "Create tunnel".
-- Your phone will ask for permission to add new VPN settings. Approve it with your phone pin.
-- Setup is done. You can now disconnect from the router's Wi-Fi and connect to any other network, like LTE/5G or simply leave your house now.
-- Tap the Connect button to toggle the connection of the selected tunnel.
+The tunnel is ready. Disconnect from the router's Wi-Fi, and select **Connect** in the app to open the tunnel from any other network, for example mobile data.
 
-| ![](/img/92c286a69409ae4a.png) | ![](/img/f76d4d2890e0ad03.png) | ![](/img/c031432eb344d15d.png) | ![](/img/058c3ee8a44419ef.png) | ![](/img/a6ecd2514c3ab975.png) |
+| ![Back To Home app start screen with the Create new button](./img/back-to-home-01.webp) | ![Create tunnel screen with the router address, user name and password fields](./img/back-to-home-02.webp) | ![App connected to the router and asking for a tunnel name](./img/back-to-home-03.webp) | ![Phone asking for permission to add the VPN configuration](./img/back-to-home-04.webp) | ![Error message saying Back To Home is not supported on this device](./img/back-to-home-05.webp) |
 | :-- | :-- | :-- | :-- | :-- |
-| Tap "Create new" | Provide your router credentials | Connection established | Allow VPN to be added | If the device is not supported, an error is shown |
+| Select **Create new** | Enter the router address and credentials | Name the tunnel | Allow the VPN configuration | Error on a device without Back To Home support |
 
-#### Sharing the BTH connection with another phone user
+## Share the tunnel with other people
 
-It is possible to create Guest tunnels for your friends and family. You can even specify if you want these people to access your local network as well, or if they should be restricted to only use the internet via your router. Once you create shared tunnels, you can send Invitation links via any chat application on your phone, or show a QR code to your friend in person (in both these cases, the friend will have to also install the BTH app). If you want to connect to your router via the WireGuard(TM) app from another phone or from a computer, it is possible as well. Just select to share the WireGuard(TM) config file, and open this file in the WireGuard(TM) app.
+You can create guest tunnels for friends and family, with an expiration date. For each guest tunnel, you choose whether the person can reach your home network or only use the internet through your router. The person needs the Back To Home app.
 
-| ![](/img/e232bdab9ab338c9.png) | ![](/img/6421c4b61331555b.png) | ![](/img/353315d345096ef1.png) | ![](/img/b4c0f951101195d7.png) | ![](/img/738264b205e8ebef.jpg) | ![](/img/6a5bfecaf09f48b8.jpg) |
+1. Connect to your own tunnel.
+2. Select **...** next to the tunnel, then **Manage shares**.
+3. Enter the router's user name and password. The app changes the router configuration.
+4. Select **Create**.
+5. Enter a name for the guest tunnel, for example the person's name.
+6. Set the expiration date.
+7. Turn on **Home network access** if the person should reach your local network. Leave it off for internet access only.
+8. Select **Create tunnel**. The phone's share sheet opens.
+9. Send the invite link, for example in a chat app.
+
+When the person opens the link, the Back To Home app opens and adds the tunnel, or asks them to install the app first. To invite someone in person, select **...** next to the share and **View QR invite**.
+
+| ![Tunnel menu with the Edit and Manage shares items](./img/back-to-home-06.webp) | ![Manage shares asking for the router user name and password](./img/back-to-home-07.webp) | ![Shares manager with no shared tunnels](./img/back-to-home-08.webp) | ![Share form with a tunnel name, an expiration date and home network access](./img/back-to-home-09.webp) | ![Phone share sheet for the Back To Home invite link](./img/back-to-home-10.webp) | ![Invite link pasted into a chat app](./img/back-to-home-11.webp) |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| Manage shares | Connect to your tunnel first | Once connected, create shares | Provide a name and access level | Share sheet opens | Send the invite link via WhatsApp, Signal etc. |
+| Select **Manage shares** | Enter the router credentials | Select **Create** | Name the share and set its access | The share sheet opens | Send the invite link |
 
-To share your tunnel with somebody:
+## Connect a computer with the WireGuard app
 
-- As the owner, connect to your BTH tunnel.
-- Click the "..." icon next to your tunnel and click "Manage shares".
-- Enter the administration password for the router, since you will be modifying the router config.
-- Tap "Create" in the Shares manager.
-- Enter your friend's name in the "Tunnel name", since a new tunnel will be made for them.
-- Specify the expiry date of this new Guest tunnel.
-- Specify if the user will need to access your internal network of your home. Do not check this if they only want to use this tunnel for internet access.
-- Once "Create tunnel" has been pressed, the phone Share Sheet opens. Select a method how to send the invite link.
-- Once the other person clicks on this link, they will either be directed to install the BTH app, or the BTH app will open and will allow them to set up this new Guest tunnel in their phone.
+The Back To Home app is only for phones. On a computer, use the [WireGuard app](https://www.wireguard.com/install/) with a share you create for yourself:
 
-#### Sharing the BTH tunnel with a computer via the WireGuard(TM) app
+1. Create a share for the computer as described in the previous section.
+2. Select **...** next to the new share, then **Share WireGuard config file**.
+3. Send the file to the computer, for example with AirDrop or as an email attachment.
+4. In the WireGuard app on the computer, select **Import Tunnel(s) from File** and choose the file.
 
-Since there is no BTH app for PCs, you can use the [WireGuard(TM) app](https://www.wireguard.com/install/) to connect to the shared tunnel. You can even share your connection with yourself, by "inviting" your computer to connect.
-
-Let's make a new share, this time for yourself, for using from the PC.
-
-| ![](/img/9d365f253bf85b29.png) | ![](/img/843740bbf52b8610.png) | ![](/img/ba48cd0759804581.png) | ![](/img/22b3243b2607de84.png) | ![](/img/22b3243b2607de84.png) | ![](/img/89fd75da1cb0724b.png) |
+| ![Shares manager with one share and the Create button](./img/back-to-home-12.webp) | ![Share form for a computer with no expiration date and home network access](./img/back-to-home-13.webp) | ![Shares manager with two shares](./img/back-to-home-14.webp) | ![Share menu with the Share URL invite, View QR invite and Share WireGuard config file items](./img/back-to-home-15.webp) | ![Phone share sheet for the WireGuard configuration file](./img/back-to-home-16.webp) | ![WireGuard app for macOS with the Import Tunnel(s) from File menu item](./img/image.webp) |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| Create | Specify name and access level | You have two shares now | Click "..." to send an invite | Pick "Share WireGuard config  file" | AirDrop to your macOS or e-mail the file |
+| Select **Create** | Name the share and set its access | The new share in the list | Select **Share WireGuard config file** | Send the file to the computer | Import the file in the WireGuard app |
 
-Install the WireGuard app on your computer and click "Import Tunnel from file"
+## Manage Back To Home in RouterOS
 
-![](/img/7b87bb190f4a06d9.jpg)
+You do not need to configure anything in RouterOS when you use the app. Without the app, for example to connect only a computer, enable Back To Home first:
 
----
-
-#### Configuring BTH manually in RouterOS (optional, if no smartphone is available to you)
-
-:::info
-Important notice
-
-It is important to note, **NOTHING has to be configured in RouterOS to use Back to Home**. Simply use the BTH app (see above section) to enable it. The whole point of Back to Home is to avoid using Winbox or command line. The below instructions are only for debugging or seasoned administrators.
-:::
-
-1. Connect to the router
-2. Enable DDNS Cloud service: ``/ip/cloud/set ddns-enabled=yes``
-3. Enable Back To Home: ``/ip/cloud/set back-to-home-vpn=enabled``
-4. Print tunnel configuration: ``/ip/cloud/print``
-5. Scan the QR Code (``vpn-wireguard-client-config-qrcode``) or Copy the config (``vpn-wireguard-client-config``) and enter in the preferred WireGuard® client. Only one client at a time will be available to use this config.  
-
-   :::warning
-   After configuring Back To Home - an additional peer entry is automatically made, which can be seen by running the command *`/ip/cloud/print`*. This is intended for the VPN to work in the case that the device does not have access to a public IP address and opts to establish the connection by using MikroTik's relay server.  
-   In the case that your device has access to a public IP address, the generated peer entry is ignored:
-
-   ```
-   [Peer]
-   PublicKey = //////////////////////////////////////////8=
-   AllowedIPs = 0.0.0.0/32
-   Endpoint = example.com:12345
-   PersistentKeepalive = 15 
-   ```
-
-   :::
-
-#### Removing and disabling connections
-
-In the smartphone app, the VPN configuration is added to the System VPN settings. In this regard, the Back to Home app only acts as a wizard. It supplies the needed config to the operating system (this is why iPhone will warn you about altering system configuration).
-
-To remove the created connection, go into the smartphone settings app and remove the VPN connection from there.
-
-On the MikroTik router side, you should manually delete the added Peers in the Wireguard menu. Note that the "revoke-and-disable" button can't be used to "Pause" the use of the Back to Home feature. Once you revoke-and-disable in RouterOS, all Peers will be disassociated from the Cloud / Relay servers, and you will have to re-create the connection from the Smartphone app. Therefore, once you have used the option "revoke-and-disable" in the RouterOS IP Cloud menu, you need to also delete the Peers from the Wireguard menu, as they can't be re-used.
-
-## Property reference
-
-### IP Cloud
-
-**Sub-menu:** `/ip/cloud`
-
-Back to Home shares the menu with IP Cloud. Back to Home parameters:
-
-| Property | Description |
-| :-- | :-- |
-| **back-to-home-vpn** (*enabled \| revoked-and-disabled*; Default: **revoked-and-disabled**) | Enables or revokes and disables the Back to Home service. ddns-enabled must not be set to no, for BTH to function. |
-| **vpn-dns-name** (*read-only: string*) | Shows the DNS name assigned to the device. The name consists of the product serial number appended with *.vpn.mynetname.net*. This field is visible only after at least one ddns-request is successfully completed. |
-| **vpn-port** (*read-only: integer*) | Port used by BTH VPN. |
-| **vpn-status** (*read-only: string*) | Contains text string that describes the current BTH state. |
-| **vpn-relay-rtts** (*read-only;* "region (ip4: time(**ms**), ip6: time (**ms)**") | Round trip time in milliseconds for each available relay, values are shown both for IPv4 and IPv6. |
-| **vpn-relay-ipv4-status** (*read-only: string*) | Status of the connection to the relay and detailed information about the relay |
-| **vpn-relay-ipv6-status**(*read-only: string*) | Status of the connection to the relay and detailed information about the relay |
-| **vpn-relay-regions** (*read-only: string*) | Available VPN relay regions, which can be referenced in vpn-prefer-relay-code. All available relays will be shown here. |
-| **vpn-relay-addressess**(*read-only: string*) | IPv4 address of the relay |
-| **vpn-relay-addressess-ipv6** (*read-only: string*) | IPv6 address of the relay |
-| **vpn-private-key** (*read-only: string*) *[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | Private key for BTH |
-| **vpn-public-key** (*read-only: string*) | Public key for BTH |
-| **vpn-peer-private-key**(*read-only: string*) *[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | Peer private key |
-| **vpn-peer-public-key** (*read-only: string*) | Peer public key |
-| **vpn-prefer-relay-code** (*string;*) | You can enter a relay code that will be preferred for the BTH connection, if not set, the relay with the smallest RTT will be chosen. |
-| **vpn-interface** (*read-only: string*) | Name of the created interface for Back to Home WireGuard® tunnel. |
-| **vpn-wireguard-client-config** (*read-only: string*) | Configuration that can be entered in your preferred WireGuard® client. Only one client at a time will be available to use this config. |
-| **vpn-wireguard-client-config-qrcode** (*read-only*) | Scannable QR Code for your preferred WireGuard® client. Only one client at a time will be available to use this config. |
-
-:::info
-When using vpn-wireguard-client-config or vpn-wireguard-client-config-qrcode, both options are equal; you only need to import one of these into your WireGuard client device.
-:::
-
-### Back to Home users
-
-**Sub-menu:** `/ip/cloud/back-to-home-user`
-
-Since RouterOS 7.14 there is a new back to home specific user manager available in the menu `/ip/cloud/back-to-home-user` where you can see all the users that are added by the Back to Home mobile app, change their firewall preference and also add new ones.
-
-```
-[boss@mikrotik-ax] /ip/cloud/back-to-home-user> print detail   
-Flags: X - disabled; A - active   
-  
- 0  A name="user1" slot=3 expires=never client-address=192.168.216.3/32,fc00:0:0:216::3/128 allow-lan=no   
-      private-key="OHqR2BZXJp0N6//3JzzoJhBJVb0rrSxV0dxQL/2UdXY=" public-key="Na7oEq9XLdeK8ouCUX+tC4FIM51vEnZ7mLiFqG9xiUQ="   
-  
-[boss@mikrotik-ax] /ip/cloud/back-to-home-user>
+```ros
+/ip/cloud/set back-to-home-vpn=enabled
 ```
 
-When adding users in this menu, you can view their Wireguard config and QR code with this command `/interface/wireguard/peers/show-client-config user1`
+Wait until `/ip/cloud/print` shows `vpn-status: running`, which takes a few seconds. Until then, adding a user fails with `back-to-home vpn not enabled`. Then add a user and print its configuration:
 
-`Allow-lan=no` will add the users into a firewall address list that only allows internet access, but blocks the users from accessing your internal network. Note that expiry date can't be changed, once a user has been added.
+```ros
+/ip/cloud/back-to-home-user/add name=laptop allow-lan=yes
+/ip/cloud/back-to-home-user/show-client-config [find name=laptop]
+```
 
-| Property | Description |
-| :-- | :-- |
-| **name** (*string*) | Informative name of BTH user |
-| **expires**(string; never \| date: *"YYYY-MM-DD HH:MM:SS";*  Default: **never***)* | Expiration time and date for user. Cannot be changed once user is created |
-| **client-address**(string: IPv4 \| IPv6) | Client address. If not specified, one will be made automatically |
-| **allow-lan**(string: yes \| no; Default: **no**) | Will add the user into a firewall address list that only allows internet access, but blocks the user from accessing your internal network |
-| **private-key**(string;) *[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | Private key for user, if not set manually, it will be generated by the system |
-| **public-key**(string;) | Public key for user, if not set manually, it will be generated by the system |
+The last command prints the WireGuard configuration of the user and a QR code of it. Import it in the [WireGuard app](https://www.wireguard.com/install/) on the device:
+
+```text
+ # Name = laptop
+ # CloudDDNS = hf1234abcd5.sn.mynetname.net
+ [Interface]
+ PrivateKey = <private key of the user>
+ Address = 192.168.216.3/32, fc00:0:0:216::3/128
+ MTU = 1420
+ [Peer]
+ PublicKey = <vpn-public-key of the router>
+ AllowedIPs = 0.0.0.0/0, ::/0
+ Endpoint = hf1234abcd5.vpn.mynetname.net:24957
+ PersistentKeepalive = 30
+ [Peer]
+ PublicKey = //////////////////////////////////////////8=
+ AllowedIPs = 0.0.0.0/32
+ Endpoint = hf1234abcd5.sn.mynetname.net:24957
+ PersistentKeepalive = 15
+```
+
+The first peer is the router. The second one, with a placeholder key, carries no traffic.
+
+Each user is a separate WireGuard client with its own keys and addresses:
+
+- `allow-lan=no`, the default, lets the user reach only the internet through the router. With `yes`, the user can also reach your local network.
+- `client-allowed-address` limits what the client sends through the tunnel, for example `client-allowed-address=192.168.88.0/24` for access to the local network only. By default, the client sends all traffic through the tunnel.
+- `client-dns` sets the DNS server in the client configuration.
+- `expires` takes `never`, a date or a time interval such as `7d`. You cannot change it after you create the user: create the user again instead.
+
+## Turn off Back To Home
+
+The app adds the tunnel to the phone's VPN settings. To remove the tunnel from a phone, delete it in the phone's VPN settings. This does not change the router.
+
+To turn off Back To Home on the router:
+
+```ros
+/ip/cloud/set back-to-home-vpn=revoked-and-disabled
+```
+
+The router deletes all Back To Home users and revokes the keys. When you enable Back To Home again, the router creates new keys and a new port, so you set up every phone and computer again.
+
+## Technical details
+
+### What Back To Home adds to the router
+
+When you enable Back To Home, in the app or with `/ip/cloud/set back-to-home-vpn=enabled`, RouterOS adds:
+
+- A WireGuard interface named `back-to-home-vpn`, which listens on the UDP port shown in `vpn-port` in `/ip/cloud`.
+- The addresses 192.168.216.1/24 and fc00:0:0:216::1/64 on that interface. Each client gets the next free addresses from these networks.
+- Dynamic firewall rules for IPv4 and IPv6: an input rule that accepts the WireGuard port, a masquerade rule for traffic from the tunnel, and a forward rule that drops traffic from restricted users to the `LAN` interface list.
+- The DNS name `<serial number>.vpn.mynetname.net`, which clients use as the endpoint. It resolves to the router's public address, or to the relay the router uses. With `ddns-enabled=auto`, the default, DDNS also turns on.
+
+The IPv6 address fc00:0:0:216::1/64 is created with `advertise=yes`. Whether the router sends router advertisements for it on the tunnel interface depends on the `/ipv6/nd` settings.
+
+The users who may only use the internet (`allow-lan=no`) are in the dynamic address list `back-to-home-lan-restricted-peers`. The restriction relies on the `LAN` interface list of the default configuration, so keep your local interfaces in that list.
+
+Revoking removes the `back-to-home-vpn` interface with its peers, addresses and firewall rules, and all users, and asks the cloud server to delete the `vpn.mynetname.net` name.
+
+### Direct and relayed connections
+
+`vpn-relay-ipv4-status` and `vpn-relay-ipv6-status` in `/ip/cloud` show how clients reach the router. With `reachable directly`, the `vpn.mynetname.net` name resolves to the router's public address, and clients connect to the router itself. With `reachable via relay`, the name resolves to the relay, and the relay forwards the encrypted traffic. File Share decides separately: it can use the relay while Back To Home connects directly, for example when `www-ssl` uses TCP port 443 (see [File Share](/docs/network-management/cloud/file-share)).
+
+Tunnels that the Back To Home app creates are users in `/ip/cloud/back-to-home-user`. The app sets `name` to the model identifier of the phone, for example `iPhone18,1`, and the comment to the tunnel name shown in the app.
+
+### Client configuration
+
+The lines that start with `#` are comments, because a WireGuard configuration has no field for a tunnel name. `# Name` carries the user's comment, or its name when it has no comment, and the Back To Home app uses it as the tunnel name when it imports the configuration. Other WireGuard clients ignore these lines, so the same configuration works in any WireGuard app.
+
+The second peer in a client configuration has a placeholder key and `AllowedIPs = 0.0.0.0/32`, so it carries no traffic. A client connects without it, also through the relay.
+
+`/ip/cloud` also has a built-in client configuration in `vpn-wireguard-client-config` and `vpn-wireguard-client-config-qrcode`. It works on one device at a time, because WireGuard identifies a client by its key. For more devices, add a user for each one.
+
+### Contact with the cloud server
+
+Enabling Back To Home takes a few seconds while the router contacts the cloud server: `vpn-status` changes from `checking rtt` to `running`.
+
+Revoking removes everything on the router right away, also when the cloud server does not answer (`status` in `/ip/cloud` shows `failed to connect`). The `vpn.mynetname.net` and `sn.mynetname.net` names then stay registered until the cloud server receives a delete request. To delete them, enable Back To Home and revoke it again while the router can reach the cloud server.
+
+For all properties, see [`/ip/cloud`](/docs/cli-reference/ip/cloud/) and [`/ip/cloud/back-to-home-user`](/docs/cli-reference/ip/cloud/back-to-home-user/) in the CLI reference.

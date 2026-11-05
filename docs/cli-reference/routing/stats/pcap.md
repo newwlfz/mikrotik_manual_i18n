@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/stats/pcap"
 sidebar_position: 3
 title: "pcap"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/stats/pcap
-captured_at: '2026-11-01T21:29:41+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/stats/pcap
+captured_at: '2026-11-01T21:25:21+08:00'
 ---
 
 -----------

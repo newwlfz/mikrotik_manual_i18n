@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/partitions/repartition"
 sidebar_position: 4
 title: "repartition"
 sidebar_label: 'repartition'
-source: https://manual.mikrotik.com/docs/cli-reference/partitions/repartition
-captured_at: '2026-11-01T21:29:20+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/partitions/repartition
+captured_at: '2026-11-01T21:24:56+08:00'
 ---
 
 -----------

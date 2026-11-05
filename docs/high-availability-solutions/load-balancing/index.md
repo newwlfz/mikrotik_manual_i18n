@@ -8,8 +8,8 @@ tags:
   - 'load-balancing'
   - 'firewall-mangle'
   - 'bonding'
-source: https://manual.mikrotik.com/docs/high-availability-solutions/load-balancing
-captured_at: '2026-11-04T11:29:44+08:00'
+source: https://manual.mikrotik.com/docs/7.25/high-availability-solutions/load-balancing
+captured_at: '2026-11-04T11:17:43+08:00'
 ---
 
 - [Failover (WAN Backup)](https://manual.mikrotik.com/docs/high-availability-solutions/failover-wan-backup)

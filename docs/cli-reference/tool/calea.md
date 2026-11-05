@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/tool/calea"
 sidebar_position: 3
 title: "calea"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/calea
-captured_at: '2026-11-01T21:30:14+08:00'
+sidebar_label: 'calea'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/calea
+captured_at: '2026-11-01T21:25:51+08:00'
 ---
 
 -----------

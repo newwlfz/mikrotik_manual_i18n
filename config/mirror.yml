@@ -5,6 +5,7 @@ schema: 1
 source:
   base_url: https://manual.mikrotik.com
   versions:
+    - "7.25"
     - "7.24"
   sections:
     - docs

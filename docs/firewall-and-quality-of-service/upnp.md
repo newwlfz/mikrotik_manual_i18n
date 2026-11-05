@@ -3,108 +3,79 @@ sidebar_key: "firewall-and-quality-of-service/upnp"
 sidebar_position: 7
 title: "UPnP"
 sidebar_label: 'UPnP'
-description: 'MikroTik RouterOS supports UPnP for transparent peer-to-peer connectivity, enabling dynamic network discovery and NAT traversal. The documentation covers general properties like interface types (internal/external) and security settings, along with configuration examples for enabling UPnP on router interfaces.'
+description: 'Universal Plug and Play (UPnP) in RouterOS: an Internet Gateway Device service that lets LAN applications request port mappings. The router creates dynamic destination NAT rules for the requested ports. Covers enabling the service, marking external and internal interfaces, and the security implications.'
 tags:
   - 'upnp'
   - 'nat'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/upnp
-captured_at: '2026-11-04T11:28:26+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/upnp
+captured_at: '2026-11-04T11:15:56+08:00'
 ---
 
-MikroTik RouterOS supports Universal Plug and Play (UPnP) architecture, which enables transparent peer-to-peer network connectivity between personal computers and network-enabled devices or appliance.
+Universal Plug and Play (UPnP) lets applications on the local network request port mappings from the router. When a client requests a mapping, RouterOS creates a dynamic destination NAT rule that forwards the requested external port to the client. Applications that accept incoming connections, for example games, peer-to-peer clients and voice or video calls, can then work behind NAT without manual port forwarding.
 
-UPnP allows data communication between any two devices under the command of any control device on the network. This technology is completely independent of any particular physical medium. It supports networking with automatic discovery, meaning a device can dynamically join the network without any initial configuration. DHCP and DNS servers are optional and will be used if available on the network. UPnP implements a simple yet powerful NAT traversal solution that enables clients to get full two-way peer-to-peer network support from behind a NAT.
+RouterOS implements the UPnP Internet Gateway Device (IGD) profile for IPv4. Clients discover the router with SSDP and request mappings over the WANIPConnection service. The UPnP service is disabled by default. RouterOS also supports [NAT-PMP](/docs/firewall-and-quality-of-service/nat-pmp), a similar protocol common on Apple devices.
 
-There are two interface types for UPnP: **internal** (the interface where local client devices are connected) and **external** (the interface connected to the Internet). A router may only have one active external interface with a 'public' IP address, and as many internal interfaces as needed, all with source-NATted 'internal' IP addresses. The protocol works by creating dynamic NAT entries rules.
+UPnP only takes care of the destination NAT side. The external interface still needs the usual source-NAT (masquerade) rule so that reply traffic reaches the client.
 
-:::info
-The UPnP **internal** interface can create NAT mapping for any subnet, not just the subnet present on the internal interface, so caution must be used when setting the **internal** interface.
-:::
+## Security considerations
 
-The UPnP protocol is used by many modern applications, such as most DirectX games, as well as for various Windows Messenger features like remote assistance, application sharing, file transfer, voice, and video communication from behind a firewall.
-
-## Configuration
-
-### General properties
-
-**Sub-menu:** `/ip/upnp`
-
-| Property | Description |
-| :-- | :-- |
-| **allow-disable-external-interface** (*yes \| no*; Default: **yes**) | Whether or not the users are allowed to disable the router's external interface. This functionality (for users to be able to turn the router's external interface off without any authentication procedure) is required by the standard, but as it is sometimes not expected or unwanted in UPnP deployments which the standard was not designed for (it was designed mostly for home users to establish their own local networks), you can disable this behavior |
-| **enabled** (*yes \| no*) | Enable UPnP service |
-| **show-dummy-rule** (*yes \| no*; Default: **yes**) | Enable a workaround for some broken implementations, which are handling the absence of UPnP rules incorrectly (for example, popping up error messages). This option will instruct the server to install a dummy (meaningless) UPnP rule that can be observed by the clients which refuse to work correctly otherwise |
-
-:::danger
-If you do not disable the **allow-disable-external-interface**, any user from the local network will be able (without any authentication procedures) to disable the router's external interface.
-:::
-
-### UPnP Interfaces
-
-**Sub-menu:** `/ip/upnp/interfaces`
-
-| Property | Description |
-| :-- | :-- |
-| **interface** (*string*; Default: ) | Interface name on which uPnP will be running |
-| **type** (*external \| internal*) | UPnP interface type:<code>external</code> - the interface a global IP address is assigned to<code>internal </code>- the router's local interface the clients are connected to |
-| **forced-external-ip** (*Ip*; Default: ) | Allows specifying what public IP to use if the external interface has more than one IP available. |
+Any client that can reach the UPnP service on an internal interface can create a port mapping, without authentication, and not only for its own address: the internal address in a mapping can be any address, even one from a different subnet than the internal interface. Enable UPnP only on interfaces with clients you trust.
 
 :::warning
-In more complex setups with VLANs, where the VLAN interface is considered as the LAN interface, the VLAN interface itself should be specified as the internal interface for UPnP to work properly.
+Set `allow-disable-external-interface` to `yes` only if your network requires it: any local client can then disable the router's external interface without authentication, and its port mappings are removed.
 :::
 
-## Configuration Example
+Keep the UPnP service disabled when you do not use it, as described in [Securing your router](/docs/getting-started/securing-your-router).
 
-![](./img/upnp-01.webp)
+## Configuration example
 
-We have masquerading already enabled on our router:
+![Network diagram: the router connects to the Internet on ether1 (10.0.0.1/24) and to a LAN switch on ether2 (192.168.88.1/24); two computers, PC1 (192.168.88.10/24) and PC2 (192.168.88.11/24), are on the 192.168.88.0/24 LAN](./img/upnp-01.webp)
+
+Enable the service and mark the Internet-facing interface as external and the client-facing interface as internal:
 
 ```ros
-[admin@MikroTik] /ip/upnp> /ip/firewall/nat/print
-Flags: X - disabled, I - invalid, D - dynamic
-  0   chain=srcnat action=masquerade out-interface=ether1
-[admin@MikroTik] /ip/upnp>
+/ip/upnp/set enabled=yes
+/ip/upnp/interfaces/add interface=ether1 type=external
+/ip/upnp/interfaces/add interface=ether2 type=internal
 ```
 
-To enable the UPnP feature:
+When a client on the LAN, for example PC1 at 192.168.88.10, requests mappings for TCP and UDP port 55000, the router creates dynamic destination NAT rules:
 
 ```ros
-[admin@MikroTik] /ip/upnp> set enable=yes
-[admin@MikroTik] /ip/upnp> print
-                             enabled: yes
-    allow-disable-external-interface: yes
-                     show-dummy-rule: yes
-[admin@MikroTik] /ip/upnp>
-```
-
-Now, all we have to do is to add interfaces:
-
-```ros
-[admin@MikroTik] /ip/upnp/interfaces> add interface=ether1 type=external
-[admin@MikroTik] /ip/upnp/interfaces> add interface=ether2 type=internal
-[admin@MikroTik] /ip/upnp/interfaces> print
-Flags: X - disabled
-  #   INTERFACE TYPE
-  0 X ether1    external
-  1 X ether2    internal
-
-[admin@MikroTik] /ip/upnp/interfaces> enable 0,1
-```
-
-Now once the client from the internal interface side sends a UPnP request, dynamic NAT rules will be created on the router, example rules could look something similar to these:
-
-```ros
-[admin@MikroTik] > ip firewall nat print 
-Flags: X - disabled, I - invalid, D - dynamic 
-
-0 chain=srcnat action=masquerade out-interface=ether1
+[admin@MikroTik] /ip/firewall/nat> print where dynamic
+Flags: D - DYNAMIC
+0 D ;;; upnp 192.168.88.10: ApplicationX
+    chain=dstnat action=dst-nat to-addresses=192.168.88.10 to-ports=55000
+    protocol=tcp dst-address=10.0.0.1 in-interface=ether1 dst-port=55000
 
 1 D ;;; upnp 192.168.88.10: ApplicationX
-chain=dstnat action=dst-nat to-addresses=192.168.88.10 to-ports=55000 protocol=tcp 
-dst-address=10.0.0.1 in-interface=ether1 dst-port=55000
-
-2 D ;;; upnp 192.168.88.10: ApplicationX
-chain=dstnat action=dst-nat to-addresses=192.168.88.10 to-ports=55000 protocol=udp 
-dst-address=10.0.0.1 in-interface=ether1 dst-port=55000
-
+    chain=dstnat action=dst-nat to-addresses=192.168.88.10 to-ports=55000
+    protocol=udp dst-address=10.0.0.1 in-interface=ether1 dst-port=55000
 ```
+
+The rule comment records the address of the client that requested the mapping and the description it sent. The rules stay until the client removes the mapping or the UPnP service is reconfigured. A client can also request a mapping towards a different internal address than its own; `to-addresses` then holds that address.
+
+If the external interface has several addresses, set `forced-ip` on the interface entry to choose which address is used for the mappings and reported to the clients.
+
+:::warning
+In setups with VLANs, specify the VLAN interface itself as the internal interface: the client traffic, including the UPnP discovery, arrives on it.
+:::
+
+## Technical details
+
+### Discovery and service ports
+
+The service sends SSDP announcements from each internal interface to the multicast group `239.255.255.250`, UDP port 1900, which is where clients also send their discovery requests. The device description is served at `http://<internal interface address>:2828/gateway.xml`, and clients control the router over the same TCP port 2828. The control service listens only on the addresses of internal interfaces.
+
+Both ports appear as dynamic entries in `/ip/service` while the service is enabled.
+
+### Port mappings
+
+- Each mapping creates one dynamic `dstnat` rule per protocol. The client requests mappings with the `AddPortMapping` action and removes them with `DeletePortMapping`.
+- Only permanent mappings are supported: a request with a limited lease duration is rejected with the error `725 OnlyPermanentLeasesSupported`.
+- A mapping requested with `NewEnabled=0` creates the rule in disabled state.
+- Changing any setting in `/ip/upnp` or the interface list restarts the service and removes all dynamic port mappings; clients have to request their mappings again.
+- By default the service reports an inactive placeholder mapping as the first entry when a client enumerates mappings, which works around client applications that misbehave when no mappings exist. Disable this with `show-dummy-rule=no`.
+- Each external interface is advertised as its own WAN connection device, so several external interfaces can serve mappings at the same time.
+
+For all properties, see [`/ip/upnp`](/docs/cli-reference/ip/upnp/) and [`/ip/upnp/interfaces`](/docs/cli-reference/ip/upnp/interfaces) in the CLI reference.

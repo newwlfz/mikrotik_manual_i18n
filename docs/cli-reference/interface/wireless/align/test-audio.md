@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/align/test-audio"
 sidebar_position: 3
 title: "test-audio"
 sidebar_label: 'test-audio'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/align/test-audio
-captured_at: '2026-11-01T21:27:58+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/align/test-audio
+captured_at: '2026-11-01T21:23:19+08:00'
 ---
 
 -----------

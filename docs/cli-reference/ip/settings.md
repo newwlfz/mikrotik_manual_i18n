@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ip/settings"
 sidebar_position: 21
 title: "settings"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/settings
-captured_at: '2026-11-01T21:28:57+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/settings
+captured_at: '2026-11-01T21:24:24+08:00'
 ---
 
 -----------

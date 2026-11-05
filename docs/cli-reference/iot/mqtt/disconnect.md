@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/iot/mqtt/disconnect"
 sidebar_position: 3
 title: "disconnect"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/mqtt/disconnect
-captured_at: '2026-11-01T21:28:18+08:00'
+sidebar_label: 'disconnect'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/mqtt/disconnect
+captured_at: '2026-11-01T21:23:41+08:00'
 ---
 
 -----------

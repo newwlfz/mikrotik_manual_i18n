@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ip/hotspot/setup"
 sidebar_position: 9
 title: "setup"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/setup
-captured_at: '2026-11-01T21:28:41+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/hotspot/setup
+captured_at: '2026-11-01T21:24:04+08:00'
 ---
 
 -----------

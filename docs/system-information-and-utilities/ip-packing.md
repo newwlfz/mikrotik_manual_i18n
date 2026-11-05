@@ -1,73 +1,72 @@
 ---
 sidebar_key: "system-information-and-utilities/ip-packing"
 sidebar_position: 7
-title: "IP packing"
-sidebar_label: 'IP packing'
-description: 'IP Packing enables packet aggregation and compression on network links in RouterOS, requiring symmetric configuration with discovery protocol enabled. It supports different actions like simple aggregation or compression of headers and payload, with warnings about potential latency increases.'
+title: "IP Packing"
+sidebar_label: 'IP Packing'
+description: 'IP Packing collects outgoing packets on a link into larger packets and can compress them; the other router unpacks them. Both routers need neighbor discovery on the link.'
 tags:
   - 'ip-packing'
   - 'packet-aggregation'
-source: https://manual.mikrotik.com/docs/system-information-and-utilities/ip-packing
-captured_at: '2026-11-04T11:33:29+08:00'
+source: https://manual.mikrotik.com/docs/7.25/system-information-and-utilities/ip-packing
+captured_at: '2026-11-04T11:22:08+08:00'
 ---
 
-IP Packing provides a packet packaging service on network links. It allows simple packet aggregation into larger packets and compression of the contents of packets.
+IP Packing collects the outgoing packets of an interface into larger packets (aggregation) and can also compress them. The router at the other end of the link unpacks them again. Both routers run RouterOS; packing is part of the system package. Use it on links where many small packets cost more than a few large ones.
 
-## Requirements
-
-Packet packing is part of the system package and has to have a discovery protocol enabled on an interface.
-
-### Configuration
-
-**Sub-menu:** `/ip/packing`
-
-It is required to have a configuration in two places, both routers should be set up symmetrically:
-
-- `/ip/packing`- to enable packet aggregation and/or compression on an interface.
-- `/ip/neighbor/discovery-settings` to enable discovery  protocol on the interface.
-
-### Packing configuration
-
-| Property | Description |
-| :-- | :-- |
-| aggregated-size (*20 .. 16384 default:**1500***) | size of an aggregated packet that packing will try to achieve before sending a packet over the network |
-| disabled (*yes\|no*) | state of the packing rule, if a value is *yes* it will be ignored and will not be part of the active configuration |
-| interface (*interface name*) | packing will try to aggregate and/or compress packets from this interface |
-| packing (*simple\|compress-all\|compress-headers\|none*) | the action it should perform when a packet is leaving the interface the packing rule is configured on:<code>simple</code> - do just aggregate packets<code>compress-all</code> - do aggregation and attempt to compress headers and payload of a packet<code>compress-headers</code> - do aggregation and attempt to compress headers and leave the payload of a packet as is<code>none</code> - send packets as is |
-| unpacking (*simple\|compress-all\|compress-headers\|none*) | the action that should be performed when a packet is received on the interface the packing rule is configured on:<code>simple</code> - unpack received packets from aggregated packets received from the interface<code>compress-all</code> - unpack aggregated packet and uncompress headers and payload of a packet<code>compress-headers </code>- unpack aggregated packets and decompress headers of a packet<code>none</code> - do nothing with a received packet |
-
-:::danger
-The router should be seen as a neighbor of the router over the interface you want to enable packing on. If in the neighbor list there is no entry indicating packing, packing is not working!
-
-**Warning:** Packing may increase latency on the link it is configured on.
+:::warning
+TCP connections that the router itself opens over a packed link fail, for example a fetch or a bandwidth test. The unpacked TCP segments that carry data arrive with an incorrect checksum and are dropped, so the connections never complete. Ping passes. Test the traffic you need on a test link before you enable packing on a production link.
 :::
 
-## Example
+## Prerequisites
 
-Router-A and Router-B are connected with a cable with interface ether1 on Router-A and ether3 on Router-B. This example will aggregate packets coming from Router-A, but will leave packets from Router-B intact. On Router-A:
+- [Neighbor discovery](/docs/system-information-and-utilities/neighbor-discovery) runs on the interface on both routers: `discover-interface-list` in [`/ip/neighbor/discovery-settings`](/docs/cli-reference/ip/neighbor/discovery-settings) includes the interface. The default configuration discovers only on the `LAN` interface list, so a tunnel or a WAN interface needs a list that contains it. The `LAN` list also decides what the default firewall trusts, so use a separate list for discovery rather than adding such an interface to `LAN`. For example, a list that holds the `LAN` list and `ether1`:
 
-Make sure discovery is enabled:
+  ```ros
+  /interface/list/add name=discover include=LAN
+  /interface/list/member/add list=discover interface=ether1
+  /ip/neighbor/discovery-settings/set discover-interface-list=discover
+  ```
+
+- The two routers share a layer 2 link: a cable, a bridged wireless link or an EoIP tunnel. Packed packets travel in Ethernet frames, and neighbor discovery works on layer 2.
+- Both routers are configured symmetrically: what one router packs, the other unpacks. A router packs toward a neighbor only when that neighbor announces that it unpacks.
+
+## Configure packing
+
+Router-A and Router-B are connected with a cable, on `ether1` of Router-A and `ether3` of Router-B. This example aggregates the packets that Router-A sends and leaves the packets from Router-B as they are.
+
+On Router-A:
 
 ```ros
- /ip/neighbor/discovery/set ether1 discover=yes 
-```
-
-Add a packing rule for the interface:
-
-```ros
- /ip/packing/add interface=ether1 aggregated-size=1500 packing=simple unpacking=none 
+/ip/packing/add interface=ether1 packing=simple unpacking=none
 ```
 
 On Router-B:
 
-Make sure discovery is enabled:
-
 ```ros
- /ip/neighbor/discovery/set ether3 discover=yes 
+/ip/packing/add interface=ether3 packing=none unpacking=simple
 ```
 
-Add a packing rule for the interface:
+To pack in both directions, set `packing=simple unpacking=simple` on both routers.
 
-```ros
- /ip/packing/add interface=ether3 aggregated-size=1500 packing=none unpacking=simple
-```
+The default `aggregated-size` of 1500 bytes is the size that packing tries to reach before it sends a packet.
+
+In WinBox, open **IP > Packing** and select **New**:
+
+1. Choose the link interface in **Interface**, such as `ether1` on Router-A. The screenshot shows a new rule before the interface is selected.
+2. Set **Packing**, **Unpacking**, and **Aggregated Size** to match the traffic direction and the settings on the other router. For Router-A in the example, use `simple`, `none`, and `1500`, then select **OK**.
+
+![WinBox new IP Packing rule](./img/ip-packing-winbox.webp)
+
+## Check that packing works
+
+Each router announces its unpacking setting through neighbor discovery. Run `/ip/neighbor/print detail where interface=ether1` on Router-A: the entry for Router-B shows `unpack=simple`, because Router-B unpacks. On Router-B, the entry for Router-A shows `unpack=none`. The values `none`, `simple`, `uncompress-headers` and `uncompress-all` correspond to the `unpacking` settings `none`, `simple`, `compress-headers` and `compress-all`.
+
+When the remote router has no neighbor entry on the interface, or its entry shows `unpack=none`, the router does not pack toward it and sends the packets as they are.
+
+In a packet capture, packed frames have the EtherType 0x9000.
+
+## Latency
+
+Packing holds packets back for a short time to combine them, so it adds delay. On a fast link, the ping round-trip time can rise from under a millisecond to tens of milliseconds. Take this into account for voice and other real-time traffic.
+
+For all parameters, see the CLI reference for [`/ip/packing`](/docs/cli-reference/ip/packing) and [`/ip/neighbor/discovery-settings`](/docs/cli-reference/ip/neighbor/discovery-settings).

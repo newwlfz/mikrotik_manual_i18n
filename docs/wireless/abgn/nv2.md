@@ -8,8 +8,8 @@ tags:
   - 'nv2'
   - 'tdma'
   - 'qos'
-source: https://manual.mikrotik.com/docs/wireless/abgn/nv2
-captured_at: '2026-11-04T11:35:25+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/abgn/nv2
+captured_at: '2026-11-04T11:23:48+08:00'
 ---
 
 Nv2 is a proprietary wireless protocol developed by MikroTik for use with Atheros 802.11 wireless chips. It is based on TDMA (Time Division Multiple Access) media access technology, as opposed to the CSMA (Carrier Sense Multiple Access) technology used in regular 802.11 devices. TDMA solves the hidden node problem and improves media usage, resulting in better throughput and latency — especially in PtMP networks.

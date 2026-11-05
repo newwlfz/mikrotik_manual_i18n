@@ -11,12 +11,22 @@ type Command = {
   readOnlyArguments: Arg[];
 };
 type CliData = {version: string; commandCount: number; commands: Record<string, Command>};
+type VersionInfo = {version: string; count: number};
+type CliIndex = {current: string; versions: VersionInfo[]};
 type Diff = {
   addedParameters: {command: string; name: string}[];
   removedParameters: {command: string; name: string}[];
   newCommands: string[];
   removedCommands: string[];
   changedCommands: {command: string; added: number; removed: number}[];
+};
+
+const EMPTY_DIFF: Diff = {
+  addedParameters: [],
+  removedParameters: [],
+  newCommands: [],
+  removedCommands: [],
+  changedCommands: [],
 };
 
 function argNames(command: Command) {
@@ -31,13 +41,13 @@ function diff(from: CliData, to: CliData): Diff {
   const changedCommands: Diff['changedCommands'] = [];
   const fromNames = new Set(Object.keys(from.commands));
   const toNames = new Set(Object.keys(to.commands));
-  const newCommands = [...toNames].filter((name) => !fromNames.has(name));
-  const removedCommands = [...fromNames].filter((name) => !toNames.has(name));
-  for (const name of [...fromNames].filter((n) => toNames.has(n))) {
+  const newCommands = Array.from(toNames).filter((name) => !fromNames.has(name));
+  const removedCommands = Array.from(fromNames).filter((name) => !toNames.has(name));
+  for (const name of Array.from(fromNames).filter((n) => toNames.has(n))) {
     const before = argNames(from.commands[name]);
     const after = argNames(to.commands[name]);
-    const added = [...after].filter((arg) => !before.has(arg));
-    const removed = [...before].filter((arg) => !after.has(arg));
+    const added = Array.from(after).filter((arg) => !before.has(arg));
+    const removed = Array.from(before).filter((arg) => !after.has(arg));
     added.forEach((arg) => addedParameters.push({command: name, name: arg}));
     removed.forEach((arg) => removedParameters.push({command: name, name: arg}));
     if (added.length || removed.length) {
@@ -77,49 +87,78 @@ function SearchIcon() {
 }
 
 export default function CliCompare() {
-  const dataUrl = useBaseUrl('/cli/current.json');
-  const [data, setData] = useState<CliData | null>(null);
+  const cliBase = useBaseUrl('/cli/');
+  const [index, setIndex] = useState<CliIndex | null>(null);
+  const [data, setData] = useState<Record<string, CliData>>({});
   const [fromVersion, setFromVersion] = useState('');
   const [toVersion, setToVersion] = useState('');
   const [filter, setFilter] = useState('');
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
-    fetch(dataUrl)
+    fetch(`${cliBase}index.json`)
       .then((response) => {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         return response.json();
       })
-      .then((payload: CliData) => {
+      .then((payload: CliIndex) => {
         if (cancelled) return;
-        setData(payload);
-        setFromVersion(payload.version);
-        setToVersion(payload.version);
+        setIndex(payload);
+        const versions = payload.versions.map((entry) => entry.version);
+        const previous = versions.filter((version) => version !== payload.current).at(-1);
+        setFromVersion(previous ?? payload.current);
+        setToVersion(payload.current);
       })
-      .catch((error) => console.error('CLI data unavailable', error));
+      .catch((cause) => {
+        if (!cancelled) setError(String(cause));
+      });
     return () => {
       cancelled = true;
     };
-  }, [dataUrl]);
+  }, [cliBase]);
 
+  useEffect(() => {
+    if (!index) return;
+    const missing = [fromVersion, toVersion].filter(
+      (version) => version && !data[version],
+    );
+    if (!missing.length) return;
+    let cancelled = false;
+    Promise.all(
+      missing.map(async (version) => {
+        const response = await fetch(`${cliBase}${version}.json`);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return [version, (await response.json()) as CliData] as const;
+      }),
+    )
+      .then((entries) => {
+        if (!cancelled) setData((previous) => ({...previous, ...Object.fromEntries(entries)}));
+      })
+      .catch((cause) => {
+        if (!cancelled) setError(String(cause));
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [index, fromVersion, toVersion, cliBase, data]);
+
+  const from = data[fromVersion];
+  const to = data[toVersion];
   const result = useMemo(() => {
-    if (!data) return null;
-    if (fromVersion === toVersion) {
-      return {
-        addedParameters: [],
-        removedParameters: [],
-        newCommands: [],
-        removedCommands: [],
-        changedCommands: [],
-      };
-    }
-    return diff(data, data);
-  }, [data, fromVersion, toVersion]);
+    if (!from || !to) return null;
+    if (fromVersion === toVersion) return EMPTY_DIFF;
+    return diff(from, to);
+  }, [from, to, fromVersion, toVersion]);
 
-  if (!data || !result) {
+  if (error) {
+    return <div className="root_EuB2">CLI data unavailable: {error}</div>;
+  }
+  if (!index || !result) {
     return <div className="root_EuB2" />;
   }
 
+  const versions = index.versions;
   const filtered = result.changedCommands.filter((item) =>
     item.command.toLowerCase().includes(filter.trim().toLowerCase()),
   );
@@ -129,6 +168,14 @@ export default function CliCompare() {
     result.newCommands.length ||
     result.removedCommands.length ||
     result.changedCommands.length;
+
+  const commandHref = (version: string, command: string) => {
+    const base =
+      version === index.current
+        ? '/docs/cli-reference'
+        : `/docs/${version}/cli-reference`;
+    return `${base}${command}`;
+  };
 
   return (
     <div className="root_EuB2">
@@ -141,7 +188,11 @@ export default function CliCompare() {
               className="select_Kbg9"
               value={fromVersion}
               onChange={(event) => setFromVersion(event.target.value)}>
-              <option value={data.version}>{optionLabel(data.version, data.commandCount)}</option>
+              {versions.map((entry) => (
+                <option value={entry.version} key={entry.version}>
+                  {optionLabel(entry.version, entry.count)}
+                </option>
+              ))}
             </select>
             <SelectChevron />
           </span>
@@ -174,7 +225,11 @@ export default function CliCompare() {
               className="select_Kbg9"
               value={toVersion}
               onChange={(event) => setToVersion(event.target.value)}>
-              <option value={data.version}>{optionLabel(data.version, data.commandCount)}</option>
+              {versions.map((entry) => (
+                <option value={entry.version} key={entry.version}>
+                  {optionLabel(entry.version, entry.count)}
+                </option>
+              ))}
             </select>
             <SelectChevron />
           </span>
@@ -229,7 +284,10 @@ export default function CliCompare() {
               </summary>
               <div className="chips_zpAM">
                 {result.newCommands.map((command) => (
-                  <a className="chip_rQgJ chipLink_TZ7w" href={`/docs/cli-reference${command}`} key={command}>
+                  <a
+                    className="chip_rQgJ chipLink_TZ7w"
+                    href={commandHref(toVersion, command)}
+                    key={command}>
                     {command}
                   </a>
                 ))}
@@ -256,11 +314,33 @@ export default function CliCompare() {
       {filtered.length ? (
         <div>
           <h2>Parameter changes <span>{filtered.length} commands</span></h2>
-          {filtered.map((item) => (
-            <div key={item.command}>
-              <code>{item.command}</code>
-            </div>
-          ))}
+          {filtered.map((item) => {
+            const added = result.addedParameters.filter(
+              (parameter) => parameter.command === item.command,
+            );
+            const removed = result.removedParameters.filter(
+              (parameter) => parameter.command === item.command,
+            );
+            return (
+              <div key={item.command}>
+                <code>{item.command}</code>
+                {added.length ? (
+                  <span className="statAdd_e9OD">
+                    {added.map((parameter) => (
+                      <code key={parameter.name}>{parameter.name}</code>
+                    ))}
+                  </span>
+                ) : null}
+                {removed.length ? (
+                  <span className="statRemove_ZPFd">
+                    {removed.map((parameter) => (
+                      <code key={parameter.name}>{parameter.name}</code>
+                    ))}
+                  </span>
+                ) : null}
+              </div>
+            );
+          })}
         </div>
       ) : null}
     </div>

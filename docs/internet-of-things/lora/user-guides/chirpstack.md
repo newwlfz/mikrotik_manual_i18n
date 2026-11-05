@@ -7,8 +7,8 @@ description: 'This page guides MikroTik RouterOS users through registering LoRaW
 tags:
   - 'lora'
   - 'iot'
-source: https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides/chirpstack
-captured_at: '2026-11-04T11:31:47+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/lora/user-guides/chirpstack
+captured_at: '2026-11-04T11:19:15+08:00'
 ---
 
 [ChirpStack](https://www.chirpstack.io/) is an open-source LoRaWAN server, which you can install locally.

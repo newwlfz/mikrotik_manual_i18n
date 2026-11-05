@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/user-manager/user/index"
 sidebar_position: 4
 title: "user"
 sidebar_label: 'user'
-source: https://manual.mikrotik.com/docs/cli-reference/user-manager/user
-captured_at: '2026-11-01T21:30:32+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/user
+captured_at: '2026-11-01T21:26:11+08:00'
 ---
 
 -----------

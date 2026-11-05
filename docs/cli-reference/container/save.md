@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/container/save"
 sidebar_position: 10
 title: "save"
 sidebar_label: 'save'
-source: https://manual.mikrotik.com/docs/cli-reference/container/save
-captured_at: '2026-11-01T21:26:39+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/container/save
+captured_at: '2026-11-01T21:22:03+08:00'
 ---
 
 -----------

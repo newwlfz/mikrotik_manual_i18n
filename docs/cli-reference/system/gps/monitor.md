@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/gps/monitor"
 sidebar_position: 2
 title: "monitor"
-source: https://manual.mikrotik.com/docs/cli-reference/system/gps/monitor
-captured_at: '2026-11-01T21:29:49+08:00'
+sidebar_label: 'monitor'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/gps/monitor
+captured_at: '2026-11-01T21:25:31+08:00'
 ---
 
 -----------

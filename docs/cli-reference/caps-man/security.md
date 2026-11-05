@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/caps-man/security"
 sidebar_position: 14
 title: "security"
-source: https://manual.mikrotik.com/docs/cli-reference/caps-man/security
-captured_at: '2026-11-01T21:26:23+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/security
+captured_at: '2026-11-01T21:21:47+08:00'
 ---
 
 -----------

@@ -8,8 +8,8 @@ tags:
   - 'capsman'
   - 'wireless-management'
   - 'dtls'
-source: https://manual.mikrotik.com/docs/wireless/abgn/capsman/ap-controller-capsman
-captured_at: '2026-11-04T11:35:31+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/abgn/capsman/ap-controller-capsman
+captured_at: '2026-11-04T11:23:53+08:00'
 ---
 
 :::info

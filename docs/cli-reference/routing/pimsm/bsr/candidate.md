@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/pimsm/bsr/candidate"
 sidebar_position: 1
 title: "candidate"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/pimsm/bsr/candidate
-captured_at: '2026-11-01T21:29:37+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/pimsm/bsr/candidate
+captured_at: '2026-11-01T21:25:16+08:00'
 ---
 
 -----------

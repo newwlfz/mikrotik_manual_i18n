@@ -7,50 +7,49 @@ description: 'This page outlines RouterOS software specifications covering hardw
 tags:
   - 'firewall'
   - 'vpn'
-source: https://manual.mikrotik.com/docs/getting-started/software-specifications
-captured_at: '2026-11-04T11:29:04+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/software-specifications
+captured_at: '2026-11-04T11:17:03+08:00'
 ---
+## Hardware Support
 
-#### Hardware Support
+**MikroTik made devices:** RouterOS is compatible with MikroTik hardware it comes preinstalled on. Even older, discontinued MikroTik devices can run the latest RouterOS, but performance may vary. There are a few exceptions to this for the very oldest product lines. RouterOS v7 is not compatible with all MIPS-LE family of devices (such as RB100 series, some RB700 series devices; check the architecture of the device in question). There is no set limit on software compatibility or upgrades. Even devices that are no longer manufactured for 20 years may still receive software updates, as long as they have enough RAM and are not based on a MIPS-LE CPU.
 
-**MikroTik made devices:** RouterOS is compatible with MikroTik hardware it comes preinstalled on. Even older, discontinued MikroTik devices can run the latest RouterOS, but it's important to note that the performance may vary. There are a few exceptions to this for the very oldest product lines. The latest RouterOS v7 is not compatible with all MIPS-LE family of devices (such as RB100 series, some RB700 series devices etc., please check the architecture of the device in question). In short, there is no set limit on software compatibility or upgrades. Even devices that are no longer manufactured for 20 years may still receive software updates, as long as they have enough RAM and are not based on a MIPS-LE CPU.
-
-**3rd party devices:** RouterOS can also be run on 3rd party devices if they meet the following requirements:
+**3rd party devices:** RouterOS can also run on 3rd party devices if they meet the following requirements:
 
 - x86 or AMPERE powered ARM CPU.
-- Minimum 64MB of RAM.
-- IDE, SATA, USB, and flash storage medium with a minimum of 64MB of space.
+- Minimum 64 MB of RAM.
+- IDE, SATA, USB, and flash storage medium with a minimum of 64 MB of space.
 - Network cards supported by the Linux kernel.
 
 :::info
-**Note:** NVMe storage is supported only for CHR, x86, Tile, and MMIPS architectures. For specific information, please look at each product brochure or block diagram.
+NVMe storage is supported only for CHR, x86, Tile, and MMIPS architectures. Check each product brochure or block diagram for specific information.
 :::
 
 :::info
-**Note:** RouterOS 7 with default configuration requires at least 32MB of RAM, but for more advanced configuration, we suggest at least 64MB.
+RouterOS 7 with default configuration requires at least 32 MB of RAM, but for more advanced configuration, we suggest at least 64 MB.
 :::
 
-#### Installation
+## Installation
 
-- [Netinstall](https://manual.mikrotik.com/docs/installation-and-upgrade/netinstall): Full network-based installation from PXE- or EtherBoot-enabled network card.
-- [CHR](https://manual.mikrotik.com/docs/installation-and-upgrade/install/chr-installation): RouterOS version intended for running as a virtual machine.
+- [Netinstall](../installation-and-upgrade/netinstall): Full network-based installation from PXE- or EtherBoot-enabled network card.
+- [CHR](../installation-and-upgrade/install/chr-installation): RouterOS version intended for running as a virtual machine.
 - CD-based installation.
 
-#### Configuration
+## Configuration
 
 - MAC-based access for initial configuration.
-- [WinBox](/docs/management-tools/winbox) – standalone Windows GUI configuration tool.
-- [WebFig](/docs/management-tools/webfig) - advanced web-based configuration interface.
-- MikroTik - [Android and iOS-based configuration tool](/docs/management-tools/mikrotik-mobile-app).
-- Powerful command-line configuration interface with integrated scripting capabilities, accessible via local terminal, serial console, telnet and ssh.
+- [WinBox](../../management-tools/winbox) – standalone Windows GUI configuration tool.
+- [WebFig](../../management-tools/webfig) - advanced web-based configuration interface.
+- MikroTik - [Android and iOS-based configuration tool](../../management-tools/mikrotik-mobile-app).
+- Powerful command-line configuration interface with integrated scripting capabilities, accessible by using local terminal, serial console, telnet and ssh.
 - API - the way to create your own configuration and monitoring applications.
 
-#### Backup/Restore
+## Backup/Restore
 
-- Binary configuration [backup](/docs/getting-started/configuration-management/backup) saving and loading.
-- [Configuration export and import](/docs/getting-started/configuration-management#configuration-export-and-import) in human-readable text format.
+- Binary configuration [backup](../../getting-started/configuration-management/backup) saving and loading.
+- [Configuration export and import](../../getting-started/configuration-management#configuration-export-and-import) in human-readable text format.
 
-#### Firewall
+## Firewall
 
 - Stateful filtering.
 - Source and destination NAT.
@@ -63,7 +62,7 @@ captured_at: '2026-11-04T11:29:04+08:00'
 - PCC - per connection classifier, used in load balancing configurations.
 - RAW filtering to bypass connection tracking.
 
-#### Routing
+## Routing
 
 - Static routing.
 - Virtual Routing and Forwarding (VRF).
@@ -74,7 +73,7 @@ captured_at: '2026-11-04T11:29:04+08:00'
 - IPv6 dynamic routing protocols: RIPng, OSPFv3, BGP.
 - Bidirectional Forwarding Detection (BFD).
 
-#### MPLS
+## MPLS
 
 - Static Label bindings for IPv4.
 - Label Distribution protocol for IPv4.
@@ -82,22 +81,22 @@ captured_at: '2026-11-04T11:29:04+08:00'
 - VPLS MP-BGP based autodiscovery and signaling.
 - MP-BGP based MPLS IP VPN.
 
-#### VPN
+## VPN
 
-- IPSec – tunnel and transport mode, certificate or PSK, AH and ESP security protocols.
+- [IPSec](../../virtual-private-networks/ipsec/index.md) – tunnel and transport mode, certificate or PSK, AH and ESP security protocols.
 - IKEv2 support.
 - AES-NI hardware acceleration support for IPSec.
-- Point-to-point tunneling ( OpenVPN, PPTP, PPPoE, L2TP, SSTP).
+- Point-to-point tunneling ([OpenVPN](../../virtual-private-networks/openvpn.md), [PPTP](../../virtual-private-networks/pptp.md), [PPPoE](../../virtual-private-networks/pppoe/index.md), [L2TP](../../virtual-private-networks/l2tp/index.md), [SSTP](../../virtual-private-networks/sstp.md)).
 - Advanced PPP features (MLPPP, BCP).
 - BCP is supported on sstp, ppp, pptp, l2tp and pppoe.
-- Simple tunnels ( IPIP, EoIP) IPv4 and IPv6 support.
-- 6to4 tunnel support (IPv6 over IPv4 network).
+- Simple tunnels ([IPIP](../../virtual-private-networks/ipip.md), [EoIP](../../virtual-private-networks/eoip.md)) IPv4 and IPv6 support.
+- [6to4](../../virtual-private-networks/6to4.md) tunnel support (IPv6 over IPv4 network).
 - VLAN – IEEE802.1q Virtual LAN support, Q-in-Q support.
 - MPLS-based VPNs.
-- WireGuard.
-- ZeroTier.
+- [WireGuard](../../virtual-private-networks/wireguard.md).
+- [ZeroTier](../../virtual-private-networks/zerotier.md).
 
-#### Wireless
+## Wireless
 
 - IEEE802.11a/b/g wireless client and access point.
 - Full IEEE802.11n support.
@@ -112,7 +111,7 @@ captured_at: '2026-11-04T11:29:04+08:00'
 - HWMP+ Wireless MESH protocol.
 - MME wireless routing protocol.
 
-#### DHCP
+## DHCP
 
 - Per interface DHCP server.
 - DHCP client and relay.
@@ -122,20 +121,20 @@ captured_at: '2026-11-04T11:29:04+08:00'
 - DHCPv6 Prefix Delegation (DHCPv6-PD).
 - DHCPv6 Client.
 
-#### Hotspot
+## Hotspot
 
 - Plug-n-Play access to the Network.
 - Authentication of local Network Clients.
 - User Accounting.
 - RADIUS support for Authentication and Accounting.
 
-#### QoS
+## QoS
 
-- Hierarchical Token Bucket ( HTB) QoS system with CIR, MIR, burst and priority support.
+- Hierarchical Token Bucket (HTB) QoS system with CIR, MIR, burst and priority support.
 - Simple and fast solution for basic QoS implementation - Simple queues.
-- Dynamic client rate equalization ( PCQ).
+- Dynamic client rate equalization (PCQ).
 
-#### Proxy
+## Proxy
 
 - HTTP caching proxy server.
 - Transparent HTTP proxy.
@@ -146,20 +145,20 @@ captured_at: '2026-11-04T11:29:04+08:00'
 - Access control list.
 - Caching list.
 
-#### Tools
+## Tools
 
 - Ping, traceroute
 - Bandwidth test, ping flood
 - Packet sniffer, torch
 - Telnet, ssh
-- E-mail and SMS sending tools
+- Email and SMS sending tools
 - Automated script execution tools
 - CALEA
 - File Fetch tool
 - Advanced traffic generator
 - WoL (Wake on LAN) sending
 
-#### Other features
+## Other features
 
 - Samba support.
 - OpenFlow support.
@@ -176,12 +175,12 @@ captured_at: '2026-11-04T11:29:04+08:00'
 - Asynchronous – serial PPP dial-in/dial-out, dial on demand.
 - ISDN – dial-in/dial-out, 128K bundle support, Cisco HDLC, x75i, x75ui, x75bui line protocols, dial on demand.
 
-#### Kernel version
+## Kernel version
 
 - RouterOS version 6.x uses 3.3.5
 - RouterOS version 7.x uses 5.6.3
 
-#### Supported Encryptions
+## Supported Encryptions
 
 RouterOS 7 is used for the management of network (telecommunication) devices.
 

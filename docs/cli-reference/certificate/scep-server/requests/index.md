@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/certificate/scep-server/requests/index"
 sidebar_position: 2
 title: "requests"
 sidebar_label: 'requests'
-source: https://manual.mikrotik.com/docs/cli-reference/certificate/scep-server/requests
-captured_at: '2026-11-01T21:26:28+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/scep-server/requests
+captured_at: '2026-11-01T21:21:51+08:00'
 ---
 
 -----------

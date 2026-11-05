@@ -8,8 +8,8 @@ tags:
   - 'wifi'
   - 'wireless'
   - '802-11ac'
-source: https://manual.mikrotik.com/docs/wireless/wifi-ac
-captured_at: '2026-11-04T11:35:47+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/wifi-ac
+captured_at: '2026-11-04T11:24:12+08:00'
 ---
 
 This section covers MikroTik **802.11ac (Wi-Fi 5)** ARM-based devices. These products are special: the **same hardware can be configured through either of two RouterOS menus**, depending on which driver package is installed. Pick the one that matches the features you need.
@@ -35,5 +35,9 @@ The new `/interface/wifi` menu manages **Wi-Fi 5 wave2 and newer** interfaces, s
 The following 802.11ac ARM models can run either `wifi-qcom-ac` (new `/interface/wifi` menu) or `wireless` (legacy `/interface/wireless` menu):
 
 > Audience, Audience LTE kit, Chateau (all variants of D53), hAP ac², hAP ac³, cAP ac, cAP XL ac, LDF 5 ac, LHG XL 5 ac, LHG XL 52 ac, NetMetal ac², mANTBox 52 15s, wAP ac (RBwAPG-5HacD2HnD), SXTsq 5 ac
+
+:::warning
+The `wifi-qcom-ac` driver upgrade is primarily meant for indoor devices. Even though it can also be installed on our outdoor models (LDF 5 ac, LHG XL 5 ac, LHG XL 52 ac, NetMetal ac², mANTBox 52 15s, SXTsq 5 ac), `wifi-qcom-ac` is not tailored for outdoor usage. This is primarily because the drivers do not support the **distance** setting, which is required for links longer than 2 km. We therefore recommend using the `wireless` drivers on all our outdoor boards.
+:::
 
 For choosing packages by device type and CAPsMAN scenario, see the decision tables on the [Wireless overview](https://manual.mikrotik.com/docs/index).

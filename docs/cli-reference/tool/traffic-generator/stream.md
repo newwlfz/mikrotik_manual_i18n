@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/tool/traffic-generator/stream"
 sidebar_position: 11
 title: "stream"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/stream
-captured_at: '2026-11-01T21:30:27+08:00'
+sidebar_label: 'stream'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/traffic-generator/stream
+captured_at: '2026-11-01T21:26:05+08:00'
 ---
 
 -----------

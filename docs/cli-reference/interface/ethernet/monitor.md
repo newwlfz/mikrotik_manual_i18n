@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/ethernet/monitor"
 sidebar_position: 4
 title: "monitor"
 sidebar_label: 'monitor'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/monitor
-captured_at: '2026-11-01T21:27:05+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ethernet/monitor
+captured_at: '2026-11-01T21:22:31+08:00'
 ---
 
 -----------

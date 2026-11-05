@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Device",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/kid-control/device/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/kid-control/device"
+}

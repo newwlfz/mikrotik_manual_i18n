@@ -8,8 +8,8 @@ tags:
   - 'wlan'
   - 'vlan'
   - 'security'
-source: https://manual.mikrotik.com/docs/wireless/user-guides
-captured_at: '2026-11-04T11:35:32+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/user-guides
+captured_at: '2026-11-04T11:23:56+08:00'
 ---
 
 These case studies apply across wireless product families and both RouterOS menus (`/interface/wireless` and `/interface/wifi`). For examples specific to a single product family, see the case studies inside [802.11 a/b/g/n](https://manual.mikrotik.com/docs/abgn/index) (legacy `/interface/wireless`) and the configuration guides under [Wi-Fi 6 / 7 (802.11ax/be)](https://manual.mikrotik.com/docs/wifi/index).

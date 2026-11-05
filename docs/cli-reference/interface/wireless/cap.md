@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/cap"
 sidebar_position: 3
 title: "cap"
 sidebar_label: 'cap'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/cap
-captured_at: '2026-11-01T21:27:57+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/cap
+captured_at: '2026-11-01T21:23:23+08:00'
 ---
 
 -----------

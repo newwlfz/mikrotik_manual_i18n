@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/dude/ros/address"
 sidebar_position: 1
 title: "address"
 sidebar_label: 'address'
-source: https://manual.mikrotik.com/docs/cli-reference/dude/ros/address
-captured_at: '2026-11-01T21:26:50+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/dude/ros/address
+captured_at: '2026-11-01T21:22:14+08:00'
 ---
 
 -----------

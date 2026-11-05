@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "Btrfs",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/disk/btrfs/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/disk/btrfs"
+}

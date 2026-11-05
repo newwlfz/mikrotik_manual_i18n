@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ip/firewall/service-port"
 sidebar_position: 9
 title: "service-port"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/firewall/service-port
-captured_at: '2026-11-01T21:28:38+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/firewall/service-port
+captured_at: '2026-11-01T21:24:01+08:00'
 ---
 
 -----------

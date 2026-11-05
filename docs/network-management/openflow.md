@@ -3,42 +3,42 @@ sidebar_key: "network-management/openflow"
 sidebar_position: 4
 title: "Openflow"
 sidebar_label: 'Openflow'
-description: 'RouterOS supports OpenFlow protocols 1.0 and 1.3 for SDN integration, enabling centralized traffic management via controller applications that access switch data paths. It includes basic statistics support and requires careful configuration to avoid disrupting regular networking when using OpenFlow-enabled interfaces.'
+description: 'RouterOS supports OpenFlow protocols 1.0 and 1.3 for SDN integration, enabling centralized traffic management through controller applications that access switch data paths. It includes basic statistics support and requires careful configuration to avoid disrupting regular networking with OpenFlow-enabled interfaces.'
 tags:
   - 'openflow'
   - 'sdn'
-source: https://manual.mikrotik.com/docs/network-management/openflow
-captured_at: '2026-11-04T11:32:45+08:00'
+source: https://manual.mikrotik.com/docs/7.25/network-management/openflow
+captured_at: '2026-11-04T11:21:15+08:00'
 ---
 
-RouterOS supports OpenFlow [1.0](https://opennetworking.org/wp-content/uploads/2013/04/openflow-spec-v1.0.0.pdf) and [1.3](https://opennetworking.org/wp-content/uploads/2014/10/openflow-spec-v1.3.0.pdf) which allows communication between the OpenFlow controller and the OpenFlow agent.
+RouterOS supports OpenFlow [1.0](https://opennetworking.org/wp-content/uploads/2013/04/openflow-spec-v1.0.0.pdf) and [1.3](https://opennetworking.org/wp-content/uploads/2014/10/openflow-spec-v1.3.0.pdf), which allow communication between the OpenFlow controller and the OpenFlow agent.
 
 OpenFlow is used to centralize management of network equipment in Software Defined Networks (SDNs).
 
-Applications on the OpenFlow controller have access to the switch's data-path and can perform custom tasks, like flow steering, traffic monitoring etc.
+Applications on the OpenFlow controller have access to the switch's data-path and can perform custom tasks, such as flow steering and traffic monitoring.
 
-Controller sends flows to be added in the agent's flow table. Packet lookup, modification and forwarding are done based on the flow table on the agent.
+The controller sends flows to be added to the agent's flow table. Packet lookup, modification, and forwarding are based on the agent's flow table.
 
-RouterOS supports OpenFlow fastpath in simple setups where " goto table" flows are not used.
+RouterOS supports OpenFlow fast path in simple setups where "goto table" flows are not used.
 
-OpenFlow feature overrides regular packet processing functionality - packets that are received on interfaces that are OpenFlow switch ports will not pass through the regular networking stack unless OpenFlow controller sets up flows that enable this. Due to this, care must be taken to not disable access to the device when configuring OpenFlow.
+OpenFlow overrides regular packet processing. Packets received on interfaces that are OpenFlow switch ports do not pass through the regular networking stack unless the OpenFlow controller sets up flows that enable this. Be careful not to disable access to the device when configuring OpenFlow.
 
-OpenFlow support is available as a standalone openflow package.
+OpenFlow support is available as a standalone OpenFlow package.
 
-### Currently supported basic capabilities
+## Supported basic capabilities
 
 - OFPC\_FLOW\_STATS
 - OFPC\_TABLE\_STATS
 - OFPC\_PORT\_STATS
 - OFPC\_GROUP\_STATS
 
-### Currently unsupported basic capabilities
+## Unsupported basic capabilities
 
 - OFPC\_IP\_REASM
 - OFPC\_QUEUE\_STATS
 - OFPC\_PORT\_BLOCKED
 
-### Currently not supported configuration parameters and actions (version 1)
+## Unsupported configuration parameters and actions (version 1)
 
 - OFPAT\_SET\_NW\_SRC
 - OFPAT\_SET\_NW\_DST
@@ -48,7 +48,7 @@ OpenFlow support is available as a standalone openflow package.
 - OFPAT\_ENQUEUE
 - OFPAT\_VENDOR
 
-### Currently not supported configuration parameters and actions (version 1.3)
+## Unsupported configuration parameters and actions (version 1.3)
 
 - OFPT\_SET\_ASYNC
 - OFPAT\_SET\_NW\_TTL
@@ -58,7 +58,7 @@ OpenFlow support is available as a standalone openflow package.
 
 ## Configuration Example
 
-The example demonstrates very basic L2 untagged packet forwarding between sfp-sfplus1-2 ports. Faucet is used as a controller.
+The example demonstrates very basic L2 untagged packet forwarding between the sfp-sfpplus1 and sfp-sfpplus2 ports. Faucet is used as a controller.
 
 ```routeros
 /openflow
@@ -70,10 +70,10 @@ add disabled=no interface=sfp-sfpplus2 port-id=2 switch=faucet
 ```
 
 :::info
-If you intend to also use Gauge, then add Gauge's IP and port  in the controllers list. Example, where 6654 is the Gauge port: `controllers=tcp/10.155.101.182/6653,tcp/10.155.101.182/6654`
+If you also intend to use Gauge, add Gauge's IP address and port to the controllers list. In this example, 6654 is the Gauge port: `controllers=tcp/10.155.101.182/6653,tcp/10.155.101.182/6654`
 :::
 
-Faucet configuration. dp\_id must be the same as datapath-id from ROS configuration in hex format ( 1/DC:2C:6E:A4:B4:2E →  0x0001dc2c6ea4b42e ):
+In the Faucet configuration, `dp_id` must match the `datapath-id` from the RouterOS configuration in hex format (`1/DC:2C:6E:A4:B4:2E` → `0x0001dc2c6ea4b42e`):
 
 ```routeros
 ---
@@ -107,7 +107,7 @@ dps:
 
 ```
 
-Faucet installed flows can be seen from the `/openflow/flow` menu:
+The flows installed by Faucet can be viewed from the `/openflow/flow` menu:
 
 ```routeros
 [admin@CCR2004_2XS_111] /openflow/flow>  print detail 
@@ -200,7 +200,7 @@ Flags: I - inactive
 
 ```
 
-Statistics of the flows can be seen with the **`stats`** parameter:
+To view flow statistics, use the `stats` parameter:
 
 ```routeros
 [admin@CCR2004_2XS_111] /openflow/flow>  print stats 
@@ -233,7 +233,7 @@ Columns: SWITCH, MATCH, BYTES, PACKETS, DURATION
 
 ## Statistics
 
-Fastpath statistics can be seen from `/openflow/print fast-path`. We can see that in this example fast path is not functional due to the complexity of flows Faucet is installing.
+Fast path statistics can be viewed from `/openflow/print fast-path`. In this example, the fast path does not work because of the complexity of the flows Faucet installs.
 
 ```routeros
 [admin@CCR2004_2XS_111] /openflow> print fast-path 
@@ -241,7 +241,7 @@ Fastpath statistics can be seen from `/openflow/print fast-path`. We can see tha
     openflow-fast-path-bytes: 0 0
 ```
 
-Port statistics can be seen from the `/openflow/port` menu
+Port statistics can be viewed from the `/openflow/port` menu.
 
 ```routeros
 [admin@CCR2004_2XS_111] /openflow/port> print stats
@@ -250,103 +250,3 @@ Columns: INTERFACE, PORT-ID, RX-BYTES, TX-BYTES, RX-PACKETS, TX-PACKETS
 0 sfp-sfpplus1        1    115668     81180        1223        1035
 1 sfp-sfpplus2        2    112200     82188        1215        1037
 ```
-
-## Reference
-
-### General
-
-**Sub-menu:** `/openflow`
-
-This menu lists the configuration of OpenFlow clients.
-
-| Property | Description |
-| :-- | :-- |
-| **certificate** (*name*) | Name of the certificate from the certificate list. Used together with the `verify-peer` parameter. |
-| **controllers** (*list of [protocol/address/port]*) | Configuration of the connection to the controller. Supported protocols are **tcp** and **tls**. Example: tcp/1.2.3.4/6654 |
-| **datapath-id** (*number/mac*) | Datapath ID consisting of two parts (integer number [0..65535] and MAC address) separated by a slash. |
-| **name** (*string*) | Reference name of the entry |
-| ****passive-port**** (*disabled \| integer [1..65535]*) |  |
-| **verify-peer** (*if-cert-present \| none \| required*) | Verify peer's identity using certificates |
-| ****version**** (*1 \| 1.3 \| default*) | Version of the OpenFlow standard to be used. |
-
-#### Read-Only Parameters
-
-| Property | Description |
-| :-- | :-- |
-| **openflow-fast-path-bytes** (*integer*) | Number of bytes set to fastpath |
-| **openflow-fast-path-packets** (*integer*) | Number of packets sent to fastpath |
-
-### Flows
-
-**Sub-menu:** `/openflow/flow`
-
-This menu lists installed flows responsible for packet forwarding between openflow ports.
-
-| Property | Description |
-| :-- | :-- |
-| **actions** (*string*) | Action string |
-| **bytes** (*integer*) | Number of bytes matched by the rule |
-| **duration** (*time*) |  |
-| **inactive** (*yes \| no*) |  |
-| **info** (*string*) | Info string |
-| **match** (*string*) | Matcher rule string |
-| **packets** (*integer*) | Number of packets matched by the rule |
-| **switch** (*name*) | Controller name that installed the rule |
-| **table-id** (*integer*) | ID of the table where the rule is located |
-| **version** (*integer*) |  |
-
-### Groups
-
-**Sub-menu:** `/openflow/group`
-
-| Property | Description |
-| :-- | :-- |
-| **bucket-count** () |  |
-| **bucket-stats** () |  |
-| **buckets** () |  |
-| **bytes** (*integer*) |  |
-| **duration** (*time*) |  |
-| **flow-count** (*integer*) |  |
-| **id** (*integer*) |  |
-| **inactive** (*yes \| no*) |  |
-| **packets** (*integer*) |  |
-| **switch** (*name*) |  |
-| **type** () |  |
-
-### Meter
-
-**Sub-menu:** `/openflow/meter`
-
- The sub-menu displays installed traffic meters by the controller. Meters allow the rate-monitoring before the output and apply action instructions.
-
-| Property | Description |
-| :-- | :-- |
-| **band-count** () |  |
-| **bands** () |  |
-| **bytes** (*integer*) | Number of accounted bytes |
-| **duration** (*time*) |  |
-| **id** (*integer*) |  |
-| **inactive** (*yes \| no*) |  |
-| **packets** (*integer*) | Number of accounted packets |
-| **switch** (*name*) | Controller name that installed the rule |
-
-### Ports
-
-**Sub-menu:** `/openflow/port`
-
-This menu lists the ports controlled by OpenFlow.
-
-| Property | Description |
-| :-- | :-- |
-| **interface** (*name*) | Name of the interface to be controlled by OpenFlow |
-| **port-id** (*integer*) | Port ID used to identify the interface in flow rules |
-| **switch** (*name*) | Name of the switch that will be able to control the port. |
-
-#### Read-Only Parameters
-
-| Property | Description |
-| :-- | :-- |
-| **rx-bytes** (*integer*) | Amount of bytes received on the interface |
-| **rx-packets** (*integer*) | Number of packets received on the interface |
-| **tx-bytes** (*integer*) | Amount of bytes transmitted on the interface |
-| **tx-packets** (*integer*) | Number of packets transmitted on the interface |

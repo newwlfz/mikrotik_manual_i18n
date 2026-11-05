@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wifi/datapath"
 sidebar_position: 7
 title: "datapath"
 sidebar_label: 'datapath'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/datapath
-captured_at: '2026-11-01T21:27:47+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wifi/datapath
+captured_at: '2026-11-01T21:23:10+08:00'
 ---
 
 -----------

@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/ppp/aaa"
 sidebar_position: 1
 title: "aaa"
-source: https://manual.mikrotik.com/docs/cli-reference/ppp/aaa
-captured_at: '2026-11-01T21:29:21+08:00'
+sidebar_label: 'ppp'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ppp/aaa
+captured_at: '2026-11-01T21:24:56+08:00'
 ---
 
 -----------

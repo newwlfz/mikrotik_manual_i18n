@@ -4,8 +4,8 @@ sidebar_position: 32
 title: "CLI Reference"
 sidebar_label: 'CLI Reference'
 description: 'The CLI reference documents RouterOS command menus and properties by console path. Use this section to look up command syntax, configuration objects, and operational commands for RouterOS features.'
-source: https://manual.mikrotik.com/docs/cli-reference/
-captured_at: '2026-11-01T14:01:31+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/
+captured_at: '2026-11-01T13:53:14+08:00'
 ---
 The CLI reference documents RouterOS command menus and properties by console path. Use this section to look up command syntax, configuration objects, and operational commands for RouterOS features.
 
@@ -73,9 +73,10 @@ The **address** type is rendered as `address (flags=...)` where the flags define
 | 4    | IPv4 address |
 | 6    | IPv6 address |
 | D    | DNS name (hostname) |
-| i    | Interface name |
+| i    | Interface name as the value itself, in place of an address (e.g. a point-to-point interface as a route gateway) |
 | /    | Address with subnet mask (CIDR prefix) |
 | v    | VRF (Virtual Routing and Forwarding instance) |
+| %    | Interface suffix on an address (zone specifier), e.g. `fe80::1%ether1` or `00:11:22:33:44:55%ether1` |
 | R    | Route distinguisher |
 | S    | Free-form prefix (e.g. EVPN prefix) |
 | \+   | Address list |
@@ -83,10 +84,6 @@ The **address** type is rendered as `address (flags=...)` where the flags define
 | L    | Link-local address |
 | m    | multicast address |
 
-## Grafts and Captures
+The `i` and `%` flags differ in where the interface appears. With `i`, a bare interface name replaces the address. With `%`, the interface is only a qualifier appended to a complete address, used to disambiguate addresses that are not unique router-wide, such as IPv6 link-local addresses.
 
-If parameters are grouped in captures, then old descriptions are taken from the first parameter with that name found. For example, BGP template and BGP connection uses the same capture, but BGP template is the first one so all the descriptions are taken from there and used for all graft referenced parameters in all menus.
-
-## Headings
-
-Currently reference can have only headings that match RouterOS menus, everything else is ignored when comparing previous data.
+Note that the `%interface` suffix is part of the IPv6 link-local addressing itself: a link-local address is ambiguous without a zone specification, so any parameter that accepts IPv6 addresses (flag `6`) accepts `link-local%interface`, even if its flag list does not include `%`. The `%` flag indicates that the parameter supports the suffix more broadly, for example to select the outgoing interface for a MAC ping.

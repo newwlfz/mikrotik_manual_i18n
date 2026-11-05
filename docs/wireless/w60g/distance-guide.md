@@ -8,8 +8,8 @@ tags:
   - 'point-to-multi-point'
   - 'ap'
   - 'licensing'
-source: https://manual.mikrotik.com/docs/wireless/w60g/distance-guide
-captured_at: '2026-11-04T11:36:20+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/w60g/distance-guide
+captured_at: '2026-11-04T11:24:15+08:00'
 ---
 
 ![](./img/distance-guide-01.webp)

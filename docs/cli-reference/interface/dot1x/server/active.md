@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/dot1x/server/active"
 sidebar_position: 1
 title: "active"
 sidebar_label: 'active'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/dot1x/server/active
-captured_at: '2026-11-01T21:27:03+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/dot1x/server/active
+captured_at: '2026-11-01T21:22:28+08:00'
 ---
 
 -----------

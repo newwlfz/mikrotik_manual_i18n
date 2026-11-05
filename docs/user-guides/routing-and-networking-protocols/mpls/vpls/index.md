@@ -9,8 +9,8 @@ tags:
   - 'ldp'
   - 'bgp'
 slug: /user-guides/routing-and-networking-protocols/mpls/vpls/
-source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/mpls/vpls
-captured_at: '2026-11-04T11:33:52+08:00'
+source: https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/mpls/vpls
+captured_at: '2026-11-04T11:22:29+08:00'
 ---
 
 The Virtual Private LAN Service (VPLS) interface can be considered a tunnel interface just like the [EoIP](/docs/virtual-private-networks/eoip) interface, to achieve transparent ethernet segment forwarding between customer sites.

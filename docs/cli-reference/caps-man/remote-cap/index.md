@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/caps-man/remote-cap/index"
 sidebar_position: 1
 title: "remote-cap"
-source: https://manual.mikrotik.com/docs/cli-reference/caps-man/remote-cap
-captured_at: '2026-11-01T21:26:25+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/remote-cap
+captured_at: '2026-11-01T21:21:47+08:00'
 ---
 
 -----------

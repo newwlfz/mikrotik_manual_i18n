@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "Nd",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ipv6/nd/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ipv6/nd"
+}

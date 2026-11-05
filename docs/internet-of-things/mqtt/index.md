@@ -8,8 +8,8 @@ tags:
   - 'mqtt'
   - 'iot'
   - 'publish-subscribe'
-source: https://manual.mikrotik.com/docs/internet-of-things/mqtt
-captured_at: '2026-11-04T11:31:40+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/mqtt
+captured_at: '2026-11-04T11:19:13+08:00'
 ---
 
 This section covers MQTT integration examples. Use it to connect RouterOS MQTT publishing and subscription workflows to IoT platforms such as Kaa IoT and ThingsBoard.
@@ -68,7 +68,7 @@ Configurable properties are shown below:
 | :-- | :-- |
 | **address** (*IP\|hostname*; Default: ) | IP address or hostname of the broker. |
 | **auto-connect** (*yes \| no*; Default: **no**) | When enabled, after the connection with the MQTT broker goes down/gets interrupted, RouterOS will try to re-establish the connection over and over again. |
-| **certificate** (*string*; Default: ) | The certificate that is going to be used for the SSL connection. |
+| **certificate** (*string*; Default: ) | [Certificate from certificate store](/docs/authentication-authorization-accounting/certificates) that is going to be used for the SSL connection. |
 | **client-id** (*string*; Default: ) | A unique ID used for the connection. The broker uses this ID to identify the client. |
 | **keep-alive** (*integer:30..64800*; Default: **60**) | A parameter that defines the time (in seconds), after which the client should "ping" the MQTT broker that it is "alive", to ensure the connection stays ongoing. This value should be set according to MQTT broker settings. |
 | **name** (*string*; Default: ) | Descriptive name of the broker. |

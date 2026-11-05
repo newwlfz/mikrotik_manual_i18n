@@ -3,16 +3,16 @@ sidebar_key: "getting-started/networking-fundamentals/ipv6-neighbor-discovery"
 sidebar_position: 4
 title: "IPv6 Neighbor Discovery"
 sidebar_label: 'IPv6 Neighbor Discovery'
-description: 'RouterOS supports IPv6 Neighbor Discovery and stateless address autoconfiguration using RADVD, adhering to RFC 4861 and 4862. It enables hosts to automatically configure IPv6 addresses via Router Advertisements, with states including tentative, preferred, deprecated, and invalid. Neighbor Discovery replaces IPv4 ARP and other protocols, facilitating router discovery'
+description: 'RouterOS supports IPv6 Neighbor Discovery and stateless address autoconfiguration by using RADVD, adhering to RFC 4861 and 4862. It enables hosts to automatically configure IPv6 addresses through Router Advertisements, with states including tentative, preferred, deprecated, and invalid. Neighbor Discovery replaces IPv4 ARP and other protocols, facilitating router discovery'
 tags:
   - 'ipv6'
   - 'neighbor-discovery'
   - 'radvd'
-source: https://manual.mikrotik.com/docs/getting-started/networking-fundamentals/ipv6-neighbor-discovery
-captured_at: '2026-11-04T11:28:53+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/networking-fundamentals/ipv6-neighbor-discovery
+captured_at: '2026-11-04T11:16:45+08:00'
 ---
 
-RouterOS supports IPv6 Neighbor Discovery and stateless address autoconfiguration using Router Advertisement Daemon (RADVD).
+RouterOS supports IPv6 Neighbor Discovery and stateless address autoconfiguration by using Router Advertisement Daemon (RADVD).
 
 ## Standards
 
@@ -63,9 +63,19 @@ When an auto-configuration address is assigned, it can be in one of the followin
 - ***`deprecated`*** - the address is still valid, but is not used for new connections.
 - ***`invalid`*** - the node can no longer send or receive unicast traffic. An address enters the invalid state after the valid lifetime expires.
 
-The image below illustrates the relation between states and lifetimes.
+The following diagram illustrates the relation between states and lifetimes:
 
-![](./img/image.png)
+```mermaid
+%%{init: {"sequence": {"mirrorActors": false, "messageAlign": "left"}}}%%
+sequenceDiagram
+    participant Tentative
+    participant Preferred
+    participant Deprecated
+    participant Invalid
+
+    Tentative->>Preferred: Preferred lifetime
+    Tentative->>Deprecated: Valid lifetime
+```
 
 ## Neighbor discovery
 
@@ -86,14 +96,14 @@ Nodes use ND to:
 - Resolve the link-layer address of a neighboring node to which an IPv6 packet is being forwarded and determine when that address changes.
 - Determine whether IPv6 packets can be sent to and received from a neighbor.
 
-RFC 4861 defines five ND message types: Router Solicitation (RS), Router Advertisement (RA), Neighbor Solicitation (NS), Neighbor Advertisement (NA), and Redirect. Adding an interface to `/ipv6/nd` activates only the router-side messages:
+RFC 4861 defines five ND message types: Router Solicitation (RS), Router Advertisement (RA), Neighbor Solicitation (NS), Neighbor Advertisement (NA), and Redirect. Adding an interface to [`/ipv6/nd`](/docs/cli-reference/ipv6/nd) activates only the router-side messages:
 
 - Router Solicitation (RS) – The router listens for an RS sent by hosts and replies with a Router Advertisement.
-- Router Advertisement (RA) – The router sends periodic unsolicited RAs and also responds to any RS it receives. The content of the RA (prefixes, flag bitmaps, lifetime, MTU, timer values) is taken from the per‑interface ND settings and any `/ipv6/nd/prefix` entries.
+- Router Advertisement (RA) – The router sends periodic unsolicited RAs and also responds to any RS it receives. The content of the RA (prefixes, flag bitmaps, lifetime, MTU, timer values) is taken from the per‑interface [`/ipv6/nd`](/docs/cli-reference/ipv6/nd) settings and any [`/ipv6/nd/prefix`](/docs/cli-reference/ipv6/nd/prefix) entries.
 - Neighbor Solicitation (NS) – The router replies with a Neighbor Advertisement when it receives an NS for any of its own addresses on that interface (link‑local, SLAAC, or static). This also covers Duplicate Address Detection (DAD) for the router's own address.
 - Neighbor Advertisement (NA) – Sent in response to an NS (as above). Unsolicited NAs are not sent unless explicitly enabled.
 
-Host‑to‑host NS/NA between end devices is handled automatically by the host stack and is not controlled by the ND menu. Redirect generation is optional and disabled by default (`redirect=no`).
+Host‑to‑host NS/NA between end devices is handled automatically by the host stack and is not controlled by the [`/ipv6/nd`](/docs/cli-reference/ipv6/nd) menu. Redirect generation is optional and disabled by default (`redirect=no`).
 
 ## Examples
 
@@ -107,7 +117,7 @@ Flags: X - disabled, I - invalid, D - dynamic, G - global, L - link-local
 
 ```
 
-In this example, the **advertise** flag is enabled, which indicates that a dynamic `/ipv6/nd/prefix` entry was added.
+In this example, the [`advertise`](/docs/cli-reference/ipv6/address#advertise_) flag is enabled, which indicates that a dynamic [`/ipv6/nd/prefix`](/docs/cli-reference/ipv6/nd/prefix) entry was added.
 
 ```ros
 [admin@MikroTik] > /ipv6/nd/prefix/print
@@ -132,7 +142,7 @@ valid_lft forever preferred_lft forever
 
 The host has received the *2001:db8::/64* prefix from the router and configured an address with it.
 
-You can also redistribute [DNS](/docs/network-management/dns) server information using RADVD:
+You can also redistribute [DNS](/docs/network-management/dns) server information by using RADVD:
 
 ```ros
 [admin@MikroTik] > /ipv6/nd/set [find where interface=all] dns=2001:db8::2 advertise-dns=yes
@@ -144,7 +154,7 @@ Or you can distribute your own router LL IPv6 address as DNS server and use rout
 [admin@MikroTik] > /ipv6/nd/set [find where interface=all] advertise-dns=self
 ```
 
-If you advertise specific servers, then every RA will also include router own LL address as DNS server, but as already expired server. This is necessary in order to invalide this server, if it was used before (if you changed settings between self and yes options). Any client which properly handles RA DNS will ignore this server or invalidate existing server, if it was router itself.
+If you advertise specific servers, then every RA also includes the router's own LL address as DNS server, but as an already expired server. This is necessary to invalidate this server, if it was used before (if you changed settings between self and yes options). Any client which properly handles RA DNS ignores this server or invalidates the existing server, if it was the router itself.
 
 You need client-side software with Router Advertisement DNS support to use the advertised DNS information.
 

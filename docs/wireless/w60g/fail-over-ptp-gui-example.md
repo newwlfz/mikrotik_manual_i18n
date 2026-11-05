@@ -8,8 +8,8 @@ tags:
   - 'bonding'
   - 'wireless'
   - 'winbox'
-source: https://manual.mikrotik.com/docs/wireless/w60g/fail-over-ptp-gui-example
-captured_at: '2026-11-04T11:36:18+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/w60g/fail-over-ptp-gui-example
+captured_at: '2026-11-04T11:24:31+08:00'
 ---
 
 ### Summary

@@ -16,9 +16,32 @@ npm run sync -- --only=docs,hardware,blog,changelog
 npm run verify                   # link, asset and inventory checks
 ```
 
+Version pipeline:
+
+```bash
+# Snapshot the current docs/ tree and generate the native versioned sidebar.
+node tools/sync/snapshot-version.mjs --version 7.24
+
+# Install a newer version as docs/ (structure normalisation + link rewrite).
+node tools/sync/install-version.mjs --version 7.25 --source <dir>
+
+# Crawl the official sidebar for a version and write sidebars.ts or the
+# versioned sidebar JSON.
+node tools/sync/crawl-sidebar.mjs --version 7.25 --out data/manifests/docs-7.25-sidebar.json
+node tools/sync/build-sidebars.mjs --version 7.25 --compare
+
+# Regenerate metadata, tags, labels, categories and CLI data for every version.
+npm run metadata:build
+
+# Re-fetch pages that a strict build reported as broken-link sources.
+node tools/sync/repair-doc-links.mjs --version 7.25 --docs docs --log <build.log>
+```
+
 Directories:
 
-- `sync/` — inventory, HTTP fetch, Playwright render, transform, state.
+- `sync/` — inventory, HTTP fetch, Playwright render, transform, state,
+  version cut, sidebar generation and metadata extraction.
+- `cli/` — per-version CLI model and the multi-version comparison index.
 - `translate/` — phase 2 only; config-driven Markdown translation. Not
   implemented or invoked in phase 1.
 - `verify/` — link/asset/state checks used by CI.

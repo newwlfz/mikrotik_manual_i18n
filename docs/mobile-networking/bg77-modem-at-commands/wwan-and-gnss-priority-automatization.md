@@ -2,8 +2,8 @@
 sidebar_key: "mobile-networking/bg77-modem-at-commands/wwan-and-gnss-priority-automatization"
 sidebar_position: 3
 title: "WWAN and GNSS priority automatization"
-source: https://manual.mikrotik.com/docs/mobile-networking/bg77-modem-at-commands/wwan-and-gnss-priority-automatization
-captured_at: '2026-11-04T11:32:24+08:00'
+source: https://manual.mikrotik.com/docs/7.25/mobile-networking/bg77-modem-at-commands/wwan-and-gnss-priority-automatization
+captured_at: '2026-11-04T11:20:11+08:00'
 ---
 
 # Overview

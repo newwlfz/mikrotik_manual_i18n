@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/ethernet/poe/index"
 sidebar_position: 1
 title: "poe"
 sidebar_label: 'poe'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/poe
-captured_at: '2026-11-01T21:27:05+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ethernet/poe
+captured_at: '2026-11-01T21:22:31+08:00'
 ---
 
 -----------
@@ -27,4 +27,8 @@ captured_at: '2026-11-01T21:27:05+08:00'
 <ArgTableRow arg="power-cycle-interval" typ="alt { symbolic-names: enum (none) { none:0 }
 , time-interval: time
  }" syscap="poe"></ArgTableRow>
+</ArgTable>
+
+<ArgTable c1="Read-only Argument" c2="Type" c3="Description">
+<ArgTableRow arg="port-type" typ="enum (poe-out | poe-in | poe-in/poe-out) { poe-out:0, poe-in:1, poe-in/poe-out:2 }" syscap="(poe or poe-in)"></ArgTableRow>
 </ArgTable>

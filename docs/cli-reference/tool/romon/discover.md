@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/tool/romon/discover"
 sidebar_position: 1
 title: "discover"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/romon/discover
-captured_at: '2026-11-01T21:30:19+08:00'
+sidebar_label: 'discover'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/romon/discover
+captured_at: '2026-11-01T21:25:56+08:00'
 ---
 
 -----------

@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/lte/apn"
 sidebar_position: 1
 title: "apn"
 sidebar_label: 'apn'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/lte/apn
-captured_at: '2026-11-01T21:27:25+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/lte/apn
+captured_at: '2026-11-01T21:22:46+08:00'
 ---
 
 -----------

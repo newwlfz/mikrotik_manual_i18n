@@ -8,10 +8,9 @@ tags:
   - 'queues'
   - 'htb'
   - 'qos'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues
-captured_at: '2026-11-04T11:28:19+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/queues
+captured_at: '2026-11-04T11:15:53+08:00'
 ---
-
 This section covers RouterOS queueing and bandwidth management. Use it to configure HTB, PCQ, burst behavior, queue sizes, and queue types for traffic shaping.
 
 <DocCardList />
@@ -29,12 +28,12 @@ Queues are used to:
 - Apply different time-based limits.
 - Share available traffic among users equally, or depending on the load of the channel.
 
-Queue implementation in MikroTik RouterOS is based on Hierarchical Token Bucket (HTB). HTB allows the creation of a hierarchical queue structure and determines relations between queues. These hierarchical structures can be attached at two different places. The [Packet Flow diagram](https://manual.mikrotik.com/docs/packet-flow-in-routeros) illustrates both *input* and *postrouting* chains.
+Queue implementation in MikroTik RouterOS is based on Hierarchical Token Bucket (HTB). HTB allows the creation of a hierarchical queue structure and determines relations between queues. These hierarchical structures can be attached at two different places. The [Packet Flow diagram](../packet-flow-in-routeros.md) illustrates both *input* and *postrouting* chains.
 
 There are two different ways to configure queues in RouterOS:
 
 - `/queue/simple` menu - designed to ease the configuration of simple, everyday queuing tasks (such as single client upload/download limitation, p2p traffic limitation, etc.).
-- `/queue/tree` menu - for implementing advanced queuing tasks (such as global prioritization policy, and `/user/group` limitations). Requires marked packet flows from [`/ip/firewall/mangle`](https://manual.mikrotik.com/docs/firewall/mangle) facility.
+- `/queue/tree` menu - for implementing advanced queuing tasks (such as global prioritization policy, and `/user/group` limitations). Requires marked packet flows from [`/ip/firewall/mangle`](../firewall/mangle.md) facility.
 
 RouterOS provides a possibility to configure queues in 8 levels -  the first level is an interface queue from the `/queue/interface` menu and the other 7 are lower-level queues that can be created in Queue Simple and/or Queue Tree.
 
@@ -95,7 +94,7 @@ Each of these two properties can be used to determine which direction is target 
   - *download* - Limit only traffic from the target.
 - **time** (*TIME-TIME,sun,mon,tue,wed,thu,fri,sat* - *TIME* is local time, all day names are optional; default: not set) : Allows you to specify time when particular queue will be active. The router must have correct time settings.
 - **dst-address** (IP address/netmask) : Allows you to select only specific stream (from target address to this destination address) for limitation explain what is target and what is dst and what is upload and what not.
-- **packet-marks** (Comma separated list of packet mark names) : Allows to use marked packets from `/ip/firewall/mangle`. Take a look at the RouterOS [packet flow diagram](https://manual.mikrotik.com/docs/packet-flow-in-routeros). It is necessary to mark packets before the simple queues (before *global-in* HTB queue) or else target's download limitation will not work. The only mangle chain before *global-in* is *prerouting*.
+- **packet-marks** (Comma separated list of packet mark names) : Allows to use marked packets from `/ip/firewall/mangle`. Take a look at the RouterOS [packet flow diagram](../packet-flow-in-routeros.md). It is necessary to mark packets before the simple queues (before *global-in* HTB queue) or else target's download limitation will not work. The only mangle chain before *global-in* is *prerouting*.
 
 #### HTB Properties
 
@@ -284,7 +283,7 @@ Every packet that cannot be enqueued (if the queue is full) is dropped. Large qu
 
 Random Early Drop is a queuing mechanism that tries to avoid network congestion by controlling the average queue size. The average queue size is compared to two thresholds: a minimum (min<sub>th</sub>) and a maximum (max<sub>th</sub>) threshold. If the average queue size (avg<sub>q</sub>) is less than the minimum threshold, no packets are dropped. When the average queue size is greater than the maximum threshold, all incoming packets are dropped. But if the average queue size is between the minimum and maximum thresholds, packets are randomly dropped with probability P<sub>d</sub>, where probability is exactly a function of the average queue size: P<sub>d</sub> = P<sub>max</sub>(avg<sub>q</sub> – min<sub>th</sub>)/ (max<sub>th</sub> - min<sub>th</sub>). If the average queue grows, the probability of dropping incoming packets grows too. P<sub>max</sub> is a ratio, which can adjust the packet discarding probability abruptness, (the simplest case P<sub>max</sub> can be equal to one). The 8.2 diagram shows the packet drop probability in the RED algorithm.
 
-![](./img/image.webp)
+![](./img/queues-02.webp)
 
 #### SFQ
 
@@ -307,7 +306,7 @@ PCQ parameters:
 
  It is possible to assign a speed limitation to sub-streams with the **pcq-rate** option. If "pcq-rate=0", sub-streams will divide available traffic equally.
 
-![](./img/image-9063cae0.webp)
+![](./img/queues-04.webp)
 
 For example, instead of having 100 queues with 1000kbps limitation for download, we can have one PCQ queue with 100 sub-streams.
 
@@ -362,32 +361,19 @@ CoDel - Fair Queuing (FQ) with Controlled Delay (CoDel) uses a randomly determin
 
 #### CAKE
 
-CAKE - Common Applications Kept Enhanced (CAKE), implemented as a *queue discipline* (qdisc) for the Linux kernel, uses COBALT (AQM algorithm combining Codel and BLUE) and a variant of DRR++ for flow isolation. In other words, Cake’s fundamental design goal is user-friendliness. All settings are optional; the default settings are chosen to be practical in most common deployments. In most cases, the configuration requires only a bandwidth parameter to get useful results.
+CAKE (Common Applications Kept Enhanced) combines active queue management, flow and host fairness, an optional shaper, DiffServ handling, and link-layer overhead compensation.
 
-**Properties**
-
-| **Property** | **Description** |
-| :-- | :-- |
-| **cake-ack-filter** *(default:* **none** ) |  |
-| **cake-atm** *(default:* ) | Compensates for ATM cell framing, which is normally found on ADSL links. |
-| **cake-autorate-ingress** *(yes/no, default:* ) | Automatic capacity estimation based on traffic arriving at this qdisc. This is most likely to be useful with cellular links, which tend to change quality randomly.  The Bandwidth Limit parameter can be used in conjunction with it to specify an initial estimate. The shaper will periodically be set to a bandwidth slightly below the estimated rate.  This estimator cannot estimate the bandwidth of links downstream of itself. |
-| **cake-bandwidth** *(default:* ) | Sets the shaper bandwidth. |
-| **cake-diffserv** *(default:* **diffserv3**) | CAKE can divide traffic into "tins" based on the Diffserv field: diffserv4 Provides a general-purpose Diffserv implementation with four tins: Bulk (CS1), 6.25% threshold, generally low priority. Best Effort (general), 100% threshold. Video (AF4x, AF3x, CS3, AF2x, CS2, TOS4, TOS1), 50% threshold. Voice (CS7, CS6, EF, VA, CS5, CS4), 25% threshold.diffserv3 (default) Provides a simple, general-purpose Diffserv implementation with three tins: Bulk (CS1), 6.25% threshold, generally low priority. Best Effort (general), 100% threshold. Voice (CS7, CS6, EF, VA, TOS4), 25% threshold, reduced Codel interval. |
-| **cake-flowmode** *(dsthost/dual-dsthost/dual-srchost/flowblind/flows/hosts/srchost/triple-isolate, default:* **triple-isolate**) | flowblind - Disables flow isolation; all traffic passes through a single queue for each tin.srchost - Flows are defined only by source address. dsthost Flows are defined only by destination address. hosts - Flows are defined by source-destination host pairs. This is host isolation, rather than flow isolation.flows - Flows are defined by the entire 5-tuple of source address, a destination address, transport protocol, source port, and destination port. This is the type of flow isolation performed by SFQ and fq_codel.dual-srchost Flows are defined by the 5-tuple, and fairness is applied first over source addresses, then over individual flows. Good for use on egress traffic from a LAN to the internet, where it'll prevent any LAN host from monopolizing the uplink, regardless of the number of flows they use.dual-dsthost Flows are defined by the 5-tuple, and fairness is applied first over destination addresses, then over individual flows. Good for use on ingress traffic to a LAN from the internet, where it'll prevent any LAN host from monopolizing the downlink, regardless of the number of flows they use.triple-isolate - Flows are defined by the 5-tuple, and fairness is applied over source *and* destination addresses intelligently (ie. not merely by host-pairs), and also over individual flows.nat Instructs Cake to perform a NAT lookup before applying flow-isolation rules, to determine the true addresses and port numbers of the packet, to improve fairness between hosts "inside" the NAT. This has no practical effect in "flowblind" or "flows" modes, or if NAT is performed on a different host.nonat (default) Cake will not perform a NAT lookup. Flow isolation will be performed using the addresses and port numbers directly visible to the interface Cake is attached to. |
-| **cake-memlimit** *(default:* ) | Limit the memory consumed by Cake to LIMIT bytes. By default, the limit is calculated based on the bandwidth and RTT settings. |
-| **cake-mpu** *( -64 ... 256, default:* ) | Rounds each packet (including overhead) up to a minimum length BYTES. |
-| **cake-nat** *(default:* **no)** | Instructs Cake to perform a NAT lookup before applying a flow-isolation rule. |
-| **cake-overhead** *( -64 ... 256, default:* ) | Adds BYTES to the size of each packet. BYTES may be negative. |
-| **cake-overhead-scheme** *(default:* ) |  |
-| **cake-rtt** *(default:* **100ms** ) | Manually specify an RTT. The default 100ms is suitable for most Internet traffic. |
-| **cake-rtt-scheme** *(datacentre/internet/interplanetary/lan/metro/none/oceanic/regional/satellite, default:* ) | datacentre - For extremely high-performance 10GigE+ networks only. Equivalent to RTT 100us.lan - For pure Ethernet (not Wi-Fi) networks, at home or in the office. Don't use this when shaping for an Internet access link. Equivalent to RTT 1ms.metro - For traffic mostly within a single city. Equivalent to RTT 10ms. regional For traffic mostly within a European-sized country. Equivalent to RTT 30ms.internet (default) This is suitable for most Internet traffic. Equivalent to RTT 100ms.oceanic - For Internet traffic with generally above-average latency, such as that suffered by Australasian residents. Equivalent to RTT 300ms.satellite - For traffic via geostationary satellites. Equivalent to RTT 1000ms.interplanetary - So named because Jupiter is about 1 light-hour from Earth. Use this to (almost) completely disable AQM actions. Equivalent to RTT 3600s. |
-| **cake-wash** *(default:* **no** ) | Apply the wash option to clear all extra DiffServ (but not ECN bits), after priority queuing has taken place. |
+See [CAKE](./queue-types/cake) for configuration guidance, recommended defaults, direction and queue placement, and explanations of each feature. For the complete source-generated list of RouterOS properties and accepted values, see the [`/queue/type` CLI reference](../../cli-reference/queue/type).
 
 ## Interface Queue
 
 **Sub-menu:** `/queue/interface`
 
-Before sending data over an interface, it is processed by the queue. This sub-menu lists all available interfaces in RouterOS and allows changing queue type for a particular interface. The list is generated automatically.
+Before sending data over an interface, it is processed by the queue. An Interface Queue is a transmit (egress) queue; it does not process packets received by that interface.
+
+For forwarded client traffic, the WAN-facing Interface Queue processes uploads, and the LAN-facing Interface Queue processes downloads. Each direction uses a separate queue instance. If traffic can leave through several LAN interfaces, configure every required transmit path or use a Simple Queue or Queue Tree that matches the traffic at a common point.
+
+This sub-menu lists all available interfaces in RouterOS and allows changing the queue type for a particular interface. The list is generated automatically.
 
 ```ros
 [admin@MikroTik] > /queue/interface/print
@@ -414,6 +400,6 @@ In Winbox and Webfig, a green, yellow, or red icon visualizes each Simple and Tr
 
 |  |  |
 | :-- | :-- |
-| ![](./img/image.png)  | 0% - 50% of max-limit used |
-| ![](./img/image-f8e7c3da.png)  | >50% - 75% of max-limit used |
-| ![](./img/image-30756a75.png)  | >75% - 100% of max-limit used |
+| ![](./img/queue-usage-0-50.png)  | 0% - 50% of max-limit used |
+| ![](./img/queue-usage-50-75.png)  | >50% - 75% of max-limit used |
+| ![](./img/queue-usage-75-100.png)  | >75% - 100% of max-limit used |

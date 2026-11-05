@@ -8,8 +8,8 @@ tags:
   - 'routing'
   - 'bgp'
 slug: /user-guides/routing-and-networking-protocols/unicast/bgp/peering-sessions
-source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/bgp/peering-sessions
-captured_at: '2026-11-04T11:34:12+08:00'
+source: https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/unicast/bgp/peering-sessions
+captured_at: '2026-11-04T11:22:46+08:00'
 ---
 
 The purpose of an **eBGP** session is to exchange routing information between Autonomous Systems (ASes). Typically, an eBGP session is established on a directly connected physical or logical network (on a single‑hop link) at network exit points, and with default parameters it will fail to connect if the peer is multiple hops away.  

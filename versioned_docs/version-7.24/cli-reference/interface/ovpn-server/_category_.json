@@ -1,0 +1,11 @@
+{
+  "position": 25,
+  "label": "Ovpn Server",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/ovpn-server/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/ovpn-server"
+}

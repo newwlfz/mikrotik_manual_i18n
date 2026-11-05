@@ -8,157 +8,178 @@ tags:
   - 'cake'
   - 'diffserv'
   - 'flow-isolation'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/queue-types/cake
-captured_at: '2026-11-04T11:28:17+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/queues/queue-types/cake
+captured_at: '2026-11-04T11:15:53+08:00'
 ---
 
-## CAKE (Common Applications Kept Enhanced)
+CAKE (Common Applications Kept Enhanced) is a shaping-capable queue discipline that combines COBALT active queue management, a deficit-mode shaper, DRR++ flow isolation, simplified DiffServ handling, and link-layer overhead compensation.
 
-### Description
+CAKE is designed to maintain fairness and minimize bufferbloat with practical defaults and little tuning.
 
-CAKE (Common Applications Kept Enhanced) is a modern, advanced queue management algorithm designed to cope with varying network conditions and different types of traffic. It was developed to address the limitations of older algorithms and provide an all-in-one solution to several common network problems.
+## When to use CAKE
 
-CAKE's approach is to maintain fairness, minimize bufferbloat, and manage different types of traffic with minimal configuration and tuning. This is achieved through various techniques including flow isolation, bandwidth shaping, and prioritization of small packets.
+Use CAKE on a shared bottleneck where bulk transfers increase latency or one host can dominate the available capacity. Typical examples include an Internet connection shared by several clients, a slow uplink, or an asymmetric connection.
 
-| Property | Description |
+CAKE can:
+
+- Keep latency low while the link is busy.
+- Share capacity between hosts and between their individual connections.
+- Shape for link-layer overhead.
+- Apply a simple DiffServ policy.
+- Filter redundant TCP acknowledgments on highly asymmetric links.
+
+CAKE can control only traffic that passes through its queue. It cannot correct Wi-Fi interference, insufficient router CPU, or a queue elsewhere in the network unless its shaper is configured below that bottleneck's rate.
+
+Use FQ-CoDel when you require per-flow fairness and active queue management with lower CPU use. Use CAKE when you also require per-host fairness, an integrated shaper with link-layer compensation, DiffServ handling, or ACK filtering.
+
+## Basic configuration
+
+CAKE is a queue type, not a complete traffic-matching rule. Creating a CAKE entry under `/queue/type` defines a reusable queue profile but does not process any traffic by itself. Assign that profile to a Simple Queue, Queue Tree, or Interface Queue. See the generated [`/queue/type` CLI reference](/docs/cli-reference/queue/type) for the complete list of properties and accepted values.
+
+The following example applies the same CAKE profile to both directions of a Simple Queue. HTB supplies the upload and download limits, so CAKE's internal shaper remains unlimited:
+
+```ros
+/queue/type
+add name=cake-default kind=cake cake-bandwidth=0 cake-nat=yes
+
+/queue/simple
+add name=internet-cake target=192.168.88.0/24 max-limit=20M/100M queue=cake-default/cake-default
+```
+
+In `max-limit=20M/100M` and `queue=cake-default/cake-default`, the first value is upload and the second is download. Replace the target and rates with values appropriate for the network. FastTracked traffic bypasses this Simple Queue, so disable FastTrack for the traffic the queue must process.
+
+:::note
+Set `cake-bandwidth` only on queue types where `kind=cake`. It controls the shaper built into the CAKE qdisc.
+
+Simple Queue and Queue Tree entries use HTB. Their `limit-at` (CIR) and `max-limit` (MIR) parameters control the rate at the HTB level. When you assign a CAKE queue type to one of these entries, CAKE operates as a leaf qdisc under HTB.
+
+Leave `cake-bandwidth=0` when HTB should control the traffic rate. This value leaves CAKE's shaper unlimited, but CAKE continues to provide active queue management, flow isolation, and DiffServ handling. Set `cake-bandwidth` when CAKE should also shape the traffic. If you configure both `cake-bandwidth` and an HTB rate limit, traffic passes through both shapers.
+:::
+
+## Recommended starting points
+
+| Use case | Recommended starting configuration |
 | :-- | :-- |
-| Bandwidth Limit: | This allows you to manually set the bandwidth limit for the CAKE shaper. For instance, if you're aware that your ISP provides you with a 100Mbps connection, you could set the rate to 100Mbps to prevent CAKE from trying to use more bandwidth than available. |
-| Autorate Ingress | This is useful in situations where the connection quality varies. For example, if you're on a cellular data connection that can fluctuate wildly based on signal strength, this option allows CAKE to adjust the shaper bandwidth dynamically to match the estimated capacity of the link. |
-| Overhead | The overhead parameter in the CAKE queue discipline allows you to specify the per-packet overhead (in bytes) to account for when shaping traffic. This is particularly important when dealing with technologies such as DSL, where protocol encapsulation adds additional bytes to each packet. Accurately accounting for these overheads will lead to more precise control of the actual bandwidth being used. |
-| MPU | The Minimum Packet Unit (MPU) parameter allows you to round up the size of each packet to a specified minimum. This is useful for link layer technologies that have a minimum packet size. For example, if your link layer technology has a minimum packet size of 64 bytes, you can configure CAKE with `mpu 64`. |
-| ATM | This is for Asynchronous Transfer Mode, a type of network technology often used in DSL broadband connections. ATM uses fixed 53-byte cells, each of which can carry 48 bytes of payload. The `atm` keyword compensates for this overhead. |
-| Overhead Scheme | The overhead compensation feature in CAKE allows it to account for the extra bytes added by various link layer technologies, which can be significant in some cases. This is important because CAKE operates on the packet sizes reported by the Linux kernel, which do not include these extra bytes. If the overhead is not accounted for, CAKE's shaper might allow more data onto the link than it can actually handle, leading to unexpected packet loss. |
-| RTT | Manually specify an RTT. This is for advanced users who know the exact RTT they want to use. |
-| RTT Scheme | The CAKE queue discipline allows you to specify the Round Trip Time (RTT) it should consider when managing traffic. This is important because the time it takes for a packet to travel from a source to a destination and back impacts how CAKE manages network congestion. If the actual RTT of your network is close to the value you specify, both the throughput and latency of your network should be well managed. |
-| Diffserv | Diffserv (Differentiated Services) is a mechanism used to prioritize and classify network traffic based on the Diffserv field in the IP packet header. CAKE (Common Applications Kept Enhanced) provides Diffserv support, allowing traffic to be divided into "tins" (traffic classes) and applying different treatment to each tin. |
-| Flow Mode | When flow isolation is enabled, CAKE puts packets from different flows into different queues. Each queue maintains its own Active Queue Management (AQM) state, and packets are delivered from each queue fairly using a DRR++ (Deficit Round Robin++) algorithm. This algorithm works to minimize latency for "sparse" flows, or flows that contain fewer packets. |
-| ACK Filter | ACK or acknowledgment filters are a feature of the Cake algorithm that allows for the handling of TCP ACK (acknowledgment) packets. TCP ACK packets are essential to the function of the TCP protocol; they acknowledge the receipt of TCP segments, providing a form of flow control. However, these packets can consume a significant portion of your upload bandwidth, especially when downloading large files. By implementing ACK filtering, Cake can compress these ACKs, reducing their impact on upload bandwidth. |
-| NAT | These options control how CAKE handles traffic when Network Address Translation (NAT) is being used. `nat` makes CAKE consider the post-NAT addresses and ports when isolating flows, which can be useful when you're shaping traffic on a router that is also performing NAT for its connected devices. |
-| Wash | The "wash" option in the CAKE queue discipline is used to address the issue of frequently mis-marked traffic entering or exiting a DiffServ (Differentiated Services) domain. When traffic passes through networks or providers, there is a chance that the DSCP (Differentiated Services Code Point) markings could be modified or incorrectly assigned. |
+| Simple Queue or Queue Tree provides the rate limit | Leave `cake-bandwidth=0` and set the HTB `max-limit`. CAKE provides active queue management and fairness without adding a second shaper. |
+| CAKE provides the rate limit | Set `cake-bandwidth` below the real bottleneck rate and configure the correct link-layer overhead. Avoid a second HTB rate limit unless both shaping layers are intentional. |
+| Router performs NAT | Set `cake-nat=yes` and keep the default `triple-isolate` flow mode. This lets one CAKE instance balance traffic between internal hosts and between their flows. |
+| Download/upload ratio is greater than approximately 10:1 | Set `cake-ack-filter=filter` only on the transmit queue for the slower direction. |
+| Ingress DSCP markings are not trusted | Set `cake-diffserv=besteffort` to ignore them, or set `cake-wash=yes` to clear them after CAKE applies its priority decision. |
 
-## Overhead Schemes
+### Direction and queue placement
 
-The overhead compensation feature in CAKE allows it to account for the extra bytes added by various link layer technologies, which can be significant in some cases. This is important because CAKE operates on the packet sizes reported by the Linux kernel, which do not include these extra bytes. If the overhead is not accounted for, CAKE's shaper might allow more data onto the link than it can actually handle, leading to unexpected packet loss.
+A CAKE instance processes only the packets that pass through the queue where it is attached. It does not automatically process traffic in the reverse direction.
 
-1. **Manual Overhead Specification**: You can manually specify the overhead in bytes. For instance, if you know your link layer adds 18 bytes of overhead to each packet, you can configure CAKE with `overhead 18`. Negative values are also accepted, within a range of -64 to 256 bytes.
-2. **MPU**: The Minimum Packet Unit (MPU) parameter allows you to round up the size of each packet to a specified minimum. This is useful for link layer technologies that have a minimum packet size. For example, if your link layer technology has a minimum packet size of 64 bytes, you can configure CAKE with `mpu 64`.
-3. **ATM**: This is for Asynchronous Transfer Mode, a type of network technology often used in DSL broadband connections. ATM uses fixed 53-byte cells, each of which can carry 48 bytes of payload. The `atm` keyword compensates for this overhead.
-4. **PTM**: This is for Packet Transfer Mode, another network technology often used in VDSL2 connections. PTM uses a 64b/65b encoding scheme, which effectively reduces the usable bandwidth by a small amount. The `ptm` keyword compensates for this overhead.
-5. **Failsafe Overhead Keywords**: The `raw` and `conservative` keywords are provided for quick-and-dirty setup. `raw` turns off all overhead compensation in CAKE, and `conservative` compensates for more overhead than is likely to occur on any widely-deployed link technology.
-6. **ADSL Overhead Keywords**: Most ADSL modems use ATM cell framing and have additional overhead due to the PPPoA or PPPoE protocol used. Keywords such as `pppoa-vcmux`, `pppoe-llc`, etc. are provided to account for these overheads.
-7. **VDSL2 Overhead Keywords**: VDSL2 uses PTM instead of ATM and may also use PPPoE. Keywords such as `pppoe-ptm` and `bridged-ptm` are provided to account for these overheads.
-8. **DOCSIS Cable Overhead Keyword**: DOCSIS is the standard for providing Internet service over cable-TV infrastructure. The `docsis` keyword is provided to account for the overhead of DOCSIS.
-9. **Ethernet Overhead Keywords**: These keywords account for the overhead of Ethernet frames, including the preamble, inter-frame gap, and Frame Check Sequence. `ethernet` and `ether-vlan` are provided for Ethernet and Ethernet with VLAN, respectively[[^1]:](https://www.man7.org/linux/man-pages/man8/tc-cake.8.html).
+- **Interface Queue:** An interface queue processes packets transmitted by that interface. For forwarded client traffic, CAKE on the WAN-facing transmit interface processes uploads, while CAKE on the LAN-facing transmit interface processes downloads. These are two separate CAKE instances. An interface queue does not process packets received by that interface.
+- **Simple Queue:** RouterOS determines upload and download relative to the configured target. The `queue` property selects the upload and download queue types in that order. Assign a CAKE queue type to both positions to process both directions.
+- **Queue Tree:** Each Queue Tree is one-directional. Its parent and packet selection determine which traffic passes through its CAKE leaf queue.
+
+Configure a separate CAKE queue type for each direction when the upload and download rates or options differ. If the LAN uses several outgoing interfaces, an Interface Queue attached to only one of them does not process traffic transmitted by the others. A single CAKE instance can balance many hosts and flows that pass through it. Create separate per-client queues only when you require explicit per-client rate limits or HTB guarantees.
+
+The `cake-autorate-ingress` name refers to CAKE's capacity-estimation mode. It does not make an Interface Queue process packets received by the interface or create a reverse-direction queue. Linux examples that redirect WAN ingress to an Intermediate Functional Block (IFB) create a separate transmit queueing point; they are not RouterOS Interface Queue configuration instructions.
+
+### Select the shaping rate
+
+The shaper must become the bottleneck to control queue delay. Start below the stable measured throughput, not at the advertised service rate. Ingress shaping usually requires more headroom because the upstream sender and ISP queue are outside the router's control. With correct overhead compensation, egress shaping can operate closer to the measured link rate.
+
+Validate the rate under simultaneous upload and download load while you measure latency. A throughput-only speed test does not show whether interactive traffic, voice, or other hosts remain responsive. Reduced throughput for one flow can be the expected result when CAKE shares capacity between hosts and flows.
+
+:::warning
+A shaped CAKE instance does not divide its packet processing across multiple CPU cores. CPU exhaustion can reduce throughput and increase latency even when other cores are idle. Test the required shaping rate on the target device. Unlimited CAKE requires substantially less processing than shaped CAKE.
+:::
+
+:::note
+FastTracked traffic bypasses Simple Queues and Queue Trees with `parent=global`. Queue Trees parented directly to an interface can process FastTracked traffic. See [FastTrack](/docs/firewall-and-quality-of-service/connection-tracking#fasttrack).
+:::
+
+## Overhead compensation
+
+CAKE must know how much time each packet occupies on the bottleneck link. The packet size visible to CAKE might exclude framing, encapsulation, or inter-packet overhead. Without compensation, the configured shaper can send slightly faster than the real link and allow a queue to build elsewhere.
+
+Prefer a `cake-overhead-scheme` that matches the bottleneck technology. A scheme sets the related overhead, minimum packet unit (MPU), and ATM or PTM compensation. Use manual values only when the encapsulation is known and no preset matches it.
+
+| Scheme | Behavior |
+| :-- | :-- |
+| `raw` | Disables overhead compensation. Use it when the packet size visible to CAKE already represents the unit used by the bottleneck. |
+| `convervative` | Deliberately overestimates unknown overhead. It is equivalent to 48 bytes of overhead with ATM compensation. RouterOS uses the spelling `convervative` for this value. |
+| `ethernet` | Accounts for the Ethernet preamble, inter-frame gap, and frame check sequence. It is equivalent to 38 bytes of overhead, an MPU of 84 bytes, and no ATM or PTM compensation. |
+| `via-ethernet` | Adjusts another scheme when CAKE receives a complete Ethernet frame instead of a raw IP packet. Use it only as a modifier with the applicable base scheme. |
+| `ether-vlan` | Adds 4 bytes for an IEEE 802.1Q VLAN header. Combine it with the applicable base scheme. |
+| `docsis` | Matches the Ethernet frame size used by DOCSIS head-end shaping and metering. It is equivalent to 18 bytes of overhead, an MPU of 64 bytes, and no ATM or PTM compensation. |
+| ADSL schemes | Select `ipoa-vcmux`, `ipoa-llcsnap`, `bridged-vcmux`, `bridged-llcsnap`, `pppoa-vcmux`, `pppoa-llc`, `pppoe-vcmux`, or `pppoe-llcsnap` to match the encapsulation. These schemes include ATM cell compensation. |
+| `pppoe-ptm` or `bridged-ptm` | Select the matching VDSL2 encapsulation. These schemes include PTM compensation. |
+
+For manual configuration, `cake-overhead` accepts values from -64 to 256 bytes. `cake-mpu` accepts values from 0 to 256 bytes and cannot be negative. Set `cake-atm=atm` for ATM cell framing or `cake-atm=ptm` for PTM encoding.
 
 ## RTT Schemes
 
-The CAKE queue discipline allows you to specify the Round Trip Time (RTT) it should consider when managing traffic. This is important because the time it takes for a packet to travel from a source to a destination and back impacts how CAKE manages network congestion. If the actual RTT of your network is close to the value you specify, both the throughput and latency of your network should be well managed.
+The CAKE queue discipline uses the round-trip time (RTT) to tune its active queue management parameters. Keep the default `internet` scheme unless the typical traffic RTT is known. A shorter scheme reacts more quickly, but a value below the actual path RTT can reduce the throughput of long-lived flows, especially on low-rate links. The setting does not need to match every flow exactly; actual RTTs within approximately one order of magnitude generally work well.
+
+Use `metro` rather than `lan` for most local networks. The aggressive time constants of `lan` can signal congestion prematurely, reduce throughput, and leave too little queued traffic for the fairness logic. Reserve it for controlled, pure Ethernet networks; do not use it when shaping an Internet access link.
 
 Here are the RTT settings you can use, what they mean, and when you might use them:
 
-1. `rtt TIME`: Manually specify an RTT. This is for advanced users who know the exact RTT they want to use.
-2. `datacentre`: This is for extremely high-performance networks, such as a 10 Gigabit Ethernet (10GigE) network in a data center. The RTT is assumed to be 100 microseconds. Example: Use this if you're managing network traffic in a high-capacity data center.
-3. `lan`: This is for pure Ethernet networks, such as those you might find in a home or office environment. The RTT is assumed to be 1 millisecond. Example: Use this if you're managing traffic on a wired home or office network, but not when shaping for an Internet access link.
-4. `metro`: This is for traffic mostly within a single city. The RTT is assumed to be 10 milliseconds. Example: Use this if you're managing traffic for a network in a single city, like a city-wide corporate network.
-5. `regional`: This is for traffic mostly within a European-sized country. The RTT is assumed to be 30 milliseconds. Example: Use this if you're managing traffic for a network that spans a country.
-6. `internet`: This is suitable for most Internet traffic. The RTT is assumed to be 100 milliseconds. Example: Use this if you're managing general Internet traffic on a typical broadband connection.
-7. `oceanic`: This is for Internet traffic with generally above-average latency, such as that suffered by Australasian residents. The RTT is assumed to be 300 milliseconds. Example: Use this if you're managing traffic in a location with high latency, like Australia or New Zealand.
-8. `satellite`: This is for traffic via geostationary satellites. The RTT is assumed to be 1000 milliseconds (1 second). Example: Use this if you're managing traffic for a network that uses a satellite internet connection.
-9. `interplanetary`: This disables Active Queue Management (AQM) actions, because the RTT is so long (3600 seconds). It's named "interplanetary" because the one-way signal travel time from Earth to Jupiter ranges from approximately 33 to 53 minutes (average around 43 minutes), making the round-trip time roughly 66 to 106 minutes. Example: This is not typically used in standard networking situations, but might be useful in extremely high latency situations, such as experimental long-distance communication scenarios.
+1. `cake-rtt`: Manually specifies the RTT, for example, `cake-rtt=100ms`.
+2. `cake-rtt-scheme=datacentre`: Assumes an RTT of 100 microseconds. Use it only for extremely high-performance data-center networks.
+3. `cake-rtt-scheme=lan`: Assumes an RTT of 1 millisecond. Use it only for controlled, pure Ethernet networks, not for an Internet access link.
+4. `cake-rtt-scheme=metro`: Assumes an RTT of 10 milliseconds. Use it for most local networks or traffic within a single city.
+5. `cake-rtt-scheme=regional`: Assumes an RTT of 30 milliseconds. Use it for traffic within a region or country.
+6. `cake-rtt-scheme=internet`: Assumes an RTT of 100 milliseconds. This is suitable for typical Internet traffic.
+7. `cake-rtt-scheme=oceanic`: Assumes an RTT of 300 milliseconds. Use it for Internet traffic with consistently above-average latency.
+8. `cake-rtt-scheme=satellite`: Assumes an RTT of 1000 milliseconds. Use it for geostationary satellite paths.
+9. `cake-rtt-scheme=interplanetary`: Assumes an RTT of 3600 seconds and almost completely disables Active Queue Management (AQM) actions. It is not intended for ordinary network configurations.
 
-Remember, these are guidelines, and the best setting depends on the specific characteristics and requirements of your network. If you are unsure, the `internet` setting is a good starting point for most scenarios[[^1]:](https://www.man7.org/linux/man-pages/man8/tc-cake.8.html).
+For satellite and other high-delay links, set the measured RTT when the preset does not match the path. The presets are starting points rather than measurements.
 
-## FLOW ISOLATION PARAMETER
+## Flow isolation
 
-When flow isolation is enabled, CAKE puts packets from different flows into different queues. Each queue maintains its own Active Queue Management (AQM) state, and packets are delivered from each queue fairly using a DRR++ (Deficit Round Robin++) algorithm. This algorithm works to minimize latency for "sparse" flows, or flows that contain fewer packets.
+CAKE identifies flows by the source and destination addresses, transport protocol, and source and destination ports. It places flows into separate queues and schedules them fairly. Sparse, low-rate flows can then remain responsive when bulk flows use the same link.
 
-The key aspect here is the method by which CAKE determines different flows, known as "flow isolation." CAKE uses a set-associative hashing algorithm to reduce flow collisions.
+- `cake-flowmode=triple-isolate`: Applies fairness between source hosts, destination hosts, and individual flows. This is the default and the recommended starting point for a typical gateway.
+- `cake-flowmode=dual-srchost`: Applies fairness between source hosts, then between each host's flows. Use it when the source addresses identify the subscribers or devices to balance.
+- `cake-flowmode=dual-dsthost`: Applies fairness between destination hosts, then between each host's flows. Use it when the destination addresses identify the subscribers or devices to balance.
+- `cake-flowmode=srchost`: Applies fairness only between source addresses.
+- `cake-flowmode=dsthost`: Applies fairness only between destination addresses.
+- `cake-flowmode=hosts`: Applies fairness between source and destination host pairs.
+- `cake-flowmode=flows`: Applies fairness only between complete five-tuple flows.
+- `cake-flowmode=flowblind`: Disables flow isolation and places all traffic for each tin in one queue.
 
-1. **flowblind** - This parameter disables flow isolation, and all traffic goes through a single queue for each 'tin' or traffic class. *Useful in scenarios where specific flow isolation is not needed or desired, such as when you want to process all traffic the same way regardless of source or destination.*
-2. **srchost -** Here, flows are determined solely by the source address. This could be beneficial on the outgoing path of an Internet Service Provider (ISP) backhaul. *A telecom company might use this to ensure fair use of its backbone network by different regions or customers.*
-3. **dsthost -** With this parameter, flows are characterized only by their destination address. This might be beneficial on the incoming path of an ISP backhaul. *An enterprise could use this to balance incoming traffic to its different servers.*
-4. **hosts -** In this case, flows are defined by source-destination host pairs. This is host isolation rather than flow isolation. *This might be useful in a data center network, where you want to ensure that communication between specific pairs of servers is fair.*
-5. **flows** - Flows are characterized by the entire 5-tuple: source address, destination address, transport protocol, source port, and destination port. This is the kind of flow isolation performed by SFQ and fq\_codel. *This could be used by a cloud provider to ensure fairness among different virtual machines communicating over various protocols and ports.*
-6. **dual-srchost** - Here, flows are defined by the 5-tuple, and fairness is applied first over source addresses, then over individual flows. This is a good choice for outgoing traffic from a Local Area Network (LAN) to the Internet. *A university might use this to prevent any single user or device from hogging the internet connection, no matter how many different connections they're using.*
-7. **dual-dsthost** - In this case, flows are defined by the 5-tuple, and fairness is applied first over destination addresses, then over individual flows. This is suitable for incoming traffic to a LAN from the internet. *A large company could use this to prevent any single server or system from overwhelming the network's incoming bandwidth.*
-8. **triple-isolate** - This is the default setting where flows are defined by the 5-tuple. Fairness is applied over both source and destination addresses intelligently, as well as over individual flows. This prevents any one host on either side of the link from monopolizing it with a large number of flows. *An Internet Service Provider (ISP) might use this to ensure fair service to all its customers, regardless of how many connections they have and whether they.*
+When the router performs NAT, set `cake-nat=yes` so CAKE can isolate the internal addresses and ports. Keep `triple-isolate` unless the topology requires a specific directional mode. The commonly copied combination of `dual-srchost` for upload and `dual-dsthost` for download is mainly useful when CAKE can already see the required host addresses without a NAT lookup. The NAT lookup has no effect when another device performs NAT or when hardware-offloaded traffic bypasses CAKE.
 
-## Ack Filter
+## ACK filter
 
-ACK or acknowledgment filters are a feature of the Cake algorithm that allows for the handling of TCP ACK (acknowledgment) packets. TCP ACK packets are essential to the function of the TCP protocol; they acknowledge the receipt of TCP segments, providing a form of flow control. However, these packets can consume a significant portion of your upload bandwidth, especially when downloading large files. By implementing ACK filtering, Cake can compress these ACKs, reducing their impact on upload bandwidth.
+ACK filtering removes redundant TCP acknowledgment packets before they consume capacity on a narrow transmit link. Start with `cake-ack-filter=filter`; use `cake-ack-filter=aggressive` only after testing shows that the additional filtering does not reduce TCP performance. Set `cake-ack-filter=none` to disable it.
 
-1. **ack-filter** - This enables the ACK filter feature. With this option, Cake will attempt to identify and filter out ACK packets that do not convey significant new information or do not need to be sent immediately, helping to improve the utilization of the upload bandwidth.
-2. **ack-filter-aggressive** - This is a more aggressive version of the ack-filter option. It will result in more ACK packets being compressed or filtered out, which can lead to further improvements in upload bandwidth utilization but may potentially impact TCP performance. The use of the ack-filter or ack-filter-aggressive options depends on your specific network conditions and requirements. For instance, if you find that ACK packets are using a large portion of your available upload bandwidth, then enabling the ACK filter might help. On the other hand, if you're experiencing issues with TCP performance and suspect that ACK filtering might be contributing, you could try disabling it or using the less aggressive option.
+Enable ACK filtering only on the transmit queue for the slower side of a highly asymmetric connection. It becomes relevant when the download/upload ratio exceeds approximately 10:1. Do not enable it on the receive queue: ACK packets normally do not accumulate there, and the filter consumes additional CPU.
+
+ACK filtering cannot inspect ACK packets inside encrypted traffic, such as a WireGuard or IPsec tunnel. Apply it where the plain TCP ACK packets are visible.
+
+## DiffServ
+
+Differentiated Services (DiffServ) classifies packets by their Differentiated Services Code Point (DSCP) and places them into CAKE traffic classes called tins. CAKE applies soft priority between tins: every tin receives service and can borrow unused capacity. The percentage thresholds are not fixed bandwidth limits. For example, Best Effort can use 100% of the link when the other tins are idle.
+
+- `cake-diffserv=diffserv3` (default): Provides Bulk (CS1 and LE), Best Effort (general traffic), and Voice (CS7, CS6, EF, VA, and TOS4) tins. Their thresholds are 6.25%, 100%, and 25%. Voice uses a shorter CoDel interval.
+- `cake-diffserv=diffserv4`: Provides Bulk (CS1 and LE), Best Effort (general traffic), Video (AF4x, AF3x, CS3, AF2x, CS2, TOS4, and TOS1), and Voice (CS7, CS6, EF, VA, CS5, and CS4) tins. Their thresholds are 6.25%, 100%, 50%, and 25%.
+- `cake-diffserv=diffserv8`: Provides eight tins for networks with a deliberate, detailed DSCP policy.
+- `cake-diffserv=besteffort`: Disables priority queuing and places all traffic in one tin. Use this when DSCP markings are absent or must not affect scheduling.
+- `cake-diffserv=precedence`: Uses the legacy IP precedence interpretation. Avoid this mode on new configurations.
+
+CAKE does not create trustworthy classifications by itself. Use the DiffServ modes only when you trust the received DSCP markings or set them with a consistent local policy. Incorrect high-priority markings can give traffic unintended service.
 
 ## Wash
 
-The "wash" option in the CAKE queue discipline is used to address the issue of frequently mis-marked traffic entering or exiting a DiffServ (Differentiated Services) domain. When traffic passes through networks or providers, there is a chance that the DSCP (Differentiated Services Code Point) markings could be modified or incorrectly assigned.
+The `cake-wash=yes` option clears DSCP markings after CAKE uses them for its priority decision. It does not clear Explicit Congestion Notification (ECN) bits.
 
-To illustrate this with a real-life example and analogy:
+Enable `cake-wash=yes` at a DiffServ domain boundary when the next network must not inherit the existing DSCP policy. If inbound markings are not trusted and should not affect scheduling, use `cake-diffserv=besteffort`; adding `cake-wash=yes` also clears those markings before forwarding the packets.
 
-Let's imagine you are running a busy airport. Different airlines have assigned different priority levels to their passengers based on their ticket classes (economy, business, first-class). These priority levels are analogous to the DSCP markings in a network.
+## Autorate ingress
 
-However, as passengers move through various transit airports, there is a possibility that the assigned priority levels could be changed or mis-marked due to different airline policies or inconsistencies at the transit airports. This is similar to the mis-marking of traffic in transit networks.
+The `cake-autorate-ingress` option estimates capacity from the arrival times of ingress packets and adjusts CAKE's internal shaper. An optional `cake-bandwidth` value supplies its initial estimate.
 
-Now, in the context of the airport, let's assume that upon arrival at your airport, passengers are divided into separate queues based on their priority levels. This division ensures that passengers in higher-priority classes are processed more quickly and receive better service.
+The estimator observes only traffic arriving at this CAKE instance. It cannot measure a bottleneck farther downstream, and it must receive enough traffic before it can increase its estimate. Links with large or rapid capacity changes, such as LTE and 5G, can therefore produce unstable or unexpectedly low rates.
 
-However, because the priority levels assigned at previous airports may not be reliable, it becomes necessary to "wash" or clear the assigned priority levels before the passengers enter the queues at your airport. This is similar to the "wash" option in CAKE, which clears extra DSCP markings after priority queuing has taken place.
+:::warning
+Test `cake-autorate-ingress` on the actual link before production use. It is CAKE's built-in estimator and is not the same as external adaptive-rate implementations that continuously measure delay and update the shaper. Use a fixed rate below the reliable link capacity when predictable latency and throughput are more important than following every capacity change.
+:::
 
-In situations where inbound traffic's DSCP markings cannot be trusted (similar to cases like Comcast Cable), it is recommended to use a single queue "besteffort" mode with the "wash" option. This means that all incoming traffic is treated as the default "best effort" class, and any potentially unreliable or mis-marked DSCP values are cleared before further processing.
-
-In our airport analogy, using a single queue "besteffort" mode with "wash" would mean that regardless of the priority assigned at previous airports, all passengers are initially treated as standard passengers (best effort class) until their priority can be accurately determined and assigned at your airport.
-
-This approach ensures that even if the DSCP markings of incoming traffic have been mis-marked or modified during transit, the traffic is treated fairly and uniformly within your network, without relying on potentially unreliable markings from external sources.
-
-By applying the "wash" option in CAKE, network administrators can mitigate the impact of mis-marked or modified DSCP markings, providing a more consistent and reliable Quality of Service (QoS) treatment within their network domain.
-
-## Diffserv RFC2474 and RFC2475
-
-Diffserv (Differentiated Services) is a mechanism used to prioritize and classify network traffic based on the Diffserv field in the IP packet header. CAKE (Common Applications Kept Enhanced) provides Diffserv support, allowing traffic to be divided into "tins" (traffic classes) and applying different treatment to each tin. Here's a breakdown of the Diffserv presets in CAKE along with real-world examples:
-
-**besteffort** - The "besteffort" preset in CAKE disables priority queuing and places all traffic into a single tin. This means that all traffic is treated equally without any specific prioritization. *This preset can be suitable for non-critical or low-priority traffic, such as general web browsing or background file downloads, where equal treatment is sufficient.*
-
-**precedence** - The "precedence" preset enables the legacy interpretation of the TOS (Type of Service) "Precedence" field. However, its usage on the modern internet is discouraged, as it is an outdated mechanism. *In the past, this field was used to indicate different levels of priority, such as high, medium, or low, but it is no longer widely used or recommended.*
-
-**diffserv4** - The "diffserv4" preset provides a general-purpose Diffserv implementation with four tins:
-
-1. **Bulk**: This tin corresponds to CS1 (Class Selector 1) or LE (Lower Effort), and it has a threshold of 6.25%. Traffic in this tin typically has a low priority.
-2. **Best Effort**: This tin is for general traffic that doesn't fall into any specific Diffserv class. It has a threshold of 100%, meaning it receives all remaining bandwidth.
-3. **Video**: This tin encompasses AF4x, AF3x, CS3, AF2x, CS2, TOS4, and TOS1. It has a threshold of 50%, providing a moderate priority for video traffic.
-4. **Voice**: This tin covers CS7, CS6, EF (Expedited Forwarding), VA (Voice Admit), CS5, and CS4. It has a threshold of 25%, giving high priority to voice traffic.
-
-*In a network where video streaming, voice over IP (VoIP), and general internet traffic coexist, this preset can ensure that video and voice traffic receive appropriate priority, while bulk and best-effort traffic are handled accordingly.*
-
-**diffserv3**(default) - The "diffserv3" preset is the default Diffserv implementation in CAKE, providing three tins:
-
-1. **Bulk**: Similar to the "diffserv4" preset, this tin represents CS1 or LE with a 6.25% threshold, serving as a low-priority traffic class.
-2. **Best Effort:** This tin is for general traffic and has a threshold of 100%, treating all remaining traffic equally.
-3. **Voice**: This tin covers CS7, CS6, EF, VA, and TOS4. It has a threshold of 25% and applies a reduced CoDel (Controlled Delay) interval, giving high priority to voice traffic.
-
-*In a network where voice traffic requires high priority, such as a VoIP system, while other traffic falls into a general category, the "diffserv3" preset can ensure appropriate priority for voice packets while maintaining fairness for other traffic.*
-
-**diffserv8**- is a more advanced purpose diffserv with 8 tins:
-
-The 8 classes in DiffServ8 are mapped to different types of network traffic based on their importance, using decimal values for Differentiated Services Code Point (DSCP):
-
-1. **Network Control** (48-63): Highest priority, often used for critical network traffic like routing information.
-2. **Telephony** (46): Traffic sensitive to latency, such as VoIP.
-3. **Signaling** (32-39): Control signals for real-time applications.
-4. **Multimedia Conferencing** (24-31): Video conferencing traffic.
-5. **Real-time Interactive** (40-45): Interactive applications, such as gaming.
-6. **Multimedia Streaming** (16-23): Streaming video and audio.
-7. **Low Latency Data** (8-15): Traffic requiring low latency, like financial transactions.
-8. **Best Effort** (0-7): Default traffic class with no special priority.
-
-## Autorate Ingress
-
-When using the `cake-autorate-ingress` option in the CAKE queue discipline, CAKE automatically determines the download speed based on observed packet arrival times. Here's how it works:
-
-1. **Monitoring Packet Arrival Times**: CAKE continuously monitors the arrival times of incoming packets. It keeps track of the time intervals between consecutive packets to estimate the rate at which packets are being received.
-2. **Calculating Average Packet Arrival Rate**: CAKE calculates the average packet arrival rate based on the observed arrival times. By dividing the number of received packets by the total time elapsed, it determines the average rate at which packets are arriving.
-3. **Deriving Download Speed**: From the average packet arrival rate, CAKE infers the download speed or throughput of the network connection. It assumes that the packet arrival rate corresponds to the download speed, given that each packet represents a certain amount of data.
-4. **Dynamic Adjustment**: As CAKE continues to monitor packet arrival times, it adjusts the download speed estimation dynamically. If the arrival rate increases, CAKE will update the download speed estimate to reflect the higher throughput. Conversely, if the arrival rate decreases, CAKE will adjust the estimate accordingly.
-
-By automatically determining the download speed, CAKE adapts to changes in the network conditions and ensures that traffic shaping and queuing algorithms are adjusted to optimize the utilization of available bandwidth.
-
-It's worth noting that while CAKE can estimate the download speed based on packet arrival times, it does not have direct knowledge of the link capacity or the true download speed as reported by the network equipment or service provider. Instead, it relies on observed packet arrival rates to approximate the download speed for traffic shaping purposes.
+Do not enable `cake-autorate-ingress` when HTB is intended to control the rate. The option changes CAKE's shaper, not the HTB `max-limit`.

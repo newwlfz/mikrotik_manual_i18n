@@ -8,13 +8,13 @@ tags:
   - 'arm'
   - 'mips'
   - 'x86'
-source: https://manual.mikrotik.com/docs/getting-started/software-specifications/feature-support-based-on-architecture
-captured_at: '2026-11-04T11:29:04+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/software-specifications/feature-support-based-on-architecture
+captured_at: '2026-11-04T11:17:06+08:00'
 ---
 
 ## Feature Support by Architecture
 
-Most features support is consistent across all device architectures, with only a few exceptions. The table below clarifies which features are not supported or are exclusively supported for each architecture:
+Most feature support is consistent across all device architectures, with only a few exceptions. The table below shows which features are not supported or are exclusively supported for each architecture:
 
 | Architecture | Not Supported | Exclusively Supported |
 | :-- | :-- | :-- |

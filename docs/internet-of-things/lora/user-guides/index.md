@@ -8,8 +8,8 @@ tags:
   - 'lora'
   - 'aws'
   - 'iot'
-source: https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides
-captured_at: '2026-11-04T11:31:20+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/lora/user-guides
+captured_at: '2026-11-04T11:18:29+08:00'
 ---
 
 This section covers LoRa user guides and setup examples. Use it to connect RouterOS LoRa gateways to AWS LoRaWAN, The Things Stack, and related deployments, or to set up MikroTik LoRa sensor devices.

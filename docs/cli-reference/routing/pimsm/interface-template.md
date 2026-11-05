@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/pimsm/interface-template"
 sidebar_position: 6
 title: "interface-template"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/pimsm/interface-template
-captured_at: '2026-11-01T21:29:37+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/pimsm/interface-template
+captured_at: '2026-11-01T21:25:18+08:00'
 ---
 
 -----------

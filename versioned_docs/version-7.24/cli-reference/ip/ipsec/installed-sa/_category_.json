@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "Installed Sa",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/ipsec/installed-sa/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/ipsec/installed-sa"
+}

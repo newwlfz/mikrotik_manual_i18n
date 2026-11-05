@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/iot/wiliot/bluetooth-traffic/index"
 sidebar_position: 2
 title: "bluetooth-traffic"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/wiliot/bluetooth-traffic
-captured_at: '2026-11-01T21:28:21+08:00'
+sidebar_label: 'bluetooth-traffic'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/wiliot/bluetooth-traffic
+captured_at: '2026-11-01T21:23:44+08:00'
 ---
 
 -----------

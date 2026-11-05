@@ -8,8 +8,8 @@ tags:
   - 'pcq'
   - 'queue-tree'
   - 'simple-queues'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/pcq-example
-captured_at: '2026-11-04T11:28:15+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/queues/pcq-example
+captured_at: '2026-11-04T11:15:51+08:00'
 ---
 
 Per Connection Queue (PCQ) is a queuing discipline that can be used to dynamically equalize or shape traffic for multiple users, using little administration. It is possible to divide PCQ scenarios into three major groups: equal bandwidth for a number of users, certain bandwidth equal distribution between users, and unknown bandwidth equal distribution between users.

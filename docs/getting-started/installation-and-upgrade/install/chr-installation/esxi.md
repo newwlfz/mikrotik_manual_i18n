@@ -7,8 +7,8 @@ tags:
   - 'vmware-esxi'
   - 'mtu'
   - 'jumbo-frames'
-source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation/esxi
-captured_at: '2026-11-04T11:28:33+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/installation-and-upgrade/install/chr-installation/esxi
+captured_at: '2026-11-04T11:16:20+08:00'
 ---
 
 ## Supported Network and Disk Interfaces

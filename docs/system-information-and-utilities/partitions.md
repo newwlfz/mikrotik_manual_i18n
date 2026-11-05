@@ -7,8 +7,8 @@ description: 'RouterOS allows repartitioning NAND flash on compatible devices to
 tags:
   - 'partitions'
   - 'storage'
-source: https://manual.mikrotik.com/docs/system-information-and-utilities/partitions
-captured_at: '2026-11-04T11:33:36+08:00'
+source: https://manual.mikrotik.com/docs/7.25/system-information-and-utilities/partitions
+captured_at: '2026-11-04T11:22:10+08:00'
 ---
 
 Partitioning is supported on ARM, ARM64, MIPS, TILE, and PowerPC RouterBOARD devices that use NAND flash.
@@ -56,6 +56,17 @@ Columns: NAME, FALLBACK-TO, VERSION, SIZE
 :::warning
 Starting from RouterOS version 7.17, you need to update the [device-mode](/docs/system-information-and-utilities/device-mode) to use the partitions.
 :::
+
+## Inspect partitions in WinBox
+
+Open **Partition** in the left menu:
+
+1. Check the partition name, **Fallback To**, and installed RouterOS version in the list. The `A` flag identifies the active boot partition, and `R` identifies the running partition. The screenshot shows one partition, `part0`, with both flags.
+2. The right panel contains **Repartition**, **Copy To**, **Save Config To**, and **Restore Config From**. These actions change storage or configuration; use the command descriptions to select the operation you intend to perform.
+
+![WinBox Partition overview with partition details and available actions](./img/partitions-winbox.webp)
+
+Viewing the list does not repartition the router. **Repartition** reformats storage and reboots the device, and **Copy To** replaces the contents of its destination. Check hardware support and device mode before planning a partition change.
 
 ## Commands
 

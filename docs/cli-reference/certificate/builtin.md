@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/certificate/builtin"
 sidebar_position: 4
 title: "builtin"
 sidebar_label: 'builtin'
-source: https://manual.mikrotik.com/docs/cli-reference/certificate/builtin
-captured_at: '2026-11-01T21:26:24+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/builtin
+captured_at: '2026-11-01T21:21:48+08:00'
 ---
 
 -----------

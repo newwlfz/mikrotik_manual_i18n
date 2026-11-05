@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/bridge/msti/index"
 sidebar_position: 1
 title: "msti"
 sidebar_label: 'msti'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/bridge/msti
-captured_at: '2026-11-01T21:26:59+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/msti
+captured_at: '2026-11-01T21:22:24+08:00'
 ---
 
 -----------

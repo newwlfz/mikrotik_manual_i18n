@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/gmp"
 sidebar_position: 6
 title: "gmp"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/gmp
-captured_at: '2026-11-01T21:29:32+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/gmp
+captured_at: '2026-11-01T21:25:11+08:00'
 ---
 
 -----------

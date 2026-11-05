@@ -8,8 +8,8 @@ tags:
   - 'elasticsearch'
   - 'cef-logging'
   - 'kibana'
-source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/log/cef-with-elasticsearch
-captured_at: '2026-11-04T11:28:00+08:00'
+source: https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/log/cef-with-elasticsearch
+captured_at: '2026-11-04T11:15:21+08:00'
 ---
 
 ## Introduction
@@ -65,7 +65,7 @@ Some steps might change over time, refer to Elastic's manual to find the most up
 - Press the "Create agent policy" button to [create a new Agent Policy](https://www.elastic.co/guide/en/fleet/current/agent-policy.html#create-a-policy).
 - Give the policy a name, for example, "CEF policy", adjust advanced settings if required, and create the policy. Or you can use the API request below:  
 
-  ```routeros
+  ```text
   POST kbn:/api/fleet/agent_policies
   {
     "name": "CEF policy",
@@ -97,7 +97,7 @@ Some steps might change over time, refer to Elastic's manual to find the most up
 - Set "Name" to "logs-cef.log@custom".
 - Press "Import processors" and paste the following processors:  
 
-  ```routeros
+  ```json
   {
   	"processors": [
   		{
@@ -127,21 +127,18 @@ Some steps might change over time, refer to Elastic's manual to find the most up
 
 ### RouterOS
 
-1. Configure [Logging action](/docs/diagnostics-monitoring-and-troubleshooting/log/#actions) settings on your RouterOS Device (10.0.0.1):  
+1. Configure a [remote logging action](/docs/diagnostics-monitoring-and-troubleshooting/log/#send-the-log-to-a-syslog-server) on your RouterOS device (10.0.0.1):
 
-   ```routeros
+   ```ros
    /system/logging/action
-   add cef-event-delimiter="\n" name=syslog remote=10.0.0.2 remote-log-format=cef remote-port=9003 syslog-facility=syslog syslog-time-format=iso8601 target=remote
-   /system/logging
-   add action=syslog topics=info
-   add action=syslog topics=error
-   add action=syslog topics=warning
-   add action=syslog topics=critical
+   add cef-event-delimiter="\n" name=syslog remote=10.0.0.2 \
+       remote-log-format=cef remote-port=9003 \
+       syslog-time-format=iso8601 target=remote
    ```
 
-2. Add [Topics](/docs/diagnostics-monitoring-and-troubleshooting/log/#topics-used-by-various-routeros-facilities) that you wish to receive from your RouterOS device (10.0.0.1), for example:  
+2. Add a rule for each of the [topics](/docs/diagnostics-monitoring-and-troubleshooting/log/#topics) you want to receive from your RouterOS device (10.0.0.1), for example:
 
-   ```routeros
+   ```ros
    /system/logging
    add action=syslog topics=info
    add action=syslog topics=error
@@ -161,7 +158,7 @@ Kibana allows you to search the ingested CEF logs. To see ingested logs, do the 
 2. Open "Discover" from the main menu.
 3. [Add a filter](https://www.elastic.co/guide/en/kibana/current/discover-get-started.html#explore-fields-in-your-data), and use the following parameters:  
 
-   ```routeros
+   ```text
    Select a field: data_stream.dataset
    Select operator: IS
    Select a value: cef.log

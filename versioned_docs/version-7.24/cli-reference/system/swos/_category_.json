@@ -1,0 +1,11 @@
+{
+  "position": 33,
+  "label": "Swos",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/swos/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/swos"
+}

@@ -7,8 +7,8 @@ description: 'RouterOS scripting enables automation through user-defined scripts
 tags:
   - 'scripting'
   - 'management'
-source: https://manual.mikrotik.com/docs/developer-guides/scripting
-captured_at: '2026-11-04T11:27:51+08:00'
+source: https://manual.mikrotik.com/docs/7.25/developer-guides/scripting
+captured_at: '2026-11-04T11:15:08+08:00'
 ---
 
 RouterOS includes a powerful scripting language for automating maintenance tasks. You create user-defined scripts and bind them to events.
@@ -651,6 +651,7 @@ Several common parameters are available for `print` command:
 | **without-paging** | If the output does not fit in the console screen then print all information in a single piece without stops. |  |
 | **where**          | Expressions followed by `where` parameters can be used to filter outmatched entries. | `/ip route print where interface="ether1"` |
 | **about**          | Returns entries that have the `about` parameter, such as "managed by CAPsMAN " information or warnings | `/interface wifi print where about` |
+| **!comments**          | Returns entries without comments | `/interface firewall filter print !comments` |
 
 More than one parameter can be specified at a time, for example, `/ip route print count-only interval=1 where interface="ether1"`
 
@@ -866,33 +867,28 @@ not enough permissions (9)
 Added DHCP client on ether2!
 ```
 
-Similarly, there are multiple ways to run a script with the scheduler. When the scheduler runs a script, it may execute with the scheduler's permissions.
+The scheduler follows the same rule. A script called by name in `on-event`, or with `/system script run`, runs with the scheduler entry's permissions (its `policy`). Only `use-script-permissions` makes the script run with its own permissions.
 
-You can call the script by name using the scheduler; this works the same way as `/system script run use-script-permissions`.
-
-To demonstrate this, we create three schedulers, each configured to run the script in a different way:
+To compare, create two scheduler entries that run the same script in different ways:
 
 ```ros
 /system scheduler
 add interval=10s name=run-script-use-script-perms on-event="/system script run add-dhcp-no-perms use-script-permissions" policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon
-add interval=10s name=run-script-direct on-event=add-dhcp-no-perms policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon
-add interval=10s name=run-script-scheduler-perms on-event="/system script run add-dhcp-no-perms" policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon
+add interval=10s name=run-script-by-name on-event=add-dhcp-no-perms policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon
 ```
 
-When all created schedulers execute the script, the logs will show that the two methods using `use-script-permissions` or calling the script by name fail due to insufficient permissions.
-
-In contrast, `run-script-scheduler-perms` executes the script successfully, as it inherits the scheduler's permissions.
+The log shows that the entry with `use-script-permissions` fails, because the script has no permissions. The entry that calls the script by name adds the DHCP client with the scheduler's permissions:
 
 ```ros
 /log print
- 2025-07-22 18:11:25 script,error executing script add-dhcp-no-perms from scheduler (run-script-direct) failed, please check it manually
- 2025-07-22 18:11:25 script,error,debug not enough permissions (9) (/ip/dhcp-client/add; line 1)
- 2025-07-22 18:11:25 script,error executing script from scheduler (run-script-use-script-perms) failed, please check it manually
- 2025-07-22 18:11:25 script,error,debug (scheduler:run-script-use-script-perms) not enough permissions (9) (/ip/dhcp-client/add; line 1)
- 2025-07-22 18:11:25 system,info dhcp client added by scheduler:run-script-scheduler-perms/script:add-dhcp-no-perms (*7 = /ip dhcp-client add interface=ether2)
+ 2026-09-25 17:54:29 script,error executing script add-dhcp-no-perms
+ 2026-09-25 17:54:29 script,error,debug not enough permissions (9) (/ip/dhcp-client/add; line 1)
+ 2026-09-25 17:54:29 script,error executing script
+ 2026-09-25 17:54:29 script,error,debug (scheduler:run-script-use-script-perms) not enough permissions (9) (/ip/dhcp-client/add; line 1)
+ 2026-09-25 17:54:30 system,info dhcp client added by scheduler:run-script-by-name/script:add-dhcp-no-perms (*2 = /ip dhcp-client add interface=ether2)
 ```
 
-A script with higher or more permissions than the user/scheduler cannot be run; use-script-permissions won’t override this.
+A caller cannot run a script whose policy includes permissions the caller does not have: a scheduler entry with `policy=read` that calls a script with `policy=read,write` by name fails with `not enough permissions`. The `use-script-permissions` flag does not override this.
 
 ## See also
 

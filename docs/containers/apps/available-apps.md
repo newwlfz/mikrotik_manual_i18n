@@ -4,13 +4,13 @@ sidebar_position: 1
 title: "List of available Apps"
 sidebar_label: 'List of available Apps'
 description: 'Reference list of container apps that run on RouterOS, with a short description of each and the MikroTik hardware it suits.'
-source: https://manual.mikrotik.com/docs/containers/apps/available-apps
-captured_at: '2026-11-04T11:27:35+08:00'
+source: https://manual.mikrotik.com/docs/7.25/containers/apps/available-apps
+captured_at: '2026-11-04T11:14:51+08:00'
 ---
 
 | App                   | Description                                                                                                                                                                                                                                                                                                                                                       |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| HA-otbr-matter        | Home automation software with Matter and Thread support optimized for hAP be Media                                                                                                                                                                                                                                                                                |
+| homeassistant-thread | Home Assistant with Matter and Thread support for hAP be³ Media. Named `ha-otbr-matter` in earlier RouterOS versions. See [Pair Claire with Home Assistant](/docs/containers/user-guides/claire-homeassistant). |
 | adventurelog          | AdventureLog is a travel blog and photo journal web application                                                                                                                                                                                                                                                                                                   |
 | babybuddy             | A buddy for babies! Helps caregivers track sleep, feedings, diaper changes, and tummy time to learn about and predict baby's needs without (as much) guess work                                                                                                                                                                                                   |
 | backrest              | Web-based backup solution with support for local and cloud storage backends                                                                                                                                                                                                                                                                                       |

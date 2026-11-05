@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/routerboard/usb/index"
 sidebar_position: 1
 title: "usb"
-source: https://manual.mikrotik.com/docs/cli-reference/system/routerboard/usb
-captured_at: '2026-11-01T21:30:05+08:00'
+sidebar_label: 'usb'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/routerboard/usb
+captured_at: '2026-11-01T21:25:42+08:00'
 ---
 
 -----------

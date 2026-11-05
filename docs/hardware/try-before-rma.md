@@ -8,8 +8,8 @@ tags:
   - 'hardware'
   - 'troubleshooting'
   - 'rma'
-source: https://manual.mikrotik.com/docs/hardware/try-before-rma
-captured_at: '2026-11-04T11:29:35+08:00'
+source: https://manual.mikrotik.com/docs/7.25/hardware/try-before-rma
+captured_at: '2026-11-04T11:17:32+08:00'
 ---
 
 Before submitting a device for warranty repair (RMA), work through the checks below. Many apparent hardware issues are caused by power supplies, cables, software versions, or configuration — and can be resolved without sending the device back.
@@ -50,5 +50,5 @@ Before submitting a device for warranty repair (RMA), work through the checks be
 | Case is bent or damaged | Inspect the packaging for damage. Shipping damage should be reported to the shipping company. |
 
 :::info
-If none of the above steps resolve the issue, contact [MikroTik support](https://mikrotik.com/support) with a description of the problem and a [support output file (`supout.rif`)](/docs/diagnostics-monitoring-and-troubleshooting/resource).
+If none of the above steps resolve the issue, contact [MikroTik support](https://mikrotik.com/support) with a description of the problem and a [support output file (`supout.rif`)](/docs/getting-started/supout-rif).
 :::

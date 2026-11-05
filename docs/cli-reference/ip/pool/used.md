@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ip/pool/used"
 sidebar_position: 2
 title: "used"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/pool/used
-captured_at: '2026-11-01T21:28:52+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/pool/used
+captured_at: '2026-11-01T21:24:19+08:00'
 ---
 
 -----------

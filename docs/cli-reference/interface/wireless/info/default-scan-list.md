@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/info/default-scan-list"
 sidebar_position: 4
 title: "default-scan-list"
 sidebar_label: 'default-scan-list'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/info/default-scan-list
-captured_at: '2026-11-01T21:28:00+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/info/default-scan-list
+captured_at: '2026-11-01T21:23:23+08:00'
 ---
 
 -----------

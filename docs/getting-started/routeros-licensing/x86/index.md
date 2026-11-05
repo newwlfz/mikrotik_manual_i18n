@@ -7,10 +7,9 @@ description: 'This page explains x86 system licensing for MikroTik RouterOS, cov
 tags:
   - 'licensing'
   - 'software-id'
-source: https://manual.mikrotik.com/docs/getting-started/routeros-licensing/x86
-captured_at: '2026-11-04T11:29:18+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/routeros-licensing/x86
+captured_at: '2026-11-04T11:17:20+08:00'
 ---
-
 ## Licensing Basics
 
 For x86 systems (PC-based installations), a license key must be obtained. Each system has a unique identifier called the **Software ID**, which is used for licensing purposes.
@@ -18,7 +17,7 @@ For x86 systems (PC-based installations), a license key must be obtained. Each s
 The license key is provided as a block of characters. It can be copied from your MikroTik account or from the email you received after purchase, and then pasted into the router. You can paste the key directly into the terminal or use the **Paste Key** option in the WinBox License menu. A reboot is required for the license to take effect.
 
 :::info
-**x86 Software ID** is bound to the storage device (e.g., NAND, SSD, HDD, NVMe) MBR.
+**x86 Software ID** is bound to the storage device (for example, NAND, SSD, HDD, NVMe) MBR.
 :::
 
 Before purchasing a license, verify that the Software ID remains unchanged after a reboot.
@@ -26,8 +25,8 @@ Before purchasing a license, verify that the Software ID remains unchanged after
 :::danger
 The Software ID may change if the underlying storage or configuration is unstable. This can occur, for example, when:
 
-- using defective or failing storage devices (SSD, HDD, NVMe, etc.).
-- RAID configurations are incorrectly set up or not persistent.
+- using defective or failing storage devices (SSD, HDD, NVMe).
+- RAID configurations are set up incorrectly or are not persistent.
 - different storage controllers or adapters are used between boots.
 
 :::
@@ -48,7 +47,7 @@ The minimum required RAM depends on the interface count and CPU count. Use the f
 
 ## RouterOS License Key Levels
 
-Licensing information can be retrieved from the CLI system console:
+Licensing information can be retrieved from the [`/system/license`](../../../cli-reference/system/license) menu:
 
 ```text
 [admin@MikroTik] > /system/license/print
@@ -58,7 +57,7 @@ Licensing information can be retrieved from the CLI system console:
 [admin@MikroTik] >
 ```
 
-It can also be viewed from the equivalent [WinBox](/docs/management-tools/winbox) or [WebFig](/docs/management-tools/webfig) menu.
+It can also be viewed from the equivalent [WinBox](../../../management-tools/winbox) or [WebFig](../../../management-tools/webfig) menu.
 
 After installation of the x86 system, RouterOS runs in **Trial mode** with no limitations. You have 24 hours to register for a **Level 1 (Free Demo)** license, or purchase a Level 4, 5, or 6 license and apply a valid key.
 
@@ -90,8 +89,12 @@ The differences between license levels are shown in the table below:
 If a feature is not listed, it is not restricted by the license.
 :::
 
+:::warning
+The demo license limits the router to a single interface. This restriction applies to multiple interface types (veth, vlan, vxlan, etc.), not only those listed in the table.
+:::
+
 :::note
-Level 2 was a transitional license from the legacy (pre-2.8) license format. These licenses are no longer available. Existing Level 2 licenses will continue to function, but upgrading requires the purchase of a new license. Level 3 licenses are intended for wireless station (client/CPE) use only. *For x86 PCs, Level 3 is not available for individual purchase.*
+Level 2 was a transitional license from the legacy (pre-2.8) license format. These licenses are no longer available. Existing Level 2 licenses continue to function, but upgrading requires the purchase of a new license. Level 3 licenses are intended for wireless station (client/CPE) use only. *For x86 PCs, Level 3 is not available for individual purchase.*
 :::
 
 ### All Licenses
@@ -103,7 +106,7 @@ Level 2 was a transitional license from the legacy (pre-2.8) license format. The
 
 ### Prepaid Key
 
-A Prepaid Key is a type of license that can be purchased in advance for MikroTik products. It allows you to acquire a license without immediately assigning it to a specific device. Once obtained, a Prepaid Key can be used to upgrade a CHR instance or converted into a license key for an x86 system or RouterBOARD device using the target Software ID.
+A Prepaid Key is a type of license that can be purchased in advance for MikroTik products. It allows you to acquire a license without immediately assigning it to a specific device. When obtained, a Prepaid Key can be used to upgrade a CHR instance or converted into a license key for an x86 system or RouterBOARD device by using the target Software ID.
 
 ## How to Purchase a RouterOS License Key
 
@@ -113,8 +116,8 @@ A Prepaid Key is a type of license that can be purchased in advance for MikroTik
 4. Set the Key Type to **"License key"**.
 5. In the License Key Information field, paste the Software ID of your device.
 6. Select any optional Key Features required for your deployment.
-7. Click the **"Place key in the cart"** button.
-8. Click **"Proceed to checkout"** to finalize your purchase.
+7. Select **"Place key in the cart"**.
+8. Select **"Proceed to checkout"** to finalize your purchase.
 
 ![](./img/purchase-prepaid-01.png)
 
@@ -124,11 +127,11 @@ Review your order details carefully, then proceed with payment using either a **
 
 ![](./img/purchase-prepaid_02.png)
 
-Congratulations! You have successfully purchased a RouterOS license key.
+You have purchased a RouterOS license key.
 
 ## How to Convert a Prepaid Key to a License Key for x86
 
-1. **Purchase a RouterOS [Prepaid Key](/docs/getting-started/routeros-licensing/#prepaid-key).**
+1. **Purchase a RouterOS [Prepaid Key](./index.md#prepaid-key).**
 
    - Log in to your [mikrotik.com](https://mikrotik.com) account.
    - Purchase a RouterOS Prepaid Key if you have not done so already.
@@ -147,7 +150,7 @@ Congratulations! You have successfully purchased a RouterOS license key.
 1. **Generate the License Key.**
 
    - Press "Generate".
-   - A confirmation message will appear: "Successfully converted prepaid key to a new licence!".
+   - A confirmation message appears: "Successfully converted prepaid key to a new license!".
 
 ![](./img/convert-prepaid_02.png)
 
@@ -168,16 +171,16 @@ Before a Replacement Key is issued, MikroTik Support may require proof that the 
 
 1. **Log in and Submit a Request**
    - Log in to your account on [mikrotik.com](https://mikrotik.com).
-   - Submit a request using the "[Support Contact Form](https://help.mikrotik.com/servicedesk/servicedesk/)" or by sending an e-mail directly to [support@mikrotik.com](mailto:support@mikrotik.com).
+   - Submit a request using the "[Support Contact Form](https://help.mikrotik.com/servicedesk/servicedesk/)" or by sending an email directly to [support@mikrotik.com](mailto:support@mikrotik.com).
    - Include the following information in your request:
      - **A clear explanation of why a replacement key is needed.**
      - **The Old Software ID and the account under which it was registered.**
 
 2. **Wait for Confirmation and Apply the Key**
-   - Once the MikroTik support team confirms that the replacement key has been added to your account, log in and navigate to the **"Make a key from replacement key"** section.
+   - When the MikroTik support team confirms that the replacement key has been added to your account, log in and navigate to the **"Make a key from replacement key"** section.
    - Proceed with the activation.
 
-![](./img/image.png)
+![](./img/Replacement_license_1.png)
 
 1. **Select the License Level**
    - Select the license level at which you wish to apply the replacement.
@@ -186,23 +189,23 @@ Before a Replacement Key is issued, MikroTik Support may require proof that the 
    - Enter the **new Software ID** of the target device.
 
 3. **Complete the Purchase**
-   - Click **"Add license replacement to cart"** to proceed to checkout and complete the payment.
+   - Select **"Add license replacement to cart"** to proceed to checkout and complete the payment.
 
 ![](./img/Replacement_license_2.png)
 
 1. **Retrieve Your Key**
-   - A confirmation e-mail containing the new license key will be sent to your account's registered e-mail address.
+   - A confirmation email containing the new license key is sent to your account's registered email address.
    - The newly generated key can also be found in the **"Search and view all keys"** section, under the folder **"Purchased YYYY"**, where **"YYYY"** represents the current year.
 
 :::warning
-*Only one replacement key can be issued per original key. It is not possible to use the replacement key procedure twice for the same key. If a second replacement is required, a new key for the RouterOS device must be purchased.*
+*Only one replacement key can be issued per original key. You cannot use the replacement key procedure twice for the same key. If a second replacement is required, a new key for the RouterOS device must be purchased.*
 :::
 
 ## Obtaining and Managing Licenses
 
 ### Where can I buy a RouterOS license key?
 
-To purchase a license for an **x86 PC installation**, you will need to register an [account on our website](https://www.mikrotik.com/client) and use the [Purchase a RouterOS license key](#how-to-purchase-a-routeros-license-key) option available within the account portal.
+To purchase a license for an **x86 PC installation**, you must register an [account on our website](https://www.mikrotik.com/client) and use the [Purchase a RouterOS license key](#how-to-purchase-a-routeros-license-key) option available within the account portal.
 
 ### Can I Upgrade the x86 License Level?
 
@@ -210,29 +213,29 @@ To upgrade the x86 license level, you must purchase the desired license key at f
 
 ### If You Purchased Your Key Elsewhere
 
-If your license was purchased through a third-party vendor, please contact that vendor directly for support, as they are responsible for assisting with licenses they have sold.
+If your license was purchased through a third-party vendor, contact that vendor directly for support, as they are responsible for assisting with licenses they have sold.
 
 ### If I Have a License and Want to Move It to Another Account
 
-Once an x86 license key has been applied, it is tied to your MikroTik account and cannot be transferred to another account. The only type of license that can be transferred between accounts is an unused prepaid key. Prepaid keys received as gifts from Training are not transferable. To transfer a purchased prepaid key, navigate to **Transfer prepaid keys** under the **ROUTEROS KEYS** section in your MikroTik Account.
+When an x86 license key has been applied, it is tied to your MikroTik account and cannot be transferred to another account. The only type of license that can be transferred between accounts is an unused prepaid key. Prepaid keys received as gifts from Training are not transferable. To transfer a purchased prepaid key, navigate to **Transfer prepaid keys** under the **ROUTEROS KEYS** section in your MikroTik Account.
 
 ### If You Have Lost a License on Your Device
 
-If you have lost the license from your router for any reason, upgrade the router to the latest available RouterOS version and use the **"Request license key"** option in your [mikrotik.com](https://mikrotik.com) account. When submitting the request, use the Software ID and serial number found under the `/system/license` menu in RouterOS. Once received, apply the license key to your device. If the request feature does not work, contact [support@mikrotik.com](mailto:support@mikrotik.com) for assistance.
+If you have lost the license from your router for any reason, upgrade the router to the latest available RouterOS version and use the **"Request license key"** option in your [mikrotik.com](https://mikrotik.com) account. When submitting the request, use the Software ID and serial number found under the [`/system/license`](../../../cli-reference/system/license) menu in RouterOS. When received, apply the license key to your device. If the request feature does not work, contact [support@mikrotik.com](mailto:support@mikrotik.com) for assistance.
 
 :::warning
-*If the license was lost due to repairs that were not performed by a distributor under warranty, you will be required to purchase a new RouterOS license at full price.*
+*If the license was lost due to repairs that were not performed by a distributor under warranty, you must purchase a new RouterOS license at full price.*
 :::
 
 ## Using the License
 
 ### Can I Format or Re-Flash the Drive?
 
-Formatting or re-imaging the storage device using non-MikroTik tools (such as `dd` or `fdisk`) will destroy your license.
+Formatting or re-imaging the storage device by using non-MikroTik tools (such as `dd` or `fdisk`) destroys your license.
 
 Exercise extreme caution and contact MikroTik support before attempting this. Such actions are not recommended, and replacement license requests may be denied.
 
-To reinstall RouterOS safely, use official MikroTik tools such as **Netinstall** or install from a disk image by creating bootable installation media (e.g., USB flash drive).
+To reinstall RouterOS safely, use official MikroTik tools such as **Netinstall** or install from a disk image by creating bootable installation media (for example, USB flash drive).
 
 ### How many computers can I use the License on?
 
@@ -240,29 +243,29 @@ A RouterOS license can only be used on a single device/system.
 
 On x86 systems, the license is tied to the **Software ID**, which is bound to the storage device (MBR). This allows you to move the same storage device to another computer without losing the license. However, the license cannot be transferred to a different storage device.
 
-Formatting or overwriting the storage device will permanently erase the license, requiring a new one.
+Formatting or overwriting the storage device permanently erases the license, requiring a new one.
 
 :::danger
 **Important:** When moving or modifying storage, perform all actions carefully. Changes such as using different storage controllers or adapters, or modifying BIOS/UEFI settings, may alter the Software ID and result in license loss.
 :::
 
-For best practices, generate and save `supout.rif` files before and after any hardware changes. If the Software ID changes, these files can be provided to MikroTik support for review.
+For best practices, generate and save `supout.rif` files before and after any hardware changes. If the Software ID changes, you can provide these files to MikroTik support for review.
 
 If the Software ID has changed, you may request a replacement key.
 
 ### Can I temporarily use the storage device for something else, other than RouterOS?
 
-As stated above, no.
+No.
 
-### Can I move the license to another storage device (e.g., SSD, HDD, NVMe)?
+### Can I move the license to another storage device (for example, SSD, HDD, NVMe)?
 
 If your current storage device is damaged or cannot be used, the license can be transferred to a new device by requesting a replacement key.
 
-A replacement key is available for a fee of $10.
+A replacement key is available for $10.
 
 ### Must I type the whole key into the router?
 
-No, simply copy the key and paste it into **System** → **License** → **Paste Key**, then confirm the reboot.
+No, simply copy the key and paste it into the [`/system/license`](../../../cli-reference/system/license) menu's **Paste Key** option, then confirm the reboot.
 
 ![](./img/manual_x86_key_01.png)
 
@@ -270,7 +273,7 @@ Alternatively, paste the key directly into the CLI and press **Y** to reboot.
 
 ### Can I install another OS on my drive and then reinstall RouterOS later?
 
-No. If you use formatting, partitioning utilities, or any other tools that modify the MBR, you will lose your license and will need to obtain a new one. This process is not free (see [Replacement Key above](#replacement-key)).
+No. If you use formatting, partitioning utilities, or any other tools that modify the MBR, you lose your license and must obtain a new one. This process is not free (see [Replacement Key](#replacement-key)).
 
 ### I Lost My RouterBOARD - Can I Transfer the License to Another System?
 
@@ -282,25 +285,25 @@ The keys that you purchase from other vendors and resellers are not in your acco
 
 ### I am not using the software, can you terminate my license?
 
-Licenses are stand-alone keys, and MikroTik does not have remote control over your devices. As a result, it is not possible to verify whether a license is actively being used. For this reason, MikroTik is unable to terminate any issued licenses.
+Licenses are stand-alone keys, and MikroTik does not have remote control over your devices. As a result, it cannot verify whether a license is actively being used. For this reason, MikroTik is unable to terminate any issued licenses.
 
-### Is it possible to upgrade or transfer an x86 license to a CHR license?
+### Can I upgrade or transfer an x86 license to a CHR license?
 
-Upgrading or transferring an x86 or a RouterBOARD license to a CHR license or vice versa is not possible. A separate license must be purchased for CHR.
+Upgrading or transferring an x86 or a RouterBOARD license to a CHR license or vice versa is not supported. A separate license must be purchased for CHR.
 
 ### What if I Entered the Wrong Software ID When Purchasing a Key?
 
-If a license key was generated using an incorrect Software ID (for example, a typo such as entering `1` instead of `I`), it is possible to correct the Software ID on the key without contacting support. This feature allows fixing up to 1-2 characters of the Software ID:
+If a license key was generated using an incorrect Software ID (for example, a typo such as entering `1` instead of `I`), you can correct the Software ID on the key without contacting support. This feature allows fixing up to 1-2 characters of the Software ID:
 
 1. Log in to your [mikrotik.com](https://mikrotik.com) account.
 2. Navigate to **"Search and view all keys"**.
 3. Open the folder for the purchase year — **"Purchased YYYY"**, where **"YYYY"** represents the current year.
-4. Select the key in question and click **"Edit"**.
-5. Click **"Fix Software ID"**.
+4. Select the key in question and select **"Edit"**.
+5. Select **"Fix Software ID"**.
 6. Correct the characters in the Software ID field and save.
 
 ## x86 Installation
 
 Covers RouterOS x86 system requirements and installation methods, including USB and Netinstall deployment.
 
-[x86 Installation Guide](https://manual.mikrotik.com/docs/installation-and-upgrade/install/x86-installation)
+[x86 Installation Guide](../../installation-and-upgrade/install/x86-installation)

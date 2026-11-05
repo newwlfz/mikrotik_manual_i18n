@@ -7,25 +7,23 @@ description: 'ZeroTier is a network virtualization engine for MikroTik RouterOS 
 tags:
   - 'zerotier'
   - 'ipv6'
-source: https://manual.mikrotik.com/docs/virtual-private-networks/zerotier
-captured_at: '2026-11-04T11:35:20+08:00'
+source: https://manual.mikrotik.com/docs/7.25/virtual-private-networks/zerotier
+captured_at: '2026-11-04T11:23:40+08:00'
 ---
 
 The [ZeroTier](https://docs.zerotier.com/) network hypervisor is a self-contained network virtualization engine that implements an Ethernet virtualization layer similar to VXLAN built atop a cryptographically secure global peer-to-peer network. It provides advanced network virtualization and management capabilities on par with an enterprise SDN switch, but across both local and wide area networks and connecting almost any kind of app or device.
 
 MikroTik has added ZeroTier to RouterOS v7.1rc2 as a separate package for the **ARM/ARM64** architecture.
 
-### Wait, so what can I use it for?
+### Use cases
 
-- Hosting a game server at home (useful for LAN only games) or simply creating a LAN party with your friends.
+- Hosting a game server at home (suited for LAN-only games) or creating a LAN party with friends.
 - Accessing LAN devices behind NAT directly.
-- Accessing LAN devices via SSH without opening a port to the Internet.
-- Using your local Pi-Hole setup from anywhere via the Internet.
+- Accessing LAN devices with SSH without opening a port to the Internet.
+- Using your local Pi-Hole setup from anywhere over the Internet.
 
 :::info
-Important
-
-ZeroTier functionality could be blocked by the device-mode. Prior to configuring ZeroTier make sure that it is enabled in system/device-mode. ([more info](/docs/system-information-and-utilities/device-mode)
+ZeroTier functionality can be blocked by `device-mode`. Before configuring ZeroTier, make sure it is enabled in `system/device-mode`. ([more info](/docs/system-information-and-utilities/device-mode))
 :::
 
 ### Video tutorial
@@ -46,26 +44,26 @@ That means your *peers* could be listening on any port. To talk with them direct
 
 ### Recommended Local Network and Internet Gateway Configuration
 
-These ZeroTier recommended guidelines are consistent with the vast majority of typical deployments using commodity gateways and access points:
+These ZeroTier recommended guidelines are consistent with the vast majority of typical deployments with commodity gateways and access points:
 
 - Don't restrict outbound UDP traffic.
 - Supporting either UPnP or NAT-PMP on your network can greatly improve performance by allowing ZeroTier endpoints to map external ports and avoid NAT traversal entirely.
-- IPv6 is recommended and can greatly improve direct connection reliability if supported on both ends of a direct link. If present it should be implemented without NAT (NAT is wholly unnecessary with IPv6 and only adds complexity) and with a stateful firewall that permits bidirectional UDP conversations.
-- Don't use "symmetric" NAT. Use "full cone" or "port restricted cone" NAT. Symmetric NAT is extremely hostile to peer-to-peer traffic and will degrade VoIP, video chat, games, WebRTC, and many other protocols as well as ZeroTier.
-- No more than one layer of NAT should be present between ZeroTier endpoints and the Internet. Multiple layers of NAT introduce connection instability due to chaotic interactions between states and behaviors at different levels. **No Double NAT.**
-- NATs should have a port mapping or connection timeout no shorter than 60 seconds.
-- Place no more than about 16,000 devices behind each NAT-managed external IP address to ensure that each device can map a sufficient number of ports.
-- Switches and wireless access points should allow direct local traffic between local devices. Turn off any "local isolation" features. Some switches might allow finer-grained control, and on these, it would be sufficient to allow local UDP traffic to/from 9993 (or in general).
+- IPv6 is recommended and can greatly improve direct connection reliability if supported on both ends of a direct link. If present, implement it without NAT (NAT is unnecessary with IPv6 and adds complexity) and with a stateful firewall that permits bidirectional UDP conversations.
+- Do not use "symmetric" NAT. Use "full cone" or "port restricted cone" NAT. Symmetric NAT is extremely hostile to peer-to-peer traffic and degrades VoIP, video chat, games, WebRTC, and many other protocols as well as ZeroTier.
+- No more than one layer of NAT should be present between ZeroTier endpoints and the Internet. Multiple layers introduce connection instability from chaotic interactions between states and behaviors at different levels. Do not use double NAT.
+- NAT devices should have a port mapping or connection timeout no shorter than 60 seconds.
+- Place no more than 16,000 devices behind each NAT-managed external IP address to ensure each device can map a sufficient number of ports.
+- Switches and wireless access points should allow direct local traffic between local devices. Turn off any "local isolation" features. If switches allow finer-grained control, allow local UDP traffic to/from port 9993.
 
 ## Configuration example
 
 ![](./img/zerotier-01.webp)
 
-By default, ZeroTier is designed to be zero-configuration. A user can start a new ZeroTier node without having to write configuration files or provide the IP addresses of other nodes. It’s also designed to be fast. Any two devices in the world should be able to locate each other and communicate almost instantly so the following example will enable ZeroTier on a RouterOS device and connect one mobile phone using the ZeroTier application.
+ZeroTier is designed to be zero-configuration — you can start a new node without writing configuration files or providing the IP addresses of other nodes. Any two devices in the world can locate each other and communicate almost instantly. The following example enables ZeroTier on a RouterOS device and connects one mobile phone with the ZeroTier application.
 
 1. Register on [my.zerotier.com](https://my.zerotier.com/) and **Create A Network**, obtain the *Network ID*, in this example: *1d71939404912b40*.  
    ![](./img/image-8a1dad2d.webp)
-2. [Download](https://mikrotik.com/download) and Install ZeroTier NPK package in RouterOS, you can find it under the "Extra packages", upload the package to the device and reboot the unit.
+2. [Download](https://mikrotik.com/download) and install the ZeroTier NPK package. You can find it under "Extra packages". Upload the package to the device and reboot.
 3. Enable the default (official) ZeroTier instance:
 
    ```ros
@@ -88,15 +86,15 @@ By default, ZeroTier is designed to be zero-configuration. A user can start a ne
    0 R zerotier1  42:AC:0D:0F:C6:F6  1d71939404912b40  modest_metcalfe  OK   
    ```
 
-6. Now you might need to allow connections from the ZeroTier interface to your router, and **optionally**, to your other LAN interfaces:
+6. You may need to allow connections from the ZeroTier interface to your router, and optionally, to your other LAN interfaces:
 
    ```ros
    /ip/firewall/filter/add action=accept chain=forward in-interface=zerotier1 place-before=0
    /ip/firewall/filter/add action=accept chain=input in-interface=zerotier1 place-before=0
    ```
 
-7. Install a ZeroTier client on your smartphone or computer, follow the ZeroTier manual on how to connect to the same network from there.
-8. If **"****Access Control"** is set to **"Private"**, you must authorize nodes before they become members:  
+7. Install a ZeroTier client on your smartphone or computer. Follow the ZeroTier manual to connect to the same network.
+8. If **"Access Control"** is set to **"Private"**, you must authorize nodes before they become members:  
    ![](./img/zerotier-03.webp)
 
 9. ```ros
@@ -115,54 +113,8 @@ By default, ZeroTier is designed to be zero-configuration. A user can start a ne
    ```
 
 :::tip
-You should specify routes to specific internal subnets in the [ZeroTier cloud console](https://my.zerotier.com/), to make sure you can access those networks when connecting from other devices.
+You should specify routes to specific internal subnets in the [ZeroTier cloud console](https://my.zerotier.com/) to ensure you can access those networks when connecting from other devices.
 :::
-
-### Peer
-
-**Sub-menu:** `/zerotier/peer`
-
-ZeroTier's peer is an informative section with a list of nodes that your node knows about. Nodes can not talk to each other unless they are joined and authorized on the same network.
-
-```ros
-[admin@Home] > `/zerotier/peer/print` 
-Columns: INSTANCE, ZT-ADDRESS, LATENCY, ROLE, PATH
-# INSTANCE  ZT-ADDRESS  LATENCY  ROLE    PATH
-0 zt1       61d294b9cb  186ms    PLANET  active,preferred,50.7.73.34/9993,recvd:4s526ms                  
-1 zt1       62f865ae71  270ms    PLANET  active,preferred,50.7.252.138/9993,recvd:4s440ms,sent:9s766ms   
-2 zt1       778cde7190  132ms    PLANET  active,preferred,103.195.103.66/9993,recvd:4s579ms,sent:9s766ms 
-3 zt1       992fcf1db7  34ms     PLANET  active,preferred,195.181.173.159/9993,recvd:4s675ms,sent:4s712ms
-4 zt1       159924d630  130ms    LEAF    active,preferred,34.121.192.xx/21002,recvd:3s990ms,sent:3s990ms
-```
-
-# Parameters
-
-**Sub-menu:** `/zerotier`
-
-| Property                                                                                                                                          | Description                                                                                                 |
-|:--|:--|
-| **name**(*string*; default: **zt1**)                                                                                                              | Instance name.                                                                                              |
-| **port** (*number;*default: **9993**)                                                                                                             | Port number the instance listens to.                                                                         |
-| **identity** (*string*; default) *[sensitive](https://help.MikroTik.com/docs/spaces/ROS/pages/380076066/List+of+menus+with+sensitive+parameters)* | Instance 40-bit unique address.                                                                             |
-| **interface** (string; default: **all)**                                                                                                          | List of interfaces that are used in order to discover ZeroTier peers, by using ARP and IP type connections. |
-| **route-distance** (number; default: **1** )                                                                                                      | Route distance for routes obtained from planet/moon servers.                                                |
-
-```ros
-[admin@MikroTik] > zerotier/interface/
-```
-
-| Property                                       | Description                                                        |
-|:--|:--|
-| **allow-default** (*string; yes | no)*         | A network can override the system's default route (force VPN mode). |
-| **allow-global**(*string; yes | no)*           | ZeroTier IP addresses and routes can overlap public IP space.      |
-| **allow-managed**(*string; yes | no)*          | ZeroTier managed IP addresses and routes are assigned.             |
-| **arp-timeout** ( *number*; default: **auto**) | ARP timeout value.                                                |
-| **comment** (*string*; Default: )              | Descriptive comment for the interface.                            |
-| **copy-from**                                  | Allows copying existing interface configuration.                  |
-| **disable-running-check**(*string; yes | no)*  | Force interface in "running" state.                                |
-| **instance**(*string*; Default:**zt1**)        | ZeroTier instance name.                                            |
-| **name**(*string*; default: **zerotier1**)     | A short name.                                                      |
-| **network**(*string*; Default)                 | 16-digit network ID.                                               |
 
 # Controller
 
@@ -170,38 +122,19 @@ RouterOS implements ZeroTier functionality in the role of a node where most of t
 
 A common misunderstanding is to conflate network controllers with root servers (planet and moons). Root servers are connection facilitators that operate at the **[VL1 level](https://docs.zerotier.com/zerotier/manual/#2networkhypervisoroverviewaname2a)**. Network controllers are configuration managers and certificate authorities that belong to the **[VL2 level](https://docs.zerotier.com/zerotier/manual/#22vl2theethernetvirtualizationlayeraname2_2a).** Generally, root servers don’t join or control virtual networks and network controllers are not root servers, though it is possible to have a node do both.
 
-**Sub-menu:** `/zerotier/controller`
+Every ZeroTier instance has a self-hosting network controller that can be used to host virtual networks. A controller is responsible for admitting members to the network and issuing default configuration information including certificates. Controllers can in theory host up to 2^24 networks and serve many millions of devices, but you should spread large numbers of networks across many controllers for load balancing and fault tolerance.
 
-Every ZeroTier instance has a self-hosting network controller that can be used to host virtual networks. A controller is responsible for admitting members to the network, and issuing default configuration information including certificates. Controllers can in theory host up to 2^24 networks and serve many millions of devices (or more), but we recommend spreading large numbers of networks across many controllers for load balancing and fault tolerance reasons.
-
-## Parameters
-
-| Property                                         | Description                                                                                                                                                                                                                                                                                                          |
-|:--|:--|
-| **broadcast** *( yes | no; Default: **yes**)*    | Allow receiving broadcast (*FF:FF:FF:FF:FF:FF*) packets.                                                                                                                                                                                                                                                             |
-| **comment** (*string*; Default: )                | Descriptive comment for the controller.                                                                                                                                                                                                                                                                              |
-| **copy-from** (*string*; Default: )         | Copies an existing item. It takes default values of a new item's properties from another item. If you do not want to make an exact copy, you can specify new values for some properties. When copying items that have names, you will usually have to give a new name to a copy.                                     |
-| **instance** (*string*; Default: **zt1**)        | ZeroTier instance name.                                                                                                                                                                                                                                                                                              |
-| **ip-range** (*IP*; Default: )                   | IP range, *for example, 172.16.16.1-172.16.16.254.*                                                                                                                                                                                                                                                                  |
-| **ip6-6plane** *( yes | no; Default: **no**)*    | This option gives every member a /80 within a /40 network but uses NDP emulation to route *all* IPs under that /80 to its owner. The `6plane` mode is great for use cases like Docker since it allows every member to assign IPv6 addresses within its /80 that just work instantly and globally across the network. |
-| **ip6-rfc4193** *( yes | no; Default: **no**)*   | The *rfc4193* mode gives every member a /128 on a /88 network.                                                                                                                                                                                                                                                       |
-| **ip6-range** (*IPv6*; Default: )                | IPv6 range, *for example fd00:feed:feed:beef::-fd00:feed:feed:beef:ffff:ffff:ffff:ffff.*                                                                                                                                                                                                                             |
-| **mtu** *(integer;* Default: **2800**)           | Network MTU.                                                                                                                                                                                                                                                                                                         |
-| **multicast-limit** (*integer*: Default: **32**) | Maximum recipients for a multicast packet.                                                                                                                                                                                                                                                                           |
-| **name** (*string*; Default: )                   | A short name for this controller.                                                                                                                                                                                                                                                                                    |
-| **network** (*string*; Default)                  | 16-digit network ID.                                                                                                                                                                                                                                                                                                 |
-| **private** *( yes | no; Default: **yes**)*      | Enables access control.                                                                                                                                                                                                                                                                                              |
-| **routes** (*IP@GW*; Default: )                  | Push routes in the following format: *Routes ::= Route[,Routes]* *Route ::= Dst[@Gw]*                                                                                                                                                                                                                                |
+Controller is configured in [`/zerotier/controller`](https://manual.mikrotik.com/docs/cli-reference/zerotier/controller/controller) menu.
 
 ## Configuration example
 
-In the following example, we will use the RouterOS built-in ZeroTier controller to send our new network hosts appropriate certificates, credentials, and configuration information. The controller will operate from the "RouterOS Home" device and we will join 3 units to our network: mobile phone, laptop, RouterOS Office device, but theoretically, you can join up to 100 devices in one network.
+This example uses the RouterOS built-in ZeroTier controller to send the new network hosts appropriate certificates, credentials, and configuration information. The controller operates from the "RouterOS Home" device and joins 3 units to the network: a mobile phone, a laptop, and a RouterOS Office device. You can join up to 100 devices in one network.
 
 ![](./img/zerotier-04.webp)
 
 ### RouterOS Home
 
-First, we enable the default instance which operates at the **VL1** level :
+First, enable the default instance which operates at the **VL1** level:
 
 ```ros
 [admin@Home] /zerotier> print
@@ -211,9 +144,9 @@ Columns: NAME, PORT, IDENTITY.PUBLIC
 0 zt1   9993  879c0b5265:0:d5fd2d17805e011d9b93ce8779385e427c8f405e520eea9284809d8444de0335a817xxb21aa4ba153bfbc229ca34d94e08de96d925a4aaa19b252da546693a28
 ```
 
-Now we create a new network via the controller section which will operate at the **VL2** level. Each network has its own controller and each network ID is generated from the controller address and controller ID combination.
+Now, create a new network through the controller section which operates at the **VL2** level. Each network has its own controller and each network ID is generated from the controller address and controller ID combination.
 
-Note that we use the ***private=yes*** option for a more secure network:
+Use the ***private=yes*** option for a more secure network:
 
 ```ros
 [admin@Home] /zerotier> controller/add name=ZT-private instance=zt1 ip-range=172.27.27.10-172.27.27.20 private=yes routes=172.27.27.0/24
@@ -223,7 +156,7 @@ Columns: INSTANCE, NAME, NETWORK, PRIVATE
 0 zt1       ZT-private  879c0b5265a99e4b  yes
 ```
 
-Add our new network under the interface section:
+Add the new network under the interface section:
 
 ```ros
 [admin@Home] /zerotier> interface/add network=879c0b5265a99e4b name=myZeroTier instance=zt1 
@@ -233,9 +166,9 @@ Columns: NAME, MAC-ADDRESS, NETWORK, STATUS
 0 myZeroTier  4A:19:35:6E:00:6E  879c0b5265a99e4b  ACCESS_DENIED
 ```
 
-Each new peer asks for a controller to join the network, in this situation, we have *ACCESS\_DENIED* status and we have to authorize a new peer, that is because we used the **private=yes** option.
+Each new peer asks the controller to join the network. In this case, the status is *ACCESS\_DENIED* and the peer must be authorized, because the **private=yes** option was used.
 
-After authorization, each member in the network receives information from the controller about new peers and approval they can exchange packets with them:
+After authorization, each member in the network receives information from the controller about new peers and approval to exchange packets with them:
 
 ```ros
 [admin@Home] /zerotier> controller/member/print
@@ -263,7 +196,7 @@ DAc 172.27.27.0/24  myZeroTier         0
 
 ### RouterOS Office
 
-Configuration on the Office device. We will enable the default instance and ask a controller to join the *879c0b5265a99e4b* network:
+Configuration on the Office device. Enable the default instance and ask the controller to join the *879c0b5265a99e4b* network:
 
 ```ros
 [admin@office] /zerotier> interface/add network=879c0b5265a99e4b instance=zt1 name=ZT-interface 
@@ -273,7 +206,7 @@ Columns: NAME, MAC-ADDRESS, NETWORK, STATUS
 0 ZT-interface  4A:40:1C:38:97:BA  879c0b5265a99e4b  ACCESS_DENIED
 ```
 
-As previously, because our network is private, we have to authorize a new peer via "RouterOS home device". After that verify from controller received IP address and route:
+As before, because the network is private, the new peer must be authorized on the "RouterOS Home" device. After that, verify the IP address and route received from the controller:
 
 ```ros
 [admin@Home] /zerotier> controller/member/print
@@ -295,7 +228,7 @@ Columns: NETWORK, ZT-ADDRESS, IP-ADDRESS, LAST-SEEN
 3 A  ZT-private  deba5dc5b1  172.27.27.13  4s55ms 
 ```
 
-Verify via ZeroTier obtained IP address and route:
+Verify the IP address and route obtained through ZeroTier:
 
 ```ros
 [admin@office] /zerotier> `/ip/address/print` where interface~"ZT"
@@ -315,12 +248,11 @@ DAc 172.27.27.0/24  ZT-interface         0
 
 [Download the ZeroTier app](https://www.zerotier.com/download/) for your mobile phone or computer and join your newly created network:
 
-1) Via our Laptop ZeroTier application we join the *879c0b5265a99e4b* network;
-
-2) User Zerotier mobile app to join the *879c0b5265a99e4b*network;
+1. From the laptop ZeroTier application, join the *879c0b5265a99e4b* network.
+2. Use the ZeroTier mobile app to join the *879c0b5265a99e4b* network.
 
 :::warning
-Also all other new hosts you have to authorize under the */zerotier/controller/member/* section.
+All other new hosts must also be authorized in the `/zerotier/controller/member/` section.
 :::
 
 ![](./img/zerotier-05.webp)

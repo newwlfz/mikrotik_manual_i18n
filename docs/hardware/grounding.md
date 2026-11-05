@@ -6,8 +6,8 @@ sidebar_label: 'Grounding'
 description: 'Grounding requirements for MikroTik RouterOS devices emphasize proper installation of shielded cables, lightning arresters, and reliable grounding infrastructure using 2.5-4 mm² Cu wire with corrosion-resistant connectors, including specific attachment points on RouterBOARD units.'
 tags:
   - 'grounding'
-source: https://manual.mikrotik.com/docs/hardware/grounding
-captured_at: '2026-11-04T11:31:26+08:00'
+source: https://manual.mikrotik.com/docs/7.25/hardware/grounding
+captured_at: '2026-11-03T15:21:36+08:00'
 ---
 
 ## Introduction
@@ -23,24 +23,24 @@ Use 2.5-4 mm² Cu (AWG 11–13) wire with corrosion-resistant connectors for gro
 
 ### Device with Shielded Ports
 
-![shielded.png](./img/grounding-01.webp)
-![](./img/grounding-diagram.png)
+![shielded.png](/img/48f8692224741bf1.webp)
+![](/img/530cf2c71e14e527.png)
 
 ### Device with Unshielded Ports
 
-![unshielded.png](./img/image-7b2658fd.webp)
+![unshielded.png](/img/7b2658fdb11cb76d.webp)
 
 ### PoE injector with shielded connectors
 
-![poeinjector.png](./img/grounding-03.webp)
+![poeinjector.png](/img/deaecaccb525b0c4.webp)
 
 ## RouterBOARD grounding wire attachment points
 
-![](./img/grounding-04.webp)
+![](/img/c43fbb0b3ab9927f.webp)
 
-![screw1.png](./img/grounding-05.webp)
+![screw1.png](/img/01c1bd7ce52982e8.webp)
 
-![screw2.png](./img/grounding-06.webp)
+![screw2.png](/img/0d587a5baaa43769.webp)
 
 :::info
 You should not use Power Sourcing Equipment (PSE) with the positive terminal connected to Protective Earth (PE) if it power a MikroTik device. It may cause a short circuit, harm you and your device.

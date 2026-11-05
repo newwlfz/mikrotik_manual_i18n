@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wifi/configuration"
 sidebar_position: 6
 title: "configuration"
 sidebar_label: 'configuration'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/configuration
-captured_at: '2026-11-01T21:27:46+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wifi/configuration
+captured_at: '2026-11-01T21:23:10+08:00'
 ---
 
 -----------
@@ -55,6 +55,7 @@ captured_at: '2026-11-01T21:27:46+08:00'
 <ArgTableRow arg="distance" typ="enum (indoors | dynamic) { indoors:0, dynamic:0xffffffff }" unset="1"></ArgTableRow>
 <ArgTableRow arg="hw-retries" typ="num" unset="1"></ArgTableRow>
 <ArgTableRow arg="hw-protection-mode" typ="enum (none | rts-cts | cts-to-self) { none:0, rts-cts:1, cts-to-self:2 }" unset="1"></ArgTableRow>
+<ArgTableRow arg="hw-protection-threshold" typ="num" unset="1"></ArgTableRow>
 <ArgTableRow arg="frame-lifetime" typ="time" unset="1"></ArgTableRow>
 <ArgTableRow arg="disconnect-timeout" typ="time" unset="1"></ArgTableRow>
 <ArgTableRow arg="keepalive-frames" typ="enum (enabled | disabled)" unset="1"></ArgTableRow>

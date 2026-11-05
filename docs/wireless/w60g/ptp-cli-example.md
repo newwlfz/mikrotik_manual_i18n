@@ -8,8 +8,8 @@ tags:
   - 'bridging'
   - 'wireless'
   - 'ptp'
-source: https://manual.mikrotik.com/docs/wireless/w60g/ptp-cli-example
-captured_at: '2026-11-04T11:35:42+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/w60g/ptp-cli-example
+captured_at: '2026-11-04T11:24:14+08:00'
 ---
 
 ### Summary

@@ -3,377 +3,291 @@ sidebar_key: "network-management/dns"
 sidebar_position: 3
 title: "DNS"
 sidebar_label: 'DNS'
-description: 'This page introduces DNS functionality in MikroTik RouterOS, explaining how to configure the router as a DNS cache or primary server with options for remote requests, caching policies, and dynamic server integration. It details configuration properties like cache size, TTL settings, and DNS over HTTPS (DoH) support.'
+description: 'The RouterOS DNS resolver: use the router as the DNS server for your network, check and troubleshoot it, add local names, send domains to other servers, use domain names in the firewall, block ads with adlists, use DNS over HTTPS, and repeat mDNS between networks.'
 tags:
   - 'dns'
   - 'doh'
   - 'adlist'
-source: https://manual.mikrotik.com/docs/network-management/dns
-captured_at: '2026-11-04T11:32:42+08:00'
+  - 'mdns'
+source: https://manual.mikrotik.com/docs/7.25/network-management/dns
+captured_at: '2026-11-04T11:21:10+08:00'
 ---
 
-## Introduction
+RouterOS has a caching DNS resolver. The router uses it for its own lookups, and it can be the DNS server for the devices in your network: it asks upstream DNS servers, for example those of your ISP, and keeps their answers in its cache.
 
-Domain Name System (DNS) usually refers to the phonebook of the Internet. In other words, DNS is a database that links strings (known as hostnames), such as [mikrotik.com](https://mikrotik.com) to a specific IP address, such as 159.148.172.205 or 2a02:610:7501:2000::205
+With the default configuration, this already works, and you do not need to change anything. The following sections cover the setup, how to check it, and extra tasks such as local names and ad blocking. The extras apply only to devices that use the router as their DNS server: devices that get other DNS servers from DHCP, for example 1.1.1.1, bypass the router's static entries and adlists.
 
-A MikroTik router with a DNS feature enabled can be set as a DNS cache for any DNS-compliant client. Moreover, a MikroTik router can be specified as a primary DNS server under its DHCP server settings. When remote requests are enabled, a MikroTik router responds to TCP and UDP DNS requests on port 53.
+## Use the router as the DNS server for your network
 
-When both static and dynamic servers are set, static server entries are preferred, however, it does not indicate that a static server will always be used (for example, previously a query was received from a dynamic server, but static was added later, then a dynamic entry will be preferred).
+The default configuration already does this. To set it up yourself:
 
-:::tip
-When the DNS server *allow-remote-requests* is used make sure that you limit access to your server over TCP and UDP protocol port 53 only for known hosts.
+1. Allow the router to answer the devices in your network:
 
-:::
+   ```ros
+   /ip/dns/set allow-remote-requests=yes
+   ```
 
-There are several options on how you can manage DNS functionality on your LAN - use public DNS, use the router as a cache, or do not interfere with DNS configuration. Let us take as an example the following setup: Internet service provider (ISP) → Gateway (GW) → Local area network (LAN). The GW is a RouterOS based device with the default configuration:
+2. Give the router's address to your DHCP clients as their DNS server: set `dns-server` in `/ip/dhcp-server/network`, for example to 192.168.88.1 (see [DHCP server](/docs/network-management/dhcp/server)).
 
-- You do not configure any DNS servers on the "GW" DHCP server network configuration - the device will forward the DNS server IP address configuration received from `ISP` to `LAN` devices.
-- You configure DNS servers on the "GW" DHCP server network configuration - the device will give configured DNS servers to `LAN` devices (also "/ip/dns/set allow-remote-requests=yes*" must* be enabled).
-- "dns-none" is configured under DNS servers on the "GW" DHCP server network configuration - the device will not forward any of the **dynamic** DNS servers to `LAN` devices.
+The router gets its upstream servers from other services, for example from the ISP through the DHCP client on the WAN port. They show up as `dynamic-servers` in `/ip/dns/print`. To use other upstream servers, set them in `servers`. The router tries them before the dynamic ones:
 
-### DNS configuration
+```ros
+/ip/dns/set servers=1.1.1.1,9.9.9.9
+```
 
-The DNS facility is used to provide domain name resolution for the router itself as well as for the clients connected to it.
+With `allow-remote-requests=yes`, the router answers DNS queries on UDP and TCP port 53 on all its addresses. The default firewall drops these queries when they come from the internet. If you use your own firewall rules, drop them as well, so your router is not an open resolver that anyone on the internet can use:
 
-| Property | Description |
+```ros
+/ip/firewall/filter/add chain=input in-interface-list=WAN protocol=udp dst-port=53 action=drop comment="drop DNS from WAN"
+/ip/firewall/filter/add chain=input in-interface-list=WAN protocol=tcp dst-port=53 action=drop comment="drop DNS from WAN"
+```
+
+## Check and troubleshoot
+
+To test a name on the router itself:
+
+```ros
+:put [:resolve mikrotik.com]
+```
+
+To test the router as the DNS server from a computer in your network, ask it directly, for example with `nslookup mikrotik.com 192.168.88.1`.
+
+The answer of a DNS server has a status:
+
+- `NOERROR`: the name exists. The answer can still contain no records, when the name has none of the requested type.
+- `NXDOMAIN`: the name does not exist.
+- `SERVFAIL`: the router could not get an answer, for example because no upstream server answered in time.
+
+The router keeps answers in its cache for their time to live (TTL). To see the cached answers, or to empty the cache after a change:
+
+```ros
+/ip/dns/cache/print
+/ip/dns/cache/flush
+```
+
+The router logs DNS errors, for example about the DoH server or an adlist import, in the `dns` topic:
+
+```ros
+/log/print where topics~"dns"
+```
+
+If devices get no answer at all, check `allow-remote-requests` and your firewall rules. If a name resolves to `0.0.0.0`, an adlist blocks it, on the router or on the upstream server.
+
+## Local names
+
+Static entries answer names from the router itself, for example for the devices in your network:
+
+```ros
+[admin@MikroTik] > /ip/dns/static/add name=nas.lan address=192.168.88.20
+[admin@MikroTik] > /ip/dns/static/add name=printer.lan address=192.168.88.21
+[admin@MikroTik] > /ip/dns/static/add name=example.lan address=192.168.88.30 match-subdomain=yes
+[admin@MikroTik] > /ip/dns/static/print
+Columns: NAME, TYPE, ADDRESS, TTL
+# NAME         TYPE  ADDRESS        TTL
+0 nas.lan      A     192.168.88.20  1d
+1 printer.lan  A     192.168.88.21  1d
+2 example.lan  A     192.168.88.30  1d
+```
+
+- An IPv6 address makes an AAAA entry.
+- The router also answers reverse lookups (PTR) for these addresses.
+- With `match-subdomain=yes`, an entry answers for the name and for every name below it, for example `www.example.lan`.
+
+The DHCP server and IP neighbor discovery add static entries by themselves, flagged `D` (dynamic), when their `add-dns-entries` setting is on. See [DHCP server](/docs/network-management/dhcp/server) and [`/ip/neighbor/discovery-settings`](/docs/cli-reference/ip/neighbor/discovery-settings).
+
+## Send a domain to another DNS server
+
+A `FWD` entry sends the queries for a name to another DNS server instead of the normal upstream servers, for example the names of a company network to the company's DNS server:
+
+```ros
+/ip/dns/static/add name=corp.example.com type=FWD forward-to=10.0.0.53 match-subdomain=yes
+```
+
+`forward-to` takes an IP address, a DNS name or the name of a forwarder. Without `forward-to`, a `FWD` entry sends the queries to the normal upstream servers.
+
+A forwarder is a named group of DNS and DoH servers for `FWD` entries. The router sends each query to the next server of the group in turn:
+
+```ros
+/ip/dns/forwarders/add name=branch dns-servers=10.1.0.53,10.1.1.53
+/ip/dns/static/add name=branch.example.com type=FWD forward-to=branch match-subdomain=yes
+```
+
+The router does not skip a server of a forwarder that stops answering: the queries that reach it fail. Add only servers that work.
+
+## Use domain names in firewall rules
+
+With `address-list`, the router adds the addresses it answers for an entry to a firewall address list. With a `FWD` entry, these are the addresses in the upstream answer:
+
+```ros
+/ip/dns/static/add name=example.com type=FWD address-list=example-com match-subdomain=yes
+```
+
+After a device in your network looks up `example.com` through the router, the list holds the addresses of the answer:
+
+```ros
+[admin@MikroTik] > /ip/firewall/address-list/print where list=example-com
+Flags: D - DYNAMIC
+Columns: LIST, ADDRESS, CREATION-TIME
+#   LIST         ADDRESS        CREATION-TIME
+;;; created for example.com.
+0 D example-com  198.51.100.10  2026-09-24 12:32:52
+;;; created for example.com.
+1 D example-com  198.51.100.11  2026-09-24 12:32:52
+```
+
+Use the list in firewall rules, or in mangle rules to route the traffic of a domain differently (see [Policy routing](/docs/user-guides/routing-and-networking-protocols/policy-routing)). The router removes an entry when the TTL of the answer has passed, plus `address-list-extra-time` from `/ip/dns`. Only the queries of devices add entries. The router's own lookups, for example with `:resolve`, do not.
+
+## Block ads with adlists
+
+An adlist is a list of domain names, for example of ad and tracking servers, that the router blocks. It answers A queries for these names with `0.0.0.0` and AAAA queries with `::`, so the devices cannot reach them.
+
+The router keeps adlists in the DNS cache, so raise `cache-size` before you add a list. A list of about 75 000 names needs about 6 MiB; the example leaves room for the normal cache as well:
+
+```ros
+[admin@MikroTik] > /ip/dns/set cache-size=16384
+[admin@MikroTik] > /ip/dns/adlist/add url=https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+[admin@MikroTik] > /ip/dns/adlist/print
+0  url="https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
+   match-count=0 name-count=76524
+```
+
+`name-count` shows how many names the router imported, and `match-count` how many queries the list blocked.
+
+When the cache is too small, the router stops the import and logs `adlist read: max cache size reached`. Raising `cache-size` afterwards does not complete the list. Remove the adlist and add it again.
+
+An adlist can also be a file on the router, with one name per line, in hosts file format or as plain names:
+
+```ros
+/file/add name=adlist.txt contents="0.0.0.0 ads.example.net\ntracker.example.net\n"
+/ip/dns/adlist/add file=adlist.txt
+```
+
+To stop blocking a name, add a `FWD` entry for it. The router then sends its queries to the upstream servers:
+
+```ros
+/ip/dns/static/add name=ads.example.net type=FWD
+```
+
+To stop all adlists for a while, for example for 10 minutes:
+
+```ros
+/ip/dns/adlist/pause duration=10m
+```
+
+[Video: Adlist setup](https://youtube.com/watch?v=RMJnjyAOfLI)
+
+## DNS over HTTPS
+
+With DNS over HTTPS (DoH), the router sends its upstream queries encrypted, over HTTPS, to one DoH server:
+
+```ros
+/ip/dns/set use-doh-server=https://cloudflare-dns.com/dns-query verify-doh-cert=yes
+```
+
+Keep `servers` or `dynamic-servers`, or add a static entry for the DoH server's host name: the router looks up that name through its normal DNS servers. With `verify-doh-cert=yes`, the router checks the server's certificate against the built-in trust store and the certificates in `/certificate` (see [Certificates](/docs/authentication-authorization-accounting/certificates#built-in-trust-store-authorities)).
+
+Some DoH services need HTTP/2, which only ARM64 and x86 devices, including CHR, support:
+
+- Cloudflare, Control D, Google, NextDNS and OpenDNS work on all devices.
+- Mullvad, Quad9 and UncensoredDNS work only on ARM64 and x86 devices.
+
+While a DoH server is set, the router sends all upstream queries to it and does not fall back to the normal DNS servers. When the DoH server cannot be reached, devices get `SERVFAIL`. `FWD` entries keep using their own servers.
+
+[Video: DoH setup](https://youtube.com/watch?v=w4erB0VzyIE)
+
+## More record types and regular expressions
+
+Static entries can also hold other record types:
+
+- `CNAME` gives a name an alias. The router answers it together with the address of the target, which can come from a static entry or from upstream: `/ip/dns/static/add name=files.lan type=CNAME cname=nas.lan`.
+- `NXDOMAIN` makes a name not exist, for all record types: `/ip/dns/static/add name=tracker.example.com type=NXDOMAIN`.
+- `MX` names the mail server of a domain: `/ip/dns/static/add name=lan type=MX mx-exchange=mail.lan mx-preference=10`.
+- `TXT` holds text: `/ip/dns/static/add name=lan type=TXT text="managed by RouterOS"`.
+
+To match many names with one entry, use a regular expression instead of `name`:
+
+```ros
+/ip/dns/static/add regexp="^host[0-9]+\\.lan\$" address=192.168.88.40
+```
+
+The router matches the expression against the name in lower case, so write it in lower case. On the command line, a backslash is written as `\\` and `$` as `\$`: the entry above is stored as `^host[0-9]+\.lan$`.
+
+Create only one entry for each name and record type. When several entries match the same name, for example an entry with `match-subdomain=yes` and an entry for a name below it, the order of the list does not decide which of them answers.
+
+## mDNS repeater
+
+Multicast DNS (mDNS) lets devices find each other in a local network, for example printers (AirPrint), media players (AirPlay, Chromecast) and smart home devices. mDNS stays in one network. The mDNS repeater passes it on between the interfaces you list, so devices in different networks or VLANs can find each other:
+
+```ros
+/ip/dns/set mdns-repeat-ifaces=bridge,vlan20
+```
+
+Use interfaces that carry multicast, such as Ethernet, VLAN, bridge or EoIP interfaces. Repeating adds multicast traffic to every listed network.
+
+The router receives the mDNS packets itself, so they pass the input chain of the firewall. The default firewall accepts them on the interfaces in the `LAN` interface list. If your input rules drop UDP port 5353 on a listed interface, for example a VLAN that is not in `LAN`, add this rule before the rules that drop traffic:
+
+```ros
+/ip/firewall/filter/add chain=input protocol=udp dst-port=5353 action=accept comment="accept mDNS"
+```
+
+## Technical details
+
+### How the router answers a query
+
+What the router answers depends on the entries that exist for the name:
+
+| Entries for the name | Answer |
 | :-- | :-- |
-| **allow-remote-requests** (*yes* \| *no*; Default: **no**) | Specifies whether to allow router usage as a DNS cache for remote clients. Otherwise, only the router itself will use DNS configuration. |
-| **address-list-extra-time** *(time; Default: **0s**)* | Extra time added to TTL when creating an address list entry. |
-| **cache-max-ttl** (*time*; Default: **1w**) | Maximum time-to-live for cache records. In other words, cache records will expire unconditionally after cache-max-TTL time. Shorter TTLs received from DNS servers are respected. |
-| **cache-size** (*integer[64..4294967295]*; Default: **2048**) | Specifies the size of the DNS cache in KiB. |
-| **max-concurrent-queries** (*integer*; Default: **100**) | Specifies how many concurrent queries are allowed. |
-| **max-concurrent-tcp-sessions** (*integer*; Default: **20**) | Specifies how many concurrent TCP sessions are allowed. |
-| **max-udp-packet-size** (*integer [50..65507]*; Default: **4096**) | Maximum size of an allowed UDP packet. |
-| **mdns-repeat-ifaces** (*list of interfaces*; Default: ) | Once an interface in this list receives an mDNS packet, it will forward it to all other interfaces in this list. Only supports IPv4. |
-| **query-server-timeout** (*time*; Default: **2s**) | Specifies how long to wait for a query response from a server. |
-| **query-total-timeout** (*time*; Default: **10s**) | Specifies how long to wait for a query response in total. Note that this setting must be configured taking into account "query-server-timeout" and the number of used DNS servers. |
-| **servers** (*list of IPv4/IPv6 addresses@vrf*; Default: ) | List of DNS server IPv4/IPv6 addresses |
-| **cache-used** (*integer*) | Shows the currently used cache size in KiB |
-| **dynamic-server** (*IPv4/IPv6 list*) | List of dynamically added DNS servers from different services, for example, DHCP. |
-| **doh-max-concurrent-queries** (*integer*; Default: **50**) | Specifies how many DoH concurrent queries are allowed. |
-| **doh-max-server-connections** (*integer*; Default: **5**) | Specifies how many concurrent connections to the DoH server are allowed. |
-| **doh-timeout** (*time*; Default: **5s**) | Specifies how long to wait for a query response from the DoH server. |
-| **use-doh-server** (*string; Default: )* | Specifies which DoH server must be used for DNS queries. DoH functionality overrides "*servers*" usage if specified. The server must be specified with an "https://" prefix. Supports only one DoH server. |
-| **verify-doh-cert** (*yes* \| *no*; Default: **no**) | Specifies whether to validate the DoH server, when one is being used. Will use the "/certificate" list in order to verify server validity. |
-| **vrf** (vrf; Default: main) | Specifies the VRF that should use the DNS resolver. The DNS resolver processes only requests originating from the designated VRF or from the resolver itself. |
-
-```text
-[admin@MikroTik] > ip dns print         
-                      servers: 
-              dynamic-servers: 10.155.0.1
-               use-doh-server: 
-              verify-doh-cert: no
-   doh-max-server-connections: 5
-   doh-max-concurrent-queries: 50
-                  doh-timeout: 5s
-        allow-remote-requests: yes
-          max-udp-packet-size: 4096
-         query-server-timeout: 2s
-          query-total-timeout: 10s
-       max-concurrent-queries: 100
-  max-concurrent-tcp-sessions: 20
-                   cache-size: 2048KiB
-                cache-max-ttl: 1d
-                   cache-used: 48KiB
-```
-
-Dynamic DNS servers are obtained from different facilities available in RouterOS, for example, DHCP client, VPN client, IPv6 Router Advertisements, etc.
-
-Servers are processed in a queue order - static servers as an ordered list, dynamic servers as an ordered list. When the DNS cache has to send a request to the server, it tries servers one by one until one of them responds. After that this server is used for all types of DNS requests. The same server is used for any types of DNS requests, for example, A and AAAA types. If you use only dynamic servers, then the DNS returned results can change after reboot, because servers can be loaded into IP/DNS settings in a different order due to different speeds on how they are received from facilities mentioned above.
-
-If at some point the server which was being used becomes unavailable and can not provide DNS answers, then the DNS cache restarts the DNS server lookup process and goes through the list of specified servers once more.
-
-### DNS Cache
-
-This menu provides two lists with DNS records stored on the server:
-
-- *"*`/ip/dns/cache`*"*: this menu provides a list of cached DNS entries that RouterOS cache can reply with to client requests;
-- *"*`/ip/dns/cache/all`*"*: This menu provides a complete list of all cached DNS records stored including also, for example, PTR records.
-
-:::tip
-You can empty the DNS cache with the command: `/ip/dns/cache/flush`.
-
-:::
-
-### DNS Static
-
-The MikroTik RouterOS DNS cache has an additional embedded DNS server feature that allows you to configure multiple types of DNS entries that can be used by the DNS clients using the router as their DNS server. This feature can also be used to provide false DNS information to your network clients. For example, it can resolve any DNS request for a certain set of domains (or for the whole Internet) to your own page.
-
-```text
-[admin@MikroTik] /ip/dns/static/add name=www.mikrotik.com address=10.0.0.1
+| None | From the cache or the upstream servers. |
+| Static entry, for example A | From the entry, for its record type. Other record types come from upstream; when upstream has none, the router answers `NOERROR` without records. |
+| Name on an adlist | `0.0.0.0` for A and `::` for AAAA, also when a static A or AAAA entry exists. Other record types come from upstream. |
+| `FWD` entry | From the `forward-to` server, or from the upstream servers. The adlists do not apply. |
+| `FWD` and A entries | From the A entry. |
+| `NXDOMAIN` entry | `NXDOMAIN` for all record types. |
 
-```
+Names are matched in lower case. The cache answers with the remaining TTL.
 
-The server is also capable of resolving DNS requests based on basic regular expressions so that multiple requests can be matched with the same entry. In case an entry does not conform to DNS naming standards, it is considered a regular expression. The list is ordered and checked from top to bottom. Regular expressions are checked first, then the plain records.
+### Upstream servers
 
-Use regex to match DNS requests:
+- The router tries the static `servers` first, in order, then the `dynamic-servers`, for example those of the DHCP client with `use-peer-dns=yes`.
+- The router waits `query-server-timeout` for an answer before it tries the next server. When a server answers, the router keeps using it for later queries.
+- When no server answers within `query-total-timeout`, the device gets `SERVFAIL`.
+- When `max-concurrent-queries` queries are waiting for upstream answers, the router drops new queries, also those it could answer from the cache, until one of the waiting queries finishes.
+- A change in `/ip/dns` takes effect at once. A query that arrives at that moment can stay unanswered, and the device sends it again. The cache is kept.
 
-```text
-[admin@MikroTik] /ip/dns/static/add regexp=".*mikrotik.*" address=10.0.0.2
-```
+### Cache
 
-If DNS static entries list matches the requested domain name, then the router will assume that this router is responsible for any type of DNS request for the particular name. For example, if there is only an "A" record in the list, but the router receives an "AAAA" request, then it will reply with an "A" record from the static list and will query the upstream server for the "AAAA" record. If a record exists, then the reply will be forwarded. If not, then the router will reply with an "ok" DNS reply without any records in it. If you want to override domain name records from the upstream server with unusable records, then you can, for example, add a static entry for the particular domain name and specify a dummy IPv6 address for it "::ffff".
+- `cache-max-ttl` limits the TTL of upstream answers. Static entries use their own `ttl`, 1 day by default.
+- Adlists count against `cache-size`: each name needs about 75 bytes.
+- `/ip/dns/cache` lists the answers the router gives. `/ip/dns/cache/all` also lists the other records it holds, such as the PTR records for static entries. Regular expression entries have no PTR records.
 
-List all of the configured DNS entries as an ordered list:
+### Adlists
 
-```text
-[admin@MikroTik] /ip/dns/static/print 
-Columns: NAME, REGEXP, ADDRESS, TTL
-# NAME             REGEXP       ADDRESS   TTL
-0 www.mikrotik.com               10.0.0.1  1d 
-1                  [*mikrotik*]  10.0.0.2  1d
-```
+- Each line holds one name, alone or after an address (`0.0.0.0`, `127.0.0.1` or `::1`) as in a hosts file. Lines and line ends starting with `#` are comments. Names must be in lower case, and wildcards such as `*.example.com` are not supported.
+- Only the listed name is blocked, not the names below it. Blocked answers have a TTL of 2 seconds.
+- The router verifies the certificate of an HTTPS adlist URL (`ssl-verify=yes`). For a server with a self-signed certificate, import its CA certificate into `/certificate`, or set `ssl-verify=no`.
+- The router checks all lists for changes every 4 hours; `/ip/dns/adlist/reload` checks them at once. The router stores the lists on its disk.
+- A router can have up to 64 adlists.
 
-| Property | Description |
-| :-- | :-- |
-| **address** (*IPv4/IPv6*) | The address that will be used for "A" or "AAAA" type records. |
-| **cname**(*string**)* | Alias name for a domain name. |
-| **forward-to** | The IP address of a domain name server to which a particular DNS request must be forwarded. |
-| **mx-exchange** (*string*) | The domain name of the MX server. |
-| **name** (*string)* | Domain name. |
-| **srv-port** (*integer*; Default: 0) | The TCP or UDP port on which the service is to be found. |
-| **srv-target** | The canonical hostname of the machine providing the service ends in a dot. |
-| **text** (*string**)* | Textual information about the domain name. |
-| **type**(*A* \| *AAAA* \| *CNAME* \| *FWD* \| *MX* \| *NS* \| *NXDOMAIN* \| *SRV* \| *TXT* ; Default: *A*) | Type of the DNS record. |
-| **address-list** (*string**)* | Name of the Firewall address list to which the address must be dynamically added when some request matches the entry. The entry will be removed from the address list when TTL expires. |
-| **comment**(*string**)* | Comment about the domain name record. |
-| **disabled** (*yes* \| *no*; Default: yes) | Whether the DNS record is active. |
-| **match-subdomain** (*yes* \| *no*; Default: no) | Whether the record will match requests for subdomains. |
-| **mx-preference** (*integer*; Default: 0) | Preference of the particular MX record. |
-| **ns**(*string*) | Name of the authoritative domain name server for the particular record. |
-| **regexp** (regex) | Regular expression against which domain names should be verified. |
-| **srv-priority** (*integer*; Default: 0) | Priority of the particular SRV record. |
-| **srv-weight** (*integer*; Default: 0) | Weight of the particular SRV record. |
-| **ttl** (*time*; Default: *24h*) | Maximum time-to-live for cached records. |
+### DNS over HTTPS
 
-:::info
-For each static A and AAAA record, in cache automatically is added a PTR record.
+- The router keeps one HTTPS connection (TCP port 443) to the DoH server and sends all queries through it.
+- On ARM64 and x86 devices, the router uses HTTP/2 when the server supports it. Other devices use HTTP/1.1.
+- DoH errors are logged in the `dns` topic, for example `DoH server connection error: timeout connecting`.
 
-:::
+### Forwarders
 
-:::warning
-Regexp is case-sensitive, but DNS requests are not case sensitive, so RouterOS converts DNS names to lowercase before matching any static entries. You should write regex only with lowercase letters. Regular expression matching is significantly slower than plain text entries, so it is advised to minimize the number of regular expression rules and optimize the expressions themselves.
+- The servers of a forwarder take turns, one query each, across `dns-servers` and `doh-servers`. A query that goes to a server that does not answer fails after `query-total-timeout`.
+- For a forwarder, `verify-doh-cert` is on by default, unlike in `/ip/dns`.
 
-:::
+### VRF
 
-:::warning
-Be careful when you configure regex through mixed user interfaces - CLI and GUI. Adding the entry itself might require escape characters when added from CLI. It is recommended to add an entry and execute the print command in order to verify that regex was not changed during addition.
+- The resolver answers devices in the VRF set in `vrf`, `main` by default. Devices in other VRFs get no answer.
+- Upstream servers are reached through the main routing table. To reach a server in another VRF, write it as `address@vrf`, for example `servers=10.0.0.1@vrf1`.
 
-:::
+### mDNS repeater
 
-## DNS over HTTPS (DoH)
+- The router repeats IPv4 mDNS (UDP port 5353 to 224.0.0.251), and sends the packets from its own address on the other interfaces. IPv6 mDNS (ff02::fb) is not repeated.
+- Layer 3 tunnels such as WireGuard carry no multicast, so mDNS cannot be repeated over them.
 
-RouterOS supports DNS over HTTPS (DoH). DoH uses the HTTPS protocol to send and receive DNS requests for better data integrity. The main goal is to provide privacy by eliminating "man-in-the-middle" attacks (MITM).
-
-[Video: DoH setup](http://youtube.com/watch?v=w4erB0VzyIE)
-
-Configure the DoH server:
-
-```ros
-/ip/dns/set use-doh-server=DoH_Server_Query_URL verify-doh-cert=yes
-```
-
-:::info
-It is possible to use [built in certificate authorities store](/docs/authentication-authorization-accounting/certificates#built-in-trust-store-authorities) for DoH server certificate validation without need to manually import the relevant root certificate.
-:::
-
-:::info
-Only one DoH server is supported.
-
-:::
-
-Note that you need at least one regular DNS server configured for the router to resolve the DoH hostname itself.
-
-```ros
-/ip/dns/set servers=1.1.1.1
-```
-
-If you do not have any dynamic or static DNS server configured, add a static DNS entry for the DoH server domain name like this:
-
-```ros
-/ip/dns/static/add address=IP_Address name=Domain_Name
-```
-
-:::tip
-If a DoH server is being used (the DoH DNS name can be resolved) then it will be the only DNS service working at the time and standard DNS servers from the IP/DNS servers list will not be used.
-
-:::
-
-:::tip
-If *`/certificate/settings/set` crl-use* is set to *yes,* RouterOS will check CRL for each certificate in a certificate chain, therefore, an entire certificate chain should be installed into a device - starting from Root CA, intermediate CAs (if there are any), and the certificate that is used for a specific service.
-
-For example, Google DoH, Cloudflare, and OpenDNS full chains contain three certificates, NextDNS has four certificates.
-
-:::
-:::info
-The ARM64, x86, and CHR devices negotiate HTTP/2 when communicating with a DoH server. If the server supports it, the router uses HTTP/2 for DNS over HTTPS queries, providing improved multiplexing and reduced latency compared to HTTP/1.1. If either side lacks HTTP/2 support, the connection falls back to HTTP/1.1.
-
-:::
-
-### Known compatible/incompatible DoH services
-
-#### Compatible DoH services
-
-- Cloudflare
-- Google
-- NextDNS
-- OpenDNS
-
-#### Incompatible DoH services
-
-- Mullvad
-- Yandex
-- UncensoredDNS
-- Quad9
-
-## Adlist
-
-Adlist is an integral component of network-level ad blocking, comprising a curated collection of domain names known for serving advertisements. This feature operates by utilizing Domain Name System (DNS) resolution to intercept A and AAAA requests to these domains. When a client device queries a DNS server for a domain listed on the adlist, the DNS resolution process is altered. Instead of returning the actual IP address of the ad-serving domain, the DNS server responds with the IP address 0.0.0.0. This effectively null-routes the request, as 0.0.0.0 is a non-routable meta-address used to denote an invalid, unknown, or non-applicable target. By redirecting ad-related requests in this manner, the adlist feature ensures that advertisement content is not loaded, enhancing network performance and improving the user experience by reducing unwanted ad traffic.
-
-[Video: Adlist setup](http://youtube.com/watch?v=RMJnjyAOfLI)
-
-:::warning
-**Before configuring, increase the DNS cache as it's used to store adlist entries. If the limit is reached, an error in the DNS,error topic is printed "*adlist read: max cache size reached*"**
-
-:::
-
-:::warning
-Adlist is stored on the device's internal memory. Ensure that there is enough free space to save the desired adlist.
-
-:::
-
-| Property | Description |
-| :-- | :-- |
-| url | Used to specify the URL of an adlist. |
-| ssl-verify | Specifies whether to validate the SSL certificate of the Adlist URL server.   It will use the "/certificate" list to verify server validity. |
-| match-count | Count of matched DNS name requests. |
-| name-count | Count of DNS names imported from the Adlist. |
-| file | Used to specify a local file path from which to read adlist data. |
-| pause | Temporarily pause the use of all adlists. |
-| reload | Checks for updates for all lists, if updates are found, the list is updated, removing or adding entries as needed, the lists are not redownloaded in full when issuing a reload, instead only necessary updates are done. **Important:** It's not mandatory to use reload to update the lists, Adlist checks for new updates once every four hours.     |
-
-### Whitelist for Adlist
-
-To exempt certain domains from Adlist, you need to create a static DNS FWD entry, for example, `/ip/dns/static/add name=bar.test type=FWD`, if such an entry is present, the query will be answered by the router if it has a relevant static DNS entry `/ip/dns/static/add name=bar.test type=A`, or alternatively, if no static rule is present, forwarded to the next DNS, either dynamic or one configured under `/ip/dns/set servers=`, FWD entries are supported by DoH as well.
-
-### Configuration examples
-
-#### URL based adlist
-
-```ros
-/ip/dns/adlist/add url=https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts ssl-verify=no
-```
-
-To see how many domain names are present and matched, you can run:
-
-```ros
-/ip/dns/adlist/print 
-Flags: X - disabled 
-0 url="https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts" ssl-verify=no match-count=122 name-count=164769
-
-```
-
-#### Locally hosted adlist
-
-To create your adlist, you can create a text file with the domains. Example:
-
-```
-0.0.0.0 example1.com
-0.0.0.0 eu1.example.com
-0.0.0.0 ex.com
-0.0.0.0 com.example.com
-```
-
-:::info
-You can create the txt file on your PC, but it is also possible to create it in RouterOS, with the following commands
-
-"/file/add name=host.txt", and then you can run "/file/edit host.txt contents" after adding entries. Press "ctrl o" to save the entries.
-
-:::
-
-To add a file to adlist:
-
-```ros
-/ip/dns/adlist/add file=host.txt
-
-```
-
-:::info
-You can verify that the file is formatted correctly with `/ip/dns/adlist/print`, the results will show how many hostnames you have added, the hostname format must match the format given in the previous example.
-
-:::
-
-```ros
-/ip/dns/adlist/print 
-Flags: X - disabled 
- 0   file=host.txt match-count=0 name-count=4 
-```
-
-## Forwarders
-
-DNS Forwarders allows a user to configure a named DNS forwarder that can be used for static FWD entries as a *forward-to* value.
-
-For each *Forwarder*, it is possible to configure multiple regular upstream and DoH servers. Configured *forwarder* servers will be used by round-robin algorithm - for each query, the next server will be used to resolve DNS name.
-
-### Forwarder configuration
-
-In *`/ip/dns/forwarders`* section, *forwarders* can be added, modified or removed.
-
-| Property | Description |
-| :-- | :-- |
-| **name** (*string;* Default: ) | Forwarder name. |
-| **dns-servers** (*string*; Default: ) | An IP address or a DNS name of a domain name server. Can contain multiple records, for example, *dns-servers=1.1.1.1,8.8.8.8,local.dns* |
-| **doh-servers**(*string;* Default: ) | A URL of a DoH server. Can contain multiple records. |
-| **verify-doh-cert** (*yes* \| *no**;* Default: *yes*) | Specifies whether to validate the DoH server, when one is being used. It will use the "/certificate" list in order to verify server validity. |
-
-### Configuration example
-
-Configure/add a *forwarder*:
-
-```routeros
-/ip/dns/forwarders
-add dns-servers=1.1.1.1,local.dns doh-servers=https://dns.google/dns-query name=forwarder1
-```
-
-Configure/add a static DNS FWD entry:
-
-```routeros
-/ip/dns/static
-add forward-to=forwarder1 name=mikrotik.com type=FWD
-```
-
-Now each time when a router receives a request to resolve [mikrotik.com](http://mikrotik.com), the request using a round-robin algorithm will be forwarded to *1.1.1.1*, *local.dns* or *Google DoH* server.
-
-## mDNS
-
-RouterOS supports [Multicast DNS (mDNS)](https://datatracker.ietf.org/doc/html/rfc6762) for local network service discovery. By default, mDNS operates within a single subnet. The mDNS repeater feature allows extending mDNS functionality across different interfaces or VLANs using the "mdns-repeat-ifaces" property.
-
-### Impact of using mDNS Repeater
-
-- Cross-Subnet Service Discovery: Devices on different subnets or VLANs can discover each other, enhancing the ability to find services (e.g., printers, file sharing).
-- Increased Network Traffic: mDNS repeater may increase multicast traffic, which could lead to congestion, especially in larger networks with many devices.
-
-The mDNS repeater is commonly used with devices such as:
-
-- Apple Ecosystem (AirPrint, AirPlay).
-- Smart Home Devices (Thread, IoT).
-- Chromecast and Media Streaming.
-- Avahi (Linux/Unix).
-
-To enable the mDNS repeater between interfaces, allowing devices connected to these interfaces to discover each other using mDNS, use the following command:
-
-```routeros
-/ip/dns/set mdns-repeat-ifaces=<interface1>,<interface2>
-```
-
-:::info
-mDNS repeater requires multicast-capable interfaces (e.g., Ethernet, VLAN, bridge). Tunnel interfaces such as WireGuard are not supported.
-
-Currently only IPv4 is supported.
-
-:::
-
-:::warning
-MikroTik mDNS Repeater is a local service intercepting multicast packets to rebroadcast them. It requires an "input" rule. mDNS multicast traffic does not traverse the "forward" chain. In case you have strict firewall rules protecting your router from local subnets, you must explicitly allow mDNS traffic before any drop - allowed to receive UDP port 5353 traffic on the "input" chain.
-
-:::
+For all properties, see [`/ip/dns`](/docs/cli-reference/ip/dns/), [`/ip/dns/static`](/docs/cli-reference/ip/dns/static), [`/ip/dns/adlist`](/docs/cli-reference/ip/dns/adlist/) and [`/ip/dns/forwarders`](/docs/cli-reference/ip/dns/forwarders) in the CLI reference.

@@ -1,0 +1,11 @@
+{
+  "position": 20,
+  "label": "Service",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/service/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/service"
+}

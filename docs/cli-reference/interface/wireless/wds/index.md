@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/wds/index"
 sidebar_position: 1
 title: "wds"
 sidebar_label: 'wds'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/wds
-captured_at: '2026-11-01T21:28:05+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/wds
+captured_at: '2026-11-01T21:23:31+08:00'
 ---
 
 -----------

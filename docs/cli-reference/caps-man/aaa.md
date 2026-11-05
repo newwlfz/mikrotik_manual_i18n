@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/caps-man/aaa"
 sidebar_position: 1
 title: "aaa"
-source: https://manual.mikrotik.com/docs/cli-reference/caps-man/aaa
-captured_at: '2026-11-01T21:26:18+08:00'
+sidebar_label: 'caps-man'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/aaa
+captured_at: '2026-11-01T21:21:43+08:00'
 ---
 
 -----------

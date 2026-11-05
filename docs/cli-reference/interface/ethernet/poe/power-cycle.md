@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/ethernet/poe/power-cycle"
 sidebar_position: 3
 title: "power-cycle"
 sidebar_label: 'power-cycle'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/poe/power-cycle
-captured_at: '2026-11-01T21:27:06+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ethernet/poe/power-cycle
+captured_at: '2026-11-01T21:22:31+08:00'
 ---
 
 -----------

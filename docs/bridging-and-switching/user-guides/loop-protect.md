@@ -8,8 +8,8 @@ tags:
   - 'loop-protect'
   - 'ethernet'
   - 'vlan'
-source: https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/loop-protect
-captured_at: '2026-11-04T11:27:24+08:00'
+source: https://manual.mikrotik.com/docs/7.25/bridging-and-switching/user-guides/loop-protect
+captured_at: '2026-11-04T11:14:36+08:00'
 ---
 
 The loop protect feature can prevent Layer2 loops by sending loop protect protocol packets and shutting down interfaces in case they receive loop protect packets originating from themselves. The feature works by checking the source MAC address of the received loop-protect packet against the MAC addresses of loop-protect enabled interfaces. If the match is found, loop protect disables the interface that received the loop protect packet. A log message warns about this event and the interface is marked with a loop protect comment by the system. The RouterOS loop protect feature can be used on bridged interfaces as well as on Ethernet interfaces which are set for switching in RouterBoard switch chips.

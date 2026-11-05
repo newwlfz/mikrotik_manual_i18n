@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/access-list"
 sidebar_position: 1
 title: "access-list"
 sidebar_label: 'access-list'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/access-list
-captured_at: '2026-11-01T21:27:56+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/access-list
+captured_at: '2026-11-01T21:23:19+08:00'
 ---
 
 -----------

@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/dude/agent"
 sidebar_position: 1
 title: "agent"
 sidebar_label: 'agent'
-source: https://manual.mikrotik.com/docs/cli-reference/dude/agent
-captured_at: '2026-11-01T21:26:48+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/dude/agent
+captured_at: '2026-11-01T21:22:12+08:00'
 ---
 
 -----------

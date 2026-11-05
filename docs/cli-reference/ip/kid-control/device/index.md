@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ip/kid-control/device/index"
 sidebar_position: 1
 title: "device"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/kid-control/device
-captured_at: '2026-11-01T21:28:49+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/kid-control/device
+captured_at: '2026-11-01T21:24:15+08:00'
 ---
 
 -----------

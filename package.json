@@ -12,11 +12,14 @@
     "sync": "node tools/sync/index.mjs",
     "translate": "node tools/translate/index.mjs",
     "verify": "node tools/verify/index.mjs",
-    "cli:build": "node tools/cli/build-cli-data.mjs && cp data/cli/$(node -p \"require('./data/manifests/current-version.json').version\")/en.json static/cli/current.json",
-    "metadata:build": "node tools/sync/extract-doc-metadata.mjs",
+    "cli:build": "node tools/cli/build-all.mjs",
+    "metadata:build": "node tools/sync/build-all.mjs",
     "metadata:apply": "node tools/sync/apply-doc-metadata.mjs",
     "categories:build": "node tools/sync/build-category-metadata.mjs",
-    "sidebar:order": "node tools/sync/apply-sidebar-order.mjs"
+    "sidebar:order": "node tools/sync/apply-sidebar-order.mjs",
+    "version:snapshot": "node tools/sync/snapshot-version.mjs",
+    "version:install": "node tools/sync/install-version.mjs",
+    "version:sidebars": "node tools/sync/build-sidebars.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.1",

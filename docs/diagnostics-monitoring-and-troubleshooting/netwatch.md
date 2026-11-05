@@ -8,8 +8,8 @@ tags:
   - 'netwatch'
   - 'icmp'
   - 'scripting'
-source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/netwatch
-captured_at: '2026-11-04T11:28:09+08:00'
+source: https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/netwatch
+captured_at: '2026-11-04T11:15:33+08:00'
 ---
 
 [*Netwatch CLI References*](/docs/cli-reference/tool/netwatch)

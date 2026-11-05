@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/ospf/interface"
 sidebar_position: 3
 title: "interface"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/ospf/interface
-captured_at: '2026-11-01T21:29:34+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/ospf/interface
+captured_at: '2026-11-01T21:25:13+08:00'
 ---
 
 -----------

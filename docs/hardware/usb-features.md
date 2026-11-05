@@ -7,8 +7,8 @@ description: 'This page documents USB features in MikroTik RouterOS, including U
 tags:
   - 'usb'
   - 'power-management'
-source: https://manual.mikrotik.com/docs/hardware/usb-features
-captured_at: '2026-11-04T11:29:36+08:00'
+source: https://manual.mikrotik.com/docs/7.25/hardware/usb-features
+captured_at: '2026-11-04T11:17:35+08:00'
 ---
 
 ## Summary

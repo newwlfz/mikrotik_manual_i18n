@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ip/vrf"
 sidebar_position: 29
 title: "vrf"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/vrf
-captured_at: '2026-11-01T21:29:00+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/vrf
+captured_at: '2026-11-01T21:24:30+08:00'
 ---
 
 -----------

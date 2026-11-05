@@ -6,8 +6,8 @@ sidebar_label: 'Netinstall for Linux'
 description: 'This page documents netinstall-cli, the Linux command-line version of the MikroTik Netinstall utility, covering all command-line options for single and multiple device reinstallation, scripting and configuration flags, network options, and a step-by-step installation example.'
 tags:
   - 'netinstall'
-source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/netinstall/netinstall-linux
-captured_at: '2026-11-04T11:28:43+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/installation-and-upgrade/netinstall/netinstall-linux
+captured_at: '2026-11-04T11:16:34+08:00'
 ---
 
 The Linux version of Netinstall, `netinstall-cli`, is a command-line tool that provides nearly the same functionality as the Windows version.
@@ -67,7 +67,7 @@ netinstall-cli [-r] [-e] [-b] [-m [-o]] [-f] [-c] [-v] [--reboot] [--shutdown] [
 | **--shutdown** | Shuts down the selected MikroTik device that is booted in Netinstall mode. |
 | **-k \<keyfile>** | Provide a license key file in .KEY format to the device (optional). |
 | **-s \<userscript>** | Allows installation of a custom default configuration script on the device during installation. This replaces the RouterOS-supplied default configuration script. See `/system/default-configuration/custom-script/print`. The script is retained during RouterOS updates and used after subsequent configuration resets until the device is reinstalled with a new script or the script is removed. |
-| **-sm \<modescript>** | Specifies a one-time custom script to execute on the device's first boot after installation. Use this to configure device-mode, protected-routerboot, and other deployment settings. The mode script runs before any custom or default configuration scripts and is automatically removed after execution. If the script modifies the device-mode, the device reboots immediately. **Requires RouterOS and Netinstall version 7.22 or newer.** |
+| **-sm \<modescript>** | Specifies a one-time custom script that runs on the device's first boot after installation. Use this script to configure **device‑mode**, **protected‑routerboot**, and other settings during device deployment. The mode script executes before any custom or default configuration scripts. Upon completion, the script is automatically removed from the device. If the script modifies the device-mode, the device reboots immediately after execution. **This feature requires RouterOS and Netinstall version 7.22 or newer.** |
 
 ### Network Options
 

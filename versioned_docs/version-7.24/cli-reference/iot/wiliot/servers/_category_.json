@@ -1,0 +1,11 @@
+{
+  "position": 8,
+  "label": "Servers",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/iot/wiliot/servers/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/iot/wiliot/servers"
+}

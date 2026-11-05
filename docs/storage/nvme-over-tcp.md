@@ -3,34 +3,22 @@ sidebar_key: "storage/nvme-over-tcp"
 sidebar_position: 6
 title: "NVMe over TCP"
 sidebar_label: 'NVMe over TCP'
-description: 'NVMe over TCP enables network-attached NVMe storage access for both initiators and targets, with configurable IP addresses, ports, passwords, and host-based access control. Examples demonstrate mounting a disk from a RouterOS client to a server, including Linux client setup steps.'
+description: 'NVMe over TCP enables network-attached NVMe storage access for both initiators and targets, with configurable IP addresses, ports, and host-based access control. Examples show mounting a disk from a RouterOS client to a server, including Linux client setup steps.'
 tags:
   - 'nvme'
   - 'storage'
   - 'tcp'
-source: https://manual.mikrotik.com/docs/storage/nvme-over-tcp
-captured_at: '2026-11-04T11:33:05+08:00'
+source: https://manual.mikrotik.com/docs/7.25/storage/nvme-over-tcp
+captured_at: '2026-11-04T11:21:35+08:00'
 ---
 
 :::info
 This feature requires the [Storage](/docs/storage/) package.
 :::
 
-nvme-tcp allows accessing storage over the network as an NVMe block device on the initiator side. On the target side this device can be hdd/ssd/nvme or even a raid array.
+NVMe over TCP allows accessing storage over the network as an NVMe block device on the initiator (client) side. On the target (host) side the device can be an HDD/SSD/NVMe drive or even a RAID array.
 
-## Properties
-
-| Property | Description |
-| :-- | :-- |
-| **nvme-tcp-address** | IP address of the NVMe over TCP target. (host device IP) |
-| **nvme-tcp-export** | Disable/enable NVMe over TCP on the host device |
-| **nvme-tcp-host-name** | This property specifies the hostname of the NVMe over TCP initiator. It can be used for identification and authentication purposes |
-| **nvme-tcp-name** | This property specifies the name of the NVMe over TCP target or the connection name for reference purposes (needs to be the same as host slot name) |
-| **nvme-tcp-password** *[s](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)**[ensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | This property is used to specify the password for authenticating the NVMe over TCP connection, ensuring secure access. |
-| **nvme-tcp-port** | This property specifies the network port used by the NVMe over TCP target to listen for incoming connections from initiators. The default port for NVMe over TCP traffic is 4420. |
-| **nvme-tcp-server-allow-host-name** | This property specifies whether the NVMe over TCP server allows connections from specific hostnames, providing a mechanism for host-based access control. |
-| **nvme-tcp-server-password** *[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | This property specifies the password for the NVMe over TCP server, used for authenticating initiators connecting to the target. |
-| **nvme-tcp-server-port** | This property specifies the network port used by the NVMe over TCP server to accept connections from initiators. |
+The NVMe over TCP server listens on TCP port 4420 by default.
 
 ## Examples
 
@@ -93,7 +81,6 @@ Use these commands to set up NVMe over TCP on a Linux **Client**.
 
    ```bash
    ls /dev/nvme*
-
    ```
 
     ```bash

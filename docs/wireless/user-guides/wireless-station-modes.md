@@ -8,8 +8,8 @@ tags:
   - 'station-modes'
   - 'l2-bridging'
   - 'wireless-protocols'
-source: https://manual.mikrotik.com/docs/wireless/user-guides/wireless-station-modes
-captured_at: '2026-11-04T11:35:40+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/user-guides/wireless-station-modes
+captured_at: '2026-11-04T11:23:59+08:00'
 ---
 
 ## Overview

@@ -8,8 +8,8 @@ tags:
   - 'switch-chip'
   - 'port-mirroring'
   - 'vlan'
-source: https://manual.mikrotik.com/docs/bridging-and-switching/switch-chip-features
-captured_at: '2026-11-04T11:27:29+08:00'
+source: https://manual.mikrotik.com/docs/7.25/bridging-and-switching/switch-chip-features
+captured_at: '2026-11-04T11:14:31+08:00'
 ---
 
 ---
@@ -17,7 +17,7 @@ captured_at: '2026-11-04T11:27:29+08:00'
 There are several types of switch chips on Routerboards and they have different sets of features.
 
 :::info
-Cloud Router Switch (CRS) series devices have highly advanced switch chips built-in. They support a wide variety of features. For MikroTik devices with Marvell Prestera switch (e.g. CRS3xx), see the [Marvell Prestera switch chip features](/docs/bridging-and-switching/marvell-prestera-switch-chip-features) manual. For more details about switch chip capabilities on CRS1xx/CRS2xx series devices, check the [CRS1xx/CRS2xx series switches](https://manual.mikrotik.com/docs/bridging-and-switching/crs1xx-and-2xx-series-switches) manual.
+Cloud Router Switch (CRS) series devices have highly advanced switch chips built-in. They support a wide variety of features. For MikroTik devices with Marvell Prestera switch (e.g. CRS3xx), see the [Marvell Prestera switch chip features](/docs/bridging-and-switching/marvell-prestera-switch-chip-features) manual. For more details about switch chip capabilities on CRS1xx/CRS2xx series devices, check the [CRS1xx/CRS2xx series switches](/docs/bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples) manual.
 :::
 
 | Switch Chip | Port Switching | Port Mirroring | TX limit¹ | RX limit¹ | Host table | Vlan table² | Rule table |

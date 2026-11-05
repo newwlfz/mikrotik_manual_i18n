@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "Direct",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/proxy/direct/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/proxy/direct"
+}

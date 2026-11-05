@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/container/mounts"
 sidebar_position: 7
 title: "mounts"
 sidebar_label: 'mounts'
-source: https://manual.mikrotik.com/docs/cli-reference/container/mounts
-captured_at: '2026-11-01T21:26:38+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/container/mounts
+captured_at: '2026-11-01T21:22:03+08:00'
 ---
 
 -----------

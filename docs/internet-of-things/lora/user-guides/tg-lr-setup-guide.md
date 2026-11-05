@@ -8,8 +8,8 @@ tags:
   - 'lora'
   - 'lorawan'
   - 'iot'
-source: https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides/tg-lr-setup-guide
-captured_at: '2026-11-04T11:31:39+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/lora/user-guides/tg-lr-setup-guide
+captured_at: '2026-11-04T11:18:59+08:00'
 ---
 
 ## Quickstart Guide

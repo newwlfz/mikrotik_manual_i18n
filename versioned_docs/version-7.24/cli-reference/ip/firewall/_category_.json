@@ -1,0 +1,7 @@
+{
+  "position": 8,
+  "label": "Firewall",
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/firewall"
+}

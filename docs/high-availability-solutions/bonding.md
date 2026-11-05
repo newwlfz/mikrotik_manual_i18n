@@ -8,8 +8,8 @@ tags:
   - 'bonding'
   - 'link-aggregation'
   - 'arp-monitoring'
-source: https://manual.mikrotik.com/docs/high-availability-solutions/bonding
-captured_at: '2026-11-04T11:29:47+08:00'
+source: https://manual.mikrotik.com/docs/7.25/high-availability-solutions/bonding
+captured_at: '2026-11-04T11:17:42+08:00'
 ---
 
 ## Summary
@@ -197,7 +197,7 @@ The image above illustrates how balance-alb mode works. Compared to balance-tlb 
 
 ---
 
-Since RouterOS version 6.48, it is possible to monitor the bonding interface and bonding ports. For the `802.3ad` bonding mode, more detailed monitoring options are available.
+For the `802.3ad` bonding mode, more detailed monitoring options are available.
 
 ```text
 /interface/bonding/monitor [find] 
@@ -210,15 +210,6 @@ Since RouterOS version 6.48, it is possible to monitor the bonding interface and
     lacp-partner-system-id: B8:69:F4:44:55:66
 ```
 
-| Property | Description |
-| :-- | :-- |
-| **mode** (*802.3ad \| active-backup \| balance-alb \| balance-rr \| balance-tlb \| balance-xor \| broadcast*) | Used bonding mode |
-| **active-ports** (*interface*) | Shows the active bonding ports |
-| **inactive-ports**(*interface*) | Shows the inactive bonding ports (e.g. a disabled or backup interface) |
-| **lacp-system-id** (*MAC address*) | Shows the local LACP system ID |
-| **lacp-system-priority** (*integer*) | Shows the local LACP priority |
-| **lacp-partner-system-id** (*MAC address*) | Shows the partner LACP system ID |
-
 To monitor individual bonding ports, use a `monitor-slaves` command.
 
 ```text
@@ -228,46 +219,6 @@ Flags: A - active, P - partner
 
  AP port=ether5 key=17 flags="A-GSCD--" partner-sys-id=D4:CA:6D:12:06:65 partner-sys-priority=65535 partner-key=9 partner-flags="A-GSCD--" 
 ```
-
-| Property | Description |
-| :-- | :-- |
-| **port** (*interface*) | Used bonding port |
-| **key** (*integer*) | Shows the local LACP aggregation key. The lower 6 bits are automatically assigned based on individual port link speed and duplex. The upper 10 bits can be manually specified using the `lacp-user-key` setting (available only since RouterOS v7.3). |
-| **flags** (*string*) | Shows the local LACP flags:  A - activity (link is active, otherwise passive) T - timeout (link is using short 1-second timeout, otherwise using 30-second timeout) G - aggregation (link can be aggregatable) S - synchronization (link is synchronized) C - collecting (link is able to collect incoming frames) D - distributing (link is able to distribute outgoing frames) F - defaulted (link is using defaulted partner information, indicating that no LACPDU has been received from the partner) E - expired (link has expired state) |
-| **partner-sys-id** (*MAC address*) | Shows the partner LACP system ID |
-| **partner-sys-priority** (*integer*) | Shows the partner LACP priority |
-| **partner-key** (*integer*) | Shows the partner LACP aggregation key |
-| **partner-flags** (*string*) | Shows the partner LACP flags |
-
-## Property Description
-
----
-
-This section describes the available bonding settings.
-
-| Property | Description |
-| :-- | :-- |
-| **arp** (*disabled \| enabled \| proxy-arp \| reply-only*; Default: **enabled**) | Address Resolution Protocol for the interface.<code>disabled</code> - the interface will not use ARP<code>enabled</code> - the interface will use ARP<code>proxy-arp</code> - the interface will use the ARP proxy feature<code>reply-only</code> - the interface will only reply to requests originated from matching IP address/MAC address combinations which are entered as static entries in the `/ip/arp` table. No dynamic entries will be automatically stored in the `/ip/arp` table. Therefore for communications to be successful, a valid static entry must already exist. |
-| **arp-interval** (*time*; Default: **00:00:00.100**) | Time in milliseconds defines how often to monitor ARP requests |
-| **arp-ip-targets** (*IP address*; Default: ) | IP target address which will be monitored if link-monitoring is set to arp. You can specify multiple IP addresses, separated by a comma |
-| **comment** (*string*; Default: ) | Short description of the interface |
-| **disabled** (*yes \| no*; Default: **no**) | Changes whether the bonding interface is disabled |
-| **down-delay** (*time*; Default: **00:00:00**) | If a link failure has been detected, the bonding interface is disabled for a down-delay time. The value should be a multiple of mii-interval, otherwise, it will be rounded down to the nearest value. This property only has an effect when `link-monitoring` is set to `mii`. |
-| **forced-mac-address** (*MAC address*; Default: **none**) | By default, the bonding interface will use the MAC address of the first selected slave interface. This property allows to configure static MAC address for the bond interface (all zeros, broadcast or multicast addresses will not apply). RouterOS will automatically change the MAC address for slave interfaces and it will be visible in `/interface/ethernet` configuration export |
-| **lacp-mode** (*active \| passive*; Default: **active**) | Specifies whether ports actively or passively participates in the LACP: <code>active</code> - ports actively initiate LACP communication, regardless of the partner's LACP mode (i.e, it "speaks" even if the partner is silent),<code>passive</code> - ports only respond to LACP messages and do not initiate them unless the partner is in active mode (i.e., it "listens" and responds only if spoken to). |
-| **lacp-rate** (*1sec \| 30secs*; Default: **30secs**) | Link Aggregation Control Protocol rate specifies how often to exchange with LACPDUs between bonding peers. Used to determine whether a link is up or other changes have occurred in the network. LACP tries to adapt to these changes providing failover. |
-| **lacp-user-key**(*integer: 0..1023*; Default: **0**) | Specifies the upper 10 bits of the port key. The lower 6 bits are automatically assigned based on individual port link speed and duplex. The setting is available only since RouterOS v7.3. |
-| **link-monitoring** (*arp \| mii \| none*; Default: **mii**) | Method to use for monitoring the link (whether it is up or down)<code>arp</code> - uses Address Resolution Protocol to determine whether the remote interface is reachable<code>mii</code> - uses Media Independent Interface to determine link status. Link status determination relies on the device driver.<code>none</code> - no method for link monitoring is used.**Warning:** Some bonding modes require specific link monitoring to work properly.  |
-| **min-links** (*integer: 0..4294967295*; Default: **0**) | How many active slave links needed for bonding to become active |
-| **mii-interval** (*time*; Default: **00:00:00.100**) | How often to monitor the link for failures (the parameter used only if link-monitoring is mii) |
-| **mlag-id** (*integer: 0..4294967295*; Default: ) | Changes MLAG ID for bonding interface. The same MLAG ID should be used on both peer devices to successfully create a single MLAG. See more details on [MLAG](/docs/high-availability-solutions/multi-chassis-link-aggregation-group). |
-| **mode** (*802.3ad \| active-backup \| balance-alb \| balance-rr \| balance-tlb \| balance-xor \| broadcast*; Default: **balance-rr**) | Specifies one of the bonding policies<code>802.3ad</code> - LACP, IEEE 802.3ad dynamic link aggregation. In this mode, the interfaces are aggregated in a group where each slave shares the same speed. It provides fault tolerance and load balancing. Slave selection for outgoing traffic is done according to the transmit-hash-policy.<code>active-backup</code> - provides link backup. Only one slave can be active at a time. Another slave only becomes active, if the first one fails.<code>balance-alb</code> - adaptive load balancing. The same as balance-tlb but received traffic is also balanced. The device driver should have support for changing its MAC address.<code>balance-rr</code> - round-robin load balancing. Slaves in a bonding interface will transmit and receive data in sequential order. It provides load balancing and fault tolerance.<code>balance-tlb</code> - Outgoing traffic is distributed according to the current load on each slave. Incoming traffic is not balanced and is received by the current slave. If receiving slave fails, then another slave takes the MAC address of the failed slave.<code>balance-xor</code> - static LAG, transmit based on the selected transmit-hash-policy. This mode provides load balancing and fault tolerance.<code>broadcast</code> - Broadcasts the same data on all interfaces at once. This provides fault tolerance but slows down traffic throughput on some slow machines.**Important:** MikroTik devices with Marvell Prestera switch and 88E6393X, 88E6191X, 88E6190 switch chips support bridge hardware offloading with bonding interfaces.  Only `802.3ad` (LACP), `balance-xor` (static LAG) and `active-backup` bonding modes are hardware offloaded, other bonding modes will use the CPU's resources.  |
-| **mtu** (*integer*; Default: **1500**) | Maximum Transmit Unit in bytes. Must be smaller or equal to the smallest L2MTU value of a bonding slave. L2MTU of a bonding interface is determined by the lowest L2MTU value among its slave interfaces |
-| **name** (*string*; Default: ) | Name of the bonding interface |
-| **primary** (*string*; Default: **none**) | Controls the primary interface between active slave ports, works only for active-backup, balance-tlb and balance-alb modes. For active-backup mode, it controls which running interface is supposed to send and receive the traffic. For balance-tlb mode, it controls which running interface is supposed to receive all the traffic, but for balance-alb mode, it controls which interface is supposed to receive the unbalanced traffic (the non-IPv4 traffic). When none of the interfaces are selected as primary, device will automatically select the interface that is configured as the first one. |
-| **slaves** (*string*; Default: **none**) | At least two ethernet-like interfaces separated by a comma, which will be used for bonding |
-| **up-delay** (*time*; Default: **00:00:00**) | If a link has been brought up, the bonding interface is disabled for up-delay time and after this time it is enabled. The value should be a multiple of mii-interval, otherwise, it will be rounded down to the nearest value. This property only has an effect when `link-monitoring` is set to `mii`. |
-| **transmit-hash-policy** (*encap-2-and-3 \| encap-3-and-4 \| layer-2 \| layer-2-and-3 \| layer-3-and-4*; Default: **layer-2**) | Selects the transmit hash policy to use for slave selection in balance-xor and 802.3ad modes <code>encap-2-and-3</code> - This policy works like the layer-2-and-3 method for distributing traffic, but uses a process to also analyze the encapsulated packet headers. If an encapsulation protocol (like tunneling) is used, it may select the inner headers instead of the outer ones. RouterOS can use this feature when tunnels like 6to4, GRE, GRE6, IPIP, IPIP6, PPPoE, or PPTP are run over a bonding interface.<code>encap-3-and-4</code> - This policy works like the layer-3-and-4 method for distributing traffic, but uses a process to also analyze the encapsulated packet headers. If an encapsulation protocol (like tunneling) is used, it may select the inner headers instead of the outer ones. RouterOS can use this feature when tunnels like 6to4, GRE, GRE6, IPIP, IPIP6, PPPoE, or PPTP are run over a bonding interface.<code>layer-2</code> - Uses XOR of hardware MAC addresses to generate the hash. This algorithm will place all traffic to a particular network peer on the same slave. This algorithm is 802.3ad compliant.<code>layer-2-and-3</code> - This policy uses a combination of layer2 and layer3 protocol information to generate the hash. Uses XOR of hardware MAC addresses and IP addresses to generate the hash. This algorithm will place all traffic to a particular network peer on the same slave. For non-IP traffic, the formula is the same as for the layer2 transmit hash policy. This policy is intended to provide a more balanced distribution of traffic than layer2 alone, especially in environments where a layer3 gateway device is required to reach most destinations. This algorithm is 802.3ad compliant.<code>layer-3-and-4</code> - This policy uses upper layer protocol information, when available, to generate the hash. This allows for traffic to a particular network peer to span multiple slaves, although a single connection will not span multiple slaves. For fragmented TCP or UDP packets and all other IP protocol traffic, the source and destination port information is omitted. For non-IP traffic, the formula is the same as for the layer2 transmit hash policy. This algorithm is not fully 802.3ad compliant.**Important:** MikroTik devices with Marvell Prestera switch will always use Layer2+Layer3+Layer4 for a transmit hash policy, while 88E6393X, 88E6191X, 88E6190 switch chips are limited to Layer2 transmit hash. Changing the transmit hash policy manually while HW offloading is used will have no effect.  |
 
 ## See also
 

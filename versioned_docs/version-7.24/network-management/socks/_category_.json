@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "SOCKS",
+  "key": "network-management/socks",
+  "link": {
+    "type": "doc",
+    "id": "network-management/socks/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

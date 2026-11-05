@@ -3,392 +3,379 @@ sidebar_key: "management-tools/winbox"
 sidebar_position: 2
 title: "WinBox"
 sidebar_label: 'WinBox'
-description: 'WinBox is a GUI utility for administering MikroTik RouterOS with Linux/macOS support via Wine, offering secure connections through AES128-CBC-SHA encryption and ECSRP authentication. It provides simple and advanced modes for connecting to routers, with neighbor discovery for discovering nearby devices while avoiding incompatible protocols.'
+description: 'WinBox v4 is a native cross-platform GUI utility for administering MikroTik RouterOS on Windows, Linux, and macOS. It replaces the legacy Wine-based WinBox v3 with a native application, providing secure connections through AES128-CBC-SHA encryption and ECSRP authentication.'
 tags:
   - 'winbox'
   - 'management'
-  - 'ipv6'
-source: https://manual.mikrotik.com/docs/management-tools/winbox
-captured_at: '2026-11-04T11:32:48+08:00'
+  - 'v4'
+  - 'native'
+source: https://manual.mikrotik.com/docs/7.25/management-tools/winbox
+captured_at: '2026-11-04T11:20:22+08:00'
 ---
 
 ## Summary
 
+WinBox is a utility that allows the administration of MikroTik RouterOS using a fast and simple GUI. WinBox v4 is a native application available for Windows, Linux, and macOS — no Wine or emulation required. All WinBox interface functions mirror the console functions as closely as possible, which is why there are no separate WinBox sections in the manual.
+
+The following security features are used:
+
+- WinBox is signed with an Extended Validation certificate issued by SIA Mikrotīkls (MikroTik).
+- WinBox uses ECSRP for key exchange and authentication.
+- Both sides verify that the other side knows the password (no man-in-the-middle attack is possible).
+- WinBox uses AES128-CBC-SHA as an encryption algorithm.
+
 :::info
-**A native WinBox beta version for Linux and macOS** is now available on the [MikroTik downloads page](https://mikrotik.com/download)!
+WinBox v4 replaces the legacy Windows-based WinBox v3. If you are still using the older version, see the [WinBox v3 (Legacy)](/docs/management-tools/winbox-legacy) page.
 
 :::
 
-WinBox is a small utility that allows the administration of MikroTik RouterOS using a fast and simple GUI. It is a native Win32/Win64 binary but can be run on **Linux** and **macOS (OSX)** using Wine. All WinBox interface functions are as close as possible to mirroring the console functions, that is why there are no WinBox sections in the manual. Some advanced and system-critical configurations are not possible from WinBox, like a MAC address change on an interface.
+## Download and Installation
 
-From WinBox v3.14, the following security features are used:
+Download WinBox from the [MikroTik download page](https://mikrotik.com/download/winbox).
 
-- WinBox.exe is signed with an Extended Validation certificate, issued by SIA Mikrotīkls (MikroTik).
-- WinBox uses ECSRP for key exchange and authentication (requires a new WinBox version).
-- Both sides verify that the other side knows the password (no man in the middle attack is possible).
-- WinBox in RoMON mode requires that the agent is the latest version to be able to connect to the latest version routers.
-- WinBox uses AES128-CBC-SHA as an encryption algorithm (requires WinBox version 3.14 or above).
+#### Windows
 
-## Starting WinBox
+1. Download the ZIP archive containing `WinBox.exe`.
+2. Extract the archive to a folder of your choice.
+3. Run `WinBox.exe` — no installation required.
 
-WinBox loader can be downloaded from the [MikroTik download page](https://www.mikrotik.com/download). When WinBox.exe is downloaded, double click on it, and the WinBox loader window will pop up. There are two WinBox loader modes: simple, which is enabled by default, and advanced.
+#### Linux
 
-### Simple mode
+1. Download the ZIP archive containing the Linux binary.
+2. Extract the archive to a folder of your choice.
+3. Run the binary from the terminal or file manager.
 
-When you open the WinBox loader for the first time, the simple mode layout will be used:
+#### macOS
 
-![](./img/winbox-01.webp)
-
-To connect to the router, enter the IP or MAC address of the router, specify the username and password (if any) and click on the **Connect** button. You can also enter the port number after the IP address, separating them with a colon, like this 192.168.88.1:9999. The port can be changed in the RouterOS **services** menu.
+1. Download the DMG package.
+2. Open the `.dmg` file and drag WinBox to the Applications folder.
+3. Launch WinBox from the Applications folder.
 
 :::warning
-It is recommended to use an IP address whenever possible. A MAC session uses network broadcasts and is not 100% reliable.
-
+Extract the ZIP archive contents into a self-contained subfolder that contains no other files. This is required for the self-update feature to work correctly and applies to the Windows and Linux versions of WinBox.
 :::
 
-You can also use neighbor discovery to list available routers. Use the **Neighbors** tab:
+## Login interface
 
-![](./img/winbox-02.webp)
+This section covers the login interface. It is the first thing you will see when launching the WinBox application. From here you can connect to the RouterOS device manually using the login section, or use saved credentials from the **Saved** tab. For more convenient discovery of devices in the L2 network connected to the PC running WinBox, the **Neighbors** tab can be used.
+The Login interface ([see Figure 1](#figure-1---login-interface)) can be divided into two sections:
 
-From the list of discovered routers, you can click on the IP or MAC address column to connect to that router. If you click on the IP address then the IP will be used to connect, but if you click on the MAC Address then the MAC address will be used to connect to the router.
+- **Login section** - the part on the left, used for connecting to the RouterOS.
+- **Device list section** - the part on the right, contains saved or discovered devices, and can be further divided into three tabs.
+  - **Saved** - user saved devices.
+  - **Neighbors** - discovered devices.
+  - **RoMON** - RoMON discovered devices.
+
+Elements that are not covered by the above sections can be found in [Table 3](#table-3---miscellaneous-elements).
+
+#### Figure 1 - Login interface
+
+![](./img/new_winbox_1_login_interface-9afc26d087721a3b5043107fd5356af.webp)
+
+### Login section
+
+Login section ([see Figure 2](#figure-2---login-section)) is used for entering device credentials and connecting to the devices. A detailed description of each Login section element can be found in [Table 1](#table-1---login-section-elements).
+
+#### Figure 2 - Login section
+
+![](./img/new_winbox_2_login_section.webp)
+
+#### Table 1 - Login section elements
+
+| Element | Description |
+| :-- | :-- |
+| ![](./img/image-ba6119c8.webp) | **Connect to** - Address field. Supported address formats are: MAC, IPv4, [IPv6], domain name. (IPv6 should specifically be used in square brackets) You can also enter a custom port after the IP address, separated by a colon (e.g., `192.168.88.1:9999`). The port can be changed in the RouterOS [Services](/docs/system-information-and-utilities/services) menu.|
+| ![](./img/image-48b72881.webp) | **Login** - Username field. |
+| ![](./img/image-4c715bee.webp) | **Password** - Password field. The Remember password check mark can be used to save passwords between sessions.|
+| ![](./img/image-12aefa4d.webp) | **Workspace** - Workspace selection dropdown menu. (see [Workspaces](#workspaces) section)|
+| ![](./img/image-dea95d1c.webp) | **RoMON Agent** - RoMON Agent selection dropdown menu. Allows to connect to the device using MAC address through RoMON "proxy". For more information see [RoMON documentation](/docs/management-tools/romon). |
+| ![](./img/image-56461866.webp) | **Connect** - connect button cluster:  - **Connect** - initiates connection to the router  - **Connect to RoMON** - initiates connection to the RoMON "proxy". For more information see [RoMON documentation](/docs/management-tools/romon).  - **Open in new** - when enabled, opens the router's configuration interface in a new window. (works only with the **Connect** button, not with **Connect to RoMON** button)|
+| ![](./img/image-65521373.webp) | **Save to list** - Allows to save router credentials to the Saved list. Additional parameters:  - **Group** - the group the entry will belong to, which allows for easier sorting of saved entries  - **Comment** - allows to add device description or other useful information  - **with password** - when enabled, the password is saved along with other credentials. If disabled, the password must be entered manually each time a saved entry is used.|
+
+:::warning
+To connect to the device, use an IP address whenever possible. A MAC session uses network broadcasts and is not 100% reliable.
+:::
+
+### Device list section
+
+Device list section is used for navigating lists of saved and discovered devices.
+
+#### Figure 3 - Saved device list
+
+![](./img/new_winbox_4_saved_device_list-8564104c34aedc243b27548a770a3.webp)
+
+Save frequently accessed routers in the **Saved** tab. Each entry can include:
+
+- **Address** - Address field. Supported address formats are: MAC, IPv4, [IPv6], domain name. (IPv6 should specifically be used in square brackets) You can also enter a custom port after the IP address, separated by a colon (e.g., `192.168.88.1:9999`). The port can be changed in the RouterOS [Services](/docs/system-information-and-utilities/services) menu.
+- **User** - username for authentication.
+- **Password** - password for authentication. (not shown in the table for security reasons)
+- **Group** - group the entry belongs to.
+- **Comment** - device description or other useful information.
+
+Database path shows (in the bottom right corner of [Figure 3](#figure-3---saved-device-list)) the location on your PC where the currently opened device list's .cdb file is stored. All **Actions** in this list are used for this database management.
+
+**Actions** available for this list:
+
+- **Open** - opens saved device list from exported .cdb file of your choice
+- **Move** - moves current .cdb file to different directory of your choice
+- **Import** - overrides current .cdb file with saved device list from exported .cdb file of your choice
+- **Export** - exports saved device list from current .cdb file, so it can be used with **Import** or **Open**
+- **Set file password** - encrypts current .cdb file with a password
+
+#### Figure 4 - Neighbors device list
+
+![](./img/new_winbox_5_neighbor_device_list-f0972a265a9133d93698ef4f07.webp)
+
+Use the **Neighbors** tab to discover available routers on the network. From the list, select a router and then select **Connect**. Click the IP or MAC address column to choose which address to use for the connection.
+
+**Actions** available for this list:
+
+- **Refresh** - refreshes list of discovered devices
 
 :::info
-Neighbor discovery will show also devices that are not compatible with WinBox, like Cisco routers or any other device that uses CDP (Cisco Discovery Protocol). If you try to connect to a SwOS device, then the connection will be established through a web browser
-
+Neighbor discovery also shows devices that are not compatible with WinBox, such as Cisco routers using CDP (Cisco Discovery Protocol). Connecting to a SwOS device opens a web browser instead.
 :::
 
-#### Buttons/check-boxes and Other Fields
+#### Figure 5 - RoMON Neighbor device list
 
-- **Connect** - Connect to the router.
-- **Connect To RoMON** - Connect to  [RoMON](/docs/management-tools/romon) Agent.
-- **Add/set** - Save/Edit any of the saved router entries in the **Managed** tab.
-- **Open In New Window** - Leaves the loader open in the background and opens new windows for each device to which connection is made.
-- **Connect To:** - Destination IP or MAC address of the router.
-- **Login** - Username used for authentication.
-- **Password** - Password used for authentication.
-- **Keep Password** - If unchecked, the password is not saved to the list.
+![](./img/image-70c9d9bc.webp)
 
-#### Menu Items
+Use the **RoMON Neighbors** tab to discover routers reachable through the RoMON overlay network. From the list, select a router and then select **Connect** to open a RoMON session through the selected agent via MAC address. For agent selection, see [table 1](#table-1---login-section-elements) **RoMON Agent** field description. For more information see dedicated [RoMON documentation](/docs/management-tools/romon).
 
-- **File**
-  - **New** - Create a new managed router list in a specified location
-  - **Open** - Open managed router list file
-  - **Save As** - Save current managed router list to file
-  - **Exit** - Exit WinBox loader
+## Configuration interface
 
-- **Tools**
-  - **Advanced Mode** - Enables/Disables advanced mode view
-  - **Import** - Imports saved session file
-  - **Export** - Exports saved session file
-  - **Move Session Folder** - Changes the path where session files are stored
-  - **Clear cache** - Clears WinBox cache
-  - **Check For Updates** - Checks for updates for WinBox loader
+After entering router credentials or using saved ones and connecting through the [**Login interface**](#login-interface) you will be prompted to the Configuration interface that can be seen in [Figure 6](#figure-6---configuration-interface). The WinBox v4 Configuration interface consists of:
 
-### Advanced mode
+- **Toolbar section** at the top - contains general WinBox navigation buttons.
+- **Sidebar section** on the left - lists all available menus and sub-menus. The list changes depending on installed packages (for example, enabling the container package adds the Container and App menus).
+- **Work area section** in the middle - area where all internal windows are opened.
+- **Resources section** at the bottom - contains general device information.
 
-Additional WinBox loader parameters are revealed when an **advanced mode** is enabled with *Tools → Advanced Mode:*
+#### Figure 6 - Configuration interface
 
-![](./img/winbox-03.webp)
+![](./img/new_winbox_7_configuration_interface-61e958ebecfd09714d87b78.webp)
 
-#### Buttons/check-boxes and Other Fields
+### Toolbar section
 
-Buttons/check-boxes
+#### Figure 7 - Toolbar section
 
-- **Browse** - Browse file directory for some specific session.
-- **Keep Password** - If unchecked, the password is not saved to the list.
-- **Secure mode** - If checked, WinBox will use DH-2048 for key exchange and modified and hardened RC4-drop3072 encryption to secure the session.
-- **Autosave session** - Saves sessions automatically for devices to which connections are made.
+![](./img/image-a1c460b7.webp)
 
-Fields:
+#### Table 2 - Toolbar section elements
 
-- **Session** - Saved router session.
-- **Note** - Note that is assigned to saved router entry.
-- **Group** - Group to which saved router entry is assigned.
-- **RoMON Agent** - Select RoMON Agent from the available device list.
+| Element | Description |
+| :-- | :-- |
+| ![](./img/image-82d63863.webp) | **Workspace** - Workspace selection dropdown menu. (see [Workspaces](#workspaces) section) |
+| ![](./img/image-c5590c05.webp) | **Opened windows list** - list of all currently opened internal WinBox windows. This list allows to easily select the necessary window or close the unnecessary ones.  **Sub-menu:**  ![](./img/image-31a6ee2e.webp) |
+| ![](./img/image-ca4dde25.webp) | **Menu search** - Allows to search for the menu using its name. For search to work you need to enter **at least three symbols**.  **Sub-menu:**  ![](./img/image-e8cfa85a.webp) |
+| ![](./img/image-1a16e9db.webp) | **Undo** and **Redo** - **Undo** (left button) reverts the last change, **Redo** (right button) adds this change back. Maximum possible amount of the commands that can be undone is 100. For more information you can see [**Configuration Management** documentation](/docs/getting-started/configuration-management/#configuration-undo-and-redo). |
+| ![](./img/image-7772d6a7.webp) | **Safe Mode toggle** - allows to enable **Safe Mode** to prevent accidental session disconnects. For more information please see [**Safe Mode** documentation](/docs/management-tools/console#safe-mode). |
+| ![](./img/image-73de7b2a.webp) | **Disconnect** - end current session and return to [**Login interface**](#login-interface). |
 
-:::danger
-The Managed routers list is encrypted, but it can still be loaded with another WinBox, **IF** the master password is not set for it!
+### Sidebar section
 
-:::
+Sidebar ([see Figure 8](#figure-8---sidebar-section)) contains a list of all available menus and sub-menus. This list changes depending on what packages are installed.
 
-### Command Line
+#### Figure 8 - Sidebar section
 
-It is possible to use the command line to pass connect to, user, password and session ("workspace" for WinBox 4) parameters automatically:
+![](./img/new_winbox_9_sidebar.webp)
 
-```
-winbox.exe [<connect-to> [<login> [<password>]] <session|workspace>]
+### Work area section
 
-```
+The Work area is the central part of the WinBox window where all internal (child) windows are displayed.
 
-For example (with no password):
+#### Figure 9 - Work area section
 
-```
-winbox.exe 10.5.101.1 admin "" "<own>"
+![](./img/new_winbox_10_workarea.webp)
 
-```
-
-This will connect to the router 10.5.101.1 with user "admin" without a password and use session|workspace "```<own>```".
-
-It is possible to use the command line to pass the connect to, user, and password parameters automatically to connect to the router through RoMON. In this case, RoMON Agent must be saved on the Managed routers list so WinBox will know the user and password for this device:
-
-```
-winbox.exe --romon [<romon-agent> [<connect-to> [<login> [<password>]]] <session|workspace>]
-
-```
-
-For example (with no password):
-
-```
-winbox.exe --romon 10.5.101.1 D4:CA:6D:E1:B5:7D admin "" "<own>"
-
-```
-
-Will connect to the router D4:CA:6D:E1:B5:7D, through 10.5.101.1 via RoMON Agent with user "admin" without a password and apply session|workspace called "```<own>```".
-
-### IPv6 connectivity
-
-WinBox supports IPv6 connectivity. To connect to the router's IPv6 address, it must be placed in square brackets the same as in web browsers when connecting to the IPv6 server. Example:
-
-[db8::1]
-
-when connecting to the link-local address, the interface index must be entered after the %:
-
-[0:a00:27ff:fe70::e88c%2]
-
-Port number is set after the square brace when it is necessary to connect WinBox to a port other than the default:
-
-WinBox neighbor discovery is capable of discovering IPv6 enabled routers. There are two entries for each IPv6 enabled router, one entry is with an IPv4 address and another one with an IPv6 link-local address. You can easily choose which one you want to connect to.
-
-### Run WinBox on macOS
-
-Starting with macOS 10.15 Catalina, Apple has removed support for 32bit applications, meaning it is no longer possible to use regular Wine and regular WinBox in this OS. Wine has made available a 64bit version for macOS, and MikroTik has released a special [WinBox64.exe](https://mt.lv/winbox64) version as well.
-
-To run WinBox64 the following steps are required:
-
-1. Install the latest Wine from the [Wine macOS builds page](https://github.com/Gcenx/macOS_Wine_builds/releases) ( wine-devel-7.X-osx64.tar.xz) and make sure you have downloaded the [WinBox64.exe executable](https://mt.lv/winbox64) from the MikroTik download page.
-2. Launch WinBox64.exe with "open file with" > Wine64.app.
-
-### Run WinBox on Linux
-
-It is possible to run WinBox on Linux by using Wine emulation software. Make sure that the Microsoft font pack is installed, otherwise, you may see distortions.
-
-## Interface Overview
-
-The WinBox interface has been designed to be intuitive for most of the users. The interface consists of:
-
-- The main toolbar at the top where users can add various info fields, like CPU and memory usage.
-- The menu bar on the left - list of all available menus and sub-menus. This list changes depending on what packages are installed. For example, if the IPv6 package is disabled, then the **IPv6** menu and all its sub-menus will not be displayed.
-- Work area - an area where all menu windows are opened.
-
-![](./img/winbox-04.webp)
-
-The title bar shows information to identify with which router the WinBox session is opened. Information is displayed in the following format:
-
-```
-[username]@[Router's IP or MAC] ( [RouterID] ) - WinBox [ROS version] on [RB model] ([platform])
-
-```
-
-From the screenshot above we can see that user **krisjanis** is logged into the router with IPv4/IPv6 address **[fe80::4e5e:cff:fef6:c0ab%3]**. Router's ID is **3C18-Krisjanis\_GW**, currently installed RouterOS version is **v6.36rc6**, RouterBoard is **CCR1036-12G-4S** and platform is **tile**.
-
-On the Main toolbar's left side is located:
-
-- **Undo**
-- **Redo**
-- **Safe Mode**
-- Currently loaded session
-
-More about Safe mode and undoing performed actions can be read [in this article](/docs/getting-started/configuration-management/).
-
-On the right side is located:
-
-- An indicator that shows whether the WinBox session uses encryption.
-- A WinBox traffic indicator displayed as a green bar.
-- Custom info fields that can be added by the user by right-clicking on the toolbar and picking available info fields from the list.
-
-## Work Area and Child Windows
+### Working with Child Windows
 
 WinBox has an MDI interface meaning that all menu configuration (child) windows are attached to the main (parent) WinBox window and are shown in the work area.
 
-![](./img/winbox-05.webp)
+#### Tab Toolbar
 
-Child windows can not be dragged out of the working area. Notice in the screenshot above that the **Interface** window is dragged out of the visible working area and a horizontal scroll bar appeared at the bottom. If any window is outside the visible work area boundaries the vertical and/or horizontal scrollbars will appear.
+Each tab has a toolbar with common actions:
 
-### Child window menu bar
+- **New** - add a new item to the list.
+- **Remove** - remove the selected item from the list.
+- **Enable** - enable the selected item.
+- **Disable** - disable the selected item.
+- **Comment** - add or edit a comment.
+- **Sort** - sort and filter displayed items.
 
-Each child window has its own toolbar. Most of the windows have the same set of toolbar buttons:
+Almost all tabs have a quick search field on the right side of the toolbar. Entering text searches through all items and highlights matches.
 
-- ![](./img/image-88376696.webp) **Add** - add a new item to the list.
-- ![](./img/image-93d58ae7.webp) **Remove** - remove the selected item from the list.
-- ![](./img/image.png) **Enable** - enable the selected item (the same as **enable** command from console).
-- ![](./img/image-d7e0e7b8.png) **Disable** - disable the selected item (the same as **disable** command from console).
-- ![](./img/image-d5c7e3b6.png) **Comment** - add or edit a comment.
-- ![](./img/image-53e2f89b.png)  **Sort** - allows you to sort out items depending on various parameters.  [Sorting out displayed items](#sorting-out-displayed-items)
+#### Sorting and Filtering
 
-Almost all windows have a quick search input field on the right side of the toolbar. Any text entered in this field is searched through all the items and highlighted as illustrated in the screenshot below.
+Select the **Sort** button to show filter options:
 
-![](./img/image-be58bd09.webp)
+1. Choose a column from the first drop-down box.
+2. Choose a comparison operator from the second drop-down box (e.g., **is**, **in**, **is not**, **contains**).
+3. Enter the value to compare against.
+4. Select **Filter** to apply.
 
-Notice that on the right side next to the quick find input field there is a drop-down box. For the currently opened (IP Route) window, this drop-down box allows to quickly sort out items by routing tables. For example, if the **main** is selected, then only routes from the main routing table will be listed.
-A similar drop-down box is also in all firewall windows to quickly sort out rules by chains.
+WinBox supports stacking multiple filters. Select **[+]** to add another filter and **[-]** to remove one.
 
-### Sorting out displayed items
+#### Column Customization
 
-Almost every window has a **Sort** button. When clicking on this button, several options appear as illustrated in the screenshot below.
+To customize displayed columns:
 
-![](./img/winbox-09.webp)
+1. Select the arrow button on the right side of column titles, or right-click the item list.
+2. Go to **Show Columns** and pick the desired column.
 
-The example shows how to quickly filter out routes that are in the 10.0.0.0/8 range:
+Changes are saved and persist between sessions.
 
-1. Press the **Sort** button.
-2. Choose **Dst.Address** from the first drop-down box.
-3. Choose **in** from the second drop-down box. "in" means that the filter will check if DST address value is in range of the specified network.
-4. Enter the network against which values will be compared (in our example enter "10.0.0.0/8").
-5. These buttons are to add or remove another filter to the stack.
-6. Press the **Filter** button to apply our filter.
+### Resources section
 
-As you can see from the screenshot, WinBox sorted out only routes that are within the 10.0.0.0/8 range.
+Show routerss general information and resources.
 
-Comparison operators (Number **3** in the screenshot) may be different for each window. For example, the "IP Route" window has only two: **is** and **in**. Other windows may have operators such as "is not", "contains", "contains not".
+#### Figure 10 - Resources section
 
-WinBox allows building a stack of filters. For example, if there is a need to filter by destination address and gateway, then:
+![](./img/image-7d693f71.webp)
 
-- Set the first filter as described in the example above.
-- Press the **[+]** button to add another filter bar in the stack.
-- Set up a second filter to filter by the gateway.
-- Press the **Filter** button to apply filters.
+From left to right fields as follows:
 
-You can also remove unnecessary filters from the stack by pressing the **[-]** button.
+- Router Identity
+- Router IP address
+- Router Architecture
+- Router Model
+- RouterOS version installed on the router
+- Router CPU utilization in percents
+- Router RAM free/used/total
+- Router Uptime
+- Router Clock
 
-### Customizing list of displayed columns
+## General WinBox settings and more
 
-By default, WinBox shows the most commonly used parameters. However, sometimes it is needed to see other parameters, for example, "BGP AS Path" or other BGP attributes to monitor if routes are selected properly.
+This section covers WinBox GUI settings and miscellaneous elements ([see Table 3](#table-3---miscellaneous-elements)) that are not covered in other paragraphs.
 
-WinBox allows you to customize displayed columns for each individual window. For example, to add the BGP AS path column:
+#### Table 3 - Miscellaneous elements
 
-- Click on the little arrow button (**1**) on the right side of the column titles or right mouse click on the route list.
-- From the popped up menu move to **Show Columns** (**2**) and from the sub-menu pick the desired column, in our case click on **BGP AS Path** (**3**).
+| Element | Description |
+| :-- | :-- |
+| ![](./img/image-656345c7.webp) | **Create new session** - Located on the top right. This button opens new WinBox window. |
+| ![](./img/image-07c12793.webp) | **Settings/App information** - Located on the top right. Opens dropdown menu with the following elements:   - **Settings** - [GUI Settings menu](#gui-settings-menu)   - **Shortcuts** - information about available shortcut combinations ([see Keyboard Shortcuts](#keyboard-shortcuts))   - **About** - application information such as version, useful links, licenses information   - **Quit** - close WinBox application |
+| ![](./img/image-2c3ee497.webp) | **WinBox update notification** - Located on the top right. **Appears only when WinBox update is available**, allows to download latest version of WinBox without accessing [MikroTik website](https://mikrotik.com/winbox). |
+| ![](./img/image-8ce56705.webp) | **RouterOS update notification** - Located on the top right. **Appears only in [configuration interface](#configuration-interface) when RouterOS update is available**, allows to download latest version of RouterOS without accessing [package menu](/docs/getting-started/installation-and-upgrade/packages#download-directly-from-the-router) or manually uploading packages. |
 
-![](./img/winbox-10.webp)
+### GUI Settings menu
 
-Changes made to the window layout are saved and the next time WinBox is opened the same column order and size are applied.
+WinBox v4 features an advanced GUI customization menu ([see Figure 11](#figure-11---gui-settings-menu)) that allows to change multiple attributes of how WinBox displays information. A detailed description of each setting can be found in [Table 4](#table-4---gui-settings-elements).
 
-#### Detail mode
+#### Figure 11 - GUI Settings menu
 
-It is also possible to enable **Detail mode**. In this mode all parameters are displayed in columns, the first column is the parameter name, the second column is the parameter's value.
+![](./img/new_winbox_3_settings_menu.webp)
 
-To enable detail mode, right mouse click on the item list and from the popup menu pick **Detail mode**
+#### Table 4 - GUI Settings elements
 
-![](./img/winbox-11.webp)
+| Element | Description |
+| :-- | :-- |
+| ![](./img/image-0071d3c0.webp) | **Hide password** - replaces contents of RouterOS sensitive fields with asterisks. ([list of sensitive parameters](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)) |
+| ![](./img/image-06422c69.webp) | **Comment Type** - selects whether comments are displayed as a header for the entry or as a separate column. |
+| ![](./img/image-e67aafe2.webp) | **Comment column in front** - when column Comment type is selected ensures that comment is placed before all other columns. |
+| ![](./img/image-73aae952.webp) | **Table tools position** - selects whether tools for the specific table are displayed on the right side of the internal WinBox window or as a single button with dropdown menu in the toolbar of the internal WinBox window. |
+| ![](./img/image-075ca22f.webp) | **Table column separator** - selects if vertical lines separating columns should be displayed or not.|
+| ![](./img/image-210763d1.webp) | **Table row height** - value from 0 to 20, changes row's vertical padding, higher values provide more padding improving distinction between rows.|
+| ![](./img/image-bd0d81c0.webp) | **Dark mode** - enables darker color scheme for the application. |
+| ![](./img/image-88c1305c.webp) | **Resource panel** - selects whether to display router resource/identity information at the bottom of the WinBox window in the configuration interface.|
+| ![](./img/image-391a3e5a.webp) | **GUI font** - allows to select which font will be used all across the WinBox application. Additional parameters:  - **Regular** - value from 300 to 600, allows to change thickness of regular text all across the WinBox application  - **Bold** - value from -100 to 300, allows to change thickness of bold text all across the WinBox application  - **Spacing** - value from -1 to 1, allows to change spacing between characters. |
+| ![](./img/image-be14a926.webp) | **GUI scaling** - values from 67% to 250%, allows to change size of the UI. Opens sub-menu in the bottom right corner.  **Sub-menu:**  ![](./img/image-1b600d64.webp)  - **Global zoom** - Changes both **UI size** and **Spacing**  - **UI size** - changes size of the UI elements  - **Spacing** - changes spacing between UI elements |
+| ![](./img/new_winbox_terminal_scrollback-20335045158f14dca00f9e7f42e05.png) | **Buffer size** - maximum number of lines kept in terminal scrollback (100 to 100000). Applies to newly opened terminals. |
 
-#### Category view
+### Workspaces
 
-It is possible to list items by categories. In this mode, all items will be grouped alphabetically or by another category. For example, items may be categorized alphabetically if sorted by name, and items can also be categorized by type like in the screenshot below.
+WinBox v4 introduces workspaces, replacing the session system from WinBox v3. Workspaces allow you to organize connections into separate environments. Each workspace maintains its own set of open connections and windows.
 
-To enable Category view, right mouse click on the item list and from the popup menu pick **Show Categories**.
+## Keyboard Shortcuts
 
-![](./img/winbox-12.webp)
+This section covers keyboard shortcuts for different versions of WinBox depending on the operating system.
 
-### Drag & Drop
-
-It is possible to upload and download files to/from the router using WinBox drag & drop functionality. You can also download the file by pressing the right mouse button on it and selecting "Download".
-
-:::info
-Drag & Drop works if WinBox is running on Linux using wine4. Drag and drop between two WinBox windows may fail.
-
-:::
-
-### Traffic monitoring
-
-WinBox can be used as a tool to monitor the traffic of every interface, queue, or firewall rule in real-time. The screenshot below shows Ethernet traffic monitoring graphs.
-
-![](./img/winbox-13.webp)
-
-### Item copy
-
-This shows how easy it is to copy an item in WinBox. In this example, we will use the COPY button to make a Dynamic PPPoE server interface into a Static interface.
-
-This image shows us the initial state. As you see, DR indicates "D" which means Dynamic:
-
-![](./img/winbox-14.webp)
-
-Double-Click on the interface and click on COPY:
-
-![](./img/winbox-15.webp)
-
-A new interface window will appear, and a new name will be created automatically (in this case pppoe-in1).
-
-![](./img/winbox-16.webp)
-
-After this Down/Up event this interface will be Static:
-
-![](./img/winbox-17.webp)
-
-## Transferring Settings
-
-- Managed router transfer - In the File menu, use Save As and Open functions to save the managed router list to a file and open it up again on a new workstation.
-
-- Router sessions transfer - In the Tools menu, use Export and Import functions to save existing sessions to a file and import them again on a new workstation.
-
-## WinBox v3 Keyboard Shortcuts
+#### Linux/Windows Shortcuts
 
 | Shortcut | Description |
 | :-- | :-- |
-| **Ctrl** + **F** | Find |
-| **Ctrl** + **G** | Find Next |
-| <kbd>F3</kbd> | Find / Find next |
-| **Ctrl** + **M** | Add or edit a comment |
-| **Ctrl** + **E**  or **Num+** | Enables a selected setting |
-| **Ctrl**+ **D** or **Num-** | Disables a selected setting |
-| **Ctrl** + **+** | Zoom in WinBox |
-| **Ctrl**+ **-** | Zoom out WinBox |
-| <kbd>Tab</kbd> | Choose next control |
-| <kbd>Tab</kbd>+<kbd>Shift</kbd> | Choose previous control |
-| <kbd>Space</kbd> | Select focused control |
-| <kbd>F4</kbd> or **Esc** | Close window |
-| <kbd>F6</kbd> | Focus previous window |
-| <kbd>F6</kbd>+<kbd>Shift</kbd> | Focus next window |
-| <kbd>Insert</kbd> | Add new entry into list |
-| <kbd>Delete</kbd> | Delete entry from list |
+| **Application** | |
+| Ctrl + + / Ctrl + = / Ctrl + Scroll up | Zoom in |
+| Ctrl + - / Ctrl + Scroll down | Zoom out |
+| Ctrl + 0 | Zoom reset |
+| F11 | Toggle fullscreen |
+| **Workspace** | |
+| Alt + F | Menu search |
+| Alt + W / Ctrl + F4 / Esc | Close active window |
+| Alt + S | Switch active window |
+| Alt + A | Switch active window backwards |
+| Alt + T | Open new terminal window |
+| Ctrl + Tab | Next tab in active window |
+| Ctrl + Shift + Tab | Previous tab in active window |
+| **Table** | |
+| Ctrl + F | Find text |
+| Ctrl + A | Select all rows |
+| Insert / Ctrl + N | Add new item |
+| Delete | Remove selected rows |
+| Ctrl + E | Enable selected rows |
+| Ctrl + Shift + E | Disable selected rows |
+| Ctrl + M | Comment selected rows |
+| Enter | Open current row |
+| F5 | Reload |
+| End | Move cursor to bottom |
+| Home | Move cursor to top |
+| Page Down | Move cursor page down |
+| Page Up | Move cursor page up |
+| Shift + Click | Multi column sort |
+| **Form** | |
+| Shift + Click | Multi tab expand |
 
-## WinBox v4 Keyboard Shortcuts
+#### macOS Shortcuts
 
 | Shortcut | Description |
 | :-- | :-- |
-| **Ctrl** + **E** | Enables a selected setting |
-| **Ctrl** + **Shift** + **E** | Disables a selected setting |
-| **Ctrl/CMD** + **+** | Zoom in WinBox |
-| **Ctrl/CMD** + **-** | Zoom out WinBox |
-| **Ctrl/CMD**+ **0** | Reset zoom |
-| **Ctrl** + **Tab** | Choose next tab |
-| **Ctrl** + **Shift** + **Tab** | Choose previous tab |
-| **Tab** | Choose next control |
-| **Shift** + **Tab** | Choose previous control |
-| **Space** | Select focused control |
-| **Ctrl + F4**or **Alt**/**Cmd + W** | Close window |
-| **Alt** + **A**/ **Cmd** + **Shift** + **S** | Focus previous window |
-| **Alt**/**Cmd** + **S** | Focus next window |
-| **Delete** | Delete entry from the list |
-| **Alt**/**Cmd**+ **Opt** + **F** | Global menu search |
-| **Alt**/**Cmd** + **T** | Open a new Terminal window |
+| **Application** | |
+| ⌘ + + / ⌘ + = / ⌘ + Scroll up | Zoom in |
+| ⌘ + - / ⌘ + Scroll down | Zoom out |
+| ⌘ + 0 | Zoom reset |
+| F11 | Toggle fullscreen |
+| ⌘ + M | Minimize app |
+| **Workspace** | |
+| ⌥ + ⌘ + F | Menu search |
+| ⌘ + W / ⌘ + F4 / Esc | Close active window |
+| ⌘ + S | Switch active window |
+| ⌘ + Shift + S | Switch active window backwards |
+| ⌘ + T | Open new terminal window |
+| Ctrl + Tab | Next tab in active window |
+| Ctrl + Shift + Tab | Previous tab in active window |
+| **Table** | |
+| ⌘ + F | Find text |
+| ⌘ + A | Select all rows |
+| Insert / ⌘ + N | Add new item |
+| Fn + Backspace | Remove selected rows |
+| ⌘ + E | Enable selected rows |
+| ⌘ + Shift + E | Disable selected rows |
+| ⌘ + Shift + M | Comment selected rows |
+| Enter | Open current row |
+| F5 | Reload |
+| End | Move cursor to bottom |
+| Home | Move cursor to top |
+| Page Down | Move cursor page down |
+| Page Up | Move cursor page up |
+| Shift + Click | Multi column sort |
+| **Form** | |
+| Shift + Click | Multi tab expand |
 
 ## Troubleshooting
 
 ##### WinBox cannot connect to the router's IP address, devices do not show up in the Neighbors list
 
-Make sure that the Windows firewall is set to allow WinBox connections through Private and/or Public network interfaces in the Windows firewall. It can be changed in *Control Panel\System and Security\Windows Defender Firewall\Allowed applications*. Or disable the Windows firewall.
+Make sure the firewall is set to allow WinBox connections through Private and/or Public network interfaces. On Windows, this can be configured in *Control Panel\System and Security\Windows Defender Firewall\Allowed applications*.
 
-##### I get an error '(port 20561) timed out' when connecting to routers mac address
+##### MAC connection fails with error "(port 20561) timed out"
 
-Windows (7/8) does not allow MAC connection if file and print sharing is disabled.
+Windows does not allow MAC connection if file and print sharing is disabled.
 
-##### I can't find my device in WinBox IPv4 Neighbors list or MAC connection fails with "ERROR could not connect to XX-XX-XX-XX-XX-XX"
+##### MAC connection fails with "ERROR could not connect to XX-XX-XX-XX-XX-XX"
 
-Most of the network drivers will not enable IP stack unless your host device has an IP configuration. Set IPv4 configuration on your host device.
-
-*Sometimes the device will be discovered due to caching, but MAC connection will still fail with "ERROR: could not connect to XX:XX:XX:XX:XX:XX".*
+Most network drivers require an IP configuration before enabling the IP stack. Set an IPv4 configuration on the host device.
 
 :::warning
-WinBox MAC-ADDRESS connection requires an MTU value set to 1500, unfragmented. Other values can perform poorly - loss of connectivity can occur.
+WinBox MAC address connection requires an MTU value set to 1500, unfragmented. Other values may cause poor performance or connectivity loss.
 
 :::

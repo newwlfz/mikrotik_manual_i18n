@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Chr",
+  "key": "getting-started/routeros-licensing/chr",
+  "link": {
+    "type": "doc",
+    "id": "getting-started/routeros-licensing/chr/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

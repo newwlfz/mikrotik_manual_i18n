@@ -7,8 +7,8 @@ description: 'GPIO allows configuring digital and analog input/output pins on Mi
 tags:
   - 'gpio'
   - 'iot'
-source: https://manual.mikrotik.com/docs/internet-of-things/gpio
-captured_at: '2026-11-04T11:31:03+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/gpio
+captured_at: '2026-11-04T11:18:23+08:00'
 ---
 
 ***note**: In order to access GPIO settings, make sure that the **iot** [package](/docs/getting-started/installation-and-upgrade/packages) is installed beforehand.*

@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/ospf/instance"
 sidebar_position: 2
 title: "instance"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/ospf/instance
-captured_at: '2026-11-01T21:29:35+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/ospf/instance
+captured_at: '2026-11-01T21:25:15+08:00'
 ---
 
 -----------

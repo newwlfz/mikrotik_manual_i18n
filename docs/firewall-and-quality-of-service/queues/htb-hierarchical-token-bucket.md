@@ -8,8 +8,8 @@ tags:
   - 'htb'
   - 'queues'
   - 'bandwidth-control'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/htb-hierarchical-token-bucket
-captured_at: '2026-11-04T11:28:23+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/queues/htb-hierarchical-token-bucket
+captured_at: '2026-11-04T11:16:25+08:00'
 ---
 
 ## Introduction

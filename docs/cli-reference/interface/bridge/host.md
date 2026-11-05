@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/bridge/host"
 sidebar_position: 3
 title: "host"
 sidebar_label: 'host'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/bridge/host
-captured_at: '2026-11-01T21:26:59+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/host
+captured_at: '2026-11-01T21:22:23+08:00'
 ---
 
 -----------

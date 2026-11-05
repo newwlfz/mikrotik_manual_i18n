@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/tool/romon/ping"
 sidebar_position: 3
 title: "ping"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/romon/ping
-captured_at: '2026-11-01T21:30:19+08:00'
+sidebar_label: 'ping'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/romon/ping
+captured_at: '2026-11-01T21:25:57+08:00'
 ---
 
 -----------

@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/mesh/port"
 sidebar_position: 3
 title: "port"
 sidebar_label: 'port'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/mesh/port
-captured_at: '2026-11-01T21:27:31+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/mesh/port
+captured_at: '2026-11-01T21:22:54+08:00'
 ---
 
 -----------

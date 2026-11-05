@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wifi/channel"
 sidebar_position: 5
 title: "channel"
 sidebar_label: 'channel'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/channel
-captured_at: '2026-11-01T21:27:46+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wifi/channel
+captured_at: '2026-11-01T21:23:09+08:00'
 ---
 
 -----------

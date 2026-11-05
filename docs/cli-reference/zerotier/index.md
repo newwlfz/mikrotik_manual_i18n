@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/zerotier/index"
 sidebar_position: 2
 title: "zerotier"
 sidebar_label: 'zerotier'
-source: https://manual.mikrotik.com/docs/cli-reference/zerotier
-captured_at: '2026-11-01T21:30:37+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/zerotier
+captured_at: '2026-11-01T21:26:13+08:00'
 ---
 
 -----------
@@ -13,29 +13,31 @@ captured_at: '2026-11-01T21:30:37+08:00'
 **Package:** zerotier
 **Type:** Directory
 
+The [ZeroTier](/docs/virtual-private-networks/zerotier) network hypervisor is a self-contained network virtualization engine that implements an Ethernet virtualization layer
+
 <ArgTable c1="Flag" c2="Name" c3="Description">
-<ArgTableRow arg="X" typ="disabled"></ArgTableRow>
-<ArgTableRow arg="R" typ="online"></ArgTableRow>
-<ArgTableRow arg="F" typ="tcp-fallback"></ArgTableRow>
+<ArgTableRow arg="X" typ="disabled">Whether an item is disabled.</ArgTableRow>
+<ArgTableRow arg="R" typ="online">Whether the instance is online.</ArgTableRow>
+<ArgTableRow arg="F" typ="tcp-fallback">Whether TCP fallback is active.</ArgTableRow>
 </ArgTable>
 
 <ArgTable c1="Argument" c2="Type" c3="Description">
-<ArgTableRow arg="name" typ="string"></ArgTableRow>
-<ArgTableRow arg="disabled" typ="bool"></ArgTableRow>
-<ArgTableRow arg="port" typ="num"></ArgTableRow>
-<ArgTableRow arg="identity" typ="string"></ArgTableRow>
+<ArgTableRow arg="name" typ="string">Instance name.</ArgTableRow>
+<ArgTableRow arg="disabled" typ="bool">Whether an item is disabled.</ArgTableRow>
+<ArgTableRow arg="port" typ="num">Port number the instance listens to.</ArgTableRow>
+<ArgTableRow arg="identity" typ="string">Instance 40-bit unique address.</ArgTableRow>
 <ArgTableRow arg="interfaces" typ="multi { array-id, interface: iface_enum
- }"></ArgTableRow>
-<ArgTableRow arg="route-distance" typ="num"></ArgTableRow>
+ }">List of interfaces used to discover ZeroTier peers with ARP and IP type connections.</ArgTableRow>
+<ArgTableRow arg="route-distance" typ="num">Route distance for routes obtained from planet/moon servers.</ArgTableRow>
 <ArgTableRow arg="backup-priorities" typ="multi { array-id, array-id, backup-priority: composite { interface: iface_enum
 , priority: num
  }
- }"></ArgTableRow>
+ }">Backup interface priorities for failover.</ArgTableRow>
 </ArgTable>
 
 <ArgTable c1="Read-only Argument" c2="Type" c3="Description">
-<ArgTableRow arg="identity.public" typ="string"></ArgTableRow>
-<ArgTableRow arg="state" typ="string"></ArgTableRow>
+<ArgTableRow arg="identity.public" typ="string">Public identity of the instance.</ArgTableRow>
+<ArgTableRow arg="state" typ="string">Current state of the instance.</ArgTableRow>
 <ArgTableRow arg="moons" typ="multi { array-id, moon: string
- }"></ArgTableRow>
+ }">List of moons the instance is connected to.</ArgTableRow>
 </ArgTable>

@@ -1,0 +1,11 @@
+{
+  "position": 7,
+  "label": "RouterOS Licensing",
+  "key": "getting-started/routeros-licensing",
+  "link": {
+    "type": "doc",
+    "id": "getting-started/routeros-licensing/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

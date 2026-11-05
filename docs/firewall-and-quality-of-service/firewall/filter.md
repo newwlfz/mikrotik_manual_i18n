@@ -7,8 +7,8 @@ description: 'Firewall filters in MikroTik RouterOS control packet flow by allow
 tags:
   - 'firewall'
   - 'filtering'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/firewall/filter
-captured_at: '2026-11-04T11:28:11+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/firewall/filter
+captured_at: '2026-11-04T11:15:47+08:00'
 ---
 
 Firewall filters are used to allow or block specific packets forwarded to your local network, originating from your router, or destined for the router.
@@ -238,5 +238,5 @@ add chain=output protocol=ospf action=notrack
 
 - [Building advanced firewall](/docs/firewall-and-quality-of-service/user-guides/building-advanced-firewall)
 - [Connection Rate](/docs/firewall-and-quality-of-service/user-guides/connection-rate)
-- [SSH bruteforce protection](/docs/firewall-and-quality-of-service/user-guides/bruteforce-prevention)
+- [SSH brute-force protection](/docs/firewall-and-quality-of-service/user-guides/bruteforce-prevention)
 - [Syn/DoS protection](/docs/firewall-and-quality-of-service/user-guides/ddos-protection)

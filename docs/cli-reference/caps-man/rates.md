@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/caps-man/rates"
 sidebar_position: 11
 title: "rates"
-source: https://manual.mikrotik.com/docs/cli-reference/caps-man/rates
-captured_at: '2026-11-01T21:26:22+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/rates
+captured_at: '2026-11-01T21:21:47+08:00'
 ---
 
 -----------

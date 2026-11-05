@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/disk/btrfs/filesystem/replace-cancel"
 sidebar_position: 6
 title: "replace-cancel"
 sidebar_label: 'replace-cancel'
-source: https://manual.mikrotik.com/docs/cli-reference/disk/btrfs/filesystem/replace-cancel
-captured_at: '2026-11-01T21:26:42+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/disk/btrfs/filesystem/replace-cancel
+captured_at: '2026-11-01T21:22:06+08:00'
 ---
 
 -----------

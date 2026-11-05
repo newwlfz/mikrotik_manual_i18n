@@ -8,8 +8,8 @@ tags:
   - 'routing'
   - 'ospf'
 slug: /user-guides/routing-and-networking-protocols/unicast/ospf/neighbour-relationship
-source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/ospf/neighbour-relationship
-captured_at: '2026-11-04T11:34:20+08:00'
+source: https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/unicast/ospf/neighbour-relationship
+captured_at: '2026-11-04T11:22:56+08:00'
 ---
 
 OSPF is a link-state protocol that considers the router interface an OSPF link. Whenever OSPF is started, it adds the state of all the links in the local **link-state database**.

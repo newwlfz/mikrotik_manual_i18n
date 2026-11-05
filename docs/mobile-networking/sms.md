@@ -8,8 +8,8 @@ tags:
   - 'sms'
   - 'at-commands'
   - 'modem'
-source: https://manual.mikrotik.com/docs/mobile-networking/sms
-captured_at: '2026-11-04T11:32:24+08:00'
+source: https://manual.mikrotik.com/docs/7.25/mobile-networking/sms
+captured_at: '2026-11-04T11:20:32+08:00'
 ---
 
 ## Summary

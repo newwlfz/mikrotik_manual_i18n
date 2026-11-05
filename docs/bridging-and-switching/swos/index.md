@@ -4,8 +4,8 @@ sidebar_position: 6
 title: "SwOS"
 sidebar_label: 'SwOS'
 description: 'SwOS is a lightweight operating system built exclusively for the administration of MikroTik switching hardware. It delivers maximum wire-speed Layer 2 forwarding capability across all standard Ethernet frames, handling IPv4, IPv6, and non-IP traffic seamlessly.'
-source: https://manual.mikrotik.com/docs/bridging-and-switching/swos
-captured_at: '2026-11-04T11:27:06+08:00'
+source: https://manual.mikrotik.com/docs/7.25/bridging-and-switching/swos
+captured_at: '2026-11-04T11:14:24+08:00'
 ---
 
 # Introduction to SwOS

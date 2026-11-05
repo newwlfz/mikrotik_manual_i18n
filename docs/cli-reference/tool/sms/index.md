@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/tool/sms/index"
 sidebar_position: 2
 title: "sms"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/sms
-captured_at: '2026-11-01T21:30:20+08:00'
+sidebar_label: 'sms'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/sms
+captured_at: '2026-11-01T21:25:57+08:00'
 ---
 
 -----------

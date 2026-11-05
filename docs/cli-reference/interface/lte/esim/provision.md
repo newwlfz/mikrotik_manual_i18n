@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/lte/esim/provision"
 sidebar_position: 6
 title: "provision"
 sidebar_label: 'provision'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim/provision
-captured_at: '2026-11-01T21:27:27+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/lte/esim/provision
+captured_at: '2026-11-01T21:22:48+08:00'
 ---
 
 -----------
@@ -21,7 +21,7 @@ captured_at: '2026-11-01T21:27:27+08:00'
 <ArgTableRow arg="matching-id" typ="string">An activation code token. Example: matching-id=ABCD10EFGHI5KL6M</ArgTableRow>
 <ArgTableRow arg="confirmation-code" typ="string">An optional code supplied by the operator</ArgTableRow>
 <ArgTableRow arg="sm-dp-plus-oid" typ="string">An optional SM-DP+ supplied by the operator</ArgTableRow>
-<ArgTableRow arg="force-confirmation" typ="bool">Will not ask for confirmation</ArgTableRow>
+<ArgTableRow arg="force-confirmation" typ="bool">Do not wait for user confirmation and automatically accept the profile provision (default: no)</ArgTableRow>
 </ArgTable>
 
 <ArgTable c1="Read-only Argument" c2="Type" c3="Description">

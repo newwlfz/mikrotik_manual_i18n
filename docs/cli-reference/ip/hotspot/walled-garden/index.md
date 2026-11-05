@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ip/hotspot/walled-garden/index"
 sidebar_position: 1
 title: "walled-garden"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/walled-garden
-captured_at: '2026-11-01T21:28:41+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/hotspot/walled-garden
+captured_at: '2026-11-01T21:24:05+08:00'
 ---
 
 -----------

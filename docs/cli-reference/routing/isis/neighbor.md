@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/isis/neighbor"
 sidebar_position: 5
 title: "neighbor"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/isis/neighbor
-captured_at: '2026-11-01T21:29:33+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/isis/neighbor
+captured_at: '2026-11-01T21:25:12+08:00'
 ---
 
 -----------

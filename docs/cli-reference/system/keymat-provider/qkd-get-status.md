@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/keymat-provider/qkd-get-status"
 sidebar_position: 4
 title: "qkd-get-status"
-source: https://manual.mikrotik.com/docs/cli-reference/system/keymat-provider/qkd-get-status
-captured_at: '2026-11-01T21:29:52+08:00'
+sidebar_label: 'qkd-get-status'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/keymat-provider/qkd-get-status
+captured_at: '2026-11-01T21:25:30+08:00'
 ---
 
 -----------

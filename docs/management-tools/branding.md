@@ -1,6 +1,6 @@
 ---
 sidebar_key: "management-tools/branding"
-sidebar_position: 13
+sidebar_position: 14
 title: "Branding"
 sidebar_label: 'Branding'
 description: 'RouterOS Branding package enables customization of system elements including router name, company URLs, ASCII logos, and WebFig interfaces. It supports custom file inclusion for login pages, skins, and hotspot logos while providing version-specific options like SNMP name hiding.'
@@ -8,8 +8,8 @@ tags:
   - 'branding'
   - 'webfig'
   - 'customization'
-source: https://manual.mikrotik.com/docs/management-tools/branding
-captured_at: '2026-11-04T11:31:54+08:00'
+source: https://manual.mikrotik.com/docs/7.25/management-tools/branding
+captured_at: '2026-11-04T11:19:24+08:00'
 ---
 
 RouterOS allows slight system customization with the help of a branding package (modify default configuration, LCD logo, WebFig homepage, etc.).

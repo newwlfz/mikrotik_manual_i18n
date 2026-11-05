@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Chr Installation",
+  "key": "getting-started/installation-and-upgrade/install/chr-installation",
+  "link": {
+    "type": "doc",
+    "id": "getting-started/installation-and-upgrade/install/chr-installation/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

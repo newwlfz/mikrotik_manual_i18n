@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/dude/ros/lease"
 sidebar_position: 6
 title: "lease"
 sidebar_label: 'lease'
-source: https://manual.mikrotik.com/docs/cli-reference/dude/ros/lease
-captured_at: '2026-11-01T21:26:51+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/dude/ros/lease
+captured_at: '2026-11-01T21:22:15+08:00'
 ---
 
 -----------

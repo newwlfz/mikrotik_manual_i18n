@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/index"
 sidebar_position: 12
 title: "interface"
 sidebar_label: 'interface'
-source: https://manual.mikrotik.com/docs/cli-reference/interface
-captured_at: '2026-11-01T21:26:56+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface
+captured_at: '2026-11-01T21:22:19+08:00'
 ---
 
 -----------

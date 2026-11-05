@@ -45,8 +45,10 @@ repo/
 │  ├─ sync_state.json                # committed source/local hashes
 │  └─ translation_state.json         # per-locale source/target hashes
 ├─ data/
-│  ├─ cli/7.24/en.json               # CLI comparison model
+│  ├─ cli/7.25/en.json               # current CLI comparison model
+│  ├─ cli/7.24/en.json               # historical CLI comparison model
 │  └─ manifests/                     # canonical inventory snapshots
+├─ docs/                             # current RouterOS 7.25
 ├─ versioned_docs/version-7.24/      # English RouterOS 7.24
 ├─ versioned_sidebars/
 ├─ hardware/                         # English Hardware Guides
@@ -55,11 +57,10 @@ repo/
 ├─ i18n/<locale>/                    # phase-2 translation overlays
 ├─ src/
 │  ├─ pages/index.tsx
-│  ├─ pages/docs/cli-reference/compare-versions.tsx
-│  ├─ components/{ArgTable,CliCompare}/
+│  ├─ components/{ArgTable,CliCompare,CliReferenceLinks}/
 │  ├─ theme/
 │  └─ css/custom.css
-├─ static/{img,hardware,blog}/
+├─ static/{img,hardware,blog,cli}/
 ├─ docusaurus.config.ts
 ├─ sidebars.ts
 ├─ sidebars-hardware.ts
@@ -77,27 +78,33 @@ without an external database.
 
 ### 3.1 RouterOS docs
 
-Default docs plugin, versioned:
+Default docs plugin, native versioning:
 
 ```ts
 docs: {
   routeBasePath: 'docs',
   sidebarPath: './sidebars.ts',
-  lastVersion: '7.24',
-  onlyIncludeVersions: ['7.24'],
+  lastVersion: 'current',
+  versions: {
+    current: {label: '7.25', badge: true, banner: 'none'},
+    '7.24': {label: '7.24', path: '7.24', badge: true, banner: 'none'},
+  },
 }
 ```
 
-- `versions.json`: `["7.24"]`
-- Public URL: `/docs/7.24/...`
-- `/docs/` is not published.
-- `docs/index.md` is a current-version placeholder excluded by the version
-  filter; it exists because the docs plugin expects a current source directory.
-
-The route spike verified `/docs/7.24/introduction/`, `/hardware/`, `/blog/`,
-`/changelog/`, and the literal CLI Compare URL.
+- `versions.json`: `["7.24"]`; Docusaurus inserts `current` automatically.
+- Public URL: `/docs/...` for current 7.25.
+- Historical URL: `/docs/7.24/...`.
+- `/docs/7.25/...` is intentionally absent, matching the official current-version
+  model.
+- `docs/` is the current source; `versioned_docs/version-7.24/` is the
+  historical snapshot; `versioned_sidebars/version-7.24-sidebars.json` is its
+  native JSON sidebar.
+- The navbar `docsVersionDropdown` becomes a native dropdown as soon as more
+  than one version exists; no custom component is used.
 
 ### 3.2 Hardware
+
 
 Separate `@docusaurus/plugin-content-docs` instance:
 
@@ -130,19 +137,16 @@ Second blog plugin instance:
 ### 3.5 CLI Compare
 
 Official page: `/docs/cli-reference/compare-versions/`, MDX with
-`<CliCompare />`, hosted upstream inside the current 7.26 docs.
+`<CliCompare />`. It is a native current-version docs page at
+`docs/cli-reference/compare-versions.md`, so it gets the Docs sidebar,
+breadcrumbs and version badge. The historical 7.24 snapshot does not carry the
+page, matching the official historical version.
 
-Because phase 1 has no current docs version, the literal URL is served by a
-standard pages route:
-
-```text
-repo/src/pages/docs/cli-reference/compare-versions.tsx
-→ /docs/cli-reference/compare-versions/
-```
-
-This is a compatibility shim, not a new content mechanism. It shares the CLI
-data model with the future versioned page. The earlier 7.24-scoped spike page
-was removed to avoid two public URLs.
+The component loads `/cli/index.json`, then the per-version models under
+`/cli/<version>.json`. `tools/cli/build-all.mjs` writes both the committed
+`data/cli/<version>/en.json` files and the static copies. A single-version
+install naturally reports zero differences; with 7.24 and 7.25 present it
+reports the real release diff.
 
 ## 4. Multilingual layout
 
@@ -151,11 +155,12 @@ other locale is an overlay with the same relative paths.
 
 | Section | English source | Translation overlay | Route |
 | --- | --- | --- | --- |
+| RouterOS 7.25 (current) | `docs/` | `i18n/<locale>/docusaurus-plugin-content-docs/current/` | `/<locale>/docs/...` |
 | RouterOS 7.24 | `versioned_docs/version-7.24/` | `i18n/<locale>/docusaurus-plugin-content-docs/version-7.24/` | `/<locale>/docs/7.24/...` |
 | Hardware | `hardware/` | `i18n/<locale>/docusaurus-plugin-content-docs-hardware/current/` | `/<locale>/hardware/...` |
 | Product news | `blog/` | `i18n/<locale>/docusaurus-plugin-content-blog/` | `/<locale>/blog/...` |
 | Docs Changes | `changelog/` | `i18n/<locale>/docusaurus-plugin-content-blog-changelog/` | `/<locale>/changelog/...` |
-| CLI compare | `data/cli/7.24/en.json` | `data/cli/7.24/<locale>.json` | `/<locale>/docs/cli-reference/compare-versions/` |
+| CLI compare | `data/cli/<version>/en.json` | `data/cli/<version>/<locale>.json` | `/<locale>/docs/cli-reference/compare-versions/` |
 | Navbar/footer | theme config | `i18n/<locale>/docusaurus-theme-classic/` | locale-prefixed |
 | UI strings | source strings | `i18n/<locale>/code.json` | locale-prefixed |
 
@@ -270,15 +275,31 @@ unchanged. This is the deletion drill requirement.
 version prefix. Historical snapshots live in `versioned_docs/version-*` and are
 served at `/docs/<version>`. This is the same layout as the official site:
 current 7.26 is `/docs`, while 7.24 and 7.25 are `/docs/7.24` and `/docs/7.25`.
+In this mirror current 7.25 is `/docs`, and 7.24 is `/docs/7.24`.
 
 The external content workflow writes the current version number to
-`data/manifests/current-version.json`. When a new version is fetched, it updates
-that file and creates a version snapshot; no redirect table is edited.
+`data/manifests/current-version.json` and the historical list to `versions.json`.
+The version cut is pipeline-driven:
+
+1. `tools/sync/snapshot-version.mjs --version <old>` copies `docs/` to
+   `versioned_docs/version-<old>`, removes current-only pages, rewrites
+   internal `/docs/` links to `/docs/<old>/`, adds the official `user-guides`
+   landing page, writes `versioned_sidebars/version-<old>-sidebars.json` and
+   updates `versions.json`.
+2. `tools/sync/install-version.mjs --version <new> --source <dir>` installs the
+   new tree into `docs/`, applies the official directory normalisation
+   (for example `routing-and-networking-protocols` under `user-guides/`),
+   rewrites versioned links to the current root, keeps current-only pages and
+   updates `current-version.json`.
+3. `tools/sync/crawl-sidebar.mjs` and `build-sidebars.mjs` regenerate
+   `sidebars.ts` and the versioned sidebar JSON from the official sidebar.
+4. `npm run metadata:build` regenerates descriptions, tags, labels,
+   categories, per-version CLI links and CLI models for every version.
 
 `tools/sync/extract-doc-metadata.mjs` and `apply-doc-metadata.mjs` capture the
 official full description, tags, sidebar labels and CLI-reference links. The
-theme `DocItem/Content` wrapper renders the CLI-reference block; the mapping is
-generated data, not per-page patches.
+theme `DocItem/Content` wrapper renders the CLI-reference block from a
+version-keyed manifest, so current and historical pages get their own hrefs.
 
 ## 9. Current inventory and legacy reuse
 
@@ -287,14 +308,16 @@ official gaps were fetched. Current imported inventory:
 
 | Section | Local | Official target | Status |
 | --- | ---: | ---: | --- |
-| RouterOS 7.24 | 1,422 | 1,418 | complete, including compatibility pages |
+| RouterOS 7.25 (current) | 1,428 | 1,427 | complete, including the current-only compare page |
+| RouterOS 7.24 (versioned) | 1,422 files | 1,418 | complete; four legacy duplicate routes collapse to the same doc ids |
 | Hardware | 250 | 250 | complete |
 | Product news | 6 | 6 | complete |
 | Docs Changes | 108 | 108 | complete |
-| CLI Reference | 1,054 commands | 1,055 commands | one root-level command pending |
+| CLI Reference 7.25 | 1,057 commands | 1,057 | exact |
+| CLI Reference 7.24 | 1,054 commands | 1,055 | official includes the `Headings` pseudo-command |
 
 `STRICT_LINKS=true npm run build` succeeds with zero broken links. Pagefind
-indexes 1,810 output pages.
+indexes both versions.
 
 Deletion drill:
 
@@ -311,7 +334,7 @@ content is copied into the repository.
 - Repository root: `repo/`.
 - Branch: `main`.
 - Site, tools, config, state and workflows are committed.
-- No remote during local phase 1.
+- Remote: `https://github.com/newwlfz/mikrotik_manual_i18n.git`.
 - `node_modules/`, `build/`, `.docusaurus/`, `.work/` and logs are ignored.
 - `session-archive/`, `vendor/`, `incoming/`, `reports/` and `work/` stay
   outside the repository.

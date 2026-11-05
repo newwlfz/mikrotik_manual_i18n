@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "system",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/backup/cloud/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/backup/cloud"
+}

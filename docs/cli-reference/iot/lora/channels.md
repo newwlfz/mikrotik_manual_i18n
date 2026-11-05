@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/iot/lora/channels"
 sidebar_position: 1
 title: "channels"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/lora/channels
-captured_at: '2026-11-01T21:28:13+08:00'
+sidebar_label: 'channels'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/lora/channels
+captured_at: '2026-11-01T21:23:37+08:00'
 ---
 
 -----------

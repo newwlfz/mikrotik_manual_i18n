@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/caps-man/interface/hw-info"
 sidebar_position: 1
 title: "hw-info"
-source: https://manual.mikrotik.com/docs/cli-reference/caps-man/interface/hw-info
-captured_at: '2026-11-01T21:26:20+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/interface/hw-info
+captured_at: '2026-11-01T21:21:45+08:00'
 ---
 
 -----------

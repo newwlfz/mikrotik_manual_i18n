@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/package/disable"
 sidebar_position: 2
 title: "disable"
-source: https://manual.mikrotik.com/docs/cli-reference/system/package/disable
-captured_at: '2026-11-01T21:29:57+08:00'
+sidebar_label: 'disable'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/package/disable
+captured_at: '2026-11-01T21:25:35+08:00'
 ---
 
 -----------

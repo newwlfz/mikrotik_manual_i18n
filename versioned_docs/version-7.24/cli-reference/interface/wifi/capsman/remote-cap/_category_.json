@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "Remote Cap",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/wifi/capsman/remote-cap/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/wifi/capsman/remote-cap"
+}

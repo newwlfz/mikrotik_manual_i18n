@@ -1,14 +1,14 @@
 ---
 sidebar_key: "containers/user-guides/container-postgres"
-sidebar_position: 6
+sidebar_position: 7
 title: "Container - Postgres"
 description: 'This guide provides step-by-step instructions for setting up PostgreSQL and pgAdmin containers on MikroTik RouterOS, including creating mount points, configuring environment variables, and starting the containers with persistent storage.'
 tags:
   - 'postgresql'
   - 'docker'
   - 'container'
-source: https://manual.mikrotik.com/docs/containers/user-guides/container-postgres
-captured_at: '2026-11-04T11:27:43+08:00'
+source: https://manual.mikrotik.com/docs/7.25/containers/user-guides/container-postgres
+captured_at: '2026-11-04T11:15:00+08:00'
 ---
 
 PostgreSQL is a powerful, widely-used SQL database engine that serves as the backbone for numerous applications, ranging from small web projects to enterprise-level systems. This guide will walk you through the essential steps required to get PostgreSQL up and running on RouterOS. Additionally, this guide will provide you with the necessary instructions to set up pgAdmin—a feature-rich, web-based interface that allows you to easily manage your PostgreSQL database.

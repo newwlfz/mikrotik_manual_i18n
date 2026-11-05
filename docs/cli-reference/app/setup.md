@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/app/setup"
 sidebar_position: 7
 title: "setup"
 sidebar_label: 'setup'
-source: https://manual.mikrotik.com/docs/cli-reference/app/setup
-captured_at: '2026-11-01T21:26:18+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/app/setup
+captured_at: '2026-11-01T21:21:42+08:00'
 ---
 
 -----------

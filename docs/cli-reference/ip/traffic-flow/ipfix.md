@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ip/traffic-flow/ipfix"
 sidebar_position: 2
 title: "ipfix"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/traffic-flow/ipfix
-captured_at: '2026-11-01T21:29:00+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/traffic-flow/ipfix
+captured_at: '2026-11-01T21:24:29+08:00'
 ---
 
 -----------

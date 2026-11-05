@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/lte/at-chat"
 sidebar_position: 2
 title: "at-chat"
 sidebar_label: 'at-chat'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/lte/at-chat
-captured_at: '2026-11-01T21:27:26+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/lte/at-chat
+captured_at: '2026-11-01T21:22:47+08:00'
 ---
 
 -----------

@@ -1,13 +1,13 @@
 ---
 sidebar_key: "management-tools/mikrotik-mobile-app"
-sidebar_position: 3
+sidebar_position: 4
 title: "MikroTik mobile app"
 sidebar_label: 'MikroTik mobile app'
 description: 'The MikroTik mobile app provides both basic and advanced configuration options for MikroTik routers on Android and iOS, offering a user-friendly setup interface with QR code download links and quick configuration steps.'
 tags:
   - 'management'
-source: https://manual.mikrotik.com/docs/management-tools/mikrotik-mobile-app
-captured_at: '2026-11-04T11:32:01+08:00'
+source: https://manual.mikrotik.com/docs/7.25/management-tools/mikrotik-mobile-app
+captured_at: '2026-11-04T11:19:40+08:00'
 ---
 
 ## Summary

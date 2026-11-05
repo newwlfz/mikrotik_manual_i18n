@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/resource/cpu"
 sidebar_position: 1
 title: "cpu"
-source: https://manual.mikrotik.com/docs/cli-reference/system/resource/cpu
-captured_at: '2026-11-01T21:30:03+08:00'
+sidebar_label: 'cpu'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/resource/cpu
+captured_at: '2026-11-01T21:25:40+08:00'
 ---
 
 -----------

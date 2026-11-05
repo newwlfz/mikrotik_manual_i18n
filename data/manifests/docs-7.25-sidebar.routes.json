@@ -1,0 +1,5207 @@
+[
+  {
+    "href": "/docs/7.25/introduction",
+    "label": "Introduction",
+    "id": "introduction"
+  },
+  {
+    "href": "/docs/7.25/getting-started/",
+    "label": "Getting Started",
+    "id": "getting-started/index"
+  },
+  {
+    "href": "/docs/7.25/management-tools/",
+    "label": "Management Tools",
+    "id": "management-tools/index"
+  },
+  {
+    "href": "/docs/7.25/system-information-and-utilities/",
+    "label": "System Information and Utilities",
+    "id": "system-information-and-utilities/index"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/",
+    "label": "Diagnostics and Monitoring",
+    "id": "diagnostics-monitoring-and-troubleshooting/index"
+  },
+  {
+    "href": "/docs/7.25/hardware/",
+    "label": "Hardware",
+    "id": "hardware/index"
+  },
+  {
+    "href": "/docs/7.25/wired-connections/",
+    "label": "Wired Connections",
+    "id": "wired-connections/index"
+  },
+  {
+    "href": "/docs/7.25/wireless/",
+    "label": "Wireless",
+    "id": "wireless/index"
+  },
+  {
+    "href": "/docs/7.25/mobile-networking/",
+    "label": "Mobile Networking",
+    "id": "mobile-networking/index"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/",
+    "label": "Bridging and Switching",
+    "id": "bridging-and-switching/index"
+  },
+  {
+    "href": "/docs/7.25/network-management/",
+    "label": "Network Services",
+    "id": "network-management/index"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/",
+    "label": "Routing and Networking Protocols",
+    "id": "user-guides/routing-and-networking-protocols/index"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/",
+    "label": "Firewall and Quality of Service",
+    "id": "firewall-and-quality-of-service/index"
+  },
+  {
+    "href": "/docs/7.25/virtual-private-networks/",
+    "label": "Virtual Private Networks",
+    "id": "virtual-private-networks/index"
+  },
+  {
+    "href": "/docs/7.25/authentication-authorization-accounting/",
+    "label": "AAA and User Management",
+    "id": "authentication-authorization-accounting/index"
+  },
+  {
+    "href": "/docs/7.25/high-availability-solutions/",
+    "label": "High Availability Solutions",
+    "id": "high-availability-solutions/index"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/",
+    "label": "Internet of Things",
+    "id": "internet-of-things/index"
+  },
+  {
+    "href": "/docs/7.25/storage/",
+    "label": "Storage",
+    "id": "storage/index"
+  },
+  {
+    "href": "/docs/7.25/containers/",
+    "label": "Containers",
+    "id": "containers/index"
+  },
+  {
+    "href": "/docs/7.25/developer-guides/",
+    "label": "Developer Guides",
+    "id": "developer-guides/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/",
+    "label": "CLI Reference",
+    "id": "cli-reference/index"
+  },
+  {
+    "href": "/docs/7.25/getting-started/first-time-configuration",
+    "label": "First Time Configuration",
+    "id": "getting-started/first-time-configuration"
+  },
+  {
+    "href": "/docs/7.25/getting-started/manual-network-setup",
+    "label": "Manual Network Setup",
+    "id": "getting-started/manual-network-setup"
+  },
+  {
+    "href": "/docs/7.25/getting-started/securing-your-router",
+    "label": "Securing your router",
+    "id": "getting-started/securing-your-router"
+  },
+  {
+    "href": "/docs/7.25/getting-started/networking-fundamentals/",
+    "label": "Networking Fundamentals",
+    "id": "getting-started/networking-fundamentals/index"
+  },
+  {
+    "href": "/docs/7.25/getting-started/installation-and-upgrade/",
+    "label": "Installation and Upgrade",
+    "id": "getting-started/installation-and-upgrade/index"
+  },
+  {
+    "href": "/docs/7.25/getting-started/configuration-management/",
+    "label": "Configuration Management",
+    "id": "getting-started/configuration-management/index"
+  },
+  {
+    "href": "/docs/7.25/getting-started/routeros-licensing/",
+    "label": "RouterOS Licensing",
+    "id": "getting-started/routeros-licensing/index"
+  },
+  {
+    "href": "/docs/7.25/getting-started/software-specifications/",
+    "label": "Software Specifications",
+    "id": "getting-started/software-specifications/index"
+  },
+  {
+    "href": "/docs/7.25/getting-started/upgrading-to-v7",
+    "label": "Upgrading to v7",
+    "id": "getting-started/upgrading-to-v7"
+  },
+  {
+    "href": "/docs/7.25/getting-started/supout-rif",
+    "label": "Supout.rif",
+    "id": "getting-started/supout-rif"
+  },
+  {
+    "href": "/docs/7.25/management-tools/webfig",
+    "label": "WebFig",
+    "id": "management-tools/webfig"
+  },
+  {
+    "href": "/docs/7.25/management-tools/winbox",
+    "label": "WinBox",
+    "id": "management-tools/winbox"
+  },
+  {
+    "href": "/docs/7.25/management-tools/winbox-legacy",
+    "label": "WinBox v3 (Legacy)",
+    "id": "management-tools/winbox-legacy"
+  },
+  {
+    "href": "/docs/7.25/management-tools/mikrotik-mobile-app",
+    "label": "MikroTik mobile app",
+    "id": "management-tools/mikrotik-mobile-app"
+  },
+  {
+    "href": "/docs/7.25/management-tools/console",
+    "label": "Console",
+    "id": "management-tools/console"
+  },
+  {
+    "href": "/docs/7.25/management-tools/serial-console",
+    "label": "Serial Console",
+    "id": "management-tools/serial-console"
+  },
+  {
+    "href": "/docs/7.25/management-tools/ssh",
+    "label": "SSH",
+    "id": "management-tools/ssh"
+  },
+  {
+    "href": "/docs/7.25/management-tools/quick-set",
+    "label": "Quick Set",
+    "id": "management-tools/quick-set"
+  },
+  {
+    "href": "/docs/7.25/management-tools/flashfig",
+    "label": "FlashFig",
+    "id": "management-tools/flashfig"
+  },
+  {
+    "href": "/docs/7.25/management-tools/romon",
+    "label": "RoMON",
+    "id": "management-tools/romon"
+  },
+  {
+    "href": "/docs/7.25/management-tools/mac-server",
+    "label": "MAC server",
+    "id": "management-tools/mac-server"
+  },
+  {
+    "href": "/docs/7.25/management-tools/tr-069",
+    "label": "TR-069",
+    "id": "management-tools/tr-069"
+  },
+  {
+    "href": "/docs/7.25/management-tools/dude",
+    "label": "Dude",
+    "id": "management-tools/dude"
+  },
+  {
+    "href": "/docs/7.25/management-tools/branding",
+    "label": "Branding",
+    "id": "management-tools/branding"
+  },
+  {
+    "href": "/docs/7.25/system-information-and-utilities/clock",
+    "label": "Clock",
+    "id": "system-information-and-utilities/clock"
+  },
+  {
+    "href": "/docs/7.25/system-information-and-utilities/device-mode",
+    "label": "Device mode",
+    "id": "system-information-and-utilities/device-mode"
+  },
+  {
+    "href": "/docs/7.25/system-information-and-utilities/e-mail",
+    "label": "Email",
+    "id": "system-information-and-utilities/e-mail"
+  },
+  {
+    "href": "/docs/7.25/system-information-and-utilities/fetch",
+    "label": "Fetch",
+    "id": "system-information-and-utilities/fetch"
+  },
+  {
+    "href": "/docs/7.25/system-information-and-utilities/files",
+    "label": "Files",
+    "id": "system-information-and-utilities/files"
+  },
+  {
+    "href": "/docs/7.25/system-information-and-utilities/identity",
+    "label": "Identity",
+    "id": "system-information-and-utilities/identity"
+  },
+  {
+    "href": "/docs/7.25/system-information-and-utilities/ip-packing",
+    "label": "IP Packing",
+    "id": "system-information-and-utilities/ip-packing"
+  },
+  {
+    "href": "/docs/7.25/system-information-and-utilities/neighbor-discovery",
+    "label": "Neighbor Discovery",
+    "id": "system-information-and-utilities/neighbor-discovery"
+  },
+  {
+    "href": "/docs/7.25/system-information-and-utilities/note",
+    "label": "Note",
+    "id": "system-information-and-utilities/note"
+  },
+  {
+    "href": "/docs/7.25/system-information-and-utilities/ntp",
+    "label": "NTP",
+    "id": "system-information-and-utilities/ntp"
+  },
+  {
+    "href": "/docs/7.25/system-information-and-utilities/partitions",
+    "label": "Partitions",
+    "id": "system-information-and-utilities/partitions"
+  },
+  {
+    "href": "/docs/7.25/system-information-and-utilities/precision-time-protocol",
+    "label": "Precision Time Protocol",
+    "id": "system-information-and-utilities/precision-time-protocol"
+  },
+  {
+    "href": "/docs/7.25/system-information-and-utilities/scheduler",
+    "label": "Scheduler",
+    "id": "system-information-and-utilities/scheduler"
+  },
+  {
+    "href": "/docs/7.25/system-information-and-utilities/services",
+    "label": "Services",
+    "id": "system-information-and-utilities/services"
+  },
+  {
+    "href": "/docs/7.25/system-information-and-utilities/tftp",
+    "label": "TFTP",
+    "id": "system-information-and-utilities/tftp"
+  },
+  {
+    "href": "/docs/7.25/system-information-and-utilities/ups",
+    "label": "UPS",
+    "id": "system-information-and-utilities/ups"
+  },
+  {
+    "href": "/docs/7.25/system-information-and-utilities/wake-on-lan",
+    "label": "Wake on LAN",
+    "id": "system-information-and-utilities/wake-on-lan"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/ping",
+    "label": "Ping",
+    "id": "diagnostics-monitoring-and-troubleshooting/ping"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/traceroute",
+    "label": "Traceroute",
+    "id": "diagnostics-monitoring-and-troubleshooting/traceroute"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/torch",
+    "label": "Torch",
+    "id": "diagnostics-monitoring-and-troubleshooting/torch"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/packet-sniffer",
+    "label": "Packet Sniffer",
+    "id": "diagnostics-monitoring-and-troubleshooting/packet-sniffer"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/bandwidth-test",
+    "label": "Bandwidth test",
+    "id": "diagnostics-monitoring-and-troubleshooting/bandwidth-test"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/speed-test",
+    "label": "Speed Test",
+    "id": "diagnostics-monitoring-and-troubleshooting/speed-test"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/flood-ping",
+    "label": "Flood Ping",
+    "id": "diagnostics-monitoring-and-troubleshooting/flood-ping"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/interface-stats-and-monitor-traffic",
+    "label": "Interface stats and monitor-traffic",
+    "id": "diagnostics-monitoring-and-troubleshooting/interface-stats-and-monitor-traffic"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/traffic-generator",
+    "label": "Traffic Generator",
+    "id": "diagnostics-monitoring-and-troubleshooting/traffic-generator"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/netwatch",
+    "label": "Netwatch",
+    "id": "diagnostics-monitoring-and-troubleshooting/netwatch"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/graphing",
+    "label": "Graphing",
+    "id": "diagnostics-monitoring-and-troubleshooting/graphing"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/snmp",
+    "label": "SNMP",
+    "id": "diagnostics-monitoring-and-troubleshooting/snmp"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/health",
+    "label": "Health",
+    "id": "diagnostics-monitoring-and-troubleshooting/health"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/resource",
+    "label": "Resource",
+    "id": "diagnostics-monitoring-and-troubleshooting/resource"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/profiler",
+    "label": "Profiler",
+    "id": "diagnostics-monitoring-and-troubleshooting/profiler"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/ip-scan",
+    "label": "IP Scan",
+    "id": "diagnostics-monitoring-and-troubleshooting/ip-scan"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/detect-internet",
+    "label": "Detect Internet",
+    "id": "diagnostics-monitoring-and-troubleshooting/detect-internet"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/dynamic-dns",
+    "label": "DNS update",
+    "id": "diagnostics-monitoring-and-troubleshooting/dynamic-dns"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/watchdog",
+    "label": "Watchdog",
+    "id": "diagnostics-monitoring-and-troubleshooting/watchdog"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/downgrading-routeros",
+    "label": "Downgrading RouterOS",
+    "id": "diagnostics-monitoring-and-troubleshooting/downgrading-routeros"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/log/",
+    "label": "Logs",
+    "id": "diagnostics-monitoring-and-troubleshooting/log/index"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/traffic-flow/",
+    "label": "Traffic Flow",
+    "id": "diagnostics-monitoring-and-troubleshooting/traffic-flow/index"
+  },
+  {
+    "href": "/docs/7.25/hardware/disks/",
+    "label": "Disks",
+    "id": "hardware/disks/index"
+  },
+  {
+    "href": "/docs/7.25/hardware/grounding",
+    "label": "Grounding",
+    "id": "hardware/grounding"
+  },
+  {
+    "href": "/docs/7.25/hardware/lcd-touchscreen",
+    "label": "LCD Touchscreen",
+    "id": "hardware/lcd-touchscreen"
+  },
+  {
+    "href": "/docs/7.25/hardware/leds",
+    "label": "LEDs",
+    "id": "hardware/leds"
+  },
+  {
+    "href": "/docs/7.25/hardware/mtu-in-routeros",
+    "label": "MTU in RouterOS",
+    "id": "hardware/mtu-in-routeros"
+  },
+  {
+    "href": "/docs/7.25/hardware/peripherals",
+    "label": "Peripherals",
+    "id": "hardware/peripherals"
+  },
+  {
+    "href": "/docs/7.25/hardware/poe-out",
+    "label": "PoE",
+    "id": "hardware/poe-out"
+  },
+  {
+    "href": "/docs/7.25/hardware/ports",
+    "label": "Ports",
+    "id": "hardware/ports"
+  },
+  {
+    "href": "/docs/7.25/hardware/product-naming",
+    "label": "Product Naming",
+    "id": "hardware/product-naming"
+  },
+  {
+    "href": "/docs/7.25/hardware/routerboard",
+    "label": "RouterBOARD",
+    "id": "hardware/routerboard"
+  },
+  {
+    "href": "/docs/7.25/hardware/s-plus-rj10-general-guidance",
+    "label": "S+RJ10 general guidance",
+    "id": "hardware/s-plus-rj10-general-guidance"
+  },
+  {
+    "href": "/docs/7.25/hardware/try-before-rma",
+    "label": "Try Before RMA",
+    "id": "hardware/try-before-rma"
+  },
+  {
+    "href": "/docs/7.25/hardware/usb-features",
+    "label": "USB Features",
+    "id": "hardware/usb-features"
+  },
+  {
+    "href": "/docs/7.25/wired-connections/ethernet",
+    "label": "Ethernet",
+    "id": "wired-connections/ethernet"
+  },
+  {
+    "href": "/docs/7.25/wired-connections/mikrotik-wired-interface-compatibility",
+    "label": "MikroTik wired interface compatibility",
+    "id": "wired-connections/mikrotik-wired-interface-compatibility"
+  },
+  {
+    "href": "/docs/7.25/wired-connections/pwr-line",
+    "label": "PWR Line",
+    "id": "wired-connections/pwr-line"
+  },
+  {
+    "href": "/docs/7.25/wireless/wifi/",
+    "label": "Wi-Fi 6 / 7 (802.11ax/be)",
+    "id": "wireless/wifi/index"
+  },
+  {
+    "href": "/docs/7.25/wireless/wifi-ac/",
+    "label": "Wi-Fi 5 (802.11ac)",
+    "id": "wireless/wifi-ac/index"
+  },
+  {
+    "href": "/docs/7.25/wireless/abgn/",
+    "label": "802.11 a/b/g/n",
+    "id": "wireless/abgn/index"
+  },
+  {
+    "href": "/docs/7.25/wireless/w60g/",
+    "label": "60 GHz (W60G)",
+    "id": "wireless/w60g/index"
+  },
+  {
+    "href": "/docs/7.25/wireless/user-guides/",
+    "label": "User Guides",
+    "id": "wireless/user-guides/index"
+  },
+  {
+    "href": "/docs/7.25/mobile-networking/lte-5g",
+    "label": "LTE/5G",
+    "id": "mobile-networking/lte-5g"
+  },
+  {
+    "href": "/docs/7.25/mobile-networking/gps/",
+    "label": "GPS",
+    "id": "mobile-networking/gps/index"
+  },
+  {
+    "href": "/docs/7.25/mobile-networking/mikrotik-connectivity",
+    "label": "MikroTik Connectivity",
+    "id": "mobile-networking/mikrotik-connectivity"
+  },
+  {
+    "href": "/docs/7.25/mobile-networking/sms",
+    "label": "SMS",
+    "id": "mobile-networking/sms"
+  },
+  {
+    "href": "/docs/7.25/mobile-networking/ppp",
+    "label": "PPP",
+    "id": "mobile-networking/ppp"
+  },
+  {
+    "href": "/docs/7.25/mobile-networking/bg77-modem-at-commands/",
+    "label": "BG77 modem AT commands",
+    "id": "mobile-networking/bg77-modem-at-commands/index"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/marvell-prestera-switch-chip-features",
+    "label": "Marvell Prestera switch chip features",
+    "id": "bridging-and-switching/marvell-prestera-switch-chip-features"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/l3-hardware-offloading",
+    "label": "L3 Hardware Offloading",
+    "id": "bridging-and-switching/l3-hardware-offloading"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/quality-of-service",
+    "label": "Quality of Service",
+    "id": "bridging-and-switching/quality-of-service"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/macsec",
+    "label": "MACsec",
+    "id": "bridging-and-switching/macsec"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/macvlan",
+    "label": "MACVLAN",
+    "id": "bridging-and-switching/macvlan"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/vxlan",
+    "label": "VXLAN",
+    "id": "bridging-and-switching/vxlan"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/switch-chip-features",
+    "label": "Other Switch Chip Features",
+    "id": "bridging-and-switching/switch-chip-features"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/vlan",
+    "label": "VLAN",
+    "id": "bridging-and-switching/vlan"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/swos/",
+    "label": "SwOS",
+    "id": "bridging-and-switching/swos/index"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/user-guides/",
+    "label": "User Guides",
+    "id": "bridging-and-switching/user-guides/index"
+  },
+  {
+    "href": "/docs/7.25/network-management/cloud/",
+    "label": "Cloud",
+    "id": "network-management/cloud/index"
+  },
+  {
+    "href": "/docs/7.25/network-management/dhcp/",
+    "label": "DHCP",
+    "id": "network-management/dhcp/index"
+  },
+  {
+    "href": "/docs/7.25/network-management/dns",
+    "label": "DNS",
+    "id": "network-management/dns"
+  },
+  {
+    "href": "/docs/7.25/network-management/openflow",
+    "label": "Openflow",
+    "id": "network-management/openflow"
+  },
+  {
+    "href": "/docs/7.25/network-management/proxy/",
+    "label": "Proxy",
+    "id": "network-management/proxy/index"
+  },
+  {
+    "href": "/docs/7.25/network-management/socks/",
+    "label": "SOCKS",
+    "id": "network-management/socks/index"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/routing-decision",
+    "label": "Routing Decision",
+    "id": "user-guides/routing-and-networking-protocols/routing-decision"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/moving-from-rosv6-to-rosv7",
+    "label": "Moving from ROSv6 to ROSv7",
+    "id": "user-guides/routing-and-networking-protocols/moving-from-rosv6-to-rosv7"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/routing-protocol-multi-core-support",
+    "label": "Routing Protocol Multi-core Support",
+    "id": "user-guides/routing-and-networking-protocols/routing-protocol-multi-core-support"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/policy-routing",
+    "label": "Policy Routing",
+    "id": "user-guides/routing-and-networking-protocols/policy-routing"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/vrf",
+    "label": "VRF",
+    "id": "user-guides/routing-and-networking-protocols/vrf"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/unicast/",
+    "label": "Unicast",
+    "id": "user-guides/routing-and-networking-protocols/unicast/index"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/mpls/",
+    "label": "MPLS",
+    "id": "user-guides/routing-and-networking-protocols/mpls/index"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/multicast/",
+    "label": "Multicast",
+    "id": "user-guides/routing-and-networking-protocols/multicast/index"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/route-distinguisher-and-route-target",
+    "label": "Route Distinguisher and Route Target",
+    "id": "user-guides/routing-and-networking-protocols/route-distinguisher-and-route-target"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/route-selection-and-filtering",
+    "label": "Route Selection and Filtering",
+    "id": "user-guides/routing-and-networking-protocols/route-selection-and-filtering"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/firewall/",
+    "label": "Firewall",
+    "id": "firewall-and-quality-of-service/firewall/index"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/packet-flow-in-routeros",
+    "label": "Packet Flow in RouterOS",
+    "id": "firewall-and-quality-of-service/packet-flow-in-routeros"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/connection-tracking",
+    "label": "Connection tracking",
+    "id": "firewall-and-quality-of-service/connection-tracking"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/queues/",
+    "label": "Queues",
+    "id": "firewall-and-quality-of-service/queues/index"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/kid-control",
+    "label": "Kid Control",
+    "id": "firewall-and-quality-of-service/kid-control"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/nat-pmp",
+    "label": "NAT-PMP",
+    "id": "firewall-and-quality-of-service/nat-pmp"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/upnp",
+    "label": "UPnP",
+    "id": "firewall-and-quality-of-service/upnp"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/user-guides/",
+    "label": "User Guides",
+    "id": "firewall-and-quality-of-service/user-guides/index"
+  },
+  {
+    "href": "/docs/7.25/virtual-private-networks/6to4",
+    "label": "6to4",
+    "id": "virtual-private-networks/6to4"
+  },
+  {
+    "href": "/docs/7.25/virtual-private-networks/eoip",
+    "label": "EoIP",
+    "id": "virtual-private-networks/eoip"
+  },
+  {
+    "href": "/docs/7.25/virtual-private-networks/gre",
+    "label": "GRE",
+    "id": "virtual-private-networks/gre"
+  },
+  {
+    "href": "/docs/7.25/virtual-private-networks/ipip",
+    "label": "IPIP",
+    "id": "virtual-private-networks/ipip"
+  },
+  {
+    "href": "/docs/7.25/virtual-private-networks/ipsec/",
+    "label": "IPsec",
+    "id": "virtual-private-networks/ipsec/index"
+  },
+  {
+    "href": "/docs/7.25/virtual-private-networks/l2tp/",
+    "label": "L2TP",
+    "id": "virtual-private-networks/l2tp/index"
+  },
+  {
+    "href": "/docs/7.25/virtual-private-networks/openvpn",
+    "label": "OpenVPN",
+    "id": "virtual-private-networks/openvpn"
+  },
+  {
+    "href": "/docs/7.25/virtual-private-networks/pppoe/",
+    "label": "PPPoE",
+    "id": "virtual-private-networks/pppoe/index"
+  },
+  {
+    "href": "/docs/7.25/virtual-private-networks/pptp",
+    "label": "PPTP",
+    "id": "virtual-private-networks/pptp"
+  },
+  {
+    "href": "/docs/7.25/virtual-private-networks/sstp",
+    "label": "SSTP",
+    "id": "virtual-private-networks/sstp"
+  },
+  {
+    "href": "/docs/7.25/virtual-private-networks/wireguard",
+    "label": "WireGuard",
+    "id": "virtual-private-networks/wireguard"
+  },
+  {
+    "href": "/docs/7.25/virtual-private-networks/zerotier",
+    "label": "ZeroTier",
+    "id": "virtual-private-networks/zerotier"
+  },
+  {
+    "href": "/docs/7.25/authentication-authorization-accounting/certificates",
+    "label": "Certificates",
+    "id": "authentication-authorization-accounting/certificates"
+  },
+  {
+    "href": "/docs/7.25/authentication-authorization-accounting/dot1x",
+    "label": "Dot1X",
+    "id": "authentication-authorization-accounting/dot1x"
+  },
+  {
+    "href": "/docs/7.25/authentication-authorization-accounting/hotspot-captive-portal/",
+    "label": "HotSpot - Captive portal",
+    "id": "authentication-authorization-accounting/hotspot-captive-portal/index"
+  },
+  {
+    "href": "/docs/7.25/authentication-authorization-accounting/ppp-aaa",
+    "label": "PPP AAA",
+    "id": "authentication-authorization-accounting/ppp-aaa"
+  },
+  {
+    "href": "/docs/7.25/authentication-authorization-accounting/radius",
+    "label": "RADIUS",
+    "id": "authentication-authorization-accounting/radius"
+  },
+  {
+    "href": "/docs/7.25/authentication-authorization-accounting/user-manager",
+    "label": "User Manager",
+    "id": "authentication-authorization-accounting/user-manager"
+  },
+  {
+    "href": "/docs/7.25/authentication-authorization-accounting/user",
+    "label": "User",
+    "id": "authentication-authorization-accounting/user"
+  },
+  {
+    "href": "/docs/7.25/high-availability-solutions/bonding",
+    "label": "Bonding",
+    "id": "high-availability-solutions/bonding"
+  },
+  {
+    "href": "/docs/7.25/high-availability-solutions/load-balancing/",
+    "label": "Load Balancing",
+    "id": "high-availability-solutions/load-balancing/index"
+  },
+  {
+    "href": "/docs/7.25/high-availability-solutions/multi-chassis-link-aggregation-group",
+    "label": "Multi-chassis Link Aggregation Group",
+    "id": "high-availability-solutions/multi-chassis-link-aggregation-group"
+  },
+  {
+    "href": "/docs/7.25/high-availability-solutions/user-guides/bonding-examples",
+    "label": "User Guides",
+    "id": "high-availability-solutions/user-guides/bonding-examples"
+  },
+  {
+    "href": "/docs/7.25/high-availability-solutions/vrrp",
+    "label": "VRRP",
+    "id": "high-availability-solutions/vrrp"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/bluetooth/",
+    "label": "Bluetooth",
+    "id": "internet-of-things/bluetooth/index"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/gpio/",
+    "label": "GPIO",
+    "id": "internet-of-things/gpio/index"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/lora/",
+    "label": "Lora",
+    "id": "internet-of-things/lora/index"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/modbus",
+    "label": "Modbus",
+    "id": "internet-of-things/modbus"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/mqtt/",
+    "label": "MQTT",
+    "id": "internet-of-things/mqtt/index"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/wiliot",
+    "label": "Wiliot",
+    "id": "internet-of-things/wiliot"
+  },
+  {
+    "href": "/docs/7.25/storage/btrfs/",
+    "label": "index",
+    "id": "storage/btrfs/index"
+  },
+  {
+    "href": "/docs/7.25/storage/dlna",
+    "label": "DLNA Media Server",
+    "id": "storage/dlna"
+  },
+  {
+    "href": "/docs/7.25/storage/encrypted-storage",
+    "label": "Encrypted storage (dm-crypt)",
+    "id": "storage/encrypted-storage"
+  },
+  {
+    "href": "/docs/7.25/storage/iscsi",
+    "label": "iSCSI",
+    "id": "storage/iscsi"
+  },
+  {
+    "href": "/docs/7.25/storage/nfs",
+    "label": "NFS",
+    "id": "storage/nfs"
+  },
+  {
+    "href": "/docs/7.25/storage/nvme-over-tcp",
+    "label": "NVMe over TCP",
+    "id": "storage/nvme-over-tcp"
+  },
+  {
+    "href": "/docs/7.25/storage/raid/",
+    "label": "RAID",
+    "id": "storage/raid/index"
+  },
+  {
+    "href": "/docs/7.25/storage/ramdisk",
+    "label": "Ramdisk",
+    "id": "storage/ramdisk"
+  },
+  {
+    "href": "/docs/7.25/storage/rsync",
+    "label": "Rsync",
+    "id": "storage/rsync"
+  },
+  {
+    "href": "/docs/7.25/storage/self-encrypting-drives",
+    "label": "Self-encrypting drives (SED)",
+    "id": "storage/self-encrypting-drives"
+  },
+  {
+    "href": "/docs/7.25/storage/smb",
+    "label": "SMB",
+    "id": "storage/smb"
+  },
+  {
+    "href": "/docs/7.25/storage/sshfs",
+    "label": "SSHFS",
+    "id": "storage/sshfs"
+  },
+  {
+    "href": "/docs/7.25/storage/tmpfs",
+    "label": "Tmpfs",
+    "id": "storage/tmpfs"
+  },
+  {
+    "href": "/docs/7.25/containers/apps/",
+    "label": "Apps",
+    "id": "containers/apps/index"
+  },
+  {
+    "href": "/docs/7.25/containers/veth",
+    "label": "VETH",
+    "id": "containers/veth"
+  },
+  {
+    "href": "/docs/7.25/containers/user-guides/claire-homeassistant",
+    "label": "User Guides",
+    "id": "containers/user-guides/claire-homeassistant"
+  },
+  {
+    "href": "/docs/7.25/developer-guides/api/",
+    "label": "API",
+    "id": "developer-guides/api/index"
+  },
+  {
+    "href": "/docs/7.25/developer-guides/rest-api",
+    "label": "REST API",
+    "id": "developer-guides/rest-api"
+  },
+  {
+    "href": "/docs/7.25/developer-guides/scripting/",
+    "label": "Scripting",
+    "id": "developer-guides/scripting/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/app/",
+    "label": "app",
+    "id": "cli-reference/app/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/beep",
+    "label": "beep",
+    "id": "cli-reference/beep"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/blink",
+    "label": "blink",
+    "id": "cli-reference/blink"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/caps-man/aaa",
+    "label": "caps-man",
+    "id": "cli-reference/caps-man/aaa"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/",
+    "label": "certificate",
+    "id": "cli-reference/certificate/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/console/inspect",
+    "label": "console",
+    "id": "cli-reference/console/inspect"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/container/",
+    "label": "container",
+    "id": "cli-reference/container/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/",
+    "label": "disk",
+    "id": "cli-reference/disk/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/",
+    "label": "dude",
+    "id": "cli-reference/dude/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/environment",
+    "label": "environment",
+    "id": "cli-reference/environment"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/file/",
+    "label": "file",
+    "id": "cli-reference/file/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/import",
+    "label": "import",
+    "id": "cli-reference/import"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/",
+    "label": "interface",
+    "id": "cli-reference/interface/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/bluetooth/",
+    "label": "bluetooth",
+    "id": "cli-reference/iot/bluetooth/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/ip/address",
+    "label": "ip",
+    "id": "cli-reference/ip/address"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/ipv6/address",
+    "label": "ipv6",
+    "id": "cli-reference/ipv6/address"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/lcd/",
+    "label": "lcd",
+    "id": "cli-reference/lcd/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/log",
+    "label": "log",
+    "id": "cli-reference/log"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/mpls/forwarding-table",
+    "label": "mpls",
+    "id": "cli-reference/mpls/forwarding-table"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/openflow/",
+    "label": "openflow",
+    "id": "cli-reference/openflow/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/partitions/",
+    "label": "partitions",
+    "id": "cli-reference/partitions/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/password",
+    "label": "password",
+    "id": "cli-reference/password"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/port/",
+    "label": "port",
+    "id": "cli-reference/port/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/ppp/aaa",
+    "label": "ppp",
+    "id": "cli-reference/ppp/aaa"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/queue/interface",
+    "label": "queue",
+    "id": "cli-reference/queue/interface"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/quit",
+    "label": "quit",
+    "id": "cli-reference/quit"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/radius/",
+    "label": "radius",
+    "id": "cli-reference/radius/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/redo",
+    "label": "redo",
+    "id": "cli-reference/redo"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/root/terminal",
+    "label": "root",
+    "id": "cli-reference/root/terminal"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/routing/bfd/authentication",
+    "label": "routing",
+    "id": "cli-reference/routing/bfd/authentication"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/safe-mode",
+    "label": "safe-mode",
+    "id": "cli-reference/safe-mode"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/snmp/",
+    "label": "snmp",
+    "id": "cli-reference/snmp/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/special-login",
+    "label": "special-login",
+    "id": "cli-reference/special-login"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/backup/cloud/",
+    "label": "backup",
+    "id": "cli-reference/system/backup/cloud/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/task/",
+    "label": "task",
+    "id": "cli-reference/task/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/bandwidth-server/",
+    "label": "bandwidth-server",
+    "id": "cli-reference/tool/bandwidth-server/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tr069-client/",
+    "label": "tr069-client",
+    "id": "cli-reference/tr069-client/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/undo",
+    "label": "undo",
+    "id": "cli-reference/undo"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user/",
+    "label": "user",
+    "id": "cli-reference/user/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/",
+    "label": "user-manager",
+    "id": "cli-reference/user-manager/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/zerotier/",
+    "label": "zerotier",
+    "id": "cli-reference/zerotier/index"
+  },
+  {
+    "href": "/docs/7.25/getting-started/networking-fundamentals/ipv6-addresses",
+    "label": "IPv6 Addresses",
+    "id": "getting-started/networking-fundamentals/ipv6-addresses"
+  },
+  {
+    "href": "/docs/7.25/getting-started/networking-fundamentals/ipv6-neighbor-discovery",
+    "label": "IPv6 Neighbor Discovery",
+    "id": "getting-started/networking-fundamentals/ipv6-neighbor-discovery"
+  },
+  {
+    "href": "/docs/7.25/getting-started/installation-and-upgrade/install/chr-installation/",
+    "label": "CHR: Installation",
+    "id": "getting-started/installation-and-upgrade/install/chr-installation/index"
+  },
+  {
+    "href": "/docs/7.25/getting-started/installation-and-upgrade/upgrade",
+    "label": "Upgrade",
+    "id": "getting-started/installation-and-upgrade/upgrade"
+  },
+  {
+    "href": "/docs/7.25/getting-started/installation-and-upgrade/netinstall/",
+    "label": "Netinstall",
+    "id": "getting-started/installation-and-upgrade/netinstall/index"
+  },
+  {
+    "href": "/docs/7.25/getting-started/installation-and-upgrade/packages",
+    "label": "Packages",
+    "id": "getting-started/installation-and-upgrade/packages"
+  },
+  {
+    "href": "/docs/7.25/getting-started/installation-and-upgrade/routerboot",
+    "label": "RouterBOOT",
+    "id": "getting-started/installation-and-upgrade/routerboot"
+  },
+  {
+    "href": "/docs/7.25/getting-started/configuration-management/backup",
+    "label": "Backup",
+    "id": "getting-started/configuration-management/backup"
+  },
+  {
+    "href": "/docs/7.25/getting-started/configuration-management/default-configuration-passwords",
+    "label": "Default Configuration Passwords",
+    "id": "getting-started/configuration-management/default-configuration-passwords"
+  },
+  {
+    "href": "/docs/7.25/getting-started/configuration-management/default-configurations",
+    "label": "Default configurations",
+    "id": "getting-started/configuration-management/default-configurations"
+  },
+  {
+    "href": "/docs/7.25/getting-started/configuration-management/list-of-menus-with-sensitive-parameters",
+    "label": "List of menus with sensitive parameters",
+    "id": "getting-started/configuration-management/list-of-menus-with-sensitive-parameters"
+  },
+  {
+    "href": "/docs/7.25/getting-started/configuration-management/routeros-configuration-reset",
+    "label": "RouterOS configuration reset",
+    "id": "getting-started/configuration-management/routeros-configuration-reset"
+  },
+  {
+    "href": "/docs/7.25/getting-started/routeros-licensing/chr/",
+    "label": "Cloud Hosted Router, CHR",
+    "id": "getting-started/routeros-licensing/chr/index"
+  },
+  {
+    "href": "/docs/7.25/getting-started/routeros-licensing/mikrotik-hardware/",
+    "label": "MikroTik Hardware Licensing",
+    "id": "getting-started/routeros-licensing/mikrotik-hardware/index"
+  },
+  {
+    "href": "/docs/7.25/getting-started/routeros-licensing/x86/",
+    "label": "x86 Licensing",
+    "id": "getting-started/routeros-licensing/x86/index"
+  },
+  {
+    "href": "/docs/7.25/getting-started/software-specifications/feature-support-based-on-architecture",
+    "label": "Feature support based on architecture",
+    "id": "getting-started/software-specifications/feature-support-based-on-architecture"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/log/cef-with-elasticsearch",
+    "label": "CEF with Elasticsearch",
+    "id": "diagnostics-monitoring-and-troubleshooting/log/cef-with-elasticsearch"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/log/syslog-with-elasticsearch",
+    "label": "Syslog with Elasticsearch",
+    "id": "diagnostics-monitoring-and-troubleshooting/log/syslog-with-elasticsearch"
+  },
+  {
+    "href": "/docs/7.25/diagnostics-monitoring-and-troubleshooting/traffic-flow/netflow-analysis-with-elasticsearch",
+    "label": "NetFlow analysis with Elasticsearch",
+    "id": "diagnostics-monitoring-and-troubleshooting/traffic-flow/netflow-analysis-with-elasticsearch"
+  },
+  {
+    "href": "/docs/7.25/hardware/disks/smart",
+    "label": "S.M.A.R.T. info",
+    "id": "hardware/disks/smart"
+  },
+  {
+    "href": "/docs/7.25/wireless/wifi/capsman",
+    "label": "WiFi CAPsMAN",
+    "id": "wireless/wifi/capsman"
+  },
+  {
+    "href": "/docs/7.25/wireless/wifi/configuring-outdoor-cpe-to-ap-links",
+    "label": "Configuring outdoor CPE to AP links",
+    "id": "wireless/wifi/configuring-outdoor-cpe-to-ap-links"
+  },
+  {
+    "href": "/docs/7.25/wireless/wifi/configuring-repeater",
+    "label": "Configuring a wireless repeater",
+    "id": "wireless/wifi/configuring-repeater"
+  },
+  {
+    "href": "/docs/7.25/wireless/wifi/configuring-standalone-access-point",
+    "label": "Configuring standalone access point",
+    "id": "wireless/wifi/configuring-standalone-access-point"
+  },
+  {
+    "href": "/docs/7.25/wireless/wifi/interworking-for-wifi6",
+    "label": "Interworking for WiFi6",
+    "id": "wireless/wifi/interworking-for-wifi6"
+  },
+  {
+    "href": "/docs/7.25/wireless/abgn/capsman/",
+    "label": "CAPsMAN",
+    "id": "wireless/abgn/capsman/index"
+  },
+  {
+    "href": "/docs/7.25/wireless/abgn/hwmpplus-mesh",
+    "label": "HWMPplus mesh",
+    "id": "wireless/abgn/hwmpplus-mesh"
+  },
+  {
+    "href": "/docs/7.25/wireless/abgn/interworking-profiles",
+    "label": "Interworking Profiles",
+    "id": "wireless/abgn/interworking-profiles"
+  },
+  {
+    "href": "/docs/7.25/wireless/abgn/nv2",
+    "label": "Nv2",
+    "id": "wireless/abgn/nv2"
+  },
+  {
+    "href": "/docs/7.25/wireless/abgn/spectral-scan",
+    "label": "Spectral scan",
+    "id": "wireless/abgn/spectral-scan"
+  },
+  {
+    "href": "/docs/7.25/wireless/abgn/vlans-on-wireless",
+    "label": "VLANs on Wireless",
+    "id": "wireless/abgn/vlans-on-wireless"
+  },
+  {
+    "href": "/docs/7.25/wireless/abgn/wireless-interface",
+    "label": "Wireless Interface",
+    "id": "wireless/abgn/wireless-interface"
+  },
+  {
+    "href": "/docs/7.25/wireless/abgn/wireless-troubleshooting",
+    "label": "Wireless Troubleshooting",
+    "id": "wireless/abgn/wireless-troubleshooting"
+  },
+  {
+    "href": "/docs/7.25/wireless/w60g/distance-guide",
+    "label": "Distance guide",
+    "id": "wireless/w60g/distance-guide"
+  },
+  {
+    "href": "/docs/7.25/wireless/w60g/fail-over-ptmp-cli-example",
+    "label": "Fail-over PtMP CLI example",
+    "id": "wireless/w60g/fail-over-ptmp-cli-example"
+  },
+  {
+    "href": "/docs/7.25/wireless/w60g/fail-over-ptp-cli-example",
+    "label": "Fail-over PtP CLI example",
+    "id": "wireless/w60g/fail-over-ptp-cli-example"
+  },
+  {
+    "href": "/docs/7.25/wireless/w60g/fail-over-ptp-gui-example",
+    "label": "Fail-over PtP GUI example",
+    "id": "wireless/w60g/fail-over-ptp-gui-example"
+  },
+  {
+    "href": "/docs/7.25/wireless/w60g/ptp-cli-example",
+    "label": "PtP CLI example",
+    "id": "wireless/w60g/ptp-cli-example"
+  },
+  {
+    "href": "/docs/7.25/wireless/w60g/ptp-gui-example",
+    "label": "PtP GUI example",
+    "id": "wireless/w60g/ptp-gui-example"
+  },
+  {
+    "href": "/docs/7.25/wireless/user-guides/enterprise-wireless-security-user",
+    "label": "Enterprise wireless security with User Manager v5",
+    "id": "wireless/user-guides/enterprise-wireless-security-user"
+  },
+  {
+    "href": "/docs/7.25/wireless/user-guides/wireless-station-modes",
+    "label": "Wireless Station Modes",
+    "id": "wireless/user-guides/wireless-station-modes"
+  },
+  {
+    "href": "/docs/7.25/mobile-networking/gps/gps-tracking-using-http-post",
+    "label": "GPS-tracking using HTTP POST",
+    "id": "mobile-networking/gps/gps-tracking-using-http-post"
+  },
+  {
+    "href": "/docs/7.25/mobile-networking/gps/gps-tracking-using-mqtt-and-thingsboard",
+    "label": "GPS-tracking using MQTT and ThingsBoard",
+    "id": "mobile-networking/gps/gps-tracking-using-mqtt-and-thingsboard"
+  },
+  {
+    "href": "/docs/7.25/mobile-networking/dual-sim-application",
+    "label": "Dual SIM Application",
+    "id": "mobile-networking/dual-sim-application"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/swos/crs3",
+    "label": "CRS3xx and CSS3xx Series Manual",
+    "id": "bridging-and-switching/swos/crs3"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/swos/css106",
+    "label": "CSS106 (RB260) series Manual",
+    "id": "bridging-and-switching/swos/css106"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/swos/css610",
+    "label": "CSS610 series Manual",
+    "id": "bridging-and-switching/swos/css610"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/swos/gpen21",
+    "label": "GPEN21 series Manual",
+    "id": "bridging-and-switching/swos/gpen21"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/swos/troubleshooting",
+    "label": "Cannot upgrade SwOS",
+    "id": "bridging-and-switching/swos/troubleshooting"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/user-guides/basic-vlan-switching",
+    "label": "Basic VLAN switching",
+    "id": "bridging-and-switching/user-guides/basic-vlan-switching"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/user-guides/bridge-igmp-mld-snooping",
+    "label": "Bridge IGMP/MLD snooping",
+    "id": "bridging-and-switching/user-guides/bridge-igmp-mld-snooping"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/user-guides/bridge-vlan-table",
+    "label": "Bridge VLAN Table",
+    "id": "bridging-and-switching/user-guides/bridge-vlan-table"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples",
+    "label": "CRS1xx/2xx series switch examples",
+    "id": "bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/user-guides/layer2-misconfiguration",
+    "label": "Layer2 misconfiguration",
+    "id": "bridging-and-switching/user-guides/layer2-misconfiguration"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/user-guides/loop-protect",
+    "label": "Loop Protect",
+    "id": "bridging-and-switching/user-guides/loop-protect"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/user-guides/spanning-tree-protocol",
+    "label": "Spanning Tree Protocol",
+    "id": "bridging-and-switching/user-guides/spanning-tree-protocol"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/user-guides/wireless-vlan-trunk",
+    "label": "Wireless VLAN Trunk",
+    "id": "bridging-and-switching/user-guides/wireless-vlan-trunk"
+  },
+  {
+    "href": "/docs/7.25/bridging-and-switching/user-guides/wmm-and-vlan-priority",
+    "label": "WMM and VLAN priority",
+    "id": "bridging-and-switching/user-guides/wmm-and-vlan-priority"
+  },
+  {
+    "href": "/docs/7.25/network-management/cloud/back-to-home",
+    "label": "Back To Home",
+    "id": "network-management/cloud/back-to-home"
+  },
+  {
+    "href": "/docs/7.25/network-management/cloud/cloud-backup",
+    "label": "Cloud backup",
+    "id": "network-management/cloud/cloud-backup"
+  },
+  {
+    "href": "/docs/7.25/network-management/cloud/communication-mikrotik-cloud-servers",
+    "label": "Communication with MikroTik Cloud Services",
+    "id": "network-management/cloud/communication-mikrotik-cloud-servers"
+  },
+  {
+    "href": "/docs/7.25/network-management/cloud/file-share",
+    "label": "File Share",
+    "id": "network-management/cloud/file-share"
+  },
+  {
+    "href": "/docs/7.25/network-management/dhcp/client",
+    "label": "DHCP Client",
+    "id": "network-management/dhcp/client"
+  },
+  {
+    "href": "/docs/7.25/network-management/dhcp/server",
+    "label": "DHCP Server",
+    "id": "network-management/dhcp/server"
+  },
+  {
+    "href": "/docs/7.25/network-management/dhcp/relay",
+    "label": "DHCP Relay",
+    "id": "network-management/dhcp/relay"
+  },
+  {
+    "href": "/docs/7.25/network-management/dhcp/dhcpv6-client",
+    "label": "DHCPv6 Client",
+    "id": "network-management/dhcp/dhcpv6-client"
+  },
+  {
+    "href": "/docs/7.25/network-management/dhcp/dhcpv6-server",
+    "label": "DHCPv6 Server",
+    "id": "network-management/dhcp/dhcpv6-server"
+  },
+  {
+    "href": "/docs/7.25/network-management/proxy/web-proxy",
+    "label": "Web Proxy",
+    "id": "network-management/proxy/web-proxy"
+  },
+  {
+    "href": "/docs/7.25/network-management/proxy/reverse-proxy",
+    "label": "Reverse Proxy",
+    "id": "network-management/proxy/reverse-proxy"
+  },
+  {
+    "href": "/docs/7.25/network-management/socks/socksify",
+    "label": "Socksify",
+    "id": "network-management/socks/socksify"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/unicast/bfd",
+    "label": "BFD",
+    "id": "user-guides/routing-and-networking-protocols/unicast/bfd"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/unicast/bgp/",
+    "label": "BGP",
+    "id": "user-guides/routing-and-networking-protocols/unicast/bgp/index"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/unicast/evpn",
+    "label": "EVPN",
+    "id": "user-guides/routing-and-networking-protocols/unicast/evpn"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/unicast/is-is",
+    "label": "IS-IS",
+    "id": "user-guides/routing-and-networking-protocols/unicast/is-is"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/unicast/ospf/",
+    "label": "OSPF",
+    "id": "user-guides/routing-and-networking-protocols/unicast/ospf/index"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/unicast/rip",
+    "label": "RIP",
+    "id": "user-guides/routing-and-networking-protocols/unicast/rip"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/unicast/rpki",
+    "label": "RPKI",
+    "id": "user-guides/routing-and-networking-protocols/unicast/rpki"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/mpls/exp-bit-and-mpls-queuing",
+    "label": "EXP bit and MPLS Queuing",
+    "id": "user-guides/routing-and-networking-protocols/mpls/exp-bit-and-mpls-queuing"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/mpls/ldp",
+    "label": "LDP",
+    "id": "user-guides/routing-and-networking-protocols/mpls/ldp"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/mpls/traffic-eng",
+    "label": "Traffic Eng",
+    "id": "user-guides/routing-and-networking-protocols/mpls/traffic-eng"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/mpls/vpls/",
+    "label": "VPLS",
+    "id": "user-guides/routing-and-networking-protocols/mpls/vpls/index"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/multicast/group-management-protocol",
+    "label": "Group Management Protocol",
+    "id": "user-guides/routing-and-networking-protocols/multicast/group-management-protocol"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/multicast/igmp-proxy",
+    "label": "IGMP Proxy",
+    "id": "user-guides/routing-and-networking-protocols/multicast/igmp-proxy"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/multicast/pim-sm",
+    "label": "PIM-SM",
+    "id": "user-guides/routing-and-networking-protocols/multicast/pim-sm"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/firewall/address-lists",
+    "label": "Address lists",
+    "id": "firewall-and-quality-of-service/firewall/address-lists"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/firewall/common-firewall-matchers-and-actions",
+    "label": "Common Firewall Matchers and Actions",
+    "id": "firewall-and-quality-of-service/firewall/common-firewall-matchers-and-actions"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/firewall/filter",
+    "label": "Filter",
+    "id": "firewall-and-quality-of-service/firewall/filter"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/firewall/layer7",
+    "label": "Layer7",
+    "id": "firewall-and-quality-of-service/firewall/layer7"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/firewall/mangle",
+    "label": "Mangle",
+    "id": "firewall-and-quality-of-service/firewall/mangle"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/firewall/nat",
+    "label": "NAT",
+    "id": "firewall-and-quality-of-service/firewall/nat"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/queues/htb-hierarchical-token-bucket",
+    "label": "HTB (Hierarchical Token Bucket)",
+    "id": "firewall-and-quality-of-service/queues/htb-hierarchical-token-bucket"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/queues/pcq-example",
+    "label": "PCQ example",
+    "id": "firewall-and-quality-of-service/queues/pcq-example"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/queues/queue-burst",
+    "label": "Queue Burst",
+    "id": "firewall-and-quality-of-service/queues/queue-burst"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/queues/queue-size",
+    "label": "Queue size",
+    "id": "firewall-and-quality-of-service/queues/queue-size"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/queues/queue-types/",
+    "label": "Queue types",
+    "id": "firewall-and-quality-of-service/queues/queue-types/index"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/user-guides/bruteforce-prevention",
+    "label": "SSH brute-force protection",
+    "id": "firewall-and-quality-of-service/user-guides/bruteforce-prevention"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/user-guides/building-advanced-firewall",
+    "label": "Building Advanced Firewall",
+    "id": "firewall-and-quality-of-service/user-guides/building-advanced-firewall"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/user-guides/connection-rate",
+    "label": "Connection rate",
+    "id": "firewall-and-quality-of-service/user-guides/connection-rate"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/user-guides/ddos-protection",
+    "label": "DDoS protection",
+    "id": "firewall-and-quality-of-service/user-guides/ddos-protection"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/user-guides/port-knocking",
+    "label": "Port knocking",
+    "id": "firewall-and-quality-of-service/user-guides/port-knocking"
+  },
+  {
+    "href": "/docs/7.25/virtual-private-networks/ipsec/ikev2-eap-between-nordvpn-and-routeros",
+    "label": "IKEv2 EAP between NordVPN and RouterOS",
+    "id": "virtual-private-networks/ipsec/ikev2-eap-between-nordvpn-and-routeros"
+  },
+  {
+    "href": "/docs/7.25/virtual-private-networks/ipsec/qkd-integration-in-routeros-ipsec-ppk",
+    "label": "QKD Integration in RouterOS IPsec (PPK)",
+    "id": "virtual-private-networks/ipsec/qkd-integration-in-routeros-ipsec-ppk"
+  },
+  {
+    "href": "/docs/7.25/virtual-private-networks/l2tp/lac-and-lns-setup-with-cisco-as-lac",
+    "label": "LAC and LNS setup with Cisco as LAC",
+    "id": "virtual-private-networks/l2tp/lac-and-lns-setup-with-cisco-as-lac"
+  },
+  {
+    "href": "/docs/7.25/virtual-private-networks/pppoe/ipv6-pd-over-ppp",
+    "label": "IPv6 PD over PPP",
+    "id": "virtual-private-networks/pppoe/ipv6-pd-over-ppp"
+  },
+  {
+    "href": "/docs/7.25/virtual-private-networks/pppoe/mlppp-over-single-and-multiple-links",
+    "label": "MLPPP over single and multiple links",
+    "id": "virtual-private-networks/pppoe/mlppp-over-single-and-multiple-links"
+  },
+  {
+    "href": "/docs/7.25/authentication-authorization-accounting/hotspot-captive-portal/hotspot-customisation",
+    "label": "Hotspot customisation",
+    "id": "authentication-authorization-accounting/hotspot-captive-portal/hotspot-customisation"
+  },
+  {
+    "href": "/docs/7.25/high-availability-solutions/load-balancing/failover-wan-backup",
+    "label": "Failover (WAN Backup)",
+    "id": "high-availability-solutions/load-balancing/failover-wan-backup"
+  },
+  {
+    "href": "/docs/7.25/high-availability-solutions/load-balancing/per-connection-classifier",
+    "label": "Per connection classifier",
+    "id": "high-availability-solutions/load-balancing/per-connection-classifier"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/bluetooth/mikrotik-beacon-manager/",
+    "label": "MikroTik Beacon Manager",
+    "id": "internet-of-things/bluetooth/mikrotik-beacon-manager/index"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/bluetooth/user-guides/bluetooth-tag-tracking-mqtt-thingsboard",
+    "label": "User Guides",
+    "id": "internet-of-things/bluetooth/user-guides/bluetooth-tag-tracking-mqtt-thingsboard"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/gpio/using-gpio-as-pulse-input-from-meter",
+    "label": "Using the GPIO as pulse input from a meter device",
+    "id": "internet-of-things/gpio/using-gpio-as-pulse-input-from-meter"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/lora/general-properties",
+    "label": "General Properties",
+    "id": "internet-of-things/lora/general-properties"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/lora/user-guides/",
+    "label": "User Guides",
+    "id": "internet-of-things/lora/user-guides/index"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/mqtt/kaa-iot-setup",
+    "label": "Kaa IoT setup",
+    "id": "internet-of-things/mqtt/kaa-iot-setup"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/mqtt/mqtt-and-thingsboard-configuration",
+    "label": "MQTT and ThingsBoard configuration",
+    "id": "internet-of-things/mqtt/mqtt-and-thingsboard-configuration"
+  },
+  {
+    "href": "/docs/7.25/storage/btrfs/maintenance",
+    "label": "Btrfs maintenance",
+    "id": "storage/btrfs/maintenance"
+  },
+  {
+    "href": "/docs/7.25/storage/btrfs/raid",
+    "label": "raid",
+    "id": "storage/btrfs/raid"
+  },
+  {
+    "href": "/docs/7.25/storage/btrfs/snapshots",
+    "label": "Btrfs subvolumes and snapshots",
+    "id": "storage/btrfs/snapshots"
+  },
+  {
+    "href": "/docs/7.25/storage/raid/hot-spare",
+    "label": "Setting a hot spare disk",
+    "id": "storage/raid/hot-spare"
+  },
+  {
+    "href": "/docs/7.25/storage/raid/moving-array",
+    "label": "Moving your RAID array to a different device",
+    "id": "storage/raid/moving-array"
+  },
+  {
+    "href": "/docs/7.25/containers/apps/available-apps",
+    "label": "List of available Apps",
+    "id": "containers/apps/available-apps"
+  },
+  {
+    "href": "/docs/7.25/developer-guides/api/python3-example",
+    "label": "Python3 Example",
+    "id": "developer-guides/api/python3-example"
+  },
+  {
+    "href": "/docs/7.25/developer-guides/scripting/scripting-examples",
+    "label": "Scripting examples",
+    "id": "developer-guides/scripting/scripting-examples"
+  },
+  {
+    "href": "/docs/7.25/developer-guides/scripting/scripting-tips-and-tricks",
+    "label": "Scripting Tips and Tricks",
+    "id": "developer-guides/scripting/scripting-tips-and-tricks"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/app/cleanup",
+    "label": "cleanup",
+    "id": "cli-reference/app/cleanup"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/app/network",
+    "label": "network",
+    "id": "cli-reference/app/network"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/app/remove",
+    "label": "remove",
+    "id": "cli-reference/app/remove"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/app/restart",
+    "label": "restart",
+    "id": "cli-reference/app/restart"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/app/settings",
+    "label": "settings",
+    "id": "cli-reference/app/settings"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/app/setup",
+    "label": "setup",
+    "id": "cli-reference/app/setup"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/app/update",
+    "label": "update",
+    "id": "cli-reference/app/update"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/acme-renew",
+    "label": "acme-renew",
+    "id": "cli-reference/certificate/acme-renew"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/add-acme",
+    "label": "add-acme",
+    "id": "cli-reference/certificate/add-acme"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/add-scep",
+    "label": "add-scep",
+    "id": "cli-reference/certificate/add-scep"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/builtin",
+    "label": "builtin",
+    "id": "cli-reference/certificate/builtin"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/card-reinstall",
+    "label": "card-reinstall",
+    "id": "cli-reference/certificate/card-reinstall"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/card-verify",
+    "label": "card-verify",
+    "id": "cli-reference/certificate/card-verify"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/create-certificate-request",
+    "label": "create-certificate-request",
+    "id": "cli-reference/certificate/create-certificate-request"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/crl/",
+    "label": "crl",
+    "id": "cli-reference/certificate/crl/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/enable-ssl-certificate",
+    "label": "enable-ssl-certificate",
+    "id": "cli-reference/certificate/enable-ssl-certificate"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/export-certificate",
+    "label": "export-certificate",
+    "id": "cli-reference/certificate/export-certificate"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/import",
+    "label": "import",
+    "id": "cli-reference/certificate/import"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/issued-revoke",
+    "label": "issued-revoke",
+    "id": "cli-reference/certificate/issued-revoke"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/scep-renew",
+    "label": "scep-renew",
+    "id": "cli-reference/certificate/scep-renew"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/scep-server/",
+    "label": "scep-server",
+    "id": "cli-reference/certificate/scep-server/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/settings",
+    "label": "settings",
+    "id": "cli-reference/certificate/settings"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/sign-certificate-request",
+    "label": "sign-certificate-request",
+    "id": "cli-reference/certificate/sign-certificate-request"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/sign",
+    "label": "sign",
+    "id": "cli-reference/certificate/sign"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/container/config",
+    "label": "config",
+    "id": "cli-reference/container/config"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/container/envs",
+    "label": "envs",
+    "id": "cli-reference/container/envs"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/container/kill",
+    "label": "kill",
+    "id": "cli-reference/container/kill"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/container/layers",
+    "label": "layers",
+    "id": "cli-reference/container/layers"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/container/log",
+    "label": "log",
+    "id": "cli-reference/container/log"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/container/mounts",
+    "label": "mounts",
+    "id": "cli-reference/container/mounts"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/container/repull",
+    "label": "repull",
+    "id": "cli-reference/container/repull"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/container/restart",
+    "label": "restart",
+    "id": "cli-reference/container/restart"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/container/save",
+    "label": "save",
+    "id": "cli-reference/container/save"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/container/start",
+    "label": "start",
+    "id": "cli-reference/container/start"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/container/stop",
+    "label": "stop",
+    "id": "cli-reference/container/stop"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/container/update",
+    "label": "update",
+    "id": "cli-reference/container/update"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/blink",
+    "label": "blink",
+    "id": "cli-reference/disk/blink"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/btrfs/",
+    "label": "btrfs",
+    "id": "cli-reference/disk/btrfs/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/check",
+    "label": "check",
+    "id": "cli-reference/disk/check"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/copy",
+    "label": "copy",
+    "id": "cli-reference/disk/copy"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/eject",
+    "label": "eject",
+    "id": "cli-reference/disk/eject"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/format",
+    "label": "format",
+    "id": "cli-reference/disk/format"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/monitor-traffic",
+    "label": "monitor-traffic",
+    "id": "cli-reference/disk/monitor-traffic"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/nvme-discover",
+    "label": "nvme-discover",
+    "id": "cli-reference/disk/nvme-discover"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/raid-scrub-cancel",
+    "label": "raid-scrub-cancel",
+    "id": "cli-reference/disk/raid-scrub-cancel"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/raid-scrub",
+    "label": "raid-scrub",
+    "id": "cli-reference/disk/raid-scrub"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/repair",
+    "label": "repair",
+    "id": "cli-reference/disk/repair"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/reset-counters",
+    "label": "reset-counters",
+    "id": "cli-reference/disk/reset-counters"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/scan",
+    "label": "scan",
+    "id": "cli-reference/disk/scan"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/settings",
+    "label": "settings",
+    "id": "cli-reference/disk/settings"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/smart-info",
+    "label": "smart-info",
+    "id": "cli-reference/disk/smart-info"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/test",
+    "label": "test",
+    "id": "cli-reference/disk/test"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/trim",
+    "label": "trim",
+    "id": "cli-reference/disk/trim"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/agent",
+    "label": "agent",
+    "id": "cli-reference/dude/agent"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/device-type",
+    "label": "device-type",
+    "id": "cli-reference/dude/device-type"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/device",
+    "label": "device",
+    "id": "cli-reference/dude/device"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/export-db",
+    "label": "export-db",
+    "id": "cli-reference/dude/export-db"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/import-db",
+    "label": "import-db",
+    "id": "cli-reference/dude/import-db"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/notification",
+    "label": "notification",
+    "id": "cli-reference/dude/notification"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/probe",
+    "label": "probe",
+    "id": "cli-reference/dude/probe"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/ros/",
+    "label": "ros",
+    "id": "cli-reference/dude/ros/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/service",
+    "label": "service",
+    "id": "cli-reference/dude/service"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/settings",
+    "label": "settings",
+    "id": "cli-reference/dude/settings"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/vacuum-db",
+    "label": "vacuum-db",
+    "id": "cli-reference/dude/vacuum-db"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/file/copy",
+    "label": "copy",
+    "id": "cli-reference/file/copy"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/file/head",
+    "label": "head",
+    "id": "cli-reference/file/head"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/file/read",
+    "label": "read",
+    "id": "cli-reference/file/read"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/file/rsync-daemon",
+    "label": "rsync-daemon",
+    "id": "cli-reference/file/rsync-daemon"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/file/sync/",
+    "label": "sync",
+    "id": "cli-reference/file/sync/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/file/tail",
+    "label": "tail",
+    "id": "cli-reference/file/tail"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/6to4",
+    "label": "6to4",
+    "id": "cli-reference/interface/6to4"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/blink",
+    "label": "blink",
+    "id": "cli-reference/interface/blink"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bonding/",
+    "label": "bonding",
+    "id": "cli-reference/interface/bonding/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/",
+    "label": "bridge",
+    "id": "cli-reference/interface/bridge/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/detect-internet/",
+    "label": "detect-internet",
+    "id": "cli-reference/interface/detect-internet/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/dot1x/",
+    "label": "dot1x",
+    "id": "cli-reference/interface/dot1x/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/eoip",
+    "label": "eoip",
+    "id": "cli-reference/interface/eoip"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/eoipv6",
+    "label": "eoipv6",
+    "id": "cli-reference/interface/eoipv6"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/",
+    "label": "ethernet",
+    "id": "cli-reference/interface/ethernet/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/gre",
+    "label": "gre",
+    "id": "cli-reference/interface/gre"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/gre6",
+    "label": "gre6",
+    "id": "cli-reference/interface/gre6"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ipip",
+    "label": "ipip",
+    "id": "cli-reference/interface/ipip"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ipipv6",
+    "label": "ipipv6",
+    "id": "cli-reference/interface/ipipv6"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/l2tp-client/",
+    "label": "l2tp-client",
+    "id": "cli-reference/interface/l2tp-client/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/l2tp-ether/",
+    "label": "l2tp-ether",
+    "id": "cli-reference/interface/l2tp-ether/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/l2tp-server/",
+    "label": "l2tp-server",
+    "id": "cli-reference/interface/l2tp-server/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/list/",
+    "label": "list",
+    "id": "cli-reference/interface/list/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/",
+    "label": "lte",
+    "id": "cli-reference/interface/lte/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/macsec/",
+    "label": "macsec",
+    "id": "cli-reference/interface/macsec/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/macvlan",
+    "label": "macvlan",
+    "id": "cli-reference/interface/macvlan"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/mesh/",
+    "label": "mesh",
+    "id": "cli-reference/interface/mesh/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/monitor-traffic",
+    "label": "monitor-traffic",
+    "id": "cli-reference/interface/monitor-traffic"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ovpn-client/",
+    "label": "ovpn-client",
+    "id": "cli-reference/interface/ovpn-client/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ovpn-server/",
+    "label": "ovpn-server",
+    "id": "cli-reference/interface/ovpn-server/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ppp-client/",
+    "label": "ppp-client",
+    "id": "cli-reference/interface/ppp-client/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ppp-server/",
+    "label": "ppp-server",
+    "id": "cli-reference/interface/ppp-server/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pppoe-client/",
+    "label": "pppoe-client",
+    "id": "cli-reference/interface/pppoe-client/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pppoe-server/",
+    "label": "pppoe-server",
+    "id": "cli-reference/interface/pppoe-server/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pptp-client/",
+    "label": "pptp-client",
+    "id": "cli-reference/interface/pptp-client/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pptp-server/",
+    "label": "pptp-server",
+    "id": "cli-reference/interface/pptp-server/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pwr-line/",
+    "label": "pwr-line",
+    "id": "cli-reference/interface/pwr-line/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/reset-counters",
+    "label": "reset-counters",
+    "id": "cli-reference/interface/reset-counters"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/sstp-client/",
+    "label": "sstp-client",
+    "id": "cli-reference/interface/sstp-client/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/sstp-server/",
+    "label": "sstp-server",
+    "id": "cli-reference/interface/sstp-server/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/veth",
+    "label": "veth",
+    "id": "cli-reference/interface/veth"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/vlan",
+    "label": "vlan",
+    "id": "cli-reference/interface/vlan"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/vpls/",
+    "label": "vpls",
+    "id": "cli-reference/interface/vpls/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/vrrp",
+    "label": "vrrp",
+    "id": "cli-reference/interface/vrrp"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/vxlan/",
+    "label": "vxlan",
+    "id": "cli-reference/interface/vxlan/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/w60g/",
+    "label": "w60g",
+    "id": "cli-reference/interface/w60g/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/",
+    "label": "wifi",
+    "id": "cli-reference/interface/wifi/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireguard/",
+    "label": "wireguard",
+    "id": "cli-reference/interface/wireguard/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/",
+    "label": "wireless",
+    "id": "cli-reference/interface/wireless/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/xfrm",
+    "label": "xfrm",
+    "id": "cli-reference/interface/xfrm"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/gpio/",
+    "label": "gpio",
+    "id": "cli-reference/iot/gpio/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/lora/",
+    "label": "lora",
+    "id": "cli-reference/iot/lora/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/modbus/",
+    "label": "modbus",
+    "id": "cli-reference/iot/modbus/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/mqtt/",
+    "label": "mqtt",
+    "id": "cli-reference/iot/mqtt/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/wiliot/",
+    "label": "wiliot",
+    "id": "cli-reference/iot/wiliot/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/lcd/backlight",
+    "label": "backlight",
+    "id": "cli-reference/lcd/backlight"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/lcd/interface/",
+    "label": "interface",
+    "id": "cli-reference/lcd/interface/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/lcd/pin",
+    "label": "pin",
+    "id": "cli-reference/lcd/pin"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/lcd/recalibrate",
+    "label": "recalibrate",
+    "id": "cli-reference/lcd/recalibrate"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/lcd/screen",
+    "label": "screen",
+    "id": "cli-reference/lcd/screen"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/lcd/show",
+    "label": "show",
+    "id": "cli-reference/lcd/show"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/lcd/take-screenshot",
+    "label": "take-screenshot",
+    "id": "cli-reference/lcd/take-screenshot"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/openflow/flow",
+    "label": "flow",
+    "id": "cli-reference/openflow/flow"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/openflow/group",
+    "label": "group",
+    "id": "cli-reference/openflow/group"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/openflow/meter",
+    "label": "meter",
+    "id": "cli-reference/openflow/meter"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/openflow/port",
+    "label": "port",
+    "id": "cli-reference/openflow/port"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/partitions/activate",
+    "label": "activate",
+    "id": "cli-reference/partitions/activate"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/partitions/copy-to",
+    "label": "copy-to",
+    "id": "cli-reference/partitions/copy-to"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/partitions/repartition",
+    "label": "repartition",
+    "id": "cli-reference/partitions/repartition"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/partitions/restore-config-from",
+    "label": "restore-config-from",
+    "id": "cli-reference/partitions/restore-config-from"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/partitions/save-config-to",
+    "label": "save-config-to",
+    "id": "cli-reference/partitions/save-config-to"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/port/remote-access",
+    "label": "remote-access",
+    "id": "cli-reference/port/remote-access"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/radius/incoming/",
+    "label": "incoming",
+    "id": "cli-reference/radius/incoming/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/radius/monitor",
+    "label": "monitor",
+    "id": "cli-reference/radius/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/radius/reset-counters",
+    "label": "reset-counters",
+    "id": "cli-reference/radius/reset-counters"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/snmp/community",
+    "label": "community",
+    "id": "cli-reference/snmp/community"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/snmp/send-trap",
+    "label": "send-trap",
+    "id": "cli-reference/snmp/send-trap"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/check-disk",
+    "label": "check-disk",
+    "id": "cli-reference/system/check-disk"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/check-installation",
+    "label": "check-installation",
+    "id": "cli-reference/system/check-installation"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/clock/",
+    "label": "clock",
+    "id": "cli-reference/system/clock/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/console/",
+    "label": "console",
+    "id": "cli-reference/system/console/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/default-configuration/",
+    "label": "default-configuration",
+    "id": "cli-reference/system/default-configuration/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/device-mode/",
+    "label": "device-mode",
+    "id": "cli-reference/system/device-mode/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/gps/",
+    "label": "gps",
+    "id": "cli-reference/system/gps/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/health/",
+    "label": "health",
+    "id": "cli-reference/system/health/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/history",
+    "label": "history",
+    "id": "cli-reference/system/history"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/identity",
+    "label": "identity",
+    "id": "cli-reference/system/identity"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/keymat-provider/",
+    "label": "keymat-provider",
+    "id": "cli-reference/system/keymat-provider/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/leds/",
+    "label": "leds",
+    "id": "cli-reference/system/leds/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/license/",
+    "label": "license",
+    "id": "cli-reference/system/license/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/logging/",
+    "label": "logging",
+    "id": "cli-reference/system/logging/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/note",
+    "label": "note",
+    "id": "cli-reference/system/note"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/ntp/client/",
+    "label": "client",
+    "id": "cli-reference/system/ntp/client/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/",
+    "label": "package",
+    "id": "cli-reference/system/package/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/ptp/",
+    "label": "ptp",
+    "id": "cli-reference/system/ptp/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/reboot",
+    "label": "reboot",
+    "id": "cli-reference/system/reboot"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/regulatory",
+    "label": "regulatory",
+    "id": "cli-reference/system/regulatory"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/reset-configuration",
+    "label": "reset-configuration",
+    "id": "cli-reference/system/reset-configuration"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/resource/",
+    "label": "resource",
+    "id": "cli-reference/system/resource/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/routerboard/",
+    "label": "routerboard",
+    "id": "cli-reference/system/routerboard/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/rtrace/",
+    "label": "rtrace",
+    "id": "cli-reference/system/rtrace/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/scheduler",
+    "label": "scheduler",
+    "id": "cli-reference/system/scheduler"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/script/",
+    "label": "script",
+    "id": "cli-reference/system/script/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/serial-terminal",
+    "label": "serial-terminal",
+    "id": "cli-reference/system/serial-terminal"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/shutdown",
+    "label": "shutdown",
+    "id": "cli-reference/system/shutdown"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/ssh-exec",
+    "label": "ssh-exec",
+    "id": "cli-reference/system/ssh-exec"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/ssh",
+    "label": "ssh",
+    "id": "cli-reference/system/ssh"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/sup-output",
+    "label": "sup-output",
+    "id": "cli-reference/system/sup-output"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/swos/",
+    "label": "swos",
+    "id": "cli-reference/system/swos/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/telnet",
+    "label": "telnet",
+    "id": "cli-reference/system/telnet"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/ups/",
+    "label": "ups",
+    "id": "cli-reference/system/ups/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/watchdog",
+    "label": "watchdog",
+    "id": "cli-reference/system/watchdog"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/task/add",
+    "label": "add",
+    "id": "cli-reference/task/add"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/task/next",
+    "label": "next",
+    "id": "cli-reference/task/next"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/task/terminate",
+    "label": "terminate",
+    "id": "cli-reference/task/terminate"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/bandwidth-test",
+    "label": "bandwidth-test",
+    "id": "cli-reference/tool/bandwidth-test"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/calea",
+    "label": "calea",
+    "id": "cli-reference/tool/calea"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/dns-update",
+    "label": "dns-update",
+    "id": "cli-reference/tool/dns-update"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/e-mail/",
+    "label": "e-mail",
+    "id": "cli-reference/tool/e-mail/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/fetch",
+    "label": "fetch",
+    "id": "cli-reference/tool/fetch"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/flood-ping",
+    "label": "flood-ping",
+    "id": "cli-reference/tool/flood-ping"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/graphing/",
+    "label": "graphing",
+    "id": "cli-reference/tool/graphing/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/ip-scan",
+    "label": "ip-scan",
+    "id": "cli-reference/tool/ip-scan"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/mac-scan",
+    "label": "mac-scan",
+    "id": "cli-reference/tool/mac-scan"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/mac-server/",
+    "label": "mac-server",
+    "id": "cli-reference/tool/mac-server/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/mac-telnet",
+    "label": "mac-telnet",
+    "id": "cli-reference/tool/mac-telnet"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/netwatch",
+    "label": "netwatch",
+    "id": "cli-reference/tool/netwatch"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/ping-speed",
+    "label": "ping-speed",
+    "id": "cli-reference/tool/ping-speed"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/ping",
+    "label": "ping",
+    "id": "cli-reference/tool/ping"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/profile",
+    "label": "profile",
+    "id": "cli-reference/tool/profile"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/romon/",
+    "label": "romon",
+    "id": "cli-reference/tool/romon/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/sms/",
+    "label": "sms",
+    "id": "cli-reference/tool/sms/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/sniffer/",
+    "label": "sniffer",
+    "id": "cli-reference/tool/sniffer/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/snmp-get",
+    "label": "snmp-get",
+    "id": "cli-reference/tool/snmp-get"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/snmp-walk",
+    "label": "snmp-walk",
+    "id": "cli-reference/tool/snmp-walk"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/speed-test",
+    "label": "speed-test",
+    "id": "cli-reference/tool/speed-test"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/torch",
+    "label": "torch",
+    "id": "cli-reference/tool/torch"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/traceroute",
+    "label": "traceroute",
+    "id": "cli-reference/tool/traceroute"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/traffic-generator/",
+    "label": "traffic-generator",
+    "id": "cli-reference/tool/traffic-generator/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/traffic-monitor",
+    "label": "traffic-monitor",
+    "id": "cli-reference/tool/traffic-monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/wol",
+    "label": "wol",
+    "id": "cli-reference/tool/wol"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tr069-client/reset-tr069-config",
+    "label": "reset-tr069-config",
+    "id": "cli-reference/tr069-client/reset-tr069-config"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user/aaa",
+    "label": "aaa",
+    "id": "cli-reference/user/aaa"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user/active",
+    "label": "active",
+    "id": "cli-reference/user/active"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user/expire-password",
+    "label": "expire-password",
+    "id": "cli-reference/user/expire-password"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user/group",
+    "label": "group",
+    "id": "cli-reference/user/group"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user/settings",
+    "label": "settings",
+    "id": "cli-reference/user/settings"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user/ssh-keys/",
+    "label": "ssh-keys",
+    "id": "cli-reference/user/ssh-keys/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/advanced",
+    "label": "advanced",
+    "id": "cli-reference/user-manager/advanced"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/attribute",
+    "label": "attribute",
+    "id": "cli-reference/user-manager/attribute"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/database/",
+    "label": "database",
+    "id": "cli-reference/user-manager/database/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/generate-report",
+    "label": "generate-report",
+    "id": "cli-reference/user-manager/generate-report"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/limitation",
+    "label": "limitation",
+    "id": "cli-reference/user-manager/limitation"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/monitor",
+    "label": "monitor",
+    "id": "cli-reference/user-manager/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/payment",
+    "label": "payment",
+    "id": "cli-reference/user-manager/payment"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/profile-limitation",
+    "label": "profile-limitation",
+    "id": "cli-reference/user-manager/profile-limitation"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/profile",
+    "label": "profile",
+    "id": "cli-reference/user-manager/profile"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/router/",
+    "label": "router",
+    "id": "cli-reference/user-manager/router/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/session/",
+    "label": "session",
+    "id": "cli-reference/user-manager/session/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/user/",
+    "label": "user",
+    "id": "cli-reference/user-manager/user/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/user-profile/",
+    "label": "user-profile",
+    "id": "cli-reference/user-manager/user-profile/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/zerotier/controller/",
+    "label": "controller",
+    "id": "cli-reference/zerotier/controller/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/zerotier/interface",
+    "label": "interface",
+    "id": "cli-reference/zerotier/interface"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/zerotier/peer/",
+    "label": "peer",
+    "id": "cli-reference/zerotier/peer/index"
+  },
+  {
+    "href": "/docs/7.25/getting-started/installation-and-upgrade/install/x86-installation",
+    "label": "x86 Installation",
+    "id": "getting-started/installation-and-upgrade/install/x86-installation"
+  },
+  {
+    "href": "/docs/7.25/getting-started/installation-and-upgrade/netinstall/netinstall-windows",
+    "label": "Netinstall for Windows",
+    "id": "getting-started/installation-and-upgrade/netinstall/netinstall-windows"
+  },
+  {
+    "href": "/docs/7.25/getting-started/installation-and-upgrade/netinstall/netinstall-linux",
+    "label": "Netinstall for Linux",
+    "id": "getting-started/installation-and-upgrade/netinstall/netinstall-linux"
+  },
+  {
+    "href": "/docs/7.25/getting-started/installation-and-upgrade/netinstall/netinstall-package",
+    "label": "Netinstall package",
+    "id": "getting-started/installation-and-upgrade/netinstall/netinstall-package"
+  },
+  {
+    "href": "/docs/7.25/getting-started/routeros-licensing/chr/chr-licensing",
+    "label": "CHR: Licensing",
+    "id": "getting-started/routeros-licensing/chr/chr-licensing"
+  },
+  {
+    "href": "/docs/7.25/wireless/abgn/capsman/ap-controller-capsman",
+    "label": "AP Controller (CAPsMAN)",
+    "id": "wireless/abgn/capsman/ap-controller-capsman"
+  },
+  {
+    "href": "/docs/7.25/wireless/abgn/capsman/capsman-with-vlans",
+    "label": "CAPsMAN with VLANs",
+    "id": "wireless/abgn/capsman/capsman-with-vlans"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/unicast/bgp/understanding-bgp",
+    "label": "Understanding BGP",
+    "id": "user-guides/routing-and-networking-protocols/unicast/bgp/understanding-bgp"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/unicast/bgp/peering-sessions",
+    "label": "Peering Sessions",
+    "id": "user-guides/routing-and-networking-protocols/unicast/bgp/peering-sessions"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/unicast/bgp/nexthop-selection",
+    "label": "Nexthop Selection",
+    "id": "user-guides/routing-and-networking-protocols/unicast/bgp/nexthop-selection"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/unicast/bgp/route-leak-prevention",
+    "label": "Route Leak Prevention",
+    "id": "user-guides/routing-and-networking-protocols/unicast/bgp/route-leak-prevention"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/unicast/bgp/faq",
+    "label": "FAQ",
+    "id": "user-guides/routing-and-networking-protocols/unicast/bgp/faq"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/unicast/ospf/understanding-ospf",
+    "label": "Understanding OSPF",
+    "id": "user-guides/routing-and-networking-protocols/unicast/ospf/understanding-ospf"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/unicast/ospf/neighbour-relationship",
+    "label": "Neighbor Relationship",
+    "id": "user-guides/routing-and-networking-protocols/unicast/ospf/neighbour-relationship"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/unicast/ospf/routing-calculation",
+    "label": "Routing Table Calculation",
+    "id": "user-guides/routing-and-networking-protocols/unicast/ospf/routing-calculation"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/unicast/ospf/areas-and-virtual-links",
+    "label": "Areas and Virtual Links",
+    "id": "user-guides/routing-and-networking-protocols/unicast/ospf/areas-and-virtual-links"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/unicast/ospf/faq",
+    "label": "FAQ",
+    "id": "user-guides/routing-and-networking-protocols/unicast/ospf/faq"
+  },
+  {
+    "href": "/docs/7.25/user-guides/routing-and-networking-protocols/mpls/vpls/control-word",
+    "label": "Control Word",
+    "id": "user-guides/routing-and-networking-protocols/mpls/vpls/control-word"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/queues/queue-types/cake",
+    "label": "CAKE",
+    "id": "firewall-and-quality-of-service/queues/queue-types/cake"
+  },
+  {
+    "href": "/docs/7.25/firewall-and-quality-of-service/queues/queue-types/pfifo-bfifo",
+    "label": "PFIFO,BFIFO",
+    "id": "firewall-and-quality-of-service/queues/queue-types/pfifo-bfifo"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-beacon-manager-android-devices",
+    "label": "MikroTik Beacon Manager for Android devices",
+    "id": "internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-beacon-manager-android-devices"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-beacon-manager-for-ios-devices",
+    "label": "MikroTik Beacon Manager for iOS devices",
+    "id": "internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-beacon-manager-for-ios-devices"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-bluetooth-tg-bt5-xx-tag",
+    "label": "MikroTik Bluetooth TG-BT5-XX tag changelog",
+    "id": "internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-bluetooth-tg-bt5-xx-tag"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-tag-advertisement-formats",
+    "label": "MikroTik Tag advertisement formats",
+    "id": "internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-tag-advertisement-formats"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/lora/user-guides/aws-lorawan-configuration",
+    "label": "AWS LoRaWAN configuration",
+    "id": "internet-of-things/lora/user-guides/aws-lorawan-configuration"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/lora/user-guides/chirpstack",
+    "label": "ChirpStack",
+    "id": "internet-of-things/lora/user-guides/chirpstack"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/lora/user-guides/step-by-step-installation",
+    "label": "Step by step installation",
+    "id": "internet-of-things/lora/user-guides/step-by-step-installation"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/lora/user-guides/tg-lr-setup-guide",
+    "label": "TG-LR setup guide",
+    "id": "internet-of-things/lora/user-guides/tg-lr-setup-guide"
+  },
+  {
+    "href": "/docs/7.25/internet-of-things/lora/user-guides/the-things-stack",
+    "label": "The Things Stack",
+    "id": "internet-of-things/lora/user-guides/the-things-stack"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/crl/download",
+    "label": "download",
+    "id": "cli-reference/certificate/crl/download"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/crl/flush",
+    "label": "flush",
+    "id": "cli-reference/certificate/crl/flush"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/scep-server/otp/",
+    "label": "otp",
+    "id": "cli-reference/certificate/scep-server/otp/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/scep-server/ra/",
+    "label": "ra",
+    "id": "cli-reference/certificate/scep-server/ra/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/scep-server/requests/",
+    "label": "requests",
+    "id": "cli-reference/certificate/scep-server/requests/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/btrfs/filesystem/",
+    "label": "filesystem",
+    "id": "cli-reference/disk/btrfs/filesystem/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/btrfs/subvolume",
+    "label": "subvolume",
+    "id": "cli-reference/disk/btrfs/subvolume"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/btrfs/transfer",
+    "label": "transfer",
+    "id": "cli-reference/disk/btrfs/transfer"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/ros/address",
+    "label": "address",
+    "id": "cli-reference/dude/ros/address"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/ros/arp",
+    "label": "arp",
+    "id": "cli-reference/dude/ros/arp"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/ros/health",
+    "label": "health",
+    "id": "cli-reference/dude/ros/health"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/ros/interface",
+    "label": "interface",
+    "id": "cli-reference/dude/ros/interface"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/ros/lease",
+    "label": "lease",
+    "id": "cli-reference/dude/ros/lease"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/ros/neighbor",
+    "label": "neighbor",
+    "id": "cli-reference/dude/ros/neighbor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/ros/queue",
+    "label": "queue",
+    "id": "cli-reference/dude/ros/queue"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/ros/registration-table",
+    "label": "registration-table",
+    "id": "cli-reference/dude/ros/registration-table"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/ros/resource",
+    "label": "resource",
+    "id": "cli-reference/dude/ros/resource"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/ros/route",
+    "label": "route",
+    "id": "cli-reference/dude/ros/route"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/dude/ros/routerboard",
+    "label": "routerboard",
+    "id": "cli-reference/dude/ros/routerboard"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/file/sync/monitor",
+    "label": "monitor",
+    "id": "cli-reference/file/sync/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bonding/monitor-slaves",
+    "label": "monitor-slaves",
+    "id": "cli-reference/interface/bonding/monitor-slaves"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bonding/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/bonding/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/calea/",
+    "label": "calea",
+    "id": "cli-reference/interface/bridge/calea/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/filter/",
+    "label": "filter",
+    "id": "cli-reference/interface/bridge/filter/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/host",
+    "label": "host",
+    "id": "cli-reference/interface/bridge/host"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/mdb",
+    "label": "mdb",
+    "id": "cli-reference/interface/bridge/mdb"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/bridge/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/msti/",
+    "label": "msti",
+    "id": "cli-reference/interface/bridge/msti/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/nat/",
+    "label": "nat",
+    "id": "cli-reference/interface/bridge/nat/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/port/",
+    "label": "port",
+    "id": "cli-reference/interface/bridge/port/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/settings",
+    "label": "settings",
+    "id": "cli-reference/interface/bridge/settings"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/vlan/",
+    "label": "vlan",
+    "id": "cli-reference/interface/bridge/vlan/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/detect-internet/state",
+    "label": "state",
+    "id": "cli-reference/interface/detect-internet/state"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/dot1x/client",
+    "label": "client",
+    "id": "cli-reference/interface/dot1x/client"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/dot1x/server/",
+    "label": "server",
+    "id": "cli-reference/interface/dot1x/server/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/blink",
+    "label": "blink",
+    "id": "cli-reference/interface/ethernet/blink"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/cable-test",
+    "label": "cable-test",
+    "id": "cli-reference/interface/ethernet/cable-test"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/ethernet/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/poe/",
+    "label": "poe",
+    "id": "cli-reference/interface/ethernet/poe/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/pon",
+    "label": "pon",
+    "id": "cli-reference/interface/ethernet/pon"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/reset-counters",
+    "label": "reset-counters",
+    "id": "cli-reference/interface/ethernet/reset-counters"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/reset-mac-address",
+    "label": "reset-mac-address",
+    "id": "cli-reference/interface/ethernet/reset-mac-address"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/",
+    "label": "switch",
+    "id": "cli-reference/interface/ethernet/switch/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/l2tp-client/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/l2tp-client/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/l2tp-ether/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/l2tp-ether/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/l2tp-server/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/l2tp-server/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/l2tp-server/server",
+    "label": "server",
+    "id": "cli-reference/interface/l2tp-server/server"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/list/member",
+    "label": "member",
+    "id": "cli-reference/interface/list/member"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/apn",
+    "label": "apn",
+    "id": "cli-reference/interface/lte/apn"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/at-chat",
+    "label": "at-chat",
+    "id": "cli-reference/interface/lte/at-chat"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/cell-monitor",
+    "label": "cell-monitor",
+    "id": "cli-reference/interface/lte/cell-monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/esim/",
+    "label": "esim",
+    "id": "cli-reference/interface/lte/esim/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/firmware-upgrade",
+    "label": "firmware-upgrade",
+    "id": "cli-reference/interface/lte/firmware-upgrade"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/lte/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/run-modem-update",
+    "label": "run-modem-update",
+    "id": "cli-reference/interface/lte/run-modem-update"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/scan",
+    "label": "scan",
+    "id": "cli-reference/interface/lte/scan"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/settings",
+    "label": "settings",
+    "id": "cli-reference/interface/lte/settings"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/show-capabilities",
+    "label": "show-capabilities",
+    "id": "cli-reference/interface/lte/show-capabilities"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/macsec/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/macsec/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/macsec/profile",
+    "label": "profile",
+    "id": "cli-reference/interface/macsec/profile"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/mesh/fdb",
+    "label": "fdb",
+    "id": "cli-reference/interface/mesh/fdb"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/mesh/port",
+    "label": "port",
+    "id": "cli-reference/interface/mesh/port"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/mesh/traceroute",
+    "label": "traceroute",
+    "id": "cli-reference/interface/mesh/traceroute"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ovpn-client/import-ovpn-configuration",
+    "label": "import-ovpn-configuration",
+    "id": "cli-reference/interface/ovpn-client/import-ovpn-configuration"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ovpn-client/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/ovpn-client/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ovpn-server/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/ovpn-server/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ovpn-server/server/",
+    "label": "server",
+    "id": "cli-reference/interface/ovpn-server/server/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ppp-client/at-chat",
+    "label": "at-chat",
+    "id": "cli-reference/interface/ppp-client/at-chat"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ppp-client/firmware-upgrade",
+    "label": "firmware-upgrade",
+    "id": "cli-reference/interface/ppp-client/firmware-upgrade"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ppp-client/info",
+    "label": "info",
+    "id": "cli-reference/interface/ppp-client/info"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ppp-client/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/ppp-client/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ppp-client/scan",
+    "label": "scan",
+    "id": "cli-reference/interface/ppp-client/scan"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ppp-server/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/ppp-server/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pppoe-client/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/pppoe-client/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pppoe-client/scan",
+    "label": "scan",
+    "id": "cli-reference/interface/pppoe-client/scan"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pppoe-server/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/pppoe-server/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pppoe-server/server",
+    "label": "server",
+    "id": "cli-reference/interface/pppoe-server/server"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pptp-client/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/pptp-client/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pptp-server/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/pptp-server/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pptp-server/server",
+    "label": "server",
+    "id": "cli-reference/interface/pptp-server/server"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pwr-line/blink",
+    "label": "blink",
+    "id": "cli-reference/interface/pwr-line/blink"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pwr-line/configure",
+    "label": "configure",
+    "id": "cli-reference/interface/pwr-line/configure"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pwr-line/join",
+    "label": "join",
+    "id": "cli-reference/interface/pwr-line/join"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pwr-line/leave",
+    "label": "leave",
+    "id": "cli-reference/interface/pwr-line/leave"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pwr-line/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/pwr-line/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pwr-line/reset-counters",
+    "label": "reset-counters",
+    "id": "cli-reference/interface/pwr-line/reset-counters"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pwr-line/reset-mac-address",
+    "label": "reset-mac-address",
+    "id": "cli-reference/interface/pwr-line/reset-mac-address"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/pwr-line/upgrade-firmware",
+    "label": "upgrade-firmware",
+    "id": "cli-reference/interface/pwr-line/upgrade-firmware"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/sstp-client/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/sstp-client/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/sstp-server/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/sstp-server/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/sstp-server/server",
+    "label": "server",
+    "id": "cli-reference/interface/sstp-server/server"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/vpls/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/vpls/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/vxlan/fdb",
+    "label": "fdb",
+    "id": "cli-reference/interface/vxlan/fdb"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/vxlan/vteps",
+    "label": "vteps",
+    "id": "cli-reference/interface/vxlan/vteps"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/w60g/align",
+    "label": "align",
+    "id": "cli-reference/interface/w60g/align"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/w60g/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/w60g/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/w60g/reset-configuration",
+    "label": "reset-configuration",
+    "id": "cli-reference/interface/w60g/reset-configuration"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/w60g/scan",
+    "label": "scan",
+    "id": "cli-reference/interface/w60g/scan"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/w60g/station/",
+    "label": "station",
+    "id": "cli-reference/interface/w60g/station/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/aaa",
+    "label": "aaa",
+    "id": "cli-reference/interface/wifi/aaa"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/access-list",
+    "label": "access-list",
+    "id": "cli-reference/interface/wifi/access-list"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/cap",
+    "label": "cap",
+    "id": "cli-reference/interface/wifi/cap"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/capsman/",
+    "label": "capsman",
+    "id": "cli-reference/interface/wifi/capsman/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/channel",
+    "label": "channel",
+    "id": "cli-reference/interface/wifi/channel"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/configuration",
+    "label": "configuration",
+    "id": "cli-reference/interface/wifi/configuration"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/datapath",
+    "label": "datapath",
+    "id": "cli-reference/interface/wifi/datapath"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/devel",
+    "label": "devel",
+    "id": "cli-reference/interface/wifi/devel"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/flat-snoop",
+    "label": "flat-snoop",
+    "id": "cli-reference/interface/wifi/flat-snoop"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/frequency-scan",
+    "label": "frequency-scan",
+    "id": "cli-reference/interface/wifi/frequency-scan"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/interworking",
+    "label": "interworking",
+    "id": "cli-reference/interface/wifi/interworking"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/liberate",
+    "label": "liberate",
+    "id": "cli-reference/interface/wifi/liberate"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/wifi/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/network/",
+    "label": "network",
+    "id": "cli-reference/interface/wifi/network/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/provisioning",
+    "label": "provisioning",
+    "id": "cli-reference/interface/wifi/provisioning"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/radio/",
+    "label": "radio",
+    "id": "cli-reference/interface/wifi/radio/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/registration-table",
+    "label": "registration-table",
+    "id": "cli-reference/interface/wifi/registration-table"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/reset-mac-address",
+    "label": "reset-mac-address",
+    "id": "cli-reference/interface/wifi/reset-mac-address"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/roam",
+    "label": "roam",
+    "id": "cli-reference/interface/wifi/roam"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/scan",
+    "label": "scan",
+    "id": "cli-reference/interface/wifi/scan"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/security/",
+    "label": "security",
+    "id": "cli-reference/interface/wifi/security/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/sniffer",
+    "label": "sniffer",
+    "id": "cli-reference/interface/wifi/sniffer"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/spectral-scan",
+    "label": "spectral-scan",
+    "id": "cli-reference/interface/wifi/spectral-scan"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/steering/",
+    "label": "steering",
+    "id": "cli-reference/interface/wifi/steering/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/trigger-radar",
+    "label": "trigger-radar",
+    "id": "cli-reference/interface/wifi/trigger-radar"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/wps-client",
+    "label": "wps-client",
+    "id": "cli-reference/interface/wifi/wps-client"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/wps-push-button",
+    "label": "wps-push-button",
+    "id": "cli-reference/interface/wifi/wps-push-button"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireguard/peers/",
+    "label": "peers",
+    "id": "cli-reference/interface/wireguard/peers/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireguard/wg-export",
+    "label": "wg-export",
+    "id": "cli-reference/interface/wireguard/wg-export"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireguard/wg-import",
+    "label": "wg-import",
+    "id": "cli-reference/interface/wireguard/wg-import"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/access-list",
+    "label": "access-list",
+    "id": "cli-reference/interface/wireless/access-list"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/align/",
+    "label": "align",
+    "id": "cli-reference/interface/wireless/align/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/cap",
+    "label": "cap",
+    "id": "cli-reference/interface/wireless/cap"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/channels",
+    "label": "channels",
+    "id": "cli-reference/interface/wireless/channels"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/connect-list",
+    "label": "connect-list",
+    "id": "cli-reference/interface/wireless/connect-list"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/frequency-monitor",
+    "label": "frequency-monitor",
+    "id": "cli-reference/interface/wireless/frequency-monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/info/",
+    "label": "info",
+    "id": "cli-reference/interface/wireless/info/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/interworking-profiles",
+    "label": "interworking-profiles",
+    "id": "cli-reference/interface/wireless/interworking-profiles"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/manual-tx-power-table",
+    "label": "manual-tx-power-table",
+    "id": "cli-reference/interface/wireless/manual-tx-power-table"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/wireless/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/nstreme-dual/",
+    "label": "nstreme-dual",
+    "id": "cli-reference/interface/wireless/nstreme-dual/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/nstreme",
+    "label": "nstreme",
+    "id": "cli-reference/interface/wireless/nstreme"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/registration-table/",
+    "label": "registration-table",
+    "id": "cli-reference/interface/wireless/registration-table/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/reset-configuration",
+    "label": "reset-configuration",
+    "id": "cli-reference/interface/wireless/reset-configuration"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/reset-mac-address",
+    "label": "reset-mac-address",
+    "id": "cli-reference/interface/wireless/reset-mac-address"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/scan",
+    "label": "scan",
+    "id": "cli-reference/interface/wireless/scan"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/security-profiles",
+    "label": "security-profiles",
+    "id": "cli-reference/interface/wireless/security-profiles"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/setup-repeater",
+    "label": "setup-repeater",
+    "id": "cli-reference/interface/wireless/setup-repeater"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/sniffer/",
+    "label": "sniffer",
+    "id": "cli-reference/interface/wireless/sniffer/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/snooper/",
+    "label": "snooper",
+    "id": "cli-reference/interface/wireless/snooper/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/spectral-scan",
+    "label": "spectral-scan",
+    "id": "cli-reference/interface/wireless/spectral-scan"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/wds/",
+    "label": "wds",
+    "id": "cli-reference/interface/wireless/wds/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/wps-client",
+    "label": "wps-client",
+    "id": "cli-reference/interface/wireless/wps-client"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/wps-push-button",
+    "label": "wps-push-button",
+    "id": "cli-reference/interface/wireless/wps-push-button"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/gpio/analog",
+    "label": "analog",
+    "id": "cli-reference/iot/gpio/analog"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/gpio/digital",
+    "label": "digital",
+    "id": "cli-reference/iot/gpio/digital"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/lora/channels",
+    "label": "channels",
+    "id": "cli-reference/iot/lora/channels"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/lora/joineui",
+    "label": "joineui",
+    "id": "cli-reference/iot/lora/joineui"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/lora/netid",
+    "label": "netid",
+    "id": "cli-reference/iot/lora/netid"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/lora/radios",
+    "label": "radios",
+    "id": "cli-reference/iot/lora/radios"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/lora/reset-devices",
+    "label": "reset-devices",
+    "id": "cli-reference/iot/lora/reset-devices"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/lora/send",
+    "label": "send",
+    "id": "cli-reference/iot/lora/send"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/lora/servers/",
+    "label": "servers",
+    "id": "cli-reference/iot/lora/servers/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/lora/traffic/",
+    "label": "traffic",
+    "id": "cli-reference/iot/lora/traffic/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/modbus/read-holding-registers",
+    "label": "read-holding-registers",
+    "id": "cli-reference/iot/modbus/read-holding-registers"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/modbus/security-rules",
+    "label": "security-rules",
+    "id": "cli-reference/iot/modbus/security-rules"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/modbus/transceive",
+    "label": "transceive",
+    "id": "cli-reference/iot/modbus/transceive"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/mqtt/brokers",
+    "label": "brokers",
+    "id": "cli-reference/iot/mqtt/brokers"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/mqtt/connect",
+    "label": "connect",
+    "id": "cli-reference/iot/mqtt/connect"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/mqtt/disconnect",
+    "label": "disconnect",
+    "id": "cli-reference/iot/mqtt/disconnect"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/mqtt/publish",
+    "label": "publish",
+    "id": "cli-reference/iot/mqtt/publish"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/mqtt/subscribe",
+    "label": "subscribe",
+    "id": "cli-reference/iot/mqtt/subscribe"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/mqtt/subscriptions/",
+    "label": "subscriptions",
+    "id": "cli-reference/iot/mqtt/subscriptions/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/mqtt/unsubscribe",
+    "label": "unsubscribe",
+    "id": "cli-reference/iot/mqtt/unsubscribe"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/wiliot/bluetooth-traffic/",
+    "label": "bluetooth-traffic",
+    "id": "cli-reference/iot/wiliot/bluetooth-traffic/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/wiliot/clear",
+    "label": "clear",
+    "id": "cli-reference/iot/wiliot/clear"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/wiliot/disable",
+    "label": "disable",
+    "id": "cli-reference/iot/wiliot/disable"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/wiliot/enable",
+    "label": "enable",
+    "id": "cli-reference/iot/wiliot/enable"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/wiliot/mqtt-traffic/",
+    "label": "mqtt-traffic",
+    "id": "cli-reference/iot/wiliot/mqtt-traffic/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/wiliot/options",
+    "label": "options",
+    "id": "cli-reference/iot/wiliot/options"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/wiliot/servers/",
+    "label": "servers",
+    "id": "cli-reference/iot/wiliot/servers/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/lcd/interface/default-wireless",
+    "label": "default-wireless",
+    "id": "cli-reference/lcd/interface/default-wireless"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/lcd/interface/display",
+    "label": "display",
+    "id": "cli-reference/lcd/interface/display"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/lcd/interface/pages",
+    "label": "pages",
+    "id": "cli-reference/lcd/interface/pages"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/radius/incoming/monitor",
+    "label": "monitor",
+    "id": "cli-reference/radius/incoming/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/radius/incoming/reset-counters",
+    "label": "reset-counters",
+    "id": "cli-reference/radius/incoming/reset-counters"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/clock/manual",
+    "label": "manual",
+    "id": "cli-reference/system/clock/manual"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/console/screen",
+    "label": "screen",
+    "id": "cli-reference/system/console/screen"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/default-configuration/caps-mode-script",
+    "label": "caps-mode-script",
+    "id": "cli-reference/system/default-configuration/caps-mode-script"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/default-configuration/custom-script",
+    "label": "custom-script",
+    "id": "cli-reference/system/default-configuration/custom-script"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/default-configuration/script",
+    "label": "script",
+    "id": "cli-reference/system/default-configuration/script"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/default-configuration/wps-sync-mode-script",
+    "label": "wps-sync-mode-script",
+    "id": "cli-reference/system/default-configuration/wps-sync-mode-script"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/device-mode/update",
+    "label": "update",
+    "id": "cli-reference/system/device-mode/update"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/gps/monitor",
+    "label": "monitor",
+    "id": "cli-reference/system/gps/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/health/settings/",
+    "label": "settings",
+    "id": "cli-reference/system/health/settings/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/keymat-provider/qkd-get-key-with-ids",
+    "label": "qkd-get-key-with-ids",
+    "id": "cli-reference/system/keymat-provider/qkd-get-key-with-ids"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/keymat-provider/qkd-get-key",
+    "label": "qkd-get-key",
+    "id": "cli-reference/system/keymat-provider/qkd-get-key"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/keymat-provider/qkd-get-status",
+    "label": "qkd-get-status",
+    "id": "cli-reference/system/keymat-provider/qkd-get-status"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/leds/settings",
+    "label": "settings",
+    "id": "cli-reference/system/leds/settings"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/license/generate-new-id",
+    "label": "generate-new-id",
+    "id": "cli-reference/system/license/generate-new-id"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/license/output",
+    "label": "output",
+    "id": "cli-reference/system/license/output"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/license/renew",
+    "label": "renew",
+    "id": "cli-reference/system/license/renew"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/logging/action/",
+    "label": "action",
+    "id": "cli-reference/system/logging/action/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/ntp/key",
+    "label": "key",
+    "id": "cli-reference/system/ntp/key"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/ntp/monitor-peers",
+    "label": "monitor-peers",
+    "id": "cli-reference/system/ntp/monitor-peers"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/ntp/server",
+    "label": "server",
+    "id": "cli-reference/system/ntp/server"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/apply-changes",
+    "label": "apply-changes",
+    "id": "cli-reference/system/package/apply-changes"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/disable",
+    "label": "disable",
+    "id": "cli-reference/system/package/disable"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/downgrade",
+    "label": "downgrade",
+    "id": "cli-reference/system/package/downgrade"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/enable",
+    "label": "enable",
+    "id": "cli-reference/system/package/enable"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/local-update/",
+    "label": "local-update",
+    "id": "cli-reference/system/package/local-update/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/uninstall",
+    "label": "uninstall",
+    "id": "cli-reference/system/package/uninstall"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/unschedule",
+    "label": "unschedule",
+    "id": "cli-reference/system/package/unschedule"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/update/",
+    "label": "update",
+    "id": "cli-reference/system/package/update/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/ptp/monitor",
+    "label": "monitor",
+    "id": "cli-reference/system/ptp/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/ptp/port",
+    "label": "port",
+    "id": "cli-reference/system/ptp/port"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/ptp/status",
+    "label": "status",
+    "id": "cli-reference/system/ptp/status"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/resource/cpu",
+    "label": "cpu",
+    "id": "cli-reference/system/resource/cpu"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/resource/hardware/",
+    "label": "hardware",
+    "id": "cli-reference/system/resource/hardware/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/resource/irq/",
+    "label": "irq",
+    "id": "cli-reference/system/resource/irq/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/resource/monitor",
+    "label": "monitor",
+    "id": "cli-reference/system/resource/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/routerboard/mode-button",
+    "label": "mode-button",
+    "id": "cli-reference/system/routerboard/mode-button"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/routerboard/reset-button",
+    "label": "reset-button",
+    "id": "cli-reference/system/routerboard/reset-button"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/routerboard/settings",
+    "label": "settings",
+    "id": "cli-reference/system/routerboard/settings"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/routerboard/upgrade",
+    "label": "upgrade",
+    "id": "cli-reference/system/routerboard/upgrade"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/routerboard/usb/",
+    "label": "usb",
+    "id": "cli-reference/system/routerboard/usb/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/routerboard/wps-button",
+    "label": "wps-button",
+    "id": "cli-reference/system/routerboard/wps-button"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/rtrace/start",
+    "label": "start",
+    "id": "cli-reference/system/rtrace/start"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/rtrace/stop",
+    "label": "stop",
+    "id": "cli-reference/system/rtrace/stop"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/script/environment",
+    "label": "environment",
+    "id": "cli-reference/system/script/environment"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/script/job",
+    "label": "job",
+    "id": "cli-reference/system/script/job"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/swos/load-config",
+    "label": "load-config",
+    "id": "cli-reference/system/swos/load-config"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/swos/password",
+    "label": "password",
+    "id": "cli-reference/system/swos/password"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/swos/reset-config",
+    "label": "reset-config",
+    "id": "cli-reference/system/swos/reset-config"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/swos/save-config",
+    "label": "save-config",
+    "id": "cli-reference/system/swos/save-config"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/swos/upgrade",
+    "label": "upgrade",
+    "id": "cli-reference/system/swos/upgrade"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/ups/beep",
+    "label": "beep",
+    "id": "cli-reference/system/ups/beep"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/ups/monitor",
+    "label": "monitor",
+    "id": "cli-reference/system/ups/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/ups/rtc",
+    "label": "rtc",
+    "id": "cli-reference/system/ups/rtc"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/ups/self-test",
+    "label": "self-test",
+    "id": "cli-reference/system/ups/self-test"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/e-mail/send",
+    "label": "send",
+    "id": "cli-reference/tool/e-mail/send"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/graphing/interface",
+    "label": "interface",
+    "id": "cli-reference/tool/graphing/interface"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/graphing/queue",
+    "label": "queue",
+    "id": "cli-reference/tool/graphing/queue"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/graphing/resource",
+    "label": "resource",
+    "id": "cli-reference/tool/graphing/resource"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/mac-server/mac-winbox",
+    "label": "mac-winbox",
+    "id": "cli-reference/tool/mac-server/mac-winbox"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/mac-server/ping",
+    "label": "ping",
+    "id": "cli-reference/tool/mac-server/ping"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/mac-server/sessions",
+    "label": "sessions",
+    "id": "cli-reference/tool/mac-server/sessions"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/romon/discover",
+    "label": "discover",
+    "id": "cli-reference/tool/romon/discover"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/romon/ping",
+    "label": "ping",
+    "id": "cli-reference/tool/romon/ping"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/romon/port",
+    "label": "port",
+    "id": "cli-reference/tool/romon/port"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/romon/ssh",
+    "label": "ssh",
+    "id": "cli-reference/tool/romon/ssh"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/sms/inbox",
+    "label": "inbox",
+    "id": "cli-reference/tool/sms/inbox"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/sms/send",
+    "label": "send",
+    "id": "cli-reference/tool/sms/send"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/sniffer/connection",
+    "label": "connection",
+    "id": "cli-reference/tool/sniffer/connection"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/sniffer/host",
+    "label": "host",
+    "id": "cli-reference/tool/sniffer/host"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/sniffer/packet",
+    "label": "packet",
+    "id": "cli-reference/tool/sniffer/packet"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/sniffer/protocol",
+    "label": "protocol",
+    "id": "cli-reference/tool/sniffer/protocol"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/sniffer/quick",
+    "label": "quick",
+    "id": "cli-reference/tool/sniffer/quick"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/sniffer/save",
+    "label": "save",
+    "id": "cli-reference/tool/sniffer/save"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/sniffer/start",
+    "label": "start",
+    "id": "cli-reference/tool/sniffer/start"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/sniffer/stop",
+    "label": "stop",
+    "id": "cli-reference/tool/sniffer/stop"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/traffic-generator/inject-pcap",
+    "label": "inject-pcap",
+    "id": "cli-reference/tool/traffic-generator/inject-pcap"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/traffic-generator/inject",
+    "label": "inject",
+    "id": "cli-reference/tool/traffic-generator/inject"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/traffic-generator/packet-template",
+    "label": "packet-template",
+    "id": "cli-reference/tool/traffic-generator/packet-template"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/traffic-generator/port",
+    "label": "port",
+    "id": "cli-reference/tool/traffic-generator/port"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/traffic-generator/quick",
+    "label": "quick",
+    "id": "cli-reference/tool/traffic-generator/quick"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/traffic-generator/raw-packet-template",
+    "label": "raw-packet-template",
+    "id": "cli-reference/tool/traffic-generator/raw-packet-template"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/traffic-generator/start",
+    "label": "start",
+    "id": "cli-reference/tool/traffic-generator/start"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/traffic-generator/stats/latency-distribution",
+    "label": "stats",
+    "id": "cli-reference/tool/traffic-generator/stats/latency-distribution"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/traffic-generator/stop",
+    "label": "stop",
+    "id": "cli-reference/tool/traffic-generator/stop"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/tool/traffic-generator/stream",
+    "label": "stream",
+    "id": "cli-reference/tool/traffic-generator/stream"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user/ssh-keys/import",
+    "label": "import",
+    "id": "cli-reference/user/ssh-keys/import"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user/ssh-keys/private/",
+    "label": "private",
+    "id": "cli-reference/user/ssh-keys/private/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/database/load",
+    "label": "load",
+    "id": "cli-reference/user-manager/database/load"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/database/migrate-legacy-db",
+    "label": "migrate-legacy-db",
+    "id": "cli-reference/user-manager/database/migrate-legacy-db"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/database/optimize-db",
+    "label": "optimize-db",
+    "id": "cli-reference/user-manager/database/optimize-db"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/database/save",
+    "label": "save",
+    "id": "cli-reference/user-manager/database/save"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/router/monitor",
+    "label": "monitor",
+    "id": "cli-reference/user-manager/router/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/router/reset-counters",
+    "label": "reset-counters",
+    "id": "cli-reference/user-manager/router/reset-counters"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/session/close-session",
+    "label": "close-session",
+    "id": "cli-reference/user-manager/session/close-session"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/user/add-batch-users",
+    "label": "add-batch-users",
+    "id": "cli-reference/user-manager/user/add-batch-users"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/user/generate-voucher",
+    "label": "generate-voucher",
+    "id": "cli-reference/user-manager/user/generate-voucher"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/user/group",
+    "label": "group",
+    "id": "cli-reference/user-manager/user/group"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/user/monitor",
+    "label": "monitor",
+    "id": "cli-reference/user-manager/user/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user-manager/user-profile/activate-user-profile",
+    "label": "activate-user-profile",
+    "id": "cli-reference/user-manager/user-profile/activate-user-profile"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/zerotier/controller/member",
+    "label": "member",
+    "id": "cli-reference/zerotier/controller/member"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/zerotier/peer/hint",
+    "label": "hint",
+    "id": "cli-reference/zerotier/peer/hint"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/scep-server/otp/generate",
+    "label": "generate",
+    "id": "cli-reference/certificate/scep-server/otp/generate"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/scep-server/ra/renew",
+    "label": "renew",
+    "id": "cli-reference/certificate/scep-server/ra/renew"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/certificate/scep-server/requests/grant",
+    "label": "grant",
+    "id": "cli-reference/certificate/scep-server/requests/grant"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/btrfs/filesystem/add-device",
+    "label": "add-device",
+    "id": "cli-reference/disk/btrfs/filesystem/add-device"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/btrfs/filesystem/balance-cancel",
+    "label": "balance-cancel",
+    "id": "cli-reference/disk/btrfs/filesystem/balance-cancel"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/btrfs/filesystem/balance-start",
+    "label": "balance-start",
+    "id": "cli-reference/disk/btrfs/filesystem/balance-start"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/btrfs/filesystem/remove-device",
+    "label": "remove-device",
+    "id": "cli-reference/disk/btrfs/filesystem/remove-device"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/btrfs/filesystem/replace-cancel",
+    "label": "replace-cancel",
+    "id": "cli-reference/disk/btrfs/filesystem/replace-cancel"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/btrfs/filesystem/replace-device",
+    "label": "replace-device",
+    "id": "cli-reference/disk/btrfs/filesystem/replace-device"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/btrfs/filesystem/reset-counters",
+    "label": "reset-counters",
+    "id": "cli-reference/disk/btrfs/filesystem/reset-counters"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/btrfs/filesystem/scrub-cancel",
+    "label": "scrub-cancel",
+    "id": "cli-reference/disk/btrfs/filesystem/scrub-cancel"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/disk/btrfs/filesystem/scrub-start",
+    "label": "scrub-start",
+    "id": "cli-reference/disk/btrfs/filesystem/scrub-start"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/calea/reset-counters-all",
+    "label": "reset-counters-all",
+    "id": "cli-reference/interface/bridge/calea/reset-counters-all"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/calea/reset-counters",
+    "label": "reset-counters",
+    "id": "cli-reference/interface/bridge/calea/reset-counters"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/filter/reset-counters-all",
+    "label": "reset-counters-all",
+    "id": "cli-reference/interface/bridge/filter/reset-counters-all"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/filter/reset-counters",
+    "label": "reset-counters",
+    "id": "cli-reference/interface/bridge/filter/reset-counters"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/msti/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/bridge/msti/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/nat/reset-counters-all",
+    "label": "reset-counters-all",
+    "id": "cli-reference/interface/bridge/nat/reset-counters-all"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/nat/reset-counters",
+    "label": "reset-counters",
+    "id": "cli-reference/interface/bridge/nat/reset-counters"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/port/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/bridge/port/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/port/mst-override/",
+    "label": "mst-override",
+    "id": "cli-reference/interface/bridge/port/mst-override/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/vlan/mvrp",
+    "label": "mvrp",
+    "id": "cli-reference/interface/bridge/vlan/mvrp"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/dot1x/server/active",
+    "label": "active",
+    "id": "cli-reference/interface/dot1x/server/active"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/dot1x/server/state",
+    "label": "state",
+    "id": "cli-reference/interface/dot1x/server/state"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/poe/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/ethernet/poe/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/poe/power-cycle",
+    "label": "power-cycle",
+    "id": "cli-reference/interface/ethernet/poe/power-cycle"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/poe/settings",
+    "label": "settings",
+    "id": "cli-reference/interface/ethernet/poe/settings"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/acl/",
+    "label": "acl",
+    "id": "cli-reference/interface/ethernet/switch/acl/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/dscp-qos-map",
+    "label": "dscp-qos-map",
+    "id": "cli-reference/interface/ethernet/switch/dscp-qos-map"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/dscp-to-dscp",
+    "label": "dscp-to-dscp",
+    "id": "cli-reference/interface/ethernet/switch/dscp-to-dscp"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/egress-vlan-tag",
+    "label": "egress-vlan-tag",
+    "id": "cli-reference/interface/ethernet/switch/egress-vlan-tag"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/egress-vlan-translation",
+    "label": "egress-vlan-translation",
+    "id": "cli-reference/interface/ethernet/switch/egress-vlan-translation"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/host",
+    "label": "host",
+    "id": "cli-reference/interface/ethernet/switch/host"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/ingress-port-policer",
+    "label": "ingress-port-policer",
+    "id": "cli-reference/interface/ethernet/switch/ingress-port-policer"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/ingress-vlan-translation",
+    "label": "ingress-vlan-translation",
+    "id": "cli-reference/interface/ethernet/switch/ingress-vlan-translation"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/l3hw-settings/",
+    "label": "l3hw-settings",
+    "id": "cli-reference/interface/ethernet/switch/l3hw-settings/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/mac-based-vlan",
+    "label": "mac-based-vlan",
+    "id": "cli-reference/interface/ethernet/switch/mac-based-vlan"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/multicast-fdb",
+    "label": "multicast-fdb",
+    "id": "cli-reference/interface/ethernet/switch/multicast-fdb"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/one2one-vlan-switching",
+    "label": "one2one-vlan-switching",
+    "id": "cli-reference/interface/ethernet/switch/one2one-vlan-switching"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/policer-qos-map",
+    "label": "policer-qos-map",
+    "id": "cli-reference/interface/ethernet/switch/policer-qos-map"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/port/",
+    "label": "port",
+    "id": "cli-reference/interface/ethernet/switch/port/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/port-isolation/",
+    "label": "port-isolation",
+    "id": "cli-reference/interface/ethernet/switch/port-isolation/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/port-leakage",
+    "label": "port-leakage",
+    "id": "cli-reference/interface/ethernet/switch/port-leakage"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/protocol-based-vlan",
+    "label": "protocol-based-vlan",
+    "id": "cli-reference/interface/ethernet/switch/protocol-based-vlan"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/qos/",
+    "label": "qos",
+    "id": "cli-reference/interface/ethernet/switch/qos/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/qos-group",
+    "label": "qos-group",
+    "id": "cli-reference/interface/ethernet/switch/qos-group"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/reserved-fdb",
+    "label": "reserved-fdb",
+    "id": "cli-reference/interface/ethernet/switch/reserved-fdb"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/reset-counters/",
+    "label": "reset-counters",
+    "id": "cli-reference/interface/ethernet/switch/reset-counters/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/rule/",
+    "label": "rule",
+    "id": "cli-reference/interface/ethernet/switch/rule/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/shaper",
+    "label": "shaper",
+    "id": "cli-reference/interface/ethernet/switch/shaper"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/stats",
+    "label": "stats",
+    "id": "cli-reference/interface/ethernet/switch/stats"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/trunk",
+    "label": "trunk",
+    "id": "cli-reference/interface/ethernet/switch/trunk"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/unicast-fdb/",
+    "label": "unicast-fdb",
+    "id": "cli-reference/interface/ethernet/switch/unicast-fdb/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/vlan/",
+    "label": "vlan",
+    "id": "cli-reference/interface/ethernet/switch/vlan/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/esim/activate",
+    "label": "activate",
+    "id": "cli-reference/interface/lte/esim/activate"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/esim/deactivate",
+    "label": "deactivate",
+    "id": "cli-reference/interface/lte/esim/deactivate"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/esim/delete",
+    "label": "delete",
+    "id": "cli-reference/interface/lte/esim/delete"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/esim/esim-id",
+    "label": "esim-id",
+    "id": "cli-reference/interface/lte/esim/esim-id"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/esim/provision",
+    "label": "provision",
+    "id": "cli-reference/interface/lte/esim/provision"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/esim/refresh-profile-list",
+    "label": "refresh-profile-list",
+    "id": "cli-reference/interface/lte/esim/refresh-profile-list"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/esim/send-notifications",
+    "label": "send-notifications",
+    "id": "cli-reference/interface/lte/esim/send-notifications"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/lte/esim/set-nickname",
+    "label": "set-nickname",
+    "id": "cli-reference/interface/lte/esim/set-nickname"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ovpn-server/server/export-client-configuration",
+    "label": "export-client-configuration",
+    "id": "cli-reference/interface/ovpn-server/server/export-client-configuration"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/w60g/station/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/w60g/station/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/capsman/remote-cap/",
+    "label": "remote-cap",
+    "id": "cli-reference/interface/wifi/capsman/remote-cap/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/network/radio",
+    "label": "radio",
+    "id": "cli-reference/interface/wifi/network/radio"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/radio/provision",
+    "label": "provision",
+    "id": "cli-reference/interface/wifi/radio/provision"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/radio/reg-info",
+    "label": "reg-info",
+    "id": "cli-reference/interface/wifi/radio/reg-info"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/radio/settings",
+    "label": "settings",
+    "id": "cli-reference/interface/wifi/radio/settings"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/security/multi-passphrase",
+    "label": "multi-passphrase",
+    "id": "cli-reference/interface/wifi/security/multi-passphrase"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/steering/neighbor-group",
+    "label": "neighbor-group",
+    "id": "cli-reference/interface/wifi/steering/neighbor-group"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireguard/peers/show-client-config",
+    "label": "show-client-config",
+    "id": "cli-reference/interface/wireguard/peers/show-client-config"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/align/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/wireless/align/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/align/test-audio",
+    "label": "test-audio",
+    "id": "cli-reference/interface/wireless/align/test-audio"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/info/allowed-channels",
+    "label": "allowed-channels",
+    "id": "cli-reference/interface/wireless/info/allowed-channels"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/info/country-info",
+    "label": "country-info",
+    "id": "cli-reference/interface/wireless/info/country-info"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/info/country-list",
+    "label": "country-list",
+    "id": "cli-reference/interface/wireless/info/country-list"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/info/default-scan-list",
+    "label": "default-scan-list",
+    "id": "cli-reference/interface/wireless/info/default-scan-list"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/info/hw-info",
+    "label": "hw-info",
+    "id": "cli-reference/interface/wireless/info/hw-info"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/info/scan-list",
+    "label": "scan-list",
+    "id": "cli-reference/interface/wireless/info/scan-list"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/nstreme-dual/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/wireless/nstreme-dual/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/nstreme-dual/reset-counters",
+    "label": "reset-counters",
+    "id": "cli-reference/interface/wireless/nstreme-dual/reset-counters"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/registration-table/reset-counters",
+    "label": "reset-counters",
+    "id": "cli-reference/interface/wireless/registration-table/reset-counters"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/sniffer/packet",
+    "label": "packet",
+    "id": "cli-reference/interface/wireless/sniffer/packet"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/sniffer/save",
+    "label": "save",
+    "id": "cli-reference/interface/wireless/sniffer/save"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/sniffer/sniff",
+    "label": "sniff",
+    "id": "cli-reference/interface/wireless/sniffer/sniff"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/snooper/flat-snoop",
+    "label": "flat-snoop",
+    "id": "cli-reference/interface/wireless/snooper/flat-snoop"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/snooper/snoop",
+    "label": "snoop",
+    "id": "cli-reference/interface/wireless/snooper/snoop"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wireless/wds/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/wireless/wds/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/lora/servers/reset-servers",
+    "label": "reset-servers",
+    "id": "cli-reference/iot/lora/servers/reset-servers"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/lora/traffic/clear",
+    "label": "clear",
+    "id": "cli-reference/iot/lora/traffic/clear"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/lora/traffic/options",
+    "label": "options",
+    "id": "cli-reference/iot/lora/traffic/options"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/mqtt/subscriptions/monitor-data",
+    "label": "monitor-data",
+    "id": "cli-reference/iot/mqtt/subscriptions/monitor-data"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/mqtt/subscriptions/recv/",
+    "label": "recv",
+    "id": "cli-reference/iot/mqtt/subscriptions/recv/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/wiliot/bluetooth-traffic/clear",
+    "label": "clear",
+    "id": "cli-reference/iot/wiliot/bluetooth-traffic/clear"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/wiliot/mqtt-traffic/clear",
+    "label": "clear",
+    "id": "cli-reference/iot/wiliot/mqtt-traffic/clear"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/wiliot/servers/defaults",
+    "label": "defaults",
+    "id": "cli-reference/iot/wiliot/servers/defaults"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/health/settings/detect-fans",
+    "label": "detect-fans",
+    "id": "cli-reference/system/health/settings/detect-fans"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/logging/action/clear",
+    "label": "clear",
+    "id": "cli-reference/system/logging/action/clear"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/local-update/download-all",
+    "label": "download-all",
+    "id": "cli-reference/system/package/local-update/download-all"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/local-update/download",
+    "label": "download",
+    "id": "cli-reference/system/package/local-update/download"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/local-update/mirror/",
+    "label": "mirror",
+    "id": "cli-reference/system/package/local-update/mirror/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/local-update/refresh",
+    "label": "refresh",
+    "id": "cli-reference/system/package/local-update/refresh"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/local-update/update-package-source",
+    "label": "update-package-source",
+    "id": "cli-reference/system/package/local-update/update-package-source"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/update/cancel",
+    "label": "cancel",
+    "id": "cli-reference/system/package/update/cancel"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/update/check-for-updates",
+    "label": "check-for-updates",
+    "id": "cli-reference/system/package/update/check-for-updates"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/update/download",
+    "label": "download",
+    "id": "cli-reference/system/package/update/download"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/update/install",
+    "label": "install",
+    "id": "cli-reference/system/package/update/install"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/resource/hardware/authorize",
+    "label": "authorize",
+    "id": "cli-reference/system/resource/hardware/authorize"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/resource/hardware/usb-power-reset",
+    "label": "usb-power-reset",
+    "id": "cli-reference/system/resource/hardware/usb-power-reset"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/resource/hardware/usb-settings",
+    "label": "usb-settings",
+    "id": "cli-reference/system/resource/hardware/usb-settings"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/resource/irq/rps",
+    "label": "rps",
+    "id": "cli-reference/system/resource/irq/rps"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/routerboard/usb/power-reset",
+    "label": "power-reset",
+    "id": "cli-reference/system/routerboard/usb/power-reset"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/user/ssh-keys/private/import",
+    "label": "import",
+    "id": "cli-reference/user/ssh-keys/private/import"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/bridge/port/mst-override/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/bridge/port/mst-override/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/acl/policer",
+    "label": "policer",
+    "id": "cli-reference/interface/ethernet/switch/acl/policer"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/l3hw-settings/advanced/",
+    "label": "advanced",
+    "id": "cli-reference/interface/ethernet/switch/l3hw-settings/advanced/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/l3hw-settings/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/ethernet/switch/l3hw-settings/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/port/reset-counters/",
+    "label": "reset-counters",
+    "id": "cli-reference/interface/ethernet/switch/port/reset-counters/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/qos/map/",
+    "label": "map",
+    "id": "cli-reference/interface/ethernet/switch/qos/map/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/qos/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/ethernet/switch/qos/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/qos/port/",
+    "label": "port",
+    "id": "cli-reference/interface/ethernet/switch/qos/port/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/qos/priority-flow-control",
+    "label": "priority-flow-control",
+    "id": "cli-reference/interface/ethernet/switch/qos/priority-flow-control"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/qos/profile",
+    "label": "profile",
+    "id": "cli-reference/interface/ethernet/switch/qos/profile"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/qos/settings",
+    "label": "settings",
+    "id": "cli-reference/interface/ethernet/switch/qos/settings"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/qos/tx-manager/",
+    "label": "tx-manager",
+    "id": "cli-reference/interface/ethernet/switch/qos/tx-manager/index"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/rule/reset-counters-all",
+    "label": "reset-counters-all",
+    "id": "cli-reference/interface/ethernet/switch/rule/reset-counters-all"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/rule/reset-counters",
+    "label": "reset-counters",
+    "id": "cli-reference/interface/ethernet/switch/rule/reset-counters"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/unicast-fdb/flush",
+    "label": "flush",
+    "id": "cli-reference/interface/ethernet/switch/unicast-fdb/flush"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/capsman/remote-cap/provision",
+    "label": "provision",
+    "id": "cli-reference/interface/wifi/capsman/remote-cap/provision"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/capsman/remote-cap/set-identity",
+    "label": "set-identity",
+    "id": "cli-reference/interface/wifi/capsman/remote-cap/set-identity"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/wifi/capsman/remote-cap/upgrade",
+    "label": "upgrade",
+    "id": "cli-reference/interface/wifi/capsman/remote-cap/upgrade"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/iot/mqtt/subscriptions/recv/clear",
+    "label": "clear",
+    "id": "cli-reference/iot/mqtt/subscriptions/recv/clear"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/system/package/local-update/mirror/force-check",
+    "label": "force-check",
+    "id": "cli-reference/system/package/local-update/mirror/force-check"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/l3hw-settings/advanced/monitor",
+    "label": "monitor",
+    "id": "cli-reference/interface/ethernet/switch/l3hw-settings/advanced/monitor"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/qos/map/ip",
+    "label": "ip",
+    "id": "cli-reference/interface/ethernet/switch/qos/map/ip"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/qos/map/vlan",
+    "label": "vlan",
+    "id": "cli-reference/interface/ethernet/switch/qos/map/vlan"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/qos/port/reset-counters",
+    "label": "reset-counters",
+    "id": "cli-reference/interface/ethernet/switch/qos/port/reset-counters"
+  },
+  {
+    "href": "/docs/7.25/cli-reference/interface/ethernet/switch/qos/tx-manager/queue",
+    "label": "queue",
+    "id": "cli-reference/interface/ethernet/switch/qos/tx-manager/queue"
+  }
+]

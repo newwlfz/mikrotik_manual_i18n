@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/bgp/session/resend"
 sidebar_position: 5
 title: "resend"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/bgp/session/resend
-captured_at: '2026-11-01T21:29:28+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/bgp/session/resend
+captured_at: '2026-11-01T21:25:05+08:00'
 ---
 
 -----------

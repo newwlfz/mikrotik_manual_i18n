@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/mpls/ldp/remote-mapping"
 sidebar_position: 7
 title: "remote-mapping"
-source: https://manual.mikrotik.com/docs/cli-reference/mpls/ldp/remote-mapping
-captured_at: '2026-11-01T21:29:15+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/ldp/remote-mapping
+captured_at: '2026-11-01T21:24:48+08:00'
 ---
 
 -----------

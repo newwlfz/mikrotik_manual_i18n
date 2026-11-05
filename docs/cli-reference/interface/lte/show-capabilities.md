@@ -1,10 +1,10 @@
 ---
 sidebar_key: "cli-reference/interface/lte/show-capabilities"
-sidebar_position: 10
+sidebar_position: 11
 title: "show-capabilities"
 sidebar_label: 'show-capabilities'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/lte/show-capabilities
-captured_at: '2026-11-01T21:27:28+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/lte/show-capabilities
+captured_at: '2026-11-01T21:22:51+08:00'
 ---
 
 -----------
@@ -26,7 +26,7 @@ captured_at: '2026-11-01T21:27:28+08:00'
 <ArgTableRow arg="nr-bands" typ="string"></ArgTableRow>
 <ArgTableRow arg="passthrough" typ="bool"></ArgTableRow>
 <ArgTableRow arg="esim-detected" typ="bool"></ArgTableRow>
-<ArgTableRow arg="firmware-update" typ="bool"></ArgTableRow>
+<ArgTableRow arg="firmware-upgrade" typ="bool"></ArgTableRow>
 <ArgTableRow arg="lte-attach-config" typ="bool"></ArgTableRow>
 <ArgTableRow arg="at-chat" typ="bool"></ArgTableRow>
 <ArgTableRow arg="framed-route-apn" typ="string"></ArgTableRow>

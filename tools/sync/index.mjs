@@ -5,12 +5,18 @@ import YAML from 'yaml';
 
 const CONFIG = YAML.parse(fs.readFileSync('config/mirror.yml', 'utf8'));
 const STATE_FILE = CONFIG.sync.state_file;
+const VERSION = JSON.parse(
+  fs.readFileSync('data/manifests/current-version.json', 'utf8'),
+).version;
+const VERSIONED = fs.existsSync('versions.json')
+  ? JSON.parse(fs.readFileSync('versions.json', 'utf8'))
+  : [];
 const BACKUP = '../incoming/legacy/site';
 const BACKUP_SECTIONS = {
-  docs: '../incoming/legacy/site/versioned_docs/version-7.24',
-  hardware: '../incoming/legacy/site/hardware',
-  blog: '../incoming/legacy/site/blog',
-  changelog: '../incoming/legacy/site/changelog',
+  docs: `${BACKUP}/versioned_docs/version-${VERSION}`,
+  hardware: `${BACKUP}/hardware`,
+  blog: `${BACKUP}/blog`,
+  changelog: `${BACKUP}/changelog`,
 };
 const SECTIONS = {
   docs: 'docs',
@@ -18,6 +24,10 @@ const SECTIONS = {
   blog: 'blog',
   changelog: 'changelog',
 };
+for (const version of VERSIONED) {
+  SECTIONS[`docs-${version}`] = `versioned_docs/version-${version}`;
+  BACKUP_SECTIONS[`docs-${version}`] = `${BACKUP}/versioned_docs/version-${version}`;
+}
 
 function hash(file) {
   return crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
@@ -51,7 +61,13 @@ function frontmatter(file) {
 function sourceFor(section, rel, fm) {
   if (fm.source) return fm.source;
   const route = rel.replace(/\.(md|mdx)$/, '').replace(/\/index$/, '');
-  if (section === 'docs') return `https://manual.mikrotik.com/docs/7.24/${route}`;
+  if (section === 'docs') {
+    return `https://manual.mikrotik.com/docs/${VERSION}/${route}`;
+  }
+  if (section.startsWith('docs-')) {
+    const version = section.slice('docs-'.length);
+    return `https://manual.mikrotik.com/docs/${version}/${route}`;
+  }
   return `https://manual.mikrotik.com/${section}/${route}`;
 }
 

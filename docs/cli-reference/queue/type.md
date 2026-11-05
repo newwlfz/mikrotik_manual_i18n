@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/queue/type"
 sidebar_position: 5
 title: "type"
-source: https://manual.mikrotik.com/docs/cli-reference/queue/type
-captured_at: '2026-11-01T21:29:25+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/queue/type
+captured_at: '2026-11-01T21:25:01+08:00'
 ---
 
 -----------
@@ -57,7 +57,7 @@ captured_at: '2026-11-01T21:29:25+08:00'
 <ArgTableRow arg="cake-overhead" typ="num"></ArgTableRow>
 <ArgTableRow arg="cake-mpu" typ="num"></ArgTableRow>
 <ArgTableRow arg="cake-atm" typ="enum (none | atm | ptm) { none:0, atm:1, ptm:2 }"></ArgTableRow>
-<ArgTableRow arg="cake-overhead-scheme" typ="multi { cake-overhead-scheme: enum (raw | convervative | ipoa-vcmux | ipoa-llcsnap | bridged-vcmux | bridged-llcsnap | pppoa-vcmux | pppoa-llc | pppoe-vcmux | pppoe-llcsnap | pppoe-ptm | bridged-ptm | via-ethernet | ethernet | ether-vlan | docsis) { raw:1, convervative:2, ipoa-vcmux:3, ipoa-llcsnap:4, bridged-vcmux:5, bridged-llcsnap:6, pppoa-vcmux:7, pppoa-llc:8, pppoe-vcmux:9, pppoe-llcsnap:10, pppoe-ptm:11, bridged-ptm:12, via-ethernet:13, ethernet:14, ether-vlan:15, docsis:16 }
+<ArgTableRow arg="cake-overhead-scheme" typ="multi { cake-overhead-scheme: enum (raw | conservative | ipoa-vcmux | ipoa-llcsnap | bridged-vcmux | bridged-llcsnap | pppoa-vcmux | pppoa-llc | pppoe-vcmux | pppoe-llcsnap | pppoe-ptm | bridged-ptm | via-ethernet | ethernet | ether-vlan | docsis) { raw:1, conservative:2, ipoa-vcmux:3, ipoa-llcsnap:4, bridged-vcmux:5, bridged-llcsnap:6, pppoa-vcmux:7, pppoa-llc:8, pppoe-vcmux:9, pppoe-llcsnap:10, pppoe-ptm:11, bridged-ptm:12, via-ethernet:13, ethernet:14, ether-vlan:15, docsis:16 }
  }"></ArgTableRow>
 <ArgTableRow arg="cake-rtt" typ="time"></ArgTableRow>
 <ArgTableRow arg="cake-rtt-scheme" typ="enum (none | datacentre | lan | metro | regional | internet | oceanic | satellite | interplanetary) { none:0, datacentre:1, lan:2, metro:3, regional:4, internet:5, oceanic:6, satellite:7, interplanetary:8 }"></ArgTableRow>

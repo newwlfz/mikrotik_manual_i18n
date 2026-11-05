@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/ip/address"
 sidebar_position: 1
 title: "address"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/address
-captured_at: '2026-11-01T21:28:23+08:00'
+sidebar_label: 'ip'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/address
+captured_at: '2026-11-01T21:23:47+08:00'
 ---
 
 -----------

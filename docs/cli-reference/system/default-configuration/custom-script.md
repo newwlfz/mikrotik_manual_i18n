@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/default-configuration/custom-script"
 sidebar_position: 2
 title: "custom-script"
-source: https://manual.mikrotik.com/docs/cli-reference/system/default-configuration/custom-script
-captured_at: '2026-11-01T21:29:52+08:00'
+sidebar_label: 'custom-script'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/default-configuration/custom-script
+captured_at: '2026-11-01T21:25:27+08:00'
 ---
 
 -----------

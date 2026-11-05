@@ -3,13 +3,13 @@ sidebar_key: "storage/raid/index"
 sidebar_position: 3
 title: "RAID"
 sidebar_label: 'RAID'
-description: 'RAID technology in RouterOS enables data storage across multiple drives with improved performance and protection, supporting RAID levels 0,1,4,5,6, linear, and nested configurations. The page details properties like RAID type, chunk size, device count, and configuration examples for setting up RAID6.'
+description: 'RAID technology in RouterOS enables data storage across multiple drives with improved performance and protection, supporting RAID levels 0,1,4,5,6, linear, and nested configurations. Includes configuration examples for RAID6 and nested RAID10, plus a health-check script.'
 tags:
   - 'raid'
   - 'storage'
   - 'configuration'
-source: https://manual.mikrotik.com/docs/storage/raid
-captured_at: '2026-11-04T11:33:48+08:00'
+source: https://manual.mikrotik.com/docs/7.25/storage/raid
+captured_at: '2026-11-04T11:22:21+08:00'
 ---
 
 :::info
@@ -24,20 +24,7 @@ RouterOS supports software RAID levels 0, 1, 4, 5, 6, linear, and nested RAID.
 
 <DocCardList />
 
-## Properties
-
-| Property | Description |
-| :-- | :-- |
-| **raid-type** | RAID type used (levels 0,1,4,5,6,linear and nested RAID.) |
-| **raid-chunk-size** | The size of the chunks or stripes used in the RAID array. |
-| **raid-device-count** | The number of devices (disks) included in the RAID array. |
-| **raid-master** | Created RAID master block device that the disks are added to. |
-| **raid-max-component-size** | The maximum size of an individual component or disk in the RAID array. |
-| **raid-member-failed** | Sets the drive in a failed state in the RAID array. Used if there is a need to change a non-failed drive |
-| **raid-role** | Defines the role of each device within the RAID array. |
-| **raid-scrub** | Verifies and repairs data integrity across the RAID array. |
-
-### Configuration example (RAID6)
+## Configuration example (RAID6)
 
 This is an example on how to configure RAID. It will be the same procedure for most RAID types
 
@@ -92,7 +79,7 @@ And the result should look similar to this
 Avoid using multiple partitions on a single physical disk in multiple RAID arrays. Using the same physical disk in multiple RAID arrays can result in low performance.
 :::
 
-### Example: RAID check
+## Example: RAID check
 
 It is extremely important to monitor your RAID array for failures. There are multiple ways to do it, but the simplest way is to create a script that sends an e-mail whenever a RAID member has failed. You can use the following script as a working example:
 
@@ -139,45 +126,45 @@ Make sure you configure your e-mail server's settings under `/tool/e-mail` and c
 
 All data is written evenly over all disks in this RAID, this configuration does not provide any fault tolerance but provides best performance.
 
-![](./img/raid-01.webp)
+![RAID 0 diagram: data striped across disks](./img/raid-01.webp)
 
 ### RAID 1
 
 The same data is written to all drives (data is mirrored), this configuration provides best fault tolerance, but performance-wise write speeds will be equal to the slowest disk used in the array.
 
-![](./img/raid-02.webp)
+![RAID 1 diagram: data mirrored between disks](./img/raid-02.webp)
 
 ### RAID 4
 
 Block-level data is striped across data disks, with parity bits stored on a dedicated disk. Performance will be limited to the parity writing speed.
 
-![](./img/raid-03.webp)
+![RAID 4 diagram: block-level striping with dedicated parity disk](./img/raid-03.webp)
 
 ### RAID 5
 
 Block-level data is striped evenly over the available disks. It can be recovered from 1 disk failure.
 
-![](./img/raid-04.webp)
+![RAID 5 diagram: block-level striping with distributed parity](./img/raid-04.webp)
 
 ### RAID 6
 
 Block-level data is striped evenly over the available disks. It can be recovered from 2 disk failures.
 
-![](./img/raid-05.webp)
+![RAID 6 diagram: block-level striping with double distributed parity](./img/raid-05.webp)
 
 ### RAID Linear
 
 Data is appended over multiple disks combining them into a single large disk. Provides no redundancy and is limited to the single disk read/write speed.
 
-![](./img/raid-06.webp)
+![RAID linear diagram: data appended across disks](./img/raid-06.webp)
 
 ### Nested RAID
 
 Combination of multiple RAID configurations into another RAID. For example RAID 10 (RAID 1+0) combines disk mirroring (RAID 1) and disk striping (RAID 0)
 
-![](./img/raid-07.webp)
+![Nested RAID diagram: RAID 1+0 combining mirroring and striping](./img/raid-07.webp)
 
-#### Configuration example
+### Configuration example
 
 In this example I'm using 10 SSD drives and configuring in RAID (RAID 1+0)
 

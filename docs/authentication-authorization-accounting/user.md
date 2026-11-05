@@ -3,216 +3,204 @@ sidebar_key: "authentication-authorization-accounting/user"
 sidebar_position: 7
 title: "User"
 sidebar_label: 'User'
-description: 'MikroTik RouterOS User management page details user authentication via local or RADIUS servers, password complexity settings, user group policies defining access rights, and router user database properties including login addresses, inactivity actions, and password management.'
+description: 'RouterOS user management: local user database, user groups and policies, password complexity and expiry, session inactivity handling, SSH key authentication, and RADIUS authentication and accounting for management logins.'
 tags:
   - 'user-management'
   - 'radius'
   - 'user-groups'
-source: https://manual.mikrotik.com/docs/authentication-authorization-accounting/user
-captured_at: '2026-11-04T11:27:00+08:00'
+source: https://manual.mikrotik.com/docs/7.25/authentication-authorization-accounting/user
+captured_at: '2026-11-04T11:14:21+08:00'
 ---
 
-## Summary
+The router user facility in `/user` manages the accounts that access the router with management tools: WinBox, WebFig, the console over SSH or Telnet, the API and the REST API. RouterOS authenticates users against the local user database or a RADIUS server. Each user belongs to exactly one user group, and the group's policies define what the user can do on the router. For hardening recommendations (per-administrator accounts, key login, service restrictions), see [Securing your router](/docs/getting-started/securing-your-router).
 
-MikroTik RouterOS router user facility manages the users connecting to the router from any of the Management tools. The users are authenticated using either a local database or a designated RADIUS server. Each user is assigned to a user group, which denotes the rights of this user. A group policy is a combination of individual policy items.
+## Create a user
 
-In case the user authentication is performed using RADIUS, the [RADIUS](/docs/authentication-authorization-accounting/radius) client should be previously configured.
-
-## User Settings
-
-The settings submenu allows controlling the password complexity requirements of the router users.
-
-| Property | Description |
-| :-- | :-- |
-| **minimum-password-length** (*integer*; 0..4294967295; Default: ) | Specifies the minimum character length of the user password |
-| **minimum-categories** (*integer*; 0..4; Default: ) | Specifies the complexity requirements of the password, with categories being *uppercase, lowercase, digit, symbol.*  |
-
-## User Groups
-
-The router user groups provide a convenient way to assign different permissions and access rights to different user classes.
-
-### Properties
-
-| Property | Description |
-| :-- | :-- |
-| **name** (*string*; Default: ) | The name of the user group |
-| **policy** (*local \| telnet \| ssh \| ftp \| reboot \| read \| write \| policy \| test \| winbox \| password \| web \| sniff \| sensitive \| api \| rest-api \| romon*; Default: **none**) | List of allowed policies:   Login policies: local - policy that grants rights to log in locally via consoletelnet - policy that grants rights to log in remotely via telnetssh - policy that grants rights to log in remotely via secure shell protocolweb - policy that grants rights to log in remotely via WebFig.winbox - policy that grants rights to log in remotely via WinBox and bandwidth test authenticationpassword - policy that grants rights to change the password for currently logged in user (own password) api - grants rights to access the router via API.rest-api - grants rights to access the router via REST API.ftp - policy that grants full rights to log in remotely via FTP.  Allows reading/writing/erasing files and to transfer files from/to the router. Should be used together with read/write policies.romon - policy that grants rights to connect to the RoMon server. Config Policies: reboot - policy that allows rebooting the routerread - policy that grants read access to the router's configuration. All console commands that do not alter the router's configuration are allowed. Doesn't affect FTPwrite - policy that grants write access to the router's configuration, except for user management. This policy does not allow reading the configuration, so make sure to enable read policy as wellpolicy - policy that grants user management rights. Should be used together with the write policy. Also allows seeing global variables created by other users (requires also 'test' policy). Allows designing skins (requires also "sensitive" policy).test - policy that grants rights to run ping, traceroute, bandwidth-test, wireless scan, snooper, fetch, email and other test commandssensitive - grants rights to change the "hide sensitive" option, if this policy is disabled sensitive information is not displayed.sniff - policy that grants rights to use the packet sniffer tool, torch tool, traffic generator. |
-| **skin** (*name*; Default: **default**) | The skin used for WebFig |
-
-### Default groups
-
-There are three default system groups which cannot be deleted:
+The default configuration has one user, `admin`, in the `full` group. Create a group with the policies the users need, then add the users:
 
 ```ros
-[admin@MikroTik] > /user/group/print 
-0 name="read" policy=local,telnet,ssh,reboot,read,test,winbox,password,web,sniff,sensitive,api,romon,rest-api,!ftp,!write,!policy skin=default 
-
-1 name="write" policy=local,telnet,ssh,reboot,read,write,test,winbox,password,web,sniff,sensitive,api,romon,rest-api,!ftp,!policy skin=default 
-
-2 name="full" policy=local,telnet,ssh,ftp,reboot,read,write,policy,test,winbox,password,web,sniff,sensitive,api,romon,rest-api skin=default 
+/user/group/add name=managers policy=ssh,read,write,password
+/user/add name=john group=managers password="StrongPass123!"
 ```
-
-Please note, that even the "*read*" group includes *sensitive*, *reboot,* and other important policies, meaning that this group should not be given to untrusted users. For truly limited groups, make a custom group, defining specific policies. All groups have access to file operations. The exclamation sign '!' just before the policy item name means NOT.
-
-## Router Users
-
-The router user database stores information such as username, password, allowed access addresses, and group, about router management personnel.
-
-### Properties
-
-| Property | Description |
-| :-- | :-- |
-| **address** (*IP/mask \| IPv6 prefix*; Default: ) | Host or network address from which the user is allowed to log in |
-| **group** (*string*; Default: ) | Name of the group the user belongs to |
-| **inactivity-policy** (*lockscreen* \| *logout* \| *none*; Default: ***none***) | Specifies inactivity action - logout (the user will be logged out) or lockscreen (the session will be locked, requiring password input to continue). Works only for CLI sessions. |
-| **inactivity-timeout** (*time*; Default: ***10min***) | Specifies time after which the user will be logged out or the session will be locked. Minimal timeout - 1 minute, maximal timeout - 24 hours. Works only for CLI sessions. |
-| **name** (*string*; Default: ) | User name. Must start and end with an alphanumeric character but can include "\_", ".", "#", "-", and "@" symbols. However, the "\*" symbol is prohibited in the user name. |
-| **password** (*string*; Default: ) *[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | User password. If not specified, it is left blank (hit <kbd>Enter</kbd> when logging in). It conforms to standard Unix characteristics of passwords and may contain letters, digits, "\*" and "\_" symbols. |
-| **last-logged-in** (*time and date*; Default: **""**) | Read-only field. Last time and date when a user logged in. |
-
-### Actions
-
-Actions for an existing router user.
-
-| Action | Description |
-| :-- | :-- |
-| **password** | Option to change the user password. |
-| **expire-password** | Expires the user password, on the next login, the router will prompt to change the password. |
-
-### Notes
-
-There is one predefined user with full access rights:
 
 ```ros
-[admin@MikroTik] /user> print
-Flags: X - disabled
-# NAME GROUP ADDRESS LAST-LOGGED-IN
-0 ;;; system default user
-admin full 0.0.0.0/0 2010-12-08 16:19:24
-
+[admin@MikroTik] > /user/group/print where name=managers
+4  name="managers"
+   policy=ssh,read,write,password,!local,!telnet,!ftp,!reboot,!policy,!test,
+      !winbox,!web,!sniff,!sensitive,!api,!romon,!rest-api skin=default
 ```
 
-There always should be at least one user with full access rights. If the user with full access rights is the only one, it cannot be removed.
+Policies that are not listed are revoked from the group. Passwords accept any characters, including spaces and UTF-8. When you add a user, the password argument is mandatory; an explicitly empty password (`password=""`) allows logging in with a blank password.
 
-## Monitoring Active Users
+Set `address` to an IP prefix to allow the user to log in only from matching source addresses:
 
 ```ros
-/user/active/print
+/user/set john address=192.168.88.0/24
 ```
 
- The command shows the currently active users along with respective statistics information.
+User names accept letters, digits and the characters `_` `.` `#` `-` `@`, must end with a letter or a digit, and cannot start with `.` or `-`.
 
-### Properties
+For all user properties, see [`/user`](/docs/cli-reference/user/) in the CLI reference.
 
-All properties are read-only.
+## Change a password
 
-| Property | Description |
-| :-- | :-- |
-| **address** (*IP/IPv6 address/MAC address*) | Host IP/IPv6/MAC address from which the user is accessing the router. |
-| **group** (*string*) | A group that the user belongs to. |
-| **name** (*string*) | Username. |
-| **radius** (*true \| false*) | Whether a user is authenticated by the RADIUS server. |
-| **via** (*telnet \| ssh \| winbox \| api \| rest-api \| web \| ftp* ) | User's access method |
-| **by-romon**(MAC address) | RoMON agent MAC address |
-| **when** (*time*) | Time and date when the user logged in. |
+Users change their own password with the `/password` command, in interactive mode or in one line:
 
-### Request logout
-
-It is possible to close an active session using the request logout function.
-
-```routeros
- /user/active/request-logout ACTIVE_USER_SESSION_NUMBER
+```ros
+/password old-password=StrongPass123! new-password=NewStrongPass456 confirm-new-password=NewStrongPass456
 ```
 
-## Remote AAA
+The user's group must include the `password` policy, otherwise the command fails with "not enough permissions".
 
-Router user remote AAA enables router user authentication and accounting via a RADIUS server. The RADIUS user database is consulted only if the required username is not found in the local user database.
+An administrator changes another user's password with `/user/set`:
 
-### Properties
+```ros
+/user/set john password="NewStrongPass456"
+```
 
-| Property | Description |
-| :-- | :-- |
-| **accounting** (*yes \| no*; Default: **yes**) | If the RADIUS server should be sent accounting for login, logout. Bandwidth usage statistics are not part of `/user` accounting |
-| **exclude-groups** (*list of group names*; Default: ) | Exclude-groups consist of the groups that should not be allowed to be used for users authenticated by radius. If the radius server provides a group specified in this list, the default-group will be used instead. This is to protect against privilege escalation when one user (without policy permission) can change the radius server list, set up their own radius server and log in as admin. |
-| **default-group** (*string*; Default: **read**) | User group used by default for users authenticated via a RADIUS server. |
-| **interim-update** (*time*; Default: **0s**) | Interim-Update time interval |
-| **use-radius** (*yes \|no*; Default: **no**) | Enable user authentication via RADIUS |
+To force a user to set a new password at the next login, expire the current password:
 
-:::info
-If you are using RADIUS, you need to have CHAP support enabled in the RADIUS server for WinBox to work.
-:::
+```ros
+/user/expire-password john
+```
 
-## SSH Keys
+```ros
+[admin@MikroTik] > /user/print where name=john
+Flags: E - EXPIRED
+Columns: NAME, GROUP, ADDRESS, INACTIVITY-POLICY
+#   NAME  GROUP     ADDRESS          INACTIVITY-POLICY
+2 E john  managers  192.168.88.0/24  none
+```
 
- This menu allows importing of private and public keys used for SSH authentication.
+At the next interactive login the router asks the user for a new password; a new password set by an administrator also clears the `E` flag.
+
+Require stronger passwords with the complexity settings in [`/user/settings`](/docs/cli-reference/user/settings): `minimum-password-length` and `minimum-categories` (how many of the groups digits, lowercase letters, uppercase letters and symbols the password must contain).
+
+## User groups
+
+Groups assign access rights to users. The full list of policies and what each one grants is in [`/user/group`](/docs/cli-reference/user/group).
+
+RouterOS has three default groups which cannot be deleted:
+
+```ros
+[admin@MikroTik] > /user/group/print
+0  name="read"
+   policy=local,telnet,ssh,reboot,read,test,winbox,password,web,sniff,
+      sensitive,api,romon,rest-api,!ftp,!write,!policy skin=default
+
+1  name="write"
+   policy=local,telnet,ssh,reboot,read,write,test,winbox,password,web,sniff,
+      sensitive,api,romon,rest-api,!ftp,!policy skin=default
+
+2  name="full"
+   policy=local,telnet,ssh,ftp,reboot,read,write,policy,test,winbox,password,
+      web,sniff,sensitive,api,romon,rest-api
+```
 
 :::warning
-By default, the user is not allowed to log in via SSH by password if an SSH key for the user is added. For more details see the [SSH](/docs/management-tools/ssh) page.
+Even the `read` group includes the `reboot` and `sensitive` policies. Do not give it to untrusted users; create a custom group with only the policies they need instead.
 :::
 
-### Public keys
+The exclamation mark `!` in front of a policy revokes it from the group.
 
-This menu is used to import (or add) and list imported public keys. Public keys are used to approve another device's identity when logging into a router using an SSH key.
+## Lock or close inactive sessions
+
+Set `inactivity-timeout` (range 1 minute to 24 hours) and `inactivity-policy` on a user to handle idle console sessions:
+
+- `logout` closes the idle session with the message "`<name>` was logged out due to inactivity".
+- `lockscreen` locks the session and asks for the user's password to resume it; <kbd>Control</kbd>+<kbd>D</kbd> closes the locked session.
+
+## SSH keys
+
+The `/user/ssh-keys` menu stores public SSH keys assigned to users, and `/user/ssh-keys/private` stores the private keys that identify the router itself when it connects to other devices with SSH, for example with `/system/ssh` or `/tool/fetch`.
+
+:::warning
+When a user has an SSH key assigned, SSH no longer accepts password authentication for that user. See the [SSH](/docs/management-tools/ssh) page for the supported configurations.
+:::
+
+Upload the key file to the router and import it for a user:
+
+```ros
+/user/ssh-keys/import public-key-file=mykey.pub user=john info="john laptop"
+```
+
+```ros
+[admin@MikroTik] > /user/ssh-keys/print where user=john
+Columns: USER, KEY-TYPE, BITS, INFO
+#  USER  KEY-TYPE  BITS  INFO
+1  john  ed25519    256  john laptop
+```
+
+Public key import accepts OpenSSH one-line, PKCS#1 PEM (`BEGIN RSA PUBLIC KEY`) and PKCS#8/SPKI PEM (`BEGIN PUBLIC KEY`) files. You can also paste an OpenSSH-format key directly with `/user/ssh-keys/add key="ssh-ed25519 AAAA..." user=john`; a comment at the end of the key string becomes the key's `info`.
+
+Private key import accepts PKCS#1 PEM (`BEGIN RSA PRIVATE KEY`) and PKCS#8 files, plain (`BEGIN PRIVATE KEY`) and encrypted (`BEGIN ENCRYPTED PRIVATE KEY`, requires the `passphrase` argument):
+
+```ros
+/user/ssh-keys/private/import private-key-file=routerkey.pem user=john passphrase=keypass
+```
+
+OpenSSH-format private keys (`BEGIN OPENSSH PRIVATE KEY`) are not accepted. For all properties, see [`/user/ssh-keys`](/docs/cli-reference/user/ssh-keys/) and [`/user/ssh-keys/private`](/docs/cli-reference/user/ssh-keys/private/) in the CLI reference.
 
 :::info
-RSA, Ed25519 and Ed25519-sk keys are supported in PEM, PKCS#8, or OpenSSH format.
+RSA keys with a weak public exponent (7 or lower) continue to work, but are flagged with the comment `key uses insecure RSA public exponent!` in the print output of `/user/ssh-keys` and `/user/ssh-keys/private`. Replace such a key pair with a stronger one.
 :::
 
-| Property | Description |
-| :-- | :-- |
-| **user** (read-only*)* | system user to which the SSH key has been assigned |
-| **info** (read-only*)* | key info |
-| **key-type** (read-only*)* | key type |
-| **bits** (read-only*)* | key length |
-| **fingerprint** (read-only*)* | key fingerprint in SHA256 (Base64) format |
+## RADIUS authentication
 
-#### Import public SSH key
+Router user remote AAA authenticates management logins against a RADIUS server and sends it accounting records. Configure the RADIUS client first: add a [`/radius`](/docs/cli-reference/radius/) entry with `service=login`, then enable [`/user/aaa`](/docs/cli-reference/user/aaa). For the RADIUS server, any RouterOS with the [User Manager](/docs/authentication-authorization-accounting/user-manager) package works:
 
-On public SSH key import, you must specify the key file, the system user to which SSH key will be assigned, optionally, it is possible to specify the key owner.
+```ros
+# on the RADIUS server
+/user-manager/set enabled=yes
+/user-manager/router/add name=main address=192.168.88.24 shared-secret=radiusSecret
+/user-manager/user/add name=john-remote password=JohnPass456
 
-| Property | Description |
-| :-- | :-- |
-| **user** (*string*; Default: ) | system user to which the SSH key has been assigned |
-| **key-owner** (*string*) | SSH key owner |
-| **public-key-file** (*string*) | file name in the router's root directory containing the public key |
+# on the router the users log in to
+/radius/add service=login address=192.168.88.36 secret=radiusSecret
+/user/aaa/set use-radius=yes
+```
 
-#### Add public SSH key
+User Manager allows one concurrent login per user by default (`shared-users`); a second login with the same name is refused while the first session is active.
 
-It is possible to *add* a public SSH key (pasting the SSH key string), you must provide the key string, and the system user to which the SSH key has been assigned.
+RADIUS is consulted only for user names that do not exist in the local user database; a local user with the same name always takes precedence. RADIUS-authenticated users get `default-group` (`read` by default), unless the server sends a `Mikrotik-Group` attribute naming a different local group (in User Manager, set it on the user with `attributes="Mikrotik-Group:full"`). Groups listed in `exclude-groups` are never accepted from the server and the user gets `default-group` instead.
 
-:::note
-It is possible to *add* keys only in OpenSSH format
-:::
+Active RADIUS-authenticated sessions show the `R` (radius) flag in `/user/active/print`.
 
-| Property | Description |
-| :-- | :-- |
-| **user** (*string*; Default: ) | system user to which the SSH key has been assigned |
-| **key** (*string*) | public key |
+## Monitor active sessions
 
-### Private keys
+`/user/active/print` shows the connected management sessions:
 
-This menu is used to import and list imported private keys. Private keys are used to approve the router's identity during login to another device using an SSH key.
+```ros
+[admin@MikroTik] > /user/active/print
+Flags: R - RADIUS
+Columns: WHEN, NAME, ADDRESS, VIA
+#   WHEN                 NAME         ADDRESS        VIA
+0 R 2026-09-25 09:32:20  john-remote  192.168.88.17  ssh
+```
 
-On private key import, it is possible to specify key-owner.
+Close a session with `/user/active/remove`:
 
-:::info
-RSA and Ed25519 keys are supported in PEM or PKCS#8 format.
-:::
+```ros
+/user/active/remove [find name=john-remote]
+```
 
-| Property | Description |
-| :-- | :-- |
-| **user** (*string*; Default: ) | system user to which the SSH key has been assigned |
-| **key-owner** (*string*) | SSH key owner |
-| **key-type** (read-only*)* | key type |
-| **bits** (read-only*)* | key length |
+For the session properties, including the `M` (by-romon) flag and the full `via` list, see [`/user/active`](/docs/cli-reference/user/active).
 
-#### Import private SSH key
+## Technical details
 
-On private SSH key import, you must specify key file, system user to which SSH key will be assigned, optionally it is possible to provide key passphrase and specify key owner.
+### Expired password flow
 
-| Property | Description |
-| :-- | :-- |
-| **user** (*string*; Default: ) | system user to which the SSH key has been assigned |
-| **key-owner** (*string*) | SSH key owner |
-| **passphrase** *(string) [sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | key file passphrase |
-| **private-key-file** (*string*) | file name in the router's root directory containing the private key |
+`/user/expire-password` sets the `E` flag on the user. At the next interactive login the router prints "Change your password (Ctrl-C to skip)", then asks for "new password" and "repeat new password"; a mismatch prints "New passwords do not match!" and the prompt repeats. Pressing <kbd>Control</kbd>+<kbd>C</kbd> skips the change. Non-interactive sessions (command execution over SSH) are not prompted. Setting a new password for the user clears the flag.
+
+### RADIUS authentication and accounting
+
+- Password logins forwarded to RADIUS are authenticated with MS-CHAPv2 (the Access-Request carries `MS-CHAP-Challenge` and `MS-CHAP2-Response`).
+- With `accounting=yes` the router sends an Accounting-Request (Start) at login and (Stop) at logout; `interim-update` sets the interval for Interim-Update messages while a session is active. Management session accounting carries no bandwidth counters.
+- The `radius` log topic shows the exact attributes exchanged: `/system/logging/add topics=radius`.
+
+## Read more
+
+- [`/user`](/docs/cli-reference/user/), [`/user/settings`](/docs/cli-reference/user/settings), [`/user/group`](/docs/cli-reference/user/group), [`/user/active`](/docs/cli-reference/user/active), [`/user/aaa`](/docs/cli-reference/user/aaa), [`/user/ssh-keys`](/docs/cli-reference/user/ssh-keys/) in the CLI reference
+- [RADIUS client](/docs/authentication-authorization-accounting/radius)
+- [User Manager](/docs/authentication-authorization-accounting/user-manager)
+- [SSH](/docs/management-tools/ssh)

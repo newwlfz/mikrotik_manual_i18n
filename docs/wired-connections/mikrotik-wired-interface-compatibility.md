@@ -7,8 +7,8 @@ description: 'MikroTik SFP/SFP+/SFP28/QSFP+/QSFP28/QSFP56-DD compatibility'
 tags:
   - 'sfp'
   - 'ethernet'
-source: https://manual.mikrotik.com/docs/wired-connections/mikrotik-wired-interface-compatibility
-captured_at: '2026-11-04T11:35:02+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wired-connections/mikrotik-wired-interface-compatibility
+captured_at: '2026-11-04T11:23:48+08:00'
 ---
 
 ## MikroTik SFP/SFP+/SFP28/QSFP+/QSFP28/QSFP56-DD compatibility

@@ -8,8 +8,8 @@ tags:
   - 'igmp'
   - 'mld'
   - 'sdvoe'
-source: https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/bridge-igmp-mld-snooping
-captured_at: '2026-11-04T11:27:26+08:00'
+source: https://manual.mikrotik.com/docs/7.25/bridging-and-switching/user-guides/bridge-igmp-mld-snooping
+captured_at: '2026-11-04T11:14:45+08:00'
 ---
 
 ---
@@ -188,7 +188,7 @@ add bridge=bridge1 interface=ether4
 add bridge=bridge1 interface=ether5
 ```
 
-The basic IGMP snooping configuration is finished. Use "`/interface/bridge/mdb/print"` command to monitor the active multicast groups. If necessary, you can configure an IP address and [DHCP server](/docs/network-management/dhcp#configuration-examples) on the same bridge interface.
+The basic IGMP snooping configuration is finished. Use "`/interface/bridge/mdb/print"` command to monitor the active multicast groups. If necessary, you can configure an IP address and [DHCP server](/docs/network-management/dhcp/server#configuration-examples) on the same bridge interface.
 
 ### IGMP snooping configuration with VLANs
 

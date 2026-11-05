@@ -1,226 +1,112 @@
 ---
 sidebar_key: "network-management/cloud/index"
-sidebar_position: 5
+sidebar_position: 6
 title: "Cloud"
 sidebar_label: 'Cloud'
-description: 'MikroTik Cloud section provides configuration for Back To Home, DDNS, file sharing, and other cloud-assisted services with detailed instructions on enabling/disabling DDNS, triggering updates, and managing IP addresses for remote access.'
+description: 'MikroTik cloud services in RouterOS: a DDNS name for the router, the clock and time zone at startup, cloud backup, Back To Home VPN and File Share. Which services are on by default and how the router reaches the MikroTik cloud servers.'
 tags:
+  - 'cloud'
   - 'ddns'
   - 'ntp'
-  - 'backup'
-source: https://manual.mikrotik.com/docs/network-management/cloud
-captured_at: '2026-11-04T11:32:31+08:00'
+source: https://manual.mikrotik.com/docs/7.25/network-management/cloud
+captured_at: '2026-11-04T11:20:37+08:00'
 ---
-
-This section covers MikroTik Cloud features. Use it to configure Back To Home, Cloud communication, file sharing, and other cloud-assisted services.
-
-<DocCardList />
-
-MikroTik offers multiple services for your RouterBOARD devices that are connected to the Internet. These services are meant to ease the inconveniences when configuring, setting up, controlling, maintaining, or monitoring your device. A more detailed list of available services that IP/Cloud can provide can be found below.
+MikroTik runs free cloud services for RouterOS devices. They give the router a DNS name, set its clock and time zone, store a backup, and let you reach your home network or share files from the router, even when the router has no public IP address. The router always opens the connection to the MikroTik servers, so none of the services needs port forwarding on another device.
 
 ## Services
 
-:::danger
-Be aware that if the router has multiple public IP addresses and/or multiple internet gateways, the exact IP used for communicating with MikroTik's Cloud server may not be as expected!
+| Service | Menu | On by default | Use it to |
+| :-- | :-- | :-- | :-- |
+| DDNS | `/ip/cloud` | No | Get a DNS name that follows the router's public IP address. |
+| Time update | `/ip/cloud`, `/system/clock` | Yes | Set the clock and time zone when the router starts. |
+| [Cloud backup](./cloud-backup) | `/system/backup/cloud` | No | Store an encrypted backup on the MikroTik servers. |
+| [Back To Home](./back-to-home) | `/ip/cloud` | No | Reach your home network over a WireGuard VPN from a phone or computer. |
+| [File Share](./file-share) | `/ip/cloud/back-to-home-file` | No | Share files from the router's storage through an HTTPS link. |
 
-**Warning:** IP/Cloud requires a paid perpetual license for Cloud Hosted Router (CHR).
+[Communication with MikroTik Cloud Services](./communication-mikrotik-cloud-servers) lists every connection RouterOS makes to MikroTik servers and how to turn each one off.
 
-**Warning:** Cloud services are not supported on x86 systems.
+:::info
+Cloud services work on MikroTik devices and on Cloud Hosted Router (CHR) with a paid perpetual license. They are not available in RouterOS for x86.
 :::
 
-### DDNS
+## DDNS
 
-DDNS or Dynamic DNS is a service that updates the IPv4 address for A records and the IPv6 address for AAAA records periodically. Such a service is very useful when your ISP has provided a dynamic IP address that changes periodically, but you always need an address that you can use to connect to your device remotely. Below you can find operation details that are relevant to the IP/Cloud's DDNS service:
+Dynamic DNS (DDNS) gives the router a DNS name under `sn.mynetname.net` that follows its public IP address. Use it to reach the router by name when your ISP changes the address.
 
-- Checks for outgoing IP address change: every 60 seconds.
-- Waits for the MikroTik Cloud server's response: 15 seconds.
-- DDNS record TTL: 60 seconds.
-- Sends encrypted packets to **cloud2.mikrotik.com** using UDP port 15252.
-
-Since RouterOS v6.43, if your device is able to reach **cloud2.mikrotik.com** using IPv6, then a DNS **AAAA** record is going to be created for your public IPv6 address. If your device is only able to reach cloud2.mikrotik.com using IPv4, then only a DNS **A** record is going to be created for your public IPv4 address. cloud.mikrotik.com is used for older RouterOS versions prior to 6.44
-
-To enable the DDNS service:
+To enable DDNS and see the name:
 
 ```ros
-[admin@MikroTik] /ip/cloud/set ddns-enabled=yes
-[admin@MikroTik] /ip/cloud/print
-         ddns-enabled: yes
- ddns-update-interval: none
-          update-time: yes
-       public-address: 159.148.147.196
-  public-address-ipv6: 2a02:610:7501:1000::2
-             dns-name: 529c0491d41c.sn.mynetname.net
-               status: updated
+[admin@MikroTik] > /ip/cloud/set ddns-enabled=yes
+[admin@MikroTik] > /ip/cloud/print
+          ddns-enabled: yes
+  ddns-update-interval: none
+           update-time: yes
+        public-address: 203.0.113.10
+              dns-name: hf1234abcd5.sn.mynetname.net
+                status: updated
+      back-to-home-vpn: revoked-and-disabled
 ```
 
-:::warning
-When the service is enabled, a DNS name will be stored on MikroTik's Cloud server permanently and this DNS name will resolve to the last IP that your RouterOS instance has sent to MikroTik's Cloud server.
-:::
+The name stays the same for the device, and the router keeps it up to date by itself. To send an update right away, for example after you change the internet connection:
 
-To disable the DDNS service:
+```ros
+/ip/cloud/force-update
+```
+
+The name only makes the router easier to find. It does not open any access: the default firewall drops connections to the router from the internet. To reach the router remotely, use [Back To Home](./back-to-home), or [allow the services in the firewall](../../getting-started/securing-your-router#opening-management-access-from-wan-advanced). You can also get a [Let's Encrypt certificate](../../authentication-authorization-accounting/certificates#lets-encrypt-certificate) for the name.
+
+To make the name resolve to the router's own address instead of the public one, for example to reach the router by name inside your network:
+
+```ros
+/ip/cloud/advanced/set use-local-address=yes
+```
+
+To turn DDNS off:
 
 ```ros
 /ip/cloud/set ddns-enabled=auto
 ```
 
-:::warning
-Before 7.17, the default value for ddns-enabled was "no". In versions including 7.17 and later, if you want to disable DDNS, make sure to disable the [Back To Home](https://manual.mikrotik.com/docs/network-management/back-to-home) feature first, if it was enabled, then set "ddns-enabled=auto"
+The router then asks the cloud server to delete the name. With `auto`, DDNS stays on while Back To Home is enabled, so turn off Back To Home first if you use it.
 
-**Warning:** As soon as you disable the service, your device sends a command to MikroTik's Cloud server to remove the stored DNS name.
-:::
+## Time update
 
-To manually trigger a DNS update:
+When the router starts, it sets its clock and time zone from the cloud server, unless the [NTP client](../../system-information-and-utilities/ntp) is enabled. This does not need DDNS. The cloud time is approximate: for an accurate clock, use the NTP client.
 
-```ros
-[admin@MikroTik] > /ip/cloud/force-update
-```
-
-:::warning
-To actually connect to the device using the DNS name provided by the cloud server, a user must configure the router's firewall to permit such access from the WAN port. (The default MikroTik configuration does not permit access to services such as WebFig, WinBox, etc. from the WAN port).
-:::
-
-### Update time
-
-Correct time on a device is important, it causes issues with the system's logs, breaks HTTPS connectivity to the device, breaks tunnel connectivity, and other issues. To have your system's clock updated, you can use  [NTP](/docs/system-information-and-utilities/ntp)  or  [SNTP](/docs/system-information-and-utilities/ntp), though it requires you to specify an IP address for the NTP Server. In most cases, NTP/SNTP is not required in order to simply have a correct time set on the device, for simplicity, you can use the IP Cloud's update time service. Below you can find operation details that are relevant to the IP/Cloud's update time service:
-
-- Approximate time (accuracy of several seconds, depends on UDP packet latency).
-- Updates time after a reboot and during every DDNS update (when the router's WAN IP address changes or after the force-update command is used).
-- Sends encrypted packets to **cloud2.mikrotik.com** using UDP/15252 port.
-- Detects time-zone depending on the router's public IP address and our commercial database.
-
-To enable the time update service:
+To stop the router from asking the cloud for the time and time zone:
 
 ```ros
-[admin@MikroTik] > /ip/cloud/set update-time=yes 
+/ip/cloud/set update-time=no
+/system/clock/set time-zone-autodetect=no
 ```
 
-To enable automatic time zone detection:
+## Technical details
 
-```ros
-[admin@MikroTik] > /system/clock/set time-zone-autodetect=yes 
-```
+### How the router reaches the cloud
 
-:::warning
-If `/ip/cloud/update-time` is set to `auto`, then the device's clock will be updated with MikroTik's Cloud server time (if no  [NTP](/docs/system-information-and-utilities/ntp)  or  [SNTP](/docs/system-information-and-utilities/ntp)  client is enabled).
-:::
+The router sends encrypted requests to `cloud2.mikrotik.com` on UDP port 15252. The cloud server replies with the address it received the request from, and the router shows it in `public-address`, and in `public-address-ipv6` when the router also reaches the server over IPv6. Behind NAT, this is the public address of the NAT device, not an address on the router. On a router with several internet connections, it is the address of the connection that the route to `cloud2.mikrotik.com` uses.
 
-### Backup
+When the router cannot be reached from the internet directly, Back To Home and File Share connect through MikroTik relay servers. The router keeps a connection open to the nearest relay, and clients reach the router through it. The traffic stays end-to-end encrypted: the keys are only on the router and on the client, so the relay cannot read the data.
 
-It is possible to store your device's [backup](/docs/getting-started/configuration-management/backup) on MikroTik's Cloud server. The backup service allows you to upload an encrypted backup file, download it and apply the backup file to your device as long as your device is able to reach MikroTik's Cloud server. Below you can find operation details that are relevant to the IP/Cloud's backup service:
+### DDNS updates
 
-- 1 free backup slot for each device.
-- Allowed backup size: 15MB.
-- Sends encrypted packets to **cloud2.mikrotik.com** using UDP/15252 and TCP/15252 ports.
+- The name is the serial number of the device in lower case followed by `.sn.mynetname.net`. It resolves to `public-address` with a time to live (TTL) of 60 seconds, and when the router also has `public-address-ipv6`, to that address as well.
+- Behind NAT, where the router cannot see its public address on its own interfaces, the router sends an update every minute.
+- `force-update` does nothing while DDNS is off (`ddns-enabled=auto` without Back To Home).
+- When DDNS turns off, the router sends a delete request to the cloud server, and the name stops resolving within a few minutes.
+- With `use-local-address=yes`, the name resolves to the address the router sends its requests from, and `public-address` still shows the public address.
+- While the cloud server does not answer, `status` shows `updating...` and the router retries with growing intervals. `failed to connect` means a request got no reply.
 
-To create a new backup and upload it to the MikroTik's Cloud server:
+### Time update at startup
 
-```ros
-[admin@MikroTik] > /system/backup/cloud/upload-file action=create-and-upload password=test123!!!
-[admin@MikroTik] > /system/backup/cloud/print 
- 0 name="cloud-20180921-162649" size=13.2KiB ros-version="6.44beta9" date=2018-09-21 16:26:49 status="ok" secret-download-key="AbCdEfGhIjKlM1234567890" 
-```
+- The router asks the cloud server for the time once after it starts, also with `ddns-enabled=auto`. DDNS updates and `force-update` do not set the clock again.
+- While the NTP client is enabled, the router does not use the cloud time, even when the NTP client cannot reach any server.
+- The router logs each change of the clock, for example:
 
-:::warning
-The `create-and-upload` action command will create a new system's backup file, encrypt the backup file with AES using the provided password and upload it. For the `upload` action command the password property has no effect since the `upload` action command uploads only already created system's backup files.
-:::
+  ```text
+  system,critical,info cloud change time Sep/24/2026 03:01:57 => Sep/24/2026 06:25:50
+  ```
 
-To download the uploaded backup file and save it to the device's memory:
+- For `time-zone-autodetect`, the cloud server looks up the location of the router's public IP address, and the router applies that time zone, including daylight saving time.
 
-```ros
-[admin@MikroTik] > /system/backup/cloud/download-file action=download number=0
-### OR
-[admin@MikroTik] > /system/backup/cloud/download-file action=download secret-download-key=AbCdEfGhIjKlM1234567890
-```
-
-:::warning
-**Warning:** The secret-download-key is a unique identifier that can be used to download your encrypted backup to your other devices. Since you can download your encrypted backup from any location and any device by using the secret-download-key, you should try to keep this identifier a secret. The downloaded backup is still encrypted using AES; nevertheless, make sure you are using a strong password!
-:::
-
-To remove the uploaded backup:
-
-```ros
-/system/backup/cloud/remove-file number=0
-```
-
-To replace an existing file with a new backup file, use the following command:
-
-```ros
-/system/backup/cloud/upload-file action=create-and-upload replace=_your_previously_created_backup_file_ password=test123!!!
-```
-
-To upload an existing backup file (created previously):
-
-```ros
-[admin@MikroTik] > /system/backup/save encryption=aes-sha256 name=old_backup password=test123!!!
-[admin@MikroTik] > /system/backup/cloud/upload-file action=upload src-file=old_backup.backup
-[admin@MikroTik] > /system/backup/cloud/print 
- 0 name="cloud-20180921-164044" size=13.2KiB ros-version="6.44beta9" date=2018-09-21 16:40:44 status="ok" secret-download-key="AbCdEfGhIjKlM1234567890"
-```
-
-:::warning
-Make sure that the backup was encrypted using AES, otherwise, the IP/Cloud will reject the backup upload. Since there is only 1 free backup slot per device, you need to remove the existing backup before uploading a new one.
-:::
-
-### Back to Home
-
-For more info about the Back to Home (BTH) service, see the separate [documentation page](https://manual.mikrotik.com/docs/network-management/back-to-home).
-
-### File share
-
-For more info about File Share service, see the separate [documentation page](https://manual.mikrotik.com/docs/network-management/file-share).
-
-### Relay service
-
-Back to home and File Share both partially rely on the MikroTik cloud relay service. All transmissions through the relay service are end-to-end encrypted, the relay is purely to facilitate connection and is designed to never require decryption of user data or metadata. See respective manuals for details on how each service uses the relay.
-
-## Properties
-
-**Sub-menu:** `/ip/cloud`
-
-| Property | Description |
-| :-- | :-- |
-| **ddns-enabled** (*yes \| auto*; Default: **auto**) | If set to `yes`, then the device will send an encrypted message to MikroTik's Cloud server. The server will then decrypt the message and verify that the sender is an authentic MikroTik device. If all is OK, then MikroTik's Cloud server will create a DDNS record for this device and send a response to the device. Every minute the IP/Cloud service on the router will check if the WAN IP address matches the one sent to MikroTik's Cloud server and will send an encrypted update to the cloud server if the IP address changes.  If set to auto, ddns will only be enabled if [Back To Home](https://manual.mikrotik.com/docs/network-management/back-to-home) is enabled. **Important:** Prior to the 7.17 versions, the default value was "no".     |
-| **ddns-update-interval** (*time, minimum 60 seconds*; Default: **none**) | If set, DDNS will attempt to connect to IP Cloud servers at the set interval. If set to **none**, it will continue to internally check IP address update and connect to IP Cloud servers as needed. Useful if the IP address used is not on the router itself and thus cannot be checked as a value internal to the router. |
-| **update-time** (*yes \| no*; Default: **yes**) | If set to `yes`, then the router clock will be set to the time, provided by the cloud server **IF** there is no  [NTP](/docs/system-information-and-utilities/ntp)  or  [SNTP](/docs/system-information-and-utilities/ntp)  client enabled. If set to `no`, then IP/Cloud service will never update the device's clock. If update-time is set to `yes`, clock will be updated even when ddns-enabled is set to auto. |
-| **public-address** (*read-only: address*) | Shows the device's IPv4 address that was sent to the cloud server. This field is visible only after at least one IP Cloud request was successfully completed. |
-| **public-address-ipv6** (*read-only: address*) | Shows the device's IPv6 address that was sent to the cloud server. This field is visible only after at least one IP Cloud request was successfully completed. |
-| **warning** (*read-only: string*) | Shows a warning message if the IP address sent by the device differs from the IP address in the UDP packet header as visible by MikroTik's Cloud server. Typically this happens if the device is behind NAT. Example: "DDNS server received a request from IP `123.123.123.123` but your local IP was `192.168.88.23`; DDNS service might not work" |
-| **dns-name** (*read-only: name*) | Shows the DNS name assigned to the device. The name consists of a 12-character serial number appended by *.sn.mynetname.net*. This field is visible only after at least one ddns-request is successfully completed. |
-| **status** (*read-only: string*) | Contains a text string that describes the current dns-service state. The messages are self-explanatory:updating...updatedError: no Internet connectionError: request timed outError: REJECTED. Contact MikroTik supportError: internal error - should not happen. One possible cause is if the router runs out of memory |
-
-### Advanced
-
-**Sub-menu:** `/ip/cloud/advanced`
-
-| Property | Description |
-| :-- | :-- |
-| **use-local-address** (*yes \| no*; Default: **no**) | By default, the DNS name will be assigned to the detected public address (from the UDP packet header). If you wish to send your "local" or "internal" IP address, then set this to `yes`. |
-
-### Cloud backup
-
-**Sub-menu:** `/system/backup/cloud`
-
-Below you can find commands and properties that are relevant to the specific command, other properties will not have any effect:
-
-- download-file
-
-| Property | Description |
-| :-- | :-- |
-| **action** (*download*) | Downloads an uploaded backup file from MikroTik's Cloud server. |
-| **number** (*integer*) | Specifies the backup slot on MikroTik's Cloud server. The free backup slot is always going to be in the `0th` slot. |
-| **secret-download-key** (*string*) | Unique identifier that can be used to download your uploaded backup file. When downloading the uploaded backup file, you do not have to be using the same device, from which the backup was uploaded. Useful when deploying a backup on a new device. |
-
-- remove-file
-
-| Property | Description |
-| :-- | :-- |
-| **number** (*integer*) | Deletes the backup file in the specified backup slot. The free backup slot is always going to be in the `0th` slot. |
-
-- upload-file
-
-| Property | Description |
-| :-- | :-- |
-| **action** (*create-and-upload*) | Uploads a backup file to MikroTik's Cloud server.<code>create-and-upload</code> - creates a new backup file with the specified password and uploads it<code>upload</code> - uploads a created system's backup file. |
-| **name** (*string*) | Specifies the backup's name that will show up in the uploaded backups list. This is **NOT** the source backup's name, this name is only used for visual representation. |
-| **src-file** (*file*) | Backup's file name to upload that was created using `/system/backup`. This property only has an effect when the action is set to `upload`. |
-| **password** (*string*) | Creates, encrypts and uploads a backup file with the specified password. This property only has an effect when the action is set to `create-and-upload`. |
+For all properties, see [`/ip/cloud`](../../cli-reference/ip/cloud/) and [`/ip/cloud/advanced`](../../cli-reference/ip/cloud/advanced) in the CLI reference.

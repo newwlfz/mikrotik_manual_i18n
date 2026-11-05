@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/scan"
 sidebar_position: 17
 title: "scan"
 sidebar_label: 'scan'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/scan
-captured_at: '2026-11-01T21:28:03+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/scan
+captured_at: '2026-11-01T21:23:26+08:00'
 ---
 
 -----------

@@ -1,10 +1,10 @@
 ---
 sidebar_key: "cli-reference/interface/lte/settings"
-sidebar_position: 9
+sidebar_position: 10
 title: "settings"
 sidebar_label: 'settings'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/lte/settings
-captured_at: '2026-11-01T21:27:27+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/lte/settings
+captured_at: '2026-11-01T21:22:51+08:00'
 ---
 
 -----------
@@ -17,7 +17,9 @@ captured_at: '2026-11-01T21:27:27+08:00'
 <ArgTableRow arg="mode" typ="enum (auto | serial | mbim | user)"></ArgTableRow>
 <ArgTableRow arg="esim-channel" typ="enum (auto | at)"></ArgTableRow>
 <ArgTableRow arg="firmware-path" typ="string"></ArgTableRow>
-<ArgTableRow arg="log-dir" typ="string" syscap="modemlog"></ArgTableRow>
+<ArgTableRow arg="log-dir" typ="file" syscap="modemlog"></ArgTableRow>
+<ArgTableRow arg="log-file-count" typ="num" syscap="modemlog">number of rotated modem log files kept in log-dir</ArgTableRow>
+<ArgTableRow arg="log-filter-file" typ="file" syscap="modemlog">filter file to use for modem log capture</ArgTableRow>
 <ArgTableRow arg="info-polling-interval" typ="num" syscap="tr069-client">info polling interval in seconds</ArgTableRow>
 <ArgTableRow arg="link-recovery-timer" typ="num">in seconds</ArgTableRow>
 <ArgTableRow arg="sim-slot" typ="enum" syscap="sim-slot"></ArgTableRow>

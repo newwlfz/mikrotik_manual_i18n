@@ -8,8 +8,8 @@ tags:
   - 'syslog'
   - 'elasticsearch'
   - 'kibana'
-source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/log/syslog-with-elasticsearch
-captured_at: '2026-11-04T11:28:01+08:00'
+source: https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/log/syslog-with-elasticsearch
+captured_at: '2026-11-04T11:15:27+08:00'
 ---
 
 ## Introduction
@@ -65,7 +65,7 @@ Some steps might change over time. Refer to Elastic's manual to find the most up
 4. Press the "Create agent policy" button to [create a new Agent Policy](https://www.elastic.co/guide/en/fleet/current/agent-policy.html#create-a-policy).
 5. Give the policy a name, for example, "Syslog policy", adjust advanced settings if required, create the policy. Or you can use the API request below:  
 
-   ```routeros
+   ```text
    POST kbn:/api/fleet/agent_policies
    {
      "name": "Syslog policy",
@@ -100,7 +100,7 @@ Some steps might change over time. Refer to Elastic's manual to find the most up
 15. Set "Name" to "logs-routeros@custom".
 16. Press "Import processors" and paste the following processors:  
 
-    ```routeros
+    ```json
     {
     	"processors": [
     		{
@@ -261,7 +261,7 @@ Some steps might change over time. Refer to Elastic's manual to find the most up
 20. Set the "Name" to "logs-routeros@custom".
 21. Under the "Index settings" section, paste the following:  
 
-    ```routeros
+    ```json
     {
       "index": {
         "lifecycle": {
@@ -277,7 +277,7 @@ Some steps might change over time. Refer to Elastic's manual to find the most up
     :::
 22. Under the "Mappings" section, press "Load JSON" and paste the following:  
 
-    ```routeros
+    ```json
     {
       "dynamic_templates": [],
       "properties": {
@@ -452,7 +452,7 @@ Some steps might change over time. Refer to Elastic's manual to find the most up
 27. Set "Index patterns" to "logs-routeros-\*".
 28. Under "Component templates" section add the following templates to your new Index template:  
 
-    ```routeros
+    ```text
     logs@settings
     logs-routeros@custom
     ecs@mappings
@@ -464,16 +464,17 @@ Some steps might change over time. Refer to Elastic's manual to find the most up
 
 ### RouterOS
 
-1. Configure [Logging action](/docs/diagnostics-monitoring-and-troubleshooting/log/#actions) settings on your RouterOS device (10.0.0.1):  
+1. Configure the [remote logging action](/docs/diagnostics-monitoring-and-troubleshooting/log/#send-the-log-to-a-syslog-server) on your RouterOS device (10.0.0.1):
 
-   ```routeros
+   ```ros
    /system/logging/action
-   set [find where name="remote"] remote-log-format=syslog remote=10.0.0.2 remote-port=5514 syslog-facility=syslog
+   set [find where name="remote"] remote-log-format=syslog \
+       remote=10.0.0.2 remote-port=5514 syslog-facility=syslog
    ```
 
-2. Add [Topics](/docs/diagnostics-monitoring-and-troubleshooting/log/#topics-used-by-various-routeros-facilities) that you wish to receive from RouterOS device (10.0.0.1), for example:  
+2. Add a rule for each of the [topics](/docs/diagnostics-monitoring-and-troubleshooting/log/#topics) you want to receive from your RouterOS device (10.0.0.1), for example:
 
-   ```routeros
+   ```ros
    /system/logging
    add action=remote topics=info
    add action=remote topics=error
@@ -493,7 +494,7 @@ Kibana allows you to search the ingested Syslog data. To see ingested logs, do t
 2. Open "Discover" from the main menu.
 3. [Add a filter](https://www.elastic.co/guide/en/kibana/current/discover-get-started.html#explore-fields-in-your-data), and use the following parameters:  
 
-   ```routeros
+   ```text
    Select a field: data_stream.dataset
    Select operator: IS
    Select a value: routeros

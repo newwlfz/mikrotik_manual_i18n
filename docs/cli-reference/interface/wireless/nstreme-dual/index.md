@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/nstreme-dual/index"
 sidebar_position: 1
 title: "nstreme-dual"
 sidebar_label: 'nstreme-dual'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/nstreme-dual
-captured_at: '2026-11-01T21:28:02+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/nstreme-dual
+captured_at: '2026-11-01T21:23:27+08:00'
 ---
 
 -----------

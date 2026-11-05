@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ipv6/firewall/nat/reset-counters-all"
 sidebar_position: 3
 title: "reset-counters-all"
-source: https://manual.mikrotik.com/docs/cli-reference/ipv6/firewall/nat/reset-counters-all
-captured_at: '2026-11-01T21:29:07+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ipv6/firewall/nat/reset-counters-all
+captured_at: '2026-11-01T21:24:40+08:00'
 ---
 
 -----------

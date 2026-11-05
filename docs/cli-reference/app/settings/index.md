@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/app/settings/index"
 sidebar_position: 1
 title: "settings"
-source: https://manual.mikrotik.com/docs/cli-reference/app/settings
-captured_at: '2026-11-01T21:26:18+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/app/settings
+captured_at: '2026-11-01T21:21:41+08:00'
 ---
 
 -----------

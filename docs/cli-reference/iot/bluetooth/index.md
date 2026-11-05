@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/iot/bluetooth/index"
 sidebar_position: 4
 title: "bluetooth"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth
-captured_at: '2026-11-01T21:28:06+08:00'
+sidebar_label: 'bluetooth'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/bluetooth
+captured_at: '2026-11-01T21:23:32+08:00'
 ---
 
 -----------

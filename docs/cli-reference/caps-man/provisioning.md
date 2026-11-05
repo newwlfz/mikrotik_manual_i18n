@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/caps-man/provisioning"
 sidebar_position: 9
 title: "provisioning"
-source: https://manual.mikrotik.com/docs/cli-reference/caps-man/provisioning
-captured_at: '2026-11-01T21:26:22+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/provisioning
+captured_at: '2026-11-01T21:21:46+08:00'
 ---
 
 -----------

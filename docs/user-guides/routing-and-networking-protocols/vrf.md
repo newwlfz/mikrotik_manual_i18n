@@ -8,8 +8,8 @@ tags:
   - 'routing'
   - 'vrf'
 slug: /user-guides/routing-and-networking-protocols/vrf
-source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/vrf
-captured_at: '2026-11-04T11:34:32+08:00'
+source: https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/vrf
+captured_at: '2026-11-04T11:23:05+08:00'
 ---
 
 ## Description
@@ -127,12 +127,12 @@ Below is the list of supported services.
 | **[IPIP](/docs/virtual-private-networks/ipip)** | + | `/interface/ipip/add remote-address=192.168.1.1@vrf1` |
 | **[GRE](/docs/virtual-private-networks/gre)** | + | `/interface/gre/add remote-address=192.168.1.1@vrf1` |
 | **[SSTP-client](/docs/virtual-private-networks/sstp#sstp-client)** | + | `/interface/sstp-client/add connect-to=192.168.1.1@vrf1` |
-| **[OVPN-client](/docs/virtual-private-networks/openvpn#ovpn-client)** | + | `/interface/ovpn-client/add connect-to=192.168.1.1@vrf1` |
+| **[OVPN server and client](/docs/virtual-private-networks/openvpn)** | + | `/interface/ovpn-client/add connect-to=192.168.1.1@vrf1` |
 | **[L2TP-ether](/docs/virtual-private-networks/l2tp/#l2tp-ether)** | + | `/interface/l2tp-ether/add connect-to=192.168.2.2@vrf` |
 | **[VXLAN](/docs/bridging-and-switching/vxlan)** | + | `/interface/vxlan/add vni=10 vtep-vrf=vrf1` |
 | **[Fetch](/docs/system-information-and-utilities/fetch)** | + | `/tool/fetch address=10.155.28.236@vrf1 mode=ftp src-path=my_file.pcap user=admin password=""` |
 | **[DNS](/docs/network-management/dns)** | +  Starting from RouterOS v7.21 | Specifies in which VRF the router will listen for DNS queries.`/ip/dns/set vrf=vrf1`Specifies which VRF is used to contact upstream servers.`/ip/dns/set servers=8.8.8.8@vrf1` |
-| **[DHCP-Relay](/docs/network-management/dhcp)** | +  Starting from RouterOS v7.15 | `/ip/dhcp-relay/set dhcp-server-vrf=vrf1`*If the DHCP client is in the same VRF, a special parameter in the "ip dhcp-relay" configuration is not needed.* |
+| **[DHCP-Relay](/docs/network-management/dhcp/relay)** | +  Starting from RouterOS v7.15 | `/ip/dhcp-relay/set dhcp-server-vrf=vrf1`*If the DHCP client is in the same VRF, a special parameter in the "ip dhcp-relay" configuration is not needed.* |
 | **[Remote logging](/docs/diagnostics-monitoring-and-troubleshooting/log/)** | +  Starting from RouterOS v7.19 | `/system/logging/action add name=remote1 remote=192.168.1.1 target=remote vrf=vrf1` |
 
 ## VRF interfaces in firewall

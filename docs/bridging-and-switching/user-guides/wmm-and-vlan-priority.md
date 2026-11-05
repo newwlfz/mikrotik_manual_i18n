@@ -8,8 +8,8 @@ tags:
   - 'wmm'
   - 'vlan-priority'
   - 'qos'
-source: https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/wmm-and-vlan-priority
-captured_at: '2026-11-04T11:27:30+08:00'
+source: https://manual.mikrotik.com/docs/7.25/bridging-and-switching/user-guides/wmm-and-vlan-priority
+captured_at: '2026-11-04T11:14:44+08:00'
 ---
 
 ## How WMM works

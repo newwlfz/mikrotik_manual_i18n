@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/w60g/scan"
 sidebar_position: 5
 title: "scan"
 sidebar_label: 'scan'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/w60g/scan
-captured_at: '2026-11-01T21:27:43+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/w60g/scan
+captured_at: '2026-11-01T21:23:05+08:00'
 ---
 
 -----------

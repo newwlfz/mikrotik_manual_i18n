@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wifi/monitor"
 sidebar_position: 14
 title: "monitor"
 sidebar_label: 'monitor'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/monitor
-captured_at: '2026-11-01T21:27:49+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wifi/monitor
+captured_at: '2026-11-01T21:23:13+08:00'
 ---
 
 -----------

@@ -1,10 +1,10 @@
 ---
 sidebar_key: "cli-reference/interface/bridge/settings"
-sidebar_position: 12
+sidebar_position: 10
 title: "settings"
 sidebar_label: 'settings'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/bridge/settings
-captured_at: '2026-11-01T21:27:01+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/settings
+captured_at: '2026-11-01T21:22:27+08:00'
 ---
 
 -----------

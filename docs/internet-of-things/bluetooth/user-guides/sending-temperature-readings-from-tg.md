@@ -2,8 +2,8 @@
 sidebar_key: "internet-of-things/bluetooth/user-guides/sending-temperature-readings-from-tg"
 sidebar_position: 8
 title: "Sending temperature readings from the TG-BT5-OUT tag to ThingsBoard"
-source: https://manual.mikrotik.com/docs/internet-of-things/bluetooth/user-guides/sending-temperature-readings-from-tg
-captured_at: '2026-11-04T11:31:30+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/bluetooth/user-guides/sending-temperature-readings-from-tg
+captured_at: '2026-11-04T11:18:56+08:00'
 ---
 
 ### Introduction

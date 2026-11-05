@@ -3,133 +3,106 @@ sidebar_key: "system-information-and-utilities/files"
 sidebar_position: 5
 title: "Files"
 sidebar_label: 'Files'
-description: 'The File menu in MikroTik RouterOS allows managing user space files, including creating/editing/deleting files and directories, viewing package details for .npk files, and storing critical files in the ''flash'' directory to persist after reboot. It supports file size up to 60KB and provides warnings about RAM disk behavior, write-back caching, and compressed file storage.'
+description: 'The File menu manages user files on the router: creating, editing, copying and deleting files and directories, reading file contents, and viewing details of uploaded RouterOS packages.'
 tags:
   - 'file-management'
   - 'routeros-features'
   - 'storage'
-source: https://manual.mikrotik.com/docs/system-information-and-utilities/files
-captured_at: '2026-11-04T11:33:29+08:00'
+source: https://manual.mikrotik.com/docs/7.25/system-information-and-utilities/files
+captured_at: '2026-11-04T11:21:58+08:00'
 ---
 
-The File menu shows all user space files on the router. It is possible to create a new file or directory, edit the file content, delete a file or directory.  If a RouterOS ".npk" package is uploaded, the file menu will also show package-specific information, for example, architecture, build date and time, etc.
-
-:::warning
-It is possible to retrieve content and edit files up to 60KB in size. For accessing contents of larger files, please refer to section [Get File Contents](/docs/system-information-and-utilities/files#get-or-read-file-contents).
-:::
+The `/file` menu shows all user files on the router's storage, for example uploaded packages, backups, scripts and exports. You can create files and directories, edit file contents, and copy or delete entries. For an uploaded RouterOS `.npk` package, the menu also shows package-specific information, such as the architecture, version and build time:
 
 ```ros
-[admin@MikroTik] > /file/print detail 
- 0 name=wireless-7.16.1-arm.npk type=package size=1924.1KiB last-modified=2024-11-25 13:14:28 package-name="wireless" package-version="7.16.1" package-build-time=2024-10-10 14:03:32 
-   package-architecture="arm" 
-
- 1 name=routeros-7.16.1-arm.npk type=package size=11.1MiB last-modified=2024-11-25 13:14:34 package-name="system" package-version="7.16.1" package-build-time=2024-10-10 14:03:32 
-   package-architecture="arm" 
-
- 2 name=flash type=disk last-modified=2024-11-25 13:12:10 
-
- 3 name=flash/skins type=directory last-modified=2024-11-25 13:10:52 
-
- 4 name=flash/skins/newskin.json type=.json file size=0 last-modified=2024-11-25 13:10:52 
-
- 5 name=flash/filename type=file size=0 last-modified=2024-11-25 13:11:58 
-
- 6 name=flash/directory_name type=directory last-modified=2024-11-25 13:12:10 
-
+[admin@MikroTik] > /file/print detail
+0  name=my-dir type=directory last-modified=2026-09-25 12:13:27
+ 
+1  name=routeros-7.24.2-arm64.npk type=package size=13.3MiB
+   last-modified=2026-09-25 12:13:01 package-name="system"
+   package-version="7.24.2" package-build-time=2026-09-03 09:57:14
+   package-architecture="arm64"
+ 
+2  name=skins type=directory last-modified=1970-01-01 03:00:05
+ 
+3  name=my-dir/test.txt type=.txt file size=5 last-modified=2026-09-25 12:13:27
+   contents=hello
 ```
 
-:::danger
-If the device has a directory named **"flash"** in its file list, then files which you want to be kept after the system reboot/power cycle must be stored within it, as anything outside of it is kept within a RAM disk and will be lost upon reboot. This does not include .npk upgrade files as they will be applied by the upgrade process before the system discards the RAM drive content.
+Files and directories shared through [File Share](/docs/network-management/cloud/file-share) (Back To Home) are marked with the `S` (shared) flag and show a `url` property with the share link. File synchronization between routers is configured in the `/file/sync` menu, see [Rsync](/docs/storage/rsync).
 
-**Warning:** For multicore devices with NAND flash memory (e.g. CCR series routers, RB4011iGS), RouterOS uses a write-back that will cache file changes into RAM memory instead of writing them straight away into flash media. The file changes will be stored on the flash when it is absolutely necessary. The writing can be delayed by up to 40 seconds. This helps to reduce CPU cycles which results in better performance. However, this can cause empty or zero-length files when a device experiences a sudden power loss, because files were not fully saved on the flash.
+## Manage files in WinBox
 
-**Warning:** Please note that in some cases, RouterOS may compress files to occupy less disk space. In such situations, you will still see the original file size in the **File** menu. However, in the **Resource** menu, you may notice that there is more free space than expected.
+Open **Files** in the left menu. The **File** tab lists file names, types, sizes, and modification times:
 
-This is normal behavior, as the compressed file size is used when calculating the free-hdd-space value.
-:::
+1. Select **New**, then **Text File** or **Directory**, to create an entry.
+2. Select **Upload...** in the right panel to copy a file from your computer to the router. To save a router file on your computer, select its row and select **Download...**. **Remove** deletes the selected entry from the router.
+3. Check the storage usage at the bottom of the window before uploading large files.
 
-## Properties
+![WinBox Files list with file actions and storage usage](./img/files-winbox.webp)
 
-| Property | Description |
-| :-- | :-- |
-| **contents** (*string*; Default: ) | The actual content of the file |
-| **creation-time** (*time*) **Warning:** Until RouterOS 7.16  | A time when the file was created  |
-| **last-modified** (*time*) | The time when the file was created or last modified. Introduced instead of **creation-time** in RouterOS 7.16.  |
-| **name** (*string*) | Name of the file |
-| **package-architecture** (*string*) | Architecture that the package is built for. Applies only to RouterOS ".npk" files |
-| **package-built-time** (*string*) | A time when the package was built. Applies only to RouterOS ".npk" files |
-| **package-name** (*string*) | Name of the installable package. Applies only to RouterOS ".npk" files |
-| **package-version** (*string*) | A version of the installable package. Applies only to RouterOS ".npk" files |
-| **size** (*integer*) | File size in bytes |
-| **type** (*string*) | Type of the file. For folders, the file type is the *directory* |
+Uploading a file stores it on the router; it does not import a configuration script or restore a backup automatically. Follow the relevant configuration procedure when you intend to apply the file.
+
+## Storage details
+
+If the device has a directory named **flash** in its file list, store any files that have to survive a reboot or power cycle inside it: everything outside `flash` is kept in a RAM disk and is lost on reboot. This does not include `.npk` upgrade files, which the upgrade process applies before the RAM disk content is discarded.
+
+On multicore devices with NAND flash memory (for example, CCR series routers and RB4011), RouterOS uses a write-back cache: file changes are buffered in RAM and written to the flash media later, which can be delayed by up to 40 seconds. This reduces CPU use and flash wear. However, a sudden power loss in that window **can leave empty or zero-length files**, because the changes were not written to the flash yet.
+
+RouterOS compresses stored files on some devices to occupy less disk space. `/file` shows the original file size, but [`free-hdd-space`](/docs/cli-reference/system/resource#free-hdd-space) in `/system/resource` is calculated from the compressed size, so it can show more free space than expected.
 
 ## File operations
 
-### Create new file or directory
+### Create a file or directory
 
-To create a new file or directory:
+Use the [`/file/add`](/docs/cli-reference/file) command with `type=file` or `type=directory`:
 
 ```ros
-[admin@MikroTik] > /file/add name=/flash/filename type=file           
-[admin@MikroTik] > file add name=/flash/directory_name type=directory 
+[admin@MikroTik] > /file/add name=my-file.txt type=file
+[admin@MikroTik] > /file/add name=my-dir type=directory
 ```
 
-### Get or read file contents
+### Read file contents
 
-Using the *get* command, it is possible to retrieve file contents only from files up to 60KB in size. For accessing contents of larger files, use the command *read*. The result is returned as an array.
+`get` returns the `contents` property only for files up to just under 60 KiB; for larger files it returns nothing. To read larger files, use the [`/file/read`](/docs/cli-reference/file/read) command, which returns a chunk of the file as a string:
 
-For example:
-
-```routeros
+```ros
 [admin@MikroTik] > :put [/file/get text.txt contents]
 123456
 
-[admin@MikroTik] > /file/read file=text.txt offset=2 chunk-size=3    
+[admin@MikroTik] > /file/read file=text.txt offset=2 chunk-size=3
   data: 345
 ```
 
-#### Menu specific properties
-
-| Property | Description |
-| :-- | :-- |
-| **chunk-size** (*integer [1..32768]*; Default: ) | Chunk size that will be read from file |
-| **offset** (*integer;*Default:) | Specifies offset where to start reading file |
-
 ### Head or tail a file
 
-Using head and tail functions you can output the first or the last n lines of file contents.
+Use [`/file/head`](/docs/cli-reference/file/head) and [`/file/tail`](/docs/cli-reference/file/tail) to print the first or last `n` lines of a file (10 lines by default):
 
-For example:
-
-```routeros
-/file/head test.txt n=3 numbered 
+```ros
+[admin@MikroTik] > /file/head test.txt n=3 numbered
  1: 1
  2: 2
  3: 3
 ```
 
-#### Menu specific properties
-
-| Property | Description |
-| :-- | :-- |
-| **n** (*integer [1..1000]*; Default: ) | Number of lines to be printed. |
-| **numbered** | The presence of the option in the command will add a line number in front of each line. |
-
 ### Copy a file or directory
 
-Using a copy command you can clone a file or directory.
+Use the [`/file/copy`](/docs/cli-reference/file/copy) command. Directories are copied recursively, with all their contents:
 
-For example:
-
-```routeros
-/file/copy test1.txt name=dir1/test1copy.txt
-/file/copy dir1 name=dir2
-/file/print 
+```ros
+[admin@MikroTik] > /file/add name=test1.txt type=file
+[admin@MikroTik] > /file/add name=dir1 type=directory
+[admin@MikroTik] > /file/copy test1.txt name=dir1/test1copy.txt
+[admin@MikroTik] > /file/copy dir1 name=dir2
+[admin@MikroTik] > /file/print
 Columns: NAME, TYPE, SIZE, LAST-MODIFIED
-# NAME                TYPE       SIZE  LAST-MODIFIED      
-0 dir1                directory        2026-03-17 09:52:08
-1 dir2                directory        2026-03-17 09:52:14
-2 test1.txt           .txt file     0  2026-03-17 09:51:43
-3 dir1/test1copy.txt  .txt file     0  2026-03-17 09:52:08
-4 dir2/test1copy.txt  .txt file     0  2026-03-17 09:52:14
+# NAME                TYPE       SIZE  LAST-MODIFIED
+0 dir2                directory        2026-09-25 12:12:20
+1 dir1                directory        2026-09-25 12:12:20
+2 test1.txt           .txt file     0  2026-09-25 12:12:20
+3 skins               directory        1970-01-01 03:00:05
+4 dir1/test1copy.txt  .txt file     0  2026-09-25 12:12:20
+5 dir2/test1copy.txt  .txt file     0  2026-09-25 12:12:20
 ```
+
+All parameters are documented in the [`/file`](/docs/cli-reference/file) CLI reference.

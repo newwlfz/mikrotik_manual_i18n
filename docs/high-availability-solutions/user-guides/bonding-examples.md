@@ -7,8 +7,8 @@ description: 'This page demonstrates how to bond EoIP tunnels over two wireless 
 tags:
   - 'bonding'
   - 'eoip'
-source: https://manual.mikrotik.com/docs/high-availability-solutions/user-guides/bonding-examples
-captured_at: '2026-11-04T11:29:56+08:00'
+source: https://manual.mikrotik.com/docs/7.25/high-availability-solutions/user-guides/bonding-examples
+captured_at: '2026-11-04T11:17:46+08:00'
 ---
 
 ## Bonding EoIP tunnels over two wireless links

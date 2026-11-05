@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/ethernet/cable-test"
 sidebar_position: 2
 title: "cable-test"
 sidebar_label: 'cable-test'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/cable-test
-captured_at: '2026-11-01T21:27:05+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ethernet/cable-test
+captured_at: '2026-11-01T21:22:29+08:00'
 ---
 
 -----------

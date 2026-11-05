@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/tool/traffic-generator/port"
 sidebar_position: 5
 title: "port"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/port
-captured_at: '2026-11-01T21:30:23+08:00'
+sidebar_label: 'port'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/traffic-generator/port
+captured_at: '2026-11-01T21:26:05+08:00'
 ---
 
 -----------

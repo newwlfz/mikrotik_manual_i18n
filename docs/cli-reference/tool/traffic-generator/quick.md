@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/tool/traffic-generator/quick"
 sidebar_position: 6
 title: "quick"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/quick
-captured_at: '2026-11-01T21:30:24+08:00'
+sidebar_label: 'quick'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/traffic-generator/quick
+captured_at: '2026-11-01T21:26:02+08:00'
 ---
 
 -----------

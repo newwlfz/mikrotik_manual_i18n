@@ -8,14 +8,14 @@ tags:
   - 'hotspot'
   - 'firewall'
   - 'dhcp'
-source: https://manual.mikrotik.com/docs/authentication-authorization-accounting/hotspot-captive-portal
-captured_at: '2026-11-04T11:27:19+08:00'
+source: https://manual.mikrotik.com/docs/7.25/authentication-authorization-accounting/hotspot-captive-portal
+captured_at: '2026-11-04T11:14:23+08:00'
 ---
 
 The MikroTik HotSpot Gateway provides authentication for clients before access to public networks.
 
 :::warning
-Hotspot (captive portal) - uses web-proxy and it is capable of using only the default routing table, at the moment, making the PCC(per connection-classifier) not a valid method, due to the multiple routing tables used.
+HotSpot (captive portal) - uses web-proxy and it is capable of using only the default routing table, at the moment, making the PCC(per connection-classifier) not a valid method, due to the multiple routing tables used.
 :::
 
 :::warning
@@ -45,7 +45,7 @@ HotSpot functionality could be blocked by the device-mode. Prior to configuring 
 - Automatic and transparent change of any IP address of a client to a valid address.
 - HotSpot can inform DHCP clients that they are behind a captive portal (RFC7710).
 
-A hotspot can work reliably only when IPv4 is used. Hotspot relies on Firewall NAT rules which currently are not supported for IPv6.
+A HotSpot can work reliably only when IPv4 is used. HotSpot relies on Firewall NAT rules which currently are not supported for IPv6.
 
 ## Example
 
@@ -147,17 +147,17 @@ The menu is designed to manage the HotSpot servers of the router. It is possible
 
 ## HotSpot Profile
 
-This submenu contains a list of Hotspot server profiles. There may be various different HotSpot systems, defined as Server Profiles, on the same gateway machine. One or more interfaces can be grouped into one server profile. There are very few settings for the servers on particular interfaces - most of the configuration is set in the server profiles. For example, it is possible to make a completely different set of servlet pages for each server profile, and define different RADIUS servers for authentication.
+This submenu contains a list of HotSpot server profiles. There may be various different HotSpot systems, defined as Server Profiles, on the same gateway machine. One or more interfaces can be grouped into one server profile. There are very few settings for the servers on particular interfaces - most of the configuration is set in the server profiles. For example, it is possible to make a completely different set of servlet pages for each server profile, and define different RADIUS servers for authentication.
 
 | Property | Description |
 | :-- | :-- |
 | **dns-name** (*string*; Default: **""**) | DNS name of the HotSpot server. This is the DNS name used as the name of the HotSpot server (i.e., it appears as the location of the login page). This name will automatically be added as a static DNS entry in the DNS cache. |
 | **hotspot-address** (*IP*; Default: **0.0.0.0**) | IP address of HotSpot service. |
 | **html-directory** (*string*; Default: **hotspot**) | Directory name in which HotSpot HTML pages are stored (by default *hotspot* directory). It is possible to specify a different directory with modified HTML pages. To change the HotSpot login page, get HotSpot files from your router, change and upload them back to the same location. Full path must be typed in the html-directory field, including "/flash/(hotspot\_dir)" |
-| **html-directory-override** (*string*; Default: **none**) | Alternative path for hotspot html files. It should be used only when customized hotspot html files are stored on external storage. |
+| **html-directory-override** (*string*; Default: **none**) | Alternative path for HotSpot HTML files. It should be used only when customized HotSpot HTML files are stored on external storage. |
 | **http-cookie-lifetime** (*time*; Default: **3d**) | HTTP cookie validity time, the option is related to *cookie* HotSpot login method |
 | **http-proxy** (*IP:Port*; Default: **0.0.0.0:0**) | Address and port of the proxy server for HotSpot service, when the default value is used all requests are resolved by the local `/ip/proxy` |
-| **https-redirect** (*yes \| no*; Default: **yes**) | Whether to redirect the unauthenticated user to the hotspot login page, if the user is visiting an https:// url. Since the certificate domain name will mismatch, often this leads to errors, so you can set this parameter to "no" and all https requests will simply be rejected and user will have to visit an http page. |
+| **https-redirect** (*yes \| no*; Default: **yes**) | Whether to redirect the unauthenticated user to the HotSpot login page, if the user is visiting an https:// url. Since the certificate domain name will mismatch, often this leads to errors, so you can set this parameter to "no" and all https requests will simply be rejected and user will have to visit an http page. |
 | **login-by** (*cookie\|http-chap\|http-pap\|https\|mac\|trial\|mac-cookie*; Default: **http-chap, cookie**) | The HotSpot authentication method usedmac-cookie - enables login by mac cookie methodcookie - may only be used with another HTTP authentication method. HTTP cookie is generated, when the user authenticates in HotSpot for the first time. User is not asked for the login/password and is authenticated automatically, until cookie-lifetime is activehttp-chap - login/password is required for the user to authenticate in HotSpot. CHAP challenge-response method with MD5 hashing algorithm is used for protecting passwords.http-pap - login/password is required for user to authenticate in HotSpot. Username and password are sent over network in plain text.https - login/password is required for user to authenticate in HotSpot. Client login/password exchange between client and server is encrypted with SSL tunnel. mac - client is authenticated without asking for a login form. Client MAC-address is added to `/ip/hotspot/user` database, client is authenticated as soon as connected to the HotSpottrial - client is allowed to use the internet without HotSpot login for the specified amount of time |
 | **mac-auth-password** (*string*; Default: ) *[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | Used together with MAC authentication, the field is used to specify password for the users to be authenticated by their MAC addresses. The following option is required, when a specific RADIUS server rejects authentication for the clients with a blank password |
 | **name** (*string*; Default: ) | Descriptive name of the profile |
@@ -172,7 +172,7 @@ This submenu contains a list of Hotspot server profiles. There may be various di
 | **split-user-domain** (*yes \| no*; Default: **no**) | Split username from domain name when the username is given in "user@domain" or in "domain\user" format from RADIUS server |
 | **ssl-certificate** (*string \| none*; Default: **none**) | Name of the SSL certificate on the router to use only for HTTPS authentication. |
 | **trial-uptime** (*time/time*; Default: **30m/1d**) | Used only with *trial* authentication method. First time value specifies how long trial user identified by MAC address can use access to public networks without HotSpot authentication. Second time value specifies the amount of time, that has to pass until the user is allowed to use trial again. |
-| **trial-user-profile** (*string*; Default: **default**) | Specifies **hotspot user profile** for trial users. |
+| **trial-user-profile** (*string*; Default: **default**) | Specifies **HotSpot user profile** for trial users. |
 | **use-radius** (*yes \| no*; Default: **no**) | Use RADIUS to authenticate HotSpot users. |
 
 ## HotSpot User Profiles
@@ -196,8 +196,8 @@ User profile menu is used for common HotSpot client settings. Profiles are like 
 | **keepalive-timeout** (*time \| none*; Default: ) | Keepalive timeout for authorized HotSpot clients. Used to detect that the computer of the client is alive and reachable. The user is logged out when the timeout value is reached |
 | **mac-cookie-timeout** (*time*; Default: **3d**) | Selects the mac-cookie timeout from the last login or logout. |
 | **name** (*string*; Default: ) | Descriptive name of the profile |
-| **on-login** (*string*; Default: **""**) | Script name to be executed when the user logs in to the HotSpot from the particular profile. It is possible to get the username from internal **user** and **interface** variables. For example, *:log info "User $user logged in!"*. If the hotspot is set on a bridge interface, then the **interface** variable will show the bridge as the actual interface unless **use-ip-firewall** is set in the bridge settings. List of available variables: $user$username (alternative var name for $user)$address$"mac-address"$interface |
-| **on-logout** (*string*; Default: **""**) | Script name to be executed when the user logs out from the HotSpot. It is possible to get the username from internal **user** and **interface** variables. For example, *:log info "User $user logged in!"* . If the hotspot is set on a bridge interface, then the **interface** variable will show the bridge as the actual interface unless **use-ip-firewall** is set in the bridge settings. List of available variables: $user$username (alternative var name for $user)$address$"mac-address"$interface$cause Starting with v6.34rc11 some additional variables are available: $uptime-secs - final session time in seconds$bytes-in - bytes uploaded$bytes-out - bytes downloaded$bytes-total - bytes up + bytes down$packets-in - packets uploaded$packets-out - packets downloaded$packets-total - packets up + packets down |
+| **on-login** (*string*; Default: **""**) | Script name to be executed when the user logs in to the HotSpot from the particular profile. It is possible to get the username from internal **user** and **interface** variables. For example, *:log info "User $user logged in!"*. If the HotSpot is set on a bridge interface, then the **interface** variable will show the bridge as the actual interface unless **use-ip-firewall** is set in the bridge settings. List of available variables: $user$username (alternative var name for $user)$address$"mac-address"$interface |
+| **on-logout** (*string*; Default: **""**) | Script name to be executed when the user logs out from the HotSpot. It is possible to get the username from internal **user** and **interface** variables. For example, *:log info "User $user logged in!"* . If the HotSpot is set on a bridge interface, then the **interface** variable will show the bridge as the actual interface unless **use-ip-firewall** is set in the bridge settings. List of available variables: $user$username (alternative var name for $user)$address$"mac-address"$interface$cause Starting with v6.34rc11 some additional variables are available: $uptime-secs - final session time in seconds$bytes-in - bytes uploaded$bytes-out - bytes downloaded$bytes-total - bytes up + bytes down$packets-in - packets uploaded$packets-out - packets downloaded$packets-total - packets up + packets down |
 | **open-status-page** (*always \| http-login*; Default: **always**) | Option to show status page for a user authenticated with the mac login method. For example, to show advertisement on the status page (alogin.html)http-login - open the status page only for HTTP login (includes cookie and HTTPS)always - open the HTTP status page in case of mac login as well |
 | **outgoing-filter** (*string*; Default: ) | Name of the firewall chain applied to outgoing packets from the users of this profile. A jump rule is required from the built-in chain (input, forward, output) to chain=hotspot |
 | **outgoing-packet-mark** (*string*; Default: ) | Packet mark put on outgoing packets from every user of this profile |
@@ -343,7 +343,7 @@ IP-Binding HotSpot menu allows the setup of static One-to-One NAT translations, 
 | :-- | :-- |
 | **address** (*IP Range*; Default: **""**) | The original IP address of the client |
 | **mac-address** (*MAC*; Default: **""**) | MAC address of the client |
-| **server** (*string \| all*; Default: **"all"**) | Name of the HotSpot server.all - will be applied to all hotspot servers |
+| **server** (*string \| all*; Default: **"all"**) | Name of the HotSpot server.all - will be applied to all HotSpot servers |
 | **to-address** (*IP*; Default: **""**) | New IP address of the client, translation occurs on the router (client does not know anything about the translation) |
 | **type** (*blocked \| bypassed \| regular*; Default: **""**) | Type of the IP-binding actionregular - performs One-to-One NAT according to the rule, translates the address to to-addressbypassed - performs the translation, but excludes the client from login to the HotSpotblocked - translation is not performed and packets from a host are dropped |
 
@@ -362,27 +362,27 @@ The menu contains all cookies sent to the HotSpot clients, which are authorized 
 
 ## MAC Cookie
 
-MAC cookie is a hotspot feature, designed to improve accessibility for smartphones, laptops and other mobile devices.
+MAC cookie is a HotSpot feature, designed to improve accessibility for smartphones, laptops and other mobile devices.
 
 When the MAC cookie feature is enabled (**login-by**=mac-cookie, **add-mac-cookie**=yes set in user profile), the following actions are taken:
 
 - **First successful login**. Mac cookie keeps a record of username and password for the MAC address if there is only one host with such a MAC. Cookie timeout is set to a value equal to mac-cookie-timeout.
-- **New host appears**. Hotspot checks if there is a mac cookie record for the MAC address and logs in the host using the recorded username and password. If there is more than one host with the same MAC address, the user will not be logged in and the MAC cookie record for this address will be deleted.
+- **New host appears**. HotSpot checks if there is a mac cookie record for the MAC address and logs in the host using the recorded username and password. If there is more than one host with the same MAC address, the user will not be logged in and the MAC cookie record for this address will be deleted.
 
 When **a user logs out** mac cookie is removed in the following cases:
 
 - user-request - User clicked on the logout button.
-- admin-reset - Disconnected from the radius server or the user is removed from the hotspot active menu.
+- admin-reset - Disconnected from the radius server or the user is removed from the HotSpot active menu.
 - nas-request - Traffic limit reached.
 - session-timeout.
 
-To debug problems with mac-cookies you will need to enable hotspot debug logs and look for reasons why mac-cookie login didn't work for a certain host.
+To debug problems with mac-cookies you will need to enable HotSpot debug logs and look for reasons why mac-cookie login didn't work for a certain host.
 
 ### Reasons when mac cookie is removed by server
 
 - `/ip/hotspot/cookie/remove [number]`.
 - Radius server sends Disconnect-Request.
-- End-User has logged out himself via hotspot status page.
+- End-User has logged out himself via HotSpot status page.
 - End user has reached his data cap ("traffic limit reached").
 - Session-Timeout.
 - If mac-cookie login fails.
@@ -398,11 +398,11 @@ Based on the `api.json` template provided in the documentation, here are the des
 - **bytes-remaining**: (Optional) An integer representing the remaining data quota in bytes available to the user. This is only included if data limits are applied to the HotSpot user.
 - **can-extend-session**: A boolean value indicating whether the user has the ability to extend their current session or purchase/request more time/data via the portal.
 
-## Load balancing with mangle on Hotspot server
+## Load balancing with mangle on HotSpot server
 
-In a multi-uplink Hotspot setup (for example, [PCC](/docs/high-availability-solutions/load-balancing/per-connection-classifier), default routing often might fail to work as expected because the router prioritises mangle rules over the local destination check.
+In a multi-uplink HotSpot setup (for example, [PCC](/docs/high-availability-solutions/load-balancing/per-connection-classifier), default routing often might fail to work as expected because the router prioritises mangle rules over the local destination check.
 
-To fix this, ensure traffic destined for the Hotspot server is routed via the **local** table before the **mangle** chain is evaluated. You can achieve this by:
+To fix this, ensure traffic destined for the HotSpot server is routed via the **local** table before the **mangle** chain is evaluated. You can achieve this by:
 
 1. Adjusting the "`/routing/settings"` ([Routing table lookup](/docs/user-guides/routing-and-networking-protocols/routing-decision#routing-table-lookup).
-2. Or, adding specific "`/routing/rule"` entries to force the Hotspot server's traffic to use the local table first (including HTTP 80 traffic which is used to detect the Hotspot server).
+2. Or, adding specific "`/routing/rule"` entries to force the HotSpot server's traffic to use the local table first (including HTTP 80 traffic which is used to detect the HotSpot server).

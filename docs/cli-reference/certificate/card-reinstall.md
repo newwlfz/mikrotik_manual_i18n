@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/certificate/card-reinstall"
 sidebar_position: 5
 title: "card-reinstall"
 sidebar_label: 'card-reinstall'
-source: https://manual.mikrotik.com/docs/cli-reference/certificate/card-reinstall
-captured_at: '2026-11-01T21:26:24+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/card-reinstall
+captured_at: '2026-11-01T21:21:48+08:00'
 ---
 
 -----------

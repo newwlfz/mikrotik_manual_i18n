@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/mpls/traffic-eng/path"
 sidebar_position: 4
 title: "path"
-source: https://manual.mikrotik.com/docs/cli-reference/mpls/traffic-eng/path
-captured_at: '2026-11-01T21:29:16+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/traffic-eng/path
+captured_at: '2026-11-01T21:24:50+08:00'
 ---
 
 -----------

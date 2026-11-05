@@ -7,8 +7,8 @@ description: 'This page documents MikroTik RouterOS container support, covering 
 tags:
   - 'container'
   - 'security'
-source: https://manual.mikrotik.com/docs/containers
-captured_at: '2026-11-04T11:27:42+08:00'
+source: https://manual.mikrotik.com/docs/7.25/containers
+captured_at: '2026-11-04T11:14:54+08:00'
 ---
 
 This section covers RouterOS container support, including container configuration, virtual Ethernet interfaces, storage, and application examples. Use it to run supported containerized services on RouterOS devices.
@@ -62,7 +62,7 @@ Container package is compatible with **arm, arm64** and **x86** architectures. U
 | **cmd** (*string*; Default: ) | The main purpose of a CMD is to provide defaults for an executing container. These defaults can include an executable, or they can omit the executable, in which case you must specify an ENTRYPOINT instruction as well. |
 | **comment** (*string*; Default: ) | Short description |
 | **dns** (*string*; Default: ) | If the container needs different DNS, it can be configured here |
-| **domain-name** (*string*; Default: ) |  |
+| **domain-name** (*string*; Default: ) | Sets the container's domain name |
 | **entrypoint** (*string*; Default: ) | An ENTRYPOINT allows you to specify an executable to run when starting the container. Example: `/bin/sh` |
 | **envlist** (*string*; Default: ) | List of environmental variables (configured under *`/container/envs`* ) to be used with the container |
 | **file** (*string*; Default: ) | A container \*tar.gz tarball if the container is imported from a file |
@@ -79,8 +79,9 @@ Container package is compatible with **arm, arm64** and **x86** architectures. U
 | **devices** (*string*; Default: ) | passes through a physical device to the container |
 | **cpu-list** (*string*; Default: ) | specifies which CPU cores the container is allowed to run on |
 | **user** (*string*; Default: ) | sets the user and group the container process runs as before execution. |
-| **memory-high** (*int*; Default: ) | RAM usage limit in bytes for a specific container |
-| **memory-max** (*int*; Default: ) | max RAM usage limit in bytes per container (The container process will be terminated if the memory-max value is smaller than the container memory-current) starting 7.23, this parameter cannot be set lower than 1MB, to avoid a situation where the container is terminated too early in the startup process |
+| **memory-high** (*int*; Default: ) | "Soft" RAM usage limit in bytes for a specific container. If  usage goes over the high boundary, the processes are throttled and put under reclaim pressure. |
+| **memory-max** (*int*; Default: ) | Max RAM usage limit in bytes per container (The container process will be terminated if the memory-max value is smaller than the container memory-current) starting 7.23, this parameter cannot be set lower than 1MB, to avoid a situation where the container is terminated too early in the startup process |
+| **swap-max** (*int*; Default: ) | Maximum amount of swap space (in bytes) that the container may use. Requires swap to be enabled on the device (see [Swap space](/docs/hardware/disks/)). |
 | **stop-time** (*string*; Default: ) | Time limit for the container to stop gracefully before the stop-signal is sent. |
 | **tmpfs** (*string*; Default: ) | Temporary filesystem mount points for the container. Format: `size@dir`, e.g., `64M@/tmp`. |
 | **layer-dir** (*string*; Default: ) | Directory for storing container image layers, used for shared layer storage between containers. |
@@ -105,6 +106,7 @@ By default the container uses the same DNS as configured in the `/ip/dns` sub-me
 | **repull** | Re-pulls/extracts the container image. |
 | **shell** | Enters the container shell of a running container. |
 | **run** | Starts the container and enters its shell. Useful if container shuts down after running. |
+| **save** | Saves the container image as a tar archive with root-dir content and ROS-specific parameters. See [Saving a container](#saving-a-container). |
 
 ## Container configuration
 
@@ -115,8 +117,9 @@ By default the container uses the same DNS as configured in the `/ip/dns` sub-me
 | **registry-url** | external registry url from where the container will be downloaded (default: `https://lscr.io/`) |
 | **tmpdir** | container extraction directory |
 | **layer-dir** | directory for storing container image layers, used for shared layer storage between containers |
-| **memory-high** | RAM usage limit in bytes  1 - unlimited |
-| **memory-max** | max RAM usage limit in bytes per container. The container process will be terminated if the memory-max value is smaller than the container memory-current |
+| **memory-high** | Global "soft" RAM usage limit in bytes for a specific container. If  usage goes over the high boundary, the processes are throttled and put under reclaim pressure. |
+| **memory-max** | Global max RAM usage limit in bytes per container (The container process will be terminated if the memory-max value is smaller than the container memory-current) starting 7.23, this parameter cannot be set lower than 1MB, to avoid a situation where the container is terminated too early in the startup process |
+| **swap-max** (*int*; Default: ) | Global default for the maximum amount of swap space (in bytes) per container. Individual containers can override this with their own `swap-max` setting. Requires swap to be enabled on the device (see [Swap space](/docs/hardware/disks/)). |
 | **username** | Specifies the username for authentication (starting from ROS 7.8) |
 | **password** *[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | Specifies the password for authentication (starting from ROS 7.8) |
 
@@ -126,6 +129,124 @@ By default the container uses the same DNS as configured in the `/ip/dns` sub-me
 | :-- | :-- |
 | **assumed-registry-url** | Automatically detected registry URL. |
 | **memory-current** | Current total memory usage of all containers in bytes. |
+
+## Saving a container
+
+The **save** command under the `/container` menu writes the container image as a valid OCI archive which can be imported in podman, docker environments or RouterOS.
+
+Save by default writes all filesystem layers including root-dir, but keeps does not include it in the OCI format. It writes a special ros-container.json within the tarball with additional information specified in RouterOS, including root-dir layer info, envlists etc. ros-container.json will be used when importing into ROS containers - in docker or podman it will be ignored.
+
+Saving with the **commit** parameter will add root-dir layer to OCI archive format or change original image config. Importing image in podman or docker saved without **commit** will not show changes made in ROS container entry like specified environment values, entrypoints, files in root-dir and any other changes.
+
+The root directory layer together with additional parameters specified in ROS container entry can be saved (commited) to OCI image for importing in podman or docker using the **commit** parameter.
+
+### Command syntax
+
+```routeros
+/container/save <container> file=<archive> [name=<name>] [commit]
+```
+
+### Parameters
+
+| Parameter | Description |
+| :-- | :-- |
+| **file** | Path to save archive as |
+| **name** | Set image name to save as |
+| **commit** | Commit changes to OCI archive |
+
+### Save and re-import
+
+This example shows how to save a container with root-dir content, remove it, and re-add it from the saved file.
+
+For the example let's add a simple container:
+
+```routeros
+/container/add name=alpine remote-image=alpine interface=veth1 check-certificate=no
+```
+
+Modify the container:
+
+```routeros
+/container/run alpine
+/ # apk add python3
+...
+/ # cat <<EOF > main.py
+> import os
+> import sys
+> ...
+> EOF
+/ # exit
+```
+
+Set container entrypoint, cmd etc:
+
+```routeros
+/container/set alpine entrypoint="python main.py" cmd="foo bar" env=FOO=1,BAR=2 envlists=foo,bar
+```
+
+Run the modified container and verify env vars:
+
+```routeros
+/container/run 0
+>>> os.environ
+environ({'BAR': '2', 'BAR2': 'this is bar 2', 'EGGS': 'e33s', 'FOO': '1', 'HOME': '/root', 'HOSTNAME': 'CHR', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'SPAM': 'spam12', 'TERM': 'xterm', 'TZ': 'manual'})
+>>> exit()
+```
+
+Save the container with root directory content (keep OCI image intact):
+
+```routeros
+/container/save 0 file=out.tar
+```
+
+This save action adds root-dir content to archive together with some ROS container parameters like env, envlists etc. This does not change original image config parameters.
+
+Remove the container and add it back from the saved file:
+
+```routeros
+/container/remove 0
+/container/add file=out.tar interface=veth1
+```
+
+Run the re-imported container and verify env vars again:
+
+```routeros
+/container/run 0
+>>> os.environ
+environ({'BAR': '2', 'BAR2': 'this is bar 2', 'EGGS': 'e33s', 'FOO': '1', 'HOME': '/root', 'HOSTNAME': 'CHR', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'SPAM': 'spam12', 'TERM': 'xterm', 'TZ': 'manual'})
+>>> exit()
+```
+
+### Commit changes to OCI
+
+Save the container image and *commit* changes to OCI image:
+
+```routeros
+/container/save 0 file=out.tar commit
+```
+
+Commited images adds root-dir content as another layer and sets entrypoint, cmd etc. values as standard container image parameters. This changed image can be loaded in podman or docker systems.
+
+Loading the saved container in podman:
+
+```shell
+$ podman image load < out.tar
+Getting image source signatures
+Copying blob 2db82ee6251c done
+Copying blob b1928d1de551 done
+Copying config 3dc8d32889 done
+Writing manifest to image destination
+Loaded image: localhost/alpine:latest
+```
+
+Running the loaded image:
+
+```shell
+$ podman run -it --rm localhost/alpine:latest
+>>> os.environ
+environ({'BAR': '2', 'BAR2': 'this is bar 2', 'EGGS': 'e33s', 'FOO': '1', 'HOME': '/root', 'HOSTNAME': 'CHR', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'SPAM': 'spam12', 'TERM': 'xterm', 'TZ': 'manual'})
+>>> exit()
+```
 
 ## Examples
 
@@ -639,17 +760,25 @@ As an extra step, you can create a script that polls the container status and se
     add interval=2m name=container-healthcheck-alert on-event="/system/script/run unhealthy-container-alert"
     ```
 
+## Memory
+
+There are three parameters that control container memory behavior: `memory-max`, `memory-high`, and `swap-max`. Each can be configured per-container or globally in `/container/config`. The global values act as defaults — if both a per-container and a global limit are set, the **lower** value applies (this works both ways).
+
+### memory-max
+
+Sets the hard upper limit for container RAM usage (in bytes). If a container exceeds this limit, it will be killed. When set on both levels, e.g. the per-container limit is 500MB and the global limit is 300MB, the 300MB limit takes effect. If swap is enabled, the container may attempt to swap out the excess memory instead of being killed.
+
+### memory-high
+
+Sets a soft upper limit for container RAM usage (in bytes). When the limit is reached, the container processes are throttled and put under heavy memory reclaim pressure — the system will try to free memory (including swapping). Unlike `memory-max`, the container is **never** killed for exceeding this limit.
+
+### swap-max
+
+Defines the maximum amount of swap space (in bytes) that a container may use. Works together with `memory-max` — once a container hits its `memory-max` limit, the excess memory will be swapped out up to the `swap-max` limit. For example, if a container has a `memory-max` of 600MB and a process is trying to use 800MB, the remaining 200MB will be pushed into swap. Swap must be enabled on the device (see [Swap space](/docs/hardware/disks/)).
+
 ## Tips and tricks
 
 - Containers use up a lot of disk space. USB/SATA, NVMe attached media is highly recommended. For devices with USB ports - USB to SATA adapters can be used with 2.5" drives - for extra storage and faster file operations.
-- RAM usage can be limited by using:
-
-```ros
-/container/config/set memory-high=200M
-```
-
-this will soft limit RAM usage - if RAM usage goes over the high boundary, the processes of the cgroup are throttled and put under heavy reclaim pressure.
-
 - For starting containers after a router reboot use the start-on-boot option (starting from 7.6beta6):
 
   ```ros

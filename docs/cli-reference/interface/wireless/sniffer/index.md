@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/sniffer/index"
 sidebar_position: 1
 title: "sniffer"
 sidebar_label: 'sniffer'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/sniffer
-captured_at: '2026-11-01T21:28:03+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/sniffer
+captured_at: '2026-11-01T21:23:27+08:00'
 ---
 
 -----------
@@ -22,6 +22,8 @@ captured_at: '2026-11-01T21:28:03+08:00'
 <ArgTableRow arg="file-name" typ="string"></ArgTableRow>
 <ArgTableRow arg="file-limit" typ="num"></ArgTableRow>
 <ArgTableRow arg="streaming-enabled" typ="bool"></ArgTableRow>
-<ArgTableRow arg="streaming-server" typ="ipAddr"></ArgTableRow>
+<ArgTableRow arg="streaming-server" typ="super { ip: ipAddr
+, [port] [ :num [1 .. 65535]]
+ }"></ArgTableRow>
 <ArgTableRow arg="streaming-max-rate" typ="num"></ArgTableRow>
 </ArgTable>

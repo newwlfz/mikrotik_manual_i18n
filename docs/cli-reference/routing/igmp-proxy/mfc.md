@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/igmp-proxy/mfc"
 sidebar_position: 3
 title: "mfc"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/igmp-proxy/mfc
-captured_at: '2026-11-01T21:29:32+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/igmp-proxy/mfc
+captured_at: '2026-11-01T21:25:11+08:00'
 ---
 
 -----------

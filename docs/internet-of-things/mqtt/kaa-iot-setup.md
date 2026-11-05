@@ -8,8 +8,8 @@ tags:
   - 'mqtt'
   - 'http'
   - 'scripting'
-source: https://manual.mikrotik.com/docs/internet-of-things/mqtt/kaa-iot-setup
-captured_at: '2026-11-04T11:31:51+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/mqtt/kaa-iot-setup
+captured_at: '2026-11-04T11:19:11+08:00'
 ---
 
 [MQTT](/docs/internet-of-things/mqtt/) and [HTTP](/docs/system-information-and-utilities/fetch) are among the most popular protocols that are used for transferring all kinds of data. Both protocols are heavily utilized in different IoT setups, and they both are supported by [RouterOS](/docs/getting-started/software-specifications/).

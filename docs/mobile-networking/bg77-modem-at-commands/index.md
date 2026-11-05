@@ -3,8 +3,8 @@ sidebar_key: "mobile-networking/bg77-modem-at-commands/index"
 sidebar_position: 2
 title: "BG77 modem AT commands"
 sidebar_label: 'BG77 modem AT commands'
-source: https://manual.mikrotik.com/docs/mobile-networking/bg77-modem-at-commands
-captured_at: '2026-11-04T11:32:14+08:00'
+source: https://manual.mikrotik.com/docs/7.25/mobile-networking/bg77-modem-at-commands
+captured_at: '2026-11-04T11:19:57+08:00'
 ---
 
 #

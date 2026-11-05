@@ -7,8 +7,8 @@ description: 'This page introduces Maximum Transmission Unit (MTU) configuration
 tags:
   - 'mtu'
   - 'l2mtu'
-source: https://manual.mikrotik.com/docs/hardware/mtu-in-routeros
-captured_at: '2026-11-04T11:29:52+08:00'
+source: https://manual.mikrotik.com/docs/7.25/hardware/mtu-in-routeros
+captured_at: '2026-11-04T11:17:40+08:00'
 ---
 
 ## Introduction

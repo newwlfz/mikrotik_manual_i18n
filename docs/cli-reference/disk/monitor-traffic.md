@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/disk/monitor-traffic"
 sidebar_position: 8
 title: "monitor-traffic"
 sidebar_label: 'monitor-traffic'
-source: https://manual.mikrotik.com/docs/cli-reference/disk/monitor-traffic
-captured_at: '2026-11-01T21:26:46+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/disk/monitor-traffic
+captured_at: '2026-11-01T21:22:11+08:00'
 ---
 
 -----------
@@ -14,28 +14,28 @@ captured_at: '2026-11-01T21:26:46+08:00'
 **Type:** Command
 
 <ArgTable c1="Read-only Argument" c2="Type" c3="Description">
-<ArgTableRow arg="io-ops" typ="num"></ArgTableRow>
-<ArgTableRow arg="io-errors" typ="num"></ArgTableRow>
-<ArgTableRow arg="slot" typ="string"></ArgTableRow>
-<ArgTableRow arg="read-ops" typ="num"></ArgTableRow>
-<ArgTableRow arg="read-ops-per-second" typ="num"></ArgTableRow>
-<ArgTableRow arg="read-bytes" typ="num"></ArgTableRow>
-<ArgTableRow arg="read-rate" typ="num"></ArgTableRow>
-<ArgTableRow arg="read-merges" typ="num"></ArgTableRow>
-<ArgTableRow arg="read-time" typ="time"></ArgTableRow>
-<ArgTableRow arg="write-ops" typ="num"></ArgTableRow>
-<ArgTableRow arg="write-ops-per-second" typ="num"></ArgTableRow>
-<ArgTableRow arg="write-bytes" typ="num"></ArgTableRow>
-<ArgTableRow arg="write-rate" typ="num"></ArgTableRow>
-<ArgTableRow arg="write-merges" typ="num"></ArgTableRow>
-<ArgTableRow arg="write-time" typ="time"></ArgTableRow>
-<ArgTableRow arg="in-flight-ops" typ="num"></ArgTableRow>
-<ArgTableRow arg="active-time" typ="time"></ArgTableRow>
-<ArgTableRow arg="wait-time" typ="time"></ArgTableRow>
-<ArgTableRow arg="discard-ops" typ="num"></ArgTableRow>
-<ArgTableRow arg="discard-bytes" typ="num"></ArgTableRow>
-<ArgTableRow arg="discard-merges" typ="num"></ArgTableRow>
-<ArgTableRow arg="discard-time" typ="time"></ArgTableRow>
-<ArgTableRow arg="flush-ops" typ="num"></ArgTableRow>
-<ArgTableRow arg="flush-time" typ="time"></ArgTableRow>
+<ArgTableRow arg="io-ops" typ="num">Total number of I/O operations since the last `reset-counters`.</ArgTableRow>
+<ArgTableRow arg="io-errors" typ="num">Total number of I/O errors.</ArgTableRow>
+<ArgTableRow arg="slot" typ="string">The disk that is being monitored.</ArgTableRow>
+<ArgTableRow arg="read-ops" typ="num">Total number of read operations.</ArgTableRow>
+<ArgTableRow arg="read-ops-per-second" typ="num">Read operations per second.</ArgTableRow>
+<ArgTableRow arg="read-bytes" typ="num">Total bytes read.</ArgTableRow>
+<ArgTableRow arg="read-rate" typ="num">Current read speed.</ArgTableRow>
+<ArgTableRow arg="read-merges" typ="num">Total number of merged read operations (adjacent requests the driver combined).</ArgTableRow>
+<ArgTableRow arg="read-time" typ="time">Total time spent reading.</ArgTableRow>
+<ArgTableRow arg="write-ops" typ="num">Total number of write operations.</ArgTableRow>
+<ArgTableRow arg="write-ops-per-second" typ="num">Write operations per second.</ArgTableRow>
+<ArgTableRow arg="write-bytes" typ="num">Total bytes written.</ArgTableRow>
+<ArgTableRow arg="write-rate" typ="num">Current write speed.</ArgTableRow>
+<ArgTableRow arg="write-merges" typ="num">Total number of merged write operations.</ArgTableRow>
+<ArgTableRow arg="write-time" typ="time">Total time spent writing.</ArgTableRow>
+<ArgTableRow arg="in-flight-ops" typ="num">Operations currently queued on the disk.</ArgTableRow>
+<ArgTableRow arg="active-time" typ="time">Total time the disk was busy with requests.</ArgTableRow>
+<ArgTableRow arg="wait-time" typ="time">Total time requests waited in the queue before being processed.</ArgTableRow>
+<ArgTableRow arg="discard-ops" typ="num">Total number of discard (TRIM) operations.</ArgTableRow>
+<ArgTableRow arg="discard-bytes" typ="num">Total bytes discarded.</ArgTableRow>
+<ArgTableRow arg="discard-merges" typ="num">Total number of merged discard operations.</ArgTableRow>
+<ArgTableRow arg="discard-time" typ="time">Total time spent discarding.</ArgTableRow>
+<ArgTableRow arg="flush-ops" typ="num">Total number of flush operations.</ArgTableRow>
+<ArgTableRow arg="flush-time" typ="time">Total time spent flushing.</ArgTableRow>
 </ArgTable>

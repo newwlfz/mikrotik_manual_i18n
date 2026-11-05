@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/certificate/settings"
 sidebar_position: 16
 title: "settings"
 sidebar_label: 'settings'
-source: https://manual.mikrotik.com/docs/cli-reference/certificate/settings
-captured_at: '2026-11-01T21:26:28+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/settings
+captured_at: '2026-11-01T21:21:51+08:00'
 ---
 
 -----------

@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/user-manager/router/monitor"
 sidebar_position: 2
 title: "monitor"
 sidebar_label: 'monitor'
-source: https://manual.mikrotik.com/docs/cli-reference/user-manager/router/monitor
-captured_at: '2026-11-01T21:30:32+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/router/monitor
+captured_at: '2026-11-01T21:26:10+08:00'
 ---
 
 -----------

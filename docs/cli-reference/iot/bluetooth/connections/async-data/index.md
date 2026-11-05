@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/iot/bluetooth/connections/async-data/index"
 sidebar_position: 2
 title: "async-data"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/connections/async-data
-captured_at: '2026-11-01T21:28:06+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/bluetooth/connections/async-data
+captured_at: '2026-11-01T21:23:33+08:00'
 ---
 
 -----------

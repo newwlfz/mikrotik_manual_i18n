@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ipv6/pool/index"
 sidebar_position: 1
 title: "pool"
-source: https://manual.mikrotik.com/docs/cli-reference/ipv6/pool
-captured_at: '2026-11-01T21:29:09+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ipv6/pool
+captured_at: '2026-11-01T21:24:43+08:00'
 ---
 
 -----------

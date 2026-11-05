@@ -10,8 +10,8 @@ tags:
   - 'crs4xx'
   - 'crs8xx'
   - 'prestera'
-source: https://manual.mikrotik.com/docs/bridging-and-switching/marvell-prestera-switch-chip-features
-captured_at: '2026-11-04T11:27:24+08:00'
+source: https://manual.mikrotik.com/docs/7.25/bridging-and-switching/marvell-prestera-switch-chip-features
+captured_at: '2026-11-04T11:14:26+08:00'
 ---
 
 ---
@@ -19,7 +19,7 @@ captured_at: '2026-11-04T11:27:24+08:00'
 Some MikroTik devices use high-performance and feature-rich Marvell Prestera Ethernet switches. These devices can be designed into various Ethernet applications including unmanaged switch, Layer 2 managed switch, carrier switch, inter-VLAN router, and wired unified packet processor.
 
 :::warning
-This article applies only to MikroTik devices with Marvell Prestera switch, not to [CRS1xx/CRS2xx series switches](https://manual.mikrotik.com/docs/bridging-and-switching/crs1xx-and-2xx-series-switches).
+This article applies only to MikroTik devices with Marvell Prestera switch, not to [CRS1xx/CRS2xx series switches](/docs/bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples).
 :::
 
 ### Features
@@ -826,7 +826,7 @@ Since RouterOS v6.42 it is possible to enable traffic storm control. A traffic s
 
 For example, if a network loop has been created and no loop avoidance mechanisms are used (e.g. [Spanning Tree Protocol](/docs/bridging-and-switching/user-guides/spanning-tree-protocol)), broadcast or multicast frames can quickly overwhelm the network, causing degraded network performance or even complete network breakdown. Using MikroTik devices with a Marvell Prestera switch, it is possible to limit broadcast, unknown multicast and unknown unicast traffic. Unknown unicast traffic is considered when a switch does not contain a host entry for the destined MAC address. Unknown multicast traffic is considered when a switch does not contain a multicast group entry in the `/interface/bridge/mdb` menu. Storm control settings should be applied to ingress ports; the egress traffic will be limited.
 
-![Traffic Storm](./img/image.webp)
+![Traffic Storm](./img/image-f275b406.webp)
 
 :::warning
 The storm control parameter is specified as a percentage (%) of the link speed. If your link speed is 1Gbps, then specifying `storm-rate` as `10` will allow only 100Mbps of broadcast, unknown multicast and/or unknown unicast traffic to be forwarded.
@@ -903,7 +903,7 @@ Then switch ACL rules are modified (e.g. added, removed, disabled, enabled, or m
 | **new-dst-ports** (*ports \| bond \| all*) | Changes the destination port to the specified value: If the setting is left empty (e.g. <code>new-dst-ports=""</code>), the packet will be dropped;If a port or  hardware-offloaded bonding interface is specified, the packet will be redirected to that port. Only a single port or bond interface is supported;if you use the <code>all</code> argument, packet will be allowed to pass through to the egress processing without being dropped;If this parameter is not used, the packet will be accepted as is. |
 | **new-vlan-id** (*0..4095*) | Changes the VLAN ID to the specified value. Requires `vlan-filtering=yes`. |
 | **new-vlan-priority** (*0..7*) | Changes the VLAN priority (priority code point). Requires `vlan-filtering=yes`. |
-| **new-vrf** (*vrf name*) | Assigns ingress traffic to a specified VRF. Requires [hardware-offloaded VRF](/docs/bridging-and-switching/l3-hardware-offloading#l3hw-feature-support) support on the switch chip. On VRF-unaware switches (98DX3xxx and 98DX2xxx series), setting `new-vrf` to anything other than `main` should be combined with `redirect-to-cpu=yes`. |
+| **new-vrf** (*vrf name*) | Assigns ingress traffic to a specified VRF. Requires [hardware-offloaded VRF](/docs/bridging-and-switching/l3-hardware-offloading#l3hw-feature-support) support on the switch chip. On VRF-unaware switches (98DX3xxx and 98DX2xxx series), setting `new-vrf` to anything other than `main` will be treated as `redirect-to-cpu=yes`. |
 | **ports** (*ports \| bond*) | Matching switch interfaces where the rule will apply to incoming traffic. Multiple ports and [hardware-offloaded bonding](/docs/bridging-and-switching/marvell-prestera-switch-chip-features#bonding) interfaces can be selected. Note that the `switch1-cpu` port cannot be selected. If `ports` property is left empty, the rule will apply to all switch interfaces. |
 | **protocol** (*dccp \| ddp \| egp \| encap \| etherip \| ggp \| gre \| hmp \| icmp \| icmpv6 \| idpr-cmtp \| igmp \| ipencap \| ipip \| ipsec-ah \| ipsec-esp \| ipv6 \| ipv6-frag \| ipv6-nonxt \| ipv6-opts \| ipv6-route \| iso-tp4 \| l2tp \| ospf \| pim \| pup \| rdp \| rspf \| rsvp \| sctp \| st \| tcp \| udp \| udp-lite \| vmtp \| vrrp \| xns-idp \| xtp \| or 0..255*) | Matching a particular IP protocol specified by protocol name or number. Only applies to IPv4 packets if `mac-protocol` is not specified. To match certain IPv6 protocols, use the `mac-protocol=ipv6` setting. |
 | **rate** (*0..4294967295*) | Sets ingress traffic limitation (bits per second) for matched traffic. |
@@ -962,6 +962,30 @@ For VLAN-related matchers or VLAN-related action parameters to work, you need to
 :::warning
 When bridge interface `ether-type` is set to `0x8100`, then VLAN-related ACL rules are relevant to frames tagged using regular/customer VLAN (TPID 0x8100); this includes `vlan-id` and `new-vlan-id`. When bridge interface `ether-type` is set to `0x88a8`, then ACL rules are relevant to frames tagged with 802.1ad service tag (TPID 0x88a8).
 :::
+
+### Rule counters
+
+Each ACL rule counts the number of packets and bytes it has matched. These counters allow verifying whether a rule is working as expected and how much traffic it handles.
+
+Counters are not displayed by the default `print` command, use `print stats` in the `/interface/ethernet/switch/rule` menu to display them:
+
+```ros
+[admin@MikroTik] > /interface/ethernet/switch/rule/print stats
+Columns: SWITCH, COPY-TO-CPU, REDIRECT-TO-CPU, BYTES, PACKETS
+# SWITCH   COPY-TO-CPU  REDIRECT-TO-CPU  BYTES  PACKETS
+;;; count incoming ICMP
+0 switch1  yes          no               68716      366
+;;; drop ICMP to 192.168.99.1
+1 switch1  no           no                   0        0
+```
+
+In this example, the first rule has matched 366 packets (68716 bytes), while the second rule has not matched any traffic yet.
+
+Use the `reset-counters` command to clear the counters of selected rules, or `reset-counters [find]` to clear the counters of all rules at once:
+
+```ros
+[admin@MikroTik] > /interface/ethernet/switch/rule/reset-counters 0
+```
 
 ## Port Security
 

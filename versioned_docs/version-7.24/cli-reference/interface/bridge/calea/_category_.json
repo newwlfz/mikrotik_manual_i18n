@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Calea",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/bridge/calea/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/bridge/calea"
+}

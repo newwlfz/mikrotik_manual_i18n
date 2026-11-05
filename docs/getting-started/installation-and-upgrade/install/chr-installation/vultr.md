@@ -6,8 +6,8 @@ description: 'This page guides users through deploying MikroTik CHR on Vultr by 
 tags:
   - 'chr'
   - 'vultr'
-source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation/vultr
-captured_at: '2026-11-04T11:28:43+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/installation-and-upgrade/install/chr-installation/vultr
+captured_at: '2026-11-04T11:16:31+08:00'
 ---
 
 Vultr has more than [two dozen data center locations](https://www.vultr.com/features/datacenter-locations/) where you can choose to deploy MikroTik CHR for the best [throughput and latency](https://nj-us-ping.vultr.com/).  
@@ -34,7 +34,7 @@ When the server finishes deploying, proceed to the next step.
    ![](./img/vultr-01.webp)
 4. Navigate to the server's information page in the [Vultr customer portal](https://my.vultr.com/).
 5. Connect to the [web console](https://www.vultr.com/docs/vultr-web-console-faq/).  
-   ![](./img/image.webp)
+   ![](./img/image-be07173a.webp)
 6. In the web console, download the CHR image to the server with "wget". If you copied the download URL to your clipboard, you can [send it to the server](https://www.vultr.com/docs/vultr-web-console-faq/) through the web console.
 
    Substitute your version for x.x.x in the examples that follow.

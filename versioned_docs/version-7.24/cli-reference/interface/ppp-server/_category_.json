@@ -1,0 +1,11 @@
+{
+  "position": 27,
+  "label": "Ppp Server",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/ppp-server/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/ppp-server"
+}

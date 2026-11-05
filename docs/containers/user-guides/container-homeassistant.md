@@ -1,13 +1,13 @@
 ---
 sidebar_key: "containers/user-guides/container-homeassistant"
-sidebar_position: 3
+sidebar_position: 4
 title: "Container - HomeAssistant"
 description: 'This page introduces the container feature in MikroTik RouterOS, enabling users to run servers like HomeAssistant directly on the router. It provides step-by-step instructions for enabling container mode, configuring networking, setting up mounts and environment variables, and obtaining the HomeAssistant Docker image.'
 tags:
   - 'container'
   - 'homeassistant'
-source: https://manual.mikrotik.com/docs/containers/user-guides/container-homeassistant
-captured_at: '2026-11-04T11:27:41+08:00'
+source: https://manual.mikrotik.com/docs/7.25/containers/user-guides/container-homeassistant
+captured_at: '2026-11-04T11:14:59+08:00'
 ---
 
 The introduction of the **container** feature in RouterOS made it possible to run a wide variety of servers directly on the router. This is especially valuable for users who want to minimize the number of devices in their network. Instead of deploying a server on a separate machine, you can now host it inside the router itself.

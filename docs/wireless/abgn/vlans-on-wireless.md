@@ -8,8 +8,8 @@ tags:
   - 'vlan'
   - 'bridge-vlan-filtering'
   - 'wireless'
-source: https://manual.mikrotik.com/docs/wireless/abgn/vlans-on-wireless
-captured_at: '2026-11-04T11:35:37+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/abgn/vlans-on-wireless
+captured_at: '2026-11-04T11:23:54+08:00'
 ---
 
 ## Summary

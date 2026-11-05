@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/script/job"
 sidebar_position: 3
 title: "job"
-source: https://manual.mikrotik.com/docs/cli-reference/system/script/job
-captured_at: '2026-11-01T21:30:07+08:00'
+sidebar_label: 'job'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/script/job
+captured_at: '2026-11-01T21:25:45+08:00'
 ---
 
 -----------
@@ -13,7 +14,7 @@ captured_at: '2026-11-01T21:30:07+08:00'
 
 <ArgTable c1="Argument" c2="Type" c3="Description">
 <ArgTableRow arg="started" typ="date"></ArgTableRow>
-<ArgTableRow arg="type" typ="enum (command | login | api-login) { command:1, login:3, api-login:4 }"></ArgTableRow>
+<ArgTableRow arg="type" typ="enum (command | login | api-login)"></ArgTableRow>
 </ArgTable>
 
 <ArgTable c1="Read-only Argument" c2="Type" c3="Description">

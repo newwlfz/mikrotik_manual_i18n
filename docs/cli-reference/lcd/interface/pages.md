@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/lcd/interface/pages"
 sidebar_position: 4
 title: "pages"
 sidebar_label: 'pages'
-source: https://manual.mikrotik.com/docs/cli-reference/lcd/interface/pages
-captured_at: '2026-11-01T21:29:12+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/lcd/interface/pages
+captured_at: '2026-11-01T21:24:44+08:00'
 ---
 
 -----------

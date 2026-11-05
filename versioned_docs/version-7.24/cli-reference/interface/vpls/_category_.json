@@ -1,0 +1,11 @@
+{
+  "position": 38,
+  "label": "Vpls",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/vpls/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/vpls"
+}

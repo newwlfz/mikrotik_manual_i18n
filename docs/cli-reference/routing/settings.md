@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/settings"
 sidebar_position: 17
 title: "settings"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/settings
-captured_at: '2026-11-01T21:29:41+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/settings
+captured_at: '2026-11-01T21:25:22+08:00'
 ---
 
 -----------

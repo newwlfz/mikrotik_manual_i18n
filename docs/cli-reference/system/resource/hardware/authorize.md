@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/resource/hardware/authorize"
 sidebar_position: 1
 title: "authorize"
-source: https://manual.mikrotik.com/docs/cli-reference/system/resource/hardware/authorize
-captured_at: '2026-11-01T21:30:03+08:00'
+sidebar_label: 'authorize'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/resource/hardware/authorize
+captured_at: '2026-11-01T21:25:40+08:00'
 ---
 
 -----------

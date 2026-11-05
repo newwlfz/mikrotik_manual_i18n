@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/bgp/session/clear"
 sidebar_position: 1
 title: "clear"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/bgp/session/clear
-captured_at: '2026-11-01T21:29:27+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/bgp/session/clear
+captured_at: '2026-11-01T21:25:05+08:00'
 ---
 
 -----------

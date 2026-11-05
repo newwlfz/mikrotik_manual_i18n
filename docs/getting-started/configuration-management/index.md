@@ -8,8 +8,8 @@ tags:
   - 'configuration-management'
   - 'system-backup'
   - 'safe-mode'
-source: https://manual.mikrotik.com/docs/getting-started/configuration-management
-captured_at: '2026-11-04T11:28:35+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/configuration-management
+captured_at: '2026-11-04T11:16:14+08:00'
 ---
 
 This article describes a set of commands used for configuration management.

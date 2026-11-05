@@ -8,8 +8,8 @@ tags:
   - 'radius'
   - 'authentication'
   - 'authorization'
-source: https://manual.mikrotik.com/docs/authentication-authorization-accounting/user-manager
-captured_at: '2026-11-04T11:27:17+08:00'
+source: https://manual.mikrotik.com/docs/7.25/authentication-authorization-accounting/user-manager
+captured_at: '2026-11-04T11:14:31+08:00'
 ---
 
 ## Overview
@@ -301,9 +301,9 @@ Sessions are logged only if accounting is enabled on the NAS.
 | :-- | :-- |
 | **accounting-port** (*integer*; Default: **1813**) | Port to listen for RADIUS accounting requests. |
 | **authentication-port**(*integer*; Default: **1812**) | Port to listen for RADIUS authentication requests. |
-| ***certificate*** (*certificate*; Default: ) | Certificate for use in EAP TLS-type authentication methods. |
+| ***certificate*** (*certificate*; Default: ) | [Certificate from certificate store](/docs/authentication-authorization-accounting/certificates) for use in EAP TLS-type authentication methods. |
 | ***enabled*** (*yes \| no*; Default: **no**) | Whether the User Manager functionality is enabled. |
-| **radsec-certificate**(certificate; Default:) | Certificate for use with RadSec protocol. |
+| **radsec-certificate**(certificate; Default:) | [Certificate from certificate store](/docs/authentication-authorization-accounting/certificates) for use with RadSec protocol. |
 | **use-profiles**(*yes \| no*; Default: **no**) | Whether to use **Profiles** and **Limitations**. When set to *no,* only **User** configuration is required to run User Manager. |
 
 ### Advanced

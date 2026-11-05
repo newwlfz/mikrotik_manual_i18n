@@ -8,8 +8,8 @@ tags:
   - 'vpdn'
   - 'l2tp'
   - 'ppp'
-source: https://manual.mikrotik.com/docs/virtual-private-networks/l2tp/lac-and-lns-setup-with-cisco-as-lac
-captured_at: '2026-11-04T11:34:39+08:00'
+source: https://manual.mikrotik.com/docs/7.25/virtual-private-networks/l2tp/lac-and-lns-setup-with-cisco-as-lac
+captured_at: '2026-11-04T11:23:15+08:00'
 ---
 
 LAC/LNS setup, otherwise known as Virtual Private DialUp Network (VPDN), allows long-distance point-to-point connection between remote dial-up users and private networks.

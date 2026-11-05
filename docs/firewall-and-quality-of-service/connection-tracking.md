@@ -8,8 +8,8 @@ tags:
   - 'connection-tracking'
   - 'firewall'
   - 'fasttrack'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/connection-tracking
-captured_at: '2026-11-04T11:28:09+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/connection-tracking
+captured_at: '2026-11-04T11:15:34+08:00'
 ---
 
 Connection tracking allows the kernel to keep track of all logical network connections or sessions, and thereby relate all of the packets which may make up that connection.

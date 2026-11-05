@@ -8,8 +8,8 @@ tags:
   - 'routing'
   - 'ospf'
 slug: /user-guides/routing-and-networking-protocols/unicast/ospf/
-source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/ospf
-captured_at: '2026-11-04T11:34:15+08:00'
+source: https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/unicast/ospf
+captured_at: '2026-11-04T11:22:49+08:00'
 ---
 
 <DocCardList />

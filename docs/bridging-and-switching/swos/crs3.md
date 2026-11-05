@@ -3,8 +3,8 @@ sidebar_key: "bridging-and-switching/swos/crs3"
 sidebar_position: 1
 title: "CRS3xx and CSS3xx Series Manual"
 sidebar_label: 'CRS3xx and CSS3xx Series Manual'
-source: https://manual.mikrotik.com/docs/bridging-and-switching/swos/crs3
-captured_at: '2026-11-04T11:27:59+08:00'
+source: https://manual.mikrotik.com/docs/7.25/bridging-and-switching/swos/crs3
+captured_at: '2026-11-04T11:15:25+08:00'
 ---
 
 ## Summary
@@ -50,7 +50,7 @@ The System tab manages general configuration parameters, device discovery option
 
 SwOS features built-in security mechanics to block unauthorized or rogue DHCP servers and PPPoE discovery sequences on specified untrusted interfaces.
 
-![CSS326 DHCP Snooping](./img/image.webp)
+![CSS326 DHCP Snooping](./img/image-0f3d52a9.webp)
 
 ### Configuration Security and Maintenance
 

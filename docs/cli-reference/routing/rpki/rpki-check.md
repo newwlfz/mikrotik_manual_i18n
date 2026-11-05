@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/rpki/rpki-check"
 sidebar_position: 2
 title: "rpki-check"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/rpki/rpki-check
-captured_at: '2026-11-01T21:29:40+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/rpki/rpki-check
+captured_at: '2026-11-01T21:25:19+08:00'
 ---
 
 -----------

@@ -7,8 +7,8 @@ description: 'MPLS is a routing technology that uses labels for faster packet fo
 tags:
   - 'mpls'
 slug: /user-guides/routing-and-networking-protocols/mpls/
-source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/mpls
-captured_at: '2026-11-04T11:33:50+08:00'
+source: https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/mpls
+captured_at: '2026-11-04T11:22:23+08:00'
 ---
 
 MPLS stands for MultiProtocol Label Switching. Instead of using IP routing, MPLS bases the packet forwarding decision (outgoing interface and next-hop router) on labels attached to a packet, rather than on fields in the IP header (such as destination address) and the routing table. This approach speeds up the forwarding process because the next-hop lookup is simpler than routing lookup (finding the longest matching prefix).

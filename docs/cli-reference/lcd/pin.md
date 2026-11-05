@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/lcd/pin"
 sidebar_position: 4
 title: "pin"
 sidebar_label: 'pin'
-source: https://manual.mikrotik.com/docs/cli-reference/lcd/pin
-captured_at: '2026-11-01T21:29:12+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/lcd/pin
+captured_at: '2026-11-01T21:24:45+08:00'
 ---
 
 -----------

@@ -8,8 +8,8 @@ tags:
   - 'caps-man'
   - 'radius'
   - 'access-list'
-source: https://manual.mikrotik.com/docs/wireless/abgn/capsman
-captured_at: '2026-11-04T11:35:26+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/abgn/capsman
+captured_at: '2026-11-04T11:23:40+08:00'
 ---
 
 :::info

@@ -8,8 +8,8 @@ tags:
   - 'radius'
   - 'authentication'
   - 'vpn'
-source: https://manual.mikrotik.com/docs/authentication-authorization-accounting/radius
-captured_at: '2026-11-04T11:27:01+08:00'
+source: https://manual.mikrotik.com/docs/7.25/authentication-authorization-accounting/radius
+captured_at: '2026-11-04T11:14:20+08:00'
 ---
 
 RADIUS, short for Remote Authentication Dial-In User Service, is a remote server that provides authentication and accounting facilities to various network appliances. RADIUS authentication and accounting allows the ISP or network administrator to manage PPP user access and accounting from one server throughout a large network. The MikroTik RouterOS has a RADIUS client that can authenticate [router's local](/docs/authentication-authorization-accounting/user) [users](/docs/authentication-authorization-accounting/user), [HotSpot](/docs/authentication-authorization-accounting/hotspot-captive-portal/), [PPP](/docs/mobile-networking/ppp) and ISDN connections. The attributes received from the RADIUS server override the ones set in the default profile, but if some parameters are not received they are taken from the respective default profile.
@@ -38,7 +38,7 @@ The order of added items in this list is significant.
 | **address** (*IPv4/IPv6 address*; Default: **0.0.0.0**) | IPv4 or IPv6 address of RADIUS server.  The following formats are accepted:  - *ipv4* - *ipv4*`@`*vrf* - *ipv6* - *ipv6*`@`*vrf* |
 | **authentication-port** (*integer [1..65535]*; Default: **1812**) | RADIUS server port used for authentication. |
 | **called-id** (*string*; Default: ) | Value depends on Point-to-Point protocol: PPPoE - service name, PPTP - server's IP address, L2TP - server's IP address. |
-| **certificate** (*string*; Default: ) | Certificate file to use for communicating with RADIUS Server with RadSec enabled. |
+| **certificate** (*string*; Default: ) | [Certificate from certificate store](/docs/authentication-authorization-accounting/certificates) to use for communicating with RADIUS Server with RadSec enabled. |
 | **comment** (*string*; Default: ) |  |
 | **disabled** (*yes \| no*; Default: **no**) |  |
 | **domain** (*string*; Default: ) | Microsoft Windows domain of client passed to RADIUS servers that require domain validation. |

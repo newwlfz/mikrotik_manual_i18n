@@ -7,8 +7,8 @@ description: 'This page provides a step-by-step CLI guide for configuring automa
 tags:
   - 'bridging'
   - 'bonding'
-source: https://manual.mikrotik.com/docs/wireless/w60g/fail-over-ptmp-cli-example
-captured_at: '2026-11-04T11:35:39+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/w60g/fail-over-ptmp-cli-example
+captured_at: '2026-11-04T11:24:10+08:00'
 ---
 
 ### Summary

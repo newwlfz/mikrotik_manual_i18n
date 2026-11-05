@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/snmp/send-trap"
 sidebar_position: 3
 title: "send-trap"
 sidebar_label: 'send-trap'
-source: https://manual.mikrotik.com/docs/cli-reference/snmp/send-trap
-captured_at: '2026-11-01T21:29:43+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/snmp/send-trap
+captured_at: '2026-11-01T21:25:23+08:00'
 ---
 
 -----------

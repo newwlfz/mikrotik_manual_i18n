@@ -7,8 +7,8 @@ description: 'The Profiler tool in RouterOS displays CPU usage for each process,
 tags:
   - 'cpu-usage'
   - 'profiler'
-source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/profiler
-captured_at: '2026-11-04T11:28:00+08:00'
+source: https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/profiler
+captured_at: '2026-11-04T11:15:24+08:00'
 ---
 
 The profiler tool shows CPU usage for each process running in RouterOS. It helps to identify which process is using most of the CPU resources.  

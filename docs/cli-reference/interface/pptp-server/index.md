@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/pptp-server/index"
 sidebar_position: 1
 title: "pptp-server"
 sidebar_label: 'pptp-server'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/pptp-server
-captured_at: '2026-11-01T21:27:34+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/pptp-server
+captured_at: '2026-11-01T21:22:58+08:00'
 ---
 
 -----------
@@ -13,20 +13,20 @@ captured_at: '2026-11-01T21:27:34+08:00'
 **Type:** Directory
 
 <ArgTable c1="Flag" c2="Name" c3="Description">
-<ArgTableRow arg="X" typ="disabled">disabled</ArgTableRow>
-<ArgTableRow arg="D" typ="dynamic">dynamic</ArgTableRow>
-<ArgTableRow arg="R" typ="running">running</ArgTableRow>
+<ArgTableRow arg="X" typ="disabled">Whether an item is disabled.</ArgTableRow>
+<ArgTableRow arg="D" typ="dynamic">Whether the server interface was created dynamically.</ArgTableRow>
+<ArgTableRow arg="R" typ="running">Whether the interface is running.</ArgTableRow>
 </ArgTable>
 
 <ArgTable c1="Argument" c2="Type" c3="Description">
-<ArgTableRow arg="name" typ="string"></ArgTableRow>
-<ArgTableRow arg="user" typ="string" mandatory="1"></ArgTableRow>
+<ArgTableRow arg="name" typ="string">Interface name.</ArgTableRow>
+<ArgTableRow arg="user" typ="string" mandatory="1">User name used for authentication.</ArgTableRow>
 </ArgTable>
 
 <ArgTable c1="Read-only Argument" c2="Type" c3="Description">
-<ArgTableRow arg="mtu" typ="num"></ArgTableRow>
-<ArgTableRow arg="mru" typ="num"></ArgTableRow>
-<ArgTableRow arg="client-address" typ="string"></ArgTableRow>
-<ArgTableRow arg="uptime" typ="time"></ArgTableRow>
-<ArgTableRow arg="encoding" typ="string"></ArgTableRow>
+<ArgTableRow arg="mtu" typ="num">Current MTU of the connection.</ArgTableRow>
+<ArgTableRow arg="mru" typ="num">Current MRU of the connection.</ArgTableRow>
+<ArgTableRow arg="client-address" typ="string">IP address of the connected client.</ArgTableRow>
+<ArgTableRow arg="uptime" typ="time">Connection uptime.</ArgTableRow>
+<ArgTableRow arg="encoding" typ="string">Encryption encoding used.</ArgTableRow>
 </ArgTable>

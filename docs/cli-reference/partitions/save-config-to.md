@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/partitions/save-config-to"
 sidebar_position: 6
 title: "save-config-to"
 sidebar_label: 'save-config-to'
-source: https://manual.mikrotik.com/docs/cli-reference/partitions/save-config-to
-captured_at: '2026-11-01T21:29:19+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/partitions/save-config-to
+captured_at: '2026-11-01T21:24:57+08:00'
 ---
 
 -----------

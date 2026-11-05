@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/certificate/scep-server/otp/index"
 sidebar_position: 2
 title: "otp"
 sidebar_label: 'otp'
-source: https://manual.mikrotik.com/docs/cli-reference/certificate/scep-server/otp
-captured_at: '2026-11-01T21:26:27+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/scep-server/otp
+captured_at: '2026-11-01T21:21:51+08:00'
 ---
 
 -----------

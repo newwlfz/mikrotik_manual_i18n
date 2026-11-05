@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ip/traffic-flow/monitor"
 sidebar_position: 3
 title: "monitor"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/traffic-flow/monitor
-captured_at: '2026-11-01T21:29:01+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/traffic-flow/monitor
+captured_at: '2026-11-01T21:24:29+08:00'
 ---
 
 -----------

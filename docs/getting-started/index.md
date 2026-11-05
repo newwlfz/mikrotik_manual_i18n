@@ -6,8 +6,8 @@ sidebar_label: 'Getting Started'
 description: 'Getting Started provides essential instructions for initial RouterOS setup including connection methods, admin interface access, and basic security tasks to bring a MikroTik router into service.'
 tags:
   - 'first-time-configuration'
-source: https://manual.mikrotik.com/docs/getting-started
-captured_at: '2026-11-04T11:28:24+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started
+captured_at: '2026-11-04T11:16:05+08:00'
 ---
 
 Getting Started covers initial RouterOS setup, configuration management, installation, licensing, upgrades, backups, and first-time security tasks. Use this section to bring a router into service and maintain the base system.
@@ -24,6 +24,6 @@ If you just unboxed a MikroTik device and want to reach its admin interface:
    - The **MikroTik mobile app** (iOS / Android)
 4. Log in as user **`admin`** with the device-specific password printed on the **sticker on the router** (also on the box it came in).
 
-You're in. When you're ready to actually configure internet access, Wi-Fi, firewall rules, and so on, follow the full [First Time Configuration](./first-time-configuration.md) guide.
+You're in. When you're ready to actually configure internet access, Wi-Fi, firewall rules, and so on, follow the full [First Time Configuration](https://manual.mikrotik.com/docs/first-time-configuration) guide.
 
 <DocCardList />

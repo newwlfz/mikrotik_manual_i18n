@@ -5,8 +5,8 @@ title: "VRRP Configuration Examples"
 description: 'This page provides basic VRRP configuration examples for MikroTik RouterOS, demonstrating how to set up master-backup redundancy between two routers with IP address sharing and ARP table updates during failover.'
 tags:
   - 'vrrp'
-source: https://manual.mikrotik.com/docs/high-availability-solutions/user-guides/vrrp-configuration-examples
-captured_at: '2026-11-04T11:30:06+08:00'
+source: https://manual.mikrotik.com/docs/7.25/high-availability-solutions/user-guides/vrrp-configuration-examples
+captured_at: '2026-11-04T11:17:55+08:00'
 ---
 
 ## Basic Setup

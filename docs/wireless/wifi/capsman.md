@@ -8,8 +8,8 @@ tags:
   - 'wifi'
   - 'caps-man'
   - 'capsman'
-source: https://manual.mikrotik.com/docs/wireless/wifi/capsman
-captured_at: '2026-11-04T11:35:57+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/wifi/capsman
+captured_at: '2026-11-04T11:24:24+08:00'
 ---
 
 :::info

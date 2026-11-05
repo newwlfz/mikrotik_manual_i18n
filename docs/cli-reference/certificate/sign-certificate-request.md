@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/certificate/sign-certificate-request"
 sidebar_position: 18
 title: "sign-certificate-request"
 sidebar_label: 'sign-certificate-request'
-source: https://manual.mikrotik.com/docs/cli-reference/certificate/sign-certificate-request
-captured_at: '2026-11-01T21:26:28+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/sign-certificate-request
+captured_at: '2026-11-01T21:21:52+08:00'
 ---
 
 -----------

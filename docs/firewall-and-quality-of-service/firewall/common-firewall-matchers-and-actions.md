@@ -7,8 +7,8 @@ description: 'This page explains MikroTik RouterOS firewall statistics and comma
 tags:
   - 'firewall'
   - 'ipv6'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/firewall/common-firewall-matchers-and-actions
-captured_at: '2026-11-04T11:28:08+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/firewall/common-firewall-matchers-and-actions
+captured_at: '2026-11-04T11:15:39+08:00'
 ---
 
 ## Stats

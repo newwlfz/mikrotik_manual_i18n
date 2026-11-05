@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/certificate/add-scep"
 sidebar_position: 3
 title: "add-scep"
 sidebar_label: 'add-scep'
-source: https://manual.mikrotik.com/docs/cli-reference/certificate/add-scep
-captured_at: '2026-11-01T21:26:24+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/add-scep
+captured_at: '2026-11-01T21:21:49+08:00'
 ---
 
 -----------

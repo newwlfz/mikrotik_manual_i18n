@@ -65,15 +65,19 @@ const config: Config = {
         docs: {
           routeBasePath: 'docs',
           sidebarPath: './sidebars.ts',
+          // The current docs directory is the newest version and is served at
+          // /docs; snapshots are served at /docs/<version>.
+          lastVersion: 'current',
           versions: {
             current: {
               label: currentVersion,
               badge: true,
+              banner: 'none',
             },
             ...Object.fromEntries(
               versionedSnapshots.map((version) => [
                 version,
-                {label: version, path: version, badge: true},
+                {label: version, path: version, badge: true, banner: 'none'},
               ]),
             ),
           },

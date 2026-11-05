@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/info/index"
 sidebar_position: 6
 title: "info"
 sidebar_label: 'info'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/info
-captured_at: '2026-11-01T21:28:00+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/info
+captured_at: '2026-11-01T21:23:21+08:00'
 ---
 
 -----------

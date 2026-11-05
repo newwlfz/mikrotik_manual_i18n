@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/bgp/session/index"
 sidebar_position: 3
 title: "session"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/bgp/session
-captured_at: '2026-11-01T21:29:28+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/bgp/session
+captured_at: '2026-11-01T21:25:05+08:00'
 ---
 
 -----------
@@ -40,8 +40,8 @@ List of BGP already established, not yet connected or disconnected sessions.
 <ArgTableRow arg="remote.gr-afi" typ="ubit (ip, ipv6, l2vpn, l2vpn-cisco, vpnv4, vpnv6)"></ArgTableRow>
 <ArgTableRow arg="remote.gr-afi-fwp" typ="ubit (ip, ipv6, l2vpn, l2vpn-cisco, vpnv4, vpnv6)"></ArgTableRow>
 <ArgTableRow arg="remote.eor" typ="ubit (ip, ipv6, l2vpn, l2vpn-cisco, vpnv4, vpnv6, evpn)">List of address families that received end-of-rib from remote peer.</ArgTableRow>
-<ArgTableRow arg="remote.role" typ="enum (provider | route-server | route-server-client | customer | peer)"></ArgTableRow>
-<ArgTableRow arg="local.role" typ="enum (ibgp | ibgp-rr | ebgp | ebgp-provider | ebgp-rs | ebgp-rs-client | ebgp-customer | ebgp-peer)"></ArgTableRow>
+<ArgTableRow arg="remote.role" typ="enum (provider | route-server | route-server-client | customer | peer)">Role received from the remote peer. See [Route Leak Prevention](/docs/user-guides/routing-and-networking-protocols/unicast/bgp/route-leak-prevention).</ArgTableRow>
+<ArgTableRow arg="local.role" typ="enum (ibgp | ibgp-rr | ebgp | ebgp-provider | ebgp-rs | ebgp-rs-client | ebgp-customer | ebgp-peer)">Locally configured role. See [Route Leak Prevention](/docs/user-guides/routing-and-networking-protocols/unicast/bgp/route-leak-prevention).</ArgTableRow>
 <ArgTableRow arg="local.address" typ="address (flags=46iv:)"></ArgTableRow>
 <ArgTableRow arg="local.port" typ="num"></ArgTableRow>
 <ArgTableRow arg="local.as" typ="super { as: as

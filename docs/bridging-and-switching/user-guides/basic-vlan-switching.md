@@ -8,8 +8,8 @@ tags:
   - 'vlan'
   - 'switch-chip'
   - 'bridging'
-source: https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/basic-vlan-switching
-captured_at: '2026-11-04T11:27:19+08:00'
+source: https://manual.mikrotik.com/docs/7.25/bridging-and-switching/user-guides/basic-vlan-switching
+captured_at: '2026-11-04T11:14:31+08:00'
 ---
 
 ---

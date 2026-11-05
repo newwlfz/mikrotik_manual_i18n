@@ -8,8 +8,8 @@ tags:
   - 'bonding'
   - 'bridging'
   - 'wireless'
-source: https://manual.mikrotik.com/docs/wireless/w60g/fail-over-ptp-cli-example
-captured_at: '2026-11-04T11:35:41+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/w60g/fail-over-ptp-cli-example
+captured_at: '2026-11-04T11:24:05+08:00'
 ---
 
 ### Summary

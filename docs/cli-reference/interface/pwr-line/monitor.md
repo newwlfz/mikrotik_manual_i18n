@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/pwr-line/monitor"
 sidebar_position: 6
 title: "monitor"
 sidebar_label: 'monitor'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/pwr-line/monitor
-captured_at: '2026-11-01T21:27:37+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/pwr-line/monitor
+captured_at: '2026-11-01T21:23:00+08:00'
 ---
 
 -----------

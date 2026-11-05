@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/disk/btrfs/transfer"
 sidebar_position: 4
 title: "transfer"
 sidebar_label: 'transfer'
-source: https://manual.mikrotik.com/docs/cli-reference/disk/btrfs/transfer
-captured_at: '2026-11-01T21:26:44+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/disk/btrfs/transfer
+captured_at: '2026-11-01T21:22:08+08:00'
 ---
 
 -----------
@@ -15,19 +15,25 @@ captured_at: '2026-11-01T21:26:44+08:00'
 **Type:** Directory
 
 <ArgTable c1="Argument" c2="Type" c3="Description">
-<ArgTableRow arg="type" typ="enum (receive | send)" mandatory="1"></ArgTableRow>
-<ArgTableRow arg="fs" typ="enum"></ArgTableRow>
-<ArgTableRow arg="send-parent" typ="enum"></ArgTableRow>
+<ArgTableRow arg="type" typ="enum (receive | send)" mandatory="1">
+Direction of the Btrfs transfer:
+- `receive` - receive a Btrfs send stream at `file`, for example the destination side of a snapshot backup between two RouterOS devices.
+- `send` - send subvolumes (snapshots) of the file system `fs` to a remote RouterOS device over SSH.
+
+Transfers use the SSH user key authentication of `/user/ssh-keys`. See [Btrfs subvolumes and snapshots](/docs/storage/btrfs/snapshots) for a working send/receive example.
+</ArgTableRow>
+<ArgTableRow arg="fs" typ="enum">Label of the Btrfs file system the transfer operates on, as shown in [`filesystem`](/docs/cli-reference/disk/btrfs/filesystem/).</ArgTableRow>
+<ArgTableRow arg="send-parent" typ="enum">Snapshot of a previous successful send to base an incremental `send` on; only the changes since that snapshot are transferred.</ArgTableRow>
 <ArgTableRow arg="send-subvolumes" typ="multi { array-id, subvolume: enum
- }"></ArgTableRow>
-<ArgTableRow arg="file" typ="file"></ArgTableRow>
-<ArgTableRow arg="ssh-address" typ="string"></ArgTableRow>
-<ArgTableRow arg="ssh-receive-mount" typ="string"></ArgTableRow>
-<ArgTableRow arg="ssh-port" typ="num"></ArgTableRow>
-<ArgTableRow arg="ssh-user" typ="string"></ArgTableRow>
+ }">Snapshots to send, for a `send` transfer. Snapshot names (not paths), as shown under [`subvolume`](/docs/cli-reference/disk/btrfs/subvolume).</ArgTableRow>
+<ArgTableRow arg="file" typ="file">Destination (or source) path of the transfer, for example the mount path `BackupBtrfsDisk/Snapshots` where received snapshots are stored.</ArgTableRow>
+<ArgTableRow arg="ssh-address" typ="string">Address of the remote RouterOS device for a `send` transfer.</ArgTableRow>
+<ArgTableRow arg="ssh-receive-mount" typ="string">Mount path on the remote device under which the snapshots are received, for example `BackupBtrfsDisk/Snapshots`.</ArgTableRow>
+<ArgTableRow arg="ssh-port" typ="num">SSH port of the remote device. Default: 22.</ArgTableRow>
+<ArgTableRow arg="ssh-user" typ="string">SSH user to authenticate with on the remote device; the SSH key of the local user must be imported for `ssh-user` on the remote device.</ArgTableRow>
 </ArgTable>
 
 <ArgTable c1="Read-only Argument" c2="Type" c3="Description">
-<ArgTableRow arg="bytes" typ="num"></ArgTableRow>
-<ArgTableRow arg="status" typ="string"></ArgTableRow>
+<ArgTableRow arg="bytes" typ="num">Number of bytes transferred so far.</ArgTableRow>
+<ArgTableRow arg="status" typ="string">Status of the transfer, for example `done`, or an error message.</ArgTableRow>
 </ArgTable>

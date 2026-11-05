@@ -7,8 +7,8 @@ description: 'This page documents PoE (Power over Ethernet) on MikroTik devices:
 tags:
   - 'poe'
   - 'power-over-ethernet'
-source: https://manual.mikrotik.com/docs/hardware/poe-out
-captured_at: '2026-11-04T11:29:29+08:00'
+source: https://manual.mikrotik.com/docs/7.25/hardware/poe-out
+captured_at: '2026-11-04T11:17:28+08:00'
 ---
 
 ## Summary
@@ -100,6 +100,7 @@ SwOS interface provides basic PoE out configuration and monitoring options, see 
 - **current-too-low** - The PD draws less current (below 10 mA) than a normal PoE out device should.
 - **no-valid-PSU** - No valid power supply unit is detected: the PSE does not have a sufficient or power-capable power source to provide PoE out on the port, so power is not applied. See [Powering requirements](#powering-requirements) for the supported source combinations.
 - **lldp-power-off** - The board is powered with PoE in and the LLDP-approved power budget received from the upstream PSE is insufficient to power the board's own PoE out ports.
+- **low-voltage-pd-detected** - The connected PD supports only low voltage and cannot be powered from this PSE with the currently selected voltage. Power is not applied, to avoid damage to the PD. Power the PD from a low voltage PSE, or switch the port to low voltage (`poe-voltage=low`) on PSEs with switchable voltage modes.
 - **voltage-on-poe-in** - Voltage is detected on the PoE out port unexpectedly, which can occur in two cases:
   - **External power source** - another device is supplying power to the port (PoE in voltage).
   - **Internal fault** - the PoE out circuitry on the port may be damaged.
@@ -245,6 +246,7 @@ Some MikroTik PoE out devices support the global PoE settings
 | **psuX-max-power**  **jack-max-power**  **2pin-max-power** | Specifies the maximum power in watts that can be drawn from the given power source (PSU, DC jack or 2-pin terminal). Default: **96W** |
 | **poe-in-max-power** | Specifies the maximum power in watts that the PoE injector (for example, 802.3bt) can deliver, when the device (PSE) itself is powered with PoE in |
 | **routerboard-max-self-power** | Specifies how much power the device reserves for itself for powering. Read-only. |
+| **routerboard-max-total-power** | Maximum power consumption of the board itself, without PoE out. It is used to calculate the PoE out budget on devices where the budget is determined by PSU power (PoE budget = PSU power − routerboard power). Read-only. |
 | **poe-out-limit-power** | Total PoE out budget limit. Read-only. |
 | **psuX-poe-out-max-power**  **jack-poe-out-max-power**  **2pin-poe-out-max-power**  **poe-in-poe-out-max-power** | PoE out limit in watts per power source (PSU, DC jack, 2-pin terminal or PoE in injector). Read-only. |
 | **version** | PoE controller (ATtiny) firmware version. Read-only. |
@@ -263,7 +265,7 @@ PoE out can be configured per port in this menu. Each port can be controlled ind
 | **poe-priority** (*integer: 0..99*; Default: **10**) | poe-priority specifies the importance of PoE out ports, in cases when a total PoE out limit is reached, the interface with the lowest port priority will be powered off first. Highest priority is 0, the lowest priority is 99. If there are 2 or more ports with the same priority then the port with the smallest port number will have a higher priority. Every 6 seconds ports will be checked for a possibility to provide PoE out if it was turned off due to port priority. |
 | **poe-voltage** (*auto \| low \| high*; Default: **auto**) | A feature that allows to manually switch between two voltage outputs on PoE out ports. It will take effect only on PSEs with switchable voltage modes ([CRS112-8P-4S-IN](https://mikrotik.com/product/crs112_8p_4s_in), [CRS328-24P-4S+RM](https://mikrotik.com/product/crs328_24p_4s_rm), [netPower 16P](https://mikrotik.com/product/netpower_16p), [CRS354-48P-4S+2Q+RM](https://mikrotik.com/product/crs354_48p_4s_2q_rm)). |
 
-Starting from RouterOS 7.15, the old **poe-lldp-enabled** port property was removed. LLDP power negotiation between a PSE and a PD is configured with the [Neighbor Discovery](/docs/system-information-and-utilities/neighbor-discovery) `lldp-poe-power` property.
+Starting from RouterOS 7.15, the old **poe-lldp-enabled** port property was removed. LLDP power negotiation between a PSE and a PD is configured with the [Neighbor Discovery](/docs/cli-reference/ip/neighbor/discovery-settings) `lldp-poe-power` property.
 
 #### Power-cycle settings
 
@@ -348,7 +350,7 @@ When powering a device with PoE in, the power source must match the device input
 - Passive PoE in on MikroTik devices uses Mode B polarity (pins 4,5 (+) and 7,8 (-)), except devices with 802.3bt PoE in, which accept power over all four pairs.
 - Powering devices that support PoE out and 802.3bt (PoE++) PoE in with an 802.3af/at PSE or a passive 2-pair injector is not considered a valid power source: PoE out will not work and the monitor shows the `no-valid-PSU` status on the PoE out ports. Use an 802.3bt PSE or a 4-pair passive injector instead.
 
-When the device itself is powered with PoE and LLDP power negotiation is used (see [Neighbor Discovery](/docs/system-information-and-utilities/neighbor-discovery) `lldp-poe-power`), the device communicates its requested power to the upstream PSE, which approves power accordingly. If the approved power is below the requested power, the monitor displays the `power-limiting port` message (see [PoE in ports](#poe-in-ports)) and some PoE out ports may not be powered.
+When the device itself is powered with PoE and LLDP power negotiation is used (see [Neighbor Discovery](/docs/cli-reference/ip/neighbor/discovery-settings) `lldp-poe-power`), the device communicates its requested power to the upstream PSE, which approves power accordingly. If the approved power is below the requested power, the monitor displays the `power-limiting port` message (see [PoE in ports](#poe-in-ports)) and some PoE out ports may not be powered.
 
 ## Examples
 
@@ -425,6 +427,7 @@ Review the PoE out budget and the read-only power limits of the device with the 
                jack-max-power: 96W
                2pin-max-power: 150W
    routerboard-max-self-power: 20W
+  routerboard-max-total-power: 30W
           poe-out-limit-power: 240W
        jack-poe-out-max-power: 66W
        2pin-poe-out-max-power: 120W

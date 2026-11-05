@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/wds/monitor"
 sidebar_position: 2
 title: "monitor"
 sidebar_label: 'monitor'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/wds/monitor
-captured_at: '2026-11-01T21:28:19+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/wds/monitor
+captured_at: '2026-11-01T21:23:30+08:00'
 ---
 
 -----------

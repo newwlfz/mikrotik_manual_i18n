@@ -1,10 +1,10 @@
 {
   "position": 12,
   "label": "Routing And Networking Protocols",
-  "key": "routing-and-networking-protocols",
+  "key": "user-guides/routing-and-networking-protocols",
   "link": {
     "type": "doc",
-    "id": "routing-and-networking-protocols/index"
+    "id": "user-guides/routing-and-networking-protocols/index"
   },
   "collapsible": true,
   "collapsed": true

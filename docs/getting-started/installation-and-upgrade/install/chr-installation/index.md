@@ -7,8 +7,8 @@ description: 'This page provides an overview of installing and configuring Cloud
 tags:
   - 'chr'
   - 'virtualization'
-source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation
-captured_at: '2026-11-04T11:28:35+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/installation-and-upgrade/install/chr-installation
+captured_at: '2026-11-04T11:16:14+08:00'
 ---
 
 ## Overview and System Requirements

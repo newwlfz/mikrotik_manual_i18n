@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/iot/wiliot/index"
 sidebar_position: 5
 title: "wiliot"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/wiliot
-captured_at: '2026-11-01T21:28:20+08:00'
+sidebar_label: 'wiliot'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/wiliot
+captured_at: '2026-11-01T21:23:43+08:00'
 ---
 
 -----------

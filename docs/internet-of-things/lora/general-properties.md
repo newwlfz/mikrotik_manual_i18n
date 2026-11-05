@@ -8,8 +8,8 @@ tags:
   - 'lora'
   - 'iot-package'
   - 'sub-menu'
-source: https://manual.mikrotik.com/docs/internet-of-things/lora/general-properties
-captured_at: '2026-11-04T11:31:13+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/lora/general-properties
+captured_at: '2026-11-04T11:18:58+08:00'
 ---
 
 Every RouterBOARD with a miniPCI-e slot which supports LTE modems can also be used as a LoRaWAN gateway by installing an **R11e-LR8** or **R11e-LR9** card. Both UDP and LNS (starting with **v7.12rc1** testing version) protocols are supported.
@@ -250,7 +250,7 @@ Custom servers can be added as well. Data forwarding to multiple servers can wor
 | **port** (*integer [0..65535]*; Default: **8887**) | Parameter that is used when LNS or CUPS protocol is selected. For LNS, defines the WSS (WebSocket) port and, for CUPS, defines the HTTPS port. |
 | **key** (*string*; Default: ) *[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | Parameter that is used when LNS or CUPS protocol is selected. Specifies the LoRa Basics Station LNS Authentication Key or CUPS API KEY (both generated on the server). |
 | **ssl** (*yes or no*; Default: no) | Parameter that is used when LNS or CUPS protocol is selected. Specifies whether to use or not to use SSL (if the server supports TLS server authentication). When this option is chosen, root SSL certificate(s) must be uploaded under the [certificates](/docs/authentication-authorization-accounting/certificates) menu. |
-| **certificate** (*list of string*; Default: **none**) | Parameter that is used when LNS or CUPS protocol is selected. Selects an uploaded client certificate (if the server awaits TLS client authentication). If TLS client authentication is not required by the server, use the default "**none**" setting. |
+| **certificate** (*list of string*; Default: **none**) | Parameter that is used when LNS or CUPS protocol is selected. Selects client [certificate from certificate store](/docs/authentication-authorization-accounting/certificates) (if the server awaits TLS client authentication). If TLS client authentication is not required by the server, use the default "**none**" setting. |
 | **interval**(*integer [0..65535]*; Default: ) | Parameter that is used when CUPS protocol is selected. Specifies the interval with which the LoRa Basics Station will query the CUPS server for configuration updates/changes. |
 
 There are a few pre-configured The Things default servers. If you deleted one and want to recover default servers, you can use the command:

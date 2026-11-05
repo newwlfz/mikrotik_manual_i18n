@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/vxlan/vteps"
 sidebar_position: 3
 title: "vteps"
 sidebar_label: 'vteps'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/vxlan/vteps
-captured_at: '2026-11-01T21:27:42+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/vxlan/vteps
+captured_at: '2026-11-01T21:23:03+08:00'
 ---
 
 -----------

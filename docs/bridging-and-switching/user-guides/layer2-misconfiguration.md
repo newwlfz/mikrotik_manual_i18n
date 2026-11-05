@@ -8,8 +8,8 @@ tags:
   - 'bridging'
   - 'hardware-offloading'
   - 'mac-learning'
-source: https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/layer2-misconfiguration
-captured_at: '2026-11-04T11:27:28+08:00'
+source: https://manual.mikrotik.com/docs/7.25/bridging-and-switching/user-guides/layer2-misconfiguration
+captured_at: '2026-11-04T11:14:48+08:00'
 ---
 
 ---

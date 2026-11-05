@@ -3,53 +3,80 @@ sidebar_key: "diagnostics-monitoring-and-troubleshooting/watchdog"
 sidebar_position: 19
 title: "Watchdog"
 sidebar_label: 'Watchdog'
-description: 'The Watchdog page in RouterOS configuration allows setting up system reboots triggered by unresponsive IP addresses or software lockups, with options for ping monitoring and automatic support output file generation via email.'
+description: 'Watchdog reboots the router when the system stops responding or when one IP address stops answering pings, and writes a support output file after a software failure.'
 tags:
   - 'watchdog'
-source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/watchdog
-captured_at: '2026-11-04T11:28:06+08:00'
+source: https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/watchdog
+captured_at: '2026-11-04T11:15:33+08:00'
 ---
 
-**Sub-menu:** `/system/watchdog`
+The watchdog reboots the router by itself in two cases, each with its own settings in `/system/watchdog`:
 
-This menu allows configuring the system to reboot, when a specific IP address does not respond, or when it detects that the software has locked up. The detection is done in two ways:
+- The software watchdog timer reboots the router when the system stops responding. This is mostly caused by a hardware malfunction, and the reboot lets the device recover by itself. It is on by default (`watchdog-timer=yes`).
+- The ping watchdog reboots the router when one IP address stops answering pings. It is off by default (`watch-address=none`).
 
-- Software watchdog timer (mostly caused by hardware malfunction): the device can recover itself with a reboot.
-- Ping watchdog can monitor connectivity to a specific IP address and trigger the reboot function.
+A watchdog reboot is an automatic `/system/reboot`, not a software failure. The watchdog timer reboots the router because a service does not respond as fast as it should. Reasons can be damaged hardware, a slow software implementation of a service, a DDoS attack, a bad configuration and others.
 
-:::info
-**Note:** These are two different Watchdog features and both have their own settings. By default software Watchdog is enabled and ping Watchdog is disabled. You can enable ping Watchdog by specifying an IP address and you can disable the software Watchdog by unsetting the Watchdog Timer option.
+## Reboot when an address stops answering
 
-**Important:** **Note:** Watchdog reboot is not a system failure. Such a reboot also will not generate an autosupout file. Watchdog reboot is `/system/reboot` automatically triggered by the operating system when some service is not responding as fast as it should. Reasons for that can vary among damaged hardware, slow software implementation for some service, DDoS attack, bad configuration and others.
-:::
-
-## Properties
-
-| Property | Description |
-| :-- | :-- |
-| **auto-send-supout** (*yes \| no*; Default: **no**) | After the support output file is automatically generated, it can be sent by email. |
-| **automatic-supout** (*yes \| no*; Default: **yes**) | When software failure happens, a file named "autosupout.rif" is generated automatically. The previous "autosupout.rif" file is renamed to "autosupout.old.rif". |
-| **no-ping-delay** (*time*; Default: 5m) | Specifies how long it will wait before trying to reach the watch-address. |
-| **ping-timeout** (*time*; Default: 60s) | Specifies the time interval in which the device will be pinged 6 times (after "no-ping-delay"). |
-| **send-email-from** (*string*; Default: ) | The e-mail address to send the support output file from. If not set, the value set in `/tool/e-mail` is used. |
-| **send-email-to** (*string*; Default: ) | The e-mail address to send the support output file to. |
-| **send-smtp-server** (*string*; Default: ) | SMTP server address to send the support output file through. If not set, the value set in `/tool/e-mail` is used. |
-| **watch-address** (*IP*; Default: ) | The system will reboot, in case 6 sequential pings to the given IP address fail. If set to none, this feature is disabled. By default, the router will reboot every 6 minutes if the watch-address is set and not reachable. |
-| **watchdog-timer** (*yes \| no*; Default: **yes**) | Whether to reboot if a system is unresponsive for a minute. |
-
-## Quick Example
-
-To make the system generate a support output file and send it automatically to support@example.com through the 192.0.2.1 in case of a software crash:
+A remote router can lose its uplink or its VPN and stay unreachable until someone restarts it, for example a router on a mast whose wireless link hangs. The ping watchdog reboots such a router when an address on the other side of the link stops answering:
 
 ```ros
-[admin@MikroTik] /system/watchdog/set auto-send-supout=yes \
-\... send-email-to=support@example.com send-smtp-server=192.0.2.1
-[admin@MikroTik] /system/watchdog> print
-      watch-address: none
-     watchdog-timer: yes
-      no-ping-delay: 5m
-   automatic-supout: yes
-   auto-send-supout: yes
-   send-smtp-server: 192.0.2.1
-      send-email-to: support@example.com
+/system/watchdog/set watch-address=192.0.2.1
 ```
+
+Use an address that is reliably up and that the router reaches through the link you care about, such as the gateway of the uplink. For a VPN, watch an address inside the tunnel, such as the tunnel address of the far end, not its public address: the public address can still answer when the tunnel is down. An address that is down for its own reasons reboots a router that works.
+
+The router pings the address six times, spread over `ping-timeout` (1 minute by default, so one ping every 10 seconds), and reboots when all six pings fail. After a boot, it waits `ping-start-after-boot` (5 minutes by default) before the first ping. On a router that has been up longer than `ping-start-after-boot`, setting `watch-address` starts the pings at once.
+
+Set `ping-start-after-boot` longer than the link needs to come up after a boot, for example a VPN or an LTE connection. Otherwise the router reboots before the link is up. After each reboot, this time is also your window to log in and set `watch-address=none`.
+
+:::warning
+If the address stays unreachable, the router reboots again after each boot, every `ping-start-after-boot` plus `ping-timeout`: about every 6 minutes with the defaults. Choose the address carefully, and keep another way in, such as console access or MAC Telnet from a neighbor.
+:::
+
+To turn the ping watchdog off:
+
+```ros
+/system/watchdog/set watch-address=none
+```
+
+The ping watchdog reboots for as long as the address does not answer. For a limited number of reboots, or for other actions when an address stops answering, use [Netwatch](/docs/diagnostics-monitoring-and-troubleshooting/netwatch) with a script.
+
+## See why the router rebooted
+
+After a ping watchdog reboot, the log shows these entries (topics `system,error,critical` for the first one):
+
+```text
+System rebooted because of ping watchdog timeout
+router rebooted
+```
+
+A ping watchdog reboot does not write a support output file (`autosupout.rif`).
+
+## Support output after a crash
+
+When the software fails, the router writes `autosupout.rif` by itself (`automatic-supout=yes`, on by default) and renames the previous file to `autosupout.old.rif`. Send these files to MikroTik support with the problem description. For more about support output files, see [Supout.rif](/docs/getting-started/supout-rif).
+
+The router can also send the file by email. For example, to send it to `support@example.com` through the SMTP server `192.0.2.1`:
+
+```ros
+/system/watchdog/set auto-send-supout=yes \
+    send-email-to=support@example.com send-smtp-server=192.0.2.1
+```
+
+When `send-email-from` or `send-smtp-server` is not set, the router uses the values from [`/tool/e-mail`](/docs/system-information-and-utilities/e-mail). While `auto-send-supout=no`, `print` does not show the email settings.
+
+## Technical details
+
+### Ping interval
+
+The interval between the pings is `ping-timeout` divided by six: 10 seconds with the default `1m`, 20 seconds with `2m`. The reboot follows a few seconds after the sixth failed ping, so it comes about `ping-timeout` after the first failed ping.
+
+Older exports call `ping-start-after-boot` `no-ping-delay`.
+
+### Software watchdog timer
+
+With `watchdog-timer=yes`, the router reboots when the system is unresponsive for a minute. Set `watchdog-timer=no` to turn it off.
+
+For all parameters, see the [`/system/watchdog`](/docs/cli-reference/system/watchdog) CLI reference.

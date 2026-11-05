@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wifi/radio/index"
 sidebar_position: 1
 title: "radio"
 sidebar_label: 'radio'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/radio
-captured_at: '2026-11-01T21:27:51+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wifi/radio
+captured_at: '2026-11-01T21:23:15+08:00'
 ---
 
 -----------

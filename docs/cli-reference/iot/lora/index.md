@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/iot/lora/index"
 sidebar_position: 2
 title: "lora"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/lora
-captured_at: '2026-11-01T21:28:12+08:00'
+sidebar_label: 'lora'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/lora
+captured_at: '2026-11-01T21:23:36+08:00'
 ---
 
 -----------

@@ -7,8 +7,8 @@ description: 'Connection Rate is a MikroTik RouterOS firewall feature that monit
 tags:
   - 'firewall'
   - 'traffic-management'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/user-guides/connection-rate
-captured_at: '2026-11-04T11:28:22+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/user-guides/connection-rate
+captured_at: '2026-11-04T11:15:59+08:00'
 ---
 
 Connection Rate is a firewall matcher that allows capturing traffic based on the present speed of the connection.

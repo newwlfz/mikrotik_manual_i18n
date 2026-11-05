@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/swos/index"
 sidebar_position: 1
 title: "swos"
-source: https://manual.mikrotik.com/docs/cli-reference/system/swos
-captured_at: '2026-11-01T21:30:10+08:00'
+sidebar_label: 'swos'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/swos
+captured_at: '2026-11-01T21:25:46+08:00'
 ---
 
 -----------

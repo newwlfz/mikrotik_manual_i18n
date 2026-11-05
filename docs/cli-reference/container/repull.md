@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/container/repull"
 sidebar_position: 8
 title: "repull"
 sidebar_label: 'repull'
-source: https://manual.mikrotik.com/docs/cli-reference/container/repull
-captured_at: '2026-11-01T21:26:39+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/container/repull
+captured_at: '2026-11-01T21:22:01+08:00'
 ---
 
 -----------

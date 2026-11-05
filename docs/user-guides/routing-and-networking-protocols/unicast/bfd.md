@@ -7,8 +7,8 @@ description: 'Bidirectional Forwarding Detection (BFD) is a low-latency protocol
 tags:
   - 'routing'
 slug: /user-guides/routing-and-networking-protocols/unicast/bfd
-source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/bfd
-captured_at: '2026-11-04T11:34:04+08:00'
+source: https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/unicast/bfd
+captured_at: '2026-11-04T11:22:38+08:00'
 ---
 
 **Bidirectional Forwarding Detection** (**BFD**) is a low‑overhead, short‑duration protocol that detects faults in the bidirectional path between two forwarding engines. This includes physical interfaces, sub‑interfaces, data links, and — as far as possible — the forwarding engines themselves, all with very low latency. It operates independently of media, data protocols, and routing protocols.
@@ -43,7 +43,7 @@ add interfaces=static
 
 Configuration entries are order sensitive, which means that in the example above we are forbidding BFD sessions explicitly on the "sfp12" interface (using [`forbid-bfd`](/docs/cli-reference/routing/bfd/configuration#forbid-bfd)) and allowing on the rest of the interfaces belonging to the "static" interface list.
 
-To be able to filter multi-hop sessions, [`addresses`](/docs/cli-reference/routing/bfd/configuration#addresses) or [`address-list`](/docs/cli-reference/routing/bfd/configuration#address-list) properties can be used to match the destination, as well as the appropriate [`vrf`](/docs/cli-reference/routing/bfd/session#vrf), if a session is not running in the "main" VRF.
+To be able to filter multi-hop sessions, [`addresses`](/docs/cli-reference/routing/bfd/configuration#addresses) or [`address-list`](/docs/cli-reference/routing/bfd/configuration#address-list) properties can be used to match the destination, as well as the appropriate [`vrf`](/docs/cli-reference/routing/bfd/configuration#vrf), if a session is not running in the "main" VRF.
 
 ```ros
 /ip firewall address-list

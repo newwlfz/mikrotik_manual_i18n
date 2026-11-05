@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/lte/index"
 sidebar_position: 6
 title: "lte"
 sidebar_label: 'lte'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/lte
-captured_at: '2026-11-01T21:27:23+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/lte
+captured_at: '2026-11-01T21:22:47+08:00'
 ---
 
 -----------
@@ -29,7 +29,7 @@ captured_at: '2026-11-01T21:27:23+08:00'
 <ArgTableRow arg="operator" typ="string">operator locking, use numeric value: mccmnc</ArgTableRow>
 <ArgTableRow arg="allow-roaming" typ="bool"></ArgTableRow>
 <ArgTableRow arg="sms-read" typ="bool">This setting is ignored if any interface is enabled in /tool/sms</ArgTableRow>
-<ArgTableRow arg="sms-protocol" typ="enum (mbim | at | auto)"></ArgTableRow>
+<ArgTableRow arg="sms-protocol" typ="enum (mbim | at | qmi | auto)"></ArgTableRow>
 <ArgTableRow arg="network-mode" typ="multi { array-id, network: enum
  }"></ArgTableRow>
 <ArgTableRow arg="band" typ="multi { array-id, band: enum

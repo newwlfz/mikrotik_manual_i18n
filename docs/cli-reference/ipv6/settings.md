@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ipv6/settings"
 sidebar_position: 10
 title: "settings"
-source: https://manual.mikrotik.com/docs/cli-reference/ipv6/settings
-captured_at: '2026-11-01T21:29:11+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ipv6/settings
+captured_at: '2026-11-01T21:24:43+08:00'
 ---
 
 -----------

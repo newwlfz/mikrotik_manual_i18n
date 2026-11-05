@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/user-manager/database/migrate-legacy-db"
 sidebar_position: 3
 title: "migrate-legacy-db"
 sidebar_label: 'migrate-legacy-db'
-source: https://manual.mikrotik.com/docs/cli-reference/user-manager/database/migrate-legacy-db
-captured_at: '2026-11-01T21:30:33+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/database/migrate-legacy-db
+captured_at: '2026-11-01T21:26:07+08:00'
 ---
 
 -----------

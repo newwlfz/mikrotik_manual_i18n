@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/container/kill"
 sidebar_position: 4
 title: "kill"
 sidebar_label: 'kill'
-source: https://manual.mikrotik.com/docs/cli-reference/container/kill
-captured_at: '2026-11-01T21:26:37+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/container/kill
+captured_at: '2026-11-01T21:22:01+08:00'
 ---
 
 -----------

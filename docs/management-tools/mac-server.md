@@ -1,69 +1,38 @@
 ---
 sidebar_key: "management-tools/mac-server"
-sidebar_position: 10
+sidebar_position: 11
 title: "MAC server"
 sidebar_label: 'MAC server'
-description: 'The MAC server section in RouterOS enables configuring MAC Telnet, WinBox, and Ping servers for router access without IP addresses. It allows restricting access to specific interfaces and provides tools to manage sessions, with examples showing how to enable/disable MAC Telnet and connect via client.'
+description: 'The RouterOS MAC server lets you reach a router by its MAC address on the same layer-2 segment, without IP configuration: connect with MAC Telnet, find routers with MAC scan, limit MAC Telnet and MAC WinBox to trusted interfaces, and use MAC ping.'
 tags:
   - 'mac-server'
   - 'mac-telnet'
   - 'mac-winbox'
-source: https://manual.mikrotik.com/docs/management-tools/mac-server
-captured_at: '2026-11-04T11:32:00+08:00'
+source: https://manual.mikrotik.com/docs/7.25/management-tools/mac-server
+captured_at: '2026-11-04T11:19:40+08:00'
 ---
 
-The MAC server section allows you to configure MAC Telnet Server, MAC WinBox Server and MAC Ping Server on a RouterOS device.
+The MAC server lets you reach a router by its MAC address from a device on the same layer-2 segment, without any IP configuration on either side. It serves three things:
 
-MAC Telnet is used to provide access to a router that has no IP address set. It works just like IP telnet. MAC telnet is possible between two MikroTik RouterOS routers only.
+- MAC Telnet - A console session, like Telnet over IP. The RouterOS client is `/tool/mac-telnet`.
+- MAC WinBox - [WinBox](/docs/management-tools/winbox) connects to the router by its MAC address.
+- MAC ping - Answers pings sent to the router's MAC address.
 
-MAC WinBox is used to provide WinBox access to the router via MAC address.
+Use MAC access to recover a router whose IP settings are wrong or missing, and for the first setup of a new router. The default configuration allows MAC Telnet and MAC WinBox only on the interfaces in the `LAN` interface list, which holds the LAN bridge: on most routers every port except the WAN port `ether1`, and the Wi-Fi interfaces. Without the default configuration, they are allowed on all interfaces. The MAC ping server is on by default. In production networks, you should turn MAC access off or limit it to trusted interfaces; see [Securing your router](/docs/getting-started/securing-your-router#routeros-mac-access). To reach routers beyond one layer-2 segment by MAC address, use [RoMON](/docs/management-tools/romon).
 
-MAC Ping is used to allow MAC pings to the router's MAC address.
+## Connect with MAC Telnet
 
-:::info
-**MAC-server** settings are included in the "system" package.
-
-:::
-
-### MAC Telnet Server
-
-It is possible to set MAC Telnet access to specific interfaces that are a part of the [interface list](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters):
+From a computer, use [WinBox](/docs/management-tools/winbox#device-list-section): the **Neighbors** tab lists the routers on the network, and selecting the MAC address connects by MAC WinBox. WinBox also has a terminal. From another RouterOS device, find the MAC address of the router with MAC scan or in the [neighbor list](/docs/system-information-and-utilities/neighbor-discovery), then connect with MAC Telnet:
 
 ```ros
-[admin@device] /tool/mac-server/set allowed-interface-list=listBridge
-[admin@device] /tool/mac-server/print
-  allowed-interface-list: listBridge
+/tool/mac-telnet FE:F1:E6:82:D5:B6
 ```
 
-In the example above, MAC Telnet is configured for the interface list "listBridge" and, as a result, MAC Telnet will only work via the interfaces that are members of the list (you can add multiple interfaces to the list).
-
-To disable MAC Telnet access, issue the command (set "allowed-interface-list" to "none"):
-
-```ros
-[admin@device] /tool/mac-server/set allowed-interface-list=none
-[admin@device] /tool/mac-server/print
-  allowed-interface-list: none
-```
-
-You can check active MAC Telnet sessions (that the device accepted) with the command:
-
-```ros
-[admin@device] > /tool/mac-server/sessions/print
-Columns: INTERFACE, SRC-ADDRESS, UPTIME
-#  INTERFACE  SRC-ADDRESS        UPTIME
-0  ether5     64:D1:54:FB:E3:E6  17s 
-```
-
-#### MAC Telnet Client
-
-When MAC Telnet Server is enabled, you can use another RouterOS device to connect to the server using the mac-telnet client:
-
-```ros
-[admin@device2] > tool mac-telnet B8:69:F4:7F:F2:E7    
+```text
 Login: admin
-Password: 
-Trying B8:69:F4:7F:F2:E7...
-Connected to B8:69:F4:7F:F2:E7
+Password:
+Trying FE:F1:E6:82:D5:B6...
+Connected to FE:F1:E6:82:D5:B6
 
   MMM      MMM       KKK                          TTTTTTTTTTT      KKK
   MMMM    MMMM       KKK                          TTTTTTTTTTT      KKK
@@ -72,96 +41,117 @@ Connected to B8:69:F4:7F:F2:E7
   MMM      MMM  III  KKK KKK   RRRRRR    OOO  OOO     TTT     III  KKK KKK
   MMM      MMM  III  KKK  KKK  RRR  RRR   OOOOOO      TTT     III  KKK  KKK
 
-  MikroTik RouterOS 7.1rc3 (c) 1999-2021       https://www.mikrotik.com/
+  MikroTik RouterOS 7.25beta5 (c) 1999-2026       https://www.mikrotik.com/
 
 Press F1 for help
-  
-[admin@device] > 
+
+[admin@Test2] >
 ```
 
-Change the MAC address according to your setup and you should get into the server's CLI (as shown in the example above).
+MAC Telnet logs in with a user name and password; SSH keys do not apply. The user's group needs the `telnet` policy. After you log in, correct the IP settings, for example in [`/ip/address`](/docs/cli-reference/ip/address). When the target does not answer or refuses the connection, for example because MAC Telnet is not allowed on the interface the request arrives on, the client prints `Trying ...` and returns to the local prompt without an error message.
 
-:::tip
-By default, a MAC Telnet client attempts to reach the destination through all active interfaces. This can generate unwanted traffic. To restrict a MAC Telnet client to a specific interface, use the `interface` property (available since RouterOS v7.22). For example: `/tool/mac-telnet 00:11:22:33:44:55 interface=ether1`
+Without `interface`, the client sends its connection attempts out of every interface of the router. To send them out of one interface only:
 
+```ros
+/tool/mac-telnet FE:F1:E6:82:D5:B6 interface=ether1
+```
+
+The router you connect to lists the open MAC Telnet sessions, with the interface the session arrived on and the MAC address of the client:
+
+```ros
+/tool/mac-server/sessions/print
+```
+
+```text
+Columns: INTERFACE, SRC-ADDRESS, UPTIME
+#  INTERFACE  SRC-ADDRESS        UPTIME
+0  ether2     DC:2C:6E:E7:10:6A  2s
+```
+
+The list shows MAC Telnet sessions only, not MAC WinBox connections. The sessions also appear in `/user/active` with `mac-telnet` in the `VIA` column.
+
+## Find routers with MAC scan
+
+MAC scan lists the devices that send MikroTik Neighbor Discovery (MNDP) announcements on an interface, with their MAC address and IPv4 address:
+
+```ros
+/tool/mac-scan interface=ether2 duration=8s
+```
+
+```text
+Columns: MAC-ADDRESS, ADDRESS, AGE
+MAC-ADDRESS        ADDRESS      AGE
+FE:F1:E6:82:D5:B6  203.0.113.1   17
+```
+
+`AGE` is the time in seconds since the device's last announcement. The list comes from [neighbor discovery](/docs/system-information-and-utilities/neighbor-discovery), not from the MAC server: a device appears whatever its MAC server settings are, and a device whose neighbor discovery is off on that interface does not appear. The list includes devices heard before the scan started, so `AGE` can be longer than `duration`; devices announce themselves every 30 seconds by default. `/ip/neighbor/print` shows the same devices with more details, such as the identity and RouterOS version.
+
+On a bridge, scan one of its ports or `interface=all`: the bridge interface itself shows no devices. Without `duration`, the scan runs until you stop it with <kbd>Control</kbd>+<kbd>C</kbd>. MAC scan is not available on devices with the SMIPS architecture.
+
+## Allow MAC access only on trusted interfaces
+
+MAC Telnet and MAC WinBox each have their own `allowed-interface-list` setting: `/tool/mac-server` for MAC Telnet and `/tool/mac-server/mac-winbox` for MAC WinBox. Each takes an [interface list](/docs/cli-reference/interface/list/).
+
+To allow MAC Telnet and MAC WinBox only on the LAN:
+
+```ros
+/tool/mac-server/set allowed-interface-list=LAN
+/tool/mac-server/mac-winbox/set allowed-interface-list=LAN
+```
+
+The default configuration already has the `LAN` list, with the LAN bridge in it. On a router without it, create the list first:
+
+```ros
+/interface/list/add name=LAN
+/interface/list/member/add list=LAN interface=bridge
+```
+
+Check the current settings with `/tool/mac-server/print` and `/tool/mac-server/mac-winbox/print`.
+
+Put the bridge in the list, not its ports: a bridge in the list allows connections that arrive through any of its ports, and a bridge port alone in the list does not allow them. A change applies to the next connection immediately; sessions that are already open stay open.
+
+To keep one port of the bridge out, for example the port of a guest Wi-Fi network, drop MAC access on it with a bridge filter rule, or put the guests on their own bridge:
+
+```ros
+/interface/bridge/filter/add chain=input in-interface=wifi2 \
+    mac-protocol=ip ip-protocol=udp dst-port=20561 action=drop
+```
+
+To turn MAC Telnet and MAC WinBox off, set the lists to `none`:
+
+```ros
+/tool/mac-server/set allowed-interface-list=none
+/tool/mac-server/mac-winbox/set allowed-interface-list=none
+```
+
+An interface list you create without members blocks MAC access in the same way.
+
+:::note
+The IP firewall does not protect MAC access: an IP filter rule that drops UDP port 20561 does not block MAC Telnet or MAC ping. Limit MAC access with `allowed-interface-list`, or with a bridge filter rule on a bridge port. For the other ports RouterOS uses, see [Services](/docs/system-information-and-utilities/services).
 :::
 
-#### MAC Scan
+## MAC ping
 
-The MAC scan feature discovers all devices that support MAC telnet protocol on the given network. The command requires you to select an interface that should be scanned:
+The MAC ping server (`/tool/mac-server/ping`) answers pings sent to the router's MAC address. It is enabled by default. To ping a MAC address, see [Ping a MAC address](/docs/diagnostics-monitoring-and-troubleshooting/ping#ping-a-mac-address).
 
-```ros
-[admin@Sw_Denissm] > /tool/mac-scan interface=all           
-MAC-ADDRESS       ADDRESS                AGE
-B8:69:F4:7F:F2:E7 192.168.69.1            26
-2C:C8:1B:FD:F2:C3 192.168.69.3            56
-```
-
-In the example above, all interfaces are chosen, and the scan will run infinitely unless stopped (by pressing "q").
-
-You can also add a "duration" parameter that will dictate how long the scan should go on:
+To turn the MAC ping server off:
 
 ```ros
-[admin@Sw_Denissm] > /tool/mac-scan interface=all duration=1
-MAC-ADDRESS       ADDRESS                AGE
-B8:69:F4:7F:F2:E7 192.168.69.1            48
-2C:C8:1B:FD:F2:C3 192.168.69.3            17
+/tool/mac-server/ping/set enabled=no
 ```
 
-In the example above, we set the "duration" parameter to 1 second.
+With the server off, the router no longer answers MAC pings, and it cannot send MAC pings either: its own MAC pings fail with the status `unknown interface`. ARP ping works in both directions regardless of this setting.
 
-### MAC WinBox Server
+## Technical details
 
-Same as with MAC Telnet, it is possible to set MAC WinBox access to specific interfaces that are a part of the [interface list](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters):
+### Transport
 
-```ros
-[admin@device] > /tool/mac-server/mac-winbox/set allowed-interface-list=listBridge 
-[admin@device] > /tool/mac-server/mac-winbox/print                   
-  allowed-interface-list: listBridge
-```
+MAC Telnet, MAC WinBox and MAC ping use UDP port 20561 inside Ethernet frames addressed to the MAC address of the target. The IP header carries the addresses 0.0.0.0 and 255.255.255.255, so the packets do not depend on IP configuration. The MAC server takes them directly from the interface, so IP firewall rules do not stop them.
 
-In the example above, MAC WinBox access is configured for the interface list "listBridge" and, as a result, MAC WinBox will only work via the interfaces that are members of the list.
+### Security
 
-To disable MAC WinBox access, issue the command (set "allowed-interface-list" to "none"):
+MAC Telnet is not encrypted. The commands you type and the router's output cross the link in clear text. The password is not sent in clear: the login uses a challenge and response. Use MAC Telnet on trusted links, for example to recover a router, and use SSH for regular access.
 
-```ros
-[admin@device] > /tool/mac-server/mac-winbox/set allowed-interface-list=none
-[admin@device] > tool mac-server mac-winbox print                   
-  allowed-interface-list: none
-```
+A MAC login has no IP address, so the `address` setting of a user in `/user` does not apply to it: a user restricted to certain IP addresses can still log in with MAC Telnet. The group policies do apply.
 
-### MAC Ping Server
-
-MAC Ping Server can be set to either "disabled" or "enabled":
-
-```ros
-[admin@device] > /tool/mac-server/ping/print
-  enabled: yes
-```
-
-You can enable or disable MAC ping with the help of the commands (**enable=yes** → to enable the feature; **enable=no** → to disable the feature):
-
-```ros
-[admin@device] > /tool/mac-server/ping/set enabled=yes
-[admin@device] > /tool/mac-server/ping/set enabled=no
-```
-
-When MAC Ping is enabled, other hosts on the same broadcast domain can use the ping tool to ping the mac address. For example, you can issue the following command to check MAC ping results:
-
-```ros
-[admin@device] > /ping 00:0C:42:72:A1:B0
-HOST                                    SIZE  TTL TIME  STATUS                                         
-00:0C:42:72:A1:B0                       56        0ms  
-00:0C:42:72:A1:B0                       56        0ms  
-    sent=2 received=2 packet-loss=0% min-rtt=0ms avg-rtt=0ms max-rtt=0ms 
-```
-
-:::warning
-If you disable the **MAC server ping** feature, the host's **ARP ping** functionality will also be disabled.
-
-:::
-
-:::tip
-By default, a MAC ping attempts to reach the destination through all active interfaces. This can generate unwanted traffic and duplicate replies if the destination is reachable via multiple interfaces. To restrict a MAC ping to a specific interface, use the interface selector (append `%` followed by the interface name to the MAC address). For example: `/ping 00:11:22:33:44:55%ether1`
-
-:::
+For all parameters, see [`/tool/mac-server`](/docs/cli-reference/tool/mac-server/), [`/tool/mac-telnet`](/docs/cli-reference/tool/mac-telnet) and [`/tool/mac-scan`](/docs/cli-reference/tool/mac-scan) in the CLI reference.

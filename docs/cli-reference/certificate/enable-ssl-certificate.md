@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/certificate/enable-ssl-certificate"
 sidebar_position: 9
 title: "enable-ssl-certificate"
 sidebar_label: 'enable-ssl-certificate'
-source: https://manual.mikrotik.com/docs/cli-reference/certificate/enable-ssl-certificate
-captured_at: '2026-11-01T21:26:26+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/enable-ssl-certificate
+captured_at: '2026-11-01T21:21:49+08:00'
 ---
 
 -----------

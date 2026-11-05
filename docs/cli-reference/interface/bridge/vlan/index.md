@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/bridge/vlan/index"
 sidebar_position: 1
 title: "vlan"
 sidebar_label: 'vlan'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/bridge/vlan
-captured_at: '2026-11-01T21:27:10+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/vlan
+captured_at: '2026-11-01T21:22:27+08:00'
 ---
 
 -----------

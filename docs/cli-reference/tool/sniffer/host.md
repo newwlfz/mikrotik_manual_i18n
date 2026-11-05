@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/tool/sniffer/host"
 sidebar_position: 2
 title: "host"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/sniffer/host
-captured_at: '2026-11-01T21:30:21+08:00'
+sidebar_label: 'host'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/sniffer/host
+captured_at: '2026-11-01T21:25:59+08:00'
 ---
 
 -----------
@@ -11,15 +12,17 @@ captured_at: '2026-11-01T21:30:21+08:00'
 ## tool/sniffer/host 
 **Type:** Directory
 
+The addresses that took part in the traffic of the last capture, with their rates and byte counts. See [Packet sniffer](/docs/diagnostics-monitoring-and-troubleshooting/packet-sniffer).
+
 <ArgTable c1="Read-only Argument" c2="Type" c3="Description">
-<ArgTableRow arg="address" typ="ipAddr"></ArgTableRow>
+<ArgTableRow arg="address" typ="ipAddr">Address seen in the captured packets.</ArgTableRow>
 <ArgTableRow arg="rate" typ="composite { in: num
 , out: num
- }"></ArgTableRow>
+ }">Rate of the address's captured traffic, in bits per second, as two values: in (to the address) and out (from the address). The rates are calculated when the capture stops; while the sniffer runs, they show 0.</ArgTableRow>
 <ArgTableRow arg="peak-rate" typ="composite { in: num
 , out: num
- }"></ArgTableRow>
+ }">Highest rate of the address's captured traffic during the capture, in bits per second (in/out), calculated when the capture stops.</ArgTableRow>
 <ArgTableRow arg="total" typ="composite { in: num
 , out: num
- }"></ArgTableRow>
+ }">Captured bytes of the address's traffic: in (to the address) and out (from the address).</ArgTableRow>
 </ArgTable>

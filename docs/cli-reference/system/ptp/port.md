@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/ptp/port"
 sidebar_position: 3
 title: "port"
-source: https://manual.mikrotik.com/docs/cli-reference/system/ptp/port
-captured_at: '2026-11-01T21:30:01+08:00'
+sidebar_label: 'port'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/ptp/port
+captured_at: '2026-11-01T21:25:37+08:00'
 ---
 
 -----------
@@ -21,8 +22,10 @@ captured_at: '2026-11-01T21:30:01+08:00'
 <ArgTable c1="Argument" c2="Type" c3="Description">
 <ArgTableRow arg="ptp" typ="enum" mandatory="1"></ArgTableRow>
 <ArgTableRow arg="interface" typ="iface_enum" mandatory="1"></ArgTableRow>
+<ArgTableRow arg="role" typ="enum (bmca | master | slave)"></ArgTableRow>
 <ArgTableRow arg="announce-interval" typ="num"></ArgTableRow>
 <ArgTableRow arg="sync-interval" typ="num"></ArgTableRow>
 <ArgTableRow arg="delay-interval" typ="num"></ArgTableRow>
 <ArgTableRow arg="pdelay-interval" typ="num"></ArgTableRow>
+<ArgTableRow arg="vlan-id" typ="num"></ArgTableRow>
 </ArgTable>

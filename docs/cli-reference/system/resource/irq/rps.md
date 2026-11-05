@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/resource/irq/rps"
 sidebar_position: 2
 title: "rps"
-source: https://manual.mikrotik.com/docs/cli-reference/system/resource/irq/rps
-captured_at: '2026-11-01T21:30:04+08:00'
+sidebar_label: 'rps'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/resource/irq/rps
+captured_at: '2026-11-01T21:25:41+08:00'
 ---
 
 -----------

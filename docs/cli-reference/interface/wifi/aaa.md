@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wifi/aaa"
 sidebar_position: 1
 title: "aaa"
 sidebar_label: 'aaa'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/aaa
-captured_at: '2026-11-01T21:27:44+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wifi/aaa
+captured_at: '2026-11-01T21:23:09+08:00'
 ---
 
 -----------

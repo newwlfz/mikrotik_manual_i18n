@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/vxlan/index"
 sidebar_position: 2
 title: "vxlan"
 sidebar_label: 'vxlan'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/vxlan
-captured_at: '2026-11-01T21:27:42+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/vxlan
+captured_at: '2026-11-01T21:23:03+08:00'
 ---
 
 -----------
@@ -45,6 +45,7 @@ captured_at: '2026-11-01T21:27:42+08:00'
 <ArgTableRow arg="arp-timeout" typ="alt { arp-timeout: enum (auto) { auto:0 }
 , arp-timeout: time
  }"></ArgTableRow>
+<ArgTableRow arg="arp-accept" typ="bool"></ArgTableRow>
 <ArgTableRow arg="loop-protect" typ="enum (default | off | on) { default:0, off:1, on:2 }"></ArgTableRow>
 <ArgTableRow arg="loop-protect-send-interval" typ="time"></ArgTableRow>
 <ArgTableRow arg="loop-protect-disable-time" typ="time"></ArgTableRow>

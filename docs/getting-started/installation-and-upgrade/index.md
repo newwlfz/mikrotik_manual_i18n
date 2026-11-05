@@ -8,8 +8,8 @@ tags:
   - 'installation'
   - 'upgrade'
   - 'netinstall'
-source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade
-captured_at: '2026-11-04T11:28:36+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/installation-and-upgrade
+captured_at: '2026-11-04T11:16:11+08:00'
 ---
 
 This section covers installation and upgrade tasks. Use it for Netinstall and related procedures when installing or recovering RouterOS.

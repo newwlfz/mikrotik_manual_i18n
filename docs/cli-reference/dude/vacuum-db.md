@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/dude/vacuum-db"
 sidebar_position: 12
 title: "vacuum-db"
 sidebar_label: 'vacuum-db'
-source: https://manual.mikrotik.com/docs/cli-reference/dude/vacuum-db
-captured_at: '2026-11-01T21:26:54+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/dude/vacuum-db
+captured_at: '2026-11-01T21:22:18+08:00'
 ---
 
 -----------

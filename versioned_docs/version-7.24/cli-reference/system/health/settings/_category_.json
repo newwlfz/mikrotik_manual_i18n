@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "Settings",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/health/settings/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/health/settings"
+}

@@ -1,193 +1,195 @@
 ---
 sidebar_key: "management-tools/ssh"
-sidebar_position: 6
+sidebar_position: 7
 title: "SSH"
 sidebar_label: 'SSH'
-description: 'RouterOS includes a built-in SSH server with customizable settings such as cipher configurations, key types, and forwarding options. It supports password and public-key authentication, with commands to export/import host keys and regenerate them. PKI authentication can be enabled by importing public keys for users.'
+description: 'RouterOS includes a built-in SSH server and client. The server is customizable (ciphers, key types, forwarding, password and public-key authentication) and its host key can be exported, imported and regenerated. The client (ssh and ssh-exec) verifies remote host keys against stored known hosts.'
 tags:
   - 'ssh'
-source: https://manual.mikrotik.com/docs/management-tools/ssh
-captured_at: '2026-11-04T11:32:05+08:00'
+source: https://manual.mikrotik.com/docs/7.25/management-tools/ssh
+captured_at: '2026-11-04T11:19:46+08:00'
 ---
 
-## SSH Server
+RouterOS provides an SSH (SSH v2) server for managing the router remotely, and an SSH client for connecting from the router to other devices. It has two client commands: [`/system/ssh`](/docs/cli-reference/system/ssh) for interactive sessions and manual commands, and [`/system/ssh-exec`](/docs/cli-reference/system/ssh-exec) for non-interactive use in scripts and the scheduler.
 
-RouterOS has a built-in SSH (SSH v2) server that is enabled by default and is listening for incoming connections on port TCP/22. It is possible to change the port and disable the server under the [Services](/docs/system-information-and-utilities/services) menu.
+## SSH server
 
-### Properties
+The SSH server is enabled by default and listens for incoming connections on port TCP/22. You can change the port and disable the server under the [Services](/docs/system-information-and-utilities/services) menu.
 
-**Sub-menu:** `/ip/ssh`
+See the [`/ip/ssh`](/docs/cli-reference/ip/ssh) CLI reference for parameter descriptions.
 
-| Property | Description |
-| :-- | :-- |
-| **password-authentication** (*yes-if-no-key* \| *yes \| no*; Default: **yes-if-no-key**) | Whether to allow password login at the same time when public key authorization is configured for a user. |
-| **ciphers** (*3des-cbc *\| aes-cbc \| aes-ctr \| aes-gcm \| auto \| null*;* Default: **auto**) | Allows configuration of SSH ciphers. |
-| **forwarding-enabled** (*both \| local \| no \| remote*; Default: **no**) | Allows control of which SSH forwarding method to allow:no - SSH forwarding is disabled;local - Allows SSH clients to originate connections from the server(router), this setting controls also dynamic forwarding;remote - Allows SSH clients to listen on the server(router) and forward incoming connections;both - Allows both local and remote forwarding methods. |
-| **host-key-size** (*1024 \| 1536 \| 2048 \| 4096 \| 8192*; Default: **2048**) | RSA key size when host key is being regenerated. |
-| **host-key-type** (*ed25519* \| *rsa*; Default: **rsa**) | Select host key type |
-| **publickey-authentication-options**  (*none* \| *touch-required* \| *verify-required*; Default: **none**) | Sets public key authentication options.  The touch-required option causes public key authentication using a FIDO authenticator algorithm to always require the signature to attest that a physically present user explicitly confirmed the authentication (usually by touching the authenticator).  The verify-required option requires a FIDO key signature to attest that the user was verified, e.g. via a PIN. |
-| **strong-crypto** (*yes \| no*; Default: **no**) | Use stronger encryption, HMAC algorithms, use bigger DH primes and disallow weaker ones:use 256 and 192 bit encryption instead of 128 bits;disable null encryption;use sha256 for hashing instead of sha1;disable md5;use 2048bit prime for Diffie-Hellman exchange instead of 1024bit. |
+### Server host key
 
-### Commands
+The router's SSH host key is generated automatically. Show the fingerprint of the current key with:
 
-**export-host-key** (*key-file-prefix*)
+```ros
+/ip/ssh/print
+```
 
-Export public and private RSA/Ed25519 to files. Command takes two parameters:
+The read-only `host-key-fingerprint` value lets an administrator confirm they are connecting to the right router.
 
-- **key-file-prefix** - used prefix for generated files, for example, prefix 'my' will generate files 'my_rsa', 'my_rsa.pub' etc.
-- **passphrase** - private key passphrase [sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)
+Create a new host key pair, for example after the old key leaked, with:
+
+```ros
+/ip/ssh/regenerate-host-key
+```
+
+Changing `host-key-type` also regenerates the key immediately. After any regeneration, SSH clients that pinned the old key report a fingerprint mismatch; distribute the new fingerprint (`/ip/ssh/print`) or update the pinned entries.
 
 :::info
-Host keys are exported in PKCS#8 format.
+If the host key is an RSA key with a weak public exponent (7 or lower), the SSH host key is automatically regenerated and the event is logged:
 
-**Warning:** Exporting the SSH host key requires "sensitive" user policy.
+```text
+ssh,critical host key uses insecure RSA public exponent! Host key will be regenerated!
+```
+
 :::
 
----
+The default host key type is Ed25519 on new installations; routers upgraded from older RouterOS versions keep their RSA key.
 
-**import-host-key** (*private-key-file*)
+Move the host key to another router (for example when replacing hardware) with [`export-host-key`](/docs/cli-reference/ip/ssh/export-host-key) and [`import-host-key`](/docs/cli-reference/ip/ssh/import-host-key). Exported files are named after `key-file-prefix`, for example `bbu_rsa.pem` and `bbu_rsa_pub.pem` for an RSA key with `key-file-prefix=bbu`.
 
-Import and replace private RSA/Ed25519 key from specified file. Command takes two parameters:
+### Log in with a public key
 
-- **private-key-file** - name of the private RSA/Ed25519 key file
-- **passphrase** - private key passphrase [sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)
-
-:::info
-Private key is supported in PEM or PKCS#8 format.
-:::
-
----
-
-**regenerate-host-key** ()
-
-Generate new and replace the current set of private keys (RSA/Ed25519) on the router. Be aware that previously imported keys might stop working.
-
-### Enabling PKI authentication
-
-Example of importing a public key for user **admin**
-
-[Get SSH key pair on the client device](#log-in-using-ssh-key) (the device you will connect from). Upload the public SSH key to the router and import it.
-
-More information about supported SSH keys can be found in [User SSH keys](/docs/authentication-authorization-accounting/user#ssh-keys) section.
+To enable PKI authentication for incoming connections, import the public key of the connecting user. Generate the key pair on the connecting device first (see [Log in with an SSH key](#log-in-with-an-ssh-key)), upload the public key file to the router, and import it for the user:
 
 ```ros
 /user/ssh-keys/import public-key-file=id_rsa.pub user=admin
 ```
 
-### SSH key pair generation
+When at least one key is assigned to a user, password login is refused for that user (with the default `password-authentication=yes-if-no-key`). More about supported key formats in the [User SSH keys](/docs/authentication-authorization-accounting/user#ssh-keys) section.
 
-RouterOS does not support direct SSH key generation, which is available on Linux systems.
+## SSH client
 
-To obtain SSH key pair (SSH key pair is automatically generated on the first SSH connection), the device's SSH host key must be [exported](#commands).
+The interactive [`/system/ssh`](/docs/cli-reference/system/ssh) command connects the router to a remote host over SSH. It is used from the console; for scripts and the scheduler, use [`ssh-exec`](#run-remote-commands-from-scripts).
 
-## SSH Client
+### Log in to a remote host
 
-**Sub-menu:** `/system/ssh`
-
-### **Simple log-in to remote host**
-
-It is able to connect to a remote host and initiate an ssh session. The IP address supports both IPv4 and IPv6.
+Connect to a remote host and initiate an SSH session. The address works with IPv4 and IPv6:
 
 ```ros
-/system/ssh 192.168.88.1
+/system/ssh 192.168.88.3
 /system/ssh 2001:db8:add:1337::beef
 ```
 
-In this case the user name provided to the remote host is one that has logged into the router. If another value is required, then *user=\<username>* has to be used.
+The command passes the username of the router account you are logged in as. Use `user=<username>` to log in as a different user:
 
 ```ros
-/system/ssh 192.168.88.1 user=lala
-/system/ssh 2001:db8:add:1337::beef user=lala
+/system/ssh 192.168.88.3 user=noc
+/system/ssh 2001:db8:add:1337::beef user=noc
 ```
 
-### **Log-in from certain IP address of the router**
+### Log in from a specific address of the router
 
-For testing or security reasons it may be required to log in to another host using a certain source address of the connection. In this case *src-address=\<ip address>* argument has to be used. Note that IP address in this case supports both IPv4 and IPv6.
+To log in to a host from a specific source address (for example for firewall rules or testing), use the `src-address=<ip address>` argument. The address works with IPv4 and IPv6:
 
 ```ros
-/system/ssh 192.168.88.1 src-address=192.168.89.2
+/system/ssh 192.168.88.3 src-address=192.168.89.2
 /system/ssh 2001:db8:add:1337::beef src-address=2001:db8:bad:1000::2
 ```
 
-In this case, the ssh client will try to bind to the address specified and then initiate an ssh connection to the remote host.
+In this case, the SSH client binds to the specified address and then initiates the SSH connection to the remote host.
 
-### **Log-in using SSH key**
+### Log in with an SSH key
 
-Example of importing an RSA private key for user *admin.*
+RouterOS cannot generate user key pairs on its own, so the key pair has to come from elsewhere. Either generate an RSA or Ed25519 key pair on your management device, or reuse the router's own host key pair: export it with [`/ip/ssh/export-host-key`](/docs/cli-reference/ip/ssh/export-host-key) and import the exported private key file.
 
-First, export currently generated SSH keys to a file:
+Upload the private key file to the router (with the Files menu in WinBox or over SFTP) and import it for the user that makes the outgoing connection:
 
 ```ros
-/ip/ssh/export-host-key key-file-prefix=admin
+/user/ssh-keys/private/import user=admin private-key-file=id_rsa
 ```
 
-Two files *admin\_rsa* and *admin\_rsa.pub* will be generated. The pub file needs to be trusted on the SSH server side ([how to enable SSH PKI on RouterOS](/docs/management-tools/ssh#enabling-pki-authentication)). The private key has to be added for the particular user.
+Only a user with full rights on the router can change the `user` attribute value under `/user/ssh-keys/private`.
+
+The key file must be in PEM format (PKCS#1, PKCS#8, or encrypted PKCS#8). Keys in the OpenSSH private key format ("BEGIN OPENSSH PRIVATE KEY") are rejected; generate the key with `ssh-keygen -m PEM` or convert an existing one with `ssh-keygen -p -m PEM`.
+
+The corresponding public key must be installed on the SSH server side (for RouterOS servers, see [Log in with a public key](#log-in-with-a-public-key)). With the private key imported, SSH sessions log in without a password:
 
 ```ros
-/user/ssh-keys/private/import user=admin private-key-file=admin_rsa
+/system/ssh 192.168.88.3
 ```
 
-:::danger
-Only a user with full rights on the router can change the 'user' attribute value under *`/user/ssh-keys/private`*
-:::
+Watch how to log in with an [RSA key](http://youtube.com/watch?v=8tt7fSvdFRM) or [Ed25519 key](http://youtube.com/watch?v=be-pBwhjRWA).
 
-After the public key is installed and trusted on the SSH server, a PKI SSH session can be created.
+### Verify remote host keys
 
-```ros
-/system/ssh 192.168.1.1
+Without verification, the SSH client accepts any host key, which makes the connection vulnerable to an on-path attacker. Client host key verification is controlled by `known-hosts-validation` in [`/ip/ssh`](/docs/cli-reference/ip/ssh/): it is enabled by default on new installations; routers upgraded from older RouterOS versions keep the previous setting, so validation stays off there until you enable it.
+
+Trusted server keys are kept in [`/ip/ssh/known-hosts`](/docs/cli-reference/ip/ssh/known-hosts).
+
+With validation enabled, the interactive client asks on the first connection to a new server and pins the key on confirmation:
+
+```text
+host key not trusted: SHA256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+do you want to trust this host key? <y/n>
 ```
 
-Watch how to:
+When a server later presents a different key than the pinned one, the client does not proceed silently and asks whether to update the stored key:
 
-Log in with an [RSA key](http://youtube.com/watch?v=8tt7fSvdFRM).
+```text
+host key mismatch for 192.168.88.3
+old fingerprint: SHA256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+new fingerprint: SHA256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+do you want to update the host key? <y/n>
+```
 
-Log in with [Ed25519](http://youtube.com/watch?v=be-pBwhjRWA).
+Non-interactive commands cannot ask: `ssh-exec` (and fetch over SFTP) fails with `host key not trusted` for an unknown or mismatched server. For scripted connections, pin the server key in advance, pass `known-hosts-ignore=yes` to skip validation for that one command, or set `known-hosts-trusted-subnets` to skip validation for whole subnets, for example a management network.
 
-### **Executing remote commands**
-
-To execute a remote command it has to be supplied at the end of the log-in line
+Pin a server's key in advance with its public key — get the OpenSSH-format key line (`<type> <base64>`) from the server's administrator or from a workstation with `ssh-keyscan 192.168.88.3`, and add it:
 
 ```ros
-/system/ssh 192.168.88.1 "/ip/address/print"
-/system/ssh 192.168.88.1 command="/ip/address/print"
+/ip/ssh/known-hosts/add host=192.168.88.3 key="ssh-ed25519 AAAA..." \
+    comment="backup server"
+```
+
+Answering `y` to the interactive client's trust prompt pins the key the same way, so a scripted `ssh-exec` that failed with `host key not trusted` works after one interactive `/system/ssh` login where you confirm the key.
+
+With validation disabled, no host key is asked about or stored, and any key is accepted.
+
+### Run a command on a remote host
+
+To execute a remote command, supply it at the end of the log-in line:
+
+```ros
+/system/ssh 192.168.88.3 "/ip/address/print"
+/system/ssh 192.168.88.3 command="/ip/address/print"
 /system/ssh 2001:db8:add:1337::beef "/ip/address/print"
 /system/ssh 2001:db8:add:1337::beef command="/ip/address/print"
 ```
 
-:::danger
-*If the server does not support pseudo-tty (ssh -T or ssh host command), like MikroTik ssh server, then it is not possible to send multiline commands via SSH*
+:::note
+The MikroTik SSH server does not provide pseudo-tty (the `ssh -T` mode in OpenSSH). Multiline commands, for example `"/ip/address \n add address=1.1.1.1/24"`, fail on older RouterOS versions; RouterOS 7.25 and later execute them.
 :::
 
-For example, sending a command `"/ip/address \n add address=1.1.1.1/24"` to a MikroTik router will fail.
+If you wish to execute remote commands through **scripts** or **scheduler**, use the [`ssh-exec`](/docs/cli-reference/system/ssh-exec) command.
 
-:::warning
-If you wish to execute remote commands via **scripts** or **scheduler**, use the command **ssh-exec**.
-:::
+## Run remote commands from scripts
 
-## SSH exec
+The `ssh-exec` command is a non-interactive SSH command, allowing you to execute commands on a remote device through scripts and the scheduler. See the [`ssh-exec`](/docs/cli-reference/system/ssh-exec) CLI reference for parameter descriptions.
 
-**Sub-menu:** `/system/ssh-exec`
+### Retrieve information
 
-Command *ssh-exec* is a non-interactive ssh command, thus allowing to execute commands remotely on a device via scripts and scheduler.
+The command returns two values:
 
-### **Retrieve information**
+- **exit-code**: the exit code reported by the remote command shell — `0` when the command ran; a command that `exit`s sets that code. Failures of RouterOS commands instead come back as error text in `output`
+- **output**: returns the output of the remotely executed command, including error messages like `input does not match any value...` when the remote command fails
 
-The command will return two values:
-
-- **exit-code**: returns 0 if the command execution succeeded
-- **output**: returns the output of the remotely executed command
-
-**Example:** The Code below will retrieve the interface status of ether1 from device 10.10.10.1 and output the result to "Log"
+**Example:** The following code retrieves the link status of ether1 from device 10.10.10.1 and outputs the result to "Log". The example assumes the user `remote` is set up for public-key authentication (no `password=` on the command line) and that the server's host key is pinned, as required by [host key verification](#verify-remote-host-keys) on new installations:
 
 ```ros
-:local Status ([/system/ssh-exec address=10.10.10.1 user=remote command=":put ([/interface/ethernet/monitor [find where name=ether1] once as-value]->\"status\")" as-value]->"output")
-:log info $Status
+:local res ([/system/ssh-exec address=10.10.10.1 user=remote \
+    command=":put ([/interface ethernet monitor ether1 once as-value]->\"status\")" \
+    as-value])
+:log info ($res->"output")
 ```
 
 :::warning
-For security reasons you should not use a plain text password with parameter "password" specified in the command line. To ensure safe execution of the command remotely, it is strongly recommended to use SSH PKI authentication for users on both sides.
+Do not put a plain-text password in the `password` parameter on the command line; it ends up in scripts and command history. Use SSH PKI authentication for users on both sides instead.
 
-**Caution:** The user group and script policy executing the command require **test** permission
+The user group and script policy executing the command require **test** permission.
 :::
 
 Watch how to [execute commands through SSH](http://youtube.com/watch?v=JfGfPSicTzs).
+
+See the [`/ip/ssh`](/docs/cli-reference/ip/ssh/), [`/system/ssh`](/docs/cli-reference/system/ssh) and [`/system/ssh-exec`](/docs/cli-reference/system/ssh-exec) CLI references for all parameters.

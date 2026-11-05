@@ -8,8 +8,8 @@ tags:
   - 'queue-types'
   - 'pfifo'
   - 'caffe'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/queue-types
-captured_at: '2026-11-04T11:28:16+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/queues/queue-types
+captured_at: '2026-11-04T11:15:52+08:00'
 ---
 
 ## Overview

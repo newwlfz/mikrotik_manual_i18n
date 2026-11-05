@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/resource/hardware/index"
 sidebar_position: 2
 title: "hardware"
-source: https://manual.mikrotik.com/docs/cli-reference/system/resource/hardware
-captured_at: '2026-11-01T21:30:02+08:00'
+sidebar_label: 'hardware'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/resource/hardware
+captured_at: '2026-11-01T21:25:39+08:00'
 ---
 
 -----------
@@ -17,6 +18,7 @@ captured_at: '2026-11-01T21:30:02+08:00'
 </ArgTable>
 
 <ArgTable c1="Read-only Argument" c2="Type" c3="Description">
+<ArgTableRow arg="device-name" typ="string"></ArgTableRow>
 <ArgTableRow arg="location" typ="string"></ArgTableRow>
 <ArgTableRow arg="parent" typ="enum"></ArgTableRow>
 <ArgTableRow arg="type" typ="enum (usb | pci | scsi | serial)"></ArgTableRow>

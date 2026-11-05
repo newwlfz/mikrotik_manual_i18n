@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/sniffer/save"
 sidebar_position: 3
 title: "save"
 sidebar_label: 'save'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/sniffer/save
-captured_at: '2026-11-01T21:28:04+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/sniffer/save
+captured_at: '2026-11-01T21:23:29+08:00'
 ---
 
 -----------

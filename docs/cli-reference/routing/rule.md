@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/rule"
 sidebar_position: 16
 title: "rule"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/rule
-captured_at: '2026-11-01T21:29:40+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/rule
+captured_at: '2026-11-01T21:25:20+08:00'
 ---
 
 -----------

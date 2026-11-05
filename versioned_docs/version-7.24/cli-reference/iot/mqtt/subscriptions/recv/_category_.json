@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "Recv",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/iot/mqtt/subscriptions/recv/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/iot/mqtt/subscriptions/recv"
+}

@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/bridge/monitor"
 sidebar_position: 6
 title: "monitor"
 sidebar_label: 'monitor'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/bridge/monitor
-captured_at: '2026-11-01T21:26:59+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/monitor
+captured_at: '2026-11-01T21:22:25+08:00'
 ---
 
 -----------
@@ -42,6 +42,6 @@ captured_at: '2026-11-01T21:26:59+08:00'
  }"></ArgTableRow>
 <ArgTableRow arg="registered-vlan-ids" typ="multi { vlan-range: range
  }"></ArgTableRow>
-<ArgTableRow arg="mlag-state" typ="string"></ArgTableRow>
-<ArgTableRow arg="mlag-active-role" typ="enum (primary | secondary)"></ArgTableRow>
+<ArgTableRow arg="mlag-state" typ="string">Shows the MLAG connection state: `connected` when ICCP is established, `connecting` while the peers establish or re-establish the connection, or an error such as `peer port not running` when the configured peer port is unavailable.</ArgTableRow>
+<ArgTableRow arg="mlag-active-role" typ="enum (primary | secondary)">The peer with the lowest `priority` acts as the primary device. If the priorities are the same, the peer with the lowest bridge MAC address becomes the primary. The `system-id` of the primary device is used for sending the (R/M)STP BPDU bridge identifier and LACP system ID. The role is shown after a successful MLAG connection.</ArgTableRow>
 </ArgTable>

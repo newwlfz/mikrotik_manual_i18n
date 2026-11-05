@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/mpls/ldp/local-mapping"
 sidebar_position: 5
 title: "local-mapping"
-source: https://manual.mikrotik.com/docs/cli-reference/mpls/ldp/local-mapping
-captured_at: '2026-11-01T21:29:15+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/ldp/local-mapping
+captured_at: '2026-11-01T21:24:47+08:00'
 ---
 
 -----------

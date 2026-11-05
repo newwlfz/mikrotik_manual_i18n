@@ -3,13 +3,13 @@ sidebar_key: "storage/btrfs/snapshots"
 sidebar_position: 4
 title: "Btrfs subvolumes and snapshots"
 sidebar_label: 'Btrfs subvolumes and snapshots'
-description: 'This page guides users through creating Btrfs subvolumes and snapshots on MikroTik RouterOS, explaining how to organize data, format disks, set up subvolumes like Documents and Photos, and create snapshots for efficient backups without duplicating data.'
+description: 'This page guides users through creating Btrfs subvolumes and snapshots in RouterOS, explaining how to organize data, format disks, set up subvolumes like Documents and Photos, and create snapshots for efficient backups without duplicating data.'
 tags:
   - 'storage'
   - 'btrfs'
   - 'snapshots'
-source: https://manual.mikrotik.com/docs/storage/btrfs/snapshots
-captured_at: '2026-11-04T11:32:58+08:00'
+source: https://manual.mikrotik.com/docs/7.25/storage/btrfs/snapshots
+captured_at: '2026-11-04T11:21:35+08:00'
 ---
 
 :::info
@@ -40,10 +40,10 @@ Subvolumes are most useful when used together with snapshots. Be sure to check o
    /disk/format <disk-name-1> file-system=btrfs
    ```
 
-3. Add a label for the Btrfs disk for simplicity:  
+3. Add a label for the Btrfs disk for simplicity (by default it is automatically labelled `<disk-name-1>-fs` after the format):  
 
    ```routeros
-   /disk/btrfs/filesystem/set [find where present-devs=<disk-name-1>] label=BtrfsDisk
+   /disk/btrfs/filesystem/set [find where devs=<disk-name-1>] label=BtrfsDisk
    ```
 
 4. You can also change the Btrfs disk mount point for simplicity:  
@@ -204,7 +204,7 @@ While you can create snapshots of a root subvolume, it is recommended to create 
 
 ## Transfer your snapshots
 
-Btrfs allows you to easily send a snapshot between two devices that are using Btrfs. In this example we will use two RouterOS devices running the Storage package. The RouterOS device containing snapshots that need to be backed up is going to be called `RouterA` and the RouterOS device that is going to receive backups is going to be called `RouterB`.
+Btrfs allows you to easily send a snapshot between two devices that are using Btrfs with [`/disk/btrfs/transfer`](/docs/cli-reference/disk/btrfs/transfer) on both sides: a `send` entry on the sender and a `receive` entry on the receiver. In this example we will use two RouterOS devices running the Storage package. The RouterOS device containing snapshots that need to be backed up is going to be called `RouterA` and the RouterOS device that is going to receive backups is going to be called `RouterB`.
 
 :::info
 
@@ -280,7 +280,7 @@ openssl pkey -in btrfstransfer_key.pem -pubout -out btrfstransfer_key_pub.pem
    Where:  
    - `BtrfsDisk` is the Btrfs disk label found under `/disk/btrfs/filesystem/print` on `RouterA`.
    - `Documents-23012025` is the snapshot name (not the path).
-    - `btrfstransfer` is the SSH user on `RouterB`.
+   - `btrfstransfer` is the SSH user on `RouterB`.
    - `BackupBtrfsDisk` is the Btrfs disk label found under `/disk/btrfs/filesystem/print` on `RouterB`.
    - `Snapshots` is the subvolume for your snapshots under `BackupBtrfsDisk`.
 8. On `RouterB` set up type `receive` :  

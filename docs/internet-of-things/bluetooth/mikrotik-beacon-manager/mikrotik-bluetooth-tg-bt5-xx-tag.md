@@ -3,8 +3,8 @@ sidebar_key: "internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-blue
 sidebar_position: 5
 title: "MikroTik Bluetooth TG-BT5-XX tag changelog"
 sidebar_label: 'MikroTik Bluetooth TG-BT5-XX tag changelog'
-source: https://manual.mikrotik.com/docs/internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-bluetooth-tg-bt5-xx-tag
-captured_at: '2026-11-04T11:30:06+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-bluetooth-tg-bt5-xx-tag
+captured_at: '2026-11-04T11:17:54+08:00'
 ---
 
 ## 2.5.0

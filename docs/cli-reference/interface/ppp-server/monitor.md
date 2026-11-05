@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/ppp-server/monitor"
 sidebar_position: 2
 title: "monitor"
 sidebar_label: 'monitor'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/ppp-server/monitor
-captured_at: '2026-11-01T21:27:33+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ppp-server/monitor
+captured_at: '2026-11-01T21:22:56+08:00'
 ---
 
 -----------

@@ -1,4 +1,4 @@
 {
-  "version": "7.24",
+  "version": "7.25",
   "rule": "The external content workflow writes the current version here; Docusaurus serves docs/ at /docs and snapshots at /docs/<version>."
 }

@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Dhcp Client",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/dhcp-client/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/dhcp-client"
+}

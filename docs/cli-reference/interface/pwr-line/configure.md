@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/pwr-line/configure"
 sidebar_position: 2
 title: "configure"
 sidebar_label: 'configure'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/pwr-line/configure
-captured_at: '2026-11-01T21:27:36+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/pwr-line/configure
+captured_at: '2026-11-01T21:23:00+08:00'
 ---
 
 -----------

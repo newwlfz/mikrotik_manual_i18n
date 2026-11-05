@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wifi/cap"
 sidebar_position: 3
 title: "cap"
 sidebar_label: 'cap'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/cap
-captured_at: '2026-11-01T21:27:44+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wifi/cap
+captured_at: '2026-11-01T21:23:06+08:00'
 ---
 
 -----------

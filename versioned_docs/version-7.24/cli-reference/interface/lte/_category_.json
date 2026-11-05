@@ -1,0 +1,11 @@
+{
+  "position": 19,
+  "label": "Lte",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/lte/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/lte"
+}

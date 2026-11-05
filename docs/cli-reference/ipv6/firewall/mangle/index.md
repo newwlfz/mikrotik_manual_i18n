@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ipv6/firewall/mangle/index"
 sidebar_position: 1
 title: "mangle"
-source: https://manual.mikrotik.com/docs/cli-reference/ipv6/firewall/mangle
-captured_at: '2026-11-01T21:29:07+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ipv6/firewall/mangle
+captured_at: '2026-11-01T21:24:38+08:00'
 ---
 
 -----------
@@ -87,7 +87,11 @@ Action to take if a packet is matched by the rule:
 <ArgTableRow arg="address-list" typ="enum ()">Name of the address list to be used. Applicable if the action is `add-dst-to-address-list` or `add-src-to-address-list`.</ArgTableRow>
 <ArgTableRow arg="address-list-timeout" typ="alt { address-list-timeout: enum (none-dynamic | none-static) { none-dynamic:0, none-static:0xffffffff }
 , address-list-timeout: time [ .. 21474836]
- }">Time interval after which the address will be removed from the address list specified by the `address-list` parameter. Used in conjunction with `add-dst-to-address-list` or `add-src-to-address-list` actions.  `none-dynamic` (`00:00:00`) will leave the address in the address list till reboot.  `none-static` will leave the address in the address list forever and will be included in the configuration export/backup.</ArgTableRow>
+ }">
+How long the address stays in `address-list` after the `add-src-to-address-list` or `add-dst-to-address-list` action adds it. With a time, the rule adds a dynamic entry (`D`) that the router removes when the time ends; each new match of the rule resets the time to its full value. The maximum is `35w3d13h13m56s`. An address that is already a static entry in the list stays static.
+- `none-dynamic` (`0s`) - Add a dynamic entry without a timeout. It is not saved in the configuration and a reboot clears it.
+- `none-static` - Add a static entry. It is saved in the configuration and in exports, and stays after a reboot until you remove it.
+</ArgTableRow>
 <ArgTableRow arg="src-address-type" typ="super { !
 , type: ubit (unicast, local, anycast, multicast, unreachable)
  }">Matches the source address type: `unicast` - an IP address used for point-to-point transmission.  `local` - the address is assigned to one of the router's interfaces.  `anycast` - a packet sent to the nearest node in a group.  `multicast` - a packet is forwarded to a defined group of devices.  `unreachable` - the address is unreachable.</ArgTableRow>
@@ -192,7 +196,6 @@ Action to take if a packet is matched by the rule:
 , [mode] [ :enum (packet | bit) { packet:0, bit:1 }]
  }">
 Matches packets up to a limited rate (packet rate or bit rate). A rule with this matcher will match until this limit is reached. Parameters are written in the following format: `rate[/time],burst:mode`.
-
 - `rate` - packet or bit count per time interval to match.
 - `time` - specifies the time interval in which the packet or bit rate cannot be exceeded (optional, 1s will be used if not specified).
 - `burst` - initial number of packets or bits to match: this number gets recharged every 10ms so burst should be at least 1/100 of a rate per second.
@@ -205,7 +208,6 @@ Matches packets up to a limited rate (packet rate or bit rate). A rule with this
 , [expire] [ /time]
  }">
 Matches packets until a given rate is exceeded. Rate is defined as packets per time interval. As opposed to the `limit` matcher, every flow has its own limit. Flow is defined by a mode parameter. Parameters are written in the following format: `rate[/time],burst,mode[/expire]`.
-
 - `rate` - packet count per time interval per-flow to match.
 - `time` - specifies the time interval in which the packet count rate per flow cannot be exceeded (optional, 1s will be used if not specified).
 - `burst` - initial number of packets per flow to match: this number gets recharged by one every time/rate, up to this number.
@@ -242,7 +244,6 @@ Matches packets until a given rate is exceeded. Rate is defined as packets per t
 , [policy] ,enum (none | ipsec) { none:0, ipsec:1 }
  }">
 Matches the policy used by IPsec. Value is written in the following format: `direction, policy`.
-
 - `in` - valid in the PREROUTING, INPUT, and FORWARD chains.
 - `out` - valid in the POSTROUTING, OUTPUT, and FORWARD chains.
 - `ipsec` - matches if the packet is subject to IPsec processing.

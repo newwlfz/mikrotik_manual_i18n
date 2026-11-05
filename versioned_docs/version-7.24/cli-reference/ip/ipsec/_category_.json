@@ -1,0 +1,7 @@
+{
+  "position": 10,
+  "label": "Ipsec",
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/ipsec"
+}

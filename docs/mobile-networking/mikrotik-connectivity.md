@@ -7,8 +7,8 @@ description: 'MikroTik Connectivity introduces an eSIM solution for seamless dev
 tags:
   - 'esim'
   - 'connectivity'
-source: https://manual.mikrotik.com/docs/mobile-networking/mikrotik-connectivity
-captured_at: '2026-11-04T11:32:57+08:00'
+source: https://manual.mikrotik.com/docs/7.25/mobile-networking/mikrotik-connectivity
+captured_at: '2026-11-04T11:21:13+08:00'
 ---
 
 ### Summary

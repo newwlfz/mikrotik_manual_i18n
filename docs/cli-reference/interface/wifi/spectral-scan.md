@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wifi/spectral-scan"
 sidebar_position: 24
 title: "spectral-scan"
 sidebar_label: 'spectral-scan'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/spectral-scan
-captured_at: '2026-11-01T21:27:56+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wifi/spectral-scan
+captured_at: '2026-11-01T21:23:16+08:00'
 ---
 
 -----------

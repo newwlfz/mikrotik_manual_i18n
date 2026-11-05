@@ -1,17 +1,16 @@
 ---
 sidebar_key: "storage/index"
-sidebar_position: 13
+sidebar_position: 14
 title: "Storage"
 sidebar_label: 'Storage'
-description: 'This page documents RouterOS storage features including disk encryption, RAID configurations, Btrfs/XFS filesystems, network protocols like iSCSI and NFS, media sharing via DLNA, file synchronization with rsync, and ROSE package enhancements for enterprise-level storage management across multiple platforms.'
+description: 'This page documents RouterOS storage features including disk encryption, RAID configurations, Btrfs/XFS filesystems, network protocols like iSCSI and NFS, media sharing via DLNA, file synchronization with rsync, and the Storage package that adds enterprise-level storage management.'
 tags:
   - 'storage'
   - 'filesystems'
   - 'smb'
-source: https://manual.mikrotik.com/docs/storage
-captured_at: '2026-11-04T11:32:50+08:00'
+source: https://manual.mikrotik.com/docs/7.25/storage
+captured_at: '2026-11-04T11:21:21+08:00'
 ---
-
 This section covers RouterOS storage features: disk-level options (encryption, RAID, filesystems such as Btrfs), network storage protocols (iSCSI, NFS, SMB, NVMe over TCP), media sharing (DLNA), and file synchronization (rsync).
 
 <DocCardList />
@@ -22,6 +21,6 @@ While regular drives are supported, for reliability purposes we recommend using 
 
 :::
 
-The **ROSE (RouterOS Enterprise)** package adds data center functionality to RouterOS — supporting disk monitoring, improved formatting with BTRFS and XFS file systems, RAIDs, rsync, iSCSI, NVMe over TCP, NFS, and an SMB client. This functionality is currently supported on **arm, arm64, x86** and **tile** platforms.
+The **Storage package** (shown as `rose-storage` under `/system/package/print`) adds data-center functionality to RouterOS - disk monitoring with S.M.A.R.T., the Btrfs and XFS file systems, RAID, rsync, iSCSI, NVMe over TCP, NFS, and an SMB client. It is currently supported on **arm, arm64, x86** and **tile** platforms.
 
-The built-in SMB **server** and DLNA media server are part of the base system and do not require the ROSE package — see the [SMB](https://manual.mikrotik.com/docs/smb) and [DLNA Media Server](https://manual.mikrotik.com/docs/dlna) pages.
+The built-in SMB **server** and DLNA media server are part of the base system and do not require the Storage package - see the [SMB](./smb) and [DLNA Media Server](./dlna) pages.

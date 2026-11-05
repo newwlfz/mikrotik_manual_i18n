@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Lease",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/dhcp-server/lease/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/dhcp-server/lease"
+}

@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ip/kid-control/pause"
 sidebar_position: 3
 title: "pause"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/kid-control/pause
-captured_at: '2026-11-01T21:28:49+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/kid-control/pause
+captured_at: '2026-11-01T21:24:14+08:00'
 ---
 
 -----------

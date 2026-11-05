@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/queue/tree/index"
 sidebar_position: 1
 title: "tree"
-source: https://manual.mikrotik.com/docs/cli-reference/queue/tree
-captured_at: '2026-11-01T21:29:23+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/queue/tree
+captured_at: '2026-11-01T21:24:59+08:00'
 ---
 
 -----------

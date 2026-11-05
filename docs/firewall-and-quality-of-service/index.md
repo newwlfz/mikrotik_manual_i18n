@@ -8,8 +8,8 @@ tags:
   - 'firewall'
   - 'qos'
   - 'nat'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service
-captured_at: '2026-11-04T11:28:07+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service
+captured_at: '2026-11-04T11:15:36+08:00'
 ---
 
 This section covers RouterOS firewall, NAT, connection tracking, queues, packet flow, and QoS features. Use it to secure traffic, classify packets, and control bandwidth or forwarding behavior.

@@ -1,13 +1,13 @@
 ---
 sidebar_key: "containers/user-guides/container-mosquitto-mqtt-server"
-sidebar_position: 5
+sidebar_position: 6
 title: "Container - mosquitto MQTT server"
 description: 'This page introduces using MikroTik RouterOS containers to run an eclipse-mosquitto MQTT server for IoT applications, detailing container setup steps including networking, environment variables, and mounts with SSL support warnings.'
 tags:
   - 'mqtt'
   - 'container'
-source: https://manual.mikrotik.com/docs/containers/user-guides/container-mosquitto-mqtt-server
-captured_at: '2026-11-04T11:27:42+08:00'
+source: https://manual.mikrotik.com/docs/7.25/containers/user-guides/container-mosquitto-mqtt-server
+captured_at: '2026-11-04T11:15:01+08:00'
 ---
 
 ## Introduction
@@ -32,12 +32,11 @@ At the time, when the guide was published, the **eclipse-mosquitto** image was a
 
 **A very basic** and **quick** configuration will be shown. Make sure to check the [mosquitto documentation](https://mosquitto.org/documentation/) page for more information about additional options and settings you can implement. If you want to use it for production, please **make sure to harden the security** in any way possible:
 
-- [Firewall](/docs/firewall-and-quality-of-service/firewall/), so that access to the container is allowed only from your trusted IP addresses;
+- [Firewall](https://manual.mikrotik.com/docs/cli-reference/ip/firewall/filter/filter), so that access to the container is allowed only from your trusted IP addresses;
 - Increasing security from the mosquitto broker/server-side → use strong passwords, non-standard ports etc.;
 - Use SSL MQTT.
 
 :::
-
 ## Container configuration
 
 **Sub-menu:** `/container`
@@ -95,7 +94,6 @@ Make sure that you have "Registry URL" set accordingly, limit RAM usage (if nece
 ```ros
 /container/config/set registry-url=https://registry-1.docker.io tmpdir=pull
 ```
-
 ### Pull image
 
 ```ros
@@ -103,7 +101,6 @@ Make sure that you have "Registry URL" set accordingly, limit RAM usage (if nece
 ```
 
 After running the command, RouterOS should start "extracting" the package. Check "File System" for newly created folders and monitor container status with the command `/container/print`.
-
 ### Setting up mosquitto configuration file
 
 To get the **mosquitto.conf** file, we will need to use SFTP (file transfer over SSH) protocol, so make sure that SSH [service](/docs/system-information-and-utilities/services) is enabled. You can also use FTP.
@@ -196,7 +193,6 @@ Restart the container:
 ```
 
 Make sure to wait for the container to stop (`status=stopped` should be shown after using the `/container/print` command) before initiating it again.
-
 ### Starting the container
 
 After you make sure that the container has been added and the status has changed to `status=stopped` after using `/container/print` → you can initiate it:

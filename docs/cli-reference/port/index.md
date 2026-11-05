@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/port/index"
 sidebar_position: 1
 title: "port"
 sidebar_label: 'port'
-source: https://manual.mikrotik.com/docs/cli-reference/port
-captured_at: '2026-11-01T21:29:20+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/port
+captured_at: '2026-11-01T21:24:55+08:00'
 ---
 
 -----------
@@ -23,6 +23,7 @@ captured_at: '2026-11-01T21:29:20+08:00'
 <ArgTableRow arg="parity" typ="enum (none | odd | even) { none:0, odd:1, even:2 }"></ArgTableRow>
 <ArgTableRow arg="stop-bits" typ="enum (1 | 2) { 1:1, 2:2 }"></ArgTableRow>
 <ArgTableRow arg="flow-control" typ="enum (xon-xoff | hardware | none) { xon-xoff:0, hardware:1, none:2 }"></ArgTableRow>
+<ArgTableRow arg="latency-timer" typ="num" unset="1"></ArgTableRow>
 <ArgTableRow arg="rts" typ="enum (off | on)"></ArgTableRow>
 <ArgTableRow arg="dtr" typ="enum (off | on)"></ArgTableRow>
 </ArgTable>

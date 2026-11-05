@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ipv6/nd/prefix/index"
 sidebar_position: 2
 title: "prefix"
-source: https://manual.mikrotik.com/docs/cli-reference/ipv6/nd/prefix
-captured_at: '2026-11-01T21:29:08+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ipv6/nd/prefix
+captured_at: '2026-11-01T21:24:42+08:00'
 ---
 
 -----------

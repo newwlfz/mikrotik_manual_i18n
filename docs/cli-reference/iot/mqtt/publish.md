@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/iot/mqtt/publish"
 sidebar_position: 5
 title: "publish"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/mqtt/publish
-captured_at: '2026-11-01T21:28:19+08:00'
+sidebar_label: 'publish'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/mqtt/publish
+captured_at: '2026-11-01T21:23:42+08:00'
 ---
 
 -----------

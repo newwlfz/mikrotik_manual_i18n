@@ -3,69 +3,131 @@ sidebar_key: "diagnostics-monitoring-and-troubleshooting/detect-internet"
 sidebar_position: 17
 title: "Detect Internet"
 sidebar_label: 'Detect Internet'
-description: 'Detect Internet is a RouterOS tool that categorizes monitored interfaces into states like Internet, WAN, LAN, and unknown, with warnings about DHCP client installation and state transitions based on link status and cloud reachability.'
+description: 'Detect Internet gives each watched interface a state (lan, wan, internet and others) from its link, its routes and MikroTik cloud reachability, and keeps interface lists up to date with the result.'
 tags:
   - 'detnet'
   - 'detect-internet'
-source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/detect-internet
-captured_at: '2026-11-04T11:27:56+08:00'
+source: https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/detect-internet
+captured_at: '2026-11-04T11:15:16+08:00'
 ---
 
-Detect Internet is a tool that categorizes monitored interfaces into the following states - **Internet**, **WAN**, **LAN**, **unknown**, **slave**, and **no-link**.
+Detect Internet watches the interfaces in `detect-interface-list` and gives each one a state: whether it has a link, whether the router's route to the internet goes through it, and whether MikroTik's cloud server answers through it. It adds each interface to the LAN, WAN or internet interface list you name, so settings and scripts that use those lists follow the current state of the interfaces.
 
-:::warning
-Note that Detect Internet can install DHCP clients, default routes, DNS servers and affect other facilities.
-Use with caution, and after enabling the service, check how it interferes with your other configuration.
+Detect Internet is off by default (`detect-interface-list=none`), and the hAP ax² default configuration does not turn it on. While it runs, the router contacts `cloud.mikrotik.com` on UDP port 30000 to check the internet state, see [Communication with MikroTik Cloud Services](/docs/network-management/cloud/communication-mikrotik-cloud-servers).
+
+:::note
+Detect Internet changes the members of the interface lists by itself. Rules and settings that use these lists change their effect whenever an interface changes its state.
 :::
 
-### State
+## See which interface has internet
 
-This submenu displays the status of all monitored interfaces defined by the *detect-interface-list* parameter:
+Create a list for the interfaces with internet, and watch all interfaces:
 
 ```ros
-/interface/detect-internet/state/print
+/interface/list/add name=internet
+/interface/detect-internet/set detect-interface-list=all \
+    internet-interface-list=internet
 ```
 
-### LAN
-
-All layer 2 interfaces initially have this state.
-
-### WAN
-
-Any L3 tunnel and LTE interfaces will initially have this state. Layer 2 interfaces can obtain this state if the following conditions are met:
-
-- An interface has an active route to 8.8.8.8 in the main routing table.
-- An interface can obtain (dynamic DHCP client is created) or has obtained an address from DHCP (does not apply if the DHCP server is also running Detect Internet on the DHCP server interface).
-
-:::warning
-WAN interface can fall back to LAN state only when link status changes. LAN interfaces get locked to LAN after 1h and then change only when link status changes.
-:::
-
-### Internet
-
-*WAN* interfaces that can reach cloud.mikrotik.com using UDP protocol port 30000 can obtain this state. Reachability is checked every 2 minutes. By default, if the cloud is not reached for 4 minutes, the state falls back to **WAN**.
-
-## Configuration
-
-**Sub-menu:** `/interface/detect-internet`
-
-| Property | Description |
-| :-- | :-- |
-| **detect-interface-list** (*interface list*; Default: **none**) | All interfaces in the list will be monitored by Detect Internet |
-| **internet-interface-list** (*interface list*; Default: **none**) | Interfaces with state Internet will be dynamically added to this list |
-| **lan-interface-list** (*interface list*; Default: **none**) | Interfaces with state Lan will be dynamically added to this list |
-| **wan-interface-list** (*interface list*; Default: **none**) | Interfaces with state Wan will be dynamically added to this list |
-| **request-interval**(time; Default: **2m**) | Time interval between checks of interface status |
+The state of each interface shows in the `state` menu:
 
 ```ros
-[admin@MikroTik] > /interface/detect-internet/print 
-detect-interface-list: none
-lan-interface-list: none
-wan-interface-list: none
-internet-interface-list: none
-[admin@MikroTik] > /interface/detect-internet/set internet-interface-list=all wan-interface-list=all lan-interface-list=all detect-interface-list=all 
-[admin@MikroTik] > /interface/detect-internet/state/print 
+[admin@MikroTik] > /interface/detect-internet/state/print
 Columns: NAME, STATE, STATE-CHANGE-TIME, CLOUD-RTT
-# NAME STATE STATE-CHANGE-TIME CLO
-0 ether1 internet 2020-12-22 13:46:18 5ms
+#  NAME    STATE     STATE-CHANGE-TIME    CLOUD-RTT
+0  lo      lan       2026-10-01 13:48:56
+1  ether1  no-link   2026-10-01 13:48:56
+2  ether2  slave     2026-10-01 13:48:56
+3  ether3  slave     2026-10-01 13:48:56
+4  ether4  slave     2026-10-01 13:48:56
+5  ether5  slave     2026-10-01 13:48:56
+6  wifi1   slave     2026-10-01 13:48:56
+7  wifi2   slave     2026-10-01 13:48:56
+8  bridge  internet  2026-10-01 13:49:02  12ms
 ```
+
+This router gets its internet from another router on its LAN, so its `bridge` has the internet state. On a typical home router, the internet state goes to the interface with the default route, for example `ether1`. Ports of the bridge show as `slave`, and `ether1` has no cable here (`no-link`). `lo` is the router's loopback interface, shown as `lan`.
+
+The interface with the internet state is a dynamic member of the `internet` list:
+
+```ros
+[admin@MikroTik] > /interface/list/member/print where list=internet
+Flags: D - DYNAMIC
+Columns: LIST, INTERFACE
+#   LIST      INTERFACE
+;;; INTERNET detected
+0 D internet  bridge
+```
+
+## Use the lists with care
+
+The lists change on their own: an interface leaves the `internet` or `wan` list when its state changes, and every interface is `lan` again after a link change. Do not use these lists for trust decisions, for example in firewall rules that accept traffic, and do not set them to the `LAN` and `WAN` lists of the default configuration. They fit informational use, for example in scripts that report which line has the internet.
+
+Set `lan-interface-list` and `wan-interface-list` to fill lists for the other states in the same way.
+
+## How the states work
+
+| State | Meaning |
+| :-- | :-- |
+| `no-link` | The interface has no link. |
+| `slave` | The interface is a port of a bridge or another interface, for example a bridge port or a Wi-Fi interface in a bridge. |
+| `lan` | The start state of layer 2 interfaces, and the state again after a link change. |
+| `unknown` | The router is checking the interface. It lasts about 6 seconds. |
+| `wan` | The router's active route to 8.8.8.8 goes through the interface. Layer 3 tunnels, such as IPIP, become `wan` when their link comes up. |
+| `internet` | A `wan` interface through which the router reaches `cloud.mikrotik.com` on UDP port 30000. The router's route to the cloud server must go through this interface. |
+
+The router checks an interface again after a link change, a route change or a change of the Detect Internet settings. These rules decide what can change:
+
+- An interface that has stayed `lan` for an hour is locked. It changes only after a link change, also when a route to 8.8.8.8 goes through it later.
+- A `wan` interface goes back to `lan` only after a link change.
+- An `internet` interface falls back to `wan` when the cloud server stops answering (after about 4 minutes with the default `request-interval`), or when the route to the cloud server no longer goes through the interface. When the server answers again, the interface gets the `internet` state back.
+- With two equal-cost routes to 8.8.8.8 through different interfaces, neither interface becomes `wan`.
+
+A link change means that the link of the interface goes down and comes up again, for example when a cable is unplugged and plugged in, or when the interface is disabled and enabled.
+
+:::note
+Detect Internet shows which interface the router's active route uses, not the health of every line. A backup line whose route is not active stays `lan`, and after an hour it is locked, so Detect Internet is not a health check for failover. A /32 route to 8.8.8.8 through one line, which some failover setups use, keeps the `wan` state on that line. To check backup lines, use routes with `check-gateway` (see [Failover (WAN backup)](/docs/high-availability-solutions/load-balancing/failover-wan-backup)) or [Netwatch](/docs/diagnostics-monitoring-and-troubleshooting/netwatch).
+:::
+
+Each state change is logged with the topic `interface`, for example `ether1 detect WAN`.
+
+## Troubleshoot
+
+When every interface stays `lan`:
+
+- Check that the router's active route to the internet goes through the interface:
+
+  ```ros
+  /ip/route/print where active and dst-address=0.0.0.0/0
+  ```
+
+- An interface that stayed `lan` for an hour is locked. Disable and enable it, or unplug and plug in its cable, so that the router checks it again.
+- With two equal-cost routes to 8.8.8.8 through different interfaces, neither becomes `wan`.
+
+When an interface is `wan` but never `internet`, check that the router's route to `cloud.mikrotik.com` goes through that interface, and that UDP port 30000 to the cloud server is not blocked on the way.
+
+## Technical details
+
+### Cloud check
+
+For a `wan` interface, the router sends a 32-byte UDP message to `cloud.mikrotik.com` port 30000, and the server sends it back. The router sends the message at half of `request-interval`, so about every minute with the default of 2 minutes. `request-interval` takes values from 1 minute to 1 day. `CLOUD-RTT` in the `state` menu shows the round-trip time of the last answer.
+
+### Dynamic list members
+
+Each dynamic member of a list gets a comment with the state that added it: `LAN detected`, `WAN detected` or `INTERNET detected`.
+
+### Settings changes
+
+A change of the Detect Internet settings checks all watched interfaces again. Each interface shows `unknown` for a few seconds and then its state.
+
+## Turn it off
+
+Stop watching the interfaces:
+
+```ros
+/interface/detect-internet/set detect-interface-list=none
+```
+
+This also removes the dynamic members from the lists. With no interfaces to watch, Detect Internet no longer contacts the cloud server.
+
+For all parameters, see the CLI reference for [`/interface/detect-internet`](/docs/cli-reference/interface/detect-internet/) and [`/interface/detect-internet/state`](/docs/cli-reference/interface/detect-internet/state).

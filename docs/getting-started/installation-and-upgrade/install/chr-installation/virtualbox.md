@@ -7,8 +7,8 @@ tags:
   - 'virtualbox'
   - 'routeros-configuration'
   - 'network-adapters'
-source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation/virtualbox
-captured_at: '2026-11-04T11:32:04+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/installation-and-upgrade/install/chr-installation/virtualbox
+captured_at: '2026-11-04T11:18:34+08:00'
 ---
 
 ## CHR VirtualBox Installation Video

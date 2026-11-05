@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wifi/trigger-radar"
 sidebar_position: 26
 title: "trigger-radar"
 sidebar_label: 'trigger-radar'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/trigger-radar
-captured_at: '2026-11-01T21:27:54+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wifi/trigger-radar
+captured_at: '2026-11-01T21:23:16+08:00'
 ---
 
 -----------

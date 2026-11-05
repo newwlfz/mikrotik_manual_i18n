@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/lte/esim/esim-id"
 sidebar_position: 4
 title: "esim-id"
 sidebar_label: 'esim-id'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim/esim-id
-captured_at: '2026-11-01T21:27:26+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/lte/esim/esim-id
+captured_at: '2026-11-01T21:22:50+08:00'
 ---
 
 -----------

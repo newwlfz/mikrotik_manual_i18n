@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/ethernet/switch/stats"
 sidebar_position: 25
 title: "stats"
 sidebar_label: 'stats'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/stats
-captured_at: '2026-11-01T21:27:19+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ethernet/switch/stats
+captured_at: '2026-11-01T21:22:43+08:00'
 ---
 
 -----------

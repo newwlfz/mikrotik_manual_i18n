@@ -7,8 +7,8 @@ description: 'This page provides comprehensive instructions for resetting MikroT
 tags:
   - 'reset-configuration'
   - 'led'
-source: https://manual.mikrotik.com/docs/getting-started/configuration-management/routeros-configuration-reset
-captured_at: '2026-11-04T11:28:42+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/configuration-management/routeros-configuration-reset
+captured_at: '2026-11-04T11:16:46+08:00'
 ---
 
 ## How to Reset Configuration

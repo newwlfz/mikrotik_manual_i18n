@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/queue/interface"
 sidebar_position: 1
 title: "interface"
-source: https://manual.mikrotik.com/docs/cli-reference/queue/interface
-captured_at: '2026-11-01T21:29:21+08:00'
+sidebar_label: 'queue'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/queue/interface
+captured_at: '2026-11-01T21:24:57+08:00'
 ---
 
 -----------

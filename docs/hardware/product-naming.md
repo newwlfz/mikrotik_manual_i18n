@@ -8,8 +8,8 @@ tags:
   - 'routerboard'
   - 'product-naming'
   - 'board-features'
-source: https://manual.mikrotik.com/docs/hardware/product-naming
-captured_at: '2026-11-04T11:29:29+08:00'
+source: https://manual.mikrotik.com/docs/7.25/hardware/product-naming
+captured_at: '2026-11-04T11:17:33+08:00'
 ---
 
 ## Introduction

@@ -8,8 +8,8 @@ tags:
   - 'wiliot'
   - 'mqtt'
   - 'bluetooth'
-source: https://manual.mikrotik.com/docs/internet-of-things/wiliot
-captured_at: '2026-11-04T11:31:46+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/wiliot
+captured_at: '2026-11-04T11:19:17+08:00'
 ---
 
 **[Wiliot](https://www.wiliot.com/company)** is an **Internet of Things** company that is known for their [IoT Pixels](https://www.wiliot.com/product/iot-pixels) (labels) amongst other solutions. The great benefit of the pixel is that it is a battery free and label-size (compact) Bluetooth "tag" (that broadcasts Bluetooth beacons with telemetry data).
@@ -179,7 +179,7 @@ To change MQTT server's settings:
 | Property | Description |
 | :-- | :-- |
 | **address** (Default: ) | IP/domain name address of the MQTT server. |
-| **certificate** (Default: ) | Specify certificate to be used for the SSL MQTT connection if required by the server. |
+| **certificate** (Default: ) | Specify [certificate from certificate store](/docs/authentication-authorization-accounting/certificates) to be used for the SSL MQTT connection if required by the server. |
 | **name** (Default: ) | Server's name. |
 | **port** (Default: ) | TCP port used by the MQTT server. |
 | **ssl** (yes \| no; Default: ) | To enable SSL communication with the server. |

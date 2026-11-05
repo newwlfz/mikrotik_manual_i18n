@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/gps/index"
 sidebar_position: 1
 title: "gps"
-source: https://manual.mikrotik.com/docs/cli-reference/system/gps
-captured_at: '2026-11-01T21:29:49+08:00'
+sidebar_label: 'gps'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/gps
+captured_at: '2026-11-01T21:25:29+08:00'
 ---
 
 -----------

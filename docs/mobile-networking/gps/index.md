@@ -6,8 +6,8 @@ sidebar_label: 'GPS'
 description: 'This page documents GPS configuration and monitoring in MikroTik RouterOS, covering properties like channel selection, coordinate formats, GPS initialization strings, and monitoring commands with parameters such as date-and-time, latitude/longitude, altitude, satellites, and data age.'
 tags:
   - 'gps'
-source: https://manual.mikrotik.com/docs/mobile-networking/gps
-captured_at: '2026-11-04T11:32:12+08:00'
+source: https://manual.mikrotik.com/docs/7.25/mobile-networking/gps
+captured_at: '2026-11-04T11:20:06+08:00'
 ---
 
 This section covers GPS tracking examples. Use it to send RouterOS GPS data to HTTP endpoints, MQTT brokers, and IoT platforms.

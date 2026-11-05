@@ -3,278 +3,422 @@ sidebar_key: "diagnostics-monitoring-and-troubleshooting/log/index"
 sidebar_position: 2
 title: "Log"
 sidebar_label: 'Logs'
-description: 'This section provides an overview of MikroTik RouterOS logging capabilities, covering how to view and filter log messages in real-time using the `/log` menu, along with detailed configuration options for forwarding logs to external systems via `/system/logging`.'
+description: 'RouterOS logs system events in topics; rules in /system/logging send them to memory, a disk, the console, a syslog server (UDP, TCP or TLS; syslog or CEF format), email or a script. Read the log with /log/print.'
 tags:
   - 'logging'
+  - 'syslog'
   - 'system-management'
-source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/log
-captured_at: '2026-11-04T11:27:59+08:00'
+source: https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/log
+captured_at: '2026-11-04T11:15:27+08:00'
 ---
+RouterOS writes events to the system log: logins and login failures, configuration changes and who made them, interfaces going up and down, DHCP leases, protocol state changes and errors. Each entry has a time, one or more topics that say where it comes from and how important it is (for example `dhcp,info` or `system,error,critical`), and a message.
 
-This section covers log export and integration examples. Use it to forward RouterOS logs to external systems such as Elasticsearch.
+Two menus decide what is kept and where it goes:
 
-<DocCardList />
+- Rules in `/system/logging` select entries by their topics and pass them to an action.
+- Actions in `/system/logging/action` store the entries in memory or in files on a disk, print them on the console, send them to a syslog server or by email, or run a script.
 
-RouterOS is capable of logging various system events and status information. Logs can be saved in router memory (RAM), disk, file, sent by email or even sent to a remote syslog server.
+The default configuration has four rules:
 
-[Video: Logging Basics](http://youtube.com/watch?v=E-QAhaWtsnU)
+| Topics | Action | Result |
+| :-- | :-- | :-- |
+| `info` | `memory` | Kept in RAM. |
+| `error` | `memory` | Kept in RAM. |
+| `warning` | `memory` | Kept in RAM. |
+| `critical` | `echo` | Printed on open terminals, and at the next login when no terminal is open. |
 
-## Log messages
+The `memory` action keeps the newest 1000 entries, and they are lost when the router reboots. Debug messages are not logged by default. To keep the log across reboots, log to a disk or to a syslog server.
 
-**Sub-menu:** `/log`
+For a video introduction, see [Logging basics](https://www.youtube.com/watch?v=E-QAhaWtsnU).
 
-All messages stored in router's local memory can be printed from the `/log` menu. Each entry contains time and date when the event occurred, topics that this message belongs to and the message itself.
+## Read the log
+
+`/log/print` shows the entries kept in memory, oldest first. Filter them with `where`: `topics~` matches a pattern against the topics, `message~` against the message text.
 
 ```ros
-[admin@MikroTik] /log> print 
-1970-01-02 02:00:09 system,info router rebooted 
-sep/15 09:54:33 system,info,account user admin logged in from 10.1.101.212 via winbox 
-sep/15 12:33:18 system,info item added by admin 
-sep/15 12:34:26 system,info mangle rule added by admin 
-sep/15 12:34:29 system,info mangle rule moved by admin 
-sep/15 12:35:34 system,info mangle rule changed by admin 
-sep/15 12:42:14 system,info,account user admin logged in from 10.1.101.212 via telnet 
-sep/15 12:42:55 system,info,account user admin logged out from 10.1.101.212 via telnet 
-01:01:58 firewall,info input: in:ether1 out:(none), src-mac 00:21:29:6d:82:07, proto UDP, 
-10.1.101.1:520->10.1.101.255:520, len 452
+[admin@MikroTik] > /log/print where topics~"interface|dhcp"
+ 2026-10-02 17:34:34 interface,info lo link up
+ 2026-10-02 17:34:42 interface,info ether2 link up (speed 1G, full duplex)
+ 2026-10-02 17:34:47 dhcp,info bridge on bridge got IP address 192.168.88.36
 ```
 
-If logs are printed on the same date when the log entry was added, then only the time will be shown. In the example above you can see that the second message was added on sep/15 of the current year (year is not added) and the last message was added today so only the time is displayed.
-
-*Print* command accepts several parameters that allow to detect new log entries, print only necessary messages and so on.
-
-For example, the following command will print all log messages where one of the topics is info and will detect new log entries until <kbd>Control</kbd>+<kbd>C</kbd> is pressed.
+To watch new entries as they arrive, add `follow` (prints the existing entries first) or `follow-only` (new entries only). Press <kbd>Space</kbd> to print a separator line, and <kbd>Control</kbd>+<kbd>C</kbd> to stop. For example, to watch failed logins:
 
 ```ros
-[admin@MikroTik] /log > print follow where topics~".info"
-12:52:24 script,info hello from script
--- Ctrl-C to quit.
+[admin@MikroTik] > /log/print follow-only where topics~"critical"
+ = = =   = = =   = = =      = = =   = = =   = = =      = = =   = = =   = = =
+2026-10-02 17:35:45 system,error,critical login failure for user admin from 192.168.88.17 via ssh
+2026-10-02 17:35:45 system,error,critical login failure for user root from 192.168.88.17 via ssh
+-- Ctrl-C to quit. Space prints separator. New entries will appear at bottom.
 ```
 
-In this example it will print only the dhcp info messages:
+Login and firewall entries carry extra fields, such as the user, the service and the source address. `with-extra-info` adds them to the line:
 
 ```ros
-[admin@MikroTik] /log/print where topics~"dhcp.info"
-11:42:32 dhcp,info defconf deassigned 192.168.88.37 for B0:E4:5C:27:EF:F2 Samsung
-11:42:32 dhcp,info defconf assigned 192.168.88.37 for B0:E4:5C:27:EF:F2 Samsung
+[admin@MikroTik] > /log/print with-extra-info where message~"login failure"
+ 2026-10-02 17:35:45 system,error,critical login failure for user admin from 192.168.88.17 via ssh app=ssh duser=admin outcome=failure src=192.168.88.17
+ 2026-10-02 17:35:45 system,error,critical login failure for user root from 192.168.88.17 via ssh app=ssh duser=root outcome=failure src=192.168.88.17
 ```
 
-If print is in follow mode you can hit 'space' on the keyboard to insert a separator:
+`/log/print` also lists the buffers of other memory actions and the newest entries of disk actions, so an entry that several actions store shows once per action. Add `where buffer=memory` to see only the default buffer.
+
+To save the printed entries to a file, add `file=`: `/log/print file=log-before-upgrade` writes `log-before-upgrade.txt`.
+
+### Find what happened at a certain time
+
+Compare `time` with a date and time to see the entries of a period, for example a night:
 
 ```ros
-[admin@MikroTik] /log > print follow where topics~".info"
-12:52:24 script,info hello from script
-
-= = = = = = = = = = = = = = = = = = = = = = = = = = =
-
--- Ctrl-C to quit.
+/log/print where time>"2026-10-02 01:00:00" and time<"2026-10-02 06:00:00"
 ```
 
-## Logging configuration
+A lost uplink usually shows as `interface,info ether1 link down` and `link up` entries of the WAN interface, and as DHCP client or PPP entries. When the uplink stays up but the provider stops forwarding traffic, nothing is logged; use [Netwatch](../netwatch) to log such outages. How far back the 1000 entries of the default buffer reach depends on how much the router logs. To keep more, log to a disk or a syslog server.
 
-**Sub-menu:** `/system/logging`
+### Find out who changed the configuration
 
-| Property | Description |
-| :--- | :--- |
-| **action** (*name*; Default: **memory**) | Specifies one of the system default actions or a user-defined action listed in the actions menu. |
-| **prefix** (*string*; Default: none) | Prefix added at the beginning of log messages. |
-| **regex** (*string*; Default: none) | Regular expression used to match log messages. If the regex does not match, the action is not performed, even if the topic is configured for logging. |
-| **topics** (*account, acme-client, amt, async, backup, bfd, bgp, bridge, calc, caps, certificate, clock, container, critical, ddns, debug, dhcp, discover, disk, dns, dot1x, dude, e-mail, error, event, evpn, fetch, firewall, gps, gsm, health, hotspot, igmp-proxy, info, interface, ipsec, iscsi, isdn, isis, kvm, l2tp, lora, ldp, lte, manager, mme, mpls, mqtt, mvrp, natpmp, netwatch, ntp, ospf, ovpn, packet, pim, poe-in, poe-out, ppp, pppoe, pptp, ptp, queue, radvd, radius, raw, read, rip, route, rpki, rproxy, rsvp, script, sertcp, simulator, smb, snmp, socksify, ssh, ssld, sstp, state, store, stp, system, telephony, tftp, timer, tr069, update, upnp, ups, vpls, vrrp, warning, watchdog, web-proxy, wiliot, wireguard, wireless, write, zerotier*; Default: **info**) | Logs all messages that match the specified topic or list of topics.Use the **!** character before a topic to exclude matching messages. For example, to log NTP debug messages without packet details:`/system/logging/add topics=ntp,debug,!packet` |
-
-### Actions
-
-**Sub-menu:** `/system/logging/action`
-
-| Property | Description |
-| :--- | :--- |
-| **add-topics-string** (*yes\|no*; Default: **no**) |  |
-| **cef-event-delimiter** (string; Default: **\r\n**) | option helps remote syslog to distinguish between individual events within a sent batch |
-| **check-certificate** (*yes\|no*; Default: no) | Whether to check the server certificate when using TLS type of logging for remote action. |
-| **disk-file-count** (*integer [1..65535]*; Default: **2**) | specifies the number of files used to store log messages, applicable only if action=disk |
-| **disk-file-name** (*string*; Default: **log**) | name of the file used to store log messages, applicable only if action=disk |
-| **disk-lines-per-file** (*integer [1..65535]*; Default: **100**) | specifies the maximum size of the file in lines, applicable only if action=disk |
-| **disk-stop-on-full** (*yes\|no*; Default: **no**) | whether to stop saving log messages to disk after the specified disk-lines-per-file and disk-file-count number is reached, applicable only if action=disk |
-| **email-cc (*string*; Default: )** | email address where logs are sent as CC, applicable only if action=email |
-| **email-start-tls** (*yes \| no*; Default: **no**) | Whether to use tls when sending email, applicable only if action=email |
-| **email-to** (*string*; Default: ) | email address where logs are sent, applicable only if action=email |
-| **memory-lines** (*integer [1..65535]*; Default: **1000**) | number of records in local memory buffer, applicable only if action=memory |
-| **memory-stop-on-full** (*yes\|no*; Default: **no**) | whether to stop saving log messages in local buffer after the specified memory-lines number is reached |
-| **name** (*string*; Default: ) | name of an action. When target=memory, this name also serves as the identifier for a specific memory buffer. Multiple actions with target=memory can be created, each storing logs in its own separate buffer. |
-| **remember** (*yes\|no*; Default: ) | whether to keep log messages, which have not yet been displayed in console, applicable if action=echo |
-| **remote-log-format** (*cef, default, syslog*; Default: **default**) | Format for logs to be sent to remote instance: cef - logs are sent in CEF format;default - logs are sent as it is;syslog - logs are sent in BSD-syslog format |
-| **remote-port** (*integer [1..65535]*; Default: **514**) | Remote logging server's UDP port (address is configured via the **remote** property). |
-| **remote-protocol** (*tcp / udp / tls*; Default: **udp**) | protocol for remote logging messages, TCP and TLS only work with CEF remote-log-format, for syslog it will always use UDP, even if TCP / TLS is set |
-| **script** |  |
-| **src-address** (*IP address*; Default: **0.0.0.0**) | source address used when sending packets to remote server |
-| **syslog-facility** (*auth, authpriv, cron, daemon, ftp, kern, local0, local1, local2, local3, local4, local5, local6, local7, lpr, mail, news, ntp, syslog, user, uucp*; Default: **daemon**) |  |
-| **syslog-severity** (*alert, auto, critical, debug, emergency, error, info, notice, warning*; Default: **auto**) | Severity level indicator defined in RFC 3164:Emergency: system is unusableAlert: action must be taken immediatelyCritical: critical conditionsError: error conditionsWarning: warning conditionsNotice: normal but significant conditionInformational: informational messagesDebug: debug-level messages |
-| **syslog-time-format** (*bsd-syslog, iso8601*; Default: **bsd-syslog**) | Time log format for messages |
-| **target** (*disk, echo, email, memory, remote, script*; Default: **memory**) | Storage facility or target of log messagesdisk - logs are saved to the hard driveecho - logs are displayed on the console screenemail - logs are sent by emailmemory - logs are stored in local memory buffer or multiple separate buffers (RAM files). remote - logs are sent to remote hostscript -     executes a script from /system/script/ when a log message matches the rule. The script receives two variables: topics (log topic string) and message (log message content). |
-| **vrf** (*name*; Default: **main**) | Set VRF on which the remote logging is making outgoing connections, applicable only if target=remote. The setting is available since RouterOS version 7.19. |
-
-### Create separate memory logging buffers
-
-Just like having different text files for different notes, these separate memory buffers allow you to direct specific types of log messages (based on topics) into distinct storage areas in memory.
-
-- **Isolation:** Logs sent to `buffer_A` are completely separate from logs sent to `buffer_B`.
-- **Independent Viewing:** You can view the contents of just one buffer at a time using `/log/print where buffer=buffer_name`.
-- **Targeted Clearing:** You can clear the contents of one specific buffer using `/system/logging/action/clear action=buffer_name` without affecting the logs stored in any other memory buffer.
-
-This provides much better organization and control over logs stored in memory, especially for debugging or monitoring, without mixing them all into the single default memory log.
-
-**Sub-menu:** `/system/logging/action/clear`
-
-Starting from 7.20\_ab244, memory logs (target=memory) can be cleared with command: **`/system/logging/action/clear` action=\<`logging` action name>**  
-  
-Topics
-
- Each log entry has a topic which describes the origin of the log message. There can be more than one topic assigned to the log message. For example, OSPF debug logs have four different topics: route, ospf, debug and raw.
+Each configuration change is logged with the topics `system,info`, who made it (a user and how the user was connected, or a scheduler entry), and the command:
 
 ```ros
-11:11:43 route,ospf,debug SEND: Hello Packet 10.255.255.1 -> 224.0.0.5 on lo0 
-11:11:43 route,ospf,debug,raw PACKET: 
-11:11:43 route,ospf,debug,raw 02 01 00 2C 0A FF FF 03 00 00 00 00 E7 9B 00 00 
-11:11:43 route,ospf,debug,raw 00 00 00 00 00 00 00 00 FF FF FF FF 00 0A 02 01 
-11:11:43 route,ospf,debug,raw 00 00 00 28 0A FF FF 01 00 00 00 00 
+[admin@MikroTik] > /log/print where topics~"system" and message~" by "
+ 2026-10-02 17:33:27 system,info static dns entry added by scheduler:add-nas-dns (*2 = /ip dns static add address=192.168.88.20 name=nas.lan)
 ```
 
-#### List of Facility independent topics
+### Write your own entries
 
-| Topic | Description |
-| :-- | :-- |
-| **critical** | Log entries marked as critical; these log entries are printed to the console each time you log in. |
-| **debug** | Debug log entries |
-| **error** | Error messages |
-| **info** | Informative log entry |
-| **packet** | Log entry that shows contents from a received/sent packet |
-| **raw** | Log entry that shows raw contents of a received/sent packet |
-| **warning** | Warning message. |
+Scripts write to the log with `:log info`, `:log warning`, `:log error` and `:log debug`. On the command line, `/log/info`, `/log/warning`, `/log/error` and `/log/debug` do the same. These entries get the topics `script,info`, `script,warning`, and so on. See [Scripting](../../developer-guides/scripting/).
 
-#### Topics used by various RouterOS facilities
+## Log debug messages for one feature
 
-| Topic | Description |
-| :-- | :-- |
-| **account** | Log messages generated by accounting facility. |
-| **async** | Log messages generated by asynchronous devices |
-| **backup** | Log messages generated by backup creation facility. |
-| **bfd** | Log messages generated by BFD protocol |
-| **bgp** | Log messages generated by BGP protocol |
-| **calc** | Routing calculation log messages. |
-| **caps** | CAPsMAN wireless device management |
-| **certificate** | Security certificate |
-| **clock** | Log messages generated by Clock, IP Cloud time changes. |
-| **dns** | Name server lookup related information |
-| **ddns** | Log messages generated by Dynamic DNS tool |
-| **dude** | Messages related to the Dude server package and The Dude tool |
-| **dhcp** | DHCP client, server and relay log messages |
-| **e-mail** | Messages generated by e-mail tool. |
-| **event** | Log message generated at a routing event. For example, new route has been installed in the routing table. |
-| **firewall** | Firewall log messages generated when **action=log** is set in firewall rule |
-| **gsm** | Log messages generated by GSM devices |
-| **hotspot** | Hotspot related log entries |
-| **igmp-proxy** | IGMP Proxy related log entries |
-| **ipsec** | IPSec log entries |
-| **iscsi** |  |
-| **isdn** |  |
-| **interface** |  |
-| **kvm** | Messages related to the KVM virtual machine functionality |
-| **l2tp** | Log entries generated by L2TP client and server |
-| **lte** | Messages related to the LTE/4G modem configuration |
-| **ldp** | LDP protocol related messages |
-| **manager** | User Manager log messages. |
-| **mme** | MME routing protocol messages |
-| **mpls** | MPLS messages |
-| **ntp** | sNTP client generated log entries |
-| **ospf** | OSPF routing protocol messages |
-| **ovpn** | OpenVPN tunnel messages |
-| **pim** | Multicast PIM-SM related messages |
-| **ppp** | ppp facility messages |
-| **pppoe** | PPPoE server/client related messages |
-| **pptp** | PPTP server/client related messages |
-| **radius** | Log entries generated by RADIUS Client |
-| **radvd** | IPv6 radv daemon log messages. |
-| **read** | SMS tool messages |
-| **rip** | RIP routing protocol messages |
-| **route** | Routing facility log entries |
-| **rsvp** | Resource Reservation Protocol generated messages. |
-| **script** | Log entries generated from scripts |
-| **sertcp** | Log messages related to the facility responsible for "/port remote-access" |
-| **simulator** |  |
-| **state** | DHCP Client and routing state messages. |
-| **store** | Log entries generated by Store facility |
-| **smb** | Messages related to the SMB file sharing system |
-| **snmp** | Messages related to Simple network management protocol (SNMP) configuration |
-| **system** | Generic system messages |
-| **telephony** | *Obsolete! Previously used by the IP telephony package* |
-| **tftp** | TFTP server generated messages |
-| **timer** | Log messages that are related to timers used in RouterOS. For example bgp keepalive logs`12:41:40 route,bgp,debug,timer KeepaliveTimer expired``12:41:40 route,bgp,debug,timer     RemoteAddress=2001:470:1f09:131::1` |
-| **ups** | Messages generated by UPS monitoring tool |
-| **vrrp** | Messages generated by VRRP |
-| **watchdog** | Watchdog generated log entries |
-| **web-proxy** | Log messages generated by web proxy |
-| **wireless** | Wireless log entries. |
-| **write** | SMS tool messages. |
-
-## Examples
-
-### Create separate memory logging buffers
-
-Create new memory logging buffers, which will store specified logs separately from default memory logs.
+Many features write debug messages, which are logged only when a rule selects them. To troubleshoot one feature, log its `debug` messages into a separate memory buffer, so that they do not push the other entries out of the default buffer. For example, when a client does not get an address from the DHCP server:
 
 ```ros
-/system/logging/action/add name=dhcpMemoryLog target=memory memory-lines=300
-/system/logging/action/add name=wirelessLog target=memory memory-lines=500
+/system/logging/action/add name=dhcpdebug target=memory \
+    memory-lines=2000
+/system/logging/add topics=dhcp,debug action=dhcpdebug
 ```
 
-Assign topics to created buffers. This rule sends all DHCP logs to dhcpMemoryLog, and wireless logs to wirelessLog buffer.
+Read the buffer, and empty it between tests:
 
 ```ros
-/system/logging/add topics=dhcp action=dhcpMemoryLog
-/system/logging/add topics=wireless action=wirelessLog
+/log/print where buffer=dhcpdebug
+/system/logging/action/clear action=dhcpdebug
 ```
 
-```ros
-# View only DHCP related logs stored in its dedicated buffer
-/log/print where buffer=dhcpMemoryLog
+A rule matches only entries that have all its topics, so `topics=dhcp,debug` selects DHCP debug messages and nothing else. To leave out the packet dumps that some features add, exclude a topic with `!`, for example `topics=ntp,debug,!packet`.
 
-# View only non-info Wireless logs stored in its dedicated buffer
-/log/print where buffer=wirelessLog
-```
+When you are done, save the buffer to a file, then remove the rule and the action. Removing the rule empties the buffer:
 
 ```ros
-/system/logging/action/clear action=dhcpMemoryLog
-```
-
-### Logging to file
-
-To log everything to a file, add a new log action:
-
-```ros
-/system/logging/action/add name=file target=disk disk-file-name=log
-```
-
-and then make everything log using this new action:
-
-```ros
-/system/logging/add action=file
-```
-
-You can log only errors there by issuing the command:
-
-```ros
-/system/logging/add topics=error action=file 
-```
-
-This will log into files **log.0.txt** and **log.1.txt**.
-
-You can specify the maximum size of the file in lines by specifying *disk-lines-per-file*. **\<file>.0.txt** is the active file where new logs are going to be appended and once its size will reach the maximum it will become **\<file>.1.txt**, and new empty **\<file>.0.txt** will be created.
-
-You can log into USB flashes or into *MicroSD/CF* (on Routerboards) by specifying its directory name before file name. For example, if you have accessible usb flash as **usb1** directory under */files*, you should issue the following command:
-
-```ros
-/system/logging/action/add name=usb target=disk disk-file-name=usb1/log
+/log/print where buffer=dhcpdebug file=dhcp-debug
+/system/logging/remove [find action=dhcpdebug]
+/system/logging/action/remove dhcpdebug
 ```
 
 :::warning
-Logging entries from files will be stored back in memory after reboot.
+Debug messages can contain secrets. For example, `ssh,debug` logs the session encryption keys, and `ssh,debug,packet` the content of the sessions. Keep debug messages in a local buffer, and do not send them to a syslog server or by email.
 :::
+
+## Keep the log across reboots
+
+The default `disk` action writes to files on the router's storage. Add a rule for each topic you want to keep:
+
+```ros
+/system/logging/add topics=info action=disk
+/system/logging/add topics=warning action=disk
+/system/logging/add topics=error action=disk
+/system/logging/add topics=critical action=disk
+```
+
+The action writes `log.0.txt` until it holds `disk-lines-per-file` lines (1000 by default). Then the file is renamed to `log.1.txt` and a new `log.0.txt` starts. The action keeps `disk-file-count` files (2 by default) and deletes the oldest. The files are in `/file`:
+
+```ros
+[admin@MikroTik] > /file/print where name~"^log"
+Columns: NAME, TYPE, SIZE, LAST-MODIFIED
+# NAME       TYPE       SIZE  LAST-MODIFIED
+0 log.0.txt  .txt file  1956  2026-10-02 17:32:13
+```
+
+The newest entries also show in `/log/print`, under the action's name, so each entry shows twice there; add `where buffer=memory` or `where buffer=disk`. After a reboot, the entries of the current file show again under `buffer=disk`. To read an older file, print its contents, or download it from `/file`:
+
+```ros
+:put [/file/get log.1.txt contents]
+```
+
+To keep more history, raise both values. To write to a USB drive or another disk, put the disk's folder in front of the file name; the folder must exist:
+
+```ros
+/system/logging/action/set disk disk-file-name=usb1/log \
+    disk-lines-per-file=5000 disk-file-count=5
+```
+
+To limit the writes to the internal flash, log to disk only the topics you need, or use an external disk.
+
+## Send the log to a syslog server
+
+The default `remote` action sends entries to a syslog server over UDP port 514. It has no server address (`remote=0.0.0.0`), and no default rule uses it. Set the server and the format, and add a rule for each topic:
+
+```ros
+/system/logging/action/set remote remote=192.0.2.10 \
+    remote-log-format=syslog
+/system/logging/add topics=info action=remote
+/system/logging/add topics=warning action=remote
+/system/logging/add topics=error action=remote
+/system/logging/add topics=critical action=remote
+```
+
+Use separate rules: one rule with `topics=info,warning,error` matches only entries that have all three topics, which is none. To send only logins and logouts, use `topics=account`; failed logins have the topics `system,error,critical`, so they go with `error` or `critical`.
+
+To check that the server receives entries, write one yourself:
+
+```ros
+/log/warning "syslog test"
+```
+
+`remote-log-format` selects what the server receives (examples in Technical details):
+
+- `default` - The topics and the message, without the time and the host name.
+- `syslog` - BSD syslog (RFC 3164), as most syslog servers expect over UDP: a priority, the time and the router's identity (`/system/identity`) in front of the message. The facility is `daemon` and the severity comes from the topics; set `syslog-facility` and `syslog-severity` to change them. The topics are not sent; set `add-topics-string=yes` to add them in front of the message, so that the server can tell, for example, DHCP from firewall entries. RFC 5424 is not supported.
+- `cef` - Common Event Format, for security information and event management (SIEM) systems: the extra fields of login and firewall entries (user, service, addresses, interfaces) become CEF fields.
+
+The BSD time has no year and no time zone, so the server takes its own. Set `syslog-time-format=iso8601` (also used by `cef`) when the router and the server are in different time zones, and keep the router's clock correct with [NTP](../../system-information-and-utilities/ntp).
+
+Over UDP, entries are lost while the server is unreachable. With `remote-protocol=tcp` or `tls`, the router keeps up to 1000 entries in memory while the connection is down, for all remote actions together, and sends them when it is back; when the buffer is full, newer entries are dropped, and the buffer is lost at reboot. Over TCP and TLS, use `remote-log-format=cef`: CEF entries end with a delimiter (`cef-event-delimiter`), while `default` and `syslog` entries follow each other in the stream without one, so most servers cannot tell where one ends.
+
+Use `src-address` to choose the source address, and `vrf` when the server is reachable through a [VRF](../../user-guides/routing-and-networking-protocols/vrf).
+
+The following guides set up Elasticsearch to receive and analyze RouterOS logs:
+
+<DocCardList />
+
+### Send the log over TLS
+
+To encrypt the log, use `remote-protocol=tls`. To check the server certificate, import the certificate of the CA that signed it and set `check-certificate=yes`. Without `check-certificate=yes`, the router encrypts the connection but accepts any certificate:
+
+```ros
+/certificate/import file-name=syslog-ca.pem name=syslog-ca \
+    passphrase="" trusted=yes
+/system/logging/action/add name=siem target=remote remote=192.0.2.10 \
+    remote-port=6514 remote-protocol=tls remote-log-format=cef \
+    check-certificate=yes
+/system/logging/add topics=info action=siem
+/system/logging/add topics=warning action=siem
+/system/logging/add topics=error action=siem
+/system/logging/add topics=critical action=siem
+```
+
+When the certificate cannot be verified, the router sends nothing, retries, and logs an `ssld,error` entry that ends with `ssl: no trusted CA certificate found`.
+
+`check-certificate=yes` checks that a trusted certificate signed the server certificate. It does not compare the name in the certificate with the server address, so any certificate from a trusted CA passes: trust only the CA of your log servers, or import the server's own certificate. The router does not present a client certificate.
+
+Actions that send to the same server address and port share one connection. Give them the same `remote-protocol` and `check-certificate`.
+
+## Email log messages
+
+The `email` target sends one email for each entry, with the topics and the message as the subject and the text. It uses the server, port, TLS mode and sender of `/tool/e-mail`, so configure that first (see [Email](../../system-information-and-utilities/e-mail)). For example, to get an email for every critical entry, such as a login failure, a reboot by the watchdog or a clock correction:
+
+```ros
+/system/logging/action/add name=mail target=email \
+    email-to=admin@example.com
+/system/logging/add topics=critical action=mail
+```
+
+To get an email for failed logins only, add a `regex` that the message must match; `^` means that the message starts with the text:
+
+```ros
+/system/logging/add topics=critical regex="^login failure" action=mail
+```
+
+`email-cc` adds more recipients. Each email sent is logged as `e-mail,info sent <topics message> to: <address>`. Choose the topics carefully: every entry sends an email, so a password-guessing attack sends hundreds. Stop such attacks with the firewall instead (see [SSH brute-force protection](../../firewall-and-quality-of-service/user-guides/bruteforce-prevention)).
+
+## Run a script on a log message
+
+The `script` target runs a script from `/system/script` for the entries its rule matches. The script gets the entry in two variables: `$topics` (for example `system,error,critical`) and `$message`. Entries that match while the script is still running are skipped, and entries that the script logs itself do not start it again.
+
+For example, to collect the source addresses of failed logins in an address list, for any service (SSH, WinBox, WebFig, API). An address stays in the list for a day after its last failed login:
+
+```ros
+/system/script/add name=login-failure source={
+    :local at [:find $message " from "]
+    :while ([:typeof [:find $message " from " $at]] = "num") do={
+        :set at [:find $message " from " $at]
+    }
+    :local ip [:pick $message ($at + 6) [:find $message " via " $at]]
+    /ip/firewall/address-list/remove [find list=login-fail address=$ip]
+    /ip/firewall/address-list/add list=login-fail address=$ip timeout=1d
+}
+/system/logging/action/add name=loginfailure target=script \
+    script=login-failure
+/system/logging/add topics=critical regex="^login failure" \
+    action=loginfailure
+```
+
+The rule's `regex` limits the script to entries such as `login failure for user admin from 192.168.88.17 via ssh`. The user name in the message comes from the client and can contain spaces and the word `from`, so the script takes the address after the last ` from `, which the router writes itself. The list does nothing by itself: use it in a firewall rule (see [Address lists](../../firewall-and-quality-of-service/firewall/address-lists)), and exempt your own management addresses, so that a mistyped password cannot lock you out.
+
+## How rules match entries
+
+A rule passes an entry to its action when all of these are true:
+
+- The entry has every topic listed in `topics`, and none of the topics listed with `!`. `topics=script,warning` matches `script,warning` entries, not every `script` entry and every `warning` entry.
+- The message matches `regex`, when the rule has one. The regular expression also sees the entry's extra fields after the message, so `$` does not match the end of a login entry's message.
+- The rule is enabled.
+
+A rule without `topics` matches every entry, debug messages included.
+
+Every matching rule passes its own copy, so one entry can go to memory, a disk and a syslog server at the same time. When two rules pass the same entry to the same action, the action stores it once.
+
+`prefix` adds text in front of the message for that rule's action: `prefix=core1` stores and sends `core1: <message>`. Use it to tell routers apart on a shared syslog server.
+
+When you change or disable the only rule that uses a memory action, the action's buffer is emptied. Changing the action itself, or one of several rules that use it, keeps the entries.
+
+## Topics
+
+Each entry has one or more topics. Usually one names the feature that wrote the entry and one gives its importance, and some features add more. A login failure has the topics `system,error,critical`; SSH debug messages have `ssh,debug`, and their packet dumps `ssh,debug,packet`.
+
+### Importance topics
+
+| Topic | Entries |
+| :-- | :-- |
+| `critical` | Events that need attention, such as login failures, reboots by the watchdog and clock corrections. The default rule prints them on the console. |
+| `error` | Errors. |
+| `warning` | Warnings. |
+| `info` | Informational entries, such as logins, configuration changes and link state changes. |
+| `debug` | Detailed messages for troubleshooting, logged only when a rule asks for them. |
+| `packet` | Contents of a sent or received packet, decoded. |
+| `raw` | Raw contents, for example a packet as hex or the AT commands exchanged with an LTE modem. |
+
+### Feature topics
+
+| Topic | Entries |
+| :-- | :-- |
+| `account` | Logins and logouts of users. |
+| `acme-client` | The ACME client that gets certificates. |
+| `async` | The command channel of LTE modems. |
+| `backup` | Backup creation. |
+| `bfd` | BFD. |
+| `bgp` | BGP. |
+| `bridge` | Bridges. |
+| `calc` | Route calculation. |
+| `caps` | CAPsMAN and CAPs. |
+| `certificate` | Certificates. |
+| `clock` | Clock changes, for example by NTP or IP Cloud. |
+| `container` | Containers. |
+| `ddns` | Dynamic DNS. |
+| `dhcp` | DHCP clients, servers and relays. |
+| `discover` | Neighbor discovery. |
+| `disk` | Disks. |
+| `dns` | DNS. |
+| `dot1x` | 802.1X authentication. |
+| `dude` | The Dude. |
+| `e-mail` | The email tool (`/tool/e-mail`). |
+| `event` | Events, for example a route installed in the routing table or a message from an LTE modem. |
+| `evpn` | EVPN. |
+| `fetch` | The fetch tool. |
+| `firewall` | Firewall rules with `action=log` or `log=yes`, with their `log-prefix`. |
+| `gps` | GPS. |
+| `gsm` | GSM modems and the SMS tool. |
+| `health` | Health monitoring (voltage, temperature, fans). |
+| `hotspot` | HotSpot. |
+| `igmp-proxy` | IGMP proxy. |
+| `interface` | Interfaces, for example link up and link down. |
+| `ipsec` | IPsec. |
+| `iscsi` | iSCSI. |
+| `isis` | IS-IS. |
+| `kvm` | Virtual machines (KVM). |
+| `l2tp` | L2TP clients and servers. |
+| `ldp` | LDP. |
+| `lora` | LoRa. |
+| `lte` | LTE and 5G modems. |
+| `manager` | User Manager. |
+| `mpls` | MPLS. |
+| `mqtt` | MQTT. |
+| `mvrp` | MVRP. |
+| `natpmp` | NAT-PMP. |
+| `netwatch` | Netwatch. |
+| `ntp` | The NTP client and server. |
+| `ospf` | OSPF. |
+| `ovpn` | OpenVPN. |
+| `pim` | PIM-SM. |
+| `poe-in` | PoE input. |
+| `poe-out` | PoE output. |
+| `pon` | PON SFP modules. |
+| `ppp` | PPP. |
+| `pppoe` | PPPoE clients and servers. |
+| `pptp` | PPTP clients and servers. |
+| `ptp` | Precision Time Protocol. |
+| `queue` | Queues. |
+| `radius` | The RADIUS client. |
+| `radvd` | IPv6 router advertisements. |
+| `rip` | RIP. |
+| `route` | Routing. |
+| `rpki` | RPKI. |
+| `rproxy` | The reverse proxy. |
+| `rsvp` | RSVP. |
+| `script` | Scripts (`:log`) and the `/log/info` and related commands. |
+| `sertcp` | Serial port remote access (`/port/remote-access`). |
+| `smb` | The SMB server. |
+| `snmp` | SNMP. |
+| `socksify` | Socksify. |
+| `ssh` | The SSH server and client. |
+| `ssld` | TLS connections of RouterOS features, for example a server certificate that cannot be verified. |
+| `sstp` | SSTP clients and servers. |
+| `stp` | Spanning tree. |
+| `system` | System messages, for example reboots and configuration changes. |
+| `tftp` | The TFTP server. |
+| `timer` | Timers, for example BGP keepalive timers. |
+| `tr069` | The TR-069 client. |
+| `update` | Package updates. |
+| `upnp` | UPnP. |
+| `ups` | UPS monitoring. |
+| `vpls` | VPLS. |
+| `vrrp` | VRRP. |
+| `watchdog` | The watchdog. |
+| `web-proxy` | The web proxy. |
+| `wiliot` | Wiliot. |
+| `wireguard` | WireGuard. |
+| `wireless` | Wireless interfaces. |
+| `zerotier` | ZeroTier. |
+
+The router also lists the topics `amt`, `isdn`, `mme`, `read`, `simulator`, `state`, `store`, `telephony` and `write`, and `netinstall` with the `option` package.
+
+## Troubleshoot
+
+| Problem | Cause and fix |
+| :-- | :-- |
+| The syslog server receives nothing. | The default `remote` action has `remote=0.0.0.0`; set the server address. Check that a rule passes entries to the action: a rule with several topics needs all of them. Check that the router reaches the server from `src-address` and in `vrf`, and that the server accepts the protocol and port. |
+| TLS logging sends nothing. | Look for `ssld,error` entries. `no trusted CA certificate found` means that the CA certificate of the server is not imported or not trusted. |
+| The server shows several entries as one. | Over TCP and TLS, `default` and `syslog` entries have no delimiter; use `remote-log-format=cef`. |
+| Entries show several times in `/log/print`. | Several actions store them; filter with `where buffer=memory`. |
+| The log is empty after a reboot. | Memory actions do not survive a reboot; log to a disk or a syslog server. |
+| A memory buffer emptied itself. | The only rule that uses it was changed or disabled. |
+| `bad disk file name` | The folder in `disk-file-name` does not exist. |
+| `action name can contain only letters and numbers` | Action names cannot contain `-`, `_` or other characters. |
+
+## Technical details
+
+### Message formats
+
+The same login failure, as the server receives it in each `remote-log-format` (with `syslog-time-format=bsd-syslog` and the identity `MikroTik`):
+
+```text
+system,error,critical login failure for user guest from 192.168.88.17 via ssh
+<27>Oct  2 17:36:35 MikroTik login failure for user guest from 192.168.88.17 via ssh
+Oct  2 17:36:35 MikroTik CEF:0|MikroTik|hAP ax^2|7.25beta5|10|system,error,critical|High|dvchost=MikroTik dvc=192.168.88.36 msg=login failure for user guest from 192.168.88.17 via ssh app=ssh duser=guest outcome=failure src=192.168.88.17
+```
+
+- The `syslog` format carries no tag field; the message follows the identity.
+- With `syslog-severity=auto`, the severity comes from the topics: `debug` 7, `info` 6, `warning` 4, `error` 3. An entry with both `error` and `critical`, as in the example, gets 3, so a server filter for severity `crit` misses login failures. The priority is the facility times 8 plus the severity: `daemon` (3) and `error` (3) give `<27>`.
+- The CEF header holds the board name, the RouterOS version, an event class number, the topics and a severity (`Low` for `info` and `debug`, `Medium` for `warning`, `High` for `error`). `dvchost` is the identity, `dvc` an address of the router, `msg` the message, and the extra fields of the entry follow. Firewall entries carry the chain, the log prefix, the interfaces, the addresses and the protocol. `=` and `\` in values are escaped as `\=` and `\\`. Each CEF message ends with `cef-event-delimiter` (`\r\n` by default).
+
+### TCP and TLS
+
+- UDP sends one datagram per entry. TCP and TLS keep one connection per server address and port, shared by all actions that send there.
+- While a TCP or TLS server is unreachable, the router keeps the entries in one buffer for all remote actions and retries the connection. The buffer is lost on reboot.
+- While the server is unreachable, up to 1000 entries wait in memory; when the buffer is full, newer entries are dropped.
+- CEF messages end with the delimiter; `default` and `syslog` messages follow each other in the stream without one.
+- `check-certificate=yes` checks the server certificate against the trusted certificates in `/certificate`, not the name in it. The router offers TLS 1.2.
+
+### Disk files
+
+Each line in the files starts with the date in its own format, `Oct/02/2026 16:49:36`, followed by the topics and the message. `/system/logging/action/clear` empties memory actions only; on a disk action, it fails with `cleanup not supported on this target`.
+
+For all parameters, see the [`/system/logging`](../../cli-reference/system/logging/) and [`/system/logging/action`](../../cli-reference/system/logging/action/) CLI reference, and [`/log`](../../cli-reference/log) for the entries.

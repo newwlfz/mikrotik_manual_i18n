@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/telnet"
 sidebar_position: 34
 title: "telnet"
-source: https://manual.mikrotik.com/docs/cli-reference/system/telnet
-captured_at: '2026-11-01T21:30:11+08:00'
+sidebar_label: 'telnet'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/telnet
+captured_at: '2026-11-01T21:25:48+08:00'
 ---
 
 -----------

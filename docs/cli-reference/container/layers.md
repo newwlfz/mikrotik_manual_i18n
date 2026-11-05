@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/container/layers"
 sidebar_position: 5
 title: "layers"
 sidebar_label: 'layers'
-source: https://manual.mikrotik.com/docs/cli-reference/container/layers
-captured_at: '2026-11-01T21:26:41+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/container/layers
+captured_at: '2026-11-01T21:22:02+08:00'
 ---
 
 -----------

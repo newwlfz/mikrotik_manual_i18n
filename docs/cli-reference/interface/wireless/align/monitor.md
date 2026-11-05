@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/align/monitor"
 sidebar_position: 2
 title: "monitor"
 sidebar_label: 'monitor'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/align/monitor
-captured_at: '2026-11-01T21:27:57+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/align/monitor
+captured_at: '2026-11-01T21:23:21+08:00'
 ---
 
 -----------

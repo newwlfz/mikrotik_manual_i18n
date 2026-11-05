@@ -8,8 +8,8 @@ tags:
   - 'wifi'
   - 'repeater'
   - 'station-mode'
-source: https://manual.mikrotik.com/docs/wireless/wifi/configuring-repeater
-captured_at: '2026-11-04T11:35:51+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/wifi/configuring-repeater
+captured_at: '2026-11-04T11:24:25+08:00'
 ---
 
 **Package:** `wifi-qcom`
@@ -174,9 +174,9 @@ That is, of course, if you have proper firewall and access restrictions added on
 add interface=bridge
 ```
 
-Apply [DHCP-client](/docs/network-management/dhcp#configuration-examples) on top of the bridge interface, so that the repeater itself and all its connected clients get IP addresses from the main router.
+Apply [DHCP-client](/docs/network-management/dhcp/client#configuration-examples) on top of the bridge interface, so that the repeater itself and all its connected clients get IP addresses from the main router.
 
-Disable [DHCP-server](/docs/network-management/dhcp#dhcp-server) functionality.
+Disable [DHCP-server](/docs/network-management/dhcp/server) functionality.
 
 ### Address
 

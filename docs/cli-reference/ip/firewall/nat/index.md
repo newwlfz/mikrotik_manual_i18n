@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ip/firewall/nat/index"
 sidebar_position: 1
 title: "nat"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/firewall/nat
-captured_at: '2026-11-01T21:28:38+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/firewall/nat
+captured_at: '2026-11-01T21:24:00+08:00'
 ---
 
 -----------
@@ -130,9 +130,9 @@ Matches packets received from HotSpot clients against various HotSpot matchers.
 <ArgTableRow arg="address-list-timeout" typ="alt { address-list-timeout: enum (none-dynamic | none-static) { none-dynamic:0, none-static:0xffffffff }
 , address-list-timeout: time [ .. 21474836]
  }">
-Time interval after which the address will be removed from the address list specified by the `address-list` parameter. Used in conjunction with `add-dst-to-address-list` or `add-src-to-address-list` actions.
-- `none-dynamic` (`00:00:00`) will leave the address in the address list till reboot.
-- `none-static` will leave the address in the address list forever and will be included in the configuration export/backup.
+How long the address stays in `address-list` after the `add-src-to-address-list` or `add-dst-to-address-list` action adds it. With a time, the rule adds a dynamic entry (`D`) that the router removes when the time ends; each new match of the rule resets the time to its full value. The maximum is `35w3d13h13m56s`. An address that is already a static entry in the list stays static.
+- `none-dynamic` (`0s`) - Add a dynamic entry without a timeout. It is not saved in the configuration and a reboot clears it.
+- `none-static` - Add a static entry. It is saved in the configuration and in exports, and stays after a reboot until you remove it.
 </ArgTableRow>
 <ArgTableRow arg="ttl" typ="super { mode: enum (equal | not-equal | less-than | greater-than) { equal:0, not-equal:1, less-than:2, greater-than:3 }
 , [value] :num [0 .. 255]

@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/default-configuration/wps-sync-mode-script"
 sidebar_position: 5
 title: "wps-sync-mode-script"
-source: https://manual.mikrotik.com/docs/cli-reference/system/default-configuration/wps-sync-mode-script
-captured_at: '2026-11-01T21:29:49+08:00'
+sidebar_label: 'wps-sync-mode-script'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/default-configuration/wps-sync-mode-script
+captured_at: '2026-11-01T21:25:27+08:00'
 ---
 
 -----------

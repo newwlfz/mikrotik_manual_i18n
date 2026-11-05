@@ -1,0 +1,11 @@
+{
+  "position": 24,
+  "label": "Routerboard",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/routerboard/index"
+  },
+  "key": "cli-reference/system/routerboard"
+}

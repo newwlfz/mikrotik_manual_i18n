@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Firewall",
+  "key": "firewall-and-quality-of-service/firewall",
+  "link": {
+    "type": "doc",
+    "id": "firewall-and-quality-of-service/firewall/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

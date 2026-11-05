@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/iot/wiliot/options"
 sidebar_position: 7
 title: "options"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/wiliot/options
-captured_at: '2026-11-01T21:28:22+08:00'
+sidebar_label: 'options'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/wiliot/options
+captured_at: '2026-11-01T21:23:46+08:00'
 ---
 
 -----------

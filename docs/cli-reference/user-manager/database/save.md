@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/user-manager/database/save"
 sidebar_position: 5
 title: "save"
 sidebar_label: 'save'
-source: https://manual.mikrotik.com/docs/cli-reference/user-manager/database/save
-captured_at: '2026-11-01T21:30:31+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/database/save
+captured_at: '2026-11-01T21:26:07+08:00'
 ---
 
 -----------

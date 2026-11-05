@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/bridge/index"
 sidebar_position: 4
 title: "bridge"
 sidebar_label: 'bridge'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/bridge
-captured_at: '2026-11-01T21:26:58+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge
+captured_at: '2026-11-01T21:22:22+08:00'
 ---
 
 -----------
@@ -34,7 +34,8 @@ captured_at: '2026-11-01T21:26:58+08:00'
 <ArgTableRow arg="querier-uses-bridge-address" typ="bool"></ArgTableRow>
 <ArgTableRow arg="startup-query-count" typ="num"></ArgTableRow>
 <ArgTableRow arg="last-member-query-count" typ="num"></ArgTableRow>
-<ArgTableRow arg="last-member-interval" typ="time"></ArgTableRow>
+<ArgTableRow arg="last-member-interval" typ="time" deprecated="1"></ArgTableRow>
+<ArgTableRow arg="last-member-query-interval" typ="time"></ArgTableRow>
 <ArgTableRow arg="membership-interval" typ="time"></ArgTableRow>
 <ArgTableRow arg="querier-interval" typ="time"></ArgTableRow>
 <ArgTableRow arg="query-interval" typ="time"></ArgTableRow>
@@ -76,6 +77,7 @@ The string value can contain variables, whose names must be enclosed in parenthe
 Example: 'some_arbitrary_text $(HOSTNAME) another_piece_of_text $(BRIDGEMAC)'.
 The following variables are supported: HOSTNAME, INTERFACE, VID and BRIDGEMAC.
 </ArgTableRow>
+<ArgTableRow arg="arp-inspection" typ="bool"></ArgTableRow>
 <ArgTableRow arg="dhcpv6-snooping" typ="bool"></ArgTableRow>
 <ArgTableRow arg="dhcpv6-agent-circuit-id" typ="string">
 Specify the DHCPv6 option 18 value to be added to the DHCPv6 messages passing through the bridge.
@@ -91,21 +93,34 @@ The string value can contain variables, whose names must be enclosed in parenthe
 Example: 'some_arbitrary_text $(VID) another_piece_of_text $(INTERFACE)'.
 The following variables are supported: HOSTNAME, INTERFACE, VID and BRIDGEMAC.
 </ArgTableRow>
+<ArgTableRow arg="ip-source-guard" typ="bool"></ArgTableRow>
 <ArgTableRow arg="ra-guard" typ="bool"></ArgTableRow>
 <ArgTableRow arg="port-cost-mode" typ="enum (short | long)"></ArgTableRow>
 <ArgTableRow arg="mvrp" typ="bool"></ArgTableRow>
-<ArgTableRow arg="msrp" typ="bool"></ArgTableRow>
 <ArgTableRow arg="forward-reserved-addresses" typ="bool"></ArgTableRow>
 <ArgTableRow arg="max-learned-entries" typ="alt { max-learned-entries: enum (unlimited | auto)
 , max-learned-entries: num
  }"></ArgTableRow>
 <ArgTableRow arg="mlag-peer-port" typ="alt { interface: iface_enum { none }
 , interface-bond: iface_enum
- }"></ArgTableRow>
-<ArgTableRow arg="mlag-priority" typ="num"></ArgTableRow>
+ }">
+An interface that will be used as a peer port. Both peer devices are using inter-chassis communication over these peer ports to establish MLAG and update the host table.  
+Peer ports can be configured as single Ethernet interfaces or bonding interfaces. However, using a bonding interface is recommended, as it helps prevent a single interface failure from affecting connectivity, especially when both MLAG nodes are still up and running.  
+It is recommended to keep the untagged VLAN used by the peer ports separate from the rest of your network, either by assigning a dedicated untagged VLAN (using `pvid`), or by setting the peer port to only allow VLAN tagged frames (using `frame-types=admit-only-vlan-tagged`).  
+All VLANs used for bridge slave ports must also be configured as tagged VLANs for peer-port (in the `/interface/bridge/vlan` table), so that peer-port is a member of those VLANs and can forward data.
+</ArgTableRow>
+<ArgTableRow arg="mlag-priority" typ="num">This setting changes the priority for selecting the primary MLAG node. A lower number means higher priority. If both MLAG nodes have the same priority, the one with the lowest bridge MAC address will become the primary device.</ArgTableRow>
 <ArgTableRow arg="mlag-heartbeat" typ="alt { mlag-heartbeat: enum (none) { none:0 }
 , mlag-heartbeat: time [1s .. 10s]
- }"></ArgTableRow>
+ }">This setting controls how often heartbeat messages are sent to check the connection between peers. If no heartbeat message is received for three intervals in a row, the peer logs a warning about potential communication problems. If set to `none`, heartbeat messages are not sent at all.</ArgTableRow>
+<ArgTableRow arg="mlag-init-delay" typ="time">
+After the device reboots, keep the slave interfaces of dual-connected (MLAG) bonds out of the LACP bond for the specified time, or until the MLAG peers synchronize their system IDs, whichever happens first. Set the delay longer than the time the device needs to boot and reconnect to the MLAG peer. This prevents the bond from activating with a locally generated system ID before the MLAG system ID is synchronized, which would otherwise reset the LACP session on the partner.  
+Default: 1 minute.
+</ArgTableRow>
+<ArgTableRow arg="mlag-lacp-fallback" typ="bool">
+Specify what happens to the LACP system ID of dual-connected (MLAG) bonds when the MLAG peer link is lost. When set to `yes`, the bond reverts to its own LACP system ID. When set to `no`, the bond keeps the MLAG system ID, which prevents the LACP partner from renegotiating the bond when one MLAG node reboots or its peer link fails.  
+Default: yes.
+</ArgTableRow>
 </ArgTable>
 
 <ArgTable c1="Read-only Argument" c2="Type" c3="Description">

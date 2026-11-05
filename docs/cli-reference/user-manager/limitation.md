@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/user-manager/limitation"
 sidebar_position: 6
 title: "limitation"
 sidebar_label: 'limitation'
-source: https://manual.mikrotik.com/docs/cli-reference/user-manager/limitation
-captured_at: '2026-11-01T21:30:30+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/limitation
+captured_at: '2026-11-01T21:26:08+08:00'
 ---
 
 -----------

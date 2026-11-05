@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/frequency-monitor"
 sidebar_position: 6
 title: "frequency-monitor"
 sidebar_label: 'frequency-monitor'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/frequency-monitor
-captured_at: '2026-11-01T21:27:59+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/frequency-monitor
+captured_at: '2026-11-01T21:23:22+08:00'
 ---
 
 -----------

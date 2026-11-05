@@ -1,14 +1,14 @@
 ---
 sidebar_key: "containers/user-guides/container-thingsboard-mqtt-http-server"
-sidebar_position: 7
+sidebar_position: 8
 title: "Container - ThingsBoard MQTT/HTTP server"
 description: 'This page introduces the container feature in MikroTik RouterOS, enabling users to run servers like ThingsBoard MQTT/HTTP IoT platform directly on the router. It explains how to configure container mode, networking interfaces (veth and bridge), NAT rules for outgoing traffic, and storage requirements. The guide emphasizes RAM/disk space considerations and provides examples for deploying ThingsBoard with'
 tags:
   - 'container'
   - 'thingsboard'
   - 'mqtt'
-source: https://manual.mikrotik.com/docs/containers/user-guides/container-thingsboard-mqtt-http-server
-captured_at: '2026-11-04T11:27:53+08:00'
+source: https://manual.mikrotik.com/docs/7.25/containers/user-guides/container-thingsboard-mqtt-http-server
+captured_at: '2026-11-04T11:15:12+08:00'
 ---
 
 The introduction of the container feature into RouterOS made it possible to run all kinds of servers for all sorts of tasks inside the router. This is especially relevant for people who want to reduce the number of devices in their network. Instead of running a server on a separate device/machine, why not run it inside the router?
@@ -191,7 +191,7 @@ Wait for a couple of minutes for the container to fully load.
 
 After the container is started and installed, access it using any browser, by going to → [http://192.168.88.1:9090](http://192.168.88.1:9090) (where the IP address is the address used in the DNAT rule):
 
-![](./img/image.webp)
+![](./img/image-12a1fc50.webp)
 
 By default, credentials are (Username/Password):
 

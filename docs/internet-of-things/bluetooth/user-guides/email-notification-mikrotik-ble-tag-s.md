@@ -2,8 +2,8 @@
 sidebar_key: "internet-of-things/bluetooth/user-guides/email-notification-mikrotik-ble-tag-s"
 sidebar_position: 2
 title: "Email notification on the MikroTik BLE tag's accelerometer triggers"
-source: https://manual.mikrotik.com/docs/internet-of-things/bluetooth/user-guides/email-notification-mikrotik-ble-tag-s
-captured_at: '2026-11-04T11:30:55+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/bluetooth/user-guides/email-notification-mikrotik-ble-tag-s
+captured_at: '2026-11-04T11:18:07+08:00'
 ---
 
 ### Introduction
@@ -24,7 +24,7 @@ To active trigger detection, just enable the corresponding "checkbox".
 
 After the Bluetooth payload is broadcasted by the tag →  the payload's 21st octet will indicate which exact trigger was detected. You can view the payloads under the **IoT>Bluetooth>Advertisng reports** tab:
 
-![](./img/image-5e0d840a.webp)
+![](./img/image.webp)
 
 As per the screenshot above, the 21st octet is "04", which indicates, that the payload was sent when a freefalling condition was detected by the tag (these payloads were broadcasted when we "accidentally" dropped or threw the tag).
 

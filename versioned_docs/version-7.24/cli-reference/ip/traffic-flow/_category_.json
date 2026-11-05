@@ -1,0 +1,11 @@
+{
+  "position": 27,
+  "label": "Traffic Flow",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/traffic-flow/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/traffic-flow"
+}

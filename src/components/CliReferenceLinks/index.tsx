@@ -1,12 +1,15 @@
 import React from 'react';
-import {useDoc} from '@docusaurus/plugin-content-docs/client';
-import linksByDoc from '@site/data/manifests/cli-links.json';
+import {useDoc, useDocsVersion} from '@docusaurus/plugin-content-docs/client';
+import linksByVersion from '@site/data/manifests/cli-links.json';
 
 type CliLink = {href: string; command: string};
+type VersionLinks = Record<string, Record<string, CliLink[]>>;
 
 export default function CliReferenceLinks() {
   const doc = useDoc();
-  const links = (linksByDoc as Record<string, CliLink[]>)[doc.metadata.id];
+  const {version} = useDocsVersion();
+  const byVersion = linksByVersion as VersionLinks;
+  const links = byVersion[version]?.[doc.metadata.id];
   if (!links?.length) return null;
   return (
     <p className="cli-reference-links">

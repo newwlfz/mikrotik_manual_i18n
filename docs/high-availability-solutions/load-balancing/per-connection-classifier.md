@@ -8,8 +8,8 @@ tags:
   - 'per-connection-classifier'
   - 'packet-matching'
   - 'hashing'
-source: https://manual.mikrotik.com/docs/high-availability-solutions/load-balancing/per-connection-classifier
-captured_at: '2026-11-04T11:29:50+08:00'
+source: https://manual.mikrotik.com/docs/7.25/high-availability-solutions/load-balancing/per-connection-classifier
+captured_at: '2026-11-04T11:17:45+08:00'
 ---
 
 PCC matcher will allow you to divide traffic into equal streams with the ability to keep packets with a specific set of options in one particular stream (you can specify this set of options from src-address, src-port, dst-address, dst-port)

@@ -3,17 +3,21 @@ import path from 'node:path';
 import {chromium} from 'playwright-core';
 
 const BASE = 'https://manual.mikrotik.com';
-const ROOT = '/docs/7.24/introduction';
+const arg = (name, fallback) => {
+  const index = process.argv.indexOf(`--${name}`);
+  return index === -1 ? fallback : process.argv[index + 1];
+};
+const VERSION = arg('version', '7.24');
+const OUT = arg('out', `data/manifests/docs-${VERSION}-sidebar.json`);
+const ROOT = `/docs/${VERSION}/introduction`;
+const PREFIX = `/docs/${VERSION}/`;
 const CHROME =
   process.env.CHROME_PATH ||
   path.resolve('../vendor/browsers/chrome-linux64/chrome');
-const OUT = process.argv.includes('--out')
-  ? process.argv[process.argv.indexOf('--out') + 1]
-  : 'data/manifests/docs-7.24-sidebar.json';
 
 function docId(href) {
-  if (!href || !href.startsWith('/docs/7.24/')) return null;
-  let p = href.slice('/docs/7.24/'.length);
+  if (!href || !href.startsWith(PREFIX)) return null;
+  let p = href.slice(PREFIX.length);
   p = p.replace(/\/+$/, '');
   if (p === '') return null;
   // Category routes ending in "/" become <dir>/index. A non-category route
@@ -73,9 +77,9 @@ async function visit(url) {
   if (scope === 'root') rootEntries = entries;
   if (scope === 'category') categories.set(pathname, entries);
   for (const e of entries) {
-    if (!e.href) continue;
+    if (!e.href || !e.href.startsWith(PREFIX)) continue;
     routes.set(e.href, e.label);
-    if (e.sublist && e.href.endsWith('/') && !categories.has(e.href)) {
+    if (e.sublist && !categories.has(e.href)) {
       queue.push(e.href);
     }
   }
@@ -116,13 +120,16 @@ function buildTree(entries, seen = new Set(), depth = 0) {
         items,
       };
     }
-    return id ? {type: 'doc', id} : null;
+    return id ? {type: 'doc', id, label: e.label} : null;
   }).filter(Boolean);
 }
 
 const tree = buildTree(rootEntries);
 fs.mkdirSync(path.dirname(OUT), {recursive: true});
-fs.writeFileSync(OUT, JSON.stringify({docs: tree}, null, 2) + '\n');
+fs.writeFileSync(
+  OUT,
+  JSON.stringify({version: VERSION, docs: tree}, null, 2) + '\n',
+);
 fs.writeFileSync(
   OUT.replace(/\.json$/, '.routes.json'),
   JSON.stringify(
@@ -136,6 +143,6 @@ fs.writeFileSync(
   ) + '\n',
 );
 
-console.log(`categories=${categories.size} routes=${routes.size}`);
+console.log(`version=${VERSION} categories=${categories.size} routes=${routes.size}`);
 console.log(`wrote ${OUT}`);
 await browser.close();

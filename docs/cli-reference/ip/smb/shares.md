@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ip/smb/shares"
 sidebar_position: 2
 title: "shares"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/smb/shares
-captured_at: '2026-11-01T21:28:56+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/smb/shares
+captured_at: '2026-11-01T21:24:28+08:00'
 ---
 
 -----------
@@ -13,20 +13,20 @@ captured_at: '2026-11-01T21:28:56+08:00'
 **Type:** Directory
 
 <ArgTable c1="Flag" c2="Name" c3="Description">
-<ArgTableRow arg="D" typ="dynamic">dynamic</ArgTableRow>
-<ArgTableRow arg="X" typ="disabled">disabled</ArgTableRow>
-<ArgTableRow arg="*" typ="default">default</ArgTableRow>
-<ArgTableRow arg="r" typ="read-only">read-only</ArgTableRow>
-<ArgTableRow arg="c" typ="require-encryption">require-encryption</ArgTableRow>
+<ArgTableRow arg="D" typ="dynamic">The entry is created automatically.</ArgTableRow>
+<ArgTableRow arg="X" typ="disabled">The share is disabled and not accessible to clients.</ArgTableRow>
+<ArgTableRow arg="*" typ="default">The entry is a default entry created by the system.</ArgTableRow>
+<ArgTableRow arg="r" typ="read-only">The share only allows clients to read; write access is denied.</ArgTableRow>
+<ArgTableRow arg="c" typ="require-encryption">The share accepts only encrypted connections.</ArgTableRow>
 </ArgTable>
 
 <ArgTable c1="Argument" c2="Type" c3="Description">
-<ArgTableRow arg="name" typ="string" mandatory="1"></ArgTableRow>
-<ArgTableRow arg="directory" typ="file"></ArgTableRow>
-<ArgTableRow arg="read-only" typ="bool"></ArgTableRow>
-<ArgTableRow arg="require-encryption" typ="bool"></ArgTableRow>
+<ArgTableRow arg="name" typ="string" mandatory="1">Name of the SMB share that clients connect to.</ArgTableRow>
+<ArgTableRow arg="directory" typ="file">Directory on the router that the share points to. When it is not set, the value of `name` from the root directory is used. The directory is created automatically if it does not exist.</ArgTableRow>
+<ArgTableRow arg="read-only" typ="bool">Whether clients can only read the share. Access can also be restricted per user with `read-only` in [`users`](/docs/cli-reference/ip/smb/users). Default: no.</ArgTableRow>
+<ArgTableRow arg="require-encryption" typ="bool">Whether only encrypted connections can access the share; recommended for macOS clients. Default: no.</ArgTableRow>
 <ArgTableRow arg="valid-users" typ="multi { array-id, user: enum
- }"></ArgTableRow>
+ }">List of SMB users allowed to access the share. When the list is empty, all users can access it.</ArgTableRow>
 <ArgTableRow arg="invalid-users" typ="multi { array-id, user: enum
- }"></ArgTableRow>
+ }">List of SMB users explicitly denied access to the share.</ArgTableRow>
 </ArgTable>

@@ -3,14 +3,14 @@ sidebar_key: "storage/smb"
 sidebar_position: 11
 title: "SMB"
 sidebar_label: 'SMB'
-description: 'RouterOS includes a built-in SMB server for file sharing over SMB/CIFS protocols, supporting SMB2.1, 3.0, and 3.1.1 with security warnings for SMB1 and SMIPS devices. Users can configure shares, set user permissions, and manage access rights through `/ip/smb`, `/ip/smb/shares`, and `/ip/'
+description: 'RouterOS includes a built-in SMB server for file sharing over SMB/CIFS protocols, supporting SMB2.1, 3.0, and 3.1.1. Users can configure server settings, shares, and user permissions through /ip/smb, /ip/smb/shares, and /ip/smb/users. The Storage package also adds an SMB client for mounting remote shares as disks.'
 tags:
   - 'smb'
-source: https://manual.mikrotik.com/docs/storage/smb
-captured_at: '2026-11-04T11:33:17+08:00'
+source: https://manual.mikrotik.com/docs/7.25/storage/smb
+captured_at: '2026-11-04T11:21:42+08:00'
 ---
 
-RouterOS includes a built-in **SMB server** for sharing folders of the router with network clients. In addition, the [ROSE package](/docs/storage/) adds an **SMB client** that lets RouterOS mount remote SMB shares as disks.
+RouterOS includes a built-in **SMB server** for sharing folders of the router with network clients. In addition, the [Storage package](/docs/storage/) adds an **SMB client** that lets RouterOS mount remote SMB shares as disks.
 
 ## SMB server
 
@@ -21,59 +21,28 @@ SMB server provides file sharing access to configured folders of the router, all
 :::warning
 RouterOS only supports SMB2.1, SMB3.0, and SMB3.1.1. SMB1 is not supported due to security vulnerabilities.
 
-**Caution:** SMB is not supported on SMIPS devices.
+SMB is not supported on SMIPS devices.
 :::
 
-### Server settings
+The server starts on its own once the first share is added (`enabled=auto` is the default; see [`/ip/smb`](/docs/cli-reference/ip/smb/) for the settings), it can also be limited to specific interfaces and renamed.
 
-| Property | Description |
-| :-- | :-- |
-| **comment** (*string*; Default: **MikrotikSMB**) | Set a comment for the server |
-| **domain** (*string*; Default: **MSHOME**) | Name of the Windows Workgroup |
-| **enabled** (*yes \| no \| auto* Default: **auto**) | The default value is 'auto.' This means that the SMB server will automatically be enabled when the first non-disabled SMB share is configured under `/ip/smb/share` |
-| **interface** (*string*; Default: **all**) | List of interfaces on which the SMB service will be running. all - SMB will be available on all interfaces. |
-
-:::warning
-Starting from version 7.14, the 'allow-guest' option has been replaced by a default guest user located in `/ip/smb/users`. This default guest user can now be disabled or enabled in this section.
-:::
-
-### Share settings
+### Shares
 
 **Sub-menu:** `/ip/smb/shares`
 
-Allows configuring share names and directories that will be accessible by SMB.
+[`/ip/smb/shares`](/docs/cli-reference/ip/smb/shares) configures the share names and directories accessible over SMB. If the directory provided in the configuration does not exist, it will be created automatically. Access can be limited per share with `valid-users` / `invalid-users`, enforced encryption with `require-encryption` (recommended for macOS clients), and read-only access with `read-only`.
 
-If the directory provided in the configuration does not exist it will be created automatically.
-
-| Property | Description |
-| :-- | :-- |
-| **comment** (*string*; Default: **default share**) | Set a comment for the share |
-| **disabled** (*yes \| no*; Default: **no**) | If disabled, the share will not be accessible. |
-| **valid-users**(list of *strings*; \| Default:) | Specifies which users are allowed to access the Samba share. If it is left empty, all users will be able to access the share. Once a user or users are defined here, only they will be able to access the share |
-| **invalid-users**(list of *strings*; \| Default: ) | Used to specify users who are explicitly denied access to the Samba share. |
-| **require-encryption** (*yes*\| *no*; Default: ***no***) | Enforces the use of encryption for all connections to a particular Samba share. It is recommended to change this to "Yes" to ensure better stability with macOS clients. |
-| **name** (*string*; Default: ) | Name of the SMB share |
-| **directory** (*string*; Default: ) | Directory on the router assigned to the SMB share. If left empty, the value of the *name* argument will be used from the root folder. |
-
-### User setup
+### Users
 
 **Sub-menu:** `/ip/smb/users`
 
-Set up users that can access SMB shares of the router.
-
-| Property | Description |
-| :-- | :-- |
-| **comment** (*string*; Default: ) | Set a description for the user |
-| **disabled** (*yes \| no*; Default: **no**) | Defines whether the user is enabled or disabled |
-| **name** (*string*; Default: ) | Login name of the SMB service user |
-| **password** (*string*; Default: ) *[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | Password for the SMB user to connect to the SMB service |
-| **read-only** (*yes \| no*; Default: **yes**) | Sets if the user has only read-only rights when accessing shares or full access rights. |
+[`/ip/smb/users`](/docs/cli-reference/ip/smb/users) sets up the users that can access the router's SMB shares. Each user has a name, a password, and a `read-only` restriction (default: yes) that applies across all shares. A default `guest` user is created automatically and is disabled by default.
 
 ### Example
 
 To make the RouterOS folder available through the SMB service follow these steps:
 
-- Create user.
+- Create a user.
 
 ```ros
 /ip/smb/users/add read-only=no name=mtuser password=mtpasswd
@@ -99,9 +68,10 @@ Now check for results:
 ```ros
 /ip/smb/print
       enabled: yes
-       domain: MSHOME
-      comment: MikrotikSMB
-   interfaces: all
+        status: enabled
+        domain: MSHOME
+       comment: MikrotikSMB
+    interfaces: all
 ```
 
 - SMB user settings
@@ -131,23 +101,14 @@ Now, additional configuration changes can be done, like disabling the default us
 
 ## SMB client
 
-**Sub-menu:** `/disk` **Packages required:** [`rose-storage`](/docs/storage/)
+**Sub-menu:** `/disk` **Packages required:** [Storage package](/docs/storage/)
 
-The ROSE package adds an SMB client that mounts a remote SMB share as a local disk on the router. The ROS package currently supports SMB2.1, SMB3.0, and SMB3.1.1 dialects (SMB1 is not supported due to security vulnerabilities).
-
-### Properties
-
-| Property | Description |
-| :-- | :-- |
-| **smb-address** | IP address of the SMB server |
-| **smb-password***[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | SMB password |
-| **smb-share** | Name of the share you want to connect to |
-| **smb-user** | SMB user |
+The Storage package adds an SMB client that mounts a remote SMB share as a local disk on the router. The package currently supports SMB2.1, SMB3.0, and SMB3.1.1 dialects (SMB1 is not supported due to security vulnerabilities).
 
 ### Configuration example
 
-Client
-
 ```ros
-add smb-address=10.155.145.11 smb-share=share1 smb-user=user smb-password=password type=smb
+/disk/add smb-address=10.155.145.11 smb-share=share1 smb-user=user smb-password=password type=smb
 ```
+
+The mounted share then appears as a disk in `/file` and can be managed like any other disk.

@@ -8,8 +8,8 @@ tags:
   - 'spectral-scan'
   - 'wireless'
   - 'monitoring'
-source: https://manual.mikrotik.com/docs/wireless/abgn/spectral-scan
-captured_at: '2026-11-04T11:35:30+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/abgn/spectral-scan
+captured_at: '2026-11-04T11:23:57+08:00'
 ---
 
 The spectral scan can scan all frequencies supported by your wireless card, and plot them directly in the console. The exact frequency span depends on the card. Allowed ranges on r52n: [4790; 6085], [2182; 2549].
@@ -26,7 +26,7 @@ Currently, is NOT supported for Atheros 802.11ac chips (e.g. QCA98xx, IPQ-4018).
 
 ### Spectral History
 
-![](./img/image-690b5cf4.webp)
+![](./img/image.webp)
 
 ```ros
 /interface/wireless/spectral-history <wireless interface name> 

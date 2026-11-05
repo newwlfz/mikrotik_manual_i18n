@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/info/country-info"
 sidebar_position: 2
 title: "country-info"
 sidebar_label: 'country-info'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/info/country-info
-captured_at: '2026-11-01T21:27:59+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/info/country-info
+captured_at: '2026-11-01T21:23:22+08:00'
 ---
 
 -----------

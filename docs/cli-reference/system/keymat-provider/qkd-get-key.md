@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/keymat-provider/qkd-get-key"
 sidebar_position: 2
 title: "qkd-get-key"
-source: https://manual.mikrotik.com/docs/cli-reference/system/keymat-provider/qkd-get-key
-captured_at: '2026-11-01T21:29:51+08:00'
+sidebar_label: 'qkd-get-key'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/keymat-provider/qkd-get-key
+captured_at: '2026-11-01T21:25:30+08:00'
 ---
 
 -----------

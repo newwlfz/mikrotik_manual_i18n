@@ -3,8 +3,8 @@ sidebar_key: "getting-started/installation-and-upgrade/install/chr-installation/
 sidebar_position: 4
 title: "CHR: Hyper-V Installation"
 description: 'This page documents the installation of MikroTik RouterOS CHR on Microsoft Hyper-V, detailing supported network adapters (synthetic and legacy) and disk controllers (IDE for system disks, SCSI for secondary ones), with a link to Hyper-V documentation.'
-source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation/hyperv
-captured_at: '2026-11-04T11:28:37+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/installation-and-upgrade/install/chr-installation/hyperv
+captured_at: '2026-11-04T11:16:25+08:00'
 ---
 
 ## Supported Network and Disk Interfaces

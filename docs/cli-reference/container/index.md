@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/container/index"
 sidebar_position: 3
 title: "container"
 sidebar_label: 'container'
-source: https://manual.mikrotik.com/docs/cli-reference/container
-captured_at: '2026-11-01T21:26:37+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/container
+captured_at: '2026-11-01T21:22:00+08:00'
 ---
 
 -----------

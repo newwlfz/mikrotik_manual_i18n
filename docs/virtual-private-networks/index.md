@@ -8,8 +8,8 @@ tags:
   - 'vpn'
   - 'ipsec'
   - 'openvpn'
-source: https://manual.mikrotik.com/docs/virtual-private-networks
-captured_at: '2026-11-04T11:34:27+08:00'
+source: https://manual.mikrotik.com/docs/7.25/virtual-private-networks
+captured_at: '2026-11-04T11:22:57+08:00'
 ---
 
 VPN documentation covers RouterOS tunnel and VPN technologies, including IPsec, L2TP, PPPoE, PPTP, SSTP, OpenVPN, WireGuard, GRE, EoIP, IPIP, 6to4, and ZeroTier. Use this section to configure secure or encapsulated connectivity.

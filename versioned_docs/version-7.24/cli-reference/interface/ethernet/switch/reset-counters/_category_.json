@@ -1,0 +1,11 @@
+{
+  "position": 22,
+  "label": "Reset Counters",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/ethernet/switch/reset-counters/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/ethernet/switch/reset-counters"
+}

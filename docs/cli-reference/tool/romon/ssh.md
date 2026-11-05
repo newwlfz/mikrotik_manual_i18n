@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/tool/romon/ssh"
 sidebar_position: 5
 title: "ssh"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/romon/ssh
-captured_at: '2026-11-01T21:30:20+08:00'
+sidebar_label: 'ssh'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/romon/ssh
+captured_at: '2026-11-01T21:25:58+08:00'
 ---
 
 -----------

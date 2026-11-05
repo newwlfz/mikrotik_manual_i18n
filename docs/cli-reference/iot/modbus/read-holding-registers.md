@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/iot/modbus/read-holding-registers"
 sidebar_position: 2
 title: "read-holding-registers"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/modbus/read-holding-registers
-captured_at: '2026-11-01T21:28:17+08:00'
+sidebar_label: 'read-holding-registers'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/modbus/read-holding-registers
+captured_at: '2026-11-01T21:23:40+08:00'
 ---
 
 -----------

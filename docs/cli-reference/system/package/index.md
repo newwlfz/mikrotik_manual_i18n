@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/package/index"
 sidebar_position: 5
 title: "package"
-source: https://manual.mikrotik.com/docs/cli-reference/system/package
-captured_at: '2026-11-01T21:29:57+08:00'
+sidebar_label: 'package'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/package
+captured_at: '2026-11-01T21:25:33+08:00'
 ---
 
 -----------

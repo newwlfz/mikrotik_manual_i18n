@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/tool/traffic-generator/start"
 sidebar_position: 8
 title: "start"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/start
-captured_at: '2026-11-01T21:30:25+08:00'
+sidebar_label: 'start'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/traffic-generator/start
+captured_at: '2026-11-01T21:26:02+08:00'
 ---
 
 -----------

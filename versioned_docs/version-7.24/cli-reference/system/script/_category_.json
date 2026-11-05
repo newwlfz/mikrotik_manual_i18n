@@ -1,0 +1,11 @@
+{
+  "position": 27,
+  "label": "Script",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/script/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/script"
+}

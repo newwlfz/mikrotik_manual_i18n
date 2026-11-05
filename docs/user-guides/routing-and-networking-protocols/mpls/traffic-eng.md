@@ -9,8 +9,8 @@ tags:
   - 'reoptimization'
   - 'explicit-route'
 slug: /user-guides/routing-and-networking-protocols/mpls/traffic-eng
-source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/mpls/traffic-eng
-captured_at: '2026-11-04T11:33:49+08:00'
+source: https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/mpls/traffic-eng
+captured_at: '2026-11-04T11:22:25+08:00'
 ---
 
 ### Monitoring

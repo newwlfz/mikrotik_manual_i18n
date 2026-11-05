@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/tool/sms/inbox"
 sidebar_position: 1
 title: "inbox"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/sms/inbox
-captured_at: '2026-11-01T21:30:22+08:00'
+sidebar_label: 'inbox'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/sms/inbox
+captured_at: '2026-11-01T21:25:57+08:00'
 ---
 
 -----------

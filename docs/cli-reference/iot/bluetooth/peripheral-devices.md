@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/iot/bluetooth/peripheral-devices"
 sidebar_position: 5
 title: "peripheral-devices"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/peripheral-devices
-captured_at: '2026-11-01T21:28:09+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/bluetooth/peripheral-devices
+captured_at: '2026-11-01T21:23:34+08:00'
 ---
 
 -----------

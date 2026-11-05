@@ -7,8 +7,8 @@ description: 'This page guides MikroTik RouterOS users through registering LoRaW
 tags:
   - 'lora'
   - 'iot'
-source: https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides/the-things-stack
-captured_at: '2026-11-04T11:32:34+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/lora/user-guides/the-things-stack
+captured_at: '2026-11-04T11:20:04+08:00'
 ---
 
 [The Things Stack](https://console.cloud.thethings.network/) is a new version of The Things network.

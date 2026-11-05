@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/port/remote-access"
 sidebar_position: 2
 title: "remote-access"
 sidebar_label: 'remote-access'
-source: https://manual.mikrotik.com/docs/cli-reference/port/remote-access
-captured_at: '2026-11-01T21:29:20+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/port/remote-access
+captured_at: '2026-11-01T21:24:56+08:00'
 ---
 
 -----------

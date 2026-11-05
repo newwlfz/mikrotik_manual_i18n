@@ -8,15 +8,15 @@ tags:
   - 'snmp'
   - 'community-settings'
   - 'security'
-source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/snmp
-captured_at: '2026-11-04T11:28:02+08:00'
+source: https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/snmp
+captured_at: '2026-11-04T11:15:28+08:00'
 ---
 
 Simple Network Management Protocol (SNMP) is an Internet-standard protocol used to monitor and manage devices on IP networks. It can be used with monitoring tools such as Cacti, MRTG, or The Dude to collect, visualize, and graph system data.
 
 SNMP write access is available only for selected OIDs. For supported OIDs, write operations are available using SNMP v1, v2c, or v3. SNMP replies are sent through the same interface on which the request was received, ensuring that the response uses the same source address as the destination address used in the original request to the router.
 
-![](./img/image-06ecaf36.webp)
+![](./img/image.webp)
 
 :::warning
 The SNMP service collects data from various services running on the system. If communication between SNMP and one of these services takes longer than expected, the system may log a warning such as timeout while waiting for program or SNMP did not get OID data within the expected time, ignoring OID. The timeout is 30 seconds per service, or up to 5 minutes for the routing service. After such a timeout, the affected service may temporarily stop responding to SNMP data requests before attempting to retrieve the requested information again.
@@ -51,7 +51,7 @@ You can also specify administrative contact information in the above settings. A
 | :-- | :-- |
 | **contact** (*string*; Default: **""**) | Contact information |
 | **enabled** (*yes \| no*; Default: **no**) | Used to disable/enable SNMP service |
-| **engine-id** (*string*; Default: **""**) | For SNMP v3, used as part of the identifier. You can configure the suffix part of the engine id using this argument. If the SNMP client is not capable of detecting set engine-id value then this prefix hex has to be used 0x80003a8c04 |
+| **engine-id** (*string*; Default: **""**) | For SNMP v3, used as part of the identifier. You can configure it manually or a random value will be assigned |
 | **location** (*string*; Default: **""**) | Location information |
 | **trap-community** (*string*; Default: **public**) | Which communities are configured in the *community* menu to use when sending out the trap. |
 | **trap-generators** (*interfaces \| start-trap*; Default: ) | What action will generate traps:interfaces - interface changes;start-trap - SNMP server starting on the routertemp-exception - send trap when temperature reached 100c (or value configured for cpu-overtemp-threshold at `/system/health` ) |

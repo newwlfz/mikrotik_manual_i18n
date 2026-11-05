@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/dude/import-db"
 sidebar_position: 5
 title: "import-db"
 sidebar_label: 'import-db'
-source: https://manual.mikrotik.com/docs/cli-reference/dude/import-db
-captured_at: '2026-11-01T21:26:49+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/dude/import-db
+captured_at: '2026-11-01T21:22:17+08:00'
 ---
 
 -----------

@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ipv6/firewall/nat/index"
 sidebar_position: 1
 title: "nat"
-source: https://manual.mikrotik.com/docs/cli-reference/ipv6/firewall/nat
-captured_at: '2026-11-01T21:29:10+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ipv6/firewall/nat
+captured_at: '2026-11-01T21:24:38+08:00'
 ---
 
 -----------
@@ -47,7 +47,11 @@ captured_at: '2026-11-01T21:29:10+08:00'
 <ArgTableRow arg="address-list" typ="enum ()">Name of the address list to be used. Applicable if the action is `add-dst-to-address-list` or `add-src-to-address-list`.</ArgTableRow>
 <ArgTableRow arg="address-list-timeout" typ="alt { address-list-timeout: enum (none-dynamic | none-static) { none-dynamic:0, none-static:0xffffffff }
 , address-list-timeout: time [ .. 21474836]
- }">Time interval after which the address will be removed from the address list specified by the `address-list` parameter. Used in conjunction with `add-dst-to-address-list` or `add-src-to-address-list` actions.  `none-dynamic` (`00:00:00`) will leave the address in the address list till reboot.  `none-static` will leave the address in the address list forever and will be included in the configuration export/backup.</ArgTableRow>
+ }">
+How long the address stays in `address-list` after the `add-src-to-address-list` or `add-dst-to-address-list` action adds it. With a time, the rule adds a dynamic entry (`D`) that the router removes when the time ends; each new match of the rule resets the time to its full value. The maximum is `35w3d13h13m56s`. An address that is already a static entry in the list stays static.
+- `none-dynamic` (`0s`) - Add a dynamic entry without a timeout. It is not saved in the configuration and a reboot clears it.
+- `none-static` - Add a static entry. It is saved in the configuration and in exports, and stays after a reboot until you remove it.
+</ArgTableRow>
 <ArgTableRow arg="src-address-type" typ="super { !
 , type: ubit (unicast, local, anycast, multicast, unreachable)
  }">Matches the source address type: `unicast` - an IP address used for point-to-point transmission.  `local` - the address is assigned to one of the router's interfaces.  `anycast` - a packet sent to the nearest node in a group.  `multicast` - a packet is forwarded to a defined group of devices.  `unreachable` - the address is unreachable.</ArgTableRow>

@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/certificate/sign"
 sidebar_position: 17
 title: "sign"
 sidebar_label: 'sign'
-source: https://manual.mikrotik.com/docs/cli-reference/certificate/sign
-captured_at: '2026-11-01T21:26:30+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/sign
+captured_at: '2026-11-01T21:21:52+08:00'
 ---
 
 -----------

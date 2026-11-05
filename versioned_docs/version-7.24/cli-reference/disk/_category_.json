@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "disk",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/disk/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/disk"
+}

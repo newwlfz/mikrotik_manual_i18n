@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/package/local-update/index"
 sidebar_position: 3
 title: "local-update"
-source: https://manual.mikrotik.com/docs/cli-reference/system/package/local-update
-captured_at: '2026-11-01T21:29:57+08:00'
+sidebar_label: 'local-update'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/package/local-update
+captured_at: '2026-11-01T21:25:35+08:00'
 ---
 
 -----------

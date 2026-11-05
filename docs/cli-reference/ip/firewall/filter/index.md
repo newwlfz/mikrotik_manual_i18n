@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ip/firewall/filter/index"
 sidebar_position: 1
 title: "filter"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/firewall/filter
-captured_at: '2026-11-01T21:28:34+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/firewall/filter
+captured_at: '2026-11-01T21:24:02+08:00'
 ---
 
 -----------
@@ -112,7 +112,6 @@ Matches connections that are source-natted, destination-natted, or both. The `co
 , [high-port-weight] ,num
  }">
 Attempts to detect TCP and UDP scans. Parameters are in the following format: `WeightThreshold, DelayThreshold, LowPortWeight, HighPortWeight`.
-
 - `WeightThreshold` - total weight of the latest TCP/UDP packets with different destination ports coming from the same host to be treated as port scan sequence.
 - `DelayThreshold` - delay for the packets with different destination ports coming from the same host to be treated as possible port scan subsequence.
 - `LowPortWeight` - the weight of the packets with privileged destination port (&lt;1024).
@@ -121,7 +120,6 @@ Attempts to detect TCP and UDP scans. Parameters are in the following format: `W
 <ArgTableRow arg="ipv4-options" typ="super { options: enum (strict-source-routing | loose-source-routing | no-source-routing | record-route | no-record-route | timestamp | no-timestamp | router-alert | no-router-alert | any | none) { strict-source-routing:0x1, loose-source-routing:0x2, no-source-routing:0x4, record-route:0x8, no-record-route:0x10, timestamp:0x20, no-timestamp:0x40, router-alert:0x80, no-router-alert:0x100, any:0x200, none:0x400 }
  }">
 Matches IPv4 header options.
-
 - `any` - matches packets with at least one of the IPv4 options.
 - `loose-source-routing` - matches packets with a loose source routing option.
 - `no-record-route` - matches packets with no record route option.
@@ -137,7 +135,6 @@ Matches IPv4 header options.
 , type: ubit (unicast, local, broadcast, multicast, blackhole)
  }">
 Matches the source address type:
-
 - `unicast` - an IP address used for point-to-point transmission.
 - `local` - the address is assigned to one of the router's interfaces.
 - `broadcast` - a packet is sent to all devices in the subnet.
@@ -147,7 +144,6 @@ Matches the source address type:
 , type: ubit (unicast, local, broadcast, multicast, blackhole)
  }">
 Matches the destination address type:
-
 - `unicast` - an IP address used for point-to-point transmission.
 - `local` - the destination address is assigned to one of the router's interfaces.
 - `broadcast` - a packet is sent to all devices in a subnet.
@@ -164,7 +160,6 @@ Matches the destination address type:
  }
  }">
 Matches packets received from HotSpot clients against various HotSpot matchers.
-
 - `auth` - matches authenticated HotSpot client packets.
 - `from-client` - matches packets coming from the HotSpot client.
 - `http` - matches HTTP requests sent to the HotSpot server.
@@ -175,10 +170,9 @@ Matches packets received from HotSpot clients against various HotSpot matchers.
 <ArgTableRow arg="address-list-timeout" typ="alt { address-list-timeout: enum (none-dynamic | none-static) { none-dynamic:0, none-static:0xffffffff }
 , address-list-timeout: time [ .. 21474836]
  }">
-Time interval after which the address will be removed from the address list specified by the `address-list` parameter. Used in conjunction with `add-dst-to-address-list` or `add-src-to-address-list` actions.
-
-- `none-dynamic` (`00:00:00`) will leave the address in the address list till reboot.
-- `none-static` will leave the address in the address list forever and will be included in the configuration export/backup.
+How long the address stays in `address-list` after the `add-src-to-address-list` or `add-dst-to-address-list` action adds it. With a time, the rule adds a dynamic entry (`D`) that the router removes when the time ends; each new match of the rule resets the time to its full value. The maximum is `35w3d13h13m56s`. An address that is already a static entry in the list stays static.
+- `none-dynamic` (`0s`) - Add a dynamic entry without a timeout. It is not saved in the configuration and a reboot clears it.
+- `none-static` - Add a static entry. It is saved in the configuration and in exports, and stays after a reboot until you remove it.
 </ArgTableRow>
 <ArgTableRow arg="ttl" typ="super { mode: enum (equal | not-equal | less-than | greater-than) { equal:0, not-equal:1, less-than:2, greater-than:3 }
 , [value] :num [0 .. 255]
@@ -268,7 +262,6 @@ Time interval after which the address will be removed from the address list spec
 , [mode] [ :enum (packet | bit) { packet:0, bit:1 }]
  }">
 Matches packets up to a limited rate (packet rate or bit rate). A rule with this matcher will match until this limit is reached. Parameters are written in the following format: `rate[/time],burst:mode`.
-
 - `rate` - packet or bit count per time interval to match.
 - `time` - specifies the time interval in which the packet or bit rate cannot be exceeded (optional, 1s will be used if not specified).
 - `burst` - initial number of packets or bits to match: this number gets recharged every 10ms so burst should be at least 1/100 of a rate per second.
@@ -281,7 +274,6 @@ Matches packets up to a limited rate (packet rate or bit rate). A rule with this
 , [expire] [ /time]
  }">
 Matches packets until a given rate is exceeded. Rate is defined as packets per time interval. As opposed to the `limit` matcher, every flow has its own limit. Flow is defined by a mode parameter. Parameters are written in the following format: `rate[/time],burst,mode[/expire]`.
-
 - `rate` - packet count per time interval per-flow to match.
 - `time` - specifies the time interval in which the packet count rate per flow cannot be exceeded (optional, 1s will be used if not specified).
 - `burst` - initial number of packets per flow to match: this number gets recharged by one every time/rate, up to this number.
@@ -318,7 +310,6 @@ Matches packets until a given rate is exceeded. Rate is defined as packets per t
 , [policy] ,enum (none | ipsec) { none:0, ipsec:1 }
  }">
 Matches the policy used by IPsec. Value is written in the following format: `direction, policy`.
-
 - `in` - valid in the PREROUTING, INPUT, and FORWARD chains.
 - `out` - valid in the POSTROUTING, OUTPUT, and FORWARD chains.
 - `ipsec` - matches if the packet is subject to IPsec processing.

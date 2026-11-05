@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/tool/traffic-generator/stats/latency-distribution"
 sidebar_position: 1
 title: "latency-distribution"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/stats/latency-distribution
-captured_at: '2026-11-01T21:30:25+08:00'
+sidebar_label: 'stats'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/traffic-generator/stats/latency-distribution
+captured_at: '2026-11-01T21:26:04+08:00'
 ---
 
 -----------

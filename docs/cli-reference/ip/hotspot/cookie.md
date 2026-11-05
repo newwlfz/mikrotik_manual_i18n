@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ip/hotspot/cookie"
 sidebar_position: 2
 title: "cookie"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/cookie
-captured_at: '2026-11-01T21:28:38+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/hotspot/cookie
+captured_at: '2026-11-01T21:24:05+08:00'
 ---
 
 -----------

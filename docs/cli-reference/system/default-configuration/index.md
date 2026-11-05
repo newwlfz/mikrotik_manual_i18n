@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/default-configuration/index"
 sidebar_position: 3
 title: "default-configuration"
-source: https://manual.mikrotik.com/docs/cli-reference/system/default-configuration
-captured_at: '2026-11-01T21:29:48+08:00'
+sidebar_label: 'default-configuration'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/default-configuration
+captured_at: '2026-11-01T21:25:26+08:00'
 ---
 
 -----------

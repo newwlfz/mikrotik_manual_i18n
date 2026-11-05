@@ -7,8 +7,8 @@ description: 'Guide for configuring outdoor CPE-to-AP Wi-Fi links using MikroTik
 tags:
   - 'wifi'
   - 'ap-configuration'
-source: https://manual.mikrotik.com/docs/wireless/wifi/configuring-outdoor-cpe-to-ap-links
-captured_at: '2026-11-04T11:36:02+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/wifi/configuring-outdoor-cpe-to-ap-links
+captured_at: '2026-11-04T11:24:29+08:00'
 ---
 
 **Package:** `wifi-qcom`
@@ -88,8 +88,8 @@ In case you already have a DHCP-server in the topology that is responsible for p
 ![](./img/configuring-outdoor-cpe-to-ap-links-01-a1a395b70c661efe268c6.webp)
 
 1. Ensure that the AP has a [bridge interface](/docs/bridging-and-switching/#example) added and that all Ethernet and WiFi ports [are a part of it](/docs/bridging-and-switching/#example-1).
-2. Set up [DHCP-client](/docs/network-management/dhcp#dhcp-client) on that bridge or, statically, add an [IP address](/docs/getting-started/networking-fundamentals/#address-configuration) and a [default route](/docs/user-guides/routing-and-networking-protocols/routing-decision#default-route), instead.
-3. Change [interface list members](https://manual.mikrotik.com/docs/system-information-and-utilities/interface-lists) roles if required.
+2. Set up [DHCP-client](/docs/network-management/dhcp/client) on that bridge or, statically, add an [IP address](/docs/getting-started/networking-fundamentals/#address-configuration) and a [default route](/docs/user-guides/routing-and-networking-protocols/routing-decision#default-route), instead.
+3. Change [interface list members](/docs/cli-reference/interface/list/member) roles if required.
 
 #### Scenario #2
 
@@ -97,8 +97,8 @@ In case you want to have the AP itself act as a DHCP-server for stations:
 
 ![](./img/configuring-outdoor-cpe-to-ap-links-02-ec45fe4e131bc746d40b4.webp)
 
-1. Configure an ethernet port as an uplink/WAN port, i.e. set up a [DHCP-client](/docs/network-management/dhcp#dhcp-client) or [static IP](/docs/getting-started/networking-fundamentals/#address-configuration) for the ethernet interface, set up a default [route](/docs/user-guides/routing-and-networking-protocols/routing-decision) and categorize the port as a "WAN" port in the [interface list](https://manual.mikrotik.com/docs/system-information-and-utilities/interface-lists) settings.
-2. Set up a [DHCP-server](/docs/network-management/dhcp#dhcp-server) on top of the WiFi interface (or on top of the bridge, which WiFi port is a part of) and add a respective  [IP address](/docs/getting-started/networking-fundamentals/#address-configuration) to that interface.
+1. Configure an ethernet port as an uplink/WAN port, i.e. set up a [DHCP-client](/docs/network-management/dhcp/client) or [static IP](/docs/getting-started/networking-fundamentals/#address-configuration) for the ethernet interface, set up a default [route](/docs/user-guides/routing-and-networking-protocols/routing-decision) and categorize the port as a "WAN" port in the [interface list](/docs/cli-reference/interface/list) settings.
+2. Set up a [DHCP-server](/docs/network-management/dhcp/server) on top of the WiFi interface (or on top of the bridge, which WiFi port is a part of) and add a respective  [IP address](/docs/getting-started/networking-fundamentals/#address-configuration) to that interface.
 
 ## Station setup
 
@@ -136,9 +136,9 @@ An example of such a topology:
 
 This type of setup requires the CPE to have:
 
-1. The WiFi interface categorized as "WAN" port in the [interface list members](https://manual.mikrotik.com/docs/system-information-and-utilities/interface-lists) menu.
-2. a [DHCP-server](/docs/network-management/dhcp#dhcp-server) running on the "other/ethernet" interfaces (it is suggested to ensure that AP's DHCP server and Station's DHCP server networks do not use the same subnet, as it can lead to layer3/routing issues).
-3. a [DHCP-client](/docs/network-management/dhcp#dhcp-client) or a [static IP](/docs/getting-started/networking-fundamentals/#address-configuration) applied to the WiFi interface and a [default route](/docs/user-guides/routing-and-networking-protocols/routing-decision) configured.
+1. The WiFi interface categorized as "WAN" port in the [interface list members](/docs/cli-reference/interface/list/member) menu.
+2. a [DHCP-server](/docs/network-management/dhcp/server) running on the "other/ethernet" interfaces (it is suggested to ensure that AP's DHCP server and Station's DHCP server networks do not use the same subnet, as it can lead to layer3/routing issues).
+3. a [DHCP-client](/docs/network-management/dhcp/client) or a [static IP](/docs/getting-started/networking-fundamentals/#address-configuration) applied to the WiFi interface and a [default route](/docs/user-guides/routing-and-networking-protocols/routing-decision) configured.
 4. [`mode=station`](/docs/wireless/user-guides/wireless-station-modes#mode-station) configured in the WiFi settings.
 
 #### Scenario #2
@@ -152,9 +152,9 @@ An example of such a topology:
 This type of setup requires the CPE to have:
 
 1. All ports (WiFi and Ethernet) are added into the same [bridge interface](/docs/bridging-and-switching/#example).
-2. The bridge is categorized as a "LAN" interface in the [interface list members](https://manual.mikrotik.com/docs/system-information-and-utilities/interface-lists) menu.
-3. A [DHCP-server](/docs/network-management/dhcp#dhcp-server) is disabled.
-4. A [DHCP-client](/docs/network-management/dhcp#dhcp-client) or a [static IP](/docs/getting-started/networking-fundamentals/#address-configuration) is applied to the bridge interface.
+2. The bridge is categorized as a "LAN" interface in the [interface list members](/docs/cli-reference/interface/list/member) menu.
+3. A [DHCP-server](/docs/network-management/dhcp/server) is disabled.
+4. A [DHCP-client](/docs/network-management/dhcp/client) or a [static IP](/docs/getting-started/networking-fundamentals/#address-configuration) is applied to the bridge interface.
 5. [`mode=station-bridge`](/docs/wireless/user-guides/wireless-station-modes#mode-station-bridge) is configured in the WiFi settings:
 
 ```ros

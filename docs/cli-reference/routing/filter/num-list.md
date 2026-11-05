@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/filter/num-list"
 sidebar_position: 6
 title: "num-list"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/filter/num-list
-captured_at: '2026-11-01T21:29:30+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/filter/num-list
+captured_at: '2026-11-01T21:25:08+08:00'
 ---
 
 -----------

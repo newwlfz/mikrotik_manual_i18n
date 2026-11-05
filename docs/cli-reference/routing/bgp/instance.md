@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/bgp/instance"
 sidebar_position: 5
 title: "instance"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/bgp/instance
-captured_at: '2026-11-01T21:29:27+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/bgp/instance
+captured_at: '2026-11-01T21:25:04+08:00'
 ---
 
 -----------
@@ -30,4 +30,5 @@ captured_at: '2026-11-01T21:29:27+08:00'
 <ArgTableRow arg="cluster-id" typ="ipAddr" unset="1">For route reflector instances, specify the cluster ID of the route reflector cluster. This attribute identifies routing updates from other route reflectors in the cluster to avoid routing information loops. Typically, only one route reflector exists per cluster; in this case, do not configure 'cluster-id' and BGP router ID is used instead.</ArgTableRow>
 <ArgTableRow arg="ignore-as-path-len" typ="bool" unset="1">Ignore the **AS_PATH** attribute in the BGP route selection algorithm. Applies to input.</ArgTableRow>
 <ArgTableRow arg="multipath" typ="num" unset="1">Install the specified number of ECMP routes received by add-path or selected by [best path selection](/docs/user-guides/routing-and-networking-protocols/unicast/bgp/understanding-bgp#best-path-selection).</ArgTableRow>
+<ArgTableRow arg="always-compare-med" typ="bool" unset="1"></ArgTableRow>
 </ArgTable>

@@ -3,13 +3,13 @@ sidebar_key: "management-tools/webfig"
 sidebar_position: 1
 title: "WebFig"
 sidebar_label: 'WebFig'
-description: 'WebFig is a web-based RouterOS utility enabling monitoring, configuration, and troubleshooting without additional software. It supports HTTPS with certificate management, including wildcard certificates, and provides secure access via SSL/TLS for router configuration.'
+description: 'WebFig is a web-based RouterOS utility enabling monitoring, configuration, and troubleshooting without additional software. It supports HTTPS with certificate management, including wildcard certificates, and provides secure access through SSL/TLS for router configuration.'
 tags:
   - 'webfig'
   - 'https'
   - 'terminal'
-source: https://manual.mikrotik.com/docs/management-tools/webfig
-captured_at: '2026-11-04T11:32:24+08:00'
+source: https://manual.mikrotik.com/docs/7.25/management-tools/webfig
+captured_at: '2026-11-04T11:20:42+08:00'
 ---
 
 ## Introduction
@@ -26,9 +26,7 @@ WebFig supports three primary functions:
 
 ## Connecting to a Router
 
-As described in the [First Time Configuration](/docs/getting-started/first-time-configuration) section, the device is accessible by default using the username **admin** and either no password or a default password provided on the device label (depending on the model). Open a web browser and enter the device IP address in the address bar; by default this is `192.168.88.1`. Ensure the management device is configured with an IP address in the same subnet (for example, `192.168.88.2`), otherwise Layer 3 connectivity will not be available.
-
- Simply open a Web browser and in the search bar type the device IP address which by default is **192.168.88.1.** Be sure your device has an IP address from the same network, for example, 192.168.88.2 otherwise Layer3 communication will not work.
+As described in the [First Time Configuration](/docs/getting-started/first-time-configuration) section, the device is accessible by default using the username **admin** and either no password or a default password provided on the device label (depending on the model). Open a web browser and enter the device IP address in the address bar; by default this is `192.168.88.1`. Ensure the management device is configured with an IP address in the same subnet (for example, `192.168.88.2`), otherwise Layer 3 connectivity does not work.
 
 ![](./img/webfig_01.png)
 
@@ -39,7 +37,7 @@ WebFig is normally used only from the local network: by default the firewall blo
 Which kind of certificate to use depends on how you reach the router:
 
 - **By its LAN IP address or an internal hostname (the usual case)** — use a self-signed certificate generated on the router. Public Certificate Authorities cannot issue certificates for private addresses such as `192.168.88.1`, so this is the default approach.
-- **By a real, public domain name** — you can use a publicly trusted certificate from Let's Encrypt and avoid browser warnings without distributing a CA. This only helps if you actually open WebFig using that domain name, so it mainly applies to routers managed over a public name rather than a LAN IP (described below).
+- **By a real, public domain name** — you can use a publicly trusted certificate from Let's Encrypt and avoid browser warnings without distributing a CA. This only helps if you actually open WebFig by using that domain name, so it mainly applies to routers managed over a public name rather than a LAN IP (described in the following section).
 
 ### Use a self-signed certificate
 
@@ -84,14 +82,13 @@ Columns:NAME        COMMON-NAME     FINGERPRINT
 #### Enable the HTTPS service and assign the certificate
 
 ```ros
-[admin@MikroTik] > ip service
-set www-ssl certificate=WebFig disabled=no
+[admin@MikroTik] > /ip/service/set www-ssl certificate=WebFig disabled=no
 ```
 
 You can now access WebFig at **`https://192.168.88.1`**.
 
 :::warning
-Most web browsers do not trust self-signed certificates by default, so the first time you connect you will need to accept the warning or manually trust the certificate. Alternatively, export the root CA certificate and import it into your operating system or browser trust store. Note that browsers keep their own trust stores, which may differ from the operating system's — trusting the certificate at the OS level may not affect the browser.
+Most web browsers do not trust self-signed certificates by default, so the first time you connect you need to accept the warning or manually trust the certificate. Alternatively, export the root CA certificate and import it into your operating system or browser trust store. Browsers keep their own trust stores, which may differ from the operating system's — trusting the certificate at the OS level may not affect the browser.
 :::
 
 ### Use a publicly trusted certificate (Let's Encrypt)
@@ -102,7 +99,7 @@ Before choosing this option, note how it interacts with a LAN-only setup:
 
 - Public CAs do not issue certificates for private IP addresses, so this does **not** remove the warning when you open WebFig at `https://192.168.88.1`.
 - The certificate is valid only for its domain name, so you must browse to WebFig by that name. For the name to resolve to the router inside the LAN, you generally need a local (split-horizon) DNS entry pointing it at the LAN address.
-- The DNS-01 challenge — used for [IP Cloud](/docs/network-management/cloud#ddns) `<id>.sn.mynetname.net` names — needs no inbound WAN port, so it still works even though the firewall blocks WebFig from the WAN.
+- The DNS-01 challenge — used for [IP Cloud](/docs/network-management/cloud/#ddns) `<id>.sn.mynetname.net` names — needs no inbound WAN port, so it still works even though the firewall blocks WebFig from the WAN.
 
 Request a certificate for the router's IP Cloud DDNS name:
 
@@ -141,7 +138,7 @@ If the user has sufficient permissions (the user group has the `policy` and `sen
 
 To restrict access to the **Design Skin** menu, disable the `policy` and `sensitive` permissions in the user group configuration.
 
-**Available operations include:**
+**Available operations:**
 
 ![](./img/webfig-design-skin_01.png)
 
@@ -182,7 +179,7 @@ To restrict a user to specific services, add a limit to the RADIUS Service field
 
 ![](./img/image-b8b4b607.webp)
 
-The resulting configuration will allow only the services specified in the **Limit** field.
+The resulting configuration allows only the services specified in the **Limit** field.
 
 ![](./img/webfig-02.webp)
 
@@ -203,18 +200,18 @@ Status records are displayed in sequential order, for example:
   "note": (optional; free form text that appears under the record),
   "name": (optional; alternative name for the record),
   "tab": (optional; name of the tab that this and following records belong to),
-  "separator": 1 (optional; should a separating line be placed above his record)
+  "separator": 1 (optional; should a separating line be placed before this record)
 },
 ```
 
 **Path (alias) structure**
 
-The alias path (for example: **`"IP:Firewall:Filter Rules:*17:Statistics:Packet Rate Graph"`** `and the corresponding URL: "`**`router_IP/WebFig/#IP:Firewall.Filter_Rules.17`**") consist of colon-separated components:
+The alias path (for example: **`"IP:Firewall:Filter Rules:*17:Statistics:Packet Rate Graph"`** and the corresponding URL: `"router_IP/WebFig/#IP:Firewall.Filter_Rules.17"`) consists of colon-separated components:
 
 - **Group** (if any) → `IP:`
 - **Service or Name** → `Firewall:`
 - **Container or Tab Name** → `Filter Rules:`
-- **Asterisk (\*) and Object ID** → taken from the URL of the opened item (e.g. `17`)
+- **Asterisk (\*) and Object ID** → taken from the URL of the opened item (for example, `17`)
 - **Tab name** (if applicable) → `Statistics`
 - **Field name** → `Packet Rate Graph`
 
@@ -222,7 +219,7 @@ The alias path (for example: **`"IP:Firewall:Filter Rules:*17:Statistics:Packet 
 
 ### Using skins
 
-To apply a skin, assign it to a user group. After assignment, all users in that group will automatically use the selected skin when logging in to WebFig or WinBox.
+To apply a skin, assign it to a user group. After assignment, all users in that group automatically use the selected skin when logging in to WebFig or WinBox.
 
 ```ros
 /user/group/set your_group_name skin=your_skin

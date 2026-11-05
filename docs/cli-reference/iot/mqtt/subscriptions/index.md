@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/iot/mqtt/subscriptions/index"
 sidebar_position: 1
 title: "subscriptions"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/mqtt/subscriptions
-captured_at: '2026-11-01T21:28:18+08:00'
+sidebar_label: 'subscriptions'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/mqtt/subscriptions
+captured_at: '2026-11-01T21:23:42+08:00'
 ---
 
 -----------

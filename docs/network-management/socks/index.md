@@ -3,167 +3,116 @@ sidebar_key: "network-management/socks/index"
 sidebar_position: 1
 title: "SOCKS"
 sidebar_label: 'SOCKS'
-description: 'This page documents the SOCKS proxy configuration in MikroTik RouterOS, covering settings like connection timeouts, port assignments, access lists for security, and active connections monitoring. It explains how to enable SOCKS5/4 proxies with authentication and control client-server traffic through access rules.'
+description: 'The SOCKS proxy server in RouterOS: enable the server, restrict who can use it with the access list, authenticate clients with users, and monitor active proxied connections.'
 tags:
   - 'socks'
   - 'access-control'
   - 'proxy'
-source: https://manual.mikrotik.com/docs/network-management/socks
-captured_at: '2026-11-04T11:32:53+08:00'
+source: https://manual.mikrotik.com/docs/7.25/network-management/socks
+captured_at: '2026-11-04T11:21:17+08:00'
 ---
+SOCKS is a proxy protocol for TCP connections. A SOCKS-aware application connects to the proxy, names the destination it wants, and the proxy opens the connection and relays the data. Because the proxy makes the connection, applications that can reach the proxy can use destinations that firewall rules would otherwise block, and you control in one place which clients and destinations are allowed. SOCKS works with any TCP-based protocol, for example HTTP, FTP or SSH.
 
-This section covers SOCKS features. Use it to configure SOCKS proxy behavior and socksify rules on RouterOS.
+RouterOS includes a SOCKS server (in `/ip/socks`, this page) and the [Socksify](socksify) service for the opposite direction: forwarding traffic chosen by firewall rules through an upstream SOCKS server.
 
 <DocCardList />
 
-SOCKS (Socket Secure) is a proxy server that allows TCP-based application data to relay across the firewall, even if the firewall would block the packets. The SOCKS protocol is independent of application protocols, so it can be used for many services, e.g., WWW, FTP, TELNET, and others.
+## Enable the server
 
-At first, an application client connects to the SOCKS proxy server, then the proxy server looks in its access list to see whether the client is permitted to access the remote application resource or not, if it is permitted, the proxy server relays the packet to the application server and creates a connection between the application server and client.
+The server is disabled by default. Set the protocol `version` and enable it:
 
-Remember to configure your application client to use SOCKS!
+```ros
+/ip/socks/set version=5 enabled=yes
+```
 
-You should secure the SOCKS proxy using its access list and/or firewall to disallow access from outside. Failing to secure the proxy server may introduce security issues to your network, and may provide a way for spammers to send junk mail through the router.
+The default `version=4` accepts only SOCKS4 clients; SOCKS5 clients are refused. Choose `5` for SOCKS5 clients; password authentication also requires version 5.
 
-### Property Description
+With these settings the server listens on TCP port 1080 on all addresses of the router. Until you add access list rules, anyone who can reach this port can use the proxy.
 
-| Property | Description |
-| :-- | :-- |
-| **connection-idle-timeout** (time; default: 2m) | time after which idle connections are terminated |
-| **enabled** (yes \| no; default: no) | whether to enable or not the SOCKS proxy |
-| **max-connections** (integer: 1..500; default: 200) | maximum number of simultaneous connections |
-| **port** (integer: 1..65535; default: 1080) | TCP port on which the SOCKS server listens for connections |
-| **vrf** (VRF name; default: main) | Set VRF on which service is creating connections. |
-| **version** (4 \| 5; default: 4) | SOCKS version.|
-| **auth-method** (none \| password; default: none) | SOCKS authentication method.|
-
-## Access List
+## Access list
 
 **Sub-menu:** `/ip/socks/access`
 
-In the SOCKS access list, you can add rules which will control access to the SOCKS server. This list is similar to firewall lists.
+The access list controls which requests the server accepts. Rules are checked in order and the first matching rule decides. A request that matches no rule is **allowed**; an empty list allows everything. For a restrictive list, finish with a `deny` rule:
 
-| Property | Description |
-| :-- | :-- |
-| **action** (allow \| deny; default: allow) | allow - allow packets matching this rule to be forwarded for further processing  deny - deny access for packets matching this rule |
-| **dst-address** (IP address/netmask) | destination (server's) address |
-| **dst-port** (port) | destination TCP port |
-| **src-address** (IP address/netmask) | source (client's) address for a packet |
-| **src-port** (port) | source TCP port |
+```ros
+/ip/socks/access/add src-address=192.168.0.0/24 action=allow
+/ip/socks/access/add action=deny
+```
 
-## Active Connections
+Besides addresses and ports, `dst-address` accepts a domain name, which matches only clients that request the destination by name.
 
-The Active Connection list shows all established TCP connections, which are maintained through the SOCKS proxy server.
+:::warning
+Secure the proxy with the access list or firewall rules. An open SOCKS proxy lets anyone route connections through the router, for example to abuse it for spam.
+:::
 
-**Sub-menu:** `/ip/socks/connections`
-
-| Property | Description |
-| :-- | :-- |
-| **dst-address** (read-only: IP address) | destination (application server) IP address |
-| **rx** (read-only: integer) | bytes received |
-| **src-address** (read-only: IP address) | source (application client) IP address |
-| **tx** (read-only: integer) | bytes sent |
-| **type** (read-only: in \| out \| unknown) - connection type | in - incoming connection  out - outgoing connection  unknown - connection has just been initiated |
-| **user** (read-only: string) | User from `/ip/socks/users` menu that is used for connection|
-
-## Users
-
-Specific users for SOCKS server access.
+## Users and authentication
 
 **Sub-menu:** `/ip/socks/users`
 
-| Property | Description |
-| :-- | :-- |
-| **disabled** (*yes* \| *no*; Default: yes) | Whether the User record is active. |
-| **name**(*string*; Default: ) | Name of the SOCKS user. |
-| **password** (*string*; Default: ) *[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | Password for the SOCKS server access. |
-| **only-one** (*yes* \| *no*; Default: no) |  Allows only one connection per user. |
-| **rate-limit** (*integer*; Default:) | Rate limit for a specific user (in bits per second) |
-
-### Example
-
-To see current TCP connections:
+With `/ip/socks/set auth-method=password`, clients must authenticate with a username and password of a user in the list; the connection is rejected when no users exist. Authentication uses the SOCKS5 username/password method:
 
 ```ros
-[admin@MikroTik] /ip/socks/connections> print
- # SRC-ADDRESS                DST-ADDRESS                TX         RX
- 0 192.168.0.2:3242           159.148.147.196:80         4847       2880
- 1 192.168.0.2:3243           159.148.147.196:80         3408       2127
- 2 192.168.0.2:3246           159.148.95.16:80           10172      25207
- 3 192.168.0.2:3248           194.8.18.26:80             474        1629
- 4 192.168.0.2:3249           159.148.95.16:80           6477       18695
- 5 192.168.0.2:3250           159.148.95.16:80           4137       27568
- 6 192.168.0.2:3251           159.148.95.16:80           1712       14296
- 7 192.168.0.2:3258           80.91.34.241:80            314        208
- 8 192.168.0.2:3259           80.91.34.241:80            934        524
- 9 192.168.0.2:3260           80.91.34.241:80            930        524
-10 192.168.0.2:3261           80.91.34.241:80            312        158
-11 192.168.0.2:3262           80.91.34.241:80            312        158
-[admin@MikroTik] /ip/socks/connections>
+/ip/socks/set version=5 auth-method=password
+/ip/socks/users/add name=alice password=s3cret
 ```
 
-## Application Examples
+New users are created enabled. Passwords are not shown in `print` output:
 
-### FTP service through SOCKS server
+```ros
+[admin@MikroTik] /ip/socks/users> print
+Columns: NAME, ONLY-ONE
+# NAME      ONLY-ONE
+0 alice     no
+```
 
-Let us consider that we have a network 192.168.0.0/24 which is masqueraded, using a router with a public IP 203.0.113.104/24 and a private IP 192.168.0.1/24. Somewhere in the network is an FTP server with IP address 198.51.100.8. We want to allow access to this FTP server for a client in our local network with IP address 192.168.0.2/24.
+## Monitor connections
 
-We have already masqueraded our local network:
+**Sub-menu:** `/ip/socks/connections`
+
+This read-only list shows the connections currently relayed by the server, with the client address, the requested destination and the byte counters. The `user` column shows the authenticated user, if any:
+
+```ros
+[admin@MikroTik] /ip/socks/connections> print detail
+0  src-address=192.168.0.2:59264 dst-address=198.51.100.8:21 type=out
+   tx=103 rx=737 user=alice
+```
+
+## Application example: FTP through the SOCKS server
+
+Your network 192.168.0.0/24 is masqueraded behind a router with the addresses 203.0.113.104 and 192.168.0.1, and the firewall blocks direct FTP access:
 
 ```ros
 [admin@MikroTik] /ip/firewall/nat> print
-Flags: X - disabled, I - invalid, D - dynamic
- 0   chain=srcnat action=masquerade src-address=192.168.0.0/24
-[admin@MikroTik] /ip/firewall/nat>
-```
-
-And access to public FTP servers is denied in the firewall:
-
-```ros
+0   chain=srcnat action=masquerade src-address=192.168.0.0/24
 [admin@MikroTik] /ip/firewall/filter> print
-Flags: X - disabled, I - invalid, D - dynamic
- 0   chain=forward action=drop src-address=192.168.0.0/24 dst-port=21 protocol=tcp
-[admin@MikroTik] /ip/firewall/filter>
+0   chain=forward action=drop protocol=tcp src-address=192.168.0.0/24
+    dst-port=21
 ```
 
-We have to enable the SOCKS server:
+To allow the client 192.168.0.2 to reach an FTP server at 198.51.100.8 through the proxy, enable the server and add access rules: allow the client to connect to the FTP server's port 21 and to open passive data connections to it (high ports), then deny everything else:
 
 ```ros
-[admin@MikroTik] /ip/socks> set enabled=yes
+[admin@MikroTik] /ip/socks> set enabled=yes version=5
 [admin@MikroTik] /ip/socks> print
-                    enabled: yes
-                       port: 1080
-    connection-idle-timeout: 2m
-            max-connections: 200
-               version: 4
-           auth-method: none
-[admin@MikroTik] /ip/socks>
+                  enabled: yes
+                     port: 1080
+  connection-idle-timeout: 2m
+          max-connections: 200
+                      vrf: main
+                  version: 5
+              auth-method: none
+[admin@MikroTik] /ip/socks> access/add src-address=192.168.0.2 dst-address=198.51.100.8 dst-port=21 action=allow
+[admin@MikroTik] /ip/socks> access/add src-address=192.168.0.2 dst-address=198.51.100.8 dst-port=1024-65535 action=allow
+[admin@MikroTik] /ip/socks> access/add action=deny
+[admin@MikroTik] /ip/socks> access/print
+0   src-address=192.168.0.2 dst-address=198.51.100.8 dst-port=21 action=allow
+
+1   src-address=192.168.0.2 dst-address=198.51.100.8 dst-port=1024-65535 action=allow
+
+2   action=deny
 ```
 
-Add access to a client with an IP address 192.168.0.2/32 to the SOCKS access list, allow data transfer from the FTP server to the client (allow destination ports from 1024 to 65535 for any IP address), and drop everything else:
+While the transfer runs, the control and the passive-data connections show in the connection list described in the previous section.
 
-```ros
-[admin@MikroTik] /ip/socks/access> add src-address=192.168.0.2 dst-port=21 \
-\... action=allow
-[admin@MikroTik] /ip/socks/access> add dst-port=1024-65535 action=allow
-[admin@MikroTik] /ip/socks/access> add action=deny
-[admin@MikroTik] /ip/socks/access> print
-Flags: X - disabled
- 0   src-address=192.168.0.2 dst-port=21 action=allow
- 1   dst-port=1024-65535 action=allow
- 2   action=deny
-[admin@MikroTik] /ip/socks/access>
-```
-
-That's all - the SOCKS server is configured. To see active connections and data transmitted and received:
-
-```ros
-[admin@MikroTik] /ip/socks/connections> print
- # SRC-ADDRESS                DST-ADDRESS                TX         RX
- 0 192.168.0.2:1238           198.51.100.8:21                1163       4625
- 1 192.168.0.2:1258           198.51.100.8:3423              0          3231744
-[admin@MikroTik] /ip/socks/connections>
-```
-
-:::warning
-In order to use the SOCKS proxy server, you have to specify its IP address and port in your FTP client. In this case, the IP address would be 192.168.0.1 (local IP address of the router/SOCKS server) and TCP port 1080.
-:::
+Configure the FTP client to use SOCKS with the router's address 192.168.0.1 and TCP port 1080.

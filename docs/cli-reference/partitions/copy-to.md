@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/partitions/copy-to"
 sidebar_position: 2
 title: "copy-to"
 sidebar_label: 'copy-to'
-source: https://manual.mikrotik.com/docs/cli-reference/partitions/copy-to
-captured_at: '2026-11-01T21:29:18+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/partitions/copy-to
+captured_at: '2026-11-01T21:24:55+08:00'
 ---
 
 -----------

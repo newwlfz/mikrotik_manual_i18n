@@ -6,8 +6,8 @@ sidebar_label: 'MACsec'
 description: 'MACsec is a security protocol for Ethernet networks providing confidentiality, integrity, and authenticity using GCM-AES-128 encryption. RouterOS supports MACsec with manual key configuration and limited hardware acceleration, requiring pre-shared keys for secure Layer2 connections between devices.'
 tags:
   - 'macsec'
-source: https://manual.mikrotik.com/docs/bridging-and-switching/macsec
-captured_at: '2026-11-04T11:27:01+08:00'
+source: https://manual.mikrotik.com/docs/7.25/bridging-and-switching/macsec
+captured_at: '2026-11-04T11:14:19+08:00'
 ---
 
 The MACsec (Media Access Control Security) protocol is a standard security technology employed in Ethernet networks to ensure the confidentiality, integrity, and authenticity of data transmitted over the physical medium. MACsec is defined by IEEE standard 802.1AE.

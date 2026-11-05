@@ -8,8 +8,8 @@ tags:
   - 'elasticsearch'
   - 'netflow'
   - 'kibana'
-source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/traffic-flow/netflow-analysis-with-elasticsearch
-captured_at: '2026-11-04T11:28:14+08:00'
+source: https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/traffic-flow/netflow-analysis-with-elasticsearch
+captured_at: '2026-11-04T11:15:37+08:00'
 ---
 
 Elasticsearch is a popular NoSQL database that can be used to store a wide range of data, including NetFlow logs. Alongside Kibana you can create a powerful tool to analyze NetFlow data from your RouterOS devices. This guide will rely on Elasticsearch integrations and for it to work you need to have a working Elasticsearch setup. This guide will not cover setup instructions for Elasticsearch and Kibana, but will cover the relevant steps to set up NetFlow log collection and analysis.
@@ -75,7 +75,7 @@ Some steps might change over time, refer to Elastic's manual to find the most up
 
 ### RouterOS
 
-1. (Optional) Create an [Interface list](https://manual.mikrotik.com/docs/system-information-and-utilities/interface-lists) (for example, "NetFlow\_interfaces") and add interfaces that need NetFlow data analysis.  
+1. (Optional) Create an [interface list](/docs/cli-reference/interface/list) (for example, "NetFlow\_interfaces") and add interfaces that need NetFlow data analysis.  
 
    ```routeros
    /interface/list

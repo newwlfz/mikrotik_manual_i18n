@@ -7,8 +7,8 @@ description: 'RouterOS v7 enables multi-core routing by distributing tasks like 
 tags:
   - 'routing'
 slug: /user-guides/routing-and-networking-protocols/routing-protocol-multi-core-support
-source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/routing-protocol-multi-core-support
-captured_at: '2026-11-04T11:34:20+08:00'
+source: https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/routing-protocol-multi-core-support
+captured_at: '2026-11-04T11:23:23+08:00'
 ---
 
 RouterOS v7 can split tasks between multiple processes.
@@ -40,7 +40,7 @@ BGP receive and send can be split into sub‑tasks by specific parameters. For e
 BGP can spawn up to 100 unique processes.
 :::
 
-You can monitor all currently used tasks and their allocated private/shared memory with the [`/routing/stats/process/print`](/docs/cli-reference/routing/stats/memory) command.
+You can monitor all currently used tasks and their allocated private/shared memory with the [`/routing/stats/process/print`](https://manual.mikrotik.com/docs/cli-reference/routing/stats/process/process) command.
 
 Sample Output:
 

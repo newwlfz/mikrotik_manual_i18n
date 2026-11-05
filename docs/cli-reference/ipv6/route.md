@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ipv6/route"
 sidebar_position: 9
 title: "route"
-source: https://manual.mikrotik.com/docs/cli-reference/ipv6/route
-captured_at: '2026-11-01T21:29:10+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ipv6/route
+captured_at: '2026-11-01T21:24:42+08:00'
 ---
 
 -----------

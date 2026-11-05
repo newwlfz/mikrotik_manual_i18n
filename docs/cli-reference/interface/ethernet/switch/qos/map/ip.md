@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/ethernet/switch/qos/map/ip"
 sidebar_position: 2
 title: "ip"
 sidebar_label: 'ip'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/qos/map/ip
-captured_at: '2026-11-01T21:27:15+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ethernet/switch/qos/map/ip
+captured_at: '2026-11-01T21:22:38+08:00'
 ---
 
 -----------
@@ -12,6 +12,8 @@ captured_at: '2026-11-01T21:27:15+08:00'
 ## interface/ethernet/switch/qos/map/ip 
 **Syscap:** rbswitch and crs_prestera
 **Type:** Directory
+
+Matches DSCP values to QoS profiles.
 
 <ArgTable c1="Flag" c2="Name" c3="Description">
 <ArgTableRow arg="*" typ="default"></ArgTableRow>
@@ -22,8 +24,8 @@ captured_at: '2026-11-01T21:27:15+08:00'
 </ArgTable>
 
 <ArgTable c1="Argument" c2="Type" c3="Description">
-<ArgTableRow arg="map" typ="enum"></ArgTableRow>
+<ArgTableRow arg="map" typ="enum">The name of the mapping table. If not set, the standard (built-in) mapping table gets altered.</ArgTableRow>
 <ArgTableRow arg="dscp" typ="multi { dscp-range: range [0 .. 63]
- }" mandatory="1"></ArgTableRow>
-<ArgTableRow arg="profile" typ="enum" mandatory="1"></ArgTableRow>
+ }" mandatory="1">DSCP value(-s) for the lookup.</ArgTableRow>
+<ArgTableRow arg="profile" typ="enum" mandatory="1">The name of the QoS profile to assign to the matched packets.</ArgTableRow>
 </ArgTable>

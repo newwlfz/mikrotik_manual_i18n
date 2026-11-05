@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Bsr",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/routing/pimsm/bsr/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/routing/pimsm/bsr"
+}

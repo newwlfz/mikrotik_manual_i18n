@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/console/index"
 sidebar_position: 1
 title: "console"
-source: https://manual.mikrotik.com/docs/cli-reference/system/console
-captured_at: '2026-11-01T21:29:46+08:00'
+sidebar_label: 'console'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/console
+captured_at: '2026-11-01T21:25:27+08:00'
 ---
 
 -----------

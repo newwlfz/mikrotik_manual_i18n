@@ -8,8 +8,8 @@ tags:
   - 'routing'
   - 'bgp'
 slug: /user-guides/routing-and-networking-protocols/unicast/bgp/
-source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/bgp
-captured_at: '2026-11-04T11:34:06+08:00'
+source: https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/unicast/bgp
+captured_at: '2026-11-04T11:22:41+08:00'
 ---
 
 <DocCardList />

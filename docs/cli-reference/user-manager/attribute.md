@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/user-manager/attribute"
 sidebar_position: 2
 title: "attribute"
 sidebar_label: 'attribute'
-source: https://manual.mikrotik.com/docs/cli-reference/user-manager/attribute
-captured_at: '2026-11-01T21:30:29+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/attribute
+captured_at: '2026-11-01T21:26:07+08:00'
 ---
 
 -----------

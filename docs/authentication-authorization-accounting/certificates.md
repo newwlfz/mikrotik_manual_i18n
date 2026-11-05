@@ -9,8 +9,8 @@ tags:
   - 'crl'
   - 'trust-store'
   - 'letsencrypt'
-source: https://manual.mikrotik.com/docs/authentication-authorization-accounting/certificates
-captured_at: '2026-11-04T11:27:02+08:00'
+source: https://manual.mikrotik.com/docs/7.25/authentication-authorization-accounting/certificates
+captured_at: '2026-11-04T11:14:20+08:00'
 ---
 
 ## Overview
@@ -207,6 +207,10 @@ Columns: NAME, COMMON-NAME
 1  T name_example_1  ca   
 ```
 
+:::info
+Certificates with a weak RSA public exponent (7 or lower) continue to work, but are flagged with the comment `key uses insecure RSA public exponent!` in the print output of `/certificate/print`. Replace such a certificate with one that uses a stronger key.
+:::
+
 ### CRL
 
 RouterOS supports Certificate Revocation List (CRL) checking.
@@ -296,7 +300,7 @@ To retrieve a Let's Encrypt certificate with automatic certificate renewal, you 
 /certificate/add-acme domain-names=router.example.com
 ```
 
-To generate a Let's Encrypt certificate for an [IP Cloud](/docs/network-management/cloud#ddns) name (for example, `example.sn.mynetname.net`), provide the `dns-name` from the `/ip/cloud` menu as the domain name, or read it inline with `[/ip/cloud/get dns-name]`:
+To generate a Let's Encrypt certificate for an [IP Cloud](/docs/network-management/cloud/#ddns) name (for example, `example.sn.mynetname.net`), provide the `dns-name` from the `/ip/cloud` menu as the domain name, or read it inline with `[/ip/cloud/get dns-name]`:
 
 ```ros
 /certificate/add-acme domain-names=[/ip/cloud/get dns-name]
@@ -330,6 +334,10 @@ The SCEP server supports the issuance of one certificate only. RouterOS also sup
 The client polls the server for any changes, if the server advertises that the next-ca is available, then the client may request the next CA or wait until the CA almost expires and then request the next-ca.
 
 The RouterOS client by default will try to use POST, AES, and SHA256 if the server advertises that. If the above algorithms are not supported, then the client will try to use 3DES, DES and SHA1, MD5.
+
+:::warning
+The SCEP client supports only RSA keys.
+:::
 
 SCEP certificates are renewed when 3/4 of their validity time has passed.
 
@@ -368,8 +376,8 @@ The following list of built-in CAs is available on all architectures except SMIP
 | GlobalSign | GlobalSign | `AE6C05A39313E2A2E7E2D71CD6C7F07FC86753A0` |
 | GlobalSign nv-sa | GlobalSign Root E46 | `310A908FB6C69DD2444B80B5A2E61FB1124F1B95` |
 | GlobalSign nv-sa | GlobalSign Root R46 | `035CAB738187A8CCB0A6D594E2369649FF05992C` |
-| The Go Daddy Group, Inc. | | `D2C4B0D291D44C1171B361CB3DA1FEDDA86AD4E3` |
 | GoDaddy.com, Inc. | Go Daddy Root Certificate Authority - G2 | `3A9A8507106728B6EFF6BD05416E20C194DA0FDE` |
+| SSL Corporation | SSL.com Root Certification Authority ECC | `82D1857330E73504D38E0292FBE5A4D1C421E8CD` |
 | Sectigo Limited | Sectigo Public Server Authentication Root E46 | `D122DA4C59F14B5F2638AA9DD6EEEB0DC3FBA961` |
 | Sectigo Limited | Sectigo Public Server Authentication Root R46 | `5673586495F9921AB0122A046279A14015882149` |
 | The USERTRUST Network | USERTrust ECC Certification Authority | `3AE10986D4CF19C29676744976DCE035C663639A` |

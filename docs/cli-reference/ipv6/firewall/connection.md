@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ipv6/firewall/connection"
 sidebar_position: 2
 title: "connection"
-source: https://manual.mikrotik.com/docs/cli-reference/ipv6/firewall/connection
-captured_at: '2026-11-01T21:29:08+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ipv6/firewall/connection
+captured_at: '2026-11-01T21:24:38+08:00'
 ---
 
 -----------

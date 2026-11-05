@@ -3,12 +3,12 @@ sidebar_key: "getting-started/routeros-licensing/chr/chr-licensing"
 sidebar_position: 1
 title: "CHR: Licensing"
 sidebar_label: 'CHR: Licensing'
-description: 'CHR offers four license levels—Free, P1 (Perpetual-1), P10 (Perpetual-10), and P-Unlimited—with trial periods available for paid options. Licenses are perpetual, tied to the CHR system ID, and require periodic renewal via MikroTik account server. Trial licenses can be upgraded before expiration, while expired instances'
+description: 'CHR offers four license levels—Free, P1 (Perpetual-1), P10 (Perpetual-10), and P-Unlimited—with trial periods available for paid options. Licenses are perpetual, tied to the CHR system ID, and require periodic renewal by using the MikroTik account server. Trial licenses can be upgraded before expiration, while expired instances'
 tags:
   - 'licensing'
   - 'chr'
-source: https://manual.mikrotik.com/docs/getting-started/routeros-licensing/chr/chr-licensing
-captured_at: '2026-11-04T11:29:39+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/routeros-licensing/chr/chr-licensing
+captured_at: '2026-11-04T11:17:30+08:00'
 ---
 
 ## Overview
@@ -28,15 +28,15 @@ The license is tied directly to the CHR system ID.
 
 A running CHR instance periodically connects to the MikroTik account server to renew its license status. The system displays the deadline by which the renewal must occur. If the CHR instance cannot renew its license before the deadline, it behaves as if the Trial period has expired, and upgrading RouterOS to newer versions is no longer allowed.
 
-To activate a Trial license on a CHR instance running the Free license level, you **must** manually run the `/system/license/renew` command and register the CHR instance to your MikroTik.com account.
+To activate a Trial license on a CHR instance running the Free license level, you **must** manually run the [`/system/license/renew`](/docs/cli-reference/system/license/renew) command and register the CHR instance to your MikroTik.com account.
 
 | License | Speed Limit | Price | Description |
 | :-- | :-- | :-- | :-- |
 | Free | 1Mbit | FREE | The Free license level allows CHR to run indefinitely with a 1 Mbps upload limit per interface. All other RouterOS features are available without restrictions. To get started, download the disk image and deploy it as a virtual machine or cloud instance.|
-| P1 (Perpetual-1) | 1Gbit | $45 | P1 (Perpetual-1) allows CHR to run indefinitely. It is limited to 1 Gbps upload per interface. All other RouterOS features are available without restrictions. It is possible to upgrade from P1 to P10 or P-Unlimited. When an upgrade is purchased at full price, the previous license becomes available again in your MikroTik account.|
-| P10 (Perpetual-10) | 10Gbit | $95 | P10 (Perpetual-10) allows CHR to run indefinitely. It is limited to 10 Gbps upload per interface. All other RouterOS features are available without restrictions. P10 can be upgraded to P-Unlimited. When an upgrade is purchased at full price, the previous license becomes available again in your MikroTik account.|
+| P1 (Perpetual-1) | 1Gbit | $45 | P1 (Perpetual-1) allows CHR to run indefinitely. It is limited to 1 Gbps upload per interface. All other RouterOS features are available without restrictions. You can upgrade from P1 to P10 or P-Unlimited. When an upgrade is purchased at full price, the previous license becomes available again in your MikroTik account.|
+| P10 (Perpetual-10) | 10Gbit | $95 | P10 (Perpetual-10) allows CHR to run indefinitely. It is limited to 10 Gbps upload per interface. All other RouterOS features are available without restrictions. You can upgrade P10 to P-Unlimited. When an upgrade is purchased at full price, the previous license becomes available again in your MikroTik account.|
 | P-Unlimited | Unlimited | $250 | P-Unlimited (Perpetual-Unlimited) allows CHR to run indefinitely. It is the highest-tier license and has no enforced limitations.|
-| 60-day Trial | | FREE | In addition to the Free license, you can evaluate higher performance levels (P1, P10, or P-Unlimited) using a 60-day trial. A registered [MikroTik.com](https://mikrotik.com) account is required. From the CHR instance, you can request a trial license. This associates the instance System ID with your MikroTik account and enables license management and purchases.All paid license levels are available for trial. The trial period is valid for 60 days from activation.After expiration, the license status changes to **"Limited upgrades"**, meaning RouterOS cannot be upgraded.**Note:** If you intend to purchase the license, complete the purchase before the trial expires. If no purchase is made within 2 months after expiration, the CHR instance is removed from your MikroTik account. In that case, a new CHR installation is required.To request a trial license, run the following command on the CHR instance: `/system license renew` You will be prompted to enter your MikroTik.com account username and password. (*[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)*).|
+| 60-day Trial | | FREE | You can evaluate higher performance levels (P1, P10, or P-Unlimited) by using a 60-day trial. A registered [MikroTik.com](https://mikrotik.com) account is required. From the CHR instance, you can request a trial license. This associates the instance System ID with your MikroTik account and enables license management and purchases.All paid license levels are available for trial. The trial period is valid for 60 days from activation.After expiration, the license status changes to **"Limited upgrades"**, meaning RouterOS cannot be upgraded.If you intend to purchase the license, complete the purchase before the trial expires. If no purchase is made within 2 months after expiration, the CHR instance is removed from your MikroTik account. In that case, a new CHR installation is required.To request a trial license, run the following command on the CHR instance: [`/system/license/renew`](/docs/cli-reference/system/license/renew). You are prompted to enter your MikroTik.com account username and password. (*[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)*).|
 
 :::warning
 If you want to upgrade a perpetual license to a higher level, transfer the existing license to another CHR instance first. This prevents the license from being lost during the upgrade process.
@@ -50,8 +50,8 @@ To start a new trial period, perform a fresh CHR installation and configure Rout
 
 ## System ID and Cloning Considerations
 
-When deploying multiple CHR instances from the same disk image, it is possible that some cloud providers (for example, Linode) may assign identical System IDs to multiple machines.
-To prevent this, run the following command after the first boot and before requesting a trial license: `/system/license/generate-new-id`
+When deploying multiple CHR instances from the same disk image, some cloud providers (for example, Linode) may assign identical System IDs to multiple machines.
+To prevent this, run the following command after the first boot and before requesting a trial license: [`/system/license/generate-new-id`](/docs/cli-reference/system/license/generate-new-id)
 
 :::warning
 This command must only be used on a CHR running the Free license level. Do not use it after a trial or paid license has been applied, as it may prevent further license updates.
@@ -71,7 +71,7 @@ Ensure that copies are created **before** booting or registering the image.
 
 A running CHR instance must periodically connect to the MikroTik account server to renew its license status. The system indicates the deadline by which this must occur.
 
-> **Important:** If the CHR instance cannot reach the account server before the deadline, it behaves as if the trial period has expired. In this state, you will not be able to upgrade RouterOS to a newer version or modify packages (e.g., enable or disable them).
+> **Important:** If the CHR instance cannot reach the account server before the deadline, it behaves as if the trial period has expired. In this state, you cannot upgrade RouterOS to a newer version or modify packages (for example, enable or disable them).
 
 ## IP/Cloud Requirement
 
@@ -85,7 +85,7 @@ When a license expires, the router continues operating at the same tier, but sof
 
 **To license an expired CHR instance:** You must use a Prepaid key.
 
-Expired instances will be automatically removed from your MikroTik account if they have not connected to the license server for a certain period of time.
+Expired instances are automatically removed from your MikroTik account if they have not connected to the license server for a certain period of time.
 
 ## Purchasing a Prepaid Key for CHR Licensing
 
@@ -93,7 +93,7 @@ Expired instances will be automatically removed from your MikroTik account if th
 
 A Prepaid Key is a license key that you purchase in advance for MikroTik products, including the Cloud Hosted Router (CHR). This key allows you to buy a license without immediately assigning it to a specific device.
 
-Once you have a Prepaid Key, you can use it to upgrade an existing CHR System ID, or convert it into a full license key by providing the device's Software ID.
+When you have a Prepaid Key, you can use it to upgrade an existing CHR System ID, or convert it into a full license key by providing the device's Software ID.
 
 ### Purchasing a Prepaid Key
 
@@ -105,8 +105,8 @@ Follow these steps to purchase a Prepaid Key:
 4. Choose **Prepaid key** as the key type.
 5. Enter the quantity of prepaid keys you want to purchase.
 6. (Optional) Select any additional features you need for your key.
-7. Click **Place key in the cart**.
-8. Click **Proceed to checkout** to complete your purchase.
+7. Select **Place key in the cart**.
+8. Select **Proceed to checkout** to complete your purchase.
 
 ![Prepaid Key Purchase](./img/purchase-prepaid_01.png)
 
@@ -117,7 +117,7 @@ Follow these steps to purchase a Prepaid Key:
 
 ![Prepaid Key Purchase Complete](./img/purchase-prepaid_02.png)
 
-Congratulations! You have successfully purchased a Prepaid Key.
+You have purchased a Prepaid Key.
 
 ![Prepaid Key](./img/prepaid_key_01.png)
 
@@ -132,7 +132,7 @@ This registration associates the CHR System ID with your MikroTik.com account an
 #### Using WinBox
 
 1. Open WinBox and connect to your CHR instance.
-2. Navigate to `/system/license` and press **Renew License**.
+2. Navigate to `System->License` and press **Renew License**.
 
 ![Free to Trial upgrade](./img/chr_free_to_trial_01.png)
 ![Free to Trial upgrade](./img/chr_free_to_trial_02.png)
@@ -155,7 +155,7 @@ This registration associates the CHR System ID with your MikroTik.com account an
       level: free
 ```
 
-1. Run the renew command with your account credentials and desired level:
+1. Run the [`renew`](/docs/cli-reference/system/license/renew) command with your account credentials and desired level:
 
 ```
 [admin@MikroTik] > /system/license/renew
@@ -176,20 +176,20 @@ level: p1
        deadline-at: 2026-07-11 10:55:29
 ```
 
->The output confirms that your license has been upgraded to P1, with the next renewal date and a Trial deadline displayed.
+The output confirms that your license has been upgraded to P1, with the next renewal date and a Trial deadline displayed.
 
 #### Verify CHR registration
 
 1. Go to [mikrotik.com/client](https://mikrotik.com/client/) and log in with your mikrotik.com credentials.
 2. In the **CHR LICENCES** section, select **All CHR keys**.
-3. A list of your CHR instances and their corresponding licenses levels will be displayed.
+3. A list of your CHR instances and their corresponding license levels are displayed.
 
 After registration, the CHR System ID appears in the **All CHR keys** section of your MikroTik.com account.
 
 ### Acquiring a Higher-Level Trial
 
 :::warning
-It is not possible to upgrade the Trial license level on the same instance.
+You cannot upgrade the Trial license level on the same instance.
 :::
 
 To try a higher license level, deploy a new CHR instance and select the desired Trial license level during registration.
@@ -205,27 +205,27 @@ To upgrade from a Trial license to a Paid license:
 
 ![All CHR Keys](./img/payment01.png)
 
-1. A list of your CHR instances and their corresponding licenses levels will be displayed.
+1. A list of your CHR instances and their corresponding license levels are displayed.
 
 ![Trial to Paid upgrade](./img/license_trial_to_paid_02.png)
 
-1. Click **Upgrade** next to the instance you want to upgrade.
+1. Select **Upgrade** next to the instance you want to upgrade.
 
 2. Select the desired license level (this can differ from your current trial license level).
 
 ![Trial to Paid upgrade](./img/payment02.png)
 
-1. Click **Upgrade** to confirm.
+1. Select **Upgrade** to confirm.
 
 ### Using Prepaid Keys
 
 If you have **Prepaid keys** available, you can use them to pay for CHR licenses:
 
-1. Click **Pay using Prepaid key**.
+1. Select **Pay using Prepaid key**.
 
 ![Trial to Paid upgrade](./img/payment03.png)
 
-1. If you don't have prepaid keys or prefer not to use them, click **Proceed to checkout**.
+1. If you don't have prepaid keys or prefer not to use them, select **Proceed to checkout**.
 
 ### Payment Methods
 
@@ -260,15 +260,19 @@ When you purchase an upgrade at full price, your previous license remains availa
 The P-Unlimited (perpetual-unlimited) license is the highest tier available. It allows CHR to run indefinitely with no enforced limitations.
 :::
 
+:::info
+Multiple Prepaid keys cannot be combined to upgrade to a higher license level. A higher-level license must be purchased using a Prepaid key of the desired license level at the full price. For example, two P1 Prepaid keys cannot be combined with an additional payment to obtain one P10 license.
+:::
+
 ### Upgrading the Paid Perpetual CHR License Level
 
 1. Log in to your MikroTik account and navigate to **All CHR keys**.
 2. Select the CHR instance you want to upgrade.
-3. Click **Upgrade**.
+3. Select **Upgrade**.
 
     ![License Upgrade Level](./img/license_upgade_level_01.png)
 
-4. Choose the desired license level (P10 or P-Unlimited) and click **Upgrade**.
+4. Choose the desired license level (P10 or P-Unlimited) and select **Upgrade**.
 
     ![License Upgrade Level Select target](./img/license_upgrade02.png)
 
@@ -290,7 +294,7 @@ The P-Unlimited (perpetual-unlimited) license is the highest tier available. It 
 
 1. Complete the payment process.
 
-Your CHR license will be upgraded to the selected level, and your previous license will remain available on your account for future use.
+Your CHR license is upgraded to the selected level, and your previous license remains available on your account for future use.
 
 :::warning
 You can upgrade to any license tier except *p-unlimited*. This tier represents the highest available level and cannot be upgraded further.
@@ -305,15 +309,15 @@ Each Cloud Hosted Router (CHR) installation is tied directly to your MikroTik ac
 | License Type | Transferable? | Notes |
 |---|---|---|
 | Perpetual license | Yes | Only to another CHR instance under the **same** account |
-| Prepaid key (purchased) | Yes | Can be transferred to a different account via "Transfer prepaid keys" |
+| Prepaid key (purchased) | Yes | Can be transferred to a different account by using "Transfer prepaid keys" |
 | Prepaid key (from Training) | No | These keys are not transferable |
 
 :::warning
-It is not possible to transfer the Perpetual license to an expired instance. To license an expired CHR instance a Prepaid key must be used.
+You cannot transfer the Perpetual license to an expired instance. To license an expired CHR instance, you must use a Prepaid key.
 :::
 
 :::info
-The instance from which the license was transferred will retain the same license level but with a **Limited upgrades** (expired) status. It will continue to operate at that license level, however, RouterOS upgrades will no longer be available.
+The instance from which the license was transferred retains the same license level but with a **Limited upgrades** (expired) status. It continues to operate at that license level, however, RouterOS upgrades are no longer available.
 :::
 
 ### Prerequisites: Required CHR Instances
@@ -331,7 +335,7 @@ Follow these steps to transfer your license:
 
 1. **Register the new instance**
 
-  Register the new CHR instance under the same MikroTik account where your old CHR is registered. Use the CLI command:
+  Register the new CHR instance under the same MikroTik account where your old CHR is registered. Use the [`renew`](/docs/cli-reference/system/license/renew) CLI command:
 
    ```
    /system/license/renew
@@ -347,7 +351,7 @@ Follow these steps to transfer your license:
 
     ![Transfer button location](./img/chr_transfer01.png)
 
-  - Click the **Transfer** button for the System ID you want to transfer.
+  - Select the **Transfer** button for the System ID you want to transfer.
 
 1. **Select the target instance**
 
@@ -357,7 +361,7 @@ Follow these steps to transfer your license:
 
 2. **Confirm the transfer**
 
-   Click **Transfer subscription** to complete the process.
+   Select **Transfer subscription** to complete the process.
 
    ![Confirm transfer](./img/chr_transfer03.png)
 
@@ -370,16 +374,16 @@ If you receive the error:
 It means you don't have a CHR instance in Trial mode to receive the license.
 
 :::tip
-**Solution:** Create a new CHR instance and add it to your account. Once added, you can transfer the existing license to the new instance.
+**Solution:** Create a new CHR instance and add it to your account. When added, you can transfer the existing license to the new instance.
 :::
 
 ## License Renewal
 
 CHR licenses require periodic communication with the MikroTik license server to maintain license validity.
 
-In the **System > License** menu, the router displays two important timestamps:
+In the [`/system/license`](/docs/cli-reference/system/license) menu, the router displays two timestamps:
 
-- **next-renewal-at** — the next time the router will attempt to contact the MikroTik license server.
+- **next-renewal-at** — the next time the router attempts to contact the MikroTik license server.
 - **deadline-at** — the latest time by which successful communication with the license server must occur.
 
 The CHR instance communicates with the license server at:

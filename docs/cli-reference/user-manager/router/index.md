@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/user-manager/router/index"
 sidebar_position: 1
 title: "router"
 sidebar_label: 'router'
-source: https://manual.mikrotik.com/docs/cli-reference/user-manager/router
-captured_at: '2026-11-01T21:30:31+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/router
+captured_at: '2026-11-01T21:26:09+08:00'
 ---
 
 -----------

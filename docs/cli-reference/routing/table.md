@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/table"
 sidebar_position: 19
 title: "table"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/table
-captured_at: '2026-11-01T21:29:43+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/table
+captured_at: '2026-11-01T21:25:21+08:00'
 ---
 
 -----------

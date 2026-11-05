@@ -8,8 +8,8 @@ tags:
   - 'nat'
   - 'source-nat'
   - 'destination-nat'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/firewall/nat
-captured_at: '2026-11-04T11:28:24+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/firewall/nat
+captured_at: '2026-11-04T11:16:26+08:00'
 ---
 
 Network Address Translation is an Internet standard that allows hosts on local area networks to use one set of IP addresses for internal communications and another set of IP addresses for external communications. A LAN that uses NAT is referred to as a *natted* network. For NAT to function, there should be a NAT gateway in each *natted* network. The NAT gateway (NAT router) performs IP address rewriting on the way while packets travel from/to the LAN. In RouterOS NAT is supported for IPv4. RouterOS does not support NAT64.

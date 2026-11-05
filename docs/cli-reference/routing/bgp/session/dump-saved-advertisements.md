@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/bgp/session/dump-saved-advertisements"
 sidebar_position: 2
 title: "dump-saved-advertisements"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/bgp/session/dump-saved-advertisements
-captured_at: '2026-11-01T21:29:28+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/bgp/session/dump-saved-advertisements
+captured_at: '2026-11-01T21:25:05+08:00'
 ---
 
 -----------

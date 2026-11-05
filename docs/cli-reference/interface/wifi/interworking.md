@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wifi/interworking"
 sidebar_position: 12
 title: "interworking"
 sidebar_label: 'interworking'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/interworking
-captured_at: '2026-11-01T21:27:50+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wifi/interworking
+captured_at: '2026-11-01T21:23:13+08:00'
 ---
 
 -----------

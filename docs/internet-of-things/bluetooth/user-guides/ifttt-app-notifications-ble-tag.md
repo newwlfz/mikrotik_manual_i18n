@@ -2,8 +2,8 @@
 sidebar_key: "internet-of-things/bluetooth/user-guides/ifttt-app-notifications-ble-tag"
 sidebar_position: 4
 title: "IFTTT app notifications on BLE tag appearance in KNOT's range"
-source: https://manual.mikrotik.com/docs/internet-of-things/bluetooth/user-guides/ifttt-app-notifications-ble-tag
-captured_at: '2026-11-04T11:30:46+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/bluetooth/user-guides/ifttt-app-notifications-ble-tag
+captured_at: '2026-11-04T11:18:17+08:00'
 ---
 
 ### Introduction
@@ -82,7 +82,7 @@ Make sure you have configured internet access so that the KNOT is able to reach 
 
 Navigate to **IoT>Bluetooth>Scanners**. Make sure to enable the scanner in case it is disabled and then, edit the scanner settings:
 
-![](./img/image.webp)
+![](./img/image-6ee00354.webp)
 
 Select **Filter duplicates**=**keep-newest**.
 

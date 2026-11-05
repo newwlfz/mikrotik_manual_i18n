@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ppp/secret"
 sidebar_position: 5
 title: "secret"
-source: https://manual.mikrotik.com/docs/cli-reference/ppp/secret
-captured_at: '2026-11-01T21:29:21+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ppp/secret
+captured_at: '2026-11-01T21:24:57+08:00'
 ---
 
 -----------

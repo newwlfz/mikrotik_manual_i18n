@@ -7,8 +7,8 @@ description: 'S+RJ10 is a MikroTik 6-speed RJ45 SFP+ module offering 10 Gbps spe
 tags:
   - 's-rj10'
   - 'transceiver-cooling'
-source: https://manual.mikrotik.com/docs/hardware/s-plus-rj10-general-guidance
-captured_at: '2026-11-04T11:31:59+08:00'
+source: https://manual.mikrotik.com/docs/7.25/hardware/s-plus-rj10-general-guidance
+captured_at: '2026-11-04T11:26:54+08:00'
 ---
 
 ### Summary

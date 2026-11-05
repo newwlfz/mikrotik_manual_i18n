@@ -8,8 +8,8 @@ tags:
   - 'ethernet'
   - 'auto-negotiation'
   - 'link-modes'
-source: https://manual.mikrotik.com/docs/wired-connections/ethernet
-captured_at: '2026-11-04T11:35:29+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wired-connections/ethernet
+captured_at: '2026-11-04T11:23:32+08:00'
 ---
 
 MikroTik RouterOS supports various types of Ethernet interfaces - ranging from 10Mbps to 10Gbps Ethernet over copper twisted pair, 1Gbps, 10Gbps, 25Gbps SFP/SFP+/SFP28 interfaces and 40Gbps, 100Gbps, 200Gbps, 400Gbps QSFP+/QSFP28/QSFP56/QSFP56-DD interfaces. Certain RouterBoard devices are equipped with a combo interface that simultaneously contains two interface types (e.g. Ethernet over twisted pair and SFP/SFP+ interface) allowing selection of the most suitable option or creation of a physical link failover. Through RouterOS, it is possible to control different Ethernet-related properties like link speed, auto-negotiation, duplex mode, etc, monitor transceiver diagnostic information and see a wide range of Ethernet-related statistics.

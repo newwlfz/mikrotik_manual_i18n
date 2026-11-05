@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "802.11 a/b/g/n",
+  "key": "wireless/abgn",
+  "link": {
+    "type": "doc",
+    "id": "wireless/abgn/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

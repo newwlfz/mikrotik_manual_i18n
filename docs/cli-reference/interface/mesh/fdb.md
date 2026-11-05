@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/mesh/fdb"
 sidebar_position: 1
 title: "fdb"
 sidebar_label: 'fdb'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/mesh/fdb
-captured_at: '2026-11-01T21:27:31+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/mesh/fdb
+captured_at: '2026-11-01T21:22:52+08:00'
 ---
 
 -----------

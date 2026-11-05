@@ -1,33 +1,99 @@
 ---
 sidebar_key: "bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples"
 sidebar_position: 4
-title: "CRS1xx/2xx series switches examples"
-sidebar_label: 'CRS1xx/2xx series switches examples'
+title: "CRS1xx/2xx series switch examples"
+sidebar_label: 'CRS1xx/2xx series switch examples'
 description: 'This page provides configuration examples and use cases for Cloud Router Switch features on CRS1xx/2xx series switches, covering port switching, management access setup with VLAN filtering, and security considerations for IP-based access.'
 tags:
   - 'vlan'
   - 'bridge-hardware-offloading'
   - 'management-access'
-source: https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples
-captured_at: '2026-11-04T11:27:42+08:00'
+source: https://manual.mikrotik.com/docs/7.25/bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples
+captured_at: '2026-11-04T11:15:45+08:00'
 ---
 
----
+The Cloud Router Switch series is highly integrated switches with a high-performance MIPS CPU and feature-rich packet processors. The CRS switches can be designed into various Ethernet applications including unmanaged switch, Layer 2 managed switch, carrier switch, and wireless/wired unified packet processing.
 
-Basic use cases and configuration examples for Cloud Router Switch features.
-
-:::info
-This article applies to CRS1xx and CRS2xx series switches and not to  [MikroTik devices with Marvell Prestera switch](/docs/bridging-and-switching/marvell-prestera-switch-chip-features) (e.g. CRS3xx series switches).
+:::danger
+This article applies to CRS1xx and CRS2xx series switches and not to MikroTik devices with Marvell Prestera switch (e.g. CRS3xx). For MikroTik devices with Marvell Prestera switch, see the [Marvell Prestera switch chip features](/docs/bridging-and-switching/marvell-prestera-switch-chip-features) manual.
 :::
 
-## Port switching
+| Features | Description |
+| :-- | :-- |
+| **Forwarding** | Configurable ports for switching or routingFull non-blocking wire-speed switchingUp to 16k MAC entries in Unicast FDB for Layer 2 unicast forwardingUp to 1k MAC entries in Multicast FDB for multicast forwardingUp to 256 MAC entries in Reserved FDB for control and management purposesAll Forwarding Databases support IVL and SVLConfigurable Port-based MAC learning limitJumbo frame support (CRS1xx/2xx: 9204 Bytes; CRS125/CRS109: 4064 Bytes)IGMP Snooping support |
+| **Mirroring** | Various types of mirroring:Port-based mirroringVLAN-based mirroringMAC-based mirroring2 independent mirroring analyzer ports |
+| **VLAN** | Fully compatible with IEEE802.1Q and IEEE802.1ad VLAN4k active VLANsFlexible VLAN assignment:Port-based VLANProtocol-based VLANMAC-based VLANFrom any to any VLAN translation and swapping1:1 VLAN switching - VLAN to port mappingVLAN filtering |
+| **Port Isolation and Leakage** | Applicable for Private VLAN implementation3 port profile types: Promiscuous, Isolated, and CommunityUp to 28 Community profilesLeakage profiles allow bypassing egress VLAN filtering |
+| **Trunking** | Supports static link aggregation groupsUp to 8 Port Trunk groupsUp to 8 member ports per Port Trunk groupHardware automatic failover and load balancing |
+| **Quality of Service (QoS)** | Flexible QoS classification and assignment:Port-basedMAC-basedVLAN-basedProtocol-basedPCP/DEI basedDSCP basedACL basedQoS remarking and remapping for QoS domain translation between a service provider and client networksOverriding of each QoS assignment according to the configured priority |
+| **Shaping and Scheduling** | 8 queues on each physical portShaping per port, per queue, per queue group |
+| **Access Control List** | Ingress and Egress ACL tablesUp to 128 ACL rules (limited by RouterOS)Classification based on ports, L2, L3, L4 protocol header fieldsACL actions include filtering, forwarding, and modifying the protocol header fields |
+
+### Applicable Switch models
+
+---
+
+This table clarifies the main differences between Cloud Router Switch models.
+
+|  |  |  |  |  |  |  |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| **Model** | **Switch Chip** | **CPU** | **Wireless** | **SFP+ port** | **Access Control List** | **Jumbo Frame (Bytes)** |
+| **CRS105-5S-FB** | QCA-8511 | 400MHz | - | - | + | 9204 |
+| **CRS106-1C-5S** | QCA-8511 | 400MHz | - | - | + | 9204 |
+| **CRS112-8G-4S** | QCA-8511 | 400MHz | - | - | + | 9204 |
+| **CRS210-8G-2S+** | QCA-8519 | 400MHz | - | + | + | 9204 |
+| **CRS212-1G-10S-1S+** | QCA-8519 | 400MHz | - | + | + | 9204 |
+| **CRS226-24G-2S+** | QCA-8519 | 400MHz | - | + | + | 9204 |
+| **CRS125-24G-1S** | QCA-8513L | 600MHz | - | - | - | 4064 |
+| **CRS125-24G-1S-2HnD** | QCA-8513L | 600MHz | + | - | - | 4064 |
+| **CRS109-8G-1S-2HnD** | QCA-8513L | 600MHz | + | - | - | 4064 |
+
+### Abbreviations and Explanations
+
+---
+
+CVID - Customer VLAN id: inner VLAN tag id of the IEEE 802.1ad frame
+
+SVID - Service VLAN id: outer VLAN tag id of the IEEE 802.1ad frame
+
+IVL - Independent VLAN learning - learning/lookup is based on both MAC addresses and VLAN IDs.
+
+SVL - Shared VLAN learning - learning/lookup is based on MAC addresses - not on VLAN IDs.
+
+TPID - Tag Protocol Identifier
+
+PCP - Priority Code Point: a 3-bit field which refers to the IEEE 802.1p priority
+
+DEI - Drop Eligible Indicator
+
+DSCP - Differentiated Services Code Point
+
+Drop precedence - an internal CRS switch QoS attribute used for packet enqueuing or dropping.
+
+### Port Switching
 
 ---
 
 To set up port switching on CRS1xx/2xx series switches, check the [Bridge Hardware Offloading](/docs/bridging-and-switching/#bridge-hardware-offloading) page.
 
+:::warning
+Dynamic reserved VLAN entries (VLAN4091; VLAN4090; VLAN4089; etc.) are created in the CRS switch when switched port groups are added when a hardware offloaded bridge is created. These VLANs are necessary for internal operation and have lower precedence than user-configured VLANs.
+:::
+
 :::danger
 It is possible to create multiple isolated switch groups by using multiple bridges with enabled hardware offloading; this is possible only on CRS1xx/2xx series switches. For more complex setups (for example, VLAN filtering) you should use the port isolation feature instead.
+:::
+
+#### Multiple switch groups
+
+The CRS1xx/2xx series switches allow you to use multiple bridges with hardware offloading; this allows you to easily isolate multiple switch groups. This can be done by simply creating multiple bridges and enabling hardware offloading.
+
+:::warning
+Multiple hardware offloaded bridge configuration is designed as a fast and simple port isolation solution, but it limits a part of the VLAN functionality supported by the CRS switch chip. For advanced configurations use one bridge within the CRS switch chip for all ports, configure VLANs, and isolate port groups with port isolation profile configuration.
+:::
+
+:::danger
+CRS1xx/2xx series switches can run multiple hardware offloaded bridges with (R)STP enabled, but it is not recommended since the device is not designed to run multiple (R)STP instances on a hardware level. To isolate multiple switch groups and have (R)STP enabled you should isolate port groups with port isolation profile configuration.
 :::
 
 ## Management access configuration
@@ -102,16 +168,19 @@ add address=192.168.99.1/24 interface=MGMT
 
 ---
 
-:::danger Risk of Lockout
+:::danger 
+Risk of Lockout.
 It is highly recommended to have a Serial Console cable tested and ready before configuring VLANs. Misconfigurations can easily lock you out of the CPU or your connected port.
 :::
 
-:::tip Troubleshooting Cached MAC Addresses
+:::tip
+Troubleshooting Cached MAC Addresses.
 Some changes may appear delayed because of already-learned MAC addresses. If traffic isn't flowing as expected after a change, flush the Unicast Forwarding Database:
 `/interface/ethernet/switch/unicast-fdb/flush`
 :::
 
-:::info Architectural Best Practice
+:::info
+Architectural Best Practice.
 Using multiple hardware-offloaded bridges is a fast way to achieve simple port isolation, but it limits advanced VLAN functionality on the CRS switch-chip. For advanced setups, use a **single bridge** for all ports, configure your VLANs, and isolate port groups using port isolation profiles.
 :::
 

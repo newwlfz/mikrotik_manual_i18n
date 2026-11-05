@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/dude/ros/registration-table"
 sidebar_position: 9
 title: "registration-table"
 sidebar_label: 'registration-table'
-source: https://manual.mikrotik.com/docs/cli-reference/dude/ros/registration-table
-captured_at: '2026-11-01T21:26:51+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/dude/ros/registration-table
+captured_at: '2026-11-01T21:22:15+08:00'
 ---
 
 -----------

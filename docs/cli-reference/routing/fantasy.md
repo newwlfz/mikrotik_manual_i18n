@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/fantasy"
 sidebar_position: 4
 title: "fantasy"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/fantasy
-captured_at: '2026-11-01T21:29:29+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/fantasy
+captured_at: '2026-11-01T21:25:06+08:00'
 ---
 
 -----------

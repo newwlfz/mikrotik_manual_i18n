@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/regulatory"
 sidebar_position: 21
 title: "regulatory"
-source: https://manual.mikrotik.com/docs/cli-reference/system/regulatory
-captured_at: '2026-11-01T21:30:01+08:00'
+sidebar_label: 'regulatory'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/regulatory
+captured_at: '2026-11-01T21:25:38+08:00'
 ---
 
 -----------

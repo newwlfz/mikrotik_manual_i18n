@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/package/local-update/download"
 sidebar_position: 1
 title: "download"
-source: https://manual.mikrotik.com/docs/cli-reference/system/package/local-update/download
-captured_at: '2026-11-01T21:29:57+08:00'
+sidebar_label: 'download'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/package/local-update/download
+captured_at: '2026-11-01T21:25:35+08:00'
 ---
 
 -----------

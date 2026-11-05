@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/import"
 sidebar_position: 10
 title: "import"
 sidebar_label: 'import'
-source: https://manual.mikrotik.com/docs/cli-reference/import
-captured_at: '2026-11-01T21:26:54+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/import
+captured_at: '2026-11-01T21:22:19+08:00'
 ---
 
 -----------

@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/filter/community-ext-list"
 sidebar_position: 2
 title: "community-ext-list"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/filter/community-ext-list
-captured_at: '2026-11-01T21:29:30+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/filter/community-ext-list
+captured_at: '2026-11-01T21:25:07+08:00'
 ---
 
 -----------

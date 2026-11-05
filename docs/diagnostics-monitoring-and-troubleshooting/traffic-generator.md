@@ -7,8 +7,8 @@ description: 'Traffic Generator is a MikroTik RouterOS tool for evaluating devic
 tags:
   - 'traffic-generator'
   - 'packet-generation'
-source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/traffic-generator
-captured_at: '2026-11-04T11:28:12+08:00'
+source: https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/traffic-generator
+captured_at: '2026-11-04T11:16:26+08:00'
 ---
 
 Traffic Generator is a tool that allows evaluating the performance of DUT (Device Under Test) or SUT (System Under Test).

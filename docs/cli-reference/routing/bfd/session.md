@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/bfd/session"
 sidebar_position: 3
 title: "session"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/bfd/session
-captured_at: '2026-11-01T21:29:27+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/bfd/session
+captured_at: '2026-11-01T21:25:04+08:00'
 ---
 
 -----------

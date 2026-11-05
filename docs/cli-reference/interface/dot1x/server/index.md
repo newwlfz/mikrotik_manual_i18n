@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/dot1x/server/index"
 sidebar_position: 2
 title: "server"
 sidebar_label: 'server'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/dot1x/server
-captured_at: '2026-11-01T21:27:03+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/dot1x/server
+captured_at: '2026-11-01T21:22:28+08:00'
 ---
 
 -----------

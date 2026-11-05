@@ -6,8 +6,8 @@ sidebar_label: 'Manual Network Setup'
 description: 'How to manually set up a MikroTik router that has no default configuration: reset to a clean state, create a bridge, assign a LAN IP address, and configure a DHCP server using CLI or WinBox/WebFig.'
 tags:
   - 'dhcp'
-source: https://manual.mikrotik.com/docs/getting-started/manual-network-setup
-captured_at: '2026-11-04T11:29:12+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/manual-network-setup
+captured_at: '2026-11-04T11:17:03+08:00'
 ---
 
 Most MikroTik routers ship with a [default configuration](/docs/getting-started/configuration-management/default-configurations) that already provides a bridge, a LAN IP address, a DHCP server, and a basic firewall. If you keep the default configuration, you can skip this page.

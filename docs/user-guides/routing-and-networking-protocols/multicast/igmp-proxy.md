@@ -9,8 +9,8 @@ tags:
   - 'multicast'
   - 'routing'
 slug: /user-guides/routing-and-networking-protocols/multicast/igmp-proxy
-source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/multicast/igmp-proxy
-captured_at: '2026-11-04T11:33:54+08:00'
+source: https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/multicast/igmp-proxy
+captured_at: '2026-11-04T11:22:31+08:00'
 ---
 
 The Internet Group Management Protocol (IGMP) proxy can implement multicast routing. It is forwarding IGMP frames and is commonly used when there is no need for a more advanced protocol like PIM.
@@ -42,11 +42,11 @@ add interface=ether2 upstream=yes
 add interface=bridge1
 
 [admin@MikroTik] /routing/igmp-proxy/interface/print
-Flags: U - UPSTREAM
-Columns: INTERFACE, THRESHOLD
-#   INTERFACE  THRESHOLD
-0 U ether2             1
-1   bridge1            1
+Columns: INTERFACE, UPSTREAM, THRESHOLD, ROBUSTNESS, QUERY-INTERVAL, 
+         QUERY-RESPONSE-INTERVAL, LAST-MEMBER-QUERY-INTERVAL
+#   INTERFACE  UPSTREAM  THRESHOLD  ROBUSTNESS  QUERY-INTERVAL  QU  LA
+0   ether2     yes               1                                    
+1   bridge1     no               1           2  2m5s           10s  1s
 ```
 
 You may also need to configure `alternative-subnets` on the upstream interface in case the multicast sender address is in an IP subnet that is not directly reachable from the local router:

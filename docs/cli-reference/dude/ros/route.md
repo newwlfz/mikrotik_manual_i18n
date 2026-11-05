@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/dude/ros/route"
 sidebar_position: 11
 title: "route"
 sidebar_label: 'route'
-source: https://manual.mikrotik.com/docs/cli-reference/dude/ros/route
-captured_at: '2026-11-01T21:26:52+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/dude/ros/route
+captured_at: '2026-11-01T21:22:16+08:00'
 ---
 
 -----------

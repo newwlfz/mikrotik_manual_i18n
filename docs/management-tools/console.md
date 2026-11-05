@@ -1,22 +1,22 @@
 ---
 sidebar_key: "management-tools/console"
-sidebar_position: 4
+sidebar_position: 5
 title: "Console"
 sidebar_label: 'Console'
-description: 'The console provides text-based access to MikroTik RouterOS configuration and management features using text terminals, either remotely using a serial port, telnet, SSH, or console screen within WinBox, or directly using a monitor and keyboard. It covers command execution in hierarchical menu levels, login options, terminal customization, banner messages, quick typing, safe mode, and scripting.'
+description: 'The console provides text-based access to MikroTik RouterOS configuration and management features using text terminals, either remotely by using a serial port, telnet, SSH, or console screen within WinBox, or directly by using a monitor and keyboard. It covers command execution in hierarchical menu levels, login options, terminal customization, banner messages, quick typing, safe mode, and scripting.'
 tags:
   - 'cli'
   - 'console'
   - 'scripting'
   - 'menu-hierarchy'
   - 'terminal'
-source: https://manual.mikrotik.com/docs/management-tools/console
-captured_at: '2026-11-04T11:31:59+08:00'
+source: https://manual.mikrotik.com/docs/7.25/management-tools/console
+captured_at: '2026-11-04T11:19:45+08:00'
 ---
 
 ## Overview
 
-The console is used for accessing the MikroTik Router's configuration and management features using text terminals, either remotely using a serial port, telnet, SSH, or console screen within [WinBox](/docs/management-tools/winbox), or directly using a monitor and keyboard. The console is also used for writing scripts. This manual describes the general console operation principles. Consult the [Scripting Manual](/docs/developer-guides/scripting/) on some advanced console commands and on how to write scripts.
+The console is used for accessing the MikroTik Router's configuration and management features by using text terminals, either remotely by using a serial port, telnet, SSH, or console screen within [WinBox](/docs/management-tools/winbox), or directly by using a monitor and keyboard. The console is also used for writing scripts. This manual describes the general console operation principles. Consult the [Scripting Manual](/docs/developer-guides/scripting) on some advanced console commands and on how to write scripts.
 
 ## Login Options
 
@@ -60,7 +60,7 @@ The login process displays the MikroTik banner and short help after validating t
 Press F1 for help
 ```
 
-After the banner, other important information can be printed, like `/system/note` set by another admin, the last few critical log messages, demo version upgrade reminder, and default configuration description.
+After the banner, other important information can be printed, like [`/system/note`](/docs/cli-reference/system/note) set by another admin, the last few critical log messages, demo version upgrade reminder, and default configuration description.
 
 For example, the demo license prompt and the last critical messages are printed:
 
@@ -98,9 +98,9 @@ For example, change the current path from the root to the interface, then go bac
   [admin@MikroTik] >
 ```
 
-Use <kbd>↑</kbd> to recall previous commands from command history (commands that added sensitive data, like passwords, will not be available in the history). If a multiline command is recalled, press <kbd>F8</kbd> to expand it. Use <kbd>Tab</kbd> to autocomplete commands and see available options — pressing <kbd>Tab</kbd> twice shows all possible completions. Press <kbd>Enter</kbd> to execute the command, <kbd>Control</kbd>+<kbd>C</kbd> to interrupt the currently running command and return to the prompt, and <kbd>F1</kbd> to display built-in help.
+Use <kbd>↑</kbd> to recall previous commands from command history (commands that added sensitive data, like passwords, are not available in the history). If a multiline command is recalled, press <kbd>F8</kbd> to expand it. Use <kbd>Tab</kbd> to autocomplete commands and see available options — pressing <kbd>Tab</kbd> twice shows all possible completions. Press <kbd>Enter</kbd> to execute the command, <kbd>Control</kbd>+<kbd>C</kbd> to interrupt the currently running command and return to the prompt, and <kbd>F1</kbd> to display built-in help.
 
-The easiest way to log out of the console is to press <kbd>Control</kbd>+<kbd>D</kbd> at the command prompt while the command line is empty (you can cancel the current command and get an empty line with **Control-C**, so **Control-C** followed by <kbd>Control</kbd>+<kbd>D</kbd> will log you out in most cases).
+The easiest way to log out of the console is to press <kbd>Control</kbd>+<kbd>D</kbd> at the command prompt while the command line is empty (you can cancel the current command and get an empty line with **Control-C**, so **Control-C** followed by <kbd>Control</kbd>+<kbd>D</kbd> logs you out in most cases).
 
 It is possible to write commands that consist of multiple lines. When the entered line is not a complete command and more input is expected, the console shows a continuation prompt that lists all open parentheses, braces, brackets, and quotes, and also a trailing backslash if the previous line ended with **backslash**-white-space.
 
@@ -146,7 +146,7 @@ B - blackhole, U - unreachable, P - prohibit
 [admin@MikroTik] >
 ```
 
-Instead of typing `/ip/route` path before each command, the path can be typed only once to move into this particular branch of the menu hierarchy. Thus, the example above could also be executed like this:
+Instead of typing `/ip/route` path before each command, the path can be typed only once to move into this particular branch of the menu hierarchy. Thus, the previous example could also be executed like this:
 
 ```ros
 [admin@MikroTik] > /ip/route 
@@ -165,7 +165,7 @@ DST-ADDRESS PREF-SRC G GATEWAY DIS INTE...
 
 Each word in the path can be separated by a **space** or by `/`.
 
-Notice that the prompt changes to reflect where you are located in the menu hierarchy at the moment. To move to the top level again, type `/`
+Notice that the prompt changes to reflect where you are located in the menu hierarchy. To move to the top level again, type `/`
 
 ```ros
 [admin@MikroTik] > /ip/route 
@@ -200,7 +200,7 @@ Flags: X - disabled, I - invalid
 
 ## Item Names and Numbers
 
-Many of the command levels operate with arrays of items: interfaces, routes, users, etc. Such arrays are displayed in similar-looking lists. All items in the list have an item number followed by flags and parameter values.
+Many of the command levels operate with arrays of items: interfaces, routes, users, and so on. Such arrays are displayed in similar-looking lists. All items in the list have an item number followed by flags and parameter values.
 
 To change the properties of an item, you have to use the **set** command and specify the name or number of the item.
 
@@ -212,9 +212,9 @@ You do not have to use the **print** command before accessing items by their nam
 
 ### Item Numbers
 
-Item numbers are assigned by the print command and are not constant - two successive print commands may order items differently. But the results of the last print commands are memorized and, thus, once assigned, item numbers can be used even after **add**, **remove,** and **move** operations. Item numbers are assigned on a per-session basis; they will remain the same until you quit the console or until the next print command is executed. Also, numbers are assigned separately for every item list, so for example, the `/ip/address/print` will not change the numbering of the `/interface` list.
+Item numbers are assigned by the print command and are not constant - two successive print commands may order items differently. But the results of the last print commands are memorized and, thus, once assigned, item numbers can be used even after **add**, **remove,** and **move** operations. Item numbers are assigned on a per-session basis; they remain the same until you quit the console or until the next print command is executed. Also, numbers are assigned separately for every item list, so for example, the `/ip/address/print` does not change the numbering of the `/interface` list.
 
-It is possible to use item numbers without running the **print** command. Numbers will be assigned just as if the **print** command was executed.
+It is possible to use item numbers without running the **print** command. Numbers are assigned just as if the **print** command was executed.
 
 You can specify multiple items as targets for some commands. Almost everywhere, where you can write the number of an item, you can also write a list of numbers.
 
@@ -238,15 +238,15 @@ Flags: X - disabled, D - dynamic, R - running
 ```
 
 :::warning
-Do not use item numbers in scripts. It is not a reliable way to edit items in the **scheduler, scripts**, etc. Instead, use the **find** command. More info in the [scripting documentation](/docs/developer-guides/scripting/). Also look at [scripting examples](/docs/developer-guides/scripting/scripting-examples).
+Do not use item numbers in scripts. It is not a reliable way to edit items in the **scheduler**, **scripts**, and so on. Instead, use the **find** command. More info in the [scripting documentation](/docs/developer-guides/scripting). Also look at [scripting examples](/docs/developer-guides/scripting/scripting-examples).
 :::
 
 ## General Commands
 
-Some commands are common to nearly all menu levels, namely: **add**, **edit**, **find**, **move**, **print**, **remove**, **set**, **reset**, **export**, **get**, **enable**, **disable**, and **comment**. These commands have similar behavior throughout different menu levels. For detailed descriptions and parameters, see the [Scripting Commands](/docs/developer-guides/scripting/#commands) reference.
+Some commands are common to nearly all menu levels, namely: **add**, **edit**, **find**, **move**, **print**, **remove**, **set**, **reset**, **export**, **get**, **enable**, **disable**, and **comment**. These commands have similar behavior throughout different menu levels. For detailed descriptions and parameters, see the [Scripting Commands](/docs/developer-guides/scripting#commands) reference.
 
 :::info
-You can combine commands. Here are two variants of the same command that will place a new firewall filter entry, by looking up the comment:
+You can combine commands. Here are two variants of the same command that place a new firewall filter entry, by looking up the comment:
 
 ```ros
 /ip/firewall/filter/add chain=forward place-before=[find where comment=CommentX]
@@ -275,7 +275,7 @@ It is possible to switch between several input modes:
 
 ### Safe Mode
 
-It is sometimes possible to change the router configuration in a way that will make the router inaccessible (except from the local console). Usually, this is done by accident, but there is no way to undo the last change when the connection to the router is already cut. Safe mode can be used to minimize such risk.
+It is sometimes possible to change the router configuration in a way that makes the router inaccessible (except from the local console). Usually, this is done by accident, but there is no way to undo the last change when the connection to the router is already cut. Safe mode can be used to minimize such risk.
 
 The **"Safe Mode"** button in the WinBox GUI allows you to enter Safe Mode, while in the CLI, you can access it by either using the keyboard shortcut <kbd>F4</kbd> or pressing <kbd>Control</kbd>+<kbd>X</kbd>. To exit without saving the changes made in CLI, hit <kbd>Control</kbd>+<kbd>D</kbd>.
 
@@ -287,7 +287,7 @@ The **"Safe Mode"** button in the WinBox GUI allows you to enter Safe Mode, whil
 
 ![](./img/safe-mode-cli.png)
 
-Message **Safe Mode taken** is displayed and the prompt changes to reflect that session is now in safe mode. All configuration changes that are made (also from other login sessions), while the router is in safe mode, are automatically undone if the safe mode session terminates abnormally. You can see all such changes that will be automatically undone, tagged with an **F** flag in the system history:
+Message **Safe Mode taken** is displayed and the prompt changes to reflect that session is now in safe mode. All configuration changes that are made (also from other login sessions), while the router is in safe mode, are automatically undone if the safe mode session terminates abnormally. You can see all such changes that are automatically undone, tagged with an **F** flag in the system history:
 
 ```ros
 [admin@MikroTik] /ip/route> 
@@ -300,7 +300,7 @@ Columns: ACTION, BY, POLICY
 F route 0.0.0.0/0 added  admin  write
 ```
 
-Now, if the telnet connection (or WinBox terminal) is cut, then after a while (TCP timeout is **9** minutes) all changes that were made while in safe mode will be undone. Exiting the session by <kbd>Control</kbd>+<kbd>D</kbd> also undoes all safe mode changes, while **/quit** does not.
+Now, if the telnet connection (or WinBox terminal) is cut, then after a while (TCP timeout is **9** minutes) all changes that were made while in safe mode are undone. Exiting the session by <kbd>Control</kbd>+<kbd>D</kbd> also undoes all safe mode changes, while **/quit** does not.
 
 If another user tries to enter safe mode, they are given the following message:
 
@@ -322,12 +322,12 @@ Hijacking Safe Mode from someone - unroll/release/don't take it [u/r/d]:
 If too many changes are made while in safe mode, and there's no room in history to hold them all (currently history keeps up to the 100 most recent actions), then the session is automatically put out of safe mode, and no changes are automatically undone. Thus, it is best to change the configuration in small steps, while in safe mode. Pressing <kbd>Control</kbd>+<kbd>X</kbd> twice is an easy way to empty the safe mode action list.
 
 :::warning
-As "Safe Mode" operates within the user's session and stores configuration changes, it will be ignored for commands requiring a reboot, such as resetting configuration or restoring from a backup.
+As "Safe Mode" operates within the user's session and stores configuration changes, it is ignored for commands requiring a reboot, such as resetting configuration or restoring from a backup.
 :::
 
 ### HotLock Mode
 
-When HotLock mode is enabled, commands will be auto-completed.
+When HotLock mode is enabled, commands are auto-completed.
 
 To enter/exit HotLock mode press <kbd>F7</kbd>.
 
@@ -337,7 +337,7 @@ To enter/exit HotLock mode press <kbd>F7</kbd>.
 
 ```
 
-Double `>>` is an indication that HotLock mode is enabled. For example, if you type "`/in et"`, it will be auto-completed to:
+Double `>>` is an indication that HotLock mode is enabled. For example, if you type "`/in et"`, it is auto-completed to:
 
 ```ros
 [admin@MikroTik] /ip/address>> /interface/ethernet/
@@ -386,7 +386,7 @@ ether1 ether5
 
 The <kbd>Tab</kbd> key can be used in almost any context where the console might have a clue about possible values - command names, argument names, arguments that have only several possible values (like names of items in some lists or names of protocols in firewall and NAT rules). You cannot complete numbers, IP addresses, and similar values.
 
-Another way to press fewer keys while typing is to abbreviate command and argument names. You can type only the beginning of the command name, and, if it is not ambiguous, the console will accept it as a full name. So typing:
+Another way to press fewer keys while typing is to abbreviate command and argument names. You can type only the beginning of the command name, and, if it is not ambiguous, the console accepts it as a full name. So typing:
 
 ```ros
 [admin@MikroTik] > pin 10.1 c 3 si 100
@@ -414,7 +414,7 @@ Console search allows performing keyword search through the list of RouterOS men
 
 ## Internal Chat System
 
-RouterOS console has a built-in internal chat system. This allows remotely located admins to talk to each other directly in RouterOS CLI. To start the conversation, prefix the intended message with the # symbol. Anyone who is logged in at the time of sending the message will see it.
+RouterOS console has a built-in internal chat system. This allows remotely located admins to talk to each other directly in RouterOS CLI. To start the conversation, prefix the intended message with the # symbol. Anyone who is logged in at the time of sending the message sees it.
 
 ```ros
 [admin@MikroTik] > # ready to break internet?
@@ -432,11 +432,7 @@ admin: ready to break internet?
 
 ## Settings
 
-In the `/console/settings` menu, it is possible to enable an option for replacing reserved characters with underscores for file names.
-
-| Property | Description |
-| :-- | :-- |
-| **sanitize-names**  (*yes* *\| no* Default: **no**) | Replace reserved characters (\ / : \* ?  \|)  with underscores |
+In the [`/console/settings`](/docs/cli-reference/console/settings) menu, it is possible to enable an option for replacing reserved characters with underscores for file names.
 
 ## Built-in Help
 

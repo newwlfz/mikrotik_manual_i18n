@@ -8,8 +8,8 @@ tags:
   - 'system-health'
   - 'fan-control'
   - 'temperature'
-source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/health
-captured_at: '2026-11-04T11:27:55+08:00'
+source: https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/health
+captured_at: '2026-11-04T11:15:18+08:00'
 ---
 
 Hardware that supports monitoring will display different information about hardware status, like temperature, voltage, current, fan-speed, etc.

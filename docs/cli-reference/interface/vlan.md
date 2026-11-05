@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/vlan"
 sidebar_position: 37
 title: "vlan"
 sidebar_label: 'vlan'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/vlan
-captured_at: '2026-11-01T21:27:41+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/vlan
+captured_at: '2026-11-01T21:23:03+08:00'
 ---
 
 -----------
@@ -21,6 +21,7 @@ captured_at: '2026-11-01T21:27:41+08:00'
 <ArgTable c1="Argument" c2="Type" c3="Description">
 <ArgTableRow arg="name" typ="string"></ArgTableRow>
 <ArgTableRow arg="mtu" typ="num"></ArgTableRow>
+<ArgTableRow arg="forced-mac-address" typ="macAddr"></ArgTableRow>
 <ArgTableRow arg="vlan-id" typ="num" mandatory="1"></ArgTableRow>
 <ArgTableRow arg="interface" typ="iface_enum" mandatory="1"></ArgTableRow>
 <ArgTableRow arg="use-service-tag" typ="bool"></ArgTableRow>
@@ -30,6 +31,7 @@ captured_at: '2026-11-01T21:27:41+08:00'
 <ArgTableRow arg="arp-timeout" typ="alt { arp-timeout: enum (auto) { auto:0 }
 , arp-timeout: time
  }"></ArgTableRow>
+<ArgTableRow arg="arp-accept" typ="bool"></ArgTableRow>
 <ArgTableRow arg="loop-protect" typ="enum (default | off | on) { default:0, off:1, on:2 }"></ArgTableRow>
 <ArgTableRow arg="loop-protect-send-interval" typ="time"></ArgTableRow>
 <ArgTableRow arg="loop-protect-disable-time" typ="time"></ArgTableRow>

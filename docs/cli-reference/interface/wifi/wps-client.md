@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wifi/wps-client"
 sidebar_position: 27
 title: "wps-client"
 sidebar_label: 'wps-client'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/wps-client
-captured_at: '2026-11-01T21:27:54+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wifi/wps-client
+captured_at: '2026-11-01T21:23:17+08:00'
 ---
 
 -----------

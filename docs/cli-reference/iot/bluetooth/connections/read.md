@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/iot/bluetooth/connections/read"
 sidebar_position: 6
 title: "read"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/connections/read
-captured_at: '2026-11-01T21:28:08+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/bluetooth/connections/read
+captured_at: '2026-11-01T21:23:35+08:00'
 ---
 
 -----------

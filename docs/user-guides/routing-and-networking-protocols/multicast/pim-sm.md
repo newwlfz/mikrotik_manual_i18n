@@ -9,8 +9,8 @@ tags:
   - 'igmp'
   - 'ospf'
 slug: /user-guides/routing-and-networking-protocols/multicast/pim-sm
-source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/multicast/pim-sm
-captured_at: '2026-11-04T11:34:04+08:00'
+source: https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/multicast/pim-sm
+captured_at: '2026-11-04T11:22:41+08:00'
 ---
 
 IP Multicast is a technology that allows data to be efficiently shared with many recipients over the Internet. Senders transmit their data to a specific multicast IP address, and receivers indicate their interest in receiving data sent to that address. The network then takes care of delivering the data from senders to receivers.

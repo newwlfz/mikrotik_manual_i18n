@@ -8,8 +8,8 @@ tags:
   - 'spanning-tree'
   - 'stp'
   - 'rstp'
-source: https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/spanning-tree-protocol
-captured_at: '2026-11-04T11:27:37+08:00'
+source: https://manual.mikrotik.com/docs/7.25/bridging-and-switching/user-guides/spanning-tree-protocol
+captured_at: '2026-11-04T11:14:45+08:00'
 ---
 
 ---

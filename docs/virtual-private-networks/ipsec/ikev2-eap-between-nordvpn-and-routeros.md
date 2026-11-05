@@ -8,8 +8,8 @@ tags:
   - 'ikev2'
   - 'ipsec'
   - 'vpn'
-source: https://manual.mikrotik.com/docs/virtual-private-networks/ipsec/ikev2-eap-between-nordvpn-and-routeros
-captured_at: '2026-11-04T11:34:40+08:00'
+source: https://manual.mikrotik.com/docs/7.25/virtual-private-networks/ipsec/ikev2-eap-between-nordvpn-and-routeros
+captured_at: '2026-11-04T11:23:16+08:00'
 ---
 
 Starting from RouterOS v6.45, it is possible to establish an IKEv2 secured tunnel to NordVPN servers using EAP authentication. This manual page explains how to configure it.

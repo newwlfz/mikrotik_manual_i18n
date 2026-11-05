@@ -8,8 +8,8 @@ tags:
   - 'wifi'
   - 'access-point'
   - 'ssid'
-source: https://manual.mikrotik.com/docs/wireless/wifi/configuring-standalone-access-point
-captured_at: '2026-11-04T11:35:53+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/wifi/configuring-standalone-access-point
+captured_at: '2026-11-04T11:24:19+08:00'
 ---
 
 **Package:** `wifi-qcom`
@@ -21,13 +21,13 @@ This guide is meant for 802.11 AX devices running `wifi-qcom` package/drivers.
 Wi-Fi devices can play different roles. The most common device that almost every household has is called a Wi-Fi router. A typical Wi-Fi router, usually, has a WAN port (for ISP connection), LAN ports (for local PCs, wired printers etc) and a WLAN network (Wi-Fi network). Routers are also called "gateways" and "firewalls" because they act as a "doorway" for your local network clients into the Internet (those devices "hide" LAN-connected clients behind them and protect them).
 
 :::info
-The router is a firewall/gateway device, which has an ISP cable connected to it, and is [firewall protected](/docs/firewall-and-quality-of-service/firewall/) and has [DHCP-server](/docs/network-management/dhcp#dhcp-server) functionality enabled (which provides an IP address to the connected, both wirelessly and via a wire, LAN clients).
+The router is a firewall/gateway device, which has an ISP cable connected to it, and is [firewall protected](/docs/firewall-and-quality-of-service/firewall/) and has [DHCP-server](/docs/network-management/dhcp/server) functionality enabled (which provides an IP address to the connected, both wirelessly and via a wire, LAN clients).
 :::
 
 Another role for a Wi-Fi device is called an "access point" or an "AP" for short. Those devices, typically, are connected to the main "router/gateway/firewall" via an ethernet connection (to the router's LAN port); they are not firewall protected, and do not have DHCP-server functionality enabled (they do not provide IP addresses). APs have all their Wi-Fi and LAN interfaces/ports bridged, and thus, APs "take" IP addresses from the router connection, and "pass" them down to AP-connected clients (acting as a "layer2" bridge/switch).
 
 :::info
-Access points are "bridge" devices, which are connected to the router using an Ethernet cable; they are not [firewall protected](/docs/firewall-and-quality-of-service/firewall/), and they have [DHCP-server](/docs/network-management/dhcp#dhcp-server) functionality disabled (they "bridge" DHCP requests from the router to AP's clients).
+Access points are "bridge" devices, which are connected to the router using an Ethernet cable; they are not [firewall protected](/docs/firewall-and-quality-of-service/firewall/), and they have [DHCP-server](/docs/network-management/dhcp/server) functionality disabled (they "bridge" DHCP requests from the router to AP's clients).
 :::
 
 In other words, a **Wi-Fi router** **is** **an AP with additional functionality**.
@@ -189,9 +189,9 @@ That is, of course, if you have proper firewall and access restrictions added on
 add interface=bridge
 ```
 
-Apply [DHCP-client](/docs/network-management/dhcp#configuration-examples) on top of the bridge interface, so that the AP itself and all its connected clients get IP addresses from the main router.
+Apply [DHCP-client](/docs/network-management/dhcp/client#configuration-examples) on top of the bridge interface, so that the AP itself and all its connected clients get IP addresses from the main router.
 
-Disable [DHCP-server](/docs/network-management/dhcp#dhcp-server) functionality.
+Disable [DHCP-server](/docs/network-management/dhcp/server) functionality.
 
 ### Address
 

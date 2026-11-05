@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/iot/bluetooth/connections/index"
 sidebar_position: 5
 title: "connections"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/connections
-captured_at: '2026-11-01T21:28:06+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/bluetooth/connections
+captured_at: '2026-11-01T21:23:32+08:00'
 ---
 
 -----------

@@ -8,8 +8,8 @@ tags:
   - 'wifi'
   - 'configuration-profiles'
   - 'access-lists'
-source: https://manual.mikrotik.com/docs/wireless/wifi
-captured_at: '2026-11-04T11:36:05+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/wifi
+captured_at: '2026-11-04T11:25:13+08:00'
 ---
 
 This section covers MikroTik **Wi-Fi 6 / 6E / 7 (802.11ax/be)** devices, all configured through the shared **`/interface/wifi`** menu. Which driver package a device needs depends on its wireless chipset and standard. The same menu also covers **Wi-Fi 5 (802.11ac)** devices running the **`wifi-qcom-ac`** package.
@@ -53,7 +53,56 @@ Before we move on let's familiarize ourselves with terms important for understan
 
 ## Basic Configuration
 
+The easiest way to fully configure a compatible device is through the `/interface/wifi/network` menu, which bundles SSID, security, datapath and radio settings into a single configuration entity. Alternatively, settings can be applied per-interface as shown in the examples further below.
+
+### Network
+
+A network applies to WiFi interfaces that match its `labels`. If `labels` are not specified, the network's configuration gets applied to all interfaces.
+
+For an example of network configuration usage, see the following:
+
+```ros
+# Creating a network preset with SSID, security and datapath settings, which gets applied to all available interfaces
+/interface/wifi/network
+add ssid=MikroTik mode=ap security.authentication-types=wpa2-psk,wpa3-psk security.passphrase="strong_password" datapath.bridge=bridge1 disabled=no
+
+# Create a network radio preset, which gets applied to the whole radio.
+/interface/wifi/network/radio
+add configuration.country=Latvia
+```
+
+An example with Multi-Link Operation (MLO) enabled:
+
+```ros
+/interface/wifi/network
+add datapath.bridge=bridge1 disabled=no mlo=yes mode=ap security.authentication-types=wpa3-psk ssid="MikroTik" security.passphrase="strong_password"
+```
+
+| Property | Description |
+| :-- | :-- |
+| **mlo** (*no* \| *yes; default: **yes***) | Enables Multi-Link Operation for Wi-Fi 7. |
+| **labels** (*comma-separated strings*) | Enables the network config on radios which match any of the provided labels. |
+| **ssid** (*string*) | The wireless network name (ESSID). |
+| **mode** (*ap* \| *station* \| *station-bridge* \| *station-pseudobridge*; default: **ap***) | Interface operation mode. |
+| **disabled** (*no* \| *yes; default: **no***) | Whether the network is disabled. |
+
+All security, authentication and encryption parameters (passphrase, WPA3/SAE, EAP, etc.) share the same properties described in [Security Properties](#security-properties). Datapath parameters (bridge, VLAN, client isolation, traffic processing) follow [Datapath Properties](#datapath-properties).
+
+#### Network radio properties
+
+Per-radio settings under `/interface/wifi/network/radio`:
+
+| Property | Description |
+| :-- | :-- |
+| **labels** (*object*) | Matches the radio config to physical radios with the given labels. |
+| **extra-labels** (*multi string*) | Additional labels for matching, extending the primary `labels` field. |
+| **disabled** (*no* \| *yes; default: **no***) | Whether the radio entry is disabled. |
+
+Radio parameters (country, band, frequency, width, chains, power, etc.) use the same properties described in [Channel Properties](#channel-properties) and [Configuration Properties](#configuration-properties).
+
 ### Basic password-protected AP
+
+Direct per-interface setup works on every device and remains fully supported when the `/interface/wifi/network` menu is unavailable or when per-interface overrides are needed.
 
 ```ros
 /interface/wifi
@@ -165,51 +214,6 @@ Flags: M - master; D - dynamic; B - bound; X - disabled, I - inactive, R - runni
 :::info
 `print detail` and `print detail config` can also be used on `/interface/wifi/configuration` and will work in the same manner as in `/interface/wifi/` menu.
 :::
-
-## Network
-
-The `/interface/wifi/network` menu bundles SSID, security, datapath and radio settings into a single configuration entity. A network applies to WiFi interfaces that match its `labels`. If `labels` are not specified, the network's configuration gets applied to all interfaces.
-
-For an example of network configuration usage, see the following:
-
-```ros
-# Creating a network preset with SSID, security and datapath settings, which gets applied to all available interfaces
-/interface/wifi/network
-add ssid=MikroTik mode=ap security.authentication-types=wpa2-psk,wpa3-psk security.passphrase="strong_password" datapath.bridge=bridge1 disabled=no
-
-# Create a network radio preset, which gets applied to the whole radio.
-/interface/wifi/network/radio
-add configuration.country=Latvia
-```
-
-An example with Multi-Link Operation (MLO) enabled:
-
-```ros
-/interface/wifi/network
-add datapath.bridge=bridge1 disabled=no mlo=yes mode=ap security.authentication-types=wpa3-psk ssid="MikroTik" security.passphrase="strong_password"
-```
-
-| Property | Description |
-| :-- | :-- |
-| **mlo** (*no* \| *yes; default: **yes***) | Enables Multi-Link Operation for Wi-Fi 7. |
-| **labels** (*comma-separated strings*) | Enables the network config on radios which match any of the provided labels. |
-| **ssid** (*string*) | The wireless network name (ESSID). |
-| **mode** (*ap* \| *station* \| *station-bridge* \| *station-pseudobridge*; default: **ap***) | Interface operation mode. |
-| **disabled** (*no* \| *yes; default: **no***) | Whether the network is disabled. |
-
-All security, authentication and encryption parameters (passphrase, WPA3/SAE, EAP, etc.) share the same properties described in [Security Properties](#security-properties). Datapath parameters (bridge, VLAN, client isolation, traffic processing) follow [Datapath Properties](#datapath-properties).
-
-### Network radio properties
-
-Per-radio settings under `/interface/wifi/network/radio`:
-
-| Property | Description |
-| :-- | :-- |
-| **labels** (*object*) | Matches the radio config to physical radios with the given labels. |
-| **extra-labels** (*multi string*) | Additional labels for matching, extending the primary `labels` field. |
-| **disabled** (*no* \| *yes; default: **no***) | Whether the radio entry is disabled. |
-
-Radio parameters (country, band, frequency, width, chains, power, etc.) use the same properties described in [Channel Properties](#channel-properties) and [Configuration Properties](#configuration-properties).
 
 ## Access List
 
@@ -571,7 +575,7 @@ Parameters relating to authentication.
 | **ft-mobility-domain** (*integer 0..65535; default: **44484 (0xADC4)***) | The fast BSS transition mobility domain ID. |
 | **ft-nas-identifier** (string of *2..96 hex characters*) | Fast BSS transition PMK-R0 key holder identifier. Default: MAC address of the interface. |
 | **ft-over-ds** (*no* \| *yes; *default: **no****) | Whether to enable fast BSS transitions over DS (distributed system). |
-| **ft-preserve-vlanid** (*no* \| *yes* ) | no - when a client connects to this AP via 802.11r fast BSS transition, it is assigned a VLAN ID according to the access and/or interface settingsyes (default) - when a client connects to this AP via 802.11r fast BSS transition, it retains the VLAN ID, which it was assigned during initial authentication The default behavior is essential when relying on a RADIUS server to assign VLAN IDs to users, since a RADIUS server is only used for initial authentication. |
+| **ft-preserve-vlanid** (*no* \| *yes* ) | no - when a client connects to this AP via 802.11r fast BSS transition, it is assigned a VLAN ID according to the access and/or interface settingsyes (default) - when a client connects to this AP via 802.11r fast BSS transition, it retains the VLAN ID, which it was assigned during initial authentication The default behavior is essential when relying on a RADIUS server to assign VLAN IDs to users, since a RADIUS server is only used for initial authentication.  Not supported by **wifi-qcom-ac** drivers. |
 | **ft-r0-key-lifetime** (*time interval 1s..6w3d12h15m; Default: **600000s (~7 days)***) | Lifetime of the fast BSS transition PMK-R0 encryption key. |
 | **ft-reassociation-deadline** (*time interval 0..70s; default: **20s***) | Fast BSS transition reassociation deadline. |
 | **group-encryption** (*ccmp* \| *ccmp-256* \| *gcmp* \| *gcmp-256* \| *tkip; default: **ccmp***) | Cipher to use for encrypting multicast traffic. |

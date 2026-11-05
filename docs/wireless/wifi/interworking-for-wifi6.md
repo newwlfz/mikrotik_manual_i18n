@@ -8,8 +8,8 @@ tags:
   - 'wifi'
   - 'interworking'
   - 'hotspot-20'
-source: https://manual.mikrotik.com/docs/wireless/wifi/interworking-for-wifi6
-captured_at: '2026-11-04T11:35:59+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/wifi/interworking-for-wifi6
+captured_at: '2026-11-04T11:24:27+08:00'
 ---
 
 ## Interworking

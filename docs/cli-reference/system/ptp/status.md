@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/ptp/status"
 sidebar_position: 4
 title: "status"
-source: https://manual.mikrotik.com/docs/cli-reference/system/ptp/status
-captured_at: '2026-11-01T21:30:02+08:00'
+sidebar_label: 'status'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/ptp/status
+captured_at: '2026-11-01T21:25:37+08:00'
 ---
 
 -----------

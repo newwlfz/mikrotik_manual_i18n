@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/ipv6/address"
 sidebar_position: 1
 title: "address"
-source: https://manual.mikrotik.com/docs/cli-reference/ipv6/address
-captured_at: '2026-11-01T21:29:02+08:00'
+sidebar_label: 'ipv6'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ipv6/address
+captured_at: '2026-11-01T21:24:31+08:00'
 ---
 
 -----------

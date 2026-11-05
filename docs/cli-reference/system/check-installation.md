@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/check-installation"
 sidebar_position: 3
 title: "check-installation"
-source: https://manual.mikrotik.com/docs/cli-reference/system/check-installation
-captured_at: '2026-11-01T21:29:48+08:00'
+sidebar_label: 'check-installation'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/check-installation
+captured_at: '2026-11-01T21:25:25+08:00'
 ---
 
 -----------

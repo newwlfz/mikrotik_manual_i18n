@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/snooper/snoop"
 sidebar_position: 3
 title: "snoop"
 sidebar_label: 'snoop'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/snooper/snoop
-captured_at: '2026-11-01T21:28:05+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/snooper/snoop
+captured_at: '2026-11-01T21:23:30+08:00'
 ---
 
 -----------

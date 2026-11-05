@@ -8,8 +8,8 @@ tags:
   - 'lcd'
   - 'touchscreen'
   - 'configuration'
-source: https://manual.mikrotik.com/docs/hardware/lcd-touchscreen
-captured_at: '2026-11-04T11:29:30+08:00'
+source: https://manual.mikrotik.com/docs/7.25/hardware/lcd-touchscreen
+captured_at: '2026-11-04T11:17:25+08:00'
 ---
 
 ## Summary

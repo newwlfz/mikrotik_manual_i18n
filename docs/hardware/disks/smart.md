@@ -3,31 +3,28 @@ sidebar_key: "hardware/disks/smart"
 sidebar_position: 2
 title: "S.M.A.R.T. info"
 sidebar_label: 'S.M.A.R.T. info'
-description: 'RouterOS now supports S.M.A.R.T. monitoring for attached storage devices, allowing users to retrieve diagnostic attributes like drive health and error rates via the `/disk smart-info` CLI command.'
+description: 'S.M.A.R.T. drive health monitoring in RouterOS: read drive health, temperature, use and error counters with the `/disk smart-info` command, and what the reported attributes mean.'
 tags:
   - 'storage'
   - 'smart'
   - 'cli'
-source: https://manual.mikrotik.com/docs/hardware/disks/smart
-captured_at: '2026-11-04T11:29:16+08:00'
+source: https://manual.mikrotik.com/docs/7.25/hardware/disks/smart
+captured_at: '2026-11-04T11:17:18+08:00'
 ---
 
-:::info
-This feature requires the [Storage](/docs/storage/) package.
-:::
+[*S.M.A.R.T. info CLI Reference*](/docs/cli-reference/disk/smart-info)
 
-Starting with RouterOS 7.23, S.M.A.R.T. (Self-Monitoring, Analysis and Reporting Technology) support has been added.
-
-S.M.A.R.T. is a monitoring system built into modern storage drives, which allows you to monitor the drive's health, performance, and error rates.
-For any attached storage device that supports S.M.A.R.T., you can retrieve diagnostic attributes directly from the CLI using the `/disk smart-info` command.
+S.M.A.R.T. (Self-Monitoring, Analysis and Reporting Technology) is a monitoring system built into modern storage drives. It lets you read diagnostics of the drive: overall health, temperature, use, error counters and, for NVMe drives, the SMART/Health attributes.
 
 :::info
-
-Some USB disk enclosures may not support retrieving S.M.A.R.T information.
-
+S.M.A.R.T. information requires the [Storage](/docs/storage/) package.
 :::
 
-## Example Output
+For any attached storage device that supports S.M.A.R.T., read the diagnostics with the `/disk/smart-info` command:
+
+```ros
+[admin@MikroTik] > /disk/smart-info nvme1
+```
 
 ```ros
 [admin@R2DUTRDS22162XG4S4XS2XQ20DISKS] > disk/smart-info nvme1
@@ -89,3 +86,23 @@ Temperature Sensor 8:               31 Celsius
 Error Information (NVMe Log 0x01, max 64 entries)                          
 No Errors Logged      
 ```
+
+## Reading the output
+
+The important values for drive health:
+
+- `SMART overall-health self-assessment test result`  -  the drive reports whether it considers itself healthy. A drive that reports `FAILED` should be replaced.
+- `Temperature`  -  the current temperature of the drive. The warning and critical thresholds are listed in the information section.
+- `Available Spare`  -  how much spare capacity the drive still has before it cannot remap bad blocks. When it drops to the `Available Spare Threshold`, the drive is close to the end of its life.
+- `Percentage Used`  -  the estimated lifetime use of the drive, based on the manufacturer's rated endurance. At 100% the drive has reached its rated lifespan.
+- `Unsafe Shutdowns` and `Media and Data Integrity Errors`  -  how often the drive lost power unexpectedly and how many data errors it detected. Repeated unsafe shutdowns increase the risk of corruption.
+
+The output is the same as `smartctl` reports on Linux, so the S.M.A.R.T. documentation of the drive vendor applies.
+
+:::note
+Some USB enclosures cannot pass S.M.A.R.T. information through. If the drive is behind such an enclosure, `/disk/smart-info` reports an error even though the drive itself supports S.M.A.R.T.
+:::
+
+## Related
+
+- [Disks](/docs/hardware/disks/)  -  formatting, mounting and managing drives.

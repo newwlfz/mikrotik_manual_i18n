@@ -7,8 +7,8 @@ description: 'This page introduces MikroTik RouterOS''s Bridge VLAN Table featur
 tags:
   - 'bridge-vlan-filtering'
   - 'vlan'
-source: https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/bridge-vlan-table
-captured_at: '2026-11-04T11:27:29+08:00'
+source: https://manual.mikrotik.com/docs/7.25/bridging-and-switching/user-guides/bridge-vlan-table
+captured_at: '2026-11-04T11:14:43+08:00'
 ---
 
 ---

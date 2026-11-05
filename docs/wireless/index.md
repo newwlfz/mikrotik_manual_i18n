@@ -6,8 +6,8 @@ sidebar_label: 'Wireless'
 description: 'This section introduces MikroTik RouterOS wireless configuration, covering package selection for different CPU types and frequency bands (2.4GHz, 5GHz, 60GHz), use cases for home access points and industrial links, and considerations like client count and range optimization.'
 tags:
   - 'wireless'
-source: https://manual.mikrotik.com/docs/wireless
-captured_at: '2026-11-04T11:34:57+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless
+captured_at: '2026-11-04T11:23:37+08:00'
 ---
 
 This section will describe the configuration of 802.11 wireless protocols and best use examples.

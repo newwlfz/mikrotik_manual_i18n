@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/iot/bluetooth/advertisers/index"
 sidebar_position: 2
 title: "advertisers"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/advertisers
-captured_at: '2026-11-01T21:28:06+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/bluetooth/advertisers
+captured_at: '2026-11-01T21:23:32+08:00'
 ---
 
 -----------

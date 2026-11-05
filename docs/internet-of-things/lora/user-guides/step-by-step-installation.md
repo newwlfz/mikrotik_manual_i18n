@@ -7,8 +7,8 @@ description: 'This page provides a step-by-step guide for installing and configu
 tags:
   - 'lora'
   - 'winbox'
-source: https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides/step-by-step-installation
-captured_at: '2026-11-04T11:32:02+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/lora/user-guides/step-by-step-installation
+captured_at: '2026-11-04T11:19:45+08:00'
 ---
 
 ### LoRa card installation

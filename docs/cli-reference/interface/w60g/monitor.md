@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/w60g/monitor"
 sidebar_position: 3
 title: "monitor"
 sidebar_label: 'monitor'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/w60g/monitor
-captured_at: '2026-11-01T21:27:42+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/w60g/monitor
+captured_at: '2026-11-01T21:23:12+08:00'
 ---
 
 -----------

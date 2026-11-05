@@ -7,8 +7,8 @@ description: 'The API page introduces RouterOS''s Application Programming Interf
 tags:
   - 'api'
   - 'management'
-source: https://manual.mikrotik.com/docs/developer-guides/api
-captured_at: '2026-11-04T11:27:47+08:00'
+source: https://manual.mikrotik.com/docs/7.25/developer-guides/api
+captured_at: '2026-11-04T11:15:06+08:00'
 ---
 
 **Application Programming Interface (API)** lets users create custom software solutions to communicate with RouterOS for information gathering, adjusting configuration, and managing the router. The API closely follows the syntax of the **command-line interface (CLI)**. You can use it to create translated or custom configuration tools that make it easier to run and manage RouterOS routers.

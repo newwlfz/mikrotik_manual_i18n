@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/iot/bluetooth/whitelist"
 sidebar_position: 8
 title: "whitelist"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/whitelist
-captured_at: '2026-11-01T21:28:12+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/bluetooth/whitelist
+captured_at: '2026-11-01T21:23:42+08:00'
 ---
 
 -----------

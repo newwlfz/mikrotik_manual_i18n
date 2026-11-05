@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/ppp-client/index"
 sidebar_position: 3
 title: "ppp-client"
 sidebar_label: 'ppp-client'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/ppp-client
-captured_at: '2026-11-01T21:27:31+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ppp-client
+captured_at: '2026-11-01T21:22:59+08:00'
 ---
 
 -----------

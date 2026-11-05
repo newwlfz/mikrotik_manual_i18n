@@ -8,8 +8,8 @@ tags:
   - 'firewall'
   - 'qos'
   - 'security-policies'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/user-guides
-captured_at: '2026-11-04T11:28:19+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/user-guides
+captured_at: '2026-11-04T11:15:59+08:00'
 ---
 
 These case studies show practical firewall and QoS configurations, including brute-force prevention, DDoS protection, connection-rate rules, port knocking, and advanced firewall designs. Use them as examples for common security policies.

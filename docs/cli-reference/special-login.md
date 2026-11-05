@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/special-login"
 sidebar_position: 23
 title: "special-login"
 sidebar_label: 'special-login'
-source: https://manual.mikrotik.com/docs/cli-reference/special-login
-captured_at: '2026-11-01T21:29:46+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/special-login
+captured_at: '2026-11-01T21:25:24+08:00'
 ---
 
 -----------

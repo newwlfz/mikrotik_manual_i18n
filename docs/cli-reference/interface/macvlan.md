@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/macvlan"
 sidebar_position: 21
 title: "macvlan"
 sidebar_label: 'macvlan'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/macvlan
-captured_at: '2026-11-01T21:27:29+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/macvlan
+captured_at: '2026-11-01T21:22:53+08:00'
 ---
 
 -----------
@@ -27,6 +27,7 @@ captured_at: '2026-11-01T21:27:29+08:00'
 <ArgTableRow arg="arp-timeout" typ="alt { arp-timeout: enum (auto) { auto:0 }
 , arp-timeout: time
  }"></ArgTableRow>
+<ArgTableRow arg="arp-accept" typ="bool"></ArgTableRow>
 <ArgTableRow arg="loop-protect" typ="enum (default | off | on) { default:0, off:1, on:2 }"></ArgTableRow>
 <ArgTableRow arg="loop-protect-send-interval" typ="time"></ArgTableRow>
 <ArgTableRow arg="loop-protect-disable-time" typ="time"></ArgTableRow>

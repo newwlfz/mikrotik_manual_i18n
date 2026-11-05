@@ -3,8 +3,8 @@ sidebar_key: "internet-of-things/modbus"
 sidebar_position: 4
 title: "Modbus"
 sidebar_label: 'Modbus'
-source: https://manual.mikrotik.com/docs/internet-of-things/modbus
-captured_at: '2026-11-04T11:31:44+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/modbus
+captured_at: '2026-11-04T11:19:10+08:00'
 ---
 
 ### Introduction

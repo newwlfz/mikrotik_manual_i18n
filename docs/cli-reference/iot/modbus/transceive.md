@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/iot/modbus/transceive"
 sidebar_position: 4
 title: "transceive"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/modbus/transceive
-captured_at: '2026-11-01T21:28:17+08:00'
+sidebar_label: 'transceive'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/modbus/transceive
+captured_at: '2026-11-01T21:25:13+08:00'
 ---
 
 -----------

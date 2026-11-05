@@ -1,0 +1,11 @@
+{
+  "position": 40,
+  "label": "Vxlan",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/vxlan/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/vxlan"
+}

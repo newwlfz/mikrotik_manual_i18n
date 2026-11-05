@@ -8,8 +8,8 @@ tags:
   - 'rpki'
   - 'bgp'
 slug: /user-guides/routing-and-networking-protocols/unicast/rpki
-source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/rpki
-captured_at: '2026-11-04T11:34:17+08:00'
+source: https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/unicast/rpki
+captured_at: '2026-11-04T11:22:55+08:00'
 ---
 
 RouterOS implements the Resource Public Key Infrastructure (RPKI) to Router Protocol defined in [`RFC 8210`](https://tools.ietf.org/html/rfc8210). RTR is a lightweight, low-memory protocol for retrieving prefix validation data from RPKI validators. See a validator setup example on the [RIPE blog](https://blog.apnic.net/2019/10/28/how-to-installing-an-rpki-validator/).

@@ -7,8 +7,8 @@ description: 'The page describes how to configure and automate SIM card switchin
 tags:
   - 'ltm'
   - 'scripting'
-source: https://manual.mikrotik.com/docs/mobile-networking/dual-sim-application
-captured_at: '2026-11-04T11:32:20+08:00'
+source: https://manual.mikrotik.com/docs/7.25/mobile-networking/dual-sim-application
+captured_at: '2026-11-04T11:20:01+08:00'
 ---
 
 ### Summary

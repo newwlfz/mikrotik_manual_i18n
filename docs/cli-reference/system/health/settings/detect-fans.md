@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/health/settings/detect-fans"
 sidebar_position: 1
 title: "detect-fans"
-source: https://manual.mikrotik.com/docs/cli-reference/system/health/settings/detect-fans
-captured_at: '2026-11-01T21:29:52+08:00'
+sidebar_label: 'detect-fans'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/health/settings/detect-fans
+captured_at: '2026-11-01T21:25:29+08:00'
 ---
 
 -----------

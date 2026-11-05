@@ -7,8 +7,8 @@ description: 'MACVLAN allows creating multiple virtual network interfaces with u
 tags:
   - 'macvlan'
   - 'arp'
-source: https://manual.mikrotik.com/docs/bridging-and-switching/macvlan
-captured_at: '2026-11-04T11:27:06+08:00'
+source: https://manual.mikrotik.com/docs/7.25/bridging-and-switching/macvlan
+captured_at: '2026-11-04T11:14:23+08:00'
 ---
 
 The MACVLAN provides a means to create multiple virtual network interfaces, each with its own unique Media Access Control (MAC) address, attached to a physical network interface. This technology is utilized to address specific network requirements, such as obtaining multiple IP addresses or establishing distinct PPPoE client connections from a single physical Ethernet interface while using different MAC addresses. Unlike traditional [VLAN](/docs/bridging-and-switching/vlan) (Virtual LAN) interfaces, which rely on Ethernet frames tagged with VLAN identifiers, MACVLAN operates at the MAC address level, making it a versatile and efficient solution for specific networking scenarios.

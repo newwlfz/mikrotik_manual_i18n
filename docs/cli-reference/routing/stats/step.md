@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/stats/step"
 sidebar_position: 5
 title: "step"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/stats/step
-captured_at: '2026-11-01T21:29:44+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/stats/step
+captured_at: '2026-11-01T21:25:21+08:00'
 ---
 
 -----------

@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/queue/simple/index"
 sidebar_position: 1
 title: "simple"
-source: https://manual.mikrotik.com/docs/cli-reference/queue/simple
-captured_at: '2026-11-01T21:29:21+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/queue/simple
+captured_at: '2026-11-01T21:24:58+08:00'
 ---
 
 -----------

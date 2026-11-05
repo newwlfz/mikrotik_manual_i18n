@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/queue/monitor"
 sidebar_position: 2
 title: "monitor"
-source: https://manual.mikrotik.com/docs/cli-reference/queue/monitor
-captured_at: '2026-11-01T21:29:22+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/queue/monitor
+captured_at: '2026-11-01T21:24:58+08:00'
 ---
 
 -----------

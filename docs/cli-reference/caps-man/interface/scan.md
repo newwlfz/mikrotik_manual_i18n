@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/caps-man/interface/scan"
 sidebar_position: 5
 title: "scan"
-source: https://manual.mikrotik.com/docs/cli-reference/caps-man/interface/scan
-captured_at: '2026-11-01T21:26:21+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/interface/scan
+captured_at: '2026-11-01T21:21:45+08:00'
 ---
 
 -----------

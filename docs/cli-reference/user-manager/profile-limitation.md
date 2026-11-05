@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/user-manager/profile-limitation"
 sidebar_position: 10
 title: "profile-limitation"
 sidebar_label: 'profile-limitation'
-source: https://manual.mikrotik.com/docs/cli-reference/user-manager/profile-limitation
-captured_at: '2026-11-01T21:30:32+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/profile-limitation
+captured_at: '2026-11-01T21:26:09+08:00'
 ---
 
 -----------

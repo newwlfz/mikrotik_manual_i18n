@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/ethernet/switch/mac-based-vlan"
 sidebar_position: 11
 title: "mac-based-vlan"
 sidebar_label: 'mac-based-vlan'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/mac-based-vlan
-captured_at: '2026-11-01T21:27:12+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ethernet/switch/mac-based-vlan
+captured_at: '2026-11-01T21:22:35+08:00'
 ---
 
 -----------
@@ -13,13 +13,17 @@ captured_at: '2026-11-01T21:27:12+08:00'
 **Syscap:** musicswitch
 **Type:** Directory
 
+MAC Based VLAN table is used to assign a VLAN based on the source MAC.
+
+All CRS1xx/2xx series switches support up to 1024 MAC Based VLAN table entries.
+
 <ArgTable c1="Flag" c2="Name" c3="Description">
 <ArgTableRow arg="X" typ="disabled"></ArgTableRow>
 <ArgTableRow arg="I" typ="invalid"></ArgTableRow>
 </ArgTable>
 
 <ArgTable c1="Argument" c2="Type" c3="Description">
-<ArgTableRow arg="src-mac-address" typ="macAddr" mandatory="1"></ArgTableRow>
-<ArgTableRow arg="new-service-vid" typ="num"></ArgTableRow>
-<ArgTableRow arg="new-customer-vid" typ="num"></ArgTableRow>
+<ArgTableRow arg="src-mac-address" typ="macAddr" mandatory="1">Matching source MAC address for MAC based VLAN rule.</ArgTableRow>
+<ArgTableRow arg="new-service-vid" typ="num">The new service VLAN ID replaces the original service VLAN ID for matched packets.</ArgTableRow>
+<ArgTableRow arg="new-customer-vid" typ="num">The new customer VLAN ID replaces the original service VLAN ID for matched packets. If set to 4095, then traffic is dropped.</ArgTableRow>
 </ArgTable>

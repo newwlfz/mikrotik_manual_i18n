@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/tool/netwatch"
 sidebar_position: 13
 title: "netwatch"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/netwatch
-captured_at: '2026-11-01T21:30:18+08:00'
+sidebar_label: 'netwatch'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/netwatch
+captured_at: '2026-11-01T21:25:56+08:00'
 ---
 
 -----------

@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/lcd/backlight"
 sidebar_position: 1
 title: "backlight"
 sidebar_label: 'backlight'
-source: https://manual.mikrotik.com/docs/cli-reference/lcd/backlight
-captured_at: '2026-11-01T21:29:12+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/lcd/backlight
+captured_at: '2026-11-01T21:24:43+08:00'
 ---
 
 -----------

@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/resource/index"
 sidebar_position: 3
 title: "resource"
-source: https://manual.mikrotik.com/docs/cli-reference/system/resource
-captured_at: '2026-11-01T21:30:02+08:00'
+sidebar_label: 'resource'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/resource
+captured_at: '2026-11-01T21:25:40+08:00'
 ---
 
 -----------

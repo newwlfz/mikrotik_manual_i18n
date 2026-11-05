@@ -3,13 +3,13 @@ sidebar_key: "high-availability-solutions/multi-chassis-link-aggregation-group"
 sidebar_position: 3
 title: "Multi-chassis Link Aggregation Group"
 sidebar_label: 'Multi-chassis Link Aggregation Group'
-description: 'MLAG in RouterOS enables physical redundancy by configuring LACP bonds across two devices, allowing the client to perceive a single connection while ensuring failover. It uses ICCP for peer communication, supports STP protocols, and requires careful VLAN configuration on dedicated ports. MLAG is CPU-intensive for large networks, and compatibility with L3 offloading or MVRP is limited'
+description: 'MLAG in RouterOS enables physical redundancy by configuring LACP bonds across two devices, allowing the client to perceive a single connection while ensuring failover. It uses ICCP for peer communication, supports STP protocols, and requires careful VLAN configuration on dedicated ports. MLAG is CPU-intensive for large networks and is not compatible with L3 hardware offloading'
 tags:
   - 'mlag'
   - 'bridge-configuration'
   - 'stp'
-source: https://manual.mikrotik.com/docs/high-availability-solutions/multi-chassis-link-aggregation-group
-captured_at: '2026-11-04T11:29:58+08:00'
+source: https://manual.mikrotik.com/docs/7.25/high-availability-solutions/multi-chassis-link-aggregation-group
+captured_at: '2026-11-04T11:17:50+08:00'
 ---
 
 ## Introduction
@@ -21,33 +21,14 @@ Both peers establish the MLAG interfaces and update the bridge host table over `
 When mlag-peer-port is running and ICCP is established, the primary device election happens and the system-id will be selected. The peer with the lowest priority will act as the primary device. If the priorities are the same, the peer with the lowest bridge MAC address will become the primary. This system-id is used for STP BPDU bridge identifier and LACP system ID. MLAG supports STP, RSTP or MSTP protocols. Use the same STP priority and the same STP configuration on dual-connected bridge ports on both nodes. When MLAG bridges are elected as the STP root, then both devices will show as root bridges under the bridge monitor.
 
 :::info
-Starting with **RouterOS version 7.22**, MLAG is configured per bridge interface instead of a dedicated MLAG submenu. Because of this change any RouterOS device (including virtual CHR instances) can be used as an MLAG node.
+MLAG is configured per bridge interface. Any RouterOS device (including virtual CHR instances) can be used as an MLAG node.
 
-Hardware offloaded MLAG is only available on [MikroTik devices with Marvell Prestera switch](/docs/bridging-and-switching/marvell-prestera-switch-chip-features). All other devices support MLAG only in software.
-
-What changed in the configuration syntax and monitor properties?
-
-| RouterOS 7.22+ (new)                    | RouterOS 7.21- (old)                         |
-|:--|:--|
-| Configuration menu: `/interface/bridge` | Configuration menu: `/interface/bridge/mlag` |
-| `mlag-heartbeat`                        | `heartbeat`                                  |
-| `mlag-peer-port`                        | `peer-port`                                  |
-| `mlag-priority`                         | `priority`                                   |
-| `mlag-state`                            | `status`                                     |
-| `mlag-active-role`                      | `active-role`                                |
-| `bridge-id`                             | `system-id`                                  |
-
-In other words, the mlag- prefix has been added and the whole MLAG configuration and monitor is now done under the normal bridge tree.
-
-Upgrading to RouterOS 7.22 (or any newer release) automatically converts the old MLAG configuration to the new format. No manual changes are required.  
-Downgrading to a version older than 7.22 will erase the MLAG configuration, because the older firmware does not recognize the new syntax. Recommendation: before downgrading, back up the current configuration or export the MLAG settings so they can be re‑applied after the downgrade.
+Bridge hardware offloaded MLAG is only available on [MikroTik devices with Marvell Prestera switch](/docs/bridging-and-switching/marvell-prestera-switch-chip-features). All other devices support MLAG only in software.
 
 :::
 
 :::info
 The MLAG is not compatible with [L3 hardware offloading](/docs/bridging-and-switching/l3-hardware-offloading). When using MLAG, the L3 hardware offloading must be disabled.
-
-The MLAG is not compatible with [Multiple VLAN Registration protocol (MVRP)](/docs/bridging-and-switching/#mvrp). Registered VLANs on dual-connected bonds do not get synchronized to the other MLAG node.
 
 :::
 
@@ -58,7 +39,7 @@ In networks with a larger number of hosts, MLAG on these switches may lead to un
 
 :::
 
-![](./img/image.webp)
+![](./img/multi-chassis-link-aggregation-group-01-557159b498dd6b79056e.png)
 
 ### Packet forwarding and load balancing
 
@@ -86,7 +67,7 @@ The unicast traffic behaves similarly, but there is one key difference when comp
 
 In this example, CRS317 and CRS309 devices are used as MLAG peers, and any device with two SFP+ interfaces can be used as an LACP client. The SFP+1 interface is used on both peer nodes to create `mlag-peer-port`, and it is used for ICCP, see a network scheme below.
 
-![](./img/multi-chassis-link-aggregation-group-02-984e5ae24f59bc5e9710.webp)Configure bonding interfaces for MLAG on **Peer1** and **Peer2** devices, use a matching `mlag-id` setting on both peer devices, and set the 1-second LACPDU transmission rate:
+![](./img/multi-chassis-link-aggregation-group-02-5e6b3cd03f0f35e24a05.png)Configure bonding interfaces for MLAG on **Peer1** and **Peer2** devices, use a matching `mlag-id` setting on both peer devices, and set the 1-second LACPDU transmission rate:
 
 ```ros
 # Peer1
@@ -216,17 +197,15 @@ add mode=802.3ad name=bond1 slaves=sfp-sfpplus1,sfp-sfpplus2 lacp-rate=1sec
 
 ## MLAG settings and monitoring
 
-This section describes the available MLAG settings and monitoring options.
+There are several MLAG related settings and monitoring options: [`mlag-heartbeat`](https://manual.mikrotik.com/docs/cli-reference/interface/bridge/bridge#mlag-heartbeat), [`mlag-init-delay`](https://manual.mikrotik.com/docs/cli-reference/interface/bridge/bridge#mlag-init-delay), [`mlag-lacp-fallback`](https://manual.mikrotik.com/docs/cli-reference/interface/bridge/bridge#mlag-lacp-fallback), [`mlag-peer-port`](https://manual.mikrotik.com/docs/cli-reference/interface/bridge/bridge#mlag-peer-port), [`mlag-priority`](https://manual.mikrotik.com/docs/cli-reference/interface/bridge/bridge#mlag-priority) from `interface/bridge` menu and [`mlag-id`](https://manual.mikrotik.com/docs/cli-reference/interface/bonding/bonding#mlag-id) from `interface/bonding` menu.
 
-**Sub-menu:** `/interface/bridge`
+By default, MLAG uses the elected primary node's system ID as the shared system ID for both the RSTP bridge ID and the LACP system ID of dual-connected bonds. If the primary node reboots, the remaining secondary node reverts its bonds to its own LACP system IDs (see [`mlag-lacp-fallback`](https://manual.mikrotik.com/docs/cli-reference/interface/bridge/bridge#mlag-lacp-fallback)). The LACP partner must then renegotiate the bond, causing brief packet loss.
 
-| Property | Description |
-| :-- | :-- |
-| **mlag-heartbeat** (*time: 1s..10s \| none*; Default: **00:00:05**) | This setting controls how often heartbeat messages are sent to check the connection between peers. If no heartbeat message is received for three intervals in a row, the peer logs a warning about potential communication problems. If set to `none`, heartbeat messages are not sent at all. |
-| **mlag-peer-port**  (*interface \| bond;*Default: **none**) | An interface that will be used as a peer port. Both peer devices are using inter-chassis communication over these peer ports to establish MLAG and update the host table.  Peer ports can be configured as single Ethernet interfaces or bonding interfaces. However, using a bonding interface is recommended, as it helps prevent a single interface failure from affecting connectivity, especially when both MLAG nodes are still up and running.  It is recommended to keep the untagged VLAN used by the peer ports separate from the rest of your network, either by assigning a dedicated untagged VLAN (using `pvid`), or by setting the peer port to only allow VLAN tagged frames (using `frame-types=admit-only-vlan-tagged`).  All VLANs used for bridge slave ports must also be configured as tagged VLANs for peer-port (in the `/interface/bridge/vlan` table), so that peer-port is a member of those VLANs and can forward data. |
-| **mlag-priority** (*integer: 0..128;*Default: **128**) | This setting changes the priority for selecting the primary MLAG node. A lower number means higher priority. If both MLAG nodes have the same priority, the one with the lowest bridge MAC address will become the primary device. |
+Consider setting `mlag-lacp-fallback=no` to keep the shared MLAG system ID after the peer link is lost, avoiding LACP renegotiation. The primary node must rejoin the cluster to restore the shared system ID.
 
-Use the `/interface/bridge/monitor` commands to see the current MLAG state and active role.
+When a node joins or rejoins the cluster, its dual-connected bond slaves stay out of the 802.3ad bond until the MLAG system ID syncs with the peer. [`mlag-init-delay`](https://manual.mikrotik.com/docs/cli-reference/interface/bridge/bridge#mlag-init-delay) controls how long the slaves stay excluded after reboot, preventing the bond from briefly activating with a local system ID.
+
+Use the `/interface/bridge/monitor` commands to see the current MLAG state and active role. The `mlag-state` field shows `connected` after ICCP is established, `connecting` while the peers establish or re-establish the connection, or an error such as `peer port not running` when the configured peer port is unavailable.
 
 ```ros
  [admin@Peer1] > /interface/bridge/monitor [find name=bridge1]
@@ -243,16 +222,5 @@ Use the `/interface/bridge/monitor` commands to see the current MLAG state and a
              mlag-state: connected               
        mlag-active-role: primary   
 ```
-
-| Property | Description |
-| :-- | :-- |
-| **mlag-state** (*connected \| connecting \| disabled*) | The MLAG state. |
-| **mlag-active-role** (*primary \| secondary*) | The peer with the lowest `priority` will act as the primary device. If the priorities are the same, the peer with the lowest bridge MAC address will become the primary. The `system-id` of the primary device is used for sending the (R/M)STP BPDU bridge identifier and LACP system ID. |
-
-**Sub-menu:** `/interface/bonding`
-
-| Property | Description |
-| :-- | :-- |
-| **mlag-id** (*integer: 0..4294967295*; Default: ) | Changes MLAG ID for bonding interface. The same MLAG ID should be used on both peer devices to successfully create a single LAG for the client device. The `mlag-peer-port` should not be configured with the MLAG ID. |
 
 LACP bonding interface and bonding slave ports can be monitored with `monitor` and `monitor-slaves` commands. See more details on [Bonding monitoring](/docs/high-availability-solutions/bonding#bonding-monitoring).

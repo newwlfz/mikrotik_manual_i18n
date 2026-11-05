@@ -1,20 +1,24 @@
 ---
 sidebar_key: "storage/btrfs/raid"
 sidebar_position: 3
-title: "Btrfs RAID"
-sidebar_label: 'Btrfs RAID'
-description: 'This page provides step-by-step instructions for setting up a Btrfs RAID1 array using two disks in MikroTik RouterOS, covering disk preparation, formatting, adding devices, balancing data, and ensuring consistent RAID profiles.'
+title: "raid"
+sidebar_label: 'raid'
+description: 'This page provides step-by-step instructions for setting up a Btrfs RAID1 array using two disks in RouterOS, covering disk preparation, formatting, adding devices, balancing data, and ensuring consistent RAID profiles.'
 tags:
   - 'btrfs'
   - 'storage'
   - 'raid'
-source: https://manual.mikrotik.com/docs/storage/btrfs/raid
-captured_at: '2026-11-04T11:33:50+08:00'
+source: https://manual.mikrotik.com/docs/7.25/storage/btrfs/raid
+captured_at: '2026-11-04T11:21:36+08:00'
 ---
 
 :::info
 This feature requires the [Storage](/docs/storage/) package.
 :::
+
+# Btrfs RAID
+
+A Btrfs file system can span multiple disks with different *storage profiles* per data kind (`data`, `meta`, `system`). Converting a one-disk file system into RAID1 or RAID10 takes two steps: add the disks with [`add-device`](/docs/cli-reference/disk/btrfs/filesystem/add-device), then convert the profiles with [`balance-start`](/docs/cli-reference/disk/btrfs/filesystem/balance-start) - all without unmounting and without losing data.
 
 ## Two disk Btrfs-RAID (RAID1)
 
@@ -29,7 +33,7 @@ In case you want to create a reliable data storage solution with just two disks 
    :::warning
    In this example, the disks used are going to be called `<disk-name-1>`  and `<disk-name-2>` , make sure you replace these placeholders with your actual disk names!
    :::
-2. Format one of your disks to Btrfs, in this case `<disk-name-1>`.  
+2. Format one of your disks to Btrfs, in this case `<disk-name-1>`. The newly created Btrfs file system is automatically labelled `<disk-name-1>-fs`.  
 
    ```routeros
    /disk/format <disk-name-1> file-system=btrfs
@@ -47,22 +51,23 @@ In case you want to create a reliable data storage solution with just two disks 
 4. Add a label for the Btrfs drive for simplicity.  
 
    ```routeros
-   /disk/btrfs/filesystem/set [find where present-devs=<disk-name-1>] label=BtrfsRAID
+   /disk/btrfs/filesystem/set [find where devs=<disk-name-1>] label=BtrfsRAID
    ```
 
-5. Add a disk to an existing Btrfs disk.  
+5. Add a disk to an existing Btrfs disk. This only adds the disk to the file system - the new disk receives no data yet.  
 
    ```routeros
-   /disk/btrfs/filesystem/add-device [find where present-devs=<disk-name-1>] device=<disk-name-2>
+   /disk/btrfs/filesystem/add-device [find where devs=<disk-name-1>] device=<disk-name-2>
    ```
 
-6. Start the Btrfs balance process to create a Btrfs-RAID with RAID1 configuration.  
+6. Start the Btrfs balance process to convert the file system to RAID1. The balance rewrites every chunk to the new profile on both disks:  
 
    ```routeros
    /disk/btrfs/filesystem/balance-start [find where label=BtrfsRAID] data-profile=raid1 metadata-profile=raid1 system-profile=raid1
    ```
 
-7. **IMPORTANT:** Double check that all Btrfs profiles for the disks match. In this case, you need to make sure that the `data` , `meta`  and `system` profiles are `raid1`.
+   Progress is reported under `balance-status` in `/disk/btrfs/filesystem/print detail`; the finished state is `done`. Cancel a running balance with [`balance-cancel`](/docs/cli-reference/disk/btrfs/filesystem/balance-cancel).
+7. **IMPORTANT:** Double check that all Btrfs profiles for the disks match. In this case, you need to make sure that the `data` , `meta`  and `system` profiles are `raid1` in the `spaces` column.  
 
    ```routeros
    /disk/btrfs/filesystem/print
@@ -148,18 +153,18 @@ In case you want to create a redundant and high capacity RAID10 array using Btrf
 3. Add a label for the Btrfs drive for simplicity:  
 
    ```routeros
-   /disk/btrfs/filesystem/set [find where present-devs=<disk-name-1>] label=BtrfsRAID
+   /disk/btrfs/filesystem/set [find where devs=<disk-name-1>] label=BtrfsRAID
    ```
 
 4. Add other disks to an existing Btrfs disk:  
 
    ```routeros
-   /disk/btrfs/filesystem/add-device [find where present-devs=<disk-name-1>] device=<disk-name-2>
-   /disk/btrfs/filesystem/add-device [find where present-devs=<disk-name-1>] device=<disk-name-3>
-   /disk/btrfs/filesystem/add-device [find where present-devs=<disk-name-1>] device=<disk-name-4>
+   /disk/btrfs/filesystem/add-device [find where devs=<disk-name-1>] device=<disk-name-2>
+   /disk/btrfs/filesystem/add-device [find where devs=<disk-name-1>] device=<disk-name-3>
+   /disk/btrfs/filesystem/add-device [find where devs=<disk-name-1>] device=<disk-name-4>
    ```
 
-5. Start the Btrfs balance process to create a Btrfs-RAID with RAID1 configuration:  
+5. Start the Btrfs balance process to convert the file system to RAID10:  
 
    ```routeros
    /disk/btrfs/filesystem/balance-start [find where label=BtrfsRAID] data-profile=raid10 metadata-profile=raid1c4 system-profile=raid1c4
@@ -192,7 +197,7 @@ In case you want to create a redundant and high capacity RAID10 array using Btrf
 
 8. Your newly created Btrfs-RAID array is now accessible through the `/BtrfsRAID/` folder.
 
-## Replacing a disk in Btrfs RAID array
+## Replacing a disk in a Btrfs RAID array
 
 In case of a disk failure or you need to replace a disk in your existing Btrfs RAID array, then follow the procedure below:
 
@@ -219,10 +224,10 @@ In case of a disk failure or you need to replace a disk in your existing Btrfs R
    #   LABEL      DEV-IDS  DEVS     DEFAULT-SUBVOLUME  SPACES                                     BALANCE-STATUS  UUID                                  W  R  F  C  G
    0 I BtrfsRAID        1  disk1    <FS_ROOT>          disk1:480GB, used:0%                       done            9246dfaa-be9f-4e08-a560-53cb8e82023b  0  0  0  0  0
                         2  missing                     data,raid1:1.07GB disk1:1.07GB, used:0%                                                          0  0  0  0  0
-                                                       data,single:1.07GB, used:0%                                                                                   
-                                                       system,raid1:33.6MB disk1:33.6MB, used:0%                                                                     
-                                                       meta,raid1:1.07GB disk1:1.07GB, used:0%                                                                       
-                                                       global-reserve:3.41MB, used:0%                                                                                
+                                                        data,single:1.07GB, used:0%                                                                                   
+                                                        system,raid1:33.6MB disk1:33.6MB, used:0%                                                                     
+                                                        meta,raid1:1.07GB disk1:1.07GB, used:0%                                                                       
+                                                        global-reserve:3.41MB, used:0%                                                                                
 
    ```
 
@@ -248,6 +253,10 @@ In case of a disk failure or you need to replace a disk in your existing Btrfs R
    :::warning
    Make sure you set the correct `device-to-remove-id` to the `DEV-ID` that you determined previously!
    :::
+
+   :::info
+   [`replace-device`](/docs/cli-reference/disk/btrfs/filesystem/replace-device) works on a missing (ejected) or unmounted device. If the source disk is healthy and still mounted, unmount it first (`/disk/set <disk> mount-filesystem=no`), otherwise the command fails with `could not unmount <disk>`. Track it under `replace-status`; stop it with [`replace-cancel`](/docs/cli-reference/disk/btrfs/filesystem/replace-cancel).
+   :::
 9. Check the replace status and make sure that `REPLACE-STATUS` is marked as `done` .  
 
    ```routeros
@@ -255,11 +264,11 @@ In case of a disk failure or you need to replace a disk in your existing Btrfs R
    Columns: LABEL, DEV-IDS, DEVS, DEFAULT-SUBVOLUME, SPACES, BALANCE-STATUS, REPLACE-STATUS, UUID, WRITE-ERRORS, READ-ERRORS, FLUSH-ERRORS, CORRUPTION-ERRORS, GENERATION-ERRORS
    # LABEL   DEV-IDS  DEVS   DEFAULT-SUBVOLUME  SPACES                                                 BALANCE-STATUS  REPLACE-STATUS  UUID                                  WRITE-ERRORS  READ-ERRORS  F  C  G
    0 BtrfsRAID     1  disk1  <FS_ROOT>          disk1:480GB, used:9%                                   done            done            9246dfaa-be9f-4e08-a560-53cb8e82023b             0            0  0  0  0
-                   2  disk3                     disk3:480GB, used:9%                                                                                                                    0            0  0  0  0
-                                                data,raid1:40.8GB disk1:40.8GB disk3:40.8GB, used:72%                                                                                                          
-                                                system,raid1:101MB disk1:101MB disk3:101MB, used:0%                                                                                                            
-                                                meta,raid1:3.22GB disk1:3.22GB disk3:3.22GB, used:1%                                                                                                           
-                                                global-reserve:30.7MB, used:0%                                                 
+                   2  disk3                     disk3:480GB, used:9%                                                                                                                    0  0  0  0  0
+                                                 data,raid1:40.8GB disk1:40.8GB disk3:40.8GB, used:72%                                                                                                          
+                                                 system,raid1:101MB disk1:101MB disk3:101MB, used:0%                                                                                                            
+                                                 meta,raid1:3.22GB disk1:3.22GB disk3:3.22GB, used:1%                                                                                                           
+                                                 global-reserve:30.7MB, used:0%                                                 
    ```
 
    :::info

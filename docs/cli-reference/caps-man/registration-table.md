@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/caps-man/registration-table"
 sidebar_position: 12
 title: "registration-table"
-source: https://manual.mikrotik.com/docs/cli-reference/caps-man/registration-table
-captured_at: '2026-11-01T21:26:23+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/registration-table
+captured_at: '2026-11-01T21:21:46+08:00'
 ---
 
 -----------

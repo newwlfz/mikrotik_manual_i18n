@@ -6,10 +6,9 @@ sidebar_label: 'MikroTik Hardware Licensing'
 description: 'MikroTik hardware routers running RouterOS come with pre-installed licenses that determine features like tunnel limits and user sessions. License levels range from trial mode to unlimited functionality, with pricing varying by level. Users can view licenses via CLI or management tools and upgrade through prepaid keys or direct purchases tied to device IDs.'
 tags:
   - 'licensing'
-source: https://manual.mikrotik.com/docs/getting-started/routeros-licensing/mikrotik-hardware
-captured_at: '2026-11-04T11:29:10+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/routeros-licensing/mikrotik-hardware
+captured_at: '2026-11-04T11:17:04+08:00'
 ---
-
 ## Licensing Basics
 
 MikroTik hardware routers that run RouterOS come with a license pre-installed. If you have purchased a RouterOS-based device, no additional steps are required.
@@ -26,7 +25,7 @@ Licensing information can be retrieved from the CLI system console:
 [admin@MikroTik] >
 ```
 
-The same information can also be viewed in [WinBox](/docs/management-tools/winbox) or [WebFig](/docs/management-tools/webfig).
+The same information can also be viewed in [WinBox](../../../management-tools/winbox) or [WebFig](../../../management-tools/webfig).
 
 ```text
 [admin@MikroTik] /system/license/print 
@@ -96,13 +95,13 @@ A Prepaid Key is a type of license that can be purchased in advance for MikroTik
 7. Click the **"Place key in the cart"** button.
 8. Click **"Proceed to checkout"** to finalize your purchase.
 
-![Purchase a RouterOS License Key](./img/purchase-prepaid-01.png)
+![Purchase a RouterOS License Key](../x86/img/purchase-prepaid-01.png)
 
 ## Review and Complete Your Purchase
 
 Review your order details carefully, then proceed with payment using either a **Credit Card** (CC) or **PayPal**.
 
-![Purchase a RouterOS License Key](./img/purchase-prepaid_02.png)
+![Purchase a RouterOS License Key](../x86/img/purchase-prepaid_02.png)
 
 Congratulations! You have successfully purchased a RouterOS license key.
 
@@ -130,14 +129,14 @@ Advanced Channels feature provides extended opportunities in wireless interface 
    - Select the desired Prepaid Key from the list.
    - Enter the **Software ID** of the router for which you want to upgrade the license level.
 
-![](./img/convert-prepaid_01.png)
+![](../x86/img/convert-prepaid_01.png)
 
 1. **Generate the License Key.**
 
    - Press "Generate".
    - A confirmation message will appear: "Successfully converted prepaid key to a new licence!".
 
-![](./img/convert-prepaid_02.png)
+![](../x86/img/convert-prepaid_02.png)
 
 1. **Apply the License Key.**
 
@@ -180,4 +179,4 @@ Transferring the device license is not possible.
 
 Covers RouterOS x86 system requirements and installation methods, including USB and Netinstall deployment.
 
-[x86 Installation Guide](https://manual.mikrotik.com/docs/installation-and-upgrade/install/x86-installation)
+[x86 Installation Guide](../../installation-and-upgrade/install/x86-installation)

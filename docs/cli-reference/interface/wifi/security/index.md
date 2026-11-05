@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wifi/security/index"
 sidebar_position: 1
 title: "security"
 sidebar_label: 'security'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/security
-captured_at: '2026-11-01T21:27:53+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wifi/security
+captured_at: '2026-11-01T21:23:18+08:00'
 ---
 
 -----------

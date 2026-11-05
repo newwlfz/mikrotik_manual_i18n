@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/filter/filter-wizard"
 sidebar_position: 5
 title: "filter-wizard"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/filter/filter-wizard
-captured_at: '2026-11-01T21:29:30+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/filter/filter-wizard
+captured_at: '2026-11-01T21:25:09+08:00'
 ---
 
 -----------

@@ -8,94 +8,23 @@ tags:
   - 'l2tp'
   - 'ppp'
   - 'ipsec'
-source: https://manual.mikrotik.com/docs/virtual-private-networks/l2tp
-captured_at: '2026-11-04T11:34:37+08:00'
+source: https://manual.mikrotik.com/docs/7.25/virtual-private-networks/l2tp
+captured_at: '2026-11-04T11:23:15+08:00'
 ---
 
 This section covers L2TP examples. Use it to configure LAC and LNS scenarios and related L2TP interoperability cases.
 
-<DocCardList />
-
-Layer Two Tunneling Protocol "L2TP" extends the PPP model by allowing the L2 and PPP endpoints to reside on different devices interconnected by a packet-switched network.  L2TP includes PPP authentication and accounting for each L2TP connection. Full authentication and accounting of each connection may be done through a RADIUS client or locally. L2TP traffic uses UDP protocol for both control and data packets. UDP port 1701 is used only for link establishment, further traffic is using any available UDP port (which may or may not be 1701). This means that L2TP can be used with most firewalls and routers (even with NAT) by enabling UDP traffic to be routed through the firewall or router.  The L2TP standard is defined in [RFC 2661](https://tools.ietf.org/html/rfc2661). The L2TPv3 support was added in version 7.1. It supports IPv4 and IPv6.
+Layer Two Tunneling Protocol "L2TP" extends the PPP model by allowing the L2 and PPP endpoints to reside on different devices interconnected by a packet-switched network. L2TP includes PPP authentication and accounting for each L2TP connection. Full authentication and accounting of each connection may be done through a RADIUS client or locally. L2TP traffic uses the UDP protocol for both control and data packets. UDP port 1701 is used only for link establishment, further traffic uses any available UDP port (which can be different from 1701). This means that L2TP can be used with most firewalls and routers (even with NAT) by allowing UDP traffic through the firewall or router. The L2TP standard is defined in [RFC 2661](https://tools.ietf.org/html/rfc2661). L2TPv3 support was added in version 7.1. It supports IPv4 and IPv6.
 
 ## Introduction
 
-It may be useful to use L2TP just as any other tunneling protocol with or without encryption. The L2TP standard says that the most secure way to encrypt data is using L2TP over IPsec (Note that it is the default mode for the Microsoft L2TP client) as all L2TP control and data packets for a particular tunnel appear as homogeneous UDP/IP data packets to the IPsec system.
+L2TP can be used as any other tunneling protocol with or without encryption. The L2TP standard says that the most secure way to encrypt data is with L2TP over IPsec (this is the default mode for the Microsoft L2TP client), as all L2TP control and data packets for a particular tunnel appear as homogeneous UDP/IP data packets to the IPsec system.
 
-Multilink PPP (MP) is supported in order to provide MRRU (the ability to transmit full-sized 1500 and larger packets) and bridging over PPP links (using Bridge Control Protocol (BCP) that allows sending raw Ethernet frames over PPP links). This way it is possible to set up bridging without EoIP. The bridge should either have an administratively set MAC address or an Ethernet-like interface in it, as PPP links do not have MAC addresses.
+Multilink PPP (MP) is supported to provide MRRU (the ability to transmit full-sized 1500 and larger packets) and bridging over PPP links with Bridge Control Protocol (BCP), which allows sending raw Ethernet frames over PPP links. This allows setting up bridging without EoIP. The bridge should either have an administratively set MAC address or an Ethernet-like interface in it, as PPP links do not have MAC addresses.
 
 :::warning
 L2TP does not provide encryption mechanisms for tunneled traffic. IPsec can be used for additional security layers.
 :::
-
-## L2TP Client
-
-### Properties
-
-| Property | Description |
-| :-- | :-- |
-| **add-default-route** (*yes \| no*; Default: **no**) | Whether to add L2TP remote address as a default route. |
-| **allow** (*mschap2 \| mschap1 \| chap \| pap*; Default: **mschap2, mschap1, chap, pap**) | Allowed authentication methods. |
-| **connect-to** (*IP\|IPv6*; Default: ) | Remote address of L2TP server (if the address is in the VRF table,  VRF should be specified)  `/interface/l2tp-client``add connect-to=192.168.88.1@vrf1 name=l2tp-out1 user=l2tp-client)`    |
-| **comment** (*string*; Default: ) | Short description of the tunnel. |
-| **default-route-distance** (*byte*; Default: ) | Since v6.2, sets distance value applied to the auto-created default route, if add-default-route is also selected |
-| **dial-on-demand** (*yes \| no*; Default: **no**) | Connects only when outbound traffic is generated. If selected, then a route with gateway address from 10.112.112.0/24 network will be added while the connection is not established. |
-| **disabled** (*yes \| no*; Default: **yes**) | Enables/disables the tunnel. |
-| **keepalive-timeout** (*integer [1..4294967295]*; Default: **60s**) | Since v6.0rc13, tunnel keepalive timeout in seconds. |
-| **max-mru** (*integer*; Default: **1450**) | Maximum Receive Unit. Max packet size that L2TP interface will be able to receive without packet fragmentation. |
-| **max-mtu** (*integer*; Default: **1450**) | Maximum Transmission Unit. Max packet size that L2TP interface will be able to send without packet fragmentation. |
-| **mrru** (*disabled \| integer*; Default: **disabled**) | Maximum packet size that can be received on the link. If a packet is bigger than tunnel MTU, it will be split into multiple packets, allowing full size IP or Ethernet packets to be sent over the tunnel. |
-| **name** (*string*; Default: ) | Descriptive name of the interface. |
-| **password** (*string*; Default: **""**) *[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | Password used for authentication. |
-| **profile** (*name*; Default: **default-encryption**) | Specifies which PPP profile configuration will be used when establishing the tunnel. |
-| **user** (*string*; Default: ) | User name used for authentication. |
-| **use-ipsec** (*yes \| no*; Default: **no**) | When this option is enabled, dynamic IPSec peer configuration and policy (transport mode) is added to encapsulate the L2TP connection into an IPSec tunnel. **Caution:** Multiple L2tp/ipsec clients behind the same NAT will not work in this mode. To achieve such a scenario, disable use-ipsec and set static policies for clients with enabled tunnel=yes, level=unique settings.     |
-| **allow-fast-path** (*yes \| no*; Default: ) | Allows forwarding packets without additional processing in the Linux kernel. |
-| **l2tp-proto-version** ( l2tpv2 *\| l2tpv3-ip \| l2tpv3-udp \| l2tpv3*; Default:  **l2tpv2** ) | Specifies the protocol version. |
-| **l2tpv3-cookie-length** ( 0 *\| 4-bytes \| 8-bytes* ; Default:  **0** ) | Configures an L2TPv3 pseudowire static session cookie. |
-| **l2tpv3-digest-hash** (*md5 \| none \| sha1* ; Default: **md5** ) | Specifies which hash function to be used. |
-| **use-peer-dns** (*yes \| no \| exclusively*; Default:  **no**  ) | Uses peer DNS. |
-| **copy-from** | Copies a created peer. |
-| **src-address** | Specifies the source address. |
-| **l2tpv3-circuit-id** | Sets the virtual circuit identifier to bind one end of the L2TPv3 control channel. |
-| **ipsec-secret** (*string*; Default: ) *[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | Preshared key used when use-ipsec is enabled. |
-
-## L2TP Server
-
-An interface is created for each tunnel that is established to the given server. There are two types of interfaces in the L2TP server's configuration:
-
-- Static interfaces are added administratively if there is a need to reference the particular interface name (in firewall rules or elsewhere) created for the particular user.
-- Dynamic interfaces are added to this list automatically whenever a user is connected and its username does not match any existing static entry (or in case the entry is active already, as there cannot be two separate tunnel interfaces referenced by the same name).
-
-Dynamic interfaces appear when a user connects and disappear once the user disconnects, so it is impossible to reference the tunnel created for that user in the router configuration (for example, in the firewall), so if you need persistent rules for that user, create a static entry for him/her. Otherwise, it is safe to use a dynamic configuration.
-
-:::warning
-In both cases PPP users must be configured properly - static entries do not replace PPP configuration.
-:::
-
-### Properties
-
-| Property | Description |
-| :-- | :-- |
-| **authentication** (*pap \| chap \| mschap1 \| mschap2*; Default: **mschap1,mschap2**) | Authentication methods that the server will accept. |
-| **default-profile** (*name*; Default: **default-encryption**) | default profile to use |
-| **enabled** (*yes \| no*; Default: **no**) | Defines whether the L2TP server is enabled or not. |
-| **max-mru** (*integer*; Default: **1450**) | Maximum Receive Unit. Max packet size that L2TP interface will be able to receive without packet fragmentation. |
-| **keepalive-timeout** (*integer*; Default: **30**) | If the server during keepalive-timeout period does not receive any packets, it will send keepalive packets every second, five times. If the server still does not receive any response from the client, then the client will be disconnected after 5 seconds. Logs will show 5x "LCP missed echo reply" messages and then disconnect. |
-| **max-mtu** (*integer*; Default: **1450**) | Maximum Transmission Unit. Max packet size that L2TP interface will be able to send without packet fragmentation. |
-| **use-ipsec** (*no \| yes \| require*; Default: **no**) | When this option is enabled, dynamic IPSec peer configuration is added to suit most of the L2TP road-warrior setups. When require is selected, the server will accept only those L2TP connection attempts that were encapsulated in the IPSec tunnel. |
-| **ipsec-secret** (*string*; Default: ) *[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | Preshared key used when use-ipsec is enabled |
-| **accept-proto-version** ( all *\|* l2tpv2 *\|* l2tpv3; Default: **all** ) cli-only | Specify protocol version. |
-| **accept-pseudowire-type** ( all *\|* ether *\|* ppp; Default: **all** ) | Set the pseudowire signaling protocol for a specific pseudowire type. |
-| **allow-fast-path** (*no \| yes*; Default: **no** ) | To forward packets without additional processing in the Linux kernel. |
-| **caller-id-type** ( ip-address *\|* number; Default: **ip-address**) | If the same source IP address is used for multiple clients, set the id type to number. |
-| **max-sessions** ( unlimited / number; Default: **unlimited** ) | Set the number of needed sessions. |
-| **one-session-per-host**( *no \| yes*; Default: **no** ) | To allow one session per host. |
-| **l2tpv3-circuit-id** (Default: ) | Set the virtual circuit identifier to bind one end of the L2TPv3 control channel. |
-| **l2tpv3-cookie-length** (0 *\|* 4-bytes *\|* 8-bytes; Default: **0** ) | Configures an L2TP pseudowire static session cookie. |
-| **l2tpv3-digest-hash** ( md5 *\|* none *\|* sha1; Default: **md5** ) | Specifies which hash function to use. |
-| **l2tpv3-ether-interface-list** (Default: ) | Set your interface list for example the default ones- all, dynamic, none, static. |
-| **mrru** (*disabled \| integer*; Default: **disabled**) | Maximum packet size that can be received on the link. If a packet is bigger than tunnel MTU, it will be split into multiple packets, allowing full size IP or Ethernet packets to be sent over the tunnel. |
 
 ## Quick Example
 
@@ -103,7 +32,7 @@ In both cases PPP users must be configured properly - static entries do not repl
 
 ### L2TP Server
 
-On the server side we will enable L2TP-server and create a PPP profile for a particular user:
+On the server side, enable L2TP-server and create a PPP profile for a particular user:
 
 ```ros
 [admin@MikroTik] > /interface/l2tp-server/server/set enabled=yes
@@ -112,7 +41,7 @@ On the server side we will enable L2TP-server and create a PPP profile for a par
 
 ### L2TP Client
 
-L2TP client setup in RouterOS is very simple.  In the following example, we already have a preconfigured 3 unit setup. We will take a more detailed look at how to set up an L2TP client with username "MT-User", password "StrongPass" and server 192.168.51.3:
+This example configures an L2TP client with username "MT-User", password "StrongPass" and server 192.168.51.3:
 
 ```ros
 [admin@MikroTik] > /interface/l2tp-client \
@@ -126,45 +55,86 @@ allow-fast-path=no add-default-route=no dial-on-demand=no allow=pap,chap,mschap1
 
 ## L2TP Ether
 
-## Overview
+### Overview
 
-Layer 2 Tunnel Protocol Version 3 (L2TPv3) is defined by [RFC 3931](https://tools.ietf.org/html/rfc3931) from the Internet Engineering Task Force (IETF). It introduces various improvements to the original L2TP, allowing the encapsulation of Layer 2 (L2) payloads within L2TP. More precisely, L2TPv3 outlines the protocol for tunnelling Layer 2 payloads across an IP core network using L2 virtual private networks (VPNs).
+Layer 2 Tunnel Protocol Version 3 (L2TPv3) is defined by [RFC 3931](https://tools.ietf.org/html/rfc3931) from the Internet Engineering Task Force (IETF). It introduces various improvements to the original L2TP, allowing the encapsulation of Layer 2 (L2) payloads within L2TP for use in L2 virtual private networks (VPNs). An L2TP Ether tunnel transports raw Ethernet frames (an Ethernet pseudowire, Pseudowire-Type 5) between two endpoints.
 
-To establish an **L2TP Ether** tunnel, the **L2TP Ether interface** must be created on the **client side**, while the **L2TP server** must be enabled on the **remote (server) side**. Once both sides are configured correctly, a **dynamic interface** is automatically created between them, forming a transparent Layer 2 connection across the IP network.
+To establish an L2TP Ether tunnel, the L2TP Ether interface must be created on the client side, while the L2TP server must be enabled on the remote (server) side. Once both sides are configured correctly, a dynamic interface is automatically created between them, forming a transparent Layer 2 connection across the IP network.
 
----
+L2TP Ether can encapsulate over UDP (`l2tp-proto-version=l2tpv3-udp`, the default) or directly over IP (`l2tp-proto-version=l2tpv3-ip`). Both IPv4 and IPv6 overlay networks are supported; `connect-to` accepts either an IPv4 or an IPv6 address.
 
-##### **Server Side (L2TP Server)**
+### Topology and roles
 
-`/interface/l2tp-server/server/set enabled=yes`
+An L2TP Ether tunnel has two distinct roles:
 
-##### **Client Side (L2TP Ether Interface)**
+- **Active (client) side** — you create an `/interface/l2tp-ether` entry with `connect-to=` pointing at the server. This side initiates the L2TPv3 control connection and the Ethernet session.
+- **Passive (server) side** — you only enable the L2TP server (`/interface/l2tp-server/server`). When the active side connects, RouterOS **automatically creates a dynamic** `l2tp-ether` interface (flag `D`) on the server; you do not configure one by hand there.
 
-`/interface/l2tp-ether/add` connect-to=1.1.1.1 disabled=no
+Typically you add both interfaces to a bridge so the two sites share a Layer 2 domain.
 
-## Properties
+### Configuration Example
 
-| Property | Description |
-| :-- | :-- |
-| **connect-to** ( *IP*; Default: ) | Remote address of L2TP server.  |
-| **comment** ( *string*; Default: ) | Short description of the tunnel. |
-| **disabled** ( *yes \| no*; Default: **yes**) | Enables/disables tunnel. |
-| **mac-address** ( string; Default: **auto**) | Set desired mac address of interface. |
-| **unmanaged-mode** ( *yes \| no*; Default: **no**) | Sets unmanaged mode active. The configuration for additional settings will be possible, such as: **peer-cookie, send-cookie, local-tunnel-id, local-session-id, remote-tunnel-id, remote-session-id, local-address.** |
-| **local-tunnel-id ( string; Default: disabled)** | Sets the value for local-tunnel-id; an integer is required. |
-| **local-session-id ( string; Default: disabled)** | Sets the value for local-session-id; an integer is required. |
-| **remote-tunnel-id (** string; Default: **disabled)** | Sets the value for remote-tunnel-id; an integer is required. |
-| **remote-session-id (** string; Default: **disabled)** | Sets the value for remote-session-id; an integer is required. |
-| **peer-cookie (** string; Default: **disabled)** | Sets optional peer cookie. To enable the cookie, enter the remote cookie value (8 or 16 character hex string value expected); to disable, leave empty. |
-| **send-cookie (** string; Default: **disabled)** | Sets optional cookie. To enable the cookie, enter the remote cookie value (8 or 16 character hex string value expected); to disable, leave empty. |
-| **mtu** (*auto*; Default: **1420**) | Maximum Transmission Unit. Max packet size that L2TP interface will be able to send without packet fragmentation. |
-| **name** (*string*; Default: ) | Descriptive name of the interface. |
-| **local-address** (*IP address*; Default: ) | Set local address for **unmanaged** mode. |
-| **use-ipsec** (*yes \| no*; Default: **no**) | When this option is enabled, dynamic IPSec peer configuration and policy are added to encapsulate L2TP connection into IPSec tunnel. |
-| **allow-fast-path** (*yes \| no*; Default: **no** ) | Allows forwarding packets without additional processing in the Linux kernel. |
-| **l2tp-proto-version** ( *l2tpv3-ip \| l2tpv3-udp* ; Default: ***l2tpv3-udp***) | Specifies protocol version. |
-| **cookie-length** ( 0 *\| 4-bytes \| 8-bytes* ; Default:  **0** ) | Configures an L2TPv3 pseudowire static session cookie. |
-| **digest-hash** (*md5 \| none \| sha1* ; Default: **md5** ) | Specifies which hash function to be used. |
-| **use-l2-specific-sublayer** ( *yes \| no*; Default: **no**) | Enables L2TPv3 ethernet pseudowire level 2 default sublayer. |
-| **circuit-id** | Sets the virtual circuit identifier to bind one end of the L2TPv3 control channel. This works as an identifier for each redundant pseudowire. |
-| **ipsec-secret** (*string*; Default: ) *[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | Preshared key used when use-ipsec is enabled. |
+This example establishes an L2TP Ether tunnel between two routers.
+
+#### Server Side (L2TP Server)
+
+```ros
+/interface/l2tp-server/server/set enabled=yes
+```
+
+#### Client Side (L2TP Ether Interface)
+
+```ros
+/interface/l2tp-ether/add connect-to=1.1.1.1 disabled=no
+```
+
+Verify the session on the active side (example output):
+
+```ros
+[admin@MikroTik] > /interface/l2tp-ether/print
+Flags: X - disabled, R - running, D - dynamic, u - unmanaged 
+ 0 R name="l2tp-ether1" mac-address=02:3D:2B:00:00:00 connect-to=1.1.1.1 ...
+```
+
+On the passive side, a **dynamic** interface (flag `D`) appears automatically once the tunnel is up (example output):
+
+```ros
+[admin@MikroTik] > /interface/l2tp-ether/print
+Flags: X - disabled, R - running, D - dynamic, u - unmanaged 
+ 0 DR name="l2tp-ether1" mac-address=02:3D:2B:00:00:01 connect-to=0.0.0.0 ...
+```
+
+### Server-side session acceptance
+
+Whether the server accepts an incoming Ethernet session is controlled by the L2TP server settings in `/interface/l2tp-server/server`. See the [CLI reference](/docs/cli-reference/interface/l2tp-server/server) for the full property list.
+
+| Setting | What it controls |
+|---|---|
+| `max-sessions` | Maximum number of concurrent L2TP sessions on the server. Once the limit is reached, the server rejects new sessions. |
+| `accept-proto-version` | Which L2TP protocol versions to accept (`all`, `l2tpv2`, `l2tpv3`). |
+| `accept-pseudowire-type` | Which pseudowire types to accept (`all`, `ether`, `ppp`). This must allow `ether` for an L2TP Ether tunnel. |
+| `l2tpv3-ether-interface-list` | The interface list the dynamic Ethernet pseudowire endpoints are attached to. |
+| `l2tpv3-circuit-id` | The L2TPv3 circuit identifier the server uses for incoming sessions. |
+| `l2tpv3-cookie-length` | The L2TPv3 cookie length the server advertises. |
+| `l2tpv3-digest-hash` | The L2TPv3 digest hash algorithm the server uses. |
+
+### Matching circuit-id and cookies
+
+When the server sets `l2tpv3-circuit-id`, `l2tpv3-cookie-length` or `l2tpv3-digest-hash`, corresponding values are expected on the client-side `l2tp-ether` entry (`circuit-id`, `cookie-length`, `digest-hash`). If these do not align, the session may fail even though the control connection comes up — check that both ends agree. See the [L2TP Ether CLI reference](/docs/cli-reference/interface/l2tp-ether/) for the client-side properties.
+
+### Verify and troubleshoot
+
+If the L2TP control connection comes up but the Ethernet session is immediately torn down, the tunnel will not work even though the transport appears healthy.
+
+| Symptom | Likely cause | Check |
+|---|---|---|
+| Log shows `maximum session count reached`, then CDN (`Result-Code=4`) and the tunnel disconnects | Session rejected when the server session limit is reached — a common cause to check, not a guaranteed diagnosis | Confirm `max-sessions` on `/interface/l2tp-server/server` is not limiting new sessions |
+| Session rejected, no dynamic interface on the server | Pseudowire or protocol type not accepted | `accept-pseudowire-type` should allow `ether`; `accept-proto-version` should allow `l2tpv3` |
+| No dynamic interface on the passive side | The interface list does not cover the tunnel endpoint | Review `l2tpv3-ether-interface-list` |
+| Session establishes but no traffic passes | `circuit-id` / `cookie-length` / `digest-hash` not aligned between client and server | Compare the `l2tp-ether` and `l2tp-server` settings |
+
+Inspect a live session at any time with the [monitor](/docs/cli-reference/interface/l2tp-ether/monitor) command:
+
+```ros
+/interface/l2tp-ether/monitor l2tp-ether1
+```

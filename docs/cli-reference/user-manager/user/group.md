@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/user-manager/user/group"
 sidebar_position: 3
 title: "group"
 sidebar_label: 'group'
-source: https://manual.mikrotik.com/docs/cli-reference/user-manager/user/group
-captured_at: '2026-11-01T21:30:34+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/user/group
+captured_at: '2026-11-01T21:26:12+08:00'
 ---
 
 -----------

@@ -8,8 +8,8 @@ tags:
   - 'system-resource'
   - 'cpu'
   - 'hardware'
-source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/resource
-captured_at: '2026-11-04T11:28:01+08:00'
+source: https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/resource
+captured_at: '2026-11-04T11:15:25+08:00'
 ---
 
 ### General
@@ -23,9 +23,9 @@ It also has several sub-menus for more detailed hardware statistics like CPU, IR
 ```ros
 [admin@MikroTik] > /system/resource/print 
                    uptime: 29s
-                  version: 7.11.2 (stable)
+                  version: 7.24rc2
                build-time: 2023-08-31 13:55:47
-         factory-software: 7.6
+          minimum-version: 7.6
               free-memory: 94.2MiB
              total-memory: 224.0MiB
                       cpu: ARM
@@ -55,7 +55,7 @@ All properties are read-only
 | **cpu-count** (*integer*) | Number of CPUs present on the system. Each core is a separate CPU, Intel HT is also a separate CPU. |
 | **cpu-frequency** (*string*) | Current CPU frequency |
 | **cpu-load** (*percent*) | Percentage of used CPU resources. Combines all CPUs. Per-core CPU usage can be seen in [CPU submenu](#cpu) |
-| **factory-software**(*string*) | Minimal RouterOS version |
+| **minimum-version**(*string*) | Minimum RouterOS version (was 'factory-software') |
 | **free-hdd-space** (*string*) | Free space on hard drive or NAND |
 | **free-memory** (*string*) | The unused amount of RAM |
 | **platform** (*string*) | Platform name |

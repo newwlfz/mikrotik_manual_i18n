@@ -7,8 +7,8 @@ description: 'This page describes the Virtual Router Redundancy Protocol (VRRP) 
 tags:
   - 'vrrp'
   - 'routing-redundancy'
-source: https://manual.mikrotik.com/docs/high-availability-solutions/vrrp
-captured_at: '2026-11-04T11:29:58+08:00'
+source: https://manual.mikrotik.com/docs/7.25/high-availability-solutions/vrrp
+captured_at: '2026-11-04T11:17:49+08:00'
 ---
 
 ## Summary
@@ -87,7 +87,7 @@ VR must contain at least one Backup router. A backup router must be configured w
 
 ### Virtual Address
 
-![](./img/image-8599472e.webp)
+![](./img/image.webp)
 
 The Virtual IP associated with VR must be identical and set on all VR nodes. All virtual and real addresses should be from the same network.
 
@@ -207,6 +207,29 @@ If multiple VRRP interfaces are configured between two units and `sync-connectio
 
 :::
 
+Example `connection-tracking-mode` configuration:
+```
+R1
+/interface/vrrp
+add connection-tracking-mode=active-active connection-tracking-port=8275 interface=ether1 name=vrrp30 priority=100 sync-connection-tracking=yes vrid=1
+add connection-tracking-mode=active-active connection-tracking-port=8276 interface=ether1 name=vrrp40 priority=100 sync-connection-tracking=yes vrid=2
+
+R2
+/interface/vrrp
+add connection-tracking-mode=active-active connection-tracking-port=8275 interface=ether1 name=vrrp30 priority=55 sync-connection-tracking=yes vrid=1
+add connection-tracking-mode=active-active connection-tracking-port=8276 interface=ether1 name=vrrp40 priority=155 sync-connection-tracking=yes vrid=2
+```
+
+`group-authority` configuration example:
+
+VRRP instances run on LAN and WAN networks with NAT between them. If one VRRP instance is Master and the other is Backup on the same device, the entire network malfunctions due to NAT failure. Grouping LAN and WAN VRRP interfaces ensures that both are either VRRP Master or Backup. In a VRRP group, VRRP advertisements are sent only by the group authority. In a typical WAN+LAN setup, you should use the LAN network as the group authority to keep VRRP control traffic in the internal network.
+```
+/interface/vrrp
+add name=vrrp-wan interface=sfp-sfpplus1 vrid=1 priority=100
+add name=vrrp-lan interface=bridge1 vrid=2 priority=100
+set [find] group-authority=vrrp-lan
+```
+
 ## Configuring VRRP
 
 ### IPv4
@@ -245,49 +268,3 @@ Now when the VRRP interface is set, we can add a global address and enable ND ad
 ```
 
 No additional address configuration is required as it is in the IPv4 case. IPv6 uses link-local addresses to communicate between nodes.
-
-## Parameters
-
-VRRP interface parameters.
-
-**Sub-menu:** `/interface/vrrp`
-
-##### Writable settings
-
-| Property | Description |
-| :-- | :-- |
-| **arp** (*disabled \| enabled \| proxy-arp \| reply-only*; Default: **enabled**) | ARP resolution protocol mode. |
-| **arp-timeout**(*integer;* Default: **auto**) | How long the ARP record is kept in the ARP table after no packets are received from IP. Value `auto` equals the value of `arp-timeout` in IP/Settings, default is 3. |
-| **authentication** (*ah \| none \| simple*; Default: **none**) | Authentication method to use for VRRP advertisement packets.- `none` - Use only in low-security networks, for example, two VRRP nodes on a LAN.- `ah` - IP Authentication Header. This algorithm provides strong protection against configuration errors, replay attacks, and packet corruption or modification. You should use it when you have limited control over the administration of nodes on a LAN. HMAC-MD5 is used.- `simple` - Uses a clear-text password. Protects against accidental misconfiguration of routers on a local network. |
-| **comment** (*string*; Default: ) | Short description of the interface. |
-| **connection-tracking-mode** (*active-active \| passive-active*; Default: **passive-active**) | Specifies the mode for connection tracking synchronization. This setting is relevant only when `sync-connection-tracking=yes` is enabled.- `passive-active` - Use this mode for traditional VRRP setups, where one master and one or more backup routers are used. In this mode, only the master device performs connection tracking synchronization by sending updates to the backup devices. Backup devices do not send connection tracking data.- `active-active` - Use this mode for setups with multiple VRRP groups to achieve load balancing. Each VRRP group has its own master, and these masters can reside on different physical devices. With `active-active` mode, all active masters can synchronize connection tracking data with each other. Each VRRP group in active-active mode must use a **unique** `connection-tracking-port` value. Reusing the same port across multiple groups can cause a non-synchronized connection tracking table.**Important:** Using multiple VRRP groups with `passive-active` mode can lead to unsynchronized connection tracking tables because only one master handles synchronization, and the others do not exchange tracking data.Example configuration:<pre><code>R1`/interface/vrrp`add connection-tracking-mode=active-active connection-tracking-port=8275 interface=ether1 name=vrrp30 priority=100 sync-connection-tracking=yes vrid=1add connection-tracking-mode=active-active connection-tracking-port=8276 interface=ether1 name=vrrp40 priority=100 sync-connection-tracking=yes vrid=2R2`/interface/vrrp`add connection-tracking-mode=active-active connection-tracking-port=8275 interface=ether1 name=vrrp30 priority=55 sync-connection-tracking=yes vrid=1add connection-tracking-mode=active-active connection-tracking-port=8276 interface=ether1 name=vrrp40 priority=155 sync-connection-tracking=yes vrid=2</code></pre> |
-| **connection-tracking-port** (*integer;* Default: **8275**) | Specifies UDP port for connection tracking synchronization. This setting is only relevant when `sync-connection-tracking=yes` is enabled. |
-| **group-authority** (*none \| self \| vrrp-interface;* Default: **none**) | Allows multiple VRRP interfaces to be grouped so they share the same VRRP state. Within a group, a single group authority interface is selected. It controls the state of the other group members and is the only interface that sends VRRP advertisements. When the group-authority VRRP interface transitions to the backup state, all group members also transition to the backup state. If a failure is detected on any group member, for example due to a link-down on its parent interface, all group members transition to the failure state.- `none` - The VRRP interface is not grouped and operates independently, with its own VRRP state machine.- `self` - The VRRP interface acts as the group authority. It controls the state machines of other grouped VRRP interfaces and is responsible for sending and receiving VRRP advertisements.- `vrrp-interface` - The VRRP interface is a group member. Its state machine follows the state of the specified VRRP interface.For example, VRRP instances run on LAN and WAN networks with NAT between them. If one VRRP instance is Master and the other is Backup on the same device, the entire network malfunctions due to NAT failure. Grouping LAN and WAN VRRP interfaces ensures that both are either VRRP Master or Backup. In a VRRP group, VRRP advertisements are sent only by the group authority. In a typical WAN+LAN setup, you should use the LAN network as the group authority to keep VRRP control traffic in the internal network.<pre><code>`/interface/vrrp`add name=vrrp-wan interface=sfp-sfpplus1 vrid=1 priority=100add name=vrrp-lan interface=bridge1 vrid=2 priority=100set [find] group-authority=vrrp-lan</code></pre> |
-| **interface** (*string*; Default: ) | Interface name on which VRRP instance will be running. |
-| **interval** (*time [10ms..4m15s]*; Default: **1s**) | The VRRP interval defines how often the VRRP master router sends Advertisement packets to backup routers. This interval directly determines the frequency at which backups receive keepalive information confirming that the master is operational.A shorter interval increases the rate of Advertisement packets, allowing faster detection of master failure, but also increases sensitivity to packet loss, processing delays, and timer inaccuracies. Longer intervals reduce control traffic and improve stability, at the cost of slower failover detection. The Master Down interval is derived from the configured VRRP interval and the router's priority, and is calculated to allow multiple missed Advertisements before triggering failover.**Warning:** Configuring VRRP intervals below 1 second can lead to unpredictable behavior and unintended master role changes. |
-| **mtu** (*read-only*; Default: ) | Layer3 MTU size. Since RouterOS v7.7, the VRRP interface always uses slave interface MTU. |
-| **name** (*string*; Default: ) | VRRP interface name. |
-| **on-backup** (*string*; Default: ) | Script to execute when the node is switched to the backup state. |
-| **on-master** (*string*; Default: ) | Script to execute when the node is switched to the master state. |
-| **on-fail** (*string*; Default: ) | Script to execute when the node fails. |
-| **password** (*string*; Default: ) *[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | Password required for authentication. Can be ignored if authentication is not used. |
-| **preemption-mode** (*yes \| no*; Default: **yes**) | Whether the master node always has the priority. When set to 'no' the backup node will not be elected to be a master until the current master fails, even if the backup node has higher priority than the current master. This setting is ignored if the owner router becomes available. |
-| **priority** (*integer: 1..254*; Default: **100**) | Priority of VRRP node used in Master election algorithm. A higher number means higher priority. '255' is reserved for the router that owns the VR IP and '0' is reserved for the Master router to indicate that it is releasing responsibility. |
-| **remote-address** (*IPv4;* Default: ) | Specifies the remote address of the other VRRP router for connection tracking synchronization. If not set, the system autodetects the remote address through VRRP. The remote address is used only if `sync-connection-tracking=yes`. Explicitly setting a remote address has the following benefits:- Connection tracking synchronization starts faster because there is no need to wait for VRRP's initial message exchange to detect the remote address.- VRRP Master election is faster.- Connection tracking data can be sent through a different network interface, for example, a dedicated secure line between two routers.Sync connection tracking uses UDP port 8275. |
-| **v3-checksum-as-v2** (*yes \| no*; Default: **no**) | Controls whether the VRRPv3 IPv4 checksum is calculated with or without the IPv4 pseudoheader.Different vendors interpret RFC 5798 section 5.2.8 differently regarding the pseudoheader in IPv4 checksum calculation. Linux-based implementations (including FRR) include the pseudoheader for both IPv4 and IPv6, while Cisco includes it only for IPv6.- `no` (default) - Include the IPv4 pseudoheader in the checksum calculation. Compatible with other Linux-based VRRPv3 implementations.- `yes` - Exclude the IPv4 pseudoheader from the checksum calculation. Use this setting for compatibility with Cisco and other vendors that do not include the pseudoheader for IPv4.This setting applies only to VRRPv3 with IPv4. It has no effect on VRRPv3 IPv6 or VRRPv2.**Important:** All VRRP routers in the same Virtual Router must use the same value for this setting. Mismatched values will cause "bad checksum" errors and VRRP advertisement packets will be discarded. |
-| **v3-protocol** (*ipv4 \| ipv6*; Default: **ipv4**) | A protocol that will be used by VRRPv3. Valid only if the **version** is 3. |
-| **version** (*integer [2, 3]*; Default: **3**) | Which VRRP version to use. |
-| **vrid** (*integer: 1..255*; Default: **1**) | Virtual Router identifier. Each Virtual router must have a unique id number. |
-| **sync-connection-tracking**(*string*; Default: **no**) | Synchronize connection tracking entries from Master to Backup device. The VRRP connection tracking synchronization requires that RouterOS [connection tracking](/docs/firewall-and-quality-of-service/connection-tracking) is running. |
-
-##### Read-only flags
-
-| Property | Description |
-| :-- | :-- |
-| **backup** | The VRRP interface is in the backup state. |
-| **disabled** | The VRRP interface is disabled by the user. |
-| **failure** | The VRRP interface is in the failure state, for example due to a link-down on its parent interface. |
-| **grp-authority** | The VRRP interface is `group-authority`. It controls the state of the other group members and is the only interface that sends VRRP advertisements. |
-| **grp-member** | The VRRP interface is a group member. Its state machine follows the state of the specified `group-authority` interface. |
-| **invalid** | The VRRP interface is in the invalid state, for example due to a configuration error. |
-| **master** | The VRRP interface is in the master state. |

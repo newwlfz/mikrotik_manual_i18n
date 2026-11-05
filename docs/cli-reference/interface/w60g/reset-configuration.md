@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/w60g/reset-configuration"
 sidebar_position: 4
 title: "reset-configuration"
 sidebar_label: 'reset-configuration'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/w60g/reset-configuration
-captured_at: '2026-11-01T21:27:43+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/w60g/reset-configuration
+captured_at: '2026-11-01T21:23:07+08:00'
 ---
 
 -----------

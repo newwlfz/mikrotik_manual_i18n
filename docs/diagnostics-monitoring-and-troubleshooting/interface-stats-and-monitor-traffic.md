@@ -8,8 +8,8 @@ tags:
   - 'stats'
   - 'monitor-traffic'
   - 'interface'
-source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/interface-stats-and-monitor-traffic
-captured_at: '2026-11-04T11:27:57+08:00'
+source: https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/interface-stats-and-monitor-traffic
+captured_at: '2026-11-04T11:15:19+08:00'
 ---
 
 Every RouterOS interface contains various counters, for example, the number of received and transmitted packets, [Fast Path](/docs/firewall-and-quality-of-service/packet-flow-in-routeros#fast-path) bytes, and link downs. These statistics provide real-time visibility into network utilization and hardware performance across physical and virtual interfaces. To analyze live throughput and packet rates, the monitor-traffic tool offers a continuous stream of data for troubleshooting and bandwidth verification.

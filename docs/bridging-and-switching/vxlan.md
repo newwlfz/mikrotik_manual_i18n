@@ -6,8 +6,8 @@ sidebar_label: 'VXLAN'
 description: 'This page documents MikroTik RouterOS''s VXLAN implementation, covering its purpose in expanding VLAN IDs, configuration options for VXLAN interfaces and VTEPs, and forwarding table monitoring. It details settings like MTU, VNI, ARP handling, and multicast group management for Layer 2 overlays over UDP.'
 tags:
   - 'vxlan'
-source: https://manual.mikrotik.com/docs/bridging-and-switching/vxlan
-captured_at: '2026-11-04T11:27:34+08:00'
+source: https://manual.mikrotik.com/docs/7.25/bridging-and-switching/vxlan
+captured_at: '2026-11-04T11:14:48+08:00'
 ---
 
 ---
@@ -135,15 +135,13 @@ At this point, some known features are not yet implemented.
 
 ### Overlay (forwarding between Ethernet and VXLAN)
 
-1. VLAN tagging over VXLAN is not supported.
+1. Routing between different VXLAN VNIs is not supported.
 
-2. Routing between different VXLAN VNIs is not supported.
+2. VTEPs are isolated, and there is no mechanism to control "horizon" between them.
 
-3. VTEPs are isolated, and there is no mechanism to control "horizon" between them.
+3. Bridged VXLAN interfaces do not support IGMP snooping. When snooping is enabled, MDB entries on VXLAN are not offloaded, and multicast traffic gets restricted between Ethernet and VXLAN.
 
-4. Bridged VXLAN interfaces do not support IGMP snooping. When snooping is enabled, MDB entries on VXLAN are not offloaded, and multicast traffic gets restricted between Ethernet and VXLAN.
-
-5. Bridged VXLAN interfaces are not supported by MLAG.
+4. Bridged VXLAN interfaces are not supported by MLAG.
 
 ### Basic configuration example
 

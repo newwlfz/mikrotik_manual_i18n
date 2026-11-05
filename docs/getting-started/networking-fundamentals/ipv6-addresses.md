@@ -8,11 +8,11 @@ tags:
   - 'fundamentals'
   - 'ip'
   - 'ipv6'
-source: https://manual.mikrotik.com/docs/getting-started/networking-fundamentals/ipv6-addresses
-captured_at: '2026-11-04T11:28:56+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/networking-fundamentals/ipv6-addresses
+captured_at: '2026-11-04T11:16:44+08:00'
 ---
 
-Internet Protocol version 6 (IPv6) is the newer version of the Internet Protocol (IP). It was initially expected to replace IPv4 in a short enough time, but for now, it seems that these two versions will coexist on the Internet in foreseeable future. Nevertheless, IPv6 becomes more important, as the date of the unallocated IPv4 address pool's exhaustion approaches.
+Internet Protocol version 6 (IPv6) is the newer version of the Internet Protocol (IP). It was initially expected to replace IPv4 in a short enough time, but for now, it seems that these two versions coexist on the Internet in the foreseeable future. Nevertheless, IPv6 becomes more important, as the date of the unallocated IPv4 address pool's exhaustion approaches.
 
 - four main benefits:
 
@@ -180,7 +180,7 @@ PING ff02::2%eth0(ff02::2) 56 data bytes
 
 An anycast address is a new type of address incorporated in IPv6.
 
-Anycasting is a new networking paradigm supporting service-oriented Addresses where an identical address can be assigned to multiple nodes providing a specific service. An anycast packet (i.e., one with an anycast destination address) is delivered to one of these nodes with the same anycast address.
+Anycasting is a new networking paradigm supporting service-oriented Addresses where an identical address can be assigned to multiple nodes providing a specific service. An anycast packet (one with an anycast destination address) is delivered to one of these nodes with the same anycast address.
 
 An anycast address is not assigned a specific address range. It is assigned from the unicast address range.
 
@@ -213,7 +213,7 @@ The image above illustrates the conversion process. When the result is converted
 FE80::20C:42FF:FE28:7945/64
 ```
 
-In RouterOS, if the EUI-64 parameter of an address is configured, the last 64 bits of that address will be automatically generated and updated using interface identifier. The last bits must be configured to be zero for this case. Example:
+In RouterOS, if the EUI-64 parameter of an address is configured, the last 64 bits of that address are automatically generated and updated by using the interface identifier. The last bits must be configured to be zero for this case. Example:
 
 ```ros
 [admin@MikroTik] > ipv6 address add address=fc00:3::/64 interface=ether3 eui-64=yes
@@ -272,7 +272,7 @@ HOST                                     SIZE TTL TIME  STATUS
 
 ### SLAAC IPv6 Address
 
-If under IPv6/Settings menu "accept-router-advertisements" option is enabled and the router receives a Router Advertisement packet, then the SLAAC IPv6 address will be automatically assigned to the interface on which the advertisements were received. This address will have DG flags meaning that the address is dynamic and global. Such addresses will show valid and lifetime parameters.
+If the `accept-router-advertisements` option is enabled under the [`/ipv6/settings`](/docs/cli-reference/ipv6/settings) menu and the router receives a Router Advertisement packet, then the SLAAC IPv6 address is automatically assigned to the interface on which the advertisements were received. This address has DG flags meaning that the address is dynamic and global. Such addresses show valid and lifetime parameters.
 
 ```text
 [admin@R1] /ipv6/address/print detail where dynamic && global 
@@ -282,7 +282,7 @@ Flags: X - disabled, I - invalid, D - dynamic; G - global, L - link-local
       preferred=1w 
 ```
 
-If SLAAC addresses are accepted, then also dynamic route toward the Internet will be generated. It will also contain a few limitations if specified on the advertisement packet. For example, hop-limit and MTU. If multiple addresses are received on the same interface, then the lowest of the MTU values per interface will be used.
+If SLAAC addresses are accepted, then a dynamic route toward the Internet is also generated. It also contains a few limitations if specified on the advertisement packet. For example, hop-limit and MTU. If multiple addresses are received on the same interface, then the lowest of the MTU values per interface is used.
 
 ```text
 [admin@R1] /routing/route/print detail where slaac 

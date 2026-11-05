@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/radius/monitor"
 sidebar_position: 3
 title: "monitor"
 sidebar_label: 'monitor'
-source: https://manual.mikrotik.com/docs/cli-reference/radius/monitor
-captured_at: '2026-11-01T21:29:26+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/radius/monitor
+captured_at: '2026-11-01T21:25:01+08:00'
 ---
 
 -----------

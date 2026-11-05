@@ -7,8 +7,8 @@ description: 'MikroTik RouterOS firewall provides stateful and stateless packet 
 tags:
   - 'firewall'
   - 'packet-flow'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/firewall
-captured_at: '2026-11-04T11:28:09+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/firewall
+captured_at: '2026-11-04T11:15:43+08:00'
 ---
 
 ![Firewall fundamentals](./img/firewall-01.webp)

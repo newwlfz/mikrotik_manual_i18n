@@ -79,11 +79,6 @@ const sidebars: SidebarsConfig = {
               "label": "Upgrade"
             },
             {
-              "type": "doc",
-              "id": "getting-started/installation-and-upgrade/upgrade-server",
-              "label": "Upgrade Server"
-            },
-            {
               "type": "category",
               "label": "Netinstall",
               "link": {
@@ -237,6 +232,11 @@ const sidebars: SidebarsConfig = {
         },
         {
           "type": "doc",
+          "id": "management-tools/winbox-legacy",
+          "label": "WinBox v3 (Legacy)"
+        },
+        {
+          "type": "doc",
           "id": "management-tools/mikrotik-mobile-app",
           "label": "MikroTik mobile app"
         },
@@ -308,12 +308,12 @@ const sidebars: SidebarsConfig = {
         {
           "type": "doc",
           "id": "system-information-and-utilities/device-mode",
-          "label": "Device-mode"
+          "label": "Device mode"
         },
         {
           "type": "doc",
           "id": "system-information-and-utilities/e-mail",
-          "label": "E-mail"
+          "label": "Email"
         },
         {
           "type": "doc",
@@ -332,18 +332,13 @@ const sidebars: SidebarsConfig = {
         },
         {
           "type": "doc",
-          "id": "system-information-and-utilities/interface-lists",
-          "label": "Interface Lists"
-        },
-        {
-          "type": "doc",
           "id": "system-information-and-utilities/ip-packing",
-          "label": "IP packing"
+          "label": "IP Packing"
         },
         {
           "type": "doc",
           "id": "system-information-and-utilities/neighbor-discovery",
-          "label": "Neighbor discovery"
+          "label": "Neighbor Discovery"
         },
         {
           "type": "doc",
@@ -423,7 +418,7 @@ const sidebars: SidebarsConfig = {
         {
           "type": "doc",
           "id": "diagnostics-monitoring-and-troubleshooting/bandwidth-test",
-          "label": "Bandwidth Test"
+          "label": "Bandwidth test"
         },
         {
           "type": "doc",
@@ -488,7 +483,7 @@ const sidebars: SidebarsConfig = {
         {
           "type": "doc",
           "id": "diagnostics-monitoring-and-troubleshooting/dynamic-dns",
-          "label": "Dynamic DNS"
+          "label": "DNS update"
         },
         {
           "type": "doc",
@@ -932,11 +927,6 @@ const sidebars: SidebarsConfig = {
         },
         {
           "type": "doc",
-          "id": "bridging-and-switching/crs1xx-and-2xx-series-switches",
-          "label": "CRS1xx and 2xx series switches"
-        },
-        {
-          "type": "doc",
           "id": "bridging-and-switching/vlan",
           "label": "VLAN"
         },
@@ -1000,13 +990,8 @@ const sidebars: SidebarsConfig = {
             },
             {
               "type": "doc",
-              "id": "bridging-and-switching/user-guides/controller-bridge-and-port-extender",
-              "label": "Controller Bridge and Port Extender"
-            },
-            {
-              "type": "doc",
               "id": "bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples",
-              "label": "CRS1xx/2xx series switches examples"
+              "label": "CRS1xx/2xx series switch examples"
             },
             {
               "type": "doc",
@@ -1046,11 +1031,6 @@ const sidebars: SidebarsConfig = {
       },
       "items": [
         {
-          "type": "doc",
-          "id": "network-management/arp",
-          "label": "ARP"
-        },
-        {
           "type": "category",
           "label": "Cloud",
           "link": {
@@ -1065,20 +1045,55 @@ const sidebars: SidebarsConfig = {
             },
             {
               "type": "doc",
+              "id": "network-management/cloud/cloud-backup",
+              "label": "Cloud backup"
+            },
+            {
+              "type": "doc",
               "id": "network-management/cloud/communication-mikrotik-cloud-servers",
               "label": "Communication with MikroTik Cloud Services"
             },
             {
               "type": "doc",
               "id": "network-management/cloud/file-share",
-              "label": "File share"
+              "label": "File Share"
             }
           ]
         },
         {
-          "type": "doc",
-          "id": "network-management/dhcp",
-          "label": "DHCP"
+          "type": "category",
+          "label": "DHCP",
+          "link": {
+            "type": "doc",
+            "id": "network-management/dhcp/index"
+          },
+          "items": [
+            {
+              "type": "doc",
+              "id": "network-management/dhcp/client",
+              "label": "DHCP Client"
+            },
+            {
+              "type": "doc",
+              "id": "network-management/dhcp/server",
+              "label": "DHCP Server"
+            },
+            {
+              "type": "doc",
+              "id": "network-management/dhcp/relay",
+              "label": "DHCP Relay"
+            },
+            {
+              "type": "doc",
+              "id": "network-management/dhcp/dhcpv6-client",
+              "label": "DHCPv6 Client"
+            },
+            {
+              "type": "doc",
+              "id": "network-management/dhcp/dhcpv6-server",
+              "label": "DHCPv6 Server"
+            }
+          ]
         },
         {
           "type": "doc",
@@ -1098,6 +1113,11 @@ const sidebars: SidebarsConfig = {
             "id": "network-management/proxy/index"
           },
           "items": [
+            {
+              "type": "doc",
+              "id": "network-management/proxy/web-proxy",
+              "label": "Web Proxy"
+            },
             {
               "type": "doc",
               "id": "network-management/proxy/reverse-proxy",
@@ -1190,6 +1210,11 @@ const sidebars: SidebarsConfig = {
                   "type": "doc",
                   "id": "user-guides/routing-and-networking-protocols/unicast/bgp/nexthop-selection",
                   "label": "Nexthop Selection"
+                },
+                {
+                  "type": "doc",
+                  "id": "user-guides/routing-and-networking-protocols/unicast/bgp/route-leak-prevention",
+                  "label": "Route Leak Prevention"
                 },
                 {
                   "type": "doc",
@@ -1351,7 +1376,7 @@ const sidebars: SidebarsConfig = {
             {
               "type": "doc",
               "id": "firewall-and-quality-of-service/firewall/address-lists",
-              "label": "Address-lists"
+              "label": "Address lists"
             },
             {
               "type": "doc",
@@ -1466,7 +1491,7 @@ const sidebars: SidebarsConfig = {
             {
               "type": "doc",
               "id": "firewall-and-quality-of-service/user-guides/bruteforce-prevention",
-              "label": "Bruteforce prevention"
+              "label": "SSH brute-force protection"
             },
             {
               "type": "doc",
@@ -1481,7 +1506,7 @@ const sidebars: SidebarsConfig = {
             {
               "type": "doc",
               "id": "firewall-and-quality-of-service/user-guides/ddos-protection",
-              "label": "DDoS Protection"
+              "label": "DDoS protection"
             },
             {
               "type": "doc",
@@ -1756,6 +1781,15 @@ const sidebars: SidebarsConfig = {
                   "label": "MikroTik Tag advertisement formats"
                 }
               ]
+            },
+            {
+              "type": "category",
+              "label": "User Guides",
+              "link": {
+                "type": "doc",
+                "id": "internet-of-things/bluetooth/user-guides/bluetooth-tag-tracking-mqtt-thingsboard"
+              },
+              "items": []
             }
           ]
         },
@@ -1866,7 +1900,7 @@ const sidebars: SidebarsConfig = {
       "items": [
         {
           "type": "category",
-          "label": "Btrfs",
+          "label": "index",
           "link": {
             "type": "doc",
             "id": "storage/btrfs/index"
@@ -1880,7 +1914,7 @@ const sidebars: SidebarsConfig = {
             {
               "type": "doc",
               "id": "storage/btrfs/raid",
-              "label": "Btrfs RAID"
+              "label": "raid"
             },
             {
               "type": "doc",
@@ -1956,6 +1990,11 @@ const sidebars: SidebarsConfig = {
         },
         {
           "type": "doc",
+          "id": "storage/sshfs",
+          "label": "SSHFS"
+        },
+        {
+          "type": "doc",
           "id": "storage/tmpfs",
           "label": "Tmpfs"
         }
@@ -1988,6 +2027,15 @@ const sidebars: SidebarsConfig = {
           "type": "doc",
           "id": "containers/veth",
           "label": "VETH"
+        },
+        {
+          "type": "category",
+          "label": "User Guides",
+          "link": {
+            "type": "doc",
+            "id": "containers/user-guides/claire-homeassistant"
+          },
+          "items": []
         }
       ]
     },
@@ -2084,7 +2132,7 @@ const sidebars: SidebarsConfig = {
             },
             {
               "type": "doc",
-              "id": "cli-reference/app/settings",
+              "id": "cli-reference/app/settings/index",
               "label": "settings"
             },
             {
@@ -2108,6 +2156,15 @@ const sidebars: SidebarsConfig = {
           "type": "doc",
           "id": "cli-reference/blink",
           "label": "blink"
+        },
+        {
+          "type": "category",
+          "label": "caps-man",
+          "link": {
+            "type": "doc",
+            "id": "cli-reference/caps-man/aaa"
+          },
+          "items": []
         },
         {
           "type": "category",
@@ -2268,6 +2325,15 @@ const sidebars: SidebarsConfig = {
               "label": "sign"
             }
           ]
+        },
+        {
+          "type": "category",
+          "label": "console",
+          "link": {
+            "type": "doc",
+            "id": "cli-reference/console/inspect"
+          },
+          "items": []
         },
         {
           "type": "category",
@@ -2792,41 +2858,6 @@ const sidebars: SidebarsConfig = {
                 },
                 {
                   "type": "category",
-                  "label": "msrp",
-                  "link": {
-                    "type": "doc",
-                    "id": "cli-reference/interface/bridge/msrp/index"
-                  },
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "cli-reference/interface/bridge/msrp/attributes",
-                      "label": "attributes"
-                    },
-                    {
-                      "type": "category",
-                      "label": "domain",
-                      "link": {
-                        "type": "doc",
-                        "id": "cli-reference/interface/bridge/msrp/domain/index"
-                      },
-                      "items": [
-                        {
-                          "type": "doc",
-                          "id": "cli-reference/interface/bridge/msrp/domain/attributes",
-                          "label": "attributes"
-                        },
-                        {
-                          "type": "doc",
-                          "id": "cli-reference/interface/bridge/msrp/domain/monitor",
-                          "label": "monitor"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "category",
                   "label": "msti",
                   "link": {
                     "type": "doc",
@@ -3019,6 +3050,11 @@ const sidebars: SidebarsConfig = {
                       "label": "settings"
                     }
                   ]
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/interface/ethernet/pon/index",
+                  "label": "pon"
                 },
                 {
                   "type": "doc",
@@ -3264,9 +3300,24 @@ const sidebars: SidebarsConfig = {
                       "label": "reset-counters"
                     },
                     {
-                      "type": "doc",
-                      "id": "cli-reference/interface/ethernet/switch/rule",
-                      "label": "rule"
+                      "type": "category",
+                      "label": "rule",
+                      "link": {
+                        "type": "doc",
+                        "id": "cli-reference/interface/ethernet/switch/rule/index"
+                      },
+                      "items": [
+                        {
+                          "type": "doc",
+                          "id": "cli-reference/interface/ethernet/switch/rule/reset-counters-all",
+                          "label": "reset-counters-all"
+                        },
+                        {
+                          "type": "doc",
+                          "id": "cli-reference/interface/ethernet/switch/rule/reset-counters",
+                          "label": "reset-counters"
+                        }
+                      ]
                     },
                     {
                       "type": "doc",
@@ -3474,6 +3525,11 @@ const sidebars: SidebarsConfig = {
                   "type": "doc",
                   "id": "cli-reference/interface/lte/monitor",
                   "label": "monitor"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/interface/lte/run-modem-update",
+                  "label": "run-modem-update"
                 },
                 {
                   "type": "doc",
@@ -4416,8 +4472,306 @@ const sidebars: SidebarsConfig = {
                   "label": "wps-push-button"
                 }
               ]
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/interface/xfrm",
+              "label": "xfrm"
             }
           ]
+        },
+        {
+          "type": "category",
+          "label": "iot",
+          "link": {
+            "type": "doc",
+            "id": "cli-reference/iot/bluetooth/index"
+          },
+          "items": [
+            {
+              "type": "category",
+              "label": "gpio",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/iot/gpio/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/gpio/analog",
+                  "label": "analog"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/gpio/digital",
+                  "label": "digital"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "lora",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/iot/lora/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/lora/channels",
+                  "label": "channels"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/lora/joineui",
+                  "label": "joineui"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/lora/netid",
+                  "label": "netid"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/lora/radios",
+                  "label": "radios"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/lora/reset-devices",
+                  "label": "reset-devices"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/lora/send",
+                  "label": "send"
+                },
+                {
+                  "type": "category",
+                  "label": "servers",
+                  "link": {
+                    "type": "doc",
+                    "id": "cli-reference/iot/lora/servers/index"
+                  },
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/iot/lora/servers/reset-servers",
+                      "label": "reset-servers"
+                    }
+                  ]
+                },
+                {
+                  "type": "category",
+                  "label": "traffic",
+                  "link": {
+                    "type": "doc",
+                    "id": "cli-reference/iot/lora/traffic/index"
+                  },
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/iot/lora/traffic/clear",
+                      "label": "clear"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/iot/lora/traffic/options",
+                      "label": "options"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "modbus",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/iot/modbus/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/modbus/read-holding-registers",
+                  "label": "read-holding-registers"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/modbus/security-rules",
+                  "label": "security-rules"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/modbus/transceive",
+                  "label": "transceive"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "mqtt",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/iot/mqtt/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/mqtt/brokers",
+                  "label": "brokers"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/mqtt/connect",
+                  "label": "connect"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/mqtt/disconnect",
+                  "label": "disconnect"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/mqtt/publish",
+                  "label": "publish"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/mqtt/subscribe",
+                  "label": "subscribe"
+                },
+                {
+                  "type": "category",
+                  "label": "subscriptions",
+                  "link": {
+                    "type": "doc",
+                    "id": "cli-reference/iot/mqtt/subscriptions/index"
+                  },
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/iot/mqtt/subscriptions/monitor-data",
+                      "label": "monitor-data"
+                    },
+                    {
+                      "type": "category",
+                      "label": "recv",
+                      "link": {
+                        "type": "doc",
+                        "id": "cli-reference/iot/mqtt/subscriptions/recv/index"
+                      },
+                      "items": [
+                        {
+                          "type": "doc",
+                          "id": "cli-reference/iot/mqtt/subscriptions/recv/clear",
+                          "label": "clear"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/mqtt/unsubscribe",
+                  "label": "unsubscribe"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "wiliot",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/iot/wiliot/index"
+              },
+              "items": [
+                {
+                  "type": "category",
+                  "label": "bluetooth-traffic",
+                  "link": {
+                    "type": "doc",
+                    "id": "cli-reference/iot/wiliot/bluetooth-traffic/index"
+                  },
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/iot/wiliot/bluetooth-traffic/clear",
+                      "label": "clear"
+                    }
+                  ]
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/wiliot/clear",
+                  "label": "clear"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/wiliot/disable",
+                  "label": "disable"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/wiliot/enable",
+                  "label": "enable"
+                },
+                {
+                  "type": "category",
+                  "label": "mqtt-traffic",
+                  "link": {
+                    "type": "doc",
+                    "id": "cli-reference/iot/wiliot/mqtt-traffic/index"
+                  },
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/iot/wiliot/mqtt-traffic/clear",
+                      "label": "clear"
+                    }
+                  ]
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/iot/wiliot/options",
+                  "label": "options"
+                },
+                {
+                  "type": "category",
+                  "label": "servers",
+                  "link": {
+                    "type": "doc",
+                    "id": "cli-reference/iot/wiliot/servers/index"
+                  },
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/iot/wiliot/servers/defaults",
+                      "label": "defaults"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "label": "ip",
+          "link": {
+            "type": "doc",
+            "id": "cli-reference/ip/address"
+          },
+          "items": []
+        },
+        {
+          "type": "category",
+          "label": "ipv6",
+          "link": {
+            "type": "doc",
+            "id": "cli-reference/ipv6/address"
+          },
+          "items": []
         },
         {
           "type": "category",
@@ -4488,6 +4842,15 @@ const sidebars: SidebarsConfig = {
           "type": "doc",
           "id": "cli-reference/log",
           "label": "log"
+        },
+        {
+          "type": "category",
+          "label": "mpls",
+          "link": {
+            "type": "doc",
+            "id": "cli-reference/mpls/forwarding-table"
+          },
+          "items": []
         },
         {
           "type": "category",
@@ -4575,6 +4938,24 @@ const sidebars: SidebarsConfig = {
           ]
         },
         {
+          "type": "category",
+          "label": "ppp",
+          "link": {
+            "type": "doc",
+            "id": "cli-reference/ppp/aaa"
+          },
+          "items": []
+        },
+        {
+          "type": "category",
+          "label": "queue",
+          "link": {
+            "type": "doc",
+            "id": "cli-reference/queue/interface"
+          },
+          "items": []
+        },
+        {
           "type": "doc",
           "id": "cli-reference/quit",
           "label": "quit"
@@ -4625,6 +5006,24 @@ const sidebars: SidebarsConfig = {
           "label": "redo"
         },
         {
+          "type": "category",
+          "label": "root",
+          "link": {
+            "type": "doc",
+            "id": "cli-reference/root/terminal"
+          },
+          "items": []
+        },
+        {
+          "type": "category",
+          "label": "routing",
+          "link": {
+            "type": "doc",
+            "id": "cli-reference/routing/bfd/authentication"
+          },
+          "items": []
+        },
+        {
           "type": "doc",
           "id": "cli-reference/safe-mode",
           "label": "safe-mode"
@@ -4656,6 +5055,681 @@ const sidebars: SidebarsConfig = {
         },
         {
           "type": "category",
+          "label": "system",
+          "link": {
+            "type": "doc",
+            "id": "cli-reference/system/backup/cloud/index"
+          },
+          "items": [
+            {
+              "type": "doc",
+              "id": "cli-reference/system/check-disk",
+              "label": "check-disk"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/system/check-installation",
+              "label": "check-installation"
+            },
+            {
+              "type": "category",
+              "label": "clock",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/clock/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/clock/manual",
+                  "label": "manual"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "console",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/console/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/console/screen",
+                  "label": "screen"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "default-configuration",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/default-configuration/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/default-configuration/caps-mode-script",
+                  "label": "caps-mode-script"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/default-configuration/custom-script",
+                  "label": "custom-script"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/default-configuration/script",
+                  "label": "script"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/default-configuration/wps-sync-mode-script",
+                  "label": "wps-sync-mode-script"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "device-mode",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/device-mode/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/device-mode/update",
+                  "label": "update"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "gps",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/gps/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/gps/monitor",
+                  "label": "monitor"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "health",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/health/index"
+              },
+              "items": [
+                {
+                  "type": "category",
+                  "label": "settings",
+                  "link": {
+                    "type": "doc",
+                    "id": "cli-reference/system/health/settings/index"
+                  },
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/system/health/settings/detect-fans",
+                      "label": "detect-fans"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/system/history",
+              "label": "history"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/system/identity",
+              "label": "identity"
+            },
+            {
+              "type": "category",
+              "label": "keymat-provider",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/keymat-provider/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/keymat-provider/qkd-get-key-with-ids",
+                  "label": "qkd-get-key-with-ids"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/keymat-provider/qkd-get-key",
+                  "label": "qkd-get-key"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/keymat-provider/qkd-get-status",
+                  "label": "qkd-get-status"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "leds",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/leds/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/leds/settings",
+                  "label": "settings"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "license",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/license/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/license/generate-new-id",
+                  "label": "generate-new-id"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/license/output",
+                  "label": "output"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/license/renew",
+                  "label": "renew"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "logging",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/logging/index"
+              },
+              "items": [
+                {
+                  "type": "category",
+                  "label": "action",
+                  "link": {
+                    "type": "doc",
+                    "id": "cli-reference/system/logging/action/index"
+                  },
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/system/logging/action/clear",
+                      "label": "clear"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/system/note",
+              "label": "note"
+            },
+            {
+              "type": "category",
+              "label": "ntp",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/ntp/client/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/ntp/key",
+                  "label": "key"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/ntp/monitor-peers",
+                  "label": "monitor-peers"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/ntp/server",
+                  "label": "server"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "package",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/package/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/package/apply-changes",
+                  "label": "apply-changes"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/package/disable",
+                  "label": "disable"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/package/downgrade",
+                  "label": "downgrade"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/package/enable",
+                  "label": "enable"
+                },
+                {
+                  "type": "category",
+                  "label": "local-update",
+                  "link": {
+                    "type": "doc",
+                    "id": "cli-reference/system/package/local-update/index"
+                  },
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/system/package/local-update/download-all",
+                      "label": "download-all"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/system/package/local-update/download",
+                      "label": "download"
+                    },
+                    {
+                      "type": "category",
+                      "label": "mirror",
+                      "link": {
+                        "type": "doc",
+                        "id": "cli-reference/system/package/local-update/mirror/index"
+                      },
+                      "items": [
+                        {
+                          "type": "doc",
+                          "id": "cli-reference/system/package/local-update/mirror/force-check",
+                          "label": "force-check"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/system/package/local-update/refresh",
+                      "label": "refresh"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/system/package/local-update/update-package-source",
+                      "label": "update-package-source"
+                    }
+                  ]
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/package/uninstall",
+                  "label": "uninstall"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/package/unschedule",
+                  "label": "unschedule"
+                },
+                {
+                  "type": "category",
+                  "label": "update",
+                  "link": {
+                    "type": "doc",
+                    "id": "cli-reference/system/package/update/index"
+                  },
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/system/package/update/cancel",
+                      "label": "cancel"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/system/package/update/check-for-updates",
+                      "label": "check-for-updates"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/system/package/update/download",
+                      "label": "download"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/system/package/update/install",
+                      "label": "install"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "ptp",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/ptp/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/ptp/monitor",
+                  "label": "monitor"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/ptp/port",
+                  "label": "port"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/ptp/status",
+                  "label": "status"
+                }
+              ]
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/system/reboot",
+              "label": "reboot"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/system/regulatory",
+              "label": "regulatory"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/system/reset-configuration",
+              "label": "reset-configuration"
+            },
+            {
+              "type": "category",
+              "label": "resource",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/resource/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/resource/cpu",
+                  "label": "cpu"
+                },
+                {
+                  "type": "category",
+                  "label": "hardware",
+                  "link": {
+                    "type": "doc",
+                    "id": "cli-reference/system/resource/hardware/index"
+                  },
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/system/resource/hardware/authorize",
+                      "label": "authorize"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/system/resource/hardware/usb-power-reset",
+                      "label": "usb-power-reset"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/system/resource/hardware/usb-settings",
+                      "label": "usb-settings"
+                    }
+                  ]
+                },
+                {
+                  "type": "category",
+                  "label": "irq",
+                  "link": {
+                    "type": "doc",
+                    "id": "cli-reference/system/resource/irq/index"
+                  },
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/system/resource/irq/rps",
+                      "label": "rps"
+                    }
+                  ]
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/resource/monitor",
+                  "label": "monitor"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "routerboard",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/routerboard/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/routerboard/mode-button",
+                  "label": "mode-button"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/routerboard/reset-button",
+                  "label": "reset-button"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/routerboard/settings",
+                  "label": "settings"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/routerboard/upgrade",
+                  "label": "upgrade"
+                },
+                {
+                  "type": "category",
+                  "label": "usb",
+                  "link": {
+                    "type": "doc",
+                    "id": "cli-reference/system/routerboard/usb/index"
+                  },
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/system/routerboard/usb/power-reset",
+                      "label": "power-reset"
+                    }
+                  ]
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/routerboard/wps-button",
+                  "label": "wps-button"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "rtrace",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/rtrace/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/rtrace/start",
+                  "label": "start"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/rtrace/stop",
+                  "label": "stop"
+                }
+              ]
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/system/scheduler",
+              "label": "scheduler"
+            },
+            {
+              "type": "category",
+              "label": "script",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/script/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/script/environment",
+                  "label": "environment"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/script/job",
+                  "label": "job"
+                }
+              ]
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/system/serial-terminal",
+              "label": "serial-terminal"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/system/shutdown",
+              "label": "shutdown"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/system/ssh-exec",
+              "label": "ssh-exec"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/system/ssh",
+              "label": "ssh"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/system/sup-output",
+              "label": "sup-output"
+            },
+            {
+              "type": "category",
+              "label": "swos",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/swos/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/swos/load-config",
+                  "label": "load-config"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/swos/password",
+                  "label": "password"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/swos/reset-config",
+                  "label": "reset-config"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/swos/save-config",
+                  "label": "save-config"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/swos/upgrade",
+                  "label": "upgrade"
+                }
+              ]
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/system/telnet",
+              "label": "telnet"
+            },
+            {
+              "type": "category",
+              "label": "ups",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/ups/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/ups/beep",
+                  "label": "beep"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/ups/monitor",
+                  "label": "monitor"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/ups/rtc",
+                  "label": "rtc"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/ups/self-test",
+                  "label": "self-test"
+                }
+              ]
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/system/watchdog",
+              "label": "watchdog"
+            }
+          ]
+        },
+        {
+          "type": "category",
           "label": "task",
           "link": {
             "type": "doc",
@@ -4676,6 +5750,340 @@ const sidebars: SidebarsConfig = {
               "type": "doc",
               "id": "cli-reference/task/terminate",
               "label": "terminate"
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "label": "tool",
+          "link": {
+            "type": "doc",
+            "id": "cli-reference/tool/bandwidth-server/index"
+          },
+          "items": [
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/bandwidth-test",
+              "label": "bandwidth-test"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/calea",
+              "label": "calea"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/dns-update",
+              "label": "dns-update"
+            },
+            {
+              "type": "category",
+              "label": "e-mail",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/tool/e-mail/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/e-mail/send",
+                  "label": "send"
+                }
+              ]
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/fetch",
+              "label": "fetch"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/flood-ping",
+              "label": "flood-ping"
+            },
+            {
+              "type": "category",
+              "label": "graphing",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/tool/graphing/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/graphing/interface",
+                  "label": "interface"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/graphing/queue",
+                  "label": "queue"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/graphing/resource",
+                  "label": "resource"
+                }
+              ]
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/ip-scan",
+              "label": "ip-scan"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/mac-scan",
+              "label": "mac-scan"
+            },
+            {
+              "type": "category",
+              "label": "mac-server",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/tool/mac-server/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/mac-server/mac-winbox",
+                  "label": "mac-winbox"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/mac-server/ping",
+                  "label": "ping"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/mac-server/sessions",
+                  "label": "sessions"
+                }
+              ]
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/mac-telnet",
+              "label": "mac-telnet"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/netwatch",
+              "label": "netwatch"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/ping-speed",
+              "label": "ping-speed"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/ping",
+              "label": "ping"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/profile",
+              "label": "profile"
+            },
+            {
+              "type": "category",
+              "label": "romon",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/tool/romon/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/romon/discover",
+                  "label": "discover"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/romon/ping",
+                  "label": "ping"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/romon/port",
+                  "label": "port"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/romon/ssh",
+                  "label": "ssh"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "sms",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/tool/sms/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/sms/inbox",
+                  "label": "inbox"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/sms/send",
+                  "label": "send"
+                }
+              ]
+            },
+            {
+              "type": "category",
+              "label": "sniffer",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/tool/sniffer/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/sniffer/connection",
+                  "label": "connection"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/sniffer/host",
+                  "label": "host"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/sniffer/packet",
+                  "label": "packet"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/sniffer/protocol",
+                  "label": "protocol"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/sniffer/quick",
+                  "label": "quick"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/sniffer/save",
+                  "label": "save"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/sniffer/start",
+                  "label": "start"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/sniffer/stop",
+                  "label": "stop"
+                }
+              ]
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/snmp-get",
+              "label": "snmp-get"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/snmp-walk",
+              "label": "snmp-walk"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/speed-test",
+              "label": "speed-test"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/torch",
+              "label": "torch"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/traceroute",
+              "label": "traceroute"
+            },
+            {
+              "type": "category",
+              "label": "traffic-generator",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/tool/traffic-generator/index"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/traffic-generator/inject-pcap",
+                  "label": "inject-pcap"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/traffic-generator/inject",
+                  "label": "inject"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/traffic-generator/packet-template",
+                  "label": "packet-template"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/traffic-generator/port",
+                  "label": "port"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/traffic-generator/quick",
+                  "label": "quick"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/traffic-generator/raw-packet-template",
+                  "label": "raw-packet-template"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/traffic-generator/start",
+                  "label": "start"
+                },
+                {
+                  "type": "category",
+                  "label": "stats",
+                  "link": {
+                    "type": "doc",
+                    "id": "cli-reference/tool/traffic-generator/stats/latency-distribution"
+                  },
+                  "items": []
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/traffic-generator/stop",
+                  "label": "stop"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/tool/traffic-generator/stream",
+                  "label": "stream"
+                }
+              ]
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/traffic-monitor",
+              "label": "traffic-monitor"
+            },
+            {
+              "type": "doc",
+              "id": "cli-reference/tool/wol",
+              "label": "wol"
             }
           ]
         },

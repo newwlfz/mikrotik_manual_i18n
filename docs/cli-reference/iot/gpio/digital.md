@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/iot/gpio/digital"
 sidebar_position: 2
 title: "digital"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/gpio/digital
-captured_at: '2026-11-01T21:28:12+08:00'
+sidebar_label: 'digital'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/gpio/digital
+captured_at: '2026-11-01T21:23:37+08:00'
 ---
 
 -----------

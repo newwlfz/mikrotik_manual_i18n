@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/dot1x/client"
 sidebar_position: 1
 title: "client"
 sidebar_label: 'client'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/dot1x/client
-captured_at: '2026-11-01T21:27:02+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/dot1x/client
+captured_at: '2026-11-01T21:22:28+08:00'
 ---
 
 -----------

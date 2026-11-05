@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/bgp/vpls"
 sidebar_position: 8
 title: "vpls"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/bgp/vpls
-captured_at: '2026-11-01T21:29:29+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/bgp/vpls
+captured_at: '2026-11-01T21:25:08+08:00'
 ---
 
 -----------
@@ -40,10 +40,10 @@ Support for multiple import/export route target extended communities for BGP-bas
 <ArgTableRow arg="pw-type" typ="enum (tagged-ethernet | raw-ethernet | vpls)" unset="1">Pseudowire type (RFC 4447 Section 5.2). By default, `raw-ethernet` is used.</ArgTableRow>
 <ArgTableRow arg="pw-l2mtu" typ="num" unset="1">L2MTU value advertised to a remote peer (RFC 4447 Section 5.2).</ArgTableRow>
 <ArgTableRow arg="pw-control-word" typ="enum (default | enabled | disabled)" unset="1">Enables or disables Control Word usage (RFC 4623 Section 4). Default values for regular and Cisco-style VPLS tunnels differ. Cisco-style by default has Control Word usage disabled. Read more in the [VPLS Control Word](/docs/user-guides/routing-and-networking-protocols/mpls/vpls/control-word) article.</ArgTableRow>
-<ArgTableRow arg="bridge" typ="iface_enum" unset="1">[Bridge](https://manual.mikrotik.com/docs/cli-reference/interface/bridge/bridge) the VPLS interface belongs to.</ArgTableRow>
+<ArgTableRow arg="bridge" typ="iface_enum" unset="1">Bridge the VPLS interface belongs to.</ArgTableRow>
 <ArgTableRow arg="bridge-cost" typ="num" unset="1">Cost of the bridge port.</ArgTableRow>
 <ArgTableRow arg="bridge-horizon" typ="num" unset="1">When set to `none`, bridge `horizon` is not used.</ArgTableRow>
-<ArgTableRow arg="bridge-pvid" typ="num" unset="1">Port VLAN ID (pvid) assigned to a dynamically bridged interface. Applies only when [bridge `vlan-filtering`](https://manual.mikrotik.com/docs/cli-reference/interface/bridge/bridge#vlan-filtering) is set to `yes`.</ArgTableRow>
+<ArgTableRow arg="bridge-pvid" typ="num" unset="1">Port VLAN ID (pvid) assigned to a dynamically bridged interface. Applies only when bridge `vlan-filtering` is set to `yes`.</ArgTableRow>
 </ArgTable>
 
 <ArgTable c1="Read-only Argument" c2="Type" c3="Description">

@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/tool/traffic-generator/packet-template"
 sidebar_position: 4
 title: "packet-template"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/packet-template
-captured_at: '2026-11-01T21:30:23+08:00'
+sidebar_label: 'packet-template'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/traffic-generator/packet-template
+captured_at: '2026-11-01T21:26:09+08:00'
 ---
 
 -----------

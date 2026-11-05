@@ -7,8 +7,8 @@ description: 'This page documents the HWMP+ mesh protocol in MikroTik RouterOS, 
 tags:
   - 'mesh'
   - 'hwmpplus'
-source: https://manual.mikrotik.com/docs/wireless/abgn/hwmpplus-mesh
-captured_at: '2026-11-04T11:35:34+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/abgn/hwmpplus-mesh
+captured_at: '2026-11-04T11:24:18+08:00'
 ---
 
 **Sub-menu:** `/interface/mesh`

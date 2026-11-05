@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/iot/modbus/security-rules"
 sidebar_position: 3
 title: "security-rules"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/modbus/security-rules
-captured_at: '2026-11-01T21:28:16+08:00'
+sidebar_label: 'security-rules'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/modbus/security-rules
+captured_at: '2026-11-01T21:23:40+08:00'
 ---
 
 -----------

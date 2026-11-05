@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/ssh-exec"
 sidebar_position: 31
 title: "ssh-exec"
-source: https://manual.mikrotik.com/docs/cli-reference/system/ssh-exec
-captured_at: '2026-11-01T21:30:08+08:00'
+sidebar_label: 'ssh-exec'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/ssh-exec
+captured_at: '2026-11-01T21:25:46+08:00'
 ---
 
 -----------
@@ -11,24 +12,27 @@ captured_at: '2026-11-01T21:30:08+08:00'
 ## system/ssh-exec 
 **Type:** Command
 
+The [`ssh-exec`](/docs/management-tools/ssh#run-remote-commands-from-scripts) command is a non-interactive SSH command, allowing you to execute commands remotely on a device through scripts and scheduler.
+
 <ArgTable c1="Argument" c2="Type" c3="Description">
 <ArgTableRow arg="address" typ="alt { ip: ipAddr
 , ipv6-address: composite { ip6: ip6Addr
 , interface: [ iface_enum]
  }
- }"></ArgTableRow>
-<ArgTableRow arg="command" typ="string"></ArgTableRow>
-<ArgTableRow arg="user" typ="string"></ArgTableRow>
-<ArgTableRow arg="password" typ="string"></ArgTableRow>
-<ArgTableRow arg="port" typ="num"></ArgTableRow>
+ }">Remote host IPv4 or IPv6 address.</ArgTableRow>
+<ArgTableRow arg="command" typ="string">Remote command to execute.</ArgTableRow>
+<ArgTableRow arg="user" typ="string">Username for the remote host.</ArgTableRow>
+<ArgTableRow arg="password" typ="string">Password for the remote host. You should use SSH PKI authentication instead of plain text passwords.</ArgTableRow>
+<ArgTableRow arg="port" typ="num">TCP port the SSH server listens on. Default: 22.</ArgTableRow>
+<ArgTableRow arg="known-hosts-ignore" typ="bool">skip host key validation</ArgTableRow>
 <ArgTableRow arg="src-address" typ="alt { ip: ipAddr
 , ip6: ip6Addr
- }"></ArgTableRow>
-<ArgTableRow arg="vrf" typ="enum"></ArgTableRow>
-<ArgTableRow arg="output-to-file" typ="string">write output to file instead of 'output' variable</ArgTableRow>
+ }">Source address to use when connecting. Supports both IPv4 and IPv6.</ArgTableRow>
+<ArgTableRow arg="vrf" typ="enum">VRF to run the command over; the connection is made inside that routing table.</ArgTableRow>
+<ArgTableRow arg="output-to-file" typ="string">Write output to file instead of 'output' variable.</ArgTableRow>
 </ArgTable>
 
 <ArgTable c1="Read-only Argument" c2="Type" c3="Description">
-<ArgTableRow arg="exit-code" typ="num"></ArgTableRow>
-<ArgTableRow arg="output" typ="string"></ArgTableRow>
+<ArgTableRow arg="exit-code" typ="num">Exit code reported by the remote command shell; `0` when the command ran. A connection or authentication failure aborts `ssh-exec` itself instead of returning.</ArgTableRow>
+<ArgTableRow arg="output" typ="string">Returns the output of the remotely executed command.</ArgTableRow>
 </ArgTable>

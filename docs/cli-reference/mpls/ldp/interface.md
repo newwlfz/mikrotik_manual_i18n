@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/mpls/ldp/interface"
 sidebar_position: 4
 title: "interface"
-source: https://manual.mikrotik.com/docs/cli-reference/mpls/ldp/interface
-captured_at: '2026-11-01T21:29:14+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/ldp/interface
+captured_at: '2026-11-01T21:24:47+08:00'
 ---
 
 -----------

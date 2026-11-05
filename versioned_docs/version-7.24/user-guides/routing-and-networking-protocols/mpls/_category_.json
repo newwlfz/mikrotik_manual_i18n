@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Mpls",
+  "key": "routing-and-networking-protocols/mpls",
+  "link": {
+    "type": "doc",
+    "id": "routing-and-networking-protocols/mpls/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wifi/capsman/remote-cap/index"
 sidebar_position: 1
 title: "remote-cap"
 sidebar_label: 'remote-cap'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/capsman/remote-cap
-captured_at: '2026-11-01T21:27:45+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wifi/capsman/remote-cap
+captured_at: '2026-11-01T21:23:07+08:00'
 ---
 
 -----------

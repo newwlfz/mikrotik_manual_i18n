@@ -3,8 +3,8 @@ sidebar_key: "internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-beac
 sidebar_position: 3
 title: "MikroTik Beacon Manager for Android devices"
 sidebar_label: 'MikroTik Beacon Manager for Android devices'
-source: https://manual.mikrotik.com/docs/internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-beacon-manager-android-devices
-captured_at: '2026-11-04T11:32:35+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-beacon-manager-android-devices
+captured_at: '2026-11-04T11:20:16+08:00'
 ---
 
 ##

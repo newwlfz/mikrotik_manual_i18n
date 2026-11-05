@@ -8,8 +8,8 @@ tags:
   - 'container'
   - 'apps'
   - 'security'
-source: https://manual.mikrotik.com/docs/containers/apps
-captured_at: '2026-11-04T11:27:37+08:00'
+source: https://manual.mikrotik.com/docs/7.25/containers/apps
+captured_at: '2026-11-04T11:14:51+08:00'
 ---
 
 #### Summary
@@ -47,7 +47,7 @@ As with the underlying Container system, the App menu inherits security implicat
 | Property | Type | Default | Description |
 | :-- | :-- | :-- | :-- |
 | **auto-update** | *yes* &#124; *no* | *no* | Enables or disables automatic updating when a new container image version is available. |
-| **check-certificate** | *yes* &#124; *no* | *yes* | Verifies the registry certificate before pulling the container image. |
+| **check-certificate** | *yes* &#124; *no* | *yes* | Verifies the registry certificate against the router’s [certificate store](/docs/authentication-authorization-accounting/certificates) before pulling the container image. |
 | **container-command-lines** | *string* | *(empty)* | Specifies the command-line argument(s) to pass to the application when starting the container. |
 | **devices** | *string* | *(empty)* | Specifies additional hardware devices to pass through to the container application. |
 | **environment** | *string* | *(empty)* | Defines environment variables to be available to the running application. Specify as a list of key-value pair(s). |
@@ -206,15 +206,16 @@ All user data, configuration settings, and application state will be permanently
 
 :::
 
-#### User-Addable Apps
+## Custom Apps
 
-Starting with RouterOS v7.22, you can create your own custom apps using a compose YAML file. This lets experienced users build solutions that fit their specific network needs.
+Starting with RouterOS v7.22, you can create your own custom apps using a 'compose' YAML file. This lets experienced users build solutions that fit their specific network needs.
 
 How it works:
 
-- You write a compose YAML file that defines your app's structure and behavior
-- RouterOS processes this file to build a working application package
-- Your custom app can work with RouterOS features and APIs
+- You define the app internals and limited RouterOS configuration in YAML format
+- RouterOS pulls the specified image/s and creates your app
+- The app runs on RouterOS hardware and delivers new features at no cost
+- Optionally, have it interact with our API
 
 Why use it:
 
@@ -223,57 +224,11 @@ Why use it:
 - Great for automation, custom routing, or specialized services
 - Declarative setup makes management easier
 
-## Creating a Custom App with YAML
+### How to add apps
 
-You can create a custom container application using a YAML configuration file. This example demonstrates how to set up an Alpine Linux container that runs an iperf3 server for network performance testing.
+There are three options, but they all rely on YAML.
 
-### YAML Configuration Example
-
-```routeros
-name: alpine-iperf
-descr: Alpine Linux container running iperf3 server
-page: https://iperf.fr/
-category: network
-default-credential: none
-services:
-  iperf:
-    image: docker.io/alpine:latest
-    ports:
-      - 5201:5201:tcp
-      - 5201:5201:udp
-    command: /bin/sh -c "apk add --no-cache iperf3 && iperf3 -s"
-```
-
-### Configuration Field Reference
-
-| Field | Description |
-|---|---|
-| `name` | Unique identifier for your custom app |
-| `descr` | Human-readable description of what the app does |
-| `page` | URL to the project's official documentation or website |
-| `category` | Classification group (e.g., network, system, utilities) |
-| `default-credential` | Authentication requirement (none, or specify username/password) |
-| `services` | Container service definitions |
-| `image` | Docker image to use for the container |
-| `ports` | Port mappings in format `host:container:protocol` |
-| `command` | Startup command executed inside the container |
-
-### How This Example Works
-
-1. **Base Image**: Uses the official Alpine Linux image from Docker Hub
-2. **Package Installation**: Installs iperf3 network performance testing tool
-3. **Server Mode**: Runs iperf3 in server mode (`-s` flag) to accept client connections
-4. **Port Exposure**: Maps TCP and UDP port 5201 (iperf3's default port) to the host
-
-This configuration creates a container that acts as a network throughput testing server, allowing you to measure bandwidth between clients and this container.
-
-## Adding a Custom App
-
-There are two ways to create a custom app: by importing a .yml file or by creating a blank app and editing its YAML directly.
-
-In this example, we'll add the alpine-iperf app we created using the compose file. For ease of use, we'll place it in the LAN bridge so that devices on our network can access it easily without requiring NAT.
-
-### Method 1: Create a Blank App and Edit YAML
+#### Method 1: Create a Blank App and Edit YAML
 
 First, create the app and assign it to the LAN network:
 
@@ -291,7 +246,7 @@ Next, add the YAML configuration. In the Terminal, run:
 
 This opens a text editor where you can paste your YAML. After pasting, press <kbd>Control</kbd>+<kbd>O</kbd> to save your changes. Finally, enable the app to start it running.
 
-### Method 2: Import from a File
+#### Method 2: Import from a File
 
 Alternatively, save your compose text to a file and upload it to the device. Then, set the file as the app's YAML using the following command:
 
@@ -301,7 +256,311 @@ Alternatively, save your compose text to a file and upload it to the device. The
 
 This method is useful when you have a pre-configured YAML file ready to import.
 
-#### Tips and Best Practices
+#### Method 3: Add custom app-store URL
+
+If you or someone you know has hosted their own app or a list of apps on a webserver, you can simply add the URL in your APP settings. This way it is possible to have a dynamically updated catalog of custom apps.
+
+```routeros
+/app/settings set app-store-urls="<custom_url>"
+```
+
+For this to work correctly, the URL should simply return the text contents of a YAML file, where multiple apps are listed in a simple list according to standard YAML syntax.
+
+### Writing YAML for a Custom App
+
+This example creates an iperf3 app using an existing openEuler base image.
+
+```yaml
+name: openeuler-iperf
+descr: openEuler container running iperf3 server
+page: https://iperf.fr/
+category: networking
+default-credentials: none
+services:
+  iperf:
+    image: docker.io/openeuler/iperf:latest
+    ports:
+      - 5201:5201:tcp
+      - 5201:5201/udp:udp
+    command: /bin/sh -c "iperf3 -s"
+
+```
+
+Key distinctions:
+- base image already has iperf installed
+- necessary ports are forwarded/mapped to routers IP
+- the 'command' executes at containers startup and runs iperf3
+
+Alternatively, you could use a plain base image like Alpine Linux and install iperf3 using 'command'.
+
+```yaml
+name: alpine-iperf
+descr: Alpine Linux container running iperf3 server
+page: https://iperf.fr/
+category: networking
+default-credentials: none
+services:
+  iperf:
+    image: docker.io/alpine:latest
+    command: /bin/sh -c "apk add --no-cache iperf3 && iperf3 -s"
+networks:
+  default:
+    name: lan
+    external: true
+
+```
+
+Key distinctions:
+- clean base image
+- iperf3 is installed and ran at each startup
+- the app's network is set to your LAN (alternative to forwarding ports)
+
+Optionally, if you want to ensure that 'command' executes something only once, consider using conditional one-liners such as this:
+
+```yaml
+command: /bin/sh -c "if ! command -v iperf3 >/dev/null 2>&1; then apk add --no-cache iperf3; fi; exec iperf3 -s"
+```
+
+### Port Mapping
+
+When mapping ports use the X:Y or X:Y:Z syntax where X is the port on your router, Y is a port on the container and Z gives the port a name, however some names can have special functionality, for example, 'web' will cause RouterOS to set up reverse proxy with an auto-generated URL.
+Some valid examples:
+
+```yaml
+2211:21
+888:80:web
+9000:9000:api
+9001:9001:api-secure
+
+```
+
+All ports are set up as TCP by default, unless you define them as UDP, like so:
+
+```yaml
+6000:6000/udp:udp
+8000:8000/udp:custom_name
+
+```
+
+:::warning
+By default, port `80` is assumed to be a web port, unless you explicitly set it to a different type. There is a healthcheck that probes this port — if nothing is listening, the app will appear stuck in a `starting` state. When port `80` is not mapped, the first defined port is used instead. To avoid ambiguity, name your used ports explicitly.
+:::
+
+## YAML Field Reference
+
+A YAML document defines one App: an app-level section with the App's metadata, and a `services` section with one or more container definitions.
+
+### App-level Fields
+
+| Field | Type | Description |
+|---|---|---|
+| `name` | *string* | Unique name of the App. |
+| `descr` | *string* | Description of the app. |
+| `page` | *string* | URL of the project page, shown as the `project-page` property of the App. |
+| `category` | *string* | Classification group shown in the App list (e.g., network, system, utilities). |
+| `default-credentials` | *string* | Login credentials in the `username:password` format. Informative only; can be left blank.|
+| `icon` | *string* | URL of an icon image displayed in the WebFig landing page. |
+| `url-path` | *string* | Path appended to the App URL, for example `/login` or `/web`. |
+| `auto-update` | *boolean* | When `true`, the App is updated automatically when a new container image is available. |
+| `supported-archs` | *list of strings* | CPU architectures supported by the App: `arm`, `arm64`, `arm_v5`, and `x86`. Devices not matching the specified architecture will not display the app. |
+| `compatible-boards` | *list of strings* | Board names supported by the App, for example `RDS2216`. The `*` wildcard is accepted. Devices not matching the specified board name will not display the app. |
+| `services` | *map* | Container service definitions. At least one service is required. |
+| `volumes` | *map* | Named volume declarations used by the services. |
+| `secrets` | *map* | Secret names for the App, referenced with `[secret:name]` in `environment`. |
+| `configs` | *map* | Configuration file declarations mounted into the services. |
+| `networks` | *map* | Network declarations used by the services. |
+
+### Service Fields
+
+| Field | Type | Description |
+|---|---|---|
+| `image` | *string* | App image to use for the container. Required. |
+| `container_name` | *string* | Name to use with the specific image, as shown in the `/container` menu. |
+| `command` | *string* | Startup command executed inside the container. |
+| `entrypoint` | *string* | Executable used as the container entry point. |
+| `environment` | *list or map* | Environment variables passed to the container.|
+| `volumes` | *list* | Mount points attached to the container. |
+| `ports` | *list* | Port mappings from the router to the container. |
+| `expose` | *list* | Ports exposed to other containers without publishing them on the router. |
+| `restart` | *string* | Restart policy of the container. `unless-stopped`, `always`, and `on-failure`. |
+| `depends_on` | *list* | Service names that must start before this service. |
+| `healthcheck` | *map* | Run a healthcheck when container starts. See example below. |
+| `shm_size` | *string* | Shared memory size, for example `512mb` or `1gb`. |
+| `stop_grace_period` | *string* or *int* | Timeout for graceful shutdown, for example `30s` or `0`. 30 seconds by default. |
+| `devices` | *list* | Hardware devices passed through to the container, for example `- /dev/ttyACM0:/dev/ttyACM0`. |
+| `user` | *string* | Linux user or UID the container runs as. |
+| `hostname` | *string* | Hostname set in the container. |
+| `security_opt` | *list* | Container security options. |
+| `build` | *map* | Build configuration for a locally built image. |
+| `secrets` | *list* | Secret names available to this service, mounted as files at `/run/secrets/<name>`. |
+| `configs` | *list* | Configuration files mounted into this service. |
+
+### Healthcheck
+
+A health check probes the service to verify that the application is running correctly. The 'test' parameter runs inside the container, and the service is considered healthy when the command returns exit code 0:
+
+```yaml
+healthcheck:
+  test: ["CMD", "curl -f http://localhost:8080/ || exit 1"]
+  interval: 30s
+  retries: 3
+  start_period: 30s
+  timeout: 10s
+```
+
+### Runtime Placeholders
+
+Environment variable values and the default-credentials field can contain placeholders that RouterOS replaces when the App runs.
+
+| Placeholder | Description |
+|---|---|
+| `[accessIP]` | IP address or hostname used to access the App from outside. |
+| `[accessPort]` | Router port mapped to the App web interface. |
+| `[accessProto]` | Protocol used to access the App, `http` or `https`. |
+| `[containerIP]` | IP address assigned to the container. |
+| `[containerInterface]` | Name of the VETH interface created for the App. |
+| `[routerIP]` | IP address of the router on the App network. |
+| `[env:variable]` | Value of an environment variable of the App. |
+| `[env:service:variable]` | Value of an environment variable of the specifiec service. |
+| `[secret:name]` | Value of the secret declared in the app-level `secrets` section. |
+
+Use placeholders in environment values to configure services automatically:
+
+```yaml
+environment:
+  - NEXTCLOUD_TRUSTED_DOMAINS=[accessIP]
+  - APP_URL=[accessProto]://[accessIP]:[accessPort]
+```
+
+### Volumes
+
+Add persistent data to a service:
+
+```yaml
+services:
+  app:
+    image: docker.io/example/app:latest
+    volumes:
+      - data:/data              # persistent directory in the App storage
+      - appdata/conf:/etc/app   # sub-directory, mounted at /etc/app
+      - ./custom:/custom        # relative to the storage path
+```
+
+### Secrets
+
+Secrets store passwords and keys separately from the environment. Declare secrets in the app-level `secrets` section and reference them with `[secret:name]` in environment values and default-credentials. RouterOS generates the secret value when the App runs:
+
+```yaml
+secrets:
+  db_password:
+  admin_password:
+services:
+  db:
+    image: docker.io/postgres:17
+    environment:
+      POSTGRES_PASSWORD: "[secret:db_password]"
+  server:
+    image: docker.io/example/server:latest
+    environment:
+      ADMIN_PASSWORD: "[secret:admin_password]"
+```
+
+Alternatively, list a secret under a service to mount it as a file at `/run/secrets/<name>`:
+
+```yaml
+services:
+  server:
+    image: docker.io/example/server:latest
+    environment:
+      DB_PASSWORD_FILE: /run/secrets/db_password
+    secrets:
+      - db_password
+```
+
+### Configs
+
+Configs provide configuration files to containers as text. Declare content in the app-level `configs` section and mount it into a service with `source`, `target`, and optional `mode`.
+
+```yaml
+configs:
+  mosquitto_conf:
+    content: |
+      listener 1883
+      allow_anonymous true
+services:
+  mosquitto:
+    image: docker.io/eclipse-mosquitto:latest
+    configs:
+      - source: mosquitto_conf
+        target: /mosquitto/config/mosquitto.conf
+        mode: 0644
+```
+
+The `source` is the name of the app-level config declaration, `target` is the path inside the container, and `mode` is the file permission.
+
+### Networks
+
+By default, an App runs on an internal network behind NAT and services are reached through mapped ports. To place the App directly on a network, define the default network in the app-level `networks` section with an external network.
+
+```yaml
+networks:
+  default:
+    name: lan
+    external: true
+```
+
+## Custom app store
+
+The App system supports custom app stores served as a YAML array, where each element of the array is an app definition. The file must be hosted on a server the device can reach over the network.
+
+Example of a YAML array consisting of two apps:
+
+```yaml
+- name: code-server-xxx
+  descr: Code-server is VS Code running on a remote server, accessible through the browser.
+  page: https://coder.com
+  category: development
+  icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/code-server-logo.png
+  default-credentials: <no_username>:password
+  services:
+    code-server:
+      image: lscr.io/linuxserver/code-server:latest
+      container_name: code-server
+      user: "0:0"
+      environment:
+        PUID: 0
+        PGID: 0
+        PASSWORD: password
+        PWA_APPNAME: code-server
+      volumes:
+        - config:/config
+        - media:/data/media
+      ports:
+        - 8443:8443:web
+- name: code-server-yyy
+  descr: Code-server is VS Code running on a remote server, accessible through the browser.
+  page: https://coder.com
+  category: development
+  icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/code-server-logo.png
+  default-credentials: <no_username>:password
+  services:
+    code-server:
+      image: lscr.io/linuxserver/code-server:latest
+      container_name: code-server
+      user: "0:0"
+      environment:
+        PUID: 0
+        PGID: 0
+        PASSWORD: password
+        PWA_APPNAME: code-server
+      volumes:
+        - config:/config
+        - media:/data/media
+      ports:
+        - 8443:8443:web
+```
+
+## Tips and Best Practices
 
 - **Storage:** For optimal performance and greater capacity, consider using external storage devices such as USB drive, SATA drive, or NVMe SSD.
 

@@ -1,0 +1,11 @@
+{
+  "position": 25,
+  "label": "tr069-client",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/tr069-client/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/tr069-client"
+}

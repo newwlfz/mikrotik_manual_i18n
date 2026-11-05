@@ -8,8 +8,8 @@ tags:
   - 'pfifo'
   - 'bfifo'
   - 'queues'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/queue-types/pfifo-bfifo
-captured_at: '2026-11-04T11:28:18+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/queues/queue-types/pfifo-bfifo
+captured_at: '2026-11-04T11:15:51+08:00'
 ---
 
 ## Overview

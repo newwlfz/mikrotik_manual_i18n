@@ -1,0 +1,43 @@
+---
+sidebar_key: "cli-reference/system/device-mode/update"
+sidebar_position: 2
+title: "update"
+sidebar_label: 'update'
+source: https://manual.mikrotik.com/docs/7.24/cli-reference/system/device-mode/update
+captured_at: '2026-11-01T21:29:50+08:00'
+---
+
+-----------
+
+## system/device-mode/update 
+**Type:** Command
+
+<ArgTable c1="Argument" c2="Type" c3="Description">
+<ArgTableRow arg="mode" typ="enum"></ArgTableRow>
+<ArgTableRow arg="flagged" typ="bool"></ArgTableRow>
+<ArgTableRow arg="flagging-enabled" typ="bool"></ArgTableRow>
+<ArgTableRow arg="scheduler" typ="bool"></ArgTableRow>
+<ArgTableRow arg="socks" typ="bool"></ArgTableRow>
+<ArgTableRow arg="fetch" typ="bool"></ArgTableRow>
+<ArgTableRow arg="pptp" typ="bool"></ArgTableRow>
+<ArgTableRow arg="l2tp" typ="bool"></ArgTableRow>
+<ArgTableRow arg="bandwidth-test" typ="bool"></ArgTableRow>
+<ArgTableRow arg="traffic-gen" typ="bool"></ArgTableRow>
+<ArgTableRow arg="sniffer" typ="bool"></ArgTableRow>
+<ArgTableRow arg="ipsec" typ="bool"></ArgTableRow>
+<ArgTableRow arg="romon" typ="bool"></ArgTableRow>
+<ArgTableRow arg="proxy" typ="bool"></ArgTableRow>
+<ArgTableRow arg="hotspot" typ="bool"></ArgTableRow>
+<ArgTableRow arg="smb" typ="bool"></ArgTableRow>
+<ArgTableRow arg="email" typ="bool"></ArgTableRow>
+<ArgTableRow arg="zerotier" typ="bool"></ArgTableRow>
+<ArgTableRow arg="container" typ="bool"></ArgTableRow>
+<ArgTableRow arg="install-any-version" typ="bool"></ArgTableRow>
+<ArgTableRow arg="partitions" typ="bool"></ArgTableRow>
+<ArgTableRow arg="routerboard" typ="bool"></ArgTableRow>
+<ArgTableRow arg="activation-timeout" typ="time"></ArgTableRow>
+</ArgTable>
+
+<ArgTable c1="Read-only Argument" c2="Type" c3="Description">
+<ArgTableRow arg="update" typ="string"></ArgTableRow>
+</ArgTable>

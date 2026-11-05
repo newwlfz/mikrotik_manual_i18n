@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/bgp/connection"
 sidebar_position: 2
 title: "connection"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/bgp/connection
-captured_at: '2026-11-01T21:29:27+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/bgp/connection
+captured_at: '2026-11-01T21:25:04+08:00'
 ---
 
 -----------
@@ -35,7 +35,7 @@ In addition to connection-specific parameters, template-specific parameters are 
 <ArgTableRow arg="local.address" typ="address (flags=46i:)" unset="1"></ArgTableRow>
 <ArgTableRow arg="local.port" typ="num" unset="1"></ArgTableRow>
 <ArgTableRow arg="local.ttl" typ="num">Time To Live (hop limit) that will be recorded in sent TCP packets.</ArgTableRow>
-<ArgTableRow arg="local.role" typ="enum (ibgp | ibgp-rr | ebgp | ebgp-provider | ebgp-rs | ebgp-rs-client | ebgp-customer | ebgp-peer)" mandatory="1">BGP role. In most scenarios, set to iBGP or eBGP. For more information on BGP roles, see the corresponding [RFC 9234](https://tools.ietf.org/html/rfc9234).</ArgTableRow>
+<ArgTableRow arg="local.role" typ="enum (ibgp | ibgp-rr | ebgp | ebgp-provider | ebgp-rs | ebgp-rs-client | ebgp-customer | ebgp-peer)" mandatory="1">BGP role. In most scenarios, set to iBGP or eBGP. For more information on BGP roles and route leak prevention, see [Route Leak Prevention](/docs/user-guides/routing-and-networking-protocols/unicast/bgp/route-leak-prevention) and the corresponding [RFC 9234](https://tools.ietf.org/html/rfc9234).</ArgTableRow>
 <ArgTableRow arg="tcp-md5-key" typ="string" unset="1">Key used to authenticate the connection with TCP MD5 signature as described in [RFC 2385](https://tools.ietf.org/html/rfc2385). Leave empty to disable authentication.</ArgTableRow>
 <ArgTableRow arg="connect" typ="bool">Whether to allow the router to initiate the connection.</ArgTableRow>
 <ArgTableRow arg="listen" typ="bool">Enable listening for incoming connections. If `remote.address` is a host address and listening is enabled, close the listening socket after the first successful accept. If `remote.address` is a subnet and listening is enabled, the listening socket remains open after the first successful accept with a hard-coded limit of 256 open connections.</ArgTableRow>

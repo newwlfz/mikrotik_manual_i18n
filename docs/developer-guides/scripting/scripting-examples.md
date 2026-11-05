@@ -6,8 +6,8 @@ sidebar_label: 'Scripting examples'
 description: 'This page provides scripting examples for MikroTik RouterOS, demonstrating how to create and modify files, append text, check IP changes, strip netmasks, and resolve hostnames using RouterOS scripting commands.'
 tags:
   - 'scripting'
-source: https://manual.mikrotik.com/docs/developer-guides/scripting/scripting-examples
-captured_at: '2026-11-04T11:27:51+08:00'
+source: https://manual.mikrotik.com/docs/7.25/developer-guides/scripting/scripting-examples
+captured_at: '2026-11-04T11:15:14+08:00'
 ---
 
 It is not possible to create a file directly; however, you can use the following workaround:

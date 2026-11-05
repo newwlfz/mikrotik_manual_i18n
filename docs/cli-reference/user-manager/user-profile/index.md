@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/user-manager/user-profile/index"
 sidebar_position: 2
 title: "user-profile"
 sidebar_label: 'user-profile'
-source: https://manual.mikrotik.com/docs/cli-reference/user-manager/user-profile
-captured_at: '2026-11-01T21:30:34+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/user-profile
+captured_at: '2026-11-01T21:26:12+08:00'
 ---
 
 -----------

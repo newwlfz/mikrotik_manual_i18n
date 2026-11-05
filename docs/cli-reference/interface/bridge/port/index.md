@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/bridge/port/index"
 sidebar_position: 1
 title: "port"
 sidebar_label: 'port'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/bridge/port
-captured_at: '2026-11-01T21:27:01+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/port
+captured_at: '2026-11-01T21:22:25+08:00'
 ---
 
 -----------
@@ -47,6 +47,7 @@ captured_at: '2026-11-01T21:27:01+08:00'
 <ArgTableRow arg="trusted" typ="bool"></ArgTableRow>
 <ArgTableRow arg="trusted-ra" typ="bool"></ArgTableRow>
 <ArgTableRow arg="trusted-dhcpv6" typ="bool"></ArgTableRow>
+<ArgTableRow arg="trusted-arp" typ="bool"></ArgTableRow>
 <ArgTableRow arg="mvrp-registrar-state" typ="enum (normal | fixed)"></ArgTableRow>
 <ArgTableRow arg="mvrp-applicant-state" typ="enum (normal-participant | non-participant)"></ArgTableRow>
 <ArgTableRow arg="multicast-router" typ="enum (disabled | temporary-query | permanent) { disabled:0, temporary-query:1, permanent:2 }"></ArgTableRow>

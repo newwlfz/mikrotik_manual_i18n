@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/dude/ros/arp"
 sidebar_position: 2
 title: "arp"
 sidebar_label: 'arp'
-source: https://manual.mikrotik.com/docs/cli-reference/dude/ros/arp
-captured_at: '2026-11-01T21:26:50+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/dude/ros/arp
+captured_at: '2026-11-01T21:22:14+08:00'
 ---
 
 -----------

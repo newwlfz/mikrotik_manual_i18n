@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/ethernet/switch/host"
 sidebar_position: 6
 title: "host"
 sidebar_label: 'host'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/host
-captured_at: '2026-11-01T21:27:09+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ethernet/switch/host
+captured_at: '2026-11-01T21:22:34+08:00'
 ---
 
 -----------
@@ -19,18 +19,18 @@ captured_at: '2026-11-01T21:27:09+08:00'
 </ArgTable>
 
 <ArgTable c1="Argument" c2="Type" c3="Description">
-<ArgTableRow arg="switch" typ="enum" mandatory="1"></ArgTableRow>
-<ArgTableRow arg="mac-address" typ="macAddr"></ArgTableRow>
+<ArgTableRow arg="switch" typ="enum" mandatory="1">Name of the switch to which the MAC address is going to be assigned.</ArgTableRow>
+<ArgTableRow arg="mac-address" typ="macAddr">Host's MAC address.</ArgTableRow>
 <ArgTableRow arg="ports" typ="multi { array-id, port: alt { port: enum
 , trunk: iface_enum
  }
- }" mandatory="1"></ArgTableRow>
-<ArgTableRow arg="copy-to-cpu" typ="bool"></ArgTableRow>
-<ArgTableRow arg="redirect-to-cpu" typ="bool"></ArgTableRow>
-<ArgTableRow arg="drop" typ="bool"></ArgTableRow>
-<ArgTableRow arg="mirror" typ="bool"></ArgTableRow>
-<ArgTableRow arg="vlan-id" typ="num"></ArgTableRow>
-<ArgTableRow arg="share-vlan-learned" typ="bool"></ArgTableRow>
+ }" mandatory="1">Name of the interface, a static MAC address can be mapped to more than one port, including the switch CPU port.</ArgTableRow>
+<ArgTableRow arg="copy-to-cpu" typ="bool">Whether to send a frame copy to the switch CPU port from a frame with a matching MAC destination address (matching destination or source address for CRS3xx series switches).</ArgTableRow>
+<ArgTableRow arg="redirect-to-cpu" typ="bool">Whether to redirect a frame to the switch CPU port from a frame with a matching MAC destination address (matching destination or source address for CRS3xx series switches).</ArgTableRow>
+<ArgTableRow arg="drop" typ="bool">Whether to drop a frame with a matching MAC source address received on a certain port (matching destination or source address for CRS3xx series switches).</ArgTableRow>
+<ArgTableRow arg="mirror" typ="bool">Whether to send a frame copy to the `mirror-target` port from a frame with a matching MAC destination address (matching destination or source address for CRS3xx series switches).</ArgTableRow>
+<ArgTableRow arg="vlan-id" typ="num">VLAN ID for the statically added MAC address entry.</ArgTableRow>
+<ArgTableRow arg="share-vlan-learned" typ="bool">Whether the static host MAC address lookup is used with shared-VLAN-learning (SVL) or independent-VLAN-learning (IVL).</ArgTableRow>
 </ArgTable>
 
 <ArgTable c1="Read-only Argument" c2="Type" c3="Description">

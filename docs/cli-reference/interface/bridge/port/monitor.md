@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/bridge/port/monitor"
 sidebar_position: 2
 title: "monitor"
 sidebar_label: 'monitor'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/bridge/port/monitor
-captured_at: '2026-11-01T21:27:01+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/port/monitor
+captured_at: '2026-11-01T21:22:27+08:00'
 ---
 
 -----------

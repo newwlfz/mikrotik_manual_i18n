@@ -8,8 +8,8 @@ tags:
   - 'cellular-modems'
   - 'peripherals'
   - 'usb'
-source: https://manual.mikrotik.com/docs/hardware/peripherals
-captured_at: '2026-11-04T11:29:33+08:00'
+source: https://manual.mikrotik.com/docs/7.25/hardware/peripherals
+captured_at: '2026-11-04T11:17:33+08:00'
 ---
 
 This article describes supported add-on peripherals for RouterBOARD hardware devices.

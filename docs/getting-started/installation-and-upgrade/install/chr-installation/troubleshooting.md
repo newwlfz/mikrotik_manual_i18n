@@ -7,8 +7,8 @@ tags:
   - 'vlan'
   - 'igmp'
   - 'security-settings'
-source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation/troubleshooting
-captured_at: '2026-11-04T11:28:43+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/installation-and-upgrade/install/chr-installation/troubleshooting
+captured_at: '2026-11-04T11:16:23+08:00'
 ---
 
 ### Using Bridge on Linux

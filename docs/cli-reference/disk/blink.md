@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/disk/blink"
 sidebar_position: 1
 title: "blink"
 sidebar_label: 'blink'
-source: https://manual.mikrotik.com/docs/cli-reference/disk/blink
-captured_at: '2026-11-01T21:26:40+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/disk/blink
+captured_at: '2026-11-01T21:22:05+08:00'
 ---
 
 -----------
@@ -15,5 +15,5 @@ captured_at: '2026-11-01T21:26:40+08:00'
 
 <ArgTable c1="Argument" c2="Type" c3="Description">
 <ArgTableRow arg="slots" typ="multi { array-id, slot: enum
- }"></ArgTableRow>
+ }">Disks whose LED should blink, if device supports it.</ArgTableRow>
 </ArgTable>

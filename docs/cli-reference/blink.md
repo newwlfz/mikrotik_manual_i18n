@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/blink"
 sidebar_position: 3
 title: "blink"
 sidebar_label: 'blink'
-source: https://manual.mikrotik.com/docs/cli-reference/blink
-captured_at: '2026-11-01T21:26:18+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/blink
+captured_at: '2026-11-01T21:21:43+08:00'
 ---
 
 -----------

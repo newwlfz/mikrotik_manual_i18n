@@ -7,8 +7,8 @@ description: 'This page provides a step-by-step guide for first-time MikroTik Ro
 tags:
   - 'dhcp'
   - 'firewall'
-source: https://manual.mikrotik.com/docs/getting-started/first-time-configuration
-captured_at: '2026-11-04T11:28:44+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/first-time-configuration
+captured_at: '2026-11-04T11:16:39+08:00'
 ---
 
 ## Before You Begin

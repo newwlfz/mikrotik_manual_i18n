@@ -7,8 +7,8 @@ description: 'Ethernet over IP (EoIP) Tunneling in MikroTik RouterOS creates sec
 tags:
   - 'eoip'
   - 'bridging'
-source: https://manual.mikrotik.com/docs/virtual-private-networks/eoip
-captured_at: '2026-11-04T11:34:29+08:00'
+source: https://manual.mikrotik.com/docs/7.25/virtual-private-networks/eoip
+captured_at: '2026-11-04T11:23:02+08:00'
 ---
 
 Ethernet over IP (EoIP) Tunneling is a MikroTik RouterOS protocol designed to create an Ethernet tunnel between two routers over an IP network. It is based on GRE encapsulation (RFC 1701) and allows Ethernet frames to be transported across routed IP infrastructure, effectively extending a Layer 2 network between remote sites.
@@ -20,56 +20,32 @@ EoIP tunnels can operate over IPIP, PPTP, or any other IP-based transport that s
 Typical use cases for EoIP include bridging LAN segments over the internet, extending LANs across encrypted tunnels (when combined with IPsec or other secure transport), and connecting networks over wireless point-to-point or ad-hoc links.
 
 EoIP encapsulates Ethernet frames inside GRE (IP protocol 47) packets and forwards them to the remote tunnel endpoint. The receiving router decapsulates the packets and injects the original Ethernet frames into the local bridge domain.
-**Sub-menu:** `/interface/eoip`
 
-## Property Description
-
-| Property | Description |
-| :-- | :-- |
-| **allow-fast-path** (*yes \| no*; Default: **yes**) | Whether to allow FastPath processing. Must be disabled if IPsec tunneling is used. |
-| **arp (***disabled \| enabled \| proxy-arp \| reply-only*; Default: **enabled)** | Address Resolution Protocol mode.disabled - the interface will not use ARPenabled - the interface will use ARPproxy-arp - the interface will use the ARP proxy featurereply-only - the interface will only reply to requests originated from matching IP address/MAC address combinations which are entered as static entries in the `/ip/arp` table. No dynamic entries will be automatically stored in the `/ip/arp` table. Therefore for communications to be successful, a valid static entry must already exist. |
-| **arp-timeout** (*integer[/time]*; Default: **auto**) | Time interval in which ARP entries should time out. |
-| **clamp-tcp-mss** (*yes \| no*; Default: **yes**) | Controls whether to change MSS size for received TCP SYN packets. When enabled, a router will change the MSS size for received TCP SYN packets if the current MSS size exceeds the tunnel interface MTU (taking into account the TCP/IP overhead).The received encapsulated packet will still contain the original MSS, and only after decapsulation the MSS is changed. |
-| **comment** (*string*; Default: ) | Short description of the interface. |
-| **disabled** (*yes \| no*; Default: **no**) | Whether an item is disabled. |
-| **dont-fragment** (*inherit \| no*; Default: **no**) | Whether to include DF bit in related packets:  *no* - fragment if needed, *inherit* - use Don't Fragment flag of original packet.  (Without Don't Fragment: inherit - packet may be fragmented). |
-| **dscp** (*integer: 0-63*; Default: **inherit**) | DSCP value of packet. Inherited option means that dscp value will be inherited from packet which is going to be encapsulated. |
-| **ipsec-secret** (*string*; Default: ) *[sensitive](/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters)* | When secret is specified, router adds dynamic IPsec peer to remote-address with pre-shared key and policy (by default phase2 uses sha1/aes128cbc). |
-| **keepalive** (*integer[/time],integer 0..4294967295*; Default: **10s,10**) | Tunnel keepalive parameter sets the time interval in which the tunnel running flag will remain even if the remote end of tunnel goes down. If configured time,retries fail, interface running flag is removed. Parameters are written in following format: `KeepaliveInterval,KeepaliveRetries` where `KeepaliveInterval` is time interval and `KeepaliveRetries` - number of retry attempts. By default keepalive is set to 10 seconds and 10 retries. |
-| **l2mtu** (*integer; read-only*) | Layer2 Maximum transmission unit. Not configurable for EoIP. [MTU in RouterOS](/docs/hardware/mtu-in-routeros) |
-| **local-address** (*IP*; Default: ) | Source address of the tunnel packets, local on the router. |
-| **loop-protect** |  |
-| **loop-protect-disable-time** |  |
-| **loop-protect-send-interval** |  |
-| **mac-address** (*MAC*; Default: ) | Media Access Control number of an interface. The address numeration authority IANA allows the use of MAC addresses in the range from **00:00:5E:80:00:00 - 00:00:5E:FF:FF:FF** freely |
-| **mtu** (*integer*; Default: **auto**) | Layer3 Maximum transmission unit |
-| **name** (*string*; Default: ) | Interface name |
-| **remote-address** (*IP*; Default: ) | IP address of remote end of EoIP tunnel |
-| **tunnel-id** (*integer: 0..65535*; Default: ) | Unique tunnel identifier, which must match other side of the tunnel |
+EoIP is configured in [`/interface/eoip`](/docs/cli-reference/interface/eoip) and [`/interface/eoipv6`](/docs/cli-reference/interface/eoipv6)menus.
 
 ## Configuration Examples
 
 The parameter tunnel-id is a method of identifying a tunnel. It must be unique for each EoIP tunnel.
 
 :::tip
-EoIP tunnel adds at least 42-byte overhead (8-byte GRE + 14-byte Ethernet + 20-byte IP). MTU should be set to 1500 to eliminate packet fragmentation inside the tunnel (that allows transparent bridging of Ethernet-like networks so that it would be possible to transport full-sized Ethernet frames over the tunnel).
+EoIP tunnel adds at least 42-byte overhead (8-byte GRE + 14-byte Ethernet + 20-byte IP). Set MTU to 1500 to eliminate packet fragmentation inside the tunnel, allowing transparent bridging of Ethernet-like networks so you can transport full-sized Ethernet frames over the tunnel.
 :::
 
-When bridging EoIP tunnels, it is highly recommended to set unique MAC addresses for each tunnel for the bridge algorithms to work correctly. For EoIP interfaces you can use MAC addresses that are in the range from **00:00:5E:80:00:00 - 00:00:5E:FF:FF:FF**, which IANA has reserved for such cases. Alternatively, you can set the second bit of the first byte to modify the auto-assigned address into a 'locally administered address', assigned by the network administrator, and thus use any MAC address. You just need to ensure they are unique between the hosts connected to one bridge.
+When bridging EoIP tunnels, you should set unique MAC addresses for each tunnel for the bridge algorithms to work correctly. For EoIP interfaces you can use MAC addresses in the range from **00:00:5E:80:00:00 - 00:00:5E:FF:FF:FF**, which IANA has reserved for such cases. Alternatively, you can set the second bit of the first byte to modify the auto-assigned address into a 'locally administered address', assigned by the network administrator, and thus use any MAC address. You just need to ensure they are unique between the hosts connected to one bridge.
 
 ### Example
 
-Let us assume we want to bridge two networks: 'Station' and 'AP'. By using EoIP, a setup can be made so that Station and AP LANs are in the same Layer2 broadcast domain.
+This example shows how to bridge two networks: 'Station' and 'AP'. With EoIP, you can set up the network so that Station and AP LANs share the same Layer 2 broadcast domain.
 
 Consider the following setup:
 
 ![](./img/eoip-01.webp)
 
-As you know, wireless stations cannot be bridged; to overcome this limitation (not involving WDS), we will create an EoIP tunnel over the wireless link and bridge it with interfaces connected to local networks.
+Wireless stations cannot be bridged. To overcome this limitation without WDS, create an EoIP tunnel over the wireless link and bridge it with interfaces connected to local networks.
 
-We will not cover wireless configuration in this example, let's assume that the wireless link is already established.
+This example does not cover wireless configuration. Assume the wireless link is already established.
 
-At first, we create an EoIP tunnel on our AP:
+First, create an EoIP tunnel on the AP:
 
 ```ros
 /interface/eoip/add name="eoip-remote" tunnel-id=0 remote-address=10.0.0.2 disabled=no
@@ -103,13 +79,13 @@ Flags: X - disabled; R - running
       keepalive=10s,10 dscp=inherit clamp-tcp-mss=yes dont-fragment=no allow-fast-path=yes  
 ```
 
-Next, we will bridge local interfaces with an EoIP tunnel on our AP. If you already have a local bridge interface, simply add the EoIP interface to it:
+Next, bridge the local interfaces with the EoIP tunnel on the AP. If you already have a local bridge interface, add the EoIP interface to it:
 
 ```ros
 /interface/bridge/port/add bridge=bridge1 interface=eoip-remote
 ```
 
-The bridge port list should list all local LAN interfaces and the EoIP interface:
+The bridge port list shows all local LAN interfaces and the EoIP interface:
 
 ```ros
 [admin@AP] > /interface/bridge/port/print 

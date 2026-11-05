@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/bridge/calea/index"
 sidebar_position: 1
 title: "calea"
 sidebar_label: 'calea'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/bridge/calea
-captured_at: '2026-11-01T21:27:00+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/calea
+captured_at: '2026-11-01T21:22:22+08:00'
 ---
 
 -----------

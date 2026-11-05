@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/task/add"
 sidebar_position: 1
 title: "add"
 sidebar_label: 'add'
-source: https://manual.mikrotik.com/docs/cli-reference/task/add
-captured_at: '2026-11-01T21:30:12+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/task/add
+captured_at: '2026-11-01T21:25:49+08:00'
 ---
 
 -----------

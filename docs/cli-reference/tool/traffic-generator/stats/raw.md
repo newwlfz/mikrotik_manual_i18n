@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/tool/traffic-generator/stats/raw"
 sidebar_position: 3
 title: "raw"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/stats/raw
-captured_at: '2026-11-01T21:30:27+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/traffic-generator/stats/raw
+captured_at: '2026-11-01T21:26:03+08:00'
 ---
 
 -----------

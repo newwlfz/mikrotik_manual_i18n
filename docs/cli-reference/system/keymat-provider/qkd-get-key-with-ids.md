@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/keymat-provider/qkd-get-key-with-ids"
 sidebar_position: 3
 title: "qkd-get-key-with-ids"
-source: https://manual.mikrotik.com/docs/cli-reference/system/keymat-provider/qkd-get-key-with-ids
-captured_at: '2026-11-01T21:29:53+08:00'
+sidebar_label: 'qkd-get-key-with-ids'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/keymat-provider/qkd-get-key-with-ids
+captured_at: '2026-11-01T21:25:35+08:00'
 ---
 
 -----------

@@ -7,8 +7,8 @@ description: 'L3 Hardware Offloading enables routing at wire speed by offloading
 tags:
   - 'l3hw'
   - 'switching'
-source: https://manual.mikrotik.com/docs/bridging-and-switching/l3-hardware-offloading
-captured_at: '2026-11-04T11:27:10+08:00'
+source: https://manual.mikrotik.com/docs/7.25/bridging-and-switching/l3-hardware-offloading
+captured_at: '2026-11-04T11:14:21+08:00'
 ---
 
 **Layer 3 Hardware Offloading** (**L3HW**, otherwise known as IP switching or HW routing) allows offloading some router features onto the switch chip. This allows reaching wire speeds when routing packets, which would simply not be possible with the CPU.
@@ -70,159 +70,7 @@ The existing connections may be unaffected by the `l3-hw-offloading` setting cha
 
 ### L3HW Settings
 
-#### Basic Settings
-
-The L3HW Settings menu allows configuring global parameters for the Layer 3 Hardware Offloading driver.
-
-**Sub-menu:** `/interface/ethernet/switch/l3hw-settings`
-
-| Property | Description |
-| :-- | :-- |
-| **autorestart** (*yes \| no*; Default: **no**) | Automatically restarts the l3hw driver in case of an error. Otherwise, if an error occurs, `l3-hw-offloading` gets disabled, and the error code is displayed in the switch settings and [#monitor](/docs/bridging-and-switching/l3-hardware-offloading#monitor). Autorestart does not work for system failures, such as OOM (Out Of Memory). |
-| **fasttrack-hw** (*yes \| no*; Default: **yes**(if supported)) | Enables or disables FastTrack HW Offloading. Keep it enabled unless HW TCAM memory reservation is required, e.g., for dynamic switch ACL rules creation. Not all switch chips support FastTrack HW Offloading (see **hw-supports-fasttrack**). |
-| **ipv6-hw** (*yes \| no*; Default: **no**) | Enables or disables IPv6 Hardware Offloading. Since IPv6 routes occupy a lot of HW memory, enable it only if IPv6 traffic speed is significant enough to benefit from hardware routing. |
-| **icmp-reply-on-error** (*yes \| no*; Default: **yes**) | Since the hardware cannot send ICMP messages, the packet must be redirected to the CPU to send an ICMP reply in case of an error (e.g., "Time Exceeded", "Fragmentation required", etc.). Enabling icmp-reply-on-error helps with network diagnostics but may open potential vulnerabilities for DDoS attacks. Disabling icmp-reply-on-error silently drops the packets on the hardware level in case of an error. |
-
-**Read-Only Properties**
-
-| Property | Description |
-| :-- | :-- |
-| **hw-supports-fasttrack** (**yes \| no**) | Indicates if the hardware (switch chip) supports FastTrack HW Offloading. |
-
-#### Advanced Settings
-
-This menu allows tweaking l3hw settings for specific use cases.
-
-:::danger
-It is NOT recommended to change the advanced L3HW settings unless instructed by MikroTik Support or a MikroTik Certified Routing Engineer. Applying incorrect settings may break the L3HW operation.
-:::
-
-**Sub-menu:** `/interface/ethernet/switch/l3hw-settings`
-
-| Property | Description |
-| :-- | :-- |
-| **route-queue-limit-high** (*number*; Default: **256**) | The switch driver stops route indexing when **route-queue-size** (see [#monitor](/docs/bridging-and-switching/l3-hardware-offloading#monitor) exceeds this value. Lowering this value leads to faster route processing but increases the lag between a route's appearance in RouterOS and hardware memory.  Setting **route-queue-limit-high=0** disables route indexing when there are any routes in the processing queue -  the most efficient CPU usage but the longest delay before hardware offloading. Useful when there are static routes only. Not recommended together with routing protocols (such as BGP or OSPF) when there are frequent routing table changes. |
-| **route-queue-limit-low** (*number*; Default: **0**) | Re-enable route indexing when **route-queue-size** drops down to this value. Must not exceed the high limit.  Setting **route-queue-limit-low=0** tells the switch driver to process all pending routes before the next hw-offloading attempt. While this is the desired behavior, it may completely block the hw-offloading under a constant BGP feed. |
-| **shwp-reset-counter** (*number*; Default: **128**) | Reset the Shortest HW Prefix (see **ipv4-shortest-hw-prefix** / **ipv6-shortest-hw-prefix** in [#monitor](/docs/bridging-and-switching/l3-hardware-offloading#monitor) and try the full route table offloading after this number of changes in the routing table. At a partial offload, when the entire routing table does not fit into the hardware memory and shorter prefixes are redirected to the CPU, there is no need to try offloading route prefixes shorter than SHWP since those will get redirected to the CPU anyway, theoretically. However, significant changes to the routing table may lead to a different index layout and, therefore, a different number of routes that can be hw-offloaded. That's why it is recommended to do the full table re-indexing occasionally.  Lowering this value may allow more routes to be hw-offloaded but increases CPU usage and vice-versa. Setting **shwp-reset-counter=0** always does full re-indexing after each routing table change.  This setting is used only during Partial Offloading and has no effect when **ipv4-shortest-hw-prefix=0** (and ipv6, respectively). |
-| **partial-offload-chunk** (*number*; Default: **1024**, min: 16) | The minimum number of routes for incremental adding in Partial Offloading. Depending on the switch chip model, routes are offloaded either as-is (each routing entry in RouterOS corresponds to an entry in the hardware memory) or get indexed, and the index entries are the ones that are written into the hardware memory. This setting is used only for the latter during Partial Offloading.  Depending on index fragmentation, a single IPv4 route addition can occupy from -3 to +6 LPM blocks of HW memory (some route additions may lower the amount of required HW memory thanks to index defragmentation). Hence, it is impossible to predict the exact number of routes that may fit in the hardware memory. The switch driver uses a binary split algorithm to find the maximum number of routes that fit in the hardware.  Let's imagine 128k routes, all of them not fitting into the hardware memory. The algorithm halves the number and tries offloading 64k routes. Let's say offloading succeeded. In the next iteration, the algorithm picks 96k, let's say it fails; then 80k - fails again, 72k - succeeds, 76k, etc. until the difference between succeeded and failed numbers drops below the **partial-offload-chunk** value.  Lowering the **partial-offload-chunk** value increases the number of hw-offloaded routes but also raises CPU usage and vice-versa. |
-| **route-index-delay-min** (*time*; Default: **1s**) | The minimum delay between route processing and its offloading. The delay allows processing more routes together and offloading them at once, saving CPU usage. It also makes offloading the entire routing table faster by reducing the per-route processing work. On the other hand, it slows down the offloading of an individual route.  If an additional route is received during the delay, the latter resets to the **route-index-delay-min** value. Adding more and more routes within the delay keeps resetting the timer until the **route-index-delay-max** is reached. |
-| **route-index-delay-max** (*time*; Default: **10s**) | The maximum delay between route processing and its offloading. When the maximum delay is reached, the processed routes get offloaded despite more routes pending. However, **route-queue-limit-high**has higher priority than this, meaning that the indexing/offloading gets paused anyway when a certain queue size is reached. |
-| **neigh-keepalive-interval** (*time*; Default: **15s**, min: 5s) | Neighbor (host) keepalive interval. When a host (IP neighbor) gets hw-offloaded, all traffic from/to it is routed by the switch chip, and RouterOS may think the neighbor is inactive and delete it. To prevent that, the switch driver must keep the offloaded neighbors alive by sending periodic refreshes to RouterOS. |
-| **neigh-discovery-interval** (*time*; Default: **1m37s**, min: 30s) | Unfortunately, switch chips do not provide per-neighbor stats. Hence, the only way to check if the offloaded host is still active is by sending occasional ARP (IPv4) / Neighbor Discovery (IPv6) requests to the connected network. Increasing the value lowers the broadcast traffic but may leave inactive hosts in hardware memory for longer.  Neighbor discovery is triggered within the neighbor keepalive work. Hence, the discovery time is rounded up to the next keepalive session. Choose a value for **neigh-discovery-interval** not divisible by **neigh-keepalive-interval** to send ARP/ND requests in various sessions, preventing broadcast bursts. |
-| **neigh-discovery-burst-limit**(*number*; Default: **64**) | The maximum number of ARP/ND requests that can be sent at once. |
-| **neigh-discovery-burst-delay** (*time*; Default: **300ms**, min: 10ms) | The delay between ARP/ND subsequent bursts if the number of requests exceeds **neigh-discovery-burst-limit**. |
-
-:::info
-Some settings only apply to certain switch models.
-:::
-
-#### Monitor
-
-The L3HW Monitor feature has been introduced in RouterOS version 7.10. It allows monitoring of switch chip and driver stats related to L3HW.
-
-```ros
-/interface/ethernet/switch/l3hw-settings/monitor
-        ipv4-routes-total: 99363
-           ipv4-routes-hw: 61250
-          ipv4-routes-cpu: 38112
-  ipv4-shortest-hw-prefix: 24
-               ipv4-hosts: 87
-        ipv6-routes-total: 15
-           ipv6-routes-hw: 11
-          ipv6-routes-cpu: 4
-  ipv6-shortest-hw-prefix: 0
-               ipv6-hosts: 7
-         route-queue-size: 118
-     fasttrack-ipv4-conns: 2031
-   fasttrack-hw-min-speed: 0
-              nexthop-cap: 8192
-            nexthop-usage: 93
-    vxlan-mtu-packet-drop: 0
-```
-
-**Stats**
-
-| Property | Description |
-| :-- | :-- |
-| **ipv4-routes-total** | The total number of IPv4 routes handled by the switch driver. |
-| **ipv4-routes-hw** | The number of hardware-offloaded IPv4 routes (a.k.a. hardware routes) |
-| **ipv4-routes-cpu** | The number of IPv4 routes redirected to the CPU (a.k.a. software routes) |
-| **ipv4-shortest-hw-prefix** | *Shortest Hardware Prefix (SHWP)* for IPv4. If the entire IPv4 routing table does not fit into the hardware memory, *partial offloading* is applied, where the longest prefixes are hw-offloaded while the shorter ones are redirected to the CPU. This field shows the shortest route prefix (/x) that is offloaded to the hardware memory. All prefixes shorter than this are processed by the CPU. `ipv4-shortest-hw-prefix=0` means the entire IPv4 routing table is offloaded to the hardware memory. |
-| **ipv4-hosts** | The number of hardware-offloaded IPv4 hosts (/32 routes) |
-| **ipv6-routes-total** <sup>1</sup> | The total number of IPv6 routes handled by the switch driver. |
-| **ipv6-routes-hw** <sup>1</sup> | The number of hardware-offloaded IPv6 routes (a.k.a. hardware routes) |
-| **ipv6-routes-cpu** <sup>1</sup> | The number of IPv6 routes redirected to the CPU (a.k.a. software routes) |
-| **ipv6-shortest-hw-prefix** <sup>1</sup> | *Shortest Hardware Prefix (SHWP)* for IPv6. If the entire IPv6 routing table does not fit into the hardware memory, *partial offloading* is applied, where the longest prefixes are hw-offloaded while the shorter ones are redirected to the CPU. This field shows the shortest route prefix (/x) that is offloaded to the hardware memory. All prefixes shorter than this are processed by the CPU. `ipv6-shortest-hw-prefix=0` means the entire IPv6 routing table is offloaded to the hardware memory. |
-| **ipv6-hosts** <sup>1</sup> | The number of hardware-offloaded IPv6 hosts (/128 routes) |
-| **route-queue-size** | The number of routes in the queue for processing by the switch chip driver. Under normal working conditions, this field is 0, meaning that all routes are processed by the driver. |
-| **nexthop-cap** | The nexthop capacity. |
-| **nexthop-usage** | The number of currently used nexthops. |
-| **vxlan-mtu-packet-drop** | The number of dropped VXLAN packets due to exceeded interface MTU settings. |
-| **fasttrack-ipv4-conns** <sup>2</sup> | The number of hardware-offloaded FastTrack connections. |
-| **fasttrack-hw-min-speed** <sup>2</sup> | When the hardware memory for storing FastTrack is full, this field shows the minimum speed (in bytes per second) of a hw-offloaded FastTrack connection. Slower connections are routed by the CPU. |
-
----
-
-<sup>1</sup> IPv6 stats appear only when IPv6 hardware routing is enabled (`ipv6-hw=yes`)  
-<sup>2</sup> FastTrack stats appear only when hardware offloading of FastTrack connections is enabled (`fasttrack-hw=yes`)
-
-#### Advanced Monitor
-
-An enhanced version of Monitor with extra telemetry data for advanced users. Advanced Monitor contains all data from the basic monitor plus the fields listed below.
-
-```ros
-/interface/ethernet/switch/l3hw-settings/advanced> monitor once
-        ipv4-routes-total: 29968
-           ipv4-routes-hw: 29957
-          ipv4-routes-cpu: 11
-  ipv4-shortest-hw-prefix: 0
-               ipv4-hosts: 3
-        ipv6-routes-total: 4
-           ipv6-routes-hw: 0
-          ipv6-routes-cpu: 4
-  ipv6-shortest-hw-prefix: 0
-               ipv6-hosts: 0
-         route-queue-size: 0
-         route-queue-rate: 0
-       route-process-rate: 0
-     fasttrack-ipv4-conns: 0
-     fasttrack-queue-size: 0
-     fasttrack-queue-rate: 0
-   fasttrack-process-rate: 0
-   fasttrack-hw-min-speed: 0
-   fasttrack-hw-offloaded: 0
-    fasttrack-hw-unloaded: 0
-                  lpm-cap: 54560
-                lpm-usage: 31931
-             lpm-bank-cap: 2728
-           lpm-bank-usage: 46,0,0,0,2589,2591,1983,0,2728,2728,2728,2728,2728,2728,2728,2728,2728,170,0,0
-                  pbr-cap: 8192
-                pbr-usage: 0
-             pbr-lpm-bank: 3
-                nat-usage: 0
-              nexthop-cap: 8192
-            nexthop-usage: 85
-```
-
-**Stats**
-
-| Property | Description |
-| :-- | :-- |
-| **route-queue-rate** | The rate at which routes are added to the queue for processing by the switch driver. In other words, the growth rate of **route-queue-size** (routes per second) |
-| **route-process-rate** | The rate at which previously queued routes are processed by the switch driver. In other words, the shrink rate of **route-queue-size** (routes per second) |
-| **fasttrack-queue-size** | The number of FastTrack connections in the queue for processing by the switch chip driver. |
-| **fasttrack-queue-rate** | The rate at which FastTrack connections are added to the queue for processing by the switch driver. In other words, the growth rate of **fasttrack-queue-size** (connections per second) |
-| **fasttrack-process-rate** | The rate at which previously queued FastTrack connections are processed by the switch driver. In other words, the shrink rate of **fasttrack-queue-size** (connections per second) |
-| **fasttrack-hw-offloaded** | The number of FastTrack connections offloaded to the hardware. The counter resets every second (or every monitor interval). |
-| **fasttrack-hw-unloaded** | The number of FastTrack connections unloaded from the hardware (redirected to software routing). The counter resets every second (or every monitor interval). |
-| **lpm-cap** | The size of the LPM hardware table (LPM = Longest Prefix Match). LPM stores route indexes for hardware routing. Not every switch chip model uses LPM. Others use TCAM. |
-| **lpm-usage** | The number of used LPM blocks. **lpm-usage**/ **lpm-cap** = usage percentage. |
-| **lpm-bank-cap** | LPM memory is organized in banks - special memory units. The bank size depends on the switch chip model. This value shows the size of a single bank (in LPM blocks). **lpm-cap** / **lpm-bank-cap** = the number of banks (usually, 20). |
-| **lpm-bank-usage** | Per-bank LPM usage (in LPM blocks) |
-| **pbr-cap** | The size of the Policy-Based Routing (PBR) hardware table. PBR is used for NAT offloading of FastTrack connections. |
-| **pbr-usage** | The number of used PBR entries. **pbr-usage**/ **pbr-cap** = usage percentage. |
-| **pbr-lpm-bank** | PBR shares LPM memory banks with routing tables. This value shows the LPM bank index shared with PBR (0 = the first bank). |
-| **nat-usage** | The number of used NAT hardware entries (for FastTrack connections). |
+Settings menu [`/interface/ethernet/switch/l3hw-settings`](https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/l3hw-settings/l3hw-settings) can be used to tweak L3HW behavior according to setup needs.
 
 ### Interface Lists
 
@@ -315,11 +163,13 @@ add dst-port=20561 ports=sfp-sfpplus1,sfp-sfpplus2 protocol=udp redirect-to-cpu=
 
 ### Inter-VLAN Routing
 
-Since L3HW depends on L2HW, and L2HW is the one that does VLAN processing, Inter-VLAN *hardware* routing requires a hardware bridge underneath. Even if a particular VLAN has only one tagged port member, the port must be a bridge member. Do not assign a VLAN interface directly to a switch port! Otherwise, L3HW offloading fails and the traffic will get processed by the CPU:
+Since L3HW depends on L2HW, and L2HW is the one that does VLAN processing, Inter-VLAN *hardware* routing typically requires a hardware bridge underneath. Even if a particular VLAN has only one tagged port member, the port must be a bridge member, and the VLAN interface must be assigned to the bridge.
+
+Devices with Marvell 98DX7xxx series switch chips are an exception — they also support hardware routing between VLAN interfaces created directly on Ethernet switch ports, without a bridge:
 
 `/interface/vlan/add interface=ether2 name=vlan20 vlan-id=20`
 
-Assign the VLAN interface to the bridge instead. This way, VLAN configuration gets offloaded to the hardware, and, with L3HW enabled, the traffic is subject to inter-VLAN hardware routing.
+On all other L3HW devices, do not assign a VLAN interface directly to a switch port — such an interface does not get offloaded and its traffic is routed by the CPU. Assign the VLAN interface to the bridge instead. This way, VLAN configuration gets offloaded to the hardware, and, with L3HW enabled, the traffic is subject to inter-VLAN hardware routing.
 
 #### VLAN Configuration Example
 
@@ -339,18 +189,18 @@ For Inter-VLAN routing, the bridge interface must be a tagged member of every ro
 
 ### Per-VLAN offloading
 
-Since RouterOS 7.21, it is possible to configure L3HW offloading per individual VLAN interface using the `l3-hw-offloading=yes|no` setting in the `/interface/vlan` menu. This provides finer control over which VLANs (and their related routes) are offloaded to the switch chip, and which are processed by the CPU. It is no longer necessary to disable L3HW on a switch port in order to disable L3HW routing for specific VLANs.
+It is possible to configure L3HW offloading per individual VLAN interface using the `l3-hw-offloading=yes|no` setting in the `/interface/vlan` menu. This provides finer control over which VLANs (and their related routes) are offloaded to the switch chip, and which are processed by the CPU. It is no longer necessary to disable L3HW on a switch port in order to disable L3HW routing for specific VLANs.
 
 VLAN interface gets offloaded (receives the H flag) only when ALL the following conditions are met:
 
 - VLAN interface has `l3-hw-offloading=yes`.
-- VLAN interface is created on a hardware-offloaded, vlan-filtering bridge.
-- All switch ports that are the members of the VLAN have l3-hw-offloading=yes.
+- VLAN interface is created on a hardware-offloaded, vlan-filtering bridge, or, on 98DX7xxx switches, directly on an Ethernet switch port.
+- All involved switch ports have l3-hw-offloading=yes — all member ports of the VLAN for the bridge case, or the parent port for a VLAN interface created directly on a switch port.
 
 For inter-VLAN routing, both ingress and egress VLANs must be hw-offloaded, otherwise, packets are sent to the CPU.
 
 :::info
-If a switch port carries multiple VLANs with different L3HW settings, keep the port's `l3-hw-enabled=yes`.
+If a switch port carries multiple VLANs with different L3HW settings, keep the port's `l3-hw-offloading=yes`.
 :::
 
 ### L3HW MAC Address Range Limitation (DX2000/DX3000 series only)
@@ -605,7 +455,7 @@ add name=vlan10 vlan-id=10 interface=sfp-sfpplus1
 add name=vlan20 vlan-id=20 interface=bond1
 ```
 
-Due to Layer 2 dependency, only VLAN interfaces created on a hardware-offloaded, vlan-filtering bridge is capable of L3HW offloading. The correct configuration is:
+Due to Layer 2 dependency, on most devices only VLAN interfaces created on a hardware-offloaded, vlan-filtering bridge are capable of L3HW offloading. The correct configuration is:
 
 ```ros
 /interface/bridge/port
@@ -622,7 +472,7 @@ add name=vlan20 vlan-id=20 interface=bridge1
 ```
 
 :::warning
-If VLAN interfaces are created directly on Ethernet or bonding interfaces, packets may be offloaded incorrectly - bypassing CPU processing (such as firewall and NAT) and causing undefined behavior.
+If VLAN interfaces are created directly on Ethernet or bonding interfaces on devices that do not support offloading such interfaces (see [Inter-VLAN Routing](#inter-vlan-routing)), packets may be offloaded incorrectly - bypassing CPU processing (such as firewall and NAT) and causing undefined behavior.
 
 If this type of configuration is required, L3HW offloading must be disabled on the related switch ports under the `/interface/ethernet/switch/port` menu by setting `l3-hw-offloading=no`.
 :::
@@ -685,7 +535,7 @@ Since Fasttrack HW Offloading offers near-the-wire-speed performance at zero con
 
 ### Trying to offload slow-path connections
 
-Using certain configurations (e.g. enabling bridge "**use-ip-firewall**" setting, creating bridge nat/filter rules) or running specific features like sniffer or torch can disable RouterOS [FastPath](/docs/firewall-and-quality-of-service/packet-flow-in-routeros#fast-path), which will affect the ability to properly FastTrack and HW offload connections. If HW offloaded Fasttrack is required, make sure that there are no settings that disable the FastPath and verify that connections are getting the "H" flag or use the L3HW [monitor](/docs/bridging-and-switching/l3-hardware-offloading#monitor) command to see the number of HW offloaded connections.
+Using certain configurations (e.g. enabling bridge "**use-ip-firewall**" setting, creating bridge nat/filter rules) or running specific features like sniffer or torch can disable RouterOS [FastPath](/docs/firewall-and-quality-of-service/packet-flow-in-routeros#fast-path), which will affect the ability to properly FastTrack and HW offload connections. If HW offloaded Fasttrack is required, make sure that there are no settings that disable the FastPath and verify that connections are getting the "H" flag or use the L3HW [monitor](/docs/cli-reference/interface/ethernet/switch/l3hw-settings/monitor) command to see the number of HW offloaded connections.
 
 ## L3HW Feature Support
 
@@ -704,18 +554,18 @@ Using certain configurations (e.g. enabling bridge "**use-ip-firewall**" setting
 | Blackholes | **HW** | `/ip/route/add dst-address=10.0.99.0/24 blackhole` | 7.1 |
 | `gateway=<interface_name>` | **CPU/HW** | `/ip/route/add dst-address=10.0.0.0/24 gateway=ether1` This works only for directly connected networks. Since HW does not know how to send ARP requests, CPU sends an ARP request and waits for a reply to find out the DST MAC address on the first received packet of the connection that matches a DST IP address. After DST MAC is determined, HW entry is added and all further packets will be processed by the switch chip. | 7.1 |
 | Bridge | **HW** | Routing from/to [hardware-offloaded bridge](/docs/bridging-and-switching/#bridge-hardware-offloading) interface. | 7.1 |
-| VLAN | **HW** | Routing between VLAN interfaces that are created on hardware-offloaded bridge interface with [vlan-filtering](/docs/bridging-and-switching/#bridge-vlan-filtering). `/interface/vlan` | 7.1 |
+| VLAN | **HW** | Routing between VLAN interfaces that are created on hardware-offloaded bridge interface with [vlan-filtering](/docs/bridging-and-switching/#bridge-vlan-filtering). On [98DX7xxx](#crs8xx-switch-98dx7xxx-series) switches, also between VLAN interfaces created directly on Ethernet switch ports. `/interface/vlan` | 7.1 |
 | Bonding | **HW** | Routing between bonding interfaces. `/interface/bonding` Only `802.3ad` and `balance-xor` bonding modes are hardware offloaded. | 7.1 |
 | IPv4 Firewall | **FW** | Users must choose either HW-accelerated routing or firewall. Firewall rules get processed by the CPU. ***Fasttrack*** connections get offloaded to HW. | 7.1 |
 | IPv4 NAT | **FW** | NAT rules applied to the offloaded ***Fasttrack*** connections get processed by HW too. | 7.1 |
 | MLAG | **N/A** |  |  |
 | VRF | **HW** | [Hardware-offloaded VRF](#hardware-offloaded-vrf). |  |
 | VRRP | **N/A** |  |  |
-| Controller Bridge and Port Extender | **N/A** |  |  |
 | Traffic-Flow | **N/A** | L3HW offloaded traffic is not reported through [Traffic Flow](/docs/diagnostics-monitoring-and-troubleshooting/traffic-flow/). |  |
 | VXLAN | **HW** | Support for hardware-offloaded [VXLAN](/docs/bridging-and-switching/vxlan) data plane, VXLAN encapsulation and decapsulation. This allows for static one-to-one VLAN-to-VXLAN mappings within a vlan-filtering bridge.  At this point, some known features are not yet implemented.  **Underlay (routing encapsulated VXLAN packets):**  1. VTEPs are not supported over ECMP  2. VTEPs are not supported over bond, bridge, VLAN interfaces (only stand-alone routed Ethernet interfaces are supported)  3. VTEPs are not supported over multicast  4. VXLAN hardware offloading is limited to the `main` routing table. VTEPs cannot operate within VRFs.  5. VTEPs are not supported with IPv6  **Overlay (forwarding between Ethernet and VXLAN):**  1. VLAN tagging over VXLAN is not supported  2. Routing between different VXLAN VNIs is not supported  3. VTEPs are isolated, and there is no mechanism to control "horizon" between them.  4. Bridged VXLAN interfaces do not support IGMP snooping. When snooping is enabled, MDB entries on VXLAN are not offloaded, and multicast traffic gets restricted between Ethernet and VXLAN.  5. Bridged VXLAN interfaces are not supported by MLAG. `/interface/vxlan` | 7.18 |
 | MTU | **HW** | The hardware supports up to 8 MTU profiles. | 7.1 |
 | QinQ Routing | **CPU** | Stacked routable VLAN interfaces will lose L3HW offloading, while routable VLAN interfaces created directly on the bridge interface can still use HW offloading. |  |
+| IPv4 routes with IPv6 nexthops or vice versa | **N/A** |  |  |
 
 :::warning
 Mixing hardware-forwarded and FastTrack/CPU-forwarded packets of the same flow can select different ECMP nexthops, causing asymmetric routing and connection resets.

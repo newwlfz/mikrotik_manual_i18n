@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/setup-repeater"
 sidebar_position: 19
 title: "setup-repeater"
 sidebar_label: 'setup-repeater'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/setup-repeater
-captured_at: '2026-11-01T21:28:03+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/setup-repeater
+captured_at: '2026-11-01T21:23:28+08:00'
 ---
 
 -----------

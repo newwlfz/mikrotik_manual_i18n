@@ -3,63 +3,56 @@ sidebar_key: "network-management/socks/socksify"
 sidebar_position: 2
 title: "Socksify"
 sidebar_label: 'Socksify'
-description: 'Socksify enables routing specific traffic through a SOCKS proxy server, allowing applications without native proxy support to use one. It supports multiple services and can be configured with firewall filters for precise traffic management, including examples using TOR.'
+description: 'Socksify forwards traffic chosen by firewall NAT rules through an upstream SOCKS5 server, so applications without SOCKS support can use a SOCKS proxy. Includes a Tor proxy example.'
 tags:
   - 'socksify'
   - 'firewall'
   - 'nat'
-source: https://manual.mikrotik.com/docs/network-management/socks/socksify
-captured_at: '2026-11-04T11:32:48+08:00'
+source: https://manual.mikrotik.com/docs/7.25/network-management/socks/socksify
+captured_at: '2026-11-04T11:21:23+08:00'
 ---
 
-[*Socksify CLI Reference*](/docs/cli-reference/ip/socksify)
+Socksify forwards traffic selected by firewall rules through an upstream SOCKS5 server, for applications that do not support SOCKS themselves. A destination NAT rule with `action=socksify` redirects the matching connections to the service, and the service asks the SOCKS server to connect to the connection's original destination.
 
-Socksify is a service that allows the router to send specific traffic through a SOCKS proxy server, even if the application itself does not natively support proxy connections.  
-It intercepts network calls and redirects them through a configured SOCKS proxy.
+Multiple socksify services can be configured at once, each forwarding to its own upstream server, so different traffic classes can use different proxies.
 
-Socksify service is used in combination with [NAT](/docs/firewall-and-quality-of-service/firewall/nat) action=`socksify`. All available firewall filters can be used to precisely select only per-application/source traffic to be redirected via socks proxy.
+Prerequisites:
 
-Multiple Socksify services can be configured simultaneously, which allows connections to multiple SOCKS servers for better traffic management.
+- The upstream server must speak SOCKS5. The RouterOS SOCKS server works when set to `version=5`; with the default `version=4` a SOCKS5 client is refused.
+- `socks5-server` accepts IPv4 addresses only.
+- New records are created disabled. Changes to a record's settings apply after you disable and re-enable the record, not while it is running.
+- The upstream credentials are visible as plain text in `print detail` output.
 
-### Property Description
+The service refuses to proxy connections to LAN destinations (RFC 1918 private addresses); the log shows `cannot socksify LAN destination` under the `socksify` topic.
 
-**Sub-menu:** `/ip/socksify`
+:::warning
+Select traffic for redirection carefully with the NAT rule matchers. Always exclude the router's own addresses with `dst-address-type=!local`: without it, a rule that matches too much redirects the router's own services (for example SSH or WebFig) to the proxy and cuts off management access.
+:::
 
-| Property | Description |
-| :-- | :-- |
-| **disabled** (*yes* \| *no*; Default: yes) | Whether the Socksify record is active. |
-| **socks5-password** (*string*; Default: ) | Password for the SOCKS5 proxy server access. |
-| **socks5-user**(*string*; Default: ) | Username for the SOCKS5 proxy server access. |
-| **connection-timeout** (*integer:* 0..3000; Default: 60) | Time in seconds that specifies how long to wait for the SOCKS proxy or destination to respond during connection setup before aborting with an error. Setting this value to 0 disables the connection timeout. |
-| **name**(*string*; Default: ) | Name of the Socksify service. |
-| **socks5-port**(*integer*: 1..65535; Default: 1080) | Listening port of the SOCKS5 proxy server. |
-| **socks5-server**(*IPv4;* Default: 0.0.0.0 ) | IP address of the SOCKS5 proxy server. (only IPv4 addresses are supported) |
-| **port** (*integer*: 1..65535; Default: 952) | TCP port which will be used by the Socksify service. |
+## Use in combination with a Tor proxy
 
-## Configuration examples
+Socksify can forward traffic through Tor for privacy. The configuration forwards HTTP and HTTPS traffic through the Tor SOCKS5 proxy server.
 
-### Use in combination with TOR SOCKS5 proxy server
-
-Socksify can be used in combination with TOR to achieve better privacy and anonymity for an application that does not have integrated SOCKS support.  
-The configuration below will allow you to forward HTTP/s traffic through the TOR SOCKS5 proxy server.  
-First you will need to configure the socksify service.
+First create the socksify service:
 
 ```ros
-/ip/socksify 
-add connection-timeout=10 disabled=no name=TOR_socksify socks5-port=9050 socks5-server=<TOR_SOCKS_proxy_IP>
+/ip/socksify
+add connection-timeout=10 disabled=no name=Tor_socksify socks5-port=9050 socks5-server=<TOR_SOCKS_PROXY_IP>
 ```
 
-After that you will need to configure the firewall to ensure that the correct traffic is being socksified and the socks traffic is allowed.
+Then configure the firewall to socksify the selected traffic and allow it to the service:
 
 ```ros
 /ip/firewall/filter
-add action=accept chain=input dst-port=952 protocol=tcp src-address=<SOCKS_client_IP> 
+add action=accept chain=input dst-port=952 protocol=tcp src-address=<SOCKS_CLIENT_IP>
 /ip/firewall/nat
-add action=socksify chain=dstnat dst-port=80,443 protocol=tcp socksify-service=TOR_socksify src-address=<SOCKS_client_IP> 
+add action=socksify chain=dstnat dst-address-type=!local dst-port=80,443 protocol=tcp socksify-service=Tor_socksify src-address=<SOCKS_CLIENT_IP>
 ```
 
-### TOR container and secure DNS tutorial
+The input accept rule is needed because the redirected connections arrive at the router itself (port 952 of the socksify service); when the input filter drops traffic from clients, the service never sees them. The `dst-address-type=!local` matcher keeps traffic to the router's own addresses out of the proxy.
 
-Since RouterOS supports running containers, you could also set up the Tor proxy in a container. In addition to that, if you are going to be using Tor for browsing the web, you should consider protecting your DNS requests.
+## Tor container and secure DNS tutorial
 
-For detailed, step-by-step instructions watch the video [here](https://www.youtube.com/watch?v=ECRjxpb5IgE&lc=Ugy6V6EEAwyu2UC8ZJB4AaABAg).
+RouterOS can also run the Tor proxy in a container. When you use Tor for browsing the web, consider protecting your DNS requests as well.
+
+For detailed, step-by-step instructions watch the [Tor container and secure DNS tutorial video](https://www.youtube.com/watch?v=ECRjxpb5IgE&lc=Ugy6V6EEAwyu2UC8ZJB4AaABAg).

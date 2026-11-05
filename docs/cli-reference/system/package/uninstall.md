@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/package/uninstall"
 sidebar_position: 7
 title: "uninstall"
-source: https://manual.mikrotik.com/docs/cli-reference/system/package/uninstall
-captured_at: '2026-11-01T21:29:59+08:00'
+sidebar_label: 'uninstall'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/package/uninstall
+captured_at: '2026-11-01T21:25:36+08:00'
 ---
 
 -----------

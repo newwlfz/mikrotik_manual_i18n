@@ -4,8 +4,8 @@ sidebar_position: 3
 title: "Using the GPIO as pulse input from a meter device"
 sidebar_label: 'Using the GPIO as pulse input from a meter device'
 description: 'Use a MikroTik device''s GPIO as a pulse input to read water, energy, or other meters, with a RouterOS script that counts the pulses.'
-source: https://manual.mikrotik.com/docs/internet-of-things/gpio/using-gpio-as-pulse-input-from-meter
-captured_at: '2026-11-04T11:31:11+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/gpio/using-gpio-as-pulse-input-from-meter
+captured_at: '2026-11-04T11:18:24+08:00'
 ---
 
 Some water, energy or other meters have pulse outputs. The specification of the meter describes how many pulses represents one integer measurement unit. For example, the energy meter we used to create this manual generates 1000 pulses to represent 1kWh, so each pulse is 1Wh. You can use the digital GPIO input of the KNOT (pin5) to read these pulses and count the energy consumed behind the energy meter. In order to do so, it requires to create a simple MOSFET schematic and connect everything as in the following image:

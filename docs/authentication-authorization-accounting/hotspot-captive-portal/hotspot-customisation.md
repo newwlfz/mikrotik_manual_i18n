@@ -8,8 +8,8 @@ tags:
   - 'hotspot'
   - 'servlet-pages'
   - 'radius'
-source: https://manual.mikrotik.com/docs/authentication-authorization-accounting/hotspot-captive-portal/hotspot-customisation
-captured_at: '2026-11-04T11:27:04+08:00'
+source: https://manual.mikrotik.com/docs/7.25/authentication-authorization-accounting/hotspot-captive-portal/hotspot-customisation
+captured_at: '2026-11-04T11:14:20+08:00'
 ---
 
 #### Introduction

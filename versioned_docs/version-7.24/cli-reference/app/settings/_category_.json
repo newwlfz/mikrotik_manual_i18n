@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "Settings",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/app/settings/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/app/settings"
+}

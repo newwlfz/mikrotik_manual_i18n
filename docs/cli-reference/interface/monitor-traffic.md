@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/monitor-traffic"
 sidebar_position: 23
 title: "monitor-traffic"
 sidebar_label: 'monitor-traffic'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/monitor-traffic
-captured_at: '2026-11-01T21:27:30+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/monitor-traffic
+captured_at: '2026-11-01T21:22:53+08:00'
 ---
 
 -----------

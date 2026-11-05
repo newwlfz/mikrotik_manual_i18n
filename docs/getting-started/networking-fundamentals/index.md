@@ -10,20 +10,20 @@ tags:
   - 'arp'
   - 'ip'
   - 'ipv4'
-source: https://manual.mikrotik.com/docs/getting-started/networking-fundamentals
-captured_at: '2026-11-04T11:28:59+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/networking-fundamentals
+captured_at: '2026-11-04T11:16:58+08:00'
 ---
 
-Computer networks consist of many different components and protocols working together. To understand the concept of how node to node communication happens, let's get familiar to the **OSI model** and **TCP/IP model**. Both models help to visualize how communication between nodes is happening.
+Computer networks consist of many different components and protocols working together. To understand the concept of how node to node communication works, the **OSI model** and **TCP/IP model** help visualize how nodes communicate.
 
 ### OSI Model
 
 The Open Systems Interconnection (OSI) model is a 7-layer model that today is used as a teaching tool. The OSI model was originally conceived as a standard architecture for building network systems, but in real-world networks are much less defined than the OSI model suggests.
 
-- **Layer 7 (Application)** - a protocol that defines the communication between the server and the client, for example, HTTP protocol. If the web browser wants to download an image, the protocol will organize and execute the request;
+- **Layer 7 (Application)** - a protocol that defines the communication between the server and the client, for example, HTTP protocol. If the web browser wants to download an image, the protocol organizes and executes the request;
 - **Layer 6 (Presentation)** - ensures data is received in a usable format. Encryption is done here (but in reality it may not be true, for example, IPSec);
 - **Layer 5 (Session)** - responsible for setting up, managing and closing sessions between client and server;
-- **Layer 4 (Transport)** - transport layers primary responsibility is assembly and reassembly, a data stream is divided into chunks (segments), assigned sequence numbers and encapsulated into protocol header (TCP, UDP, etc.);
+- **Layer 4 (Transport)** - transport layers primary responsibility is assembly and reassembly, a data stream is divided into chunks (segments), assigned sequence numbers and encapsulated into protocol header (TCP, UDP, for example);
 - **Layer 3 (Network)** - responsible for logical device addressing, data is encapsulated within an IP header and now called "packet";
 - **Layer 2 (Data link)** - Data is encapsulated within a custom header, either 802.3 (Ethernet) or 802.11 (wireless) and is called "frame", handles flow control;
 - **Layer 1 (Physical)** - Communication media that sends and receives bits, electric signaling, and hardware interface;
@@ -39,23 +39,23 @@ This model has the same purpose as the OSI model but fits better into modern net
 
 | TCP/IP            | OSI Model          | Protocols                       |
 |:--|:--|:--|
-| Application Layer | Application Layer  | DNS, DHCP,HTTP,SSH etc.         |
-|                   | Presentation Layer | JPEG,MPEG,PICT etc.             |
-|                   | Session Layer      | PAP, SCP, ZIP etc.              |
+| Application Layer | Application Layer  | DNS, DHCP,HTTP,SSH for example.         |
+|                   | Presentation Layer | JPEG,MPEG,PICT for example.             |
+|                   | Session Layer      | PAP, SCP, ZIP for example.              |
 | Transport Layer   | Transport Layer    | TCP, UDP                        |
 | Internet Layer    | Network Layer      | ICMP, IGMP, IPv4, IPv6, IPSec   |
-| Link Layer        | Data Link Layer    | ARP, CDP, MPLS, PPP etc.        |
-|                   | Physical Layer     | Bluetooth, Ethernet, Wi-Fi etc. |
+| Link Layer        | Data Link Layer    | ARP, CDP, MPLS, PPP for example.        |
+|                   | Physical Layer     | Bluetooth, Ethernet, Wi-Fi for example. |
 
 ## Ethernet
 
 The most commonly used link layer protocol (OSI Layer2) in computer networks is the Ethernet protocol. In order to communicate, each node has a unique assigned address, called **MAC** (Media Access Control address) sometimes it is also called an Ethernet address.
 
-It is 48-bit long and typically was fixed by the manufacturer (could not be changed), but nowadays customization of MAC addresses is widely used, RouterOS also allows to set custom MAC address.
+It is 48-bit long and typically was fixed by the manufacturer (could not be changed), but nowadays customization of MAC addresses is widely used, RouterOS also allows setting a custom MAC address.
 
 Most commonly used MAC format is 6 hexadecimal numbers separated by colons (`D4:CA:6D:01:22:96`)
 
-RouterOS shows MAC address in a configuration for all Ethernet-like interfaces (Wireless, 60G, VPLS, etc.)
+RouterOS shows MAC address in a configuration for all Ethernet-like interfaces (Wireless, 60G, VPLS, for example)
 
 ```ros
 [admin@rack1_b32_CCR1036] /interface ethernet> print 
@@ -75,7 +75,7 @@ Flags: X - disabled, R - running, S - slave
 
 There are three types of forwarding frames over the Ethernet network:
 
-- **Unicast** - frame with unicast address is sent to all nodes within the collision domain, which typically is Ethernet cable between two nodes or in case of wireless all receivers that can detect wireless signals. Only remote node with matching MAC address will accept the frame (unless the promiscuous mode is enabled)
+- **Unicast** - frame with unicast address is sent to all nodes within the collision domain, which typically is Ethernet cable between two nodes or in case of wireless all receivers that can detect wireless signals. Only remote node with matching MAC address accepts the frame (unless the promiscuous mode is enabled)
 - **Broadcast** - one of the special addresses (`FF:FF:FF:FF:FF:FF`), a broadcast frame is accepted and forwarded over Layer2 network by all nodes.
 - **Multicast** - frames with multicast addresses are received by all nodes configured to listen to this address.
 
@@ -172,7 +172,7 @@ add address=172.16.1.1/32 interface=ether1 network=10.1.1.1
 
 Even though IP packets are addressed using IP addresses, hardware addresses must be used to actually transport data from one host to another.
 
-This brings us to **Address Resolution Protocol (ARP)** which is used for mapping the **IPv4** address of the host to the hardware address (MAC). **ARP** protocol is referenced in [RFC 826](https://tools.ietf.org/html/rfc826). It is a thing of the past which is eliminated by multicast for IPv6, however it will stay as long as IPv4 is in use.
+This brings us to **Address Resolution Protocol (ARP)** which is used for mapping the **IPv4** address of the host to the hardware address (MAC). **ARP** protocol is referenced in [RFC 826](https://tools.ietf.org/html/rfc826). It is a thing of the past which is eliminated by multicast for IPv6, however it stays as long as IPv4 is in use.
 
 Each network device has a table of currently used ARP entries. Normally the table is built dynamically, but to increase network security, it can be partially or completely built statically by means of adding static entries.
 
@@ -200,7 +200,7 @@ At first, we add IP addresses on **Host A**:
 /ip address add address=10.155.101.217/24 interface=ether1
 ```
 
-Let's run a packet sniffer that saves packet dump to the file and run the ping command on **Host A**:
+Let's run a [`/tool/sniffer`](/docs/cli-reference/tool/sniffer) that saves packet dump to the file and run the ping command on **Host A**:
 
 ```ros
 /tool sniffer
@@ -218,7 +218,7 @@ Now you can download arp.pcap file from the router and open it in Wireshark for 
 - **Host C** responds that 10.155.101.217 can be reached at 08:00:27:3C:79:3A MAC address
 - Both **Host A** and **Host C** now have updated their **ARP** tables and ICMP (ping) packets can be sent
 
-If you look at ARP tables of both hosts by running `/ip/arp/print`, you should be able to see relevant entries:
+If you look at ARP tables of both hosts by running [`/ip/arp/print`](/docs/cli-reference/ip/arp), you should be able to see relevant entries:
 
 ```routeros
 [admin@host_a] /ip arp> print 
@@ -236,7 +236,7 @@ Columns: ADDRESS, MAC-ADDRESS, INTERFACE, VRF, STATUS
 
 There might be scenarios where different behavior is necessary. RouterOS allows configuring different modes for interfaces that support **ARP**:
 
-- **Enabled** - ARPs will be discovered automatically and new dynamic entries will be added to the ARP table. This is a default mode for interfaces.
+- **Enabled** - ARPs are discovered automatically and new dynamic entries are added to the ARP table. This is a default mode for interfaces.
 - **Disabled** - If the ARP feature is turned off on the interface, then ARP requests from clients are not answered by the router. Therefore, static ARP entry should be added to the clients as well. For example,
   Host A:
 
@@ -251,14 +251,14 @@ There might be scenarios where different behavior is necessary. RouterOS allows 
   /ip arp add mac-address=08:00:27:85:69:B5 address=10.155.101.225 interface=ether1
   ```
 
-- **Reply Only** - If the ARP property is set to `reply-only` on the interface, then the router only replies to ARP requests. Neighbour MAC addresses will be resolved using `/ip/arp` statically, but there will be no need to add the router's MAC address to other hosts' ARP tables like in the cases where ARP is disabled.
+- **Reply Only** - If the ARP property is set to `reply-only` on the interface, then the router only replies to ARP requests. Neighbour MAC addresses are resolved by using `/ip/arp` statically, but there is no need to add the router's MAC address to other hosts' ARP tables like in the cases where ARP is disabled.
 
 - **Proxy ARP** - A router with properly configured proxy ARP feature acts as a transparent proxy between directly connected networks. This behavior can be useful, for example, if you want to assign dial-in (PPP, PPPoE, PPTP) clients IP addresses from the same address space as used on the connected LAN.
 
 - **Local Proxy ARP** - If the arp property is set to `local-proxy-arp` on an interface, then the router performs proxy ARP to/from this interface only. I.e. for traffic that comes in and goes out of the same interface. In a normal LAN, the default behavior is for two network hosts to communicate directly with each other, without involving the router.
-  The router will respond to all client hosts with the router's own interface MAC address instead of the other host's MAC address.
+  The router responds to all client hosts with the router's own interface MAC address instead of the other host's MAC address.
 
-  E.g. If Host A (192.168.88.2/24) queries for the MAC address of Host B (192.168.88.3/24), the router would respond with its own MAC address. In other words, if local-proxy-arp is enabled, the router would assume responsibility for forwarding traffic between Host A 192.168.88.2 and Host B 192.168.88.3. All the ARP cache entries on Hosts A and B will reference the router's MAC address. In this case, the router is performing local-proxy-arp for the entire subnet 192.168.88.0/24.
+  For example, if Host A (192.168.88.2/24) queries for the MAC address of Host B (192.168.88.3/24), the router would respond with its own MAC address. In other words, if local-proxy-arp is enabled, the router would assume responsibility for forwarding traffic between Host A 192.168.88.2 and Host B 192.168.88.3. All the ARP cache entries on Hosts A and B reference the router's MAC address. In this case, the router is performing local-proxy-arp for the entire subnet 192.168.88.0/24.
 
   An example for RouterOS local-proxy-arp could be a bridge setup with a DHCP server and isolated bridge ports where hosts from the same subnet can reach each other only at Layer3 through bridge IP.
 
@@ -277,7 +277,7 @@ There might be scenarios where different behavior is necessary. RouterOS allows 
   - Hewlett-Packard calls it Source-Port filtering or port-isolation;
   - Ericsson calls it MAC-Forced Forwarding (RFC Draft).
 
-#### Proxy ARP Example
+### Proxy ARP Example
 
 Let's look at the example diagram.  
 ![](./img/arp_proxy_129531958.jpg)
@@ -310,7 +310,7 @@ Address Resolution Protocol (request)
     Target IP address: 173.16.2.3
 ```
 
-With this ARP request, **Host A** (172.16.1.2) is asking **Host D** (172.16.2.3) to send its MAC address.  Layer-2 broadcast means that frame will be sent to all hosts in the same layer-2 broadcast domain which includes the **ether0** interface of the router, but does not reach **Host D**, because router by default does not forward layer-2 broadcasts.
+With this ARP request, **Host A** (172.16.1.2) is asking **Host D** (172.16.2.3) to send its MAC address.  Layer-2 broadcast means that the frame is sent to all hosts in the same layer-2 broadcast domain which includes the **ether0** interface of the router, but does not reach **Host D**, because router by default does not forward layer-2 broadcasts.
 
 To fix this problem we need to enable `proxy-arp` on ether0:
 
@@ -359,6 +359,17 @@ After MAC table update, **Host A** forwards all the packets intended for **Host 
 
 Multiple IP addresses by the host are mapped to a single MAC address when proxy ARP is used.
 
+### Gratuitous ARP
+
+It is possible to create Gratuitous ARP requests in RouterOS. To do so you must use the [`/tool/traffic-generator/inject`](/docs/cli-reference/tool/traffic-generator/inject) tool. Below is an example of how to generate a Gratuitous ARP request to update the ARP table on a remote device:
+
+```ros
+/tool/traffic-generator/inject interface=ether2 \
+data="ffffffffffff4c5e0c14ef78080600010800060400014c5e0c14ef780a057a01ffffffffffff0a057a01000000000000000000000000000000000000"
+```
+
+You must change the MAC address (4c5e0c14ef78) and the IP address (0a057a01) to your router's address. The IP address and the MAC address must be from the device that requests an ARP table update. You also need to specify through which interface (ether2) you want to send the Gratuitous ARP request. Make sure that the receiving device supports Gratuitous ARP requests.
+
 ## Transport Layer
 
 Protocols in this layer provide end-to-end communication services for applications. These protocols should ensure that packets arrive in sequence and without error, by swapping acknowledgments of data reception, and retransmitting lost packets.
@@ -391,7 +402,7 @@ Connection-oriented protocol services are often sending acknowledgments (ACKs) a
 
 Let’s think about what happens when data-grams are sent out faster than the receiving device can process. The receiver stores them in memory called a buffer. But since buffer space is not unlimited, when its capacity is exceeded receiver starts to drop the frames. All dropped frames must be re-transmitted again which is the reason for low transmission performance.
 
-To address this problem, TCP uses a flow control protocol. The window mechanism is used to control the flow of the data. When a connection is established, the receiver specifies the window field in each TCP frame. Window size represents the amount of received data that the receiver is willing to store in the buffer. Window size (in bytes) is sent together with acknowledgments to the sender. So the size of the window controls how much information can be transmitted from one host to another without receiving an acknowledgment. The sender will send only the amount of bytes specified in window size and then will wait for acknowledgments with updated window size.
+To address this problem, TCP uses a flow control protocol. The window mechanism is used to control the flow of the data. When a connection is established, the receiver specifies the window field in each TCP frame. Window size represents the amount of received data that the receiver is willing to store in the buffer. Window size (in bytes) is sent together with acknowledgments to the sender. So the size of the window controls how much information can be transmitted from one host to another without receiving an acknowledgment. The sender sends only the amount of bytes specified in window size and then waits for acknowledgments with updated window size.
 
 If the receiving application can process data as quickly as it arrives from the sender, then the receiver will send a positive window advertisement (increase the size of the window) with each acknowledgment. It works until the sender becomes faster than the receiver and incoming data will eventually fill the receiver's buffer, causing the receiver to advertise acknowledgment with a zero window. A sender that receives a zero window advertisement must stop transmit until it receives a positive window.  Let's take a look at the illustrated windowing process:
 
@@ -400,7 +411,7 @@ If the receiving application can process data as quickly as it arrives from the 
 3. The **HostA** receives **ACK** and transmits two frames (1000 bytes each).
 4. After that, the receiver advertises an initial window size to 3000. Now sender transmits three frames and waits for an acknowledgement.
 5. The first three segments fill the receiver's buffer faster than the receiving application can process the data, so the advertised window size reaches zero indicating that it is necessary to wait before further transmission is possible.
-6. The size of the window and how fast to increase or decrease the window size is available in various TCP congestion avoidance algorithms such as Reno, Vegas, Tahoe, etc.
+6. The size of the window and how fast to increase or decrease the window size is available in various TCP congestion avoidance algorithms such as Reno, Vegas, and Tahoe.
 
 ```mermaid
 sequenceDiagram
@@ -425,7 +436,7 @@ When the data transmission is complete and the host wants to terminate the conne
 **Four-way** termination process:
 
 1. The **HostA**, who needs to terminate the connection, sends a special message with the **FIN** flag, indicating that it has finished sending the data.
-2. The **HostB**, who receives the **FIN** segment, does not terminate the connection but enters into a "passive close" (CLOSE\_WAIT) state and sends the **ACK** for the **FIN** back to the **HostA**. If **HostB** does not have any data to transmit to the **HostA** it will also send the **FIN** message. Now the **HostB** enters into LAST\_ACK state. At this point it will no longer accept data from **HostA**, but can continue to transmit data.
+2. The **HostB**, who receives the **FIN** segment, does not terminate the connection but enters into a "passive close" (CLOSE\_WAIT) state and sends the **ACK** for the **FIN** back to the **HostA**. If **HostB** does not have any data to transmit to the **HostA** it also sends the **FIN** message. Now the **HostB** enters into LAST\_ACK state. At this point it no longer accepts data from **HostA**, but can continue to transmit data.
 3. When the **HostA** receives the last **FIN** from the **HostB**, it enters a (TIME\_WAIT) state, and sends an **ACK** back to the **HostB**.
 4. **HostB** gets the **ACK** from the **HostA** and connection is terminated.
 

@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/tool/traffic-generator/index"
 sidebar_position: 1
 title: "traffic-generator"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator
-captured_at: '2026-11-01T21:30:26+08:00'
+sidebar_label: 'traffic-generator'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/traffic-generator
+captured_at: '2026-11-01T21:26:01+08:00'
 ---
 
 -----------

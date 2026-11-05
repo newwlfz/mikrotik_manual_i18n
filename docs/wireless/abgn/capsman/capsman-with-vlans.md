@@ -8,8 +8,8 @@ tags:
   - 'capsman'
   - 'vlan'
   - 'bridging'
-source: https://manual.mikrotik.com/docs/wireless/abgn/capsman/capsman-with-vlans
-captured_at: '2026-11-04T11:35:15+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/abgn/capsman/capsman-with-vlans
+captured_at: '2026-11-04T11:23:52+08:00'
 ---
 
 ## Summary

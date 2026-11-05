@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/package/update/index"
 sidebar_position: 4
 title: "update"
-source: https://manual.mikrotik.com/docs/cli-reference/system/package/update
-captured_at: '2026-11-01T21:29:59+08:00'
+sidebar_label: 'update'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/package/update
+captured_at: '2026-11-01T21:25:36+08:00'
 ---
 
 -----------
@@ -16,7 +17,7 @@ Manage the `check-for-updates` channel and perform RouterOS upgrades.
 <ArgTable c1="Argument" c2="Type" c3="Description">
 <ArgTableRow arg="channel" typ="enum (long-term | stable | testing | development)">Upgrade [channel](#channel) to use when checking for new versions.</ArgTableRow>
 <ArgTableRow arg="mode" typ="enum (https | http)">Protocol for connecting to the MikroTik download server. Use `http` only if your network blocks HTTPS. HTTPS is recommended.</ArgTableRow>
-<ArgTableRow arg="check-certificate" typ="enum (no | yes | yes-without-crl)">Whether and how to validate the server SSL certificate. Always use `yes` to ensure a secure connection.</ArgTableRow>
+<ArgTableRow arg="check-certificate" typ="enum (no | yes | yes-without-crl)">Whether and how to validate the server SSL certificate. Always use `yes` to ensure a secure connection. `yes-without-crl` can be used to skip CRL validation.</ArgTableRow>
 <ArgTableRow arg="ip-version" typ="enum (auto | ipv4 | ipv6)">IP version preference for connecting to the MikroTik download server.</ArgTableRow>
 </ArgTable>
 

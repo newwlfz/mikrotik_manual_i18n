@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/mpls/ldp/accept-filter"
 sidebar_position: 1
 title: "accept-filter"
-source: https://manual.mikrotik.com/docs/cli-reference/mpls/ldp/accept-filter
-captured_at: '2026-11-01T21:29:15+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/ldp/accept-filter
+captured_at: '2026-11-01T21:24:47+08:00'
 ---
 
 -----------

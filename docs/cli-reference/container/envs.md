@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/container/envs"
 sidebar_position: 2
 title: "envs"
 sidebar_label: 'envs'
-source: https://manual.mikrotik.com/docs/cli-reference/container/envs
-captured_at: '2026-11-01T21:26:37+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/container/envs
+captured_at: '2026-11-01T21:22:03+08:00'
 ---
 
 -----------

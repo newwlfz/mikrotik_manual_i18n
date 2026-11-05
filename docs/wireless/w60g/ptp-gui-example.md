@@ -8,8 +8,8 @@ tags:
   - 'bridging'
   - 'wireless'
   - 'winbox'
-source: https://manual.mikrotik.com/docs/wireless/w60g/ptp-gui-example
-captured_at: '2026-11-04T11:35:58+08:00'
+source: https://manual.mikrotik.com/docs/7.25/wireless/w60g/ptp-gui-example
+captured_at: '2026-11-04T11:24:24+08:00'
 ---
 
 ### Summary

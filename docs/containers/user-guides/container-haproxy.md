@@ -1,14 +1,14 @@
 ---
 sidebar_key: "containers/user-guides/container-haproxy"
-sidebar_position: 2
+sidebar_position: 3
 title: "Container - HAProxy"
 description: 'This page documents configuring HAProxy as a Container in MikroTik RouterOS, providing step-by-step instructions for setting up reverse proxy and load balancing with HTTPS support using Certbot.'
 tags:
   - 'haproxy'
   - 'container'
   - 'https'
-source: https://manual.mikrotik.com/docs/containers/user-guides/container-haproxy
-captured_at: '2026-11-04T11:27:39+08:00'
+source: https://manual.mikrotik.com/docs/7.25/containers/user-guides/container-haproxy
+captured_at: '2026-11-04T11:14:53+08:00'
 ---
 
 HAProxy is a high-performance reverse proxy and load balancer as a Container.

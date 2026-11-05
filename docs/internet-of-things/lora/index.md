@@ -8,8 +8,8 @@ tags:
   - 'lora'
   - 'lorawan'
   - 'mqtt'
-source: https://manual.mikrotik.com/docs/internet-of-things/lora
-captured_at: '2026-11-04T11:31:15+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/lora
+captured_at: '2026-11-04T11:18:26+08:00'
 ---
 
 This section covers LoRa and LoRaWAN features in RouterOS. Use it to configure LoRa gateways, general properties, and integrations with supported LoRaWAN networks.

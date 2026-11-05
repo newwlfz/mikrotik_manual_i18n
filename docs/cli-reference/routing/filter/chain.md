@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/filter/chain"
 sidebar_position: 1
 title: "chain"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/filter/chain
-captured_at: '2026-11-01T21:29:29+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/filter/chain
+captured_at: '2026-11-01T21:25:07+08:00'
 ---
 
 -----------

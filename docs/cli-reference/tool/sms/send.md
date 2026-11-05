@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/tool/sms/send"
 sidebar_position: 3
 title: "send"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/sms/send
-captured_at: '2026-11-01T21:30:20+08:00'
+sidebar_label: 'send'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/sms/send
+captured_at: '2026-11-01T21:25:58+08:00'
 ---
 
 -----------

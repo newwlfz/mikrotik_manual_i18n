@@ -8,8 +8,8 @@ tags:
   - 'serial-port'
   - 'baud-rate'
   - 'remote-access'
-source: https://manual.mikrotik.com/docs/hardware/ports
-captured_at: '2026-11-04T11:29:26+08:00'
+source: https://manual.mikrotik.com/docs/7.25/hardware/ports
+captured_at: '2026-11-04T11:17:27+08:00'
 ---
 
 ## Summary

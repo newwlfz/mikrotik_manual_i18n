@@ -1,0 +1,11 @@
+{
+  "position": 5,
+  "label": "Proxy",
+  "key": "network-management/proxy",
+  "link": {
+    "type": "doc",
+    "id": "network-management/proxy/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

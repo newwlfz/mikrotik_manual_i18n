@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/iot/mqtt/connect"
 sidebar_position: 2
 title: "connect"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/mqtt/connect
-captured_at: '2026-11-01T21:28:20+08:00'
+sidebar_label: 'connect'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/mqtt/connect
+captured_at: '2026-11-01T21:23:41+08:00'
 ---
 
 -----------

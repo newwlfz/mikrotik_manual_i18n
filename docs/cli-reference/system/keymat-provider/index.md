@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/keymat-provider/index"
 sidebar_position: 1
 title: "keymat-provider"
-source: https://manual.mikrotik.com/docs/cli-reference/system/keymat-provider
-captured_at: '2026-11-01T21:29:51+08:00'
+sidebar_label: 'keymat-provider'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/keymat-provider
+captured_at: '2026-11-01T21:25:29+08:00'
 ---
 
 -----------

@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ip/firewall/connection/index"
 sidebar_position: 1
 title: "connection"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/firewall/connection
-captured_at: '2026-11-01T21:28:32+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/firewall/connection
+captured_at: '2026-11-01T21:23:58+08:00'
 ---
 
 -----------

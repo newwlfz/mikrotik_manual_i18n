@@ -8,8 +8,8 @@ tags:
   - 'routing'
   - 'ospf'
 slug: /user-guides/routing-and-networking-protocols/unicast/ospf/areas-and-virtual-links
-source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/ospf/areas-and-virtual-links
-captured_at: '2026-11-04T11:34:47+08:00'
+source: https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/unicast/ospf/areas-and-virtual-links
+captured_at: '2026-11-04T11:23:13+08:00'
 ---
 
 A distinctive feature of OSPF is the possibility to divide an AS into multiple routing areas, each with its own set of neighbors. Imagine a large network with 300+ routers and multiple links between them. Whenever a link flaps or some other topology change happens in the network, this change is flooded to all OSPF devices in the network. This results in a heavy load on the network and even downtime because [network convergence](/docs/user-guides/routing-and-networking-protocols/routing-decision) can take some time for such a large network.
@@ -45,7 +45,7 @@ add name=stub_area area-id=1.1.1.1 instance=v2inst type=stub
 add name=another_area area-id=2.2.2.2 instance=v2inst type=default
 ```
 
-OSPF can have 5 types of areas, configured by the [`type`](/docs/cli-reference/routing/ospf/interface-template#type) parameter. Each area type defines what type of LSAs the area supports:
+OSPF can have 5 types of areas, configured by the [`type`](https://manual.mikrotik.com/docs/cli-reference/routing/ospf/area/area#type) parameter. Each area type defines what type of LSAs the area supports:
 
 - Standard/default - OSPF packets can be transmitted in this area. It supports types 1, 2, 3, 4, and 5 LSAs.
 - Backbone - As already mentioned, this is the main area where any other area connects. It is basically the same as the standard area but identified with ID 0.0.0.0.
@@ -265,7 +265,7 @@ When redistribution is controlled by the `originate-default` and `redistribute` 
 - If `redistribute` is enabled, pick all routes matching the redistribute parameters.
 - If `originate-default=never`, a default route will be rejected.
 - Run selected routes (or all routes if the redistribute parameter is not set) through [`out-filter-select`](/docs/cli-reference/routing/ospf/instance#out-filter-select) (if configured).
-- Run selected routes through [`out-filter-chain`](/docs/cli-reference/routing/ospf/instance#out-filter-chain) (if configured). See [`/routing/filter`](/docs/cli-reference/routing/filter/chain) for the routing filter reference.
+- Run selected routes through [`out-filter-chain`](/docs/cli-reference/routing/ospf/instance#out-filter-chain) (if configured). See [`/routing/filter`](/docs/cli-reference/routing/filter/rule) for the routing filter reference.
 - If [`originate-default`](/docs/cli-reference/routing/ospf/instance#originate-default) is set to `always` or `if-installed`:
   - OSPF creates a fake default route without attributes.
   - Run this route through [`out-filter-chain`](/docs/cli-reference/routing/ospf/instance#out-filter-chain) where attributes can be applied, but the action is ignored (always accept).
@@ -282,7 +282,7 @@ Inter-area route summarization works on area boundaries (ABRs). It does not appl
 
 Ranges allow creating only one summary LSA for multiple routes and sending only a single advertisement into adjacent areas, or suppressing advertisements altogether.
 
-If a range is configured with the [`advertise`](/docs/cli-reference/routing/ospf/instance) parameter, a single summary LSA is advertised for each range if the specific area has any routes under the range. Otherwise (when the `advertise` parameter is disabled), no summary LSAs are created and advertised outside area boundaries.
+If a range is configured with the [`advertise`](/docs/cli-reference/routing/ospf/area/range) parameter, a single summary LSA is advertised for each range if the specific area has any routes under the range. Otherwise (when the `advertise` parameter is disabled), no summary LSAs are created and advertised outside area boundaries.
 
 Inter-area route summarization can be configured from the [`/routing/ospf/area/range`](/docs/cli-reference/routing/ospf/area/range) menu.
 
@@ -293,13 +293,13 @@ Consider two areas, backbone and area1. Area1 has several /24 routes from the 10
 add prefix=10.0.0.0/16 area=area1 advertise=yes cost=10
 ```
 
-See [`/routing/ospf/area/range`](/docs/cli-reference/routing/ospf/area/range) for the [`advertise`](/docs/cli-reference/routing/ospf/instance) and [`cost`](/docs/cli-reference/routing/ospf/interface-template#cost) parameter references.
+See [`/routing/ospf/area/range`](/docs/cli-reference/routing/ospf/area/range) for the [`advertise`](/docs/cli-reference/routing/ospf/area/range) and [`cost`](/docs/cli-reference/routing/ospf/area/range#cost) parameter references.
 
 :::info
 For an active range (i.e. one that has at least one OSPF route from the specified area falling under it), a route with the type 'blackhole' is created and installed in the routing table.
 :::
 
-External route summarization can be achieved by using [routing filters](/docs/user-guides/routing-and-networking-protocols/route-selection-and-filtering). Consider the same example as the previous one, except area1 has redistributed /24 routes from other protocols. To send a single summarized LSA, add a [blackhole route](https://manual.mikrotik.com/docs/cli-reference/ip/route/route) and configure an appropriate [`/routing/filter/rule`](/docs/cli-reference/routing/filter/chain) to accept only the summarized route:
+External route summarization can be achieved by using [routing filters](/docs/user-guides/routing-and-networking-protocols/route-selection-and-filtering). Consider the same example as the previous one, except area1 has redistributed /24 routes from other protocols. To send a single summarized LSA, add a [blackhole route](https://manual.mikrotik.com/docs/cli-reference/ip/route/route) and configure an appropriate [`/routing/filter/rule`](/docs/cli-reference/routing/filter/rule) to accept only the summarized route:
 
 ```ros
 /ip/route/add dst-address=10.0.0.0/16 blackhole

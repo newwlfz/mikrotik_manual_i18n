@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/isis/instance"
 sidebar_position: 1
 title: "instance"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/isis/instance
-captured_at: '2026-11-01T21:29:32+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/isis/instance
+captured_at: '2026-11-01T21:25:11+08:00'
 ---
 
 -----------

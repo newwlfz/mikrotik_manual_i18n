@@ -3,305 +3,336 @@ sidebar_key: "hardware/disks/index"
 sidebar_position: 1
 title: "Disks"
 sidebar_label: 'Disks'
-description: 'This page documents disk management in MikroTik RouterOS, covering storage device detection, formatting, swap space, and S.M.A.R.T. monitoring. It explains how to add external drives, manage mount points, format disks with various filesystems, and use RAID features. It also emphasizes safely ejecting disks to prevent data loss.'
+description: 'How RouterOS detects, formats and manages disks and partitions: slot names, automatic mounting, mount points, partitions, swap space, RAM-backed folders, file system checks and performance tests.'
 tags:
   - 'disks'
   - 'storage'
   - 'filesystem'
-source: https://manual.mikrotik.com/docs/hardware/disks
-captured_at: '2026-11-04T11:29:18+08:00'
+source: https://manual.mikrotik.com/docs/7.25/hardware/disks
+captured_at: '2026-11-04T11:17:09+08:00'
 ---
+[*Disks CLI Reference*](../../cli-reference/disk/)
 
-This section covers physical disk handling on RouterOS — disk detection, formatting, swap, and S.M.A.R.T. For network storage protocols (iSCSI, NFS, SMB, NVMe over TCP), RAID, filesystems (Btrfs), and other features added by the ROSE package, see the [Storage](/docs/storage/) section.
+RouterOS detects the storage drives connected to the router (USB, SATA, NVMe and microSD drives) and mounts them automatically at boot or when they are plugged in. You can use as many drives as the router supports, for example for the User Manager database, the web proxy cache, container storage or log files.
 
-## Summary
-
-**Sub-menu:** `/disk`
-
-This menu lists all attached storage devices, provided they are supported and in working condition. This is especially useful for RouterBOARD devices with SD/CF/USB/SATA/NVMe slots and x86 systems with additional dedicated storage drives, as the built-in storage is quite small. An external drive comes in handy when you need a large User Manager database, proxy cache, or possibly SMB shares on your router.
-
-You can add as many external or secondary drives as you want and select any number of them for each of the mentioned feature usages. For example, User Manager could be used on three disks devices, with one as the active database and the rest as backups. You can then add a fourth disk, copy the active data to it, unmount it, unplug it, and move it to another server to keep using the actual database. This makes migration and backup easy.
-
-Disks carry names based on where they are physically connected.
+This page covers the drives themselves: how they are detected, formatted and managed. Network storage protocols (iSCSI, NFS, SMB, NVMe over TCP), RAID and the advanced file systems are part of the [Storage](../../storage/) package and are covered in the [Storage](../../storage/) section.
 
 :::info
-The **[Storage](/docs/storage/)** package adds disk monitoring, advanced filesystems, RAID, rsync, iSCSI, NVMe over TCP, NFS, and an SMB client. See the [Storage](/docs/storage/) section for details.
-
+The **Storage package** adds disk monitoring, RAID, rsync, iSCSI, NVMe over TCP, NFS, an SMB client and the Btrfs and XFS file systems. See the [Storage](../../storage/) section for details.
 :::
 
 :::danger
-**Always use `/disk/eject` before physically removing any disk from your RouterOS device to prevent data loss!**
-
+Always use `/disk/eject` before physically removing a disk from a RouterOS device, otherwise data can be lost.
 :::
 
-## Properties
+## How disks are detected
 
-| Property | Description |
-| :-- | :-- |
-| **eject**| Safely unmounts (ejects) drive of your selection by using the "slot" that is assigned to it. After issuing this command it can be removed from the host device. |
-| **format**| Command to initiate the disk formatting process. Contains additional properties of its own. Such as "file-system" and "label".select the disk (slot) that should be formattedfile-system ('exfat', 'ext4', 'fat32', 'xfs', 'btrfs', 'discard', 'discard-secure', 'wipe') - applies one of the available file system types; alternatively can be used to discard storage blocks (blkdiscard equivalent) or securely wipe (overwrite) data.mbr-partition-table - make an mbr partition table |
-| **trim** | Discards the unused data blocks for performance (fstrim equivalent). Some NVMe enclosures might not support disk trimming. |
-| **reset-counters** | Resets disk (slot) statistics |
-| **monitor-traffic** | Checks real time disk performance and health stats |
-| **test** | Allows performing performance tests of the selected device (Available from RouterOS 7.16) disk - device or devices for testdirection - ('read','write') duration - (int) pattern - ('random', 'sequential')thread-count - (int)block-size - size of block to be used for testingtype - ('device', 'filesystem') |
-| **mount-read-only** | Sets the mounted disk in read only mode when set to *yes*. |
-| **mount-point-template** | Sets the mounting point for the file system. It is possible to set the mount point as the following parameters based on the disk: [slot] (default) - sets the mount point as the slot name.[model] - sets the mount point as the device's model name.[serial] - sets the mount point as the device serial[fw-version] - sets the mount point as the device's firmware version.[fs-label] - sets the mount point as the device's file system label.[fs-uuid] - sets the mount point as the device's UUID[fs] - sets the mount point as the device's file system `/disk/set nvme1 mount-point-template="[model]"`   Additionally, it is possible to combine multiple variables to create a single mount point:  `/disk/set nvme1 mount-point-template="[model]-[fs]"`    |
-
-## Flags
-
-| Property | Description |
-| :-- | :-- |
-| **X - disabled** | Disabled device |
-| **E - empty** | Empty slot |
-| **B - BLOCK-DEVICE** | The "B - BLOCK-DEVICE" flag means that this device works using blocks for input/output operations. In the context of RouterOS, its distinction is crucial, as it helps determine whether a device is functioning as a data carrier or simply providing information about the disk layout structure. This difference becomes important when considering the extender with the device behind it. If a device is marked with the letter "B", this indicates its ability to be used as storage or memory. In contrast, devices that do not have a "B" mark are designed primarily to understand the structure of the disk.  This allows you to quickly recognize the presence of a PCIe or SAS expander, as well as detect the presence of drives in the first expander. In addition, it allows you to estimate the speed of the connection to which each device is connected.  However, the most notable benefit of the "B" flag is its ability to instantly indicate whether a device can be formatted or used for RAID purposes. |
-| **M - mounted** | Mounted partition |
-| **F - formatting** | The device is currently in the formatting process |
-| **p - partition** | The device has a partition |
-| **f - raid-member-failed** | These options are used with the [ROSE](/docs/storage/) package. |
-| **r - raid-member** |  |
-| **c - encrypted** |  |
-| **g - guid-partition-table** |  |
-| **t - nvme-tcp-export** |  |
-| **i - iscsi-export** |  |
-| **s - smb-sharing** |  |
-| **n - nfs-sharing** |  |
-| **O - tcg-opal-self-encryption-enabled** |  |
-| **o - tcg-opal-self-encryption-supported** |  |
-
-## Settings
-
-| Property | Description |
-| :-- | :-- |
-| **auto-smb-sharing** (yes \| no; Default: ) | Enables dynamic SMB shares when a new disk/partition item is added in "/disk" |
-| **auto-smb-user** (list of strings; Default: ) | Default value for smb-sharing/smb-user setting, when a new disk/partition item is added in "/disk" |
-| **auto-media-sharing** (yes \| no; Default: ) | Enables DLNA dynamically when a new disk/partition item is added in "/disk" |
-| **auto-media-interface** (list of strings; Default: ) | Interface that will be used in a dynamic instance for `/ip/media` when a new disk/partition item is added in "/disk" |
-| **default-mount-point-template** (string, Default: ) | Sets the default mount point template for each item added in "/disk" |
-
-:::note
-
-### Notes
-
-With "auto-smb-sharing=yes" and "/ip/smb/share enabled=auto", the SMB server gets enabled when a storage device is physically plugged in
-
-:::
-
-## Examples
-
-### Formatting attached storage unit - Simple
-
-1. The disk is attached, and already mounted automatically by the system.
+The `/disk` menu lists every attached storage device that is supported and in working condition, including empty drive slots. Each drive gets a slot name from the interface it is connected with and a number, for example `usb1`, `sata1` or `nvme1`.
 
 ```ros
-[admin@MikroTik] > disk print
-Flags: B - BLOCK-DEVICE; M, F - FORMATTING
-Columns: SLOT, MODEL, SERIAL, INTERFACE, SIZE, FREE, FS
-#    SLOT  MODEL           SERIAL            INTERFACE                  SIZE           FREE  FS
-0 BM usb1  USB Flash Disk  FBA0911260071572  USB 2.00 480Mbps  2 004 877 312  1 921 835 008  ext4
+[admin@MikroTik] > /disk/print proplist=slot,model,interface,size,fs where slot=nvme9
+Flags: B - BLOCK-DEVICE
+Columns: SLOT, MODEL, INTERFACE, SIZE, FS
+#   SLOT   MODEL        INTERFACE                   SIZE  FS
+0 B nvme9  TS1TUTE210T  PCIe 2x8 GT/s  1 024 209 543 168  -
+```
+
+Key flags in the print output:
+
+- `B - BLOCK-DEVICE` marks a device that stores data, so it can be formatted and used. Devices without this flag, for example a PCIe bridge, only describe the disk layout.
+- `E - EMPTY` marks an empty slot.
+- `M - MOUNTED` marks a disk or partition whose file system is mounted.
+
+The complete flag list is described in the [Disks CLI Reference](../../cli-reference/disk/).
+
+A drive with a supported file system and partition table is mounted automatically and appears in `/file`. To confirm that a drive is usable, check that it is present in `/file` after it is connected.
+
+## Format a disk
+
+The first thing to do with a new drive is to format it. To format a disk, select the file system and run `/disk/format` with the slot name. RouterOS asks for confirmation, formats the drive and mounts it automatically:
+
+```ros
+[admin@MikroTik] > /disk/format nvme9 file-system=ext4
+nvme9: file-system: ext4
+nvme9: mke2fs -t ext4 -L nvme9-fs /dev/nvme0n1
+...
+nvme9: Creating journal (262144 blocks): done
+nvme9: Writing superblocks and filesystem accounting information: done
+nvme9: format done
+```
+
+Without a label, RouterOS labels the file system `<slot>-fs`, so the label of `nvme9` is `nvme9-fs`. File system choices:
+
+- `ext4`  -  the default choice for most use cases. Supports multiple partitions, journaling and is fast.
+- `fat32` and `exfat`  -  readable by almost any device, for example cameras or Android phones. `fat32` has a 4 GB file size limit.
+- `btrfs` and `xfs`  -  advanced file systems that need the [Storage](../../storage/) package. See [Btrfs](../../storage/btrfs/).
+- `discard` and `discard-secure`  -  discard all blocks of the drive without writing a file system.
+- `wipe` and `wipe-quick`  -  remove the file system and all data. `wipe` overwrites the data so it cannot be recovered; `wipe-quick` only removes the file system.
+
+Formatting destroys all data on the target. For a disk with a partially filled file system, use `file-system=wipe-quick` to remove it fast.
+
+After formatting, the drive is mounted automatically:
+
+```ros
+[admin@MikroTik] > /disk/print where slot=nvme9
+Flags: B - BLOCK-DEVICE; M - MOUNTED
+Columns: SLOT, MOUNT-POINT, MODEL, INTERFACE, SIZE, FS
+#    SLOT   MOUNT-POINT  MODEL        INTERFACE                   SIZE  FS
+0 BM nvme9  nvme9        TS1TUTE210T  PCIe 2x8 GT/s  1 024 209 543 168  ext4
 ```
 
 ```ros
-[admin@MikroTik] > /file/print
- # NAME                        TYPE          SIZE CREATION-TIME
- 0 skins                       directory          1970-01-01 03:00:01
- 1 pub                         directory          1970-02-04 21:31:40
- 2 usb1                        disk               2022-03-07 14:05:16
+[admin@MikroTik] > /file/print where name~"nvme9"
+Columns: NAME, TYPE, LAST-MODIFIED
+# NAME              TYPE       LAST-MODIFIED
+0 nvme9             disk       2026-09-25 11:47:05
+1 nvme9/lost+found  directory  2026-09-25 11:47:05
 ```
 
-1. Formatting the disk, in either of the supported file-systems (ext4, fat32, exfat, xfs, btrfs).
+## Mount points
+
+A mounted file system is accessible under its mount point, which is also the path prefix used in `/file` and when other features reference a file. By default the mount point is the slot name, so files on `nvme1` are addressed as `nvme1/...`.
+
+When the same drive can end up in different slots between boots, for example in a multi-bay enclosure, give it a stable mount point with `mount-point-template`. The template can combine the following variables:
+
+- `[slot]`
+- `[model]`
+- `[serial]`
+- `[fw-version]`
+- `[fs-label]`
+- `[fs-uuid]`
+- `[fs]`
+
+For example, to mount a drive by its serial number:
 
 ```ros
-[admin@MikroTik] > /disk/format usb1 file-system=ext4 mbr-partition-table=no
-  formatted: 100%
+/disk/set nvme1 mount-point-template="[serial]"
 ```
 
-1. It's done! The drive is formatted and should be automatically mounted after the formatting process is finished.
+Variables can be combined, for example `mount-point-template="[model]-[fs]"`. An empty template is rejected. The `default-mount-point-template` setting in `/disk/settings` applies the template to every new disk and partition.
 
-### Formatting Attached Storage Unit - Detailed
+## Partitions
 
-Before proceeding with manual formatting, ensure that the storage device has been properly connected to your RouterOS device. The system will automatically attempt to mount the storage if it contains a supported file system and partition table. Once mounted, the device will appear in the `/file` menu shortly after being plugged in.
-
-If the storage is not automatically detected or mounted, follow these steps:
-
-1. Verify that the router recognizes the attached storage by checking the disk menu:
+To split a drive into several partitions, format it without a partition table and then add partitions. RouterOS keeps the partition information in a GUID partition table (GPT).
 
 ```ros
-[admin@MikroTik] > disk print
-Flags: B - BLOCK-DEVICE; M, F - FORMATTING
-Columns: SLOT, MODEL, SERIAL, INTERFACE, SIZE, FREE, FS
-#    SLOT  MODEL           SERIAL            INTERFACE                  SIZE           FREE  FS
-0 BM usb1  USB Flash Disk  FBA0911260071572  USB 2.00 480Mbps  2 004 877 312  1 921 835 008  ext4
-```
-
-This output confirms that the system detects the storage drive and shows its current file system type.
-
-1. Verify that the disk is mounted by checking the file menu:
-
-```ros
-[admin@MikroTik] > /file/print
- # NAME     TYPE    SIZE CREATION-TIME
- 0 usb1     disk         2022-03-07 14:05:16
- 1 skins    directory    1970-01-01 03:00:01
- 2 pub      directory    1970-02-04 21:31:40
-```
-
-1. To format the drive, use the disk slot name or ID along with your preferred file system (ext4, fat32, exfat, xfs, or btrfs). You may also assign a label to the device and specify whether to create an MBR partition table:
-
-```ros
-[admin@MikroTik] > /disk/format usb1 file-system=ext4 label=usb-flash mbr-partition-table=yes
-  formatted: 100%
-```
-
-:::note
-**Note:** The formatting process displays a progress percentage indicator. Larger storage drives may require more time to complete. Please wait until the process finishes before removing the device.
-
-:::
-
-### Creating Multiple Disk Partitions
-
-To create multiple GPT partitions, format the drive without a partition table and then add partitions manually:
-
-```ros
-[admin@MikroTik] > /disk/format usb1 file-system=ext4 label=usb-flash mbr-partition-table=no
-  formatted: 100%
+/disk/format nvme9 file-system=ext4
+/disk/add type=partition parent=nvme9 partition-size=4G
 ```
 
 ```ros
-[admin@MikroTik] > /disk/add type=partition parent=usb1 partition-size=200M
-[admin@MikroTik] > /disk/add type=partition parent=usb1 partition-size=500M
-[admin@MikroTik] > /disk/add type=partition parent=usb1 slot=usb1-last-partition
+[admin@MikroTik] > /disk/print where slot~"nvme9"
+Flags: B - BLOCK-DEVICE; g - GUID-PARTITION-TABLE, p - PARTITION
+Columns: SLOT, MODEL, INTERFACE, SIZE, FS
+#    SLOT         MODEL        INTERFACE                   SIZE  FS
+0 Bg nvme9        TS1TUTE210T  PCIe 2x8 GT/s  1 024 209 543 168  -
+1 Bp nvme9-part1  TS1TUTE210T                     4 000 000 000  -
 ```
+
+Each partition gets a slot name of its own, derived from the parent: the first partition of `nvme9` is `nvme9-part1`. The `g - GUID-PARTITION-TABLE` flag marks the parent and `p - PARTITION` marks the partitions.
+
+- Without `partition-size`, the partition uses all remaining space on the drive.
+- Use `partition-offset` to set where the partition starts, in bytes.
+- A partition is used like a disk: format it, mount it and manage it under its own slot name.
+- `mbr-partition-table=yes` in `/disk/format` writes an MBR partition table instead; use it only when a GPT table is not accepted by the target system.
+
+## Swap space
 
 :::info
-**Notes:**
-
-- The slot name (partition or disk) is assigned automatically but can be manually specified using the `slot` parameter.
-- When partition size is not specified, the remaining available space will be used for the last partition.
-- To adjust the starting position of a partition, use the `partition-offset` parameter.
-
+Swap space requires the [container](../../containers/) package.
 :::
 
-### Web-Proxy cache configuration example
+Swap space is reserved for [containers](../../containers/) and lets them run with more memory than the router has. It can be a whole partition or a file. Swap size is limited to 10 times the router's available RAM.
 
-Enter the proxy cache path under IP -> Proxy menu and the web proxy store is automatically created in the files menu. If a non-existent directory path is used, an additional sub-directory is also created automatically.
+A swap partition dedicates the whole disk or partition to swap and gives better performance than a file:
 
 ```ros
-[admin@MikroTik] >  /ip/proxy/set cache-path=usb1/cache-n-db/proxy/
-
-...
-
-[admin@MikroTik] >  /file/print
- # NAME                                              TYPE                             SIZE CREATION-TIME       
- 0 skins                                             directory                             2015-03-02 18:56:23
- 1 sys-note.txt                                      .txt file                        23   2015-07-03 11:40:48
- 2 usb1                                             disk                                  2015-07-03 11:35:05
- 3 usb1/lost+found                                  directory                             2015-07-03 11:34:56
- 4 usb1/cache-n-db                                  directory                             2015-07-03 11:41:54
-  5 usb1/cache-n-db/proxy                            web-proxy store                       2015-07-03 11:42:09
+/disk/set nvme9-part1 swap=yes
 ```
 
-### Log on disk configuration example
+A swap file resides on an existing file system, for example on a [Btrfs](../../storage/btrfs/) disk, and uses only as much space as its size:
 
-When configuring logging on disk, make sure that you create directories in which you want to store the log files manually, as non-existent directories will NOT be automatically created in this case.
+```ros
+/disk/add type=file file-path=nvme9-part1/swapfile file-size=512M swap=yes
+```
+
+The swap file appears in `/disk` with the `S - SWAP-ENABLED` flag:
+
+```ros
+[admin@MikroTik] > /disk/print where slot~"nvme9"
+Flags: B - BLOCK-DEVICE; M - MOUNTED, S - SWAP-ENABLED
+       g - GUID-PARTITION-TABLE, p - PARTITION
+Columns: SLOT, MOUNT-POINT, SIZE, FS, SWAP
+#     SLOT                       MOUNT-POINT               SIZE  FS    SWAP
+0 B g nvme9                                   1 024 209 543 168  -     no
+1 BMp nvme9-part1                nvme9-part1      4 000 000 000  ext4  no
+2  S  file-nvme9-part1-swapfile                     536 866 816  -     yes
+```
+
+## RAM-backed folder
+
+To keep files in RAM, add a `tmpfs` folder. Its content is emptied when the router reboots or loses power.
+
+```ros
+/disk/add type=tmpfs tmpfs-max-size=100M
+```
+
+The folder appears in `/file` as a disk entry, for example `tmp1`. `tmpfs-max-size` caps how much RAM the folder can use. Use a RAM-backed folder on devices with limited storage or for data that must be cleared on reboot. For size limits, sharing and what happens after a reboot, see [Tmpfs](../../storage/tmpfs).
+
+## Mount images
+
+RouterOS can also mount `.iso` and `.squashfs` images directly. To mount an image, use the following command:
+
+```ros
+/disk/add type=file file-path=disk1/mycopy.iso
+```
+
+Make sure you change `disk1/mycopy.iso` to your correct path, where the image is located.
+
+## Log on disk
+
+When configuring logging on disk, make sure that you create directories in which you want to store the log files manually, as non-existent directories will not be created automatically in this case.
 
 ```ros
 [admin@MikroTik] >  /system/logging/action/set disk disk-file-name=disk1/log
+```
 
-...
+The log files appear in `/file` under the directory you created:
 
+```ros
 [admin@MikroTik] >  /file/print where name~"disk1/log"
- # NAME                                              TYPE                             SIZE CREATION-TIME       
+ # NAME                                              TYPE                             SIZE CREATION-TIME
  0 disk1/log                                        directory                             2015-07-03 12:44:09
  1 disk1/log/syslog.0.txt                           .txt file                         160 2015-07-03 12:44:11
 ```
 
 :::note
-**Note:** Logging topics such as firewall, web-proxy and some other topics that tend to save a large amount or rapid printing of logs on the system NAND disk might cause it to wear out faster, so using some attached storage or remote logging is recommended in this case or saving data in RAM folder
-
+Logging topics such as firewall and web-proxy tend to save a large amount or rapid printing of logs on the system NAND disk, which can wear it out faster. Use attached storage or remote logging in this case, or save data in a RAM folder.
 :::
 
-### Allocate RAM to folder
+## Web proxy cache on a disk
 
-It is possible to add folders linked to RAM. Folders will be emptied on reboot or power loss.  
-RAM will be filled up to tmpfs-max-size and if this variable is not provided - up to 1/2 of available RAM.
+The web proxy carries its cache on a disk, usually a USB drive. Set the cache path under `IP -> Proxy` (the `cache-path` setting of `/ip/proxy`) and the web proxy store is automatically created in `/file`. If a non-existent directory path is used, the additional sub-directories are also created automatically:
 
 ```ros
-[admin@MikroTik] >  /disk/add type=tmpfs tmpfs-max-size=100M
-[admin@MikroTik] > file print 
-Columns: NAME, TYPE, SIZE, CREATION-TIME
-#  NAME            TYPE       SIZE             CREATION-TIME       
-0  tmp1             disk     100 003 840        2022-12-12 11:01:48
+[admin@MikroTik] >  /ip/proxy/set cache-path=usb1/cache-n-db/proxy/
 ```
 
-### Test disk performance
+```ros
+[admin@MikroTik] >  /file/print
+ # NAME                                              TYPE                             SIZE CREATION-TIME
+ 0 skins                                             directory                             2015-03-02 18:56:23
+ 1 sys-note.txt                                      .txt file                        23   2015-07-03 11:40:48
+ 2 usb1                                             disk                                  2015-07-03 11:35:05
+ 3 usb1/lost+found                                  directory                             2015-07-03 11:34:56
+ 4 usb1/cache-n-db                                  directory                             2015-07-03 11:41:54
+ 5 usb1/cache-n-db/proxy                            web-proxy store                       2015-07-03 11:42:09
+```
+
+See [Web proxy](../../network-management/proxy/web-proxy) for the cache configuration.
+
+## Check and repair
+
+`/disk/check` and `/disk/repair` run a file system check on a drive, the equivalent of `fsck`/`e2fsck`. They work on ext4, Btrfs and XFS. A file system that is still in use cannot be checked:
+
+```ros
+/disk/check nvme9-part1
+Columns: OUTPUT
+OUTPUT
+could not unmount, stop using it first
+```
+
+This also happens when a swap file on the partition keeps it in use  -  remove the swap item before checking the partition. Unmount the file system first:
+
+```ros
+/disk/set nvme9-part1 mount-filesystem=no
+```
+
+`check` reports errors without changing anything:
+
+```ros
+/disk/check nvme9-part1
+Columns: OUTPUT
+OUTPUT
+e2fsck 1.46.5 (30-Dec-2021)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+nvme9-part1-fs: 12/244320 files (0.0% non-contiguous), 166617/976562 blocks
+```
+
+`repair` fixes the errors it finds:
+
+```ros
+/disk/repair nvme9-part1
+Columns: OUTPUT
+OUTPUT
+e2fsck 1.46.5 (30-Dec-2021)
+nvme9-part1-fs: clean, 12/244320 files, 166617/976562 blocks
+```
+
+## Test disk performance
+
+`/disk/test` measures the sustained throughput and IOPS of a drive. The test runs in the background and prints a row per completed block, plus a `TOT` row that aggregates the result.
+
+```ros
+/disk/test disk=nvme9-part2 direction=read pattern=sequential type=device block-size=4K duration=20
+Columns: SEQ, RATE, IOPS, BYTES, DISK, THREAD, TYPE, PATTERN, DIR, BSIZE, STATE
+  ...  11.7Gbps  359 651  1404.9MiB  nvme9-part2  0  device  sequential  read  4096
+  ...  11.8Gbps  360 192  1407.0MiB  nvme9-part2  0  device  sequential  read  4096
+R TOT  11.8Gbps  360 676  26.1GiB    nvme9-part2  0  device  sequential  read  4096
+```
+
+- `direction=read` leaves the drive content unchanged and works on a mounted file system.
+- `direction=write` destroys all data on the target; run write tests only on drives you are ready to wipe.
+- Give the test a `duration` so it stops by itself; without one it keeps running until stopped.
+- A new test prepares for a while  -  the `state` column shows `clear caches` until it starts producing numbers.
 
 :::danger
-Disk performance tests may slowly degrade disk health
+Disk performance tests may slowly degrade disk health.
 
-On write tests all files and file systems on disks will be destroyed
-
+A write will destroy all data on the drive it is run on.
 :::
 
-Starting from 7.16 to run disk performance tests. Disks have to be disabled or without a mountable file system (unformatted).  
-Check available disks, if a disk is already mounted - disable it.
+## Monitor traffic and counters
+
+`/disk/monitor-traffic` shows live activity of a drive: I/O operations, transferred bytes and speed, as totals and per second:
 
 ```ros
-[admin@MikroTik] > /disk/print
-Flags: B - BLOCK-DEVICE; M - MOUNTED
-Columns: SLOT, MODEL, SERIAL, INTERFACE, SIZE, FREE, FS
-#    SLOT  MODEL             SERIAL         INTERFACE                    SIZE            FREE  FS
-0 BM usb1  JMicron External  DD56419883891  USB 3.10 5000Mbps  64 023 257 088  62 692 188 160  ext4
-
-[admin@MikroTik] > disk disable usb1
-
-[admin@MikroTik] > disk test disk=usb1 pattern=sequential  type=device thread-count=4 block-size=4K direction=write
-Columns: SEQ, RATE, IOPS, DISK, TYPE, PATTERN, DIR, BSIZE, THREADS
-SEQ  RATE          IOPS  DISK  TYPE    PATTERN     DIR    BSIZE  THREADS
-0    1622.5Mbps  49 516  usb2  device  sequential  write   4096        4
-1    26.2Mbps       800  usb2  device  sequential  write   4096        4
-2    33.0Mbps     1 008  usb2  device  sequential  write   4096        4
-3    11.7Mbps       360  usb2  device  sequential  write   4096        4
-4    28.5Mbps       872  usb2  device  sequential  write   4096        4
-5    34.6Mbps     1 056  usb2  device  sequential  write   4096        4
-6    33.8Mbps     1 032  usb2  device  sequential  write   4096        4
-TOT  255.7Mbps    7 806  usb2  device  sequential  write   4096        4
-
+/disk/monitor-traffic nvme9-part2 once
+                  slot:    nvme9-part2
+              read-ops:        113 229
+   read-ops-per-second:              0
+            read-bytes: 29 668 814 848
+             read-rate:           0bps
+           read-merges:              0
+             read-time:       48s149ms
+             write-ops:              0
 ```
 
-### Swap space
+`/disk/reset-counters` resets these counters to zero, including the error counters.
 
-It is possible to add a swap space to your RouterOS device. This is useful when using [containers](/docs/containers/) on RouterOS to be able to run containers that require much more RAM than your RouterOS device has. You can use a disk (or a partition) as a swap space or file as a swap space.
+## Eject and scan
 
-#### Swap partition
+Before removing a drive, eject it so no data is lost:
 
-Swap partition requires you to have a disk (or partition) connected to your RouterOS device. All of the disk (or partition) will be used as swap space and cannot be used for other purposes. Make sure you have a high speed disk for your swap partition. Using a swap partition has better performance than using a swap file.   |
-
-To use a disk (or partition) as a swap partition, you can use the following command:
-
-```routeros
-/disk/set disk1 swap=yes   
+```ros
+/disk/eject nvme9
 ```
 
-Make sure you change `disk1` to your correct disk's name!
+An ejected drive is unmounted and its slot shows the `E - EMPTY` flag until the drive is removed. `/disk/scan` re-detects drives that were plugged in or removed without a reboot and brings back a drive after reconnecting it.
 
-#### Swap file
+`/disk/trim` discards the unused blocks of a mounted file system (`fstrim` equivalent) so SSD write performance does not degrade. Trimming is not supported on USB drives, and some NVMe enclosures do not support it either.
 
-A swap file requires you to have a disk that is formatted with a file system, for example, [Btrfs](/docs/storage/btrfs/). Compared to the swap partition option, the whole disk (or partition) will not be used as swap space, only the swap file's size will be used on your disk (or partition). Using a swap file will have lower performance than using a swap partition.
+## S.M.A.R.T. drive health
 
-To create a swap file on your existing file system, you can use the following command:
+Drive health monitoring with S.M.A.R.T. reads the diagnostics of drives that support it, for example temperature, use and error counters. See [S.M.A.R.T. info](./smart).
 
-```routeros
-/disk/add type=file file-path=disk1/swapfile file-size=1G swap=yes
-```
+## Related
 
-Make sure you change `disk1` to your correct path, where your disk is mounted.
-
-### Mount images
-
-RouterOS can also mount **.iso** and **.squashfs** images directly. To mount an image, use the following command:
-
-```routeros
-/disk/add type=file file-path=disk1/mycopy.iso 
-```
-
-Make sure you change `disk1/mycopy.iso` to your correct path, where the image is located.
+- [Storage](../../storage/)  -  RAID, network storage protocols and the advanced file systems.
+- [Containers](../../containers/)  -  uses disk space for images and swap space.
+- [S.M.A.R.T. info](./smart)  -  drive health monitoring.
+- [Disks CLI Reference](../../cli-reference/disk/)  -  every command and parameter of `/disk`.

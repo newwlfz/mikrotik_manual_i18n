@@ -1,15 +1,25 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const BASE = 'https://manual.mikrotik.com';
-const VERSION = JSON.parse(fs.readFileSync('data/manifests/current-version.json', 'utf8')).version;
-const DOCS = 'docs';
-const OUT = `data/manifests/docs-${VERSION}-metadata.json`;
+const arg = (name, fallback) => {
+  const index = process.argv.indexOf(`--${name}`);
+  return index === -1 ? fallback : process.argv[index + 1];
+};
 
-const CONCURRENCY = 24;
+const BASE = 'https://manual.mikrotik.com';
+const current = JSON.parse(
+  fs.readFileSync('data/manifests/current-version.json', 'utf8'),
+).version;
+const VERSION = arg('version', current);
+const DOCS = arg(
+  'docs',
+  VERSION === current ? 'docs' : `versioned_docs/version-${VERSION}`,
+);
+const OUT = arg('out', `data/manifests/docs-${VERSION}-metadata.json`);
+const CACHE = arg('cache', `../.work/doc-metadata-cache-${VERSION}`);
+const HTML_CACHE = arg('html-cache', `../.work/doc-html-${VERSION}`);
+const CONCURRENCY = Number(arg('concurrency', '24'));
 const RETRIES = 1;
-const CACHE = '../.work/doc-metadata-cache';
-const HTML_CACHE = '../.work/doc-html';
 
 function walk(dir) {
   const out = [];
@@ -57,7 +67,10 @@ function metaDescription(html) {
 
 function tags(html) {
   const found = [];
-  const pattern = new RegExp(`href=["']?/docs/${VERSION}/tags/([^"'\\s>#]+)["']?[^>]*>([\\s\\S]*?)<\\/a>`, 'gi');
+  const pattern = new RegExp(
+    `href=["']?/docs/${VERSION}/tags/([^"'\\s>#]+)["']?[^>]*>([\\s\\S]*?)<\\/a>`,
+    'gi',
+  );
   for (const match of html.matchAll(pattern)) {
     const tag = decode(match[2]).replace(/\s+/g, ' ').trim();
     if (tag && !found.includes(tag)) found.push(tag);
@@ -96,7 +109,6 @@ async function fetchPage(url) {
 
 const files = walk(DOCS);
 const docs = {};
-let next = 0;
 let done = 0;
 const queue = files.slice();
 
@@ -127,19 +139,33 @@ async function worker() {
       docs[id] = {id, route, description: '', tags: [], cliLinks: [], error: String(error)};
     }
     fs.mkdirSync(CACHE, {recursive: true});
-fs.mkdirSync(HTML_CACHE, {recursive: true});
     fs.writeFileSync(cacheFile, JSON.stringify(docs[id]));
     if (done % 50 === 0) {
-      fs.writeFileSync(OUT, JSON.stringify({version: VERSION, generatedAt: new Date().toISOString(), docs}, null, 2) + '\n');
+      fs.writeFileSync(
+        OUT,
+        JSON.stringify(
+          {version: VERSION, generatedAt: new Date().toISOString(), docs},
+          null,
+          2,
+        ) + '\n',
+      );
     }
     done++;
-    if (done % 100 === 0) console.log(`fetched ${done}/${files.length}`);
+    if (done % 100 === 0) console.log(`[${VERSION}] fetched ${done}/${files.length}`);
   }
 }
 
 await Promise.all(Array.from({length: CONCURRENCY}, () => worker()));
 fs.mkdirSync(path.dirname(OUT), {recursive: true});
-fs.mkdirSync(CACHE, {recursive: true});
-fs.writeFileSync(OUT, JSON.stringify({version: VERSION, generatedAt: new Date().toISOString(), docs}, null, 2) + '\n');
+fs.writeFileSync(
+  OUT,
+  JSON.stringify(
+    {version: VERSION, generatedAt: new Date().toISOString(), docs},
+    null,
+    2,
+  ) + '\n',
+);
 const errors = Object.values(docs).filter((doc) => doc.error).length;
-console.log(`wrote ${OUT} docs=${Object.keys(docs).length} errors=${errors}`);
+console.log(
+  `[${VERSION}] wrote ${OUT} docs=${Object.keys(docs).length} errors=${errors} cache=${CACHE}`,
+);

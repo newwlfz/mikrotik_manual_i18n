@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/sniffer/sniff"
 sidebar_position: 4
 title: "sniff"
 sidebar_label: 'sniff'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/sniffer/sniff
-captured_at: '2026-11-01T21:28:03+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/sniffer/sniff
+captured_at: '2026-11-01T21:23:27+08:00'
 ---
 
 -----------

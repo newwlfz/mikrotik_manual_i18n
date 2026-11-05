@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/tool/traffic-generator/inject"
 sidebar_position: 2
 title: "inject"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/inject
-captured_at: '2026-11-01T21:30:24+08:00'
+sidebar_label: 'inject'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/traffic-generator/inject
+captured_at: '2026-11-01T21:26:01+08:00'
 ---
 
 -----------

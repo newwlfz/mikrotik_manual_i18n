@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/bgp/vpn"
 sidebar_position: 9
 title: "vpn"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/bgp/vpn
-captured_at: '2026-11-01T21:29:29+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/bgp/vpn
+captured_at: '2026-11-01T21:25:06+08:00'
 ---
 
 -----------

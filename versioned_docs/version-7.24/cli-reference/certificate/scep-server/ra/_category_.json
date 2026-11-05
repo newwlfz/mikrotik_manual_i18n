@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "Ra",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/certificate/scep-server/ra/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/certificate/scep-server/ra"
+}

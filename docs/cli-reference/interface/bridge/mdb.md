@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/bridge/mdb"
 sidebar_position: 5
 title: "mdb"
 sidebar_label: 'mdb'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/bridge/mdb
-captured_at: '2026-11-01T21:26:59+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/mdb
+captured_at: '2026-11-01T21:22:24+08:00'
 ---
 
 -----------

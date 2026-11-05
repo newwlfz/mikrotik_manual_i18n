@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/stats/memory"
 sidebar_position: 1
 title: "memory"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/stats/memory
-captured_at: '2026-11-01T21:29:41+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/stats/memory
+captured_at: '2026-11-01T21:25:23+08:00'
 ---
 
 -----------

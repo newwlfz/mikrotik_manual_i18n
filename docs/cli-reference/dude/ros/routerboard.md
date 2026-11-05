@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/dude/ros/routerboard"
 sidebar_position: 12
 title: "routerboard"
 sidebar_label: 'routerboard'
-source: https://manual.mikrotik.com/docs/cli-reference/dude/ros/routerboard
-captured_at: '2026-11-01T21:26:54+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/dude/ros/routerboard
+captured_at: '2026-11-01T21:22:16+08:00'
 ---
 
 -----------

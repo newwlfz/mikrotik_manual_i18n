@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/ppp-client/scan"
 sidebar_position: 6
 title: "scan"
 sidebar_label: 'scan'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/ppp-client/scan
-captured_at: '2026-11-01T21:27:32+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ppp-client/scan
+captured_at: '2026-11-01T21:22:55+08:00'
 ---
 
 -----------

@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/partitions/restore-config-from"
 sidebar_position: 5
 title: "restore-config-from"
 sidebar_label: 'restore-config-from'
-source: https://manual.mikrotik.com/docs/cli-reference/partitions/restore-config-from
-captured_at: '2026-11-01T21:29:19+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/partitions/restore-config-from
+captured_at: '2026-11-01T21:24:54+08:00'
 ---
 
 -----------

@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ip/hotspot/user/profile"
 sidebar_position: 2
 title: "profile"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/user/profile
-captured_at: '2026-11-01T21:28:41+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/hotspot/user/profile
+captured_at: '2026-11-01T21:24:08+08:00'
 ---
 
 -----------

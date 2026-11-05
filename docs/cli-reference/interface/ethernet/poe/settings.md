@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/ethernet/poe/settings"
 sidebar_position: 4
 title: "settings"
 sidebar_label: 'settings'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/poe/settings
-captured_at: '2026-11-01T21:27:06+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ethernet/poe/settings
+captured_at: '2026-11-01T21:22:30+08:00'
 ---
 
 -----------

@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/app/cleanup"
 sidebar_position: 1
 title: "cleanup"
 sidebar_label: 'cleanup'
-source: https://manual.mikrotik.com/docs/cli-reference/app/cleanup
-captured_at: '2026-11-01T21:26:17+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/app/cleanup
+captured_at: '2026-11-01T21:21:42+08:00'
 ---
 
 -----------

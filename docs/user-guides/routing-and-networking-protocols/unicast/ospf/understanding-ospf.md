@@ -8,8 +8,8 @@ tags:
   - 'routing'
   - 'ospf'
 slug: /user-guides/routing-and-networking-protocols/unicast/ospf/understanding-ospf
-source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/ospf/understanding-ospf
-captured_at: '2026-11-04T11:34:19+08:00'
+source: https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/unicast/ospf/understanding-ospf
+captured_at: '2026-11-04T11:22:53+08:00'
 ---
 
 OSPF is an Interior Gateway Protocol (IGP) designed to distribute routing information between routers in the same Autonomous System (AS).

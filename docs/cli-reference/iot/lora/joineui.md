@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/iot/lora/joineui"
 sidebar_position: 3
 title: "joineui"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/lora/joineui
-captured_at: '2026-11-01T21:28:13+08:00'
+sidebar_label: 'joineui'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/lora/joineui
+captured_at: '2026-11-01T21:23:37+08:00'
 ---
 
 -----------

@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/caps-man/interface/reselect-channel"
 sidebar_position: 4
 title: "reselect-channel"
-source: https://manual.mikrotik.com/docs/cli-reference/caps-man/interface/reselect-channel
-captured_at: '2026-11-01T21:26:20+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/interface/reselect-channel
+captured_at: '2026-11-01T21:21:44+08:00'
 ---
 
 -----------

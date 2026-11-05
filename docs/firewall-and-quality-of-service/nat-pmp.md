@@ -3,89 +3,53 @@ sidebar_key: "firewall-and-quality-of-service/nat-pmp"
 sidebar_position: 6
 title: "NAT-PMP"
 sidebar_label: 'NAT-PMP'
-description: 'NAT-PMP is a protocol enabling transparent peer-to-peer connectivity by mapping internal IPv4 addresses to external ones via dynamic NAT rules, using UDP ports 5350 and 5351 on client and server sides respectively.'
+description: 'NAT-PMP lets LAN clients learn the router''s external IPv4 address and request port mappings, so applications accept incoming connections behind NAT without manual port forwarding. Covers enabling the RouterOS NAT-PMP service and assigning external and internal interfaces.'
 tags:
   - 'nat-pmp'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/nat-pmp
-captured_at: '2026-11-04T11:28:13+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/nat-pmp
+captured_at: '2026-11-04T11:15:45+08:00'
 ---
 
-NAT Port Mapping Protocol (NAT-PMP) is a protocol used for transparent peer-to-peer network connectivity of personal computers and network-enabled intelligent devices or appliances.
+NAT Port Mapping Protocol (NAT-PMP, [RFC 6886](https://www.rfc-editor.org/rfc/rfc6886)) lets applications on the local network learn the router's external IPv4 address and request port mappings, so applications that accept incoming connections, for example games, peer-to-peer clients and voice or video calls, can work behind NAT without manual port forwarding. NAT-PMP is common on Apple devices. RouterOS also supports [UPnP](/docs/firewall-and-quality-of-service/upnp), an alternative protocol with the same purpose.
 
-The Protocol operates by retrieving the external IPv4 address of a NAT gateway, thus allowing a client to make its external IPv4 address and port known to peers who may wish to communicate with it by creating dynamic NAT rules.
+A client sends its requests to the router over UDP port 5351, and each mapping is valid for a limited lifetime which the client renews. When the lifetime expires, the mapping is removed. The NAT-PMP service is disabled by default.
 
-NAT-PMP uses UDP port number 5350 on the client, and 5351 on the server side.
+A mapping applies only to the address the request was sent from: a client cannot create mappings for other devices, so only connect trusted networks as internal interfaces. The protocol has no authentication.
 
-There are two interface types for PMP: **internal** (the one local clients are connected to) and **external** (the one the Internet is connected to). A router may only have one active external interface with a 'public' IP address on it
+## Configuration example
 
-:::warning
-A router can have only one active **external** interface with a 'public' IP address on it. The NAT-PMP **internal** interface can create NAT mapping for any subnet, not just the subnet present on the internal interface, so caution must be used when setting **internal** interfaces.
-:::
+![Network diagram: the router connects to the Internet on ether1 (10.0.0.1/24) and to a LAN switch on ether2 (192.168.88.1/24); two computers, PC1 (192.168.88.10/24) and PC2 (192.168.88.11/24), are on the 192.168.88.0/24 LAN](./img/nat-pmp-01.webp)
 
-For more details on NAT PMP see [**RFC 6886**](https://www.rfc-editor.org/rfc/rfc6886)
-
-NAT-PMP configuration is accessible from the `/ip/nat-pmp` menu.
-
-## Configuration Example
-
-![](./img/nat-pmp-01.webp)
-
-Let's consider that we already have this basic home setup illustrated above.
-
-Before enabling PMP-NAT we need to masquerade outgoing LAN packets.
+Prerequisites: the LAN is masqueraded towards the external interface, for example:
 
 ```ros
-/ip/firewall/nat
-add action=masquerade chain=srcnat out-interface=ether1
+/ip/firewall/nat/add action=masquerade chain=srcnat out-interface=ether1
 ```
 
-Now we can enable PMP and add internal, external interfaces:
+Enable the service and mark the Internet-facing interface as external and the client-facing interface as internal:
 
 ```ros
-/ip/nat-pmp/set enable=yes
-/ip/nat-pmp/interfaces> add interface=ether1 type=external disabled=no
-/ip/nat-pmp/interfaces> add interface=ether2 type=internal disabled=no
-
+/ip/nat-pmp/set enabled=yes
+/ip/nat-pmp/interfaces/add interface=ether1 type=external
+/ip/nat-pmp/interfaces/add interface=ether2 type=internal
 ```
 
-When the client from the internal interface side sends a PMP request, dynamic NAT rules are created on the router:
-
-```text
-[admin@MikroTik] > ip firewall nat print 
-Flags: X - disabled, I - invalid, D - dynamic 
-
-0 chain=srcnat action=masquerade out-interface=ether1
-
-1 D ;;; nat-pmp 192.168.88.10: ApplicationX
-chain=dstnat action=dst-nat to-addresses=192.168.88.10 to-ports=55000 protocol=tcp 
-dst-address=10.0.0.1 in-interface=ether1 dst-port=55000
-
-2 D ;;; nat-pmp 192.168.88.10: ApplicationX
-chain=dstnat action=dst-nat to-addresses=192.168.88.10 to-ports=55000 protocol=udp 
-dst-address=10.0.0.1 in-interface=ether1 dst-port=55000
-
-```
-
-## Properties
-
-### General properties
-
-Available from the `/ip/nat-pmp` menu.
-
-| Property | Description |
-| :-- | :-- |
-| **enabled** (*yes \| no*) | Enables NAT-PMP service |
-
-### NAT PMP Interfaces
-
-Available from the `/ip/nat-pmp/interfaces` menu.
-
-| Property | Description |
-| :-- | :-- |
-| **interface** (*string*; Default: ) | Interface name on which PMP will be running |
-| **type** (*external \| internal*) | PMP interface type:<code>external</code> - the interface a global IP address is assigned to<code>internal</code> - router's local interface the clients are connected to |
-| **forced-ip** (*Ip*; Default: ) | Allows specifying what public IP to use if the external interface has more than one IP available. |
+Clients on the internal interfaces can now request their external address and port mappings. Only one external interface can be assigned; a second one is refused with `failure: only one external interface can be added to the list`. If the external interface has several addresses, set `forced-ip` on the interface entry to choose which address is reported to the clients.
 
 :::warning
-In more complex setups with VLANs, where the VLAN interface is part of the LAN, for PMP to work properly, the VLAN interface itself should be specified as the internal interface.
+In setups with VLANs, specify the VLAN interface itself as the internal interface: the client traffic arrives on it.
 :::
+
+## Technical details
+
+### Service ports and announcements
+
+The service listens for client requests on UDP port 5351 of the internal interfaces, shown as a dynamic `natpmp` entry in `/ip/service` while the service is enabled. Clients choose the source port of their requests themselves.
+
+When the router's external address changes, the router multicasts gratuitous external address announcements to `224.0.0.1` on UDP port 5350 from each internal interface, as described in RFC 6886. Clients that want those announcements listen on UDP port 5350.
+
+### Mapping lifetime
+
+Per RFC 6886: a client requests a mapping with a lifetime in seconds (the recommended value is two hours), the gateway can grant a shorter lifetime, and the client renews the mapping halfway to its expiry. A mapping with an expired lifetime is removed automatically, and sending a request with a lifetime of 0 removes the client's mapping immediately.
+
+For all properties, see [`/ip/nat-pmp`](/docs/cli-reference/ip/nat-pmp/) and [`/ip/nat-pmp/interfaces`](/docs/cli-reference/ip/nat-pmp/interfaces) in the CLI reference.

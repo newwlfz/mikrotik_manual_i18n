@@ -6,8 +6,8 @@ sidebar_label: 'Netinstall for Windows'
 description: 'This page explains how to install or reinstall RouterOS on MikroTik devices using the Netinstall utility on Windows, covering prerequisites, network preparation with a static IP, booting the device in Etherboot mode, installation parameters, and post-installation steps.'
 tags:
   - 'netinstall'
-source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/netinstall/netinstall-windows
-captured_at: '2026-11-04T11:29:48+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/installation-and-upgrade/netinstall/netinstall-windows
+captured_at: '2026-11-04T11:17:24+08:00'
 ---
 
 This guide explains how to install RouterOS on your MikroTik device using the Netinstall utility on a Windows computer.

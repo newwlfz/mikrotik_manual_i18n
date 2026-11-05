@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/tool/snmp-get"
 sidebar_position: 20
 title: "snmp-get"
-source: https://manual.mikrotik.com/docs/cli-reference/tool/snmp-get
-captured_at: '2026-11-01T21:30:22+08:00'
+sidebar_label: 'snmp-get'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/tool/snmp-get
+captured_at: '2026-11-01T21:26:00+08:00'
 ---
 
 -----------
@@ -23,7 +24,7 @@ captured_at: '2026-11-01T21:30:22+08:00'
 <ArgTableRow arg="community" typ="string"></ArgTableRow>
 <ArgTableRow arg="security" typ="enum (none | authorized | private) { none:0, authorized:1, private:2 }"></ArgTableRow>
 <ArgTableRow arg="authentication-password" typ="string"></ArgTableRow>
-<ArgTableRow arg="authentication-protocol" typ="enum (MD5 | SHA1)"></ArgTableRow>
+<ArgTableRow arg="authentication-protocol" typ="enum (MD5 | SHA1 | SHA256 | SHA384 | SHA512)"></ArgTableRow>
 <ArgTableRow arg="encryption-password" typ="string"></ArgTableRow>
 <ArgTableRow arg="encryption-protocol" typ="enum (DES | AES)"></ArgTableRow>
 </ArgTable>

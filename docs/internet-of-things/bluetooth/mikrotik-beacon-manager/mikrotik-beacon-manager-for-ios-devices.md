@@ -3,8 +3,8 @@ sidebar_key: "internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-beac
 sidebar_position: 4
 title: "MikroTik Beacon Manager for iOS devices"
 sidebar_label: 'MikroTik Beacon Manager for iOS devices'
-source: https://manual.mikrotik.com/docs/internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-beacon-manager-for-ios-devices
-captured_at: '2026-11-04T11:31:39+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-beacon-manager-for-ios-devices
+captured_at: '2026-11-04T11:19:40+08:00'
 ---
 
 ##

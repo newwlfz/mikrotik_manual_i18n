@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wifi/registration-table"
 sidebar_position: 18
 title: "registration-table"
 sidebar_label: 'registration-table'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/registration-table
-captured_at: '2026-11-01T21:27:52+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wifi/registration-table
+captured_at: '2026-11-01T21:23:14+08:00'
 ---
 
 -----------
@@ -20,12 +20,15 @@ captured_at: '2026-11-01T21:27:52+08:00'
 <ArgTableRow arg="interface" typ="iface_enum"></ArgTableRow>
 <ArgTableRow arg="ssid" typ="string"></ArgTableRow>
 <ArgTableRow arg="mac-address" typ="macAddr"></ArgTableRow>
+<ArgTableRow arg="dhcp-address" typ="address"></ArgTableRow>
+<ArgTableRow arg="dhcp-hostname" typ="string"></ArgTableRow>
 <ArgTableRow arg="uptime" typ="time"></ArgTableRow>
 <ArgTableRow arg="last-activity" typ="time"></ArgTableRow>
 <ArgTableRow arg="signal" typ="num"></ArgTableRow>
 <ArgTableRow arg="signal-per-link" typ="multi { array-id, signal-l: num
  }"></ArgTableRow>
 <ArgTableRow arg="auth-type" typ="enum (wpa2-eap | wpa2-psk | ft-eap | ft-wpa2-psk | wpa3-eap | wpa2-psk-sha2 | wpa3-psk | wpa3-psk-gd | ft-wpa3-psk | ft-wpa3-psk-gd | wpa3-eap-192 | ft-wpa3-eap-192 | owe | wpa-eap | wpa-psk | dpp)"></ArgTableRow>
+<ArgTableRow arg="mfp" typ="bool"></ArgTableRow>
 <ArgTableRow arg="band" typ="multi { array-id, band: enum ()
  }"></ArgTableRow>
 <ArgTableRow arg="mld-interfaces" typ="multi { array-id, iface: iface_enum
@@ -60,4 +63,5 @@ captured_at: '2026-11-01T21:27:52+08:00'
  }"></ArgTableRow>
 <ArgTableRow arg="vlan-id" typ="num"></ArgTableRow>
 <ArgTableRow arg="eap-identity" typ="string"></ArgTableRow>
+<ArgTableRow arg="eap-username" typ="string"></ArgTableRow>
 </ArgTable>

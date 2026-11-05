@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wireless/channels"
 sidebar_position: 4
 title: "channels"
 sidebar_label: 'channels'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/channels
-captured_at: '2026-11-01T21:27:59+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/channels
+captured_at: '2026-11-01T21:23:22+08:00'
 ---
 
 -----------

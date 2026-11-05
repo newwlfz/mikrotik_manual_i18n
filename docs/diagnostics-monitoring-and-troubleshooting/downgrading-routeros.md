@@ -4,8 +4,8 @@ sidebar_position: 20
 title: "Downgrading RouterOS"
 sidebar_label: 'Downgrading RouterOS'
 description: 'Learn how to downgrade RouterOS to a previous version, including pre-downgrade checks, architecture verification, and step-by-step instructions.'
-source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/downgrading-routeros
-captured_at: '2026-11-04T11:27:54+08:00'
+source: https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/downgrading-routeros
+captured_at: '2026-11-04T11:15:13+08:00'
 ---
 
 You can downgrade RouterOS, **but only until the factory-installed version**, which you can check with the following command:

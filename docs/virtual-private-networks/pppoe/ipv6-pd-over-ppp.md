@@ -8,13 +8,13 @@ tags:
   - 'ipv6'
   - 'dhcpv6'
   - 'ppp'
-source: https://manual.mikrotik.com/docs/virtual-private-networks/pppoe/ipv6-pd-over-ppp
-captured_at: '2026-11-04T11:34:38+08:00'
+source: https://manual.mikrotik.com/docs/7.25/virtual-private-networks/pppoe/ipv6-pd-over-ppp
+captured_at: '2026-11-04T11:23:20+08:00'
 ---
 
 This example demonstrates how to set up PPPoE server and client to use IPv6 Prefix Delegation.
 
-IPv6 Prefixes can be delegated over PPP interfaces. When a client connects, PPP will automatically add a dynamic  [DHCPv6-PD server](/docs/network-management/dhcp#dhcpv6-server). This allows running a DHCPv6 client on PPP interfaces.
+IPv6 Prefixes can be delegated over PPP interfaces. When a client connects, PPP will automatically add a dynamic  [DHCPv6-PD server](/docs/network-management/dhcp/dhcpv6-server). This allows running a DHCPv6 client on PPP interfaces.
 
 ### Configuration
 

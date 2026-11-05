@@ -8,8 +8,8 @@ tags:
   - 'lte'
   - '5g'
   - 'apn'
-source: https://manual.mikrotik.com/docs/mobile-networking/lte-5g
-captured_at: '2026-11-04T11:32:53+08:00'
+source: https://manual.mikrotik.com/docs/7.25/mobile-networking/lte-5g
+captured_at: '2026-11-04T11:20:53+08:00'
 ---
 
 ```ros

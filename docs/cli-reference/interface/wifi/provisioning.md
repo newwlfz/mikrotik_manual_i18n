@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/wifi/provisioning"
 sidebar_position: 16
 title: "provisioning"
 sidebar_label: 'provisioning'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/provisioning
-captured_at: '2026-11-01T21:27:51+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wifi/provisioning
+captured_at: '2026-11-01T21:23:14+08:00'
 ---
 
 -----------

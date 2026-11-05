@@ -6,8 +6,8 @@ description: 'This page provides an overview for deploying MikroTik RouterOS Clo
 tags:
   - 'chr'
   - 'vpn'
-source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation/hetzner
-captured_at: '2026-11-04T11:28:35+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/installation-and-upgrade/install/chr-installation/hetzner
+captured_at: '2026-11-04T11:16:19+08:00'
 ---
 
 ## Overview

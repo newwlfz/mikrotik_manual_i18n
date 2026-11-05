@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/routing/ospf/static-neighbor"
 sidebar_position: 7
 title: "static-neighbor"
-source: https://manual.mikrotik.com/docs/cli-reference/routing/ospf/static-neighbor
-captured_at: '2026-11-01T21:29:36+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/routing/ospf/static-neighbor
+captured_at: '2026-11-01T21:25:14+08:00'
 ---
 
 -----------

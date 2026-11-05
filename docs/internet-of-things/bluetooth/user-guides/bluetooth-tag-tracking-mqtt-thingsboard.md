@@ -2,13 +2,14 @@
 sidebar_key: "internet-of-things/bluetooth/user-guides/bluetooth-tag-tracking-mqtt-thingsboard"
 sidebar_position: 1
 title: "Bluetooth tag-tracking using MQTT and ThingsBoard"
+sidebar_label: 'User Guides'
 description: 'This page documents Bluetooth tag-tracking using MikroTik RouterOS with MQTT and ThingsBoard, detailing how Bluetooth advertising packets are captured by KNOT devices, processed into MQTT messages, and visualized in ThingsBoard to track asset movements across multiple zones.'
 tags:
   - 'bluetooth'
   - 'mqtt'
   - 'thingsboard'
-source: https://manual.mikrotik.com/docs/internet-of-things/bluetooth/user-guides/bluetooth-tag-tracking-mqtt-thingsboard
-captured_at: '2026-11-04T11:34:43+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/bluetooth/user-guides/bluetooth-tag-tracking-mqtt-thingsboard
+captured_at: '2026-11-04T11:22:30+08:00'
 ---
 
 Bluetooth interface implementation in RouterOS allows the device to capture Bluetooth advertising packets that are broadcasted over 37, 38, and 39 advertising channels. More information can be found in the [guide here](/docs/internet-of-things/bluetooth/).

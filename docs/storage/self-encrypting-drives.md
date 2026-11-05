@@ -3,18 +3,20 @@ sidebar_key: "storage/self-encrypting-drives"
 sidebar_position: 10
 title: "Self-encrypting drives (SED)"
 sidebar_label: 'Self-encrypting drives (SED)'
-description: 'This page documents MikroTik RouterOS''s Self-Encrypting Drive (SED) support, requiring the Storage package. It explains Opal compliance, displays supported drives with flags (o/O), and provides commands to set or unset encryption passwords for SATA devices.'
-source: https://manual.mikrotik.com/docs/storage/self-encrypting-drives
-captured_at: '2026-11-04T11:33:14+08:00'
+description: 'RouterOS supports Self-Encrypting Drives (SED) using the TCG-Opal standard, requiring the Storage package. Supported drives show o (inactive) / O (active) flags in /disk/print, and encryption can be enabled with self-encryption-password.'
+source: https://manual.mikrotik.com/docs/7.25/storage/self-encrypting-drives
+captured_at: '2026-11-04T11:21:45+08:00'
 ---
 
 :::info
 This feature requires the [Storage](/docs/storage/) package.
 :::
 
-For using SED - drives have to be [Opal](https://en.wikipedia.org/wiki/Opal_Storage_Specification)-compliant. Please consult drive manufacturers' documentation to find out if a particular drive supports this feature before buying drives.
+For using SED, drives have to be [Opal](https://en.wikipedia.org/wiki/Opal_Storage_Specification)-compliant. Please consult the drive manufacturer's documentation to find out if a particular drive supports this feature before buying drives.
 
-RouterOS adds **o (supported inactive)** or **O (supported active)** flags for supported drives:
+SED is not supported on setups using USB bridges; the disk must be attached directly (SATA or NVMe).
+
+RouterOS marks supported drives with the **o (TCG-OPAL supported, encryption not active)** or **O (TCG-OPAL supported and encryption active)** flags:
 
 ```ros
 /disk/print
@@ -27,24 +29,22 @@ Columns: SLOT, MODEL, SERIAL, INTERFACE, SIZE, FREE, FS, RAID-MASTER
 3 BMO sata4  Samsung SSD 860 2.5in  S4CSNX0N838150B  SATA 6.0 Gbps  1 000 204 886 016  983 351 128 064  ext4  none
 ```
 
-To set TCG-OPAL-SELF-ENCRYPTION:
+To enable self-encryption on a drive, set `self-encryption-password`:
 
 ```ros
-/disk
 /disk/set sata1 self-encryption-password=securepassword
 ```
 
-to unset:
+Once set, the drive locks itself on power loss and requires the password every time it's connected; RouterOS supplies it automatically (the flag changes to `O`).
+
+To disable self-encryption, unset the password:
 
 ```ros
-/disk
 /disk/unset sata1 self-encryption-password
 ```
 
-or
+or:
 
 ```ros
-/disk
 /disk/set sata1 !self-encryption-password
-
 ```

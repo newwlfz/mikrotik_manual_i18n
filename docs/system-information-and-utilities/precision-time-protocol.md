@@ -8,8 +8,8 @@ tags:
   - 'ptp'
   - 'precision-time-protocol'
   - 'ieee-1588'
-source: https://manual.mikrotik.com/docs/system-information-and-utilities/precision-time-protocol
-captured_at: '2026-11-04T11:33:34+08:00'
+source: https://manual.mikrotik.com/docs/7.25/system-information-and-utilities/precision-time-protocol
+captured_at: '2026-11-04T11:22:13+08:00'
 ---
 
 The Precision Time Protocol (PTP), developed by the Institute of Electrical and Electronics Engineers (IEEE), is a protocol used to synchronize clocks across a local area network. It is essential in industries and applications where precise timing is critical, such as telecommunications, finance, and industrial automation. PTP typically ensures time accuracy in the sub-microsecond range, but nanosecond-level accuracy is also achievable when hardware requirements are met. MikroTik’s implementation of PTP supports IEEE 1588-2008 (PTPv2) and includes hardware timestamping capabilities that ensure synchronization within the nanosecond range. For additional details on MikroTik’s PTP features, please refer to the list below.
@@ -179,7 +179,7 @@ This information includes critical details such as the clock IDs, priority value
 - **CRS326-24S+2Q+:** Supported on SFP+ and QSFP+ interfaces.
 - **CRS312-4C+8XG:** Supported on all ports.
 - **CRS318-16P-2S+:** Supported only on Gigabit Ethernet ports.
-- **CRS318-1Fi-15Fr-2S:** Supported only on Gigabit Ethernet ports.
+- **CRS318-1Fi-15Fr-2S:** Supported only on 100M Ethernet ports.
 
 ### PTP Support Added in RouterOS Version 7.16 and Later
 

@@ -8,8 +8,8 @@ tags:
   - 'mqtt'
   - 'thingsboard'
   - 'ssl'
-source: https://manual.mikrotik.com/docs/internet-of-things/mqtt/mqtt-and-thingsboard-configuration
-captured_at: '2026-11-04T11:32:01+08:00'
+source: https://manual.mikrotik.com/docs/7.25/internet-of-things/mqtt/mqtt-and-thingsboard-configuration
+captured_at: '2026-11-04T11:19:36+08:00'
 ---
 
 ### Introduction

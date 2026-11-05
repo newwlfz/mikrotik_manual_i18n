@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/bridge/port/mst-override/monitor"
 sidebar_position: 2
 title: "monitor"
 sidebar_label: 'monitor'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/bridge/port/mst-override/monitor
-captured_at: '2026-11-01T21:27:04+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/port/mst-override/monitor
+captured_at: '2026-11-01T21:22:26+08:00'
 ---
 
 -----------

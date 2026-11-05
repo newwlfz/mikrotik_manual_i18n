@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/user-manager/payment"
 sidebar_position: 8
 title: "payment"
 sidebar_label: 'payment'
-source: https://manual.mikrotik.com/docs/cli-reference/user-manager/payment
-captured_at: '2026-11-01T21:30:30+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/payment
+captured_at: '2026-11-01T21:26:08+08:00'
 ---
 
 -----------

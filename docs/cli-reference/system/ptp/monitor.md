@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/ptp/monitor"
 sidebar_position: 2
 title: "monitor"
-source: https://manual.mikrotik.com/docs/cli-reference/system/ptp/monitor
-captured_at: '2026-11-01T21:30:01+08:00'
+sidebar_label: 'monitor'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/ptp/monitor
+captured_at: '2026-11-01T21:25:37+08:00'
 ---
 
 -----------

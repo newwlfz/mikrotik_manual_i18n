@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Advertisements",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/iot/bluetooth/scanners/advertisements/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/iot/bluetooth/scanners/advertisements"
+}

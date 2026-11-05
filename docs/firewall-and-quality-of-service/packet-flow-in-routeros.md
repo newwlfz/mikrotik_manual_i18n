@@ -7,8 +7,8 @@ description: 'This page explains how data packets flow through MikroTik RouterOS
 tags:
   - 'firewall'
   - 'packet-flow'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/packet-flow-in-routeros
-captured_at: '2026-11-04T11:30:00+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/packet-flow-in-routeros
+captured_at: '2026-11-04T11:18:21+08:00'
 ---
 
 More advanced firewall setups, or complicated tasks, such as traffic prioritization, routing policies, where it is necessary to utilize more than one RouterOS facility, require knowledge: How do these facilities work together? What happens when and why?

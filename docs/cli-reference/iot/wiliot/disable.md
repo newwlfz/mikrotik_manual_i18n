@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/iot/wiliot/disable"
 sidebar_position: 3
 title: "disable"
-source: https://manual.mikrotik.com/docs/cli-reference/iot/wiliot/disable
-captured_at: '2026-11-01T21:28:23+08:00'
+sidebar_label: 'disable'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/wiliot/disable
+captured_at: '2026-11-01T21:23:45+08:00'
 ---
 
 -----------

@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/ip/hotspot/active/index"
 sidebar_position: 1
 title: "active"
-source: https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/active
-captured_at: '2026-11-01T21:28:39+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/ip/hotspot/active
+captured_at: '2026-11-01T21:24:02+08:00'
 ---
 
 -----------

@@ -6,8 +6,8 @@ description: 'This page guides users through deploying MikroTik CHR on Amazon We
 tags:
   - 'chr'
   - 'aws'
-source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation/aws
-captured_at: '2026-11-04T11:28:37+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/installation-and-upgrade/install/chr-installation/aws
+captured_at: '2026-11-04T11:16:34+08:00'
 ---
 
 Amazon Web Services (AWS) does not offer MikroTik CHR directly in the Marketplace. To deploy CHR on AWS, you import the raw disk image as an Amazon Machine Image (AMI) and then launch an EC2 instance from it.
@@ -115,4 +115,42 @@ Ensure your security group allows SSH (port 22) and WinBox (port 8291) access fr
 
 :::tip
 AWS does not assign a public IP by default. Ensure your instance has a public IP or Elastic IP associated, and that the security group permits inbound SSH.
+:::
+
+## Alternative: Launch CHR from AWS Marketplace
+
+You can deploy CHR directly from the AWS Marketplace without manually importing disk images.
+
+1. Open the [MikroTik Cloud Hosted Router](https://aws.amazon.com/marketplace/pp/prodview-sf5gn6js6av54?sr=0-1&ref_=beagle&applicationId=AWSMPContessa) listing on AWS Marketplace.
+2. Subscribe to **Cloud Hosted Router**.
+3. Select **Launch** and choose the desired launch method.
+
+   ![CHR AWS launch configuration](./img/chr-aws-launch-01.webp)
+
+4. Create or select a [Security Group](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html). The default configuration provides reasonable security for the router.
+
+   ![CHR AWS security group](./img/chr-aws-launch-02.webp)
+
+5. Create and download a key pair. You need this key pair to authenticate via SSH.
+
+   ![Create key pair step 1](./img/image.webp)
+   ![Create key pair step 2](./img/keypair-02.webp)
+   ![Create key pair step 3](./img/keypair-03.webp)
+
+6. Review the instance configuration and select **Launch Instance**.
+
+   ![CHR instance on EC2](./img/chr-on-aws.webp)
+
+## Connecting to the Marketplace instance
+
+SSH access on port 22 is available immediately by using the downloaded key pair:
+
+```bash
+ssh -i /path/to/keypair.pem admin@INSTANCE_PUBLIC_IP
+```
+
+![Connected to CHR](./img/connected.webp)
+
+:::warning
+On first login, set a strong password for the default user before enabling any additional access methods. Without a password, only SSH with the key pair is allowed. From there, you can enable HTTP, HTTPS, API, API-SSL, or WinBox access.
 :::

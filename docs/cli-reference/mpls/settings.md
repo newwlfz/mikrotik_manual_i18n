@@ -2,8 +2,8 @@
 sidebar_key: "cli-reference/mpls/settings"
 sidebar_position: 5
 title: "settings"
-source: https://manual.mikrotik.com/docs/cli-reference/mpls/settings
-captured_at: '2026-11-01T21:29:16+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/settings
+captured_at: '2026-11-01T21:24:50+08:00'
 ---
 
 -----------

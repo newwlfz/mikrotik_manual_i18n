@@ -7,8 +7,8 @@ description: 'RouterOS organizes features into packages with .npk extensions, in
 tags:
   - 'packages'
   - 'system-packages'
-source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/packages
-captured_at: '2026-11-04T11:31:45+08:00'
+source: https://manual.mikrotik.com/docs/7.25/getting-started/installation-and-upgrade/packages
+captured_at: '2026-11-04T11:20:52+08:00'
 ---
 
 ## Summary
@@ -45,7 +45,7 @@ You can download and install extra packages directly from the router by using th
 
 | Package list | After loading the list with "Check for updates" | Enabling a package | Selecting "Apply Changes" |
 | :--- | :--- | :--- | :--- |
-| [![](https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/img/packages1.png))](img/packages1.png) | [![](https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/img/packages2.png))](img/packages2.png) | [![](https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/img/packages3.png))](img/packages3.png) | [![](https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/img/packages4.png))](img/packages4.png) |
+| [![](./img/packages1.png)](img/packages1.png) | [![](./img/packages2.png)](img/packages2.png) | [![](./img/packages3.png)](img/packages3.png) | [![](./img/packages4.png)](img/packages4.png) |
 
 ### Verification of install
 

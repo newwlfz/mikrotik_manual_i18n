@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/macsec/monitor"
 sidebar_position: 2
 title: "monitor"
 sidebar_label: 'monitor'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/macsec/monitor
-captured_at: '2026-11-01T21:27:29+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/macsec/monitor
+captured_at: '2026-11-01T21:22:52+08:00'
 ---
 
 -----------

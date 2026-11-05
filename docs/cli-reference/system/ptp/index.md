@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/ptp/index"
 sidebar_position: 1
 title: "ptp"
-source: https://manual.mikrotik.com/docs/cli-reference/system/ptp
-captured_at: '2026-11-01T21:30:01+08:00'
+sidebar_label: 'ptp'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/ptp
+captured_at: '2026-11-01T21:25:37+08:00'
 ---
 
 -----------
@@ -26,4 +27,5 @@ captured_at: '2026-11-01T21:30:01+08:00'
 <ArgTableRow arg="transport" typ="enum (auto | ipv4 | l2-non-forwardable | l2-forwardable)"></ArgTableRow>
 <ArgTableRow arg="profile" typ="enum (default | 802.1as | g8275.1 | aes67 | smpte-2059)"></ArgTableRow>
 <ArgTableRow arg="domain" typ="enum (auto)"></ArgTableRow>
+<ArgTableRow arg="ptp-mode" typ="enum (ordinary-clock | transparent-clock)"></ArgTableRow>
 </ArgTable>

@@ -1,0 +1,11 @@
+{
+  "position": 9,
+  "label": "Update",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/package/update/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/package/update"
+}

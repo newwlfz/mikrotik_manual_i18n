@@ -6,8 +6,8 @@ sidebar_label: 'Building Advanced Firewall'
 description: 'This page guides building an advanced firewall on MikroTik RouterOS by configuring interface lists, filtering rules for IPv4 and IPv6, accepting ICMP/DHCPv6 while blocking invalid addresses, and managing traffic flows between WAN and LAN interfaces.'
 tags:
   - 'firewall'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/user-guides/building-advanced-firewall
-captured_at: '2026-11-04T11:28:36+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/user-guides/building-advanced-firewall
+captured_at: '2026-11-04T11:17:19+08:00'
 ---
 
 Building on everything we have covered so far, let's now construct an advanced firewall. In this example, we will implement as many firewall features as possible to demonstrate how they work and when they should be used correctly.

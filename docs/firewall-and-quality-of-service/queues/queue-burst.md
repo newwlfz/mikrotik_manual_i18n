@@ -8,8 +8,8 @@ tags:
   - 'queue-burst'
   - 'qos'
   - 'traffic-management'
-source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/queue-burst
-captured_at: '2026-11-04T11:28:22+08:00'
+source: https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/queues/queue-burst
+captured_at: '2026-11-04T11:15:59+08:00'
 ---
 
 ## Introduction

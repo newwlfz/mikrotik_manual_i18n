@@ -8,8 +8,8 @@ tags:
   - 'ppp'
   - 'aaa'
   - 'radius'
-source: https://manual.mikrotik.com/docs/authentication-authorization-accounting/ppp-aaa
-captured_at: '2026-11-04T11:26:59+08:00'
+source: https://manual.mikrotik.com/docs/7.25/authentication-authorization-accounting/ppp-aaa
+captured_at: '2026-11-04T11:14:19+08:00'
 ---
 
 ## Summary
@@ -44,7 +44,7 @@ PPP profiles are used to define default values for user access records stored un
 | **change-tcp-mss** (*yes \| no \| default*; Default: **no**) | Modifies connection MSS settings (applies only for IPv4):yes - adjust connection MSS valueno - do not adjust connection MSS valuedefault - derive this value from the interface default profile; same as no if this is the interface default profile |
 | **comment** (*string*; Default: ) | Profile comment |
 | **dhcpv6-lease-time** (*string*; Default: ) | Lease time can be set starting from 7.20ab202, by default the time is set to 1d. |
-| **dhcpv6-pd-pool** (*string*; Default: ) | Name of the  [IPv6 pool](https://manual.mikrotik.com/docs/cli-reference/ipv6/pool/pool)  which will be used by dynamically created  [DHCPv6 server](/docs/network-management/dhcp#dhcpv6-server)  when client connects.  [`Read more >>`](/docs/virtual-private-networks/pppoe/ipv6-pd-over-ppp) |
+| **dhcpv6-pd-pool** (*string*; Default: ) | Name of the  [IPv6 pool](https://manual.mikrotik.com/docs/cli-reference/ipv6/pool/pool)  which will be used by dynamically created  [DHCPv6 server](/docs/network-management/dhcp/dhcpv6-server)  when client connects.  [`Read more >>`](/docs/virtual-private-networks/pppoe/ipv6-pd-over-ppp) |
 | **dhcpv6-use-radius** (*no \| yes*; Default: **no**) | Specifies value for "use-radius" option selected for dynamically generated DHCPv6 PD servers. |
 | **dns-server** (*IP*; Default: ) | IP address of the DNS server that is supplied to PPP clients |
 | **idle-timeout** (*time*; Default: ) | Specifies the amount of time after which the link will be terminated if there is no activity present. Timeout is not set by default |

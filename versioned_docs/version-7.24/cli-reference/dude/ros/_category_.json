@@ -1,0 +1,11 @@
+{
+  "position": 9,
+  "label": "Ros",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/dude/ros/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/dude/ros"
+}

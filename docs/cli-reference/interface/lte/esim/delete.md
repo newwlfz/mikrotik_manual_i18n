@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/interface/lte/esim/delete"
 sidebar_position: 3
 title: "delete"
 sidebar_label: 'delete'
-source: https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim/delete
-captured_at: '2026-11-01T21:27:25+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/lte/esim/delete
+captured_at: '2026-11-01T21:22:49+08:00'
 ---
 
 -----------

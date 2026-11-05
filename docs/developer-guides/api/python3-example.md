@@ -7,8 +7,8 @@ description: 'This page provides a Python3 example client for interacting with M
 tags:
   - 'api'
   - 'management'
-source: https://manual.mikrotik.com/docs/developer-guides/api/python3-example
-captured_at: '2026-11-04T11:27:48+08:00'
+source: https://manual.mikrotik.com/docs/7.25/developer-guides/api/python3-example
+captured_at: '2026-11-04T11:15:18+08:00'
 ---
 
 A simple Python3 example client.

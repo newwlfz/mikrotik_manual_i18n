@@ -10,7 +10,8 @@ const LOCAL = 'http://127.0.0.1:3000';
 const OFFICIAL = 'https://manual.mikrotik.com';
 
 const pages = [
-  ['docs', '/docs/introduction', '/docs/7.24/introduction'],
+  ['docs-7.25', '/docs/introduction', '/docs/7.25/introduction'],
+  ['docs-7.24', '/docs/7.24/introduction', '/docs/7.24/introduction'],
   ['hardware', '/hardware/netmetal-ax', '/hardware/netmetal-ax'],
   ['blog', '/blog/news135', '/blog/news135'],
   ['changelog', '/changelog/changelog-2026-11-03', '/changelog/changelog-2026-11-03'],

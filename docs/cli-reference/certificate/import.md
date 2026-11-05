@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/certificate/import"
 sidebar_position: 11
 title: "import"
 sidebar_label: 'import'
-source: https://manual.mikrotik.com/docs/cli-reference/certificate/import
-captured_at: '2026-11-01T21:26:26+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/import
+captured_at: '2026-11-01T21:21:50+08:00'
 ---
 
 -----------

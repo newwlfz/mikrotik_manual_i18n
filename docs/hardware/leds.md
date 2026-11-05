@@ -7,8 +7,8 @@ description: 'RouterOS allows customizing LED behavior for wireless strength, in
 tags:
   - 'leds'
   - 'system-configuration'
-source: https://manual.mikrotik.com/docs/hardware/leds
-captured_at: '2026-11-04T11:29:24+08:00'
+source: https://manual.mikrotik.com/docs/7.25/hardware/leds
+captured_at: '2026-11-04T11:17:24+08:00'
 ---
 
 ## Summary

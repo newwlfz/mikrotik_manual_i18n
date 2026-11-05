@@ -3,8 +3,8 @@ sidebar_key: "cli-reference/certificate/index"
 sidebar_position: 12
 title: "certificate"
 sidebar_label: 'certificate'
-source: https://manual.mikrotik.com/docs/cli-reference/certificate
-captured_at: '2026-11-01T21:26:23+08:00'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/certificate
+captured_at: '2026-11-01T21:21:47+08:00'
 ---
 
 -----------

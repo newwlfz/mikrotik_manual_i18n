@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/resource/hardware/usb-settings"
 sidebar_position: 4
 title: "usb-settings"
-source: https://manual.mikrotik.com/docs/cli-reference/system/resource/hardware/usb-settings
-captured_at: '2026-11-01T21:30:03+08:00'
+sidebar_label: 'usb-settings'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/resource/hardware/usb-settings
+captured_at: '2026-11-01T21:25:41+08:00'
 ---
 
 -----------

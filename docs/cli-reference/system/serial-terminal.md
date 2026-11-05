@@ -2,8 +2,9 @@
 sidebar_key: "cli-reference/system/serial-terminal"
 sidebar_position: 28
 title: "serial-terminal"
-source: https://manual.mikrotik.com/docs/cli-reference/system/serial-terminal
-captured_at: '2026-11-01T21:30:08+08:00'
+sidebar_label: 'serial-terminal'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/system/serial-terminal
+captured_at: '2026-11-01T21:25:46+08:00'
 ---
 
 -----------

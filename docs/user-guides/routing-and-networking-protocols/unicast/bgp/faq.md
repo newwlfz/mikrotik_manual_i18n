@@ -8,8 +8,8 @@ tags:
   - 'routing'
   - 'bgp'
 slug: /user-guides/routing-and-networking-protocols/unicast/bgp/faq
-source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/bgp/faq
-captured_at: '2026-11-04T11:34:04+08:00'
+source: https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/unicast/bgp/faq
+captured_at: '2026-11-04T11:22:41+08:00'
 ---
 
 ## Why eBGP does not connect to loopback address?
