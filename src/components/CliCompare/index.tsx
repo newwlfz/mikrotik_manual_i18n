@@ -45,8 +45,8 @@ function diff(from: CliData, to: CliData): Diff {
   const changedCommands: Diff['changedCommands'] = [];
   const fromNames = new Set(Object.keys(from.commands));
   const toNames = new Set(Object.keys(to.commands));
-  const newCommands = Array.from(toNames).filter((name) => !fromNames.has(name));
-  const removedCommands = Array.from(fromNames).filter((name) => !toNames.has(name));
+  const newCommands = Array.from(toNames).filter((name) => !fromNames.has(name)).sort();
+  const removedCommands = Array.from(fromNames).filter((name) => !toNames.has(name)).sort();
   for (const name of Array.from(fromNames).filter((n) => toNames.has(n))) {
     let addedCount = 0;
     let removedCount = 0;
@@ -313,7 +313,12 @@ export default function CliCompare() {
               </summary>
               <div className="chips_zpAM">
                 {result.removedCommands.map((command) => (
-                  <span className="chip_rQgJ" key={command}>{command}</span>
+                  <a
+                    className="chip_rQgJ chipLink_TZ7w"
+                    href={commandHref(fromVersion, command)}
+                    key={command}>
+                    {command}
+                  </a>
                 ))}
               </div>
             </details>
@@ -324,7 +329,7 @@ export default function CliCompare() {
       {filtered.length ? (
         <section>
           <div className="listHeader_Hahl">
-            <h2 className="listTitle_jQDQ">Parameter changes</h2>
+            <h3 className="listTitle_jQDQ">Parameter changes</h3>
             <span className="listCount__lmH">{filtered.length} commands</span>
           </div>
           <ul className="commandList_JIu9">
@@ -349,14 +354,14 @@ export default function CliCompare() {
                       href={commandHref(toVersion, item.command)}>
                       {item.command}
                     </a>
-                    <div className="rowCounts_xplj">
+                    <span className="rowCounts_xplj">
                       {added.length ? (
                         <span className="countBadge_N8vL badgeAdd_iBlj">+{added.length}</span>
                       ) : null}
                       {removed.length ? (
                         <span className="countBadge_N8vL badgeRemove_W3hi">−{removed.length}</span>
                       ) : null}
-                    </div>
+                    </span>
                   </div>
                   <div className="lines_VluA">
                     {groups
@@ -371,9 +376,15 @@ export default function CliCompare() {
                           <div className="diffContent_oNS4">
                             <span className="kind_m0oH">{group.kind === 'param' ? 'parameters' : 'flags'}</span>
                             {group.items.map((parameter) => (
-                              <span className="diffChip_qYMd" key={parameter.name}>
+                              <a
+                                className="diffChip_qYMd chipLink_TZ7w"
+                                href={`${commandHref(
+                                  group.add ? toVersion : fromVersion,
+                                  item.command,
+                                )}#${parameter.name}`}
+                                key={parameter.name}>
                                 {parameter.name}
-                              </span>
+                              </a>
                             ))}
                           </div>
                         </div>
