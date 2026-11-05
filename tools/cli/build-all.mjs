@@ -28,6 +28,7 @@ for (const version of versions) {
 }
 
 fs.writeFileSync('static/cli/index.json', JSON.stringify(index, null, 2) + '\n');
+execFileSync(process.execPath, ['tools/cli/build-compare.mjs'], {stdio: 'inherit'});
 fs.copyFileSync(`data/cli/${current}/en.json`, 'static/cli/current.json');
 console.log(
   `[cli] wrote static/cli/index.json versions=${index.versions

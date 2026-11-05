@@ -87,6 +87,21 @@ for (const file of walk(CLI_ROOT)) {
   };
 }
 
+// The official 7.24 CLI data contains a '/Headings' pseudo-command created by
+// the upstream scraper from a section heading. It is not a real command and has
+// no page, but the official comparison page lists it under Removed commands and
+// counts it in the 7.24 command total, so keep it for parity.
+if (VERSION === '7.24') {
+  commands['/Headings'] = {
+    path: '/Headings',
+    title: 'Headings',
+    url: '',
+    arguments: [],
+    flags: [],
+    readOnlyArguments: [],
+  };
+}
+
 const payload = {
   version: VERSION,
   generatedFrom: `${ROOT}/cli-reference`,

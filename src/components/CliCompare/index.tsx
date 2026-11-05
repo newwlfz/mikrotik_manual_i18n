@@ -1,80 +1,38 @@
 import React, {useEffect, useMemo, useState} from 'react';
+import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-type Arg = {name: string; type: string; mandatory?: boolean; description?: string};
-type Command = {
+type DiffNames = {params: string[]; flags: string[]};
+type ChangedCommand = {
   path: string;
-  title: string;
-  url: string;
-  arguments: Arg[];
-  flags: Arg[];
-  readOnlyArguments: Arg[];
+  added: DiffNames;
+  removed: DiffNames;
 };
-type CliData = {version: string; commandCount: number; commands: Record<string, Command>};
-type VersionInfo = {version: string; count: number};
-type CliIndex = {current: string; versions: VersionInfo[]};
-type DiffKind = 'param' | 'flag';
-type DiffItem = {command: string; name: string; kind: DiffKind};
-type Diff = {
-  addedParameters: DiffItem[];
-  removedParameters: DiffItem[];
-  newCommands: string[];
+type ComparePair = {
+  changedCommands: ChangedCommand[];
+  addedCommands: string[];
   removedCommands: string[];
-  changedCommands: {command: string; added: number; removed: number}[];
 };
-
-const EMPTY_DIFF: Diff = {
-  addedParameters: [],
-  removedParameters: [],
-  newCommands: [],
-  removedCommands: [],
-  changedCommands: [],
+type CompareData = {
+  versions: string[];
+  commands: Record<string, number>;
+  pairs: Record<string, ComparePair>;
 };
+type ResolvedLink = {url: string; exact: boolean};
 
-function namesOf(command: Command, kind: DiffKind) {
-  const list =
-    kind === 'flag'
-      ? command.flags
-      : [...command.arguments, ...command.readOnlyArguments];
-  return new Set(list.map((arg) => arg.name));
-}
-
-function diff(from: CliData, to: CliData): Diff {
-  const addedParameters: Diff['addedParameters'] = [];
-  const removedParameters: Diff['removedParameters'] = [];
-  const changedCommands: Diff['changedCommands'] = [];
-  const fromNames = new Set(Object.keys(from.commands));
-  const toNames = new Set(Object.keys(to.commands));
-  const newCommands = Array.from(toNames).filter((name) => !fromNames.has(name)).sort();
-  const removedCommands = Array.from(fromNames).filter((name) => !toNames.has(name)).sort();
-  for (const name of Array.from(fromNames).filter((n) => toNames.has(n))) {
-    let addedCount = 0;
-    let removedCount = 0;
-    for (const kind of ['param', 'flag'] as const) {
-      const before = namesOf(from.commands[name], kind);
-      const after = namesOf(to.commands[name], kind);
-      const added = Array.from(after).filter((arg) => !before.has(arg));
-      const removed = Array.from(before).filter((arg) => !after.has(arg));
-      added.forEach((arg) => addedParameters.push({command: name, name: arg, kind}));
-      removed.forEach((arg) => removedParameters.push({command: name, name: arg, kind}));
-      addedCount += added.length;
-      removedCount += removed.length;
-    }
-    if (addedCount || removedCount) {
-      changedCommands.push({command: name, added: addedCount, removed: removedCount});
-    }
-  }
-  changedCommands.sort((a, b) => b.added + b.removed - (a.added + a.removed));
-  return {addedParameters, removedParameters, newCommands, removedCommands, changedCommands};
-}
-
-function optionLabel(version: string, count: number) {
-  return `RouterOS ${version} · ${count.toLocaleString('en-US')} commands`;
-}
+const slug = (value: string) =>
+  value
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]/g, '');
 
 function SelectChevron() {
   return (
-    <svg className="selectChevron_UQlQ" viewBox="0 0 16 16" aria-hidden="true">
+    <svg
+      className="selectChevron_UQlQ"
+      viewBox="0 0 16 16"
+      aria-hidden="true">
       <path
         d="M4 6l4 4 4-4"
         stroke="currentColor"
@@ -87,126 +45,397 @@ function SelectChevron() {
   );
 }
 
-function SearchIcon() {
+function SwapIcon() {
   return (
-    <svg className="searchIcon_gOn3" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
-      <circle cx="7" cy="7" r="4.5" stroke="currentColor" strokeWidth="1.5" fill="none" />
-      <path d="M10.5 10.5L14 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+      <path
+        d="M2 5h9L8.5 2.5M14 11H5l2.5 2.5"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
 
+function SearchIcon() {
+  return (
+    <svg
+      className="searchIcon_gOn3"
+      viewBox="0 0 16 16"
+      width="14"
+      height="14"
+      aria-hidden="true">
+      <circle
+        cx="7"
+        cy="7"
+        r="4.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        fill="none"
+      />
+      <path
+        d="M10.5 10.5L14 14"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+function VersionSelect({
+  id,
+  label,
+  value,
+  versions,
+  commands,
+  onChange,
+}: {
+  id: string;
+  label: string;
+  value: string;
+  versions: string[];
+  commands: Record<string, number>;
+  onChange: (value: string) => void;
+}) {
+  return (
+    <label className="field_G8QJ" htmlFor={id}>
+      <span className="fieldLabel_Iokb">{label}</span>
+      <span className="selectWrap_wiqE">
+        <select
+          id={id}
+          className="select_Kbg9"
+          value={value}
+          onChange={(event) => onChange(event.target.value)}>
+          {versions.map((version) => (
+            <option value={version} key={version}>
+              RouterOS {version} · {commands[version] ?? '?'} commands
+            </option>
+          ))}
+        </select>
+        <SelectChevron />
+      </span>
+    </label>
+  );
+}
+
+function Stat({
+  value,
+  label,
+  tone,
+}: {
+  value: number;
+  label: string;
+  tone: 'add' | 'remove' | 'neutral';
+}) {
+  const toneClass =
+    tone === 'add'
+      ? 'statAdd_e9OD'
+      : tone === 'remove'
+        ? 'statRemove_ZPFd'
+        : '';
+  return (
+    <div className={`stat_H70o ${toneClass}`.trim()}>
+      <span className="statValue_KInA">
+        {tone === 'add' ? '+' : tone === 'remove' ? '−' : ''}
+        {value}
+      </span>
+      <span className="statLabel_CfG4">{label}</span>
+    </div>
+  );
+}
+
+function DiffLine({
+  names,
+  sign,
+  kind,
+  page,
+  section,
+}: {
+  names: string[];
+  sign: '+' | '−';
+  kind: 'parameters' | 'flags';
+  page?: ResolvedLink;
+  section: string;
+}) {
+  if (!names.length) return null;
+  return (
+    <div
+      className={`diffLine_hziN ${
+        sign === '+' ? 'diffAdd_WPoi' : 'diffRemove_KYro'
+      }`}>
+      <span className="sign_wADf">{sign}</span>
+      <div className="diffContent_oNS4">
+        <span className="kind_m0oH">{kind}</span>
+        {names.map((name) => {
+          const href = page
+            ? page.exact
+              ? `${page.url}#${name === 'advertise' ? 'advertise_' : name}`
+              : `${page.url}#${section}`
+            : undefined;
+          return href ? (
+            <Link
+              to={href}
+              className="diffChip_qYMd chipLink_TZ7w"
+              key={name}>
+              {name}
+            </Link>
+          ) : (
+            <code className="diffChip_qYMd" key={name}>
+              {name}
+            </code>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function CommandRow({
+  change,
+  fromLink,
+  toLink,
+}: {
+  change: ChangedCommand;
+  fromLink?: ResolvedLink;
+  toLink?: ResolvedLink;
+}) {
+  const added = change.added.params.length + change.added.flags.length;
+  const removed = change.removed.params.length + change.removed.flags.length;
+  const section = slug(change.path);
+  const link = toLink ?? fromLink;
+  const href = link
+    ? link.exact
+      ? link.url
+      : `${link.url}#${section}`
+    : undefined;
+
+  return (
+    <li className="commandRow_Sd0w">
+      <div className="rowHeader_lPgh">
+        {href ? (
+          <Link to={href} className="path_G9dr pathLink_E0dm">
+            /{change.path}
+          </Link>
+        ) : (
+          <code className="path_G9dr">/{change.path}</code>
+        )}
+        <span className="rowCounts_xplj">
+          {added > 0 ? (
+            <span className="countBadge_N8vL badgeAdd_iBlj">+{added}</span>
+          ) : null}
+          {removed > 0 ? (
+            <span className="countBadge_N8vL badgeRemove_W3hi">−{removed}</span>
+          ) : null}
+        </span>
+      </div>
+      <div className="lines_VluA">
+        <DiffLine
+          names={change.added.params}
+          sign="+"
+          kind="parameters"
+          page={toLink}
+          section={section}
+        />
+        <DiffLine
+          names={change.added.flags}
+          sign="+"
+          kind="flags"
+          page={toLink}
+          section={section}
+        />
+        <DiffLine
+          names={change.removed.params}
+          sign="−"
+          kind="parameters"
+          page={fromLink}
+          section={section}
+        />
+        <DiffLine
+          names={change.removed.flags}
+          sign="−"
+          kind="flags"
+          page={fromLink}
+          section={section}
+        />
+      </div>
+    </li>
+  );
+}
+
+function CommandChips({
+  paths,
+  title,
+  tone,
+  urlFor,
+}: {
+  paths: string[];
+  title: string;
+  tone: 'add' | 'remove';
+  urlFor: (path: string) => string | undefined;
+}) {
+  if (!paths.length) return null;
+  return (
+    <details className="chipsBlock_NSmx">
+      <summary
+        className={tone === 'add' ? 'summaryAdd_XxR4' : 'summaryRemove_UMTG'}>
+        <span className="chevron_UIoq" aria-hidden="true">
+          ›
+        </span>
+        {title}
+        <span className="chipCount_q5DY">{paths.length}</span>
+      </summary>
+      <div className="chips_zpAM">
+        {paths.map((path) => {
+          const url = urlFor(path);
+          return url ? (
+            <Link to={url} className="chip_rQgJ chipLink_TZ7w" key={path}>
+              /{path}
+            </Link>
+          ) : (
+            <code className="chip_rQgJ" key={path}>
+              /{path}
+            </code>
+          );
+        })}
+      </div>
+    </details>
+  );
+}
+
 export default function CliCompare() {
-  const cliBase = useBaseUrl('/cli/');
-  const [index, setIndex] = useState<CliIndex | null>(null);
-  const [data, setData] = useState<Record<string, CliData>>({});
+  const compareUrl = useBaseUrl('/cli-compare.json');
+  const [data, setData] = useState<CompareData | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const [fromVersion, setFromVersion] = useState('');
   const [toVersion, setToVersion] = useState('');
   const [filter, setFilter] = useState('');
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
-    fetch(`${cliBase}index.json`)
+    fetch(compareUrl)
       .then((response) => {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        return response.json();
+        return response.json() as Promise<CompareData>;
       })
-      .then((payload: CliIndex) => {
+      .then((payload) => {
         if (cancelled) return;
-        setIndex(payload);
-        const versions = payload.versions.map((entry) => entry.version);
-        const previous = versions.filter((version) => version !== payload.current).at(-1);
-        setFromVersion(previous ?? payload.current);
-        setToVersion(payload.current);
+        setData(payload);
+        if (payload.versions.length >= 2) {
+          setFromVersion(payload.versions[0]);
+          setToVersion(payload.versions[payload.versions.length - 1]);
+        }
       })
-      .catch((cause) => {
-        if (!cancelled) setError(String(cause));
+      .catch((err: unknown) => {
+        if (!cancelled) setError(String(err));
       });
     return () => {
       cancelled = true;
     };
-  }, [cliBase]);
+  }, [compareUrl]);
 
-  useEffect(() => {
-    if (!index) return;
-    const missing = [fromVersion, toVersion].filter(
-      (version) => version && !data[version],
-    );
-    if (!missing.length) return;
-    let cancelled = false;
-    Promise.all(
-      missing.map(async (version) => {
-        const response = await fetch(`${cliBase}${version}.json`);
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        return [version, (await response.json()) as CliData] as const;
-      }),
-    )
-      .then((entries) => {
-        if (!cancelled) setData((previous) => ({...previous, ...Object.fromEntries(entries)}));
-      })
-      .catch((cause) => {
-        if (!cancelled) setError(String(cause));
-      });
-    return () => {
-      cancelled = true;
+  const pair = useMemo<ComparePair | null>(() => {
+    if (!data || !fromVersion || !toVersion || fromVersion === toVersion) {
+      return null;
+    }
+    const direct = data.pairs[`${fromVersion}->${toVersion}`];
+    if (direct) return direct;
+    const inverse = data.pairs[`${toVersion}->${fromVersion}`];
+    if (!inverse) return null;
+    return {
+      changedCommands: inverse.changedCommands.map((change) => ({
+        path: change.path,
+        added: change.removed,
+        removed: change.added,
+      })),
+      addedCommands: inverse.removedCommands,
+      removedCommands: inverse.addedCommands,
     };
-  }, [index, fromVersion, toVersion, cliBase, data]);
+  }, [data, fromVersion, toVersion]);
 
-  const from = data[fromVersion];
-  const to = data[toVersion];
-  const result = useMemo(() => {
-    if (!from || !to) return null;
-    if (fromVersion === toVersion) return EMPTY_DIFF;
-    return diff(from, to);
-  }, [from, to, fromVersion, toVersion]);
+  const filtered = useMemo(() => {
+    if (!pair) return [];
+    const query = filter.trim().toLowerCase();
+    return query
+      ? pair.changedCommands.filter((change) =>
+          change.path.toLowerCase().includes(query),
+        )
+      : pair.changedCommands;
+  }, [pair, filter]);
 
   if (error) {
-    return <div className="root_EuB2">CLI data unavailable: {error}</div>;
+    return (
+      <div className="error_OVSF">
+        Could not load <code>cli-compare.json</code>: {error}
+      </div>
+    );
   }
-  if (!index || !result) {
-    return <div className="root_EuB2" />;
+  if (!data) {
+    return (
+      <div className="notice_FmSW">Loading CLI reference versions…</div>
+    );
+  }
+  if (data.versions.length < 2) {
+    return (
+      <div className="notice_FmSW">
+        Not enough CLI reference versions to compare.
+      </div>
+    );
   }
 
-  const versions = index.versions;
-  const filtered = result.changedCommands.filter((item) =>
-    item.command.toLowerCase().includes(filter.trim().toLowerCase()),
-  );
-  const hasChanges =
-    result.addedParameters.length ||
-    result.removedParameters.length ||
-    result.newCommands.length ||
-    result.removedCommands.length ||
-    result.changedCommands.length;
-
+  const currentVersion = data.versions[data.versions.length - 1];
   const commandHref = (version: string, command: string) => {
     const base =
-      version === index.current
+      version === currentVersion
         ? '/docs/cli-reference'
         : `/docs/${version}/cli-reference`;
-    return `${base}${command}`;
+    return `${base}/${command}`;
   };
+  const resolveLink = (
+    version: string,
+    command: string,
+  ): ResolvedLink | undefined => {
+    if (command === 'Headings') return undefined;
+    return {url: commandHref(version, command), exact: true};
+  };
+  const linkFor = (version: string, command: string) => {
+    const link = resolveLink(version, command);
+    return link
+      ? link.exact
+        ? link.url
+        : `${link.url}#${slug(command)}`
+      : undefined;
+  };
+
+  const addedParameters = pair
+    ? pair.changedCommands.reduce(
+        (total, change) =>
+          total + change.added.params.length + change.added.flags.length,
+        0,
+      )
+    : 0;
+  const removedParameters = pair
+    ? pair.changedCommands.reduce(
+        (total, change) =>
+          total + change.removed.params.length + change.removed.flags.length,
+        0,
+      )
+    : 0;
 
   return (
     <div className="root_EuB2">
       <div className="toolbar_PFPH">
-        <label className="field_G8QJ" htmlFor="cli-compare-from">
-          <span className="fieldLabel_Iokb">From</span>
-          <span className="selectWrap_wiqE">
-            <select
-              id="cli-compare-from"
-              className="select_Kbg9"
-              value={fromVersion}
-              onChange={(event) => setFromVersion(event.target.value)}>
-              {versions.map((entry) => (
-                <option value={entry.version} key={entry.version}>
-                  {optionLabel(entry.version, entry.count)}
-                </option>
-              ))}
-            </select>
-            <SelectChevron />
-          </span>
-        </label>
+        <VersionSelect
+          id="cli-compare-from"
+          label="From"
+          value={fromVersion}
+          versions={data.versions}
+          commands={data.commands}
+          onChange={setFromVersion}
+        />
         <button
           type="button"
           className="swapBtn_P3vE"
@@ -216,186 +445,116 @@ export default function CliCompare() {
             setFromVersion(toVersion);
             setToVersion(fromVersion);
           }}>
-          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
-            <path
-              d="M2 5h9L8.5 2.5M14 11H5l2.5 2.5"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <SwapIcon />
         </button>
-        <label className="field_G8QJ" htmlFor="cli-compare-to">
-          <span className="fieldLabel_Iokb">To</span>
-          <span className="selectWrap_wiqE">
-            <select
-              id="cli-compare-to"
-              className="select_Kbg9"
-              value={toVersion}
-              onChange={(event) => setToVersion(event.target.value)}>
-              {versions.map((entry) => (
-                <option value={entry.version} key={entry.version}>
-                  {optionLabel(entry.version, entry.count)}
-                </option>
-              ))}
-            </select>
-            <SelectChevron />
-          </span>
-        </label>
-        <label className="field_G8QJ searchField_zQ_9" htmlFor="cli-compare-filter">
+        <VersionSelect
+          id="cli-compare-to"
+          label="To"
+          value={toVersion}
+          versions={data.versions}
+          commands={data.commands}
+          onChange={setToVersion}
+        />
+        <label
+          className="field_G8QJ searchField_zQ_9"
+          htmlFor="cli-compare-filter">
           <span className="fieldLabel_Iokb">Filter</span>
           <span className="searchWrap_fent">
             <SearchIcon />
             <input
               id="cli-compare-filter"
               className="searchInput_ZexK"
-              placeholder="path, e.g. ip/firewall"
               type="search"
               value={filter}
               onChange={(event) => setFilter(event.target.value)}
+              placeholder="path, e.g. ip/firewall"
             />
           </span>
         </label>
       </div>
 
-      <div className="stats_c16J">
-        <div className="stat_H70o statAdd_e9OD">
-          <span className="statValue_KInA">+{result.addedParameters.length}</span>
-          <span className="statLabel_CfG4">parameters added</span>
-        </div>
-        <div className="stat_H70o statRemove_ZPFd">
-          <span className="statValue_KInA">−{result.removedParameters.length}</span>
-          <span className="statLabel_CfG4">parameters removed</span>
-        </div>
-        <div className="stat_H70o">
-          <span className="statValue_KInA">{result.changedCommands.length}</span>
-          <span className="statLabel_CfG4">commands changed</span>
-        </div>
-        <div className="stat_H70o statAdd_e9OD">
-          <span className="statValue_KInA">+{result.newCommands.length}</span>
-          <span className="statLabel_CfG4">new commands</span>
-        </div>
-        <div className="stat_H70o statRemove_ZPFd">
-          <span className="statValue_KInA">−{result.removedCommands.length}</span>
-          <span className="statLabel_CfG4">commands removed</span>
-        </div>
-      </div>
+      {pair ? (
+        <>
+          <div className="stats_c16J">
+            <Stat
+              value={addedParameters}
+              label="parameters added"
+              tone="add"
+            />
+            <Stat
+              value={removedParameters}
+              label="parameters removed"
+              tone="remove"
+            />
+            <Stat
+              value={pair.changedCommands.length}
+              label="commands changed"
+              tone="neutral"
+            />
+            <Stat
+              value={pair.addedCommands.length}
+              label="new commands"
+              tone="add"
+            />
+            <Stat
+              value={pair.removedCommands.length}
+              label="commands removed"
+              tone="remove"
+            />
+          </div>
 
-      {hasChanges ? (
-        <div className="chipsRow_rke_">
-          {result.newCommands.length ? (
-            <details className="chipsBlock_NSmx">
-              <summary className="summaryAdd_XxR4">
-                <span className="chevron_UIoq" aria-hidden="true">›</span>
-                New commands
-                <span className="chipCount_q5DY">{result.newCommands.length}</span>
-              </summary>
-              <div className="chips_zpAM">
-                {result.newCommands.map((command) => (
-                  <a
-                    className="chip_rQgJ chipLink_TZ7w"
-                    href={commandHref(toVersion, command)}
-                    key={command}>
-                    {command}
-                  </a>
-                ))}
-              </div>
-            </details>
+          {pair.addedCommands.length > 0 ||
+          pair.removedCommands.length > 0 ? (
+            <div className="chipsRow_rke_">
+              <CommandChips
+                paths={pair.addedCommands}
+                title="New commands"
+                tone="add"
+                urlFor={(command) => linkFor(toVersion, command)}
+              />
+              <CommandChips
+                paths={pair.removedCommands}
+                title="Removed commands"
+                tone="remove"
+                urlFor={(command) => linkFor(fromVersion, command)}
+              />
+            </div>
           ) : null}
-          {result.removedCommands.length ? (
-            <details className="chipsBlock_NSmx">
-              <summary className="summaryRemove_UMTG">
-                <span className="chevron_UIoq" aria-hidden="true">›</span>
-                Removed commands
-                <span className="chipCount_q5DY">{result.removedCommands.length}</span>
-              </summary>
-              <div className="chips_zpAM">
-                {result.removedCommands.map((command) => (
-                  <a
-                    className="chip_rQgJ chipLink_TZ7w"
-                    href={commandHref(fromVersion, command)}
-                    key={command}>
-                    {command}
-                  </a>
-                ))}
-              </div>
-            </details>
-          ) : null}
-        </div>
-      ) : null}
 
-      {filtered.length ? (
-        <section>
           <div className="listHeader_Hahl">
             <h3 className="listTitle_jQDQ">Parameter changes</h3>
-            <span className="listCount__lmH">{filtered.length} commands</span>
+            <span className="listCount__lmH">
+              {filtered.length}
+              {filter && filtered.length !== pair.changedCommands.length
+                ? ` of ${pair.changedCommands.length}`
+                : ''}{' '}
+              {filtered.length === 1 ? 'command' : 'commands'}
+            </span>
           </div>
-          <ul className="commandList_JIu9">
-            {filtered.map((item) => {
-              const added = result.addedParameters.filter(
-                (parameter) => parameter.command === item.command,
-              );
-              const removed = result.removedParameters.filter(
-                (parameter) => parameter.command === item.command,
-              );
-              const groups: {kind: DiffKind; sign: '+' | '−'; items: DiffItem[]; add: boolean}[] = [
-                {kind: 'param', sign: '+', items: added.filter((p) => p.kind === 'param'), add: true},
-                {kind: 'flag', sign: '+', items: added.filter((p) => p.kind === 'flag'), add: true},
-                {kind: 'param', sign: '−', items: removed.filter((p) => p.kind === 'param'), add: false},
-                {kind: 'flag', sign: '−', items: removed.filter((p) => p.kind === 'flag'), add: false},
-              ];
-              return (
-                <li className="commandRow_Sd0w" key={item.command}>
-                  <div className="rowHeader_lPgh">
-                    <a
-                      className="path_G9dr pathLink_E0dm"
-                      href={commandHref(toVersion, item.command)}>
-                      {item.command}
-                    </a>
-                    <span className="rowCounts_xplj">
-                      {added.length ? (
-                        <span className="countBadge_N8vL badgeAdd_iBlj">+{added.length}</span>
-                      ) : null}
-                      {removed.length ? (
-                        <span className="countBadge_N8vL badgeRemove_W3hi">−{removed.length}</span>
-                      ) : null}
-                    </span>
-                  </div>
-                  <div className="lines_VluA">
-                    {groups
-                      .filter((group) => group.items.length)
-                      .map((group) => (
-                        <div
-                          className={`diffLine_hziN ${
-                            group.add ? 'diffAdd_WPoi' : 'diffRemove_KYro'
-                          }`}
-                          key={`${group.kind}-${group.sign}`}>
-                          <span className="sign_wADf">{group.sign}</span>
-                          <div className="diffContent_oNS4">
-                            <span className="kind_m0oH">{group.kind === 'param' ? 'parameters' : 'flags'}</span>
-                            {group.items.map((parameter) => (
-                              <a
-                                className="diffChip_qYMd chipLink_TZ7w"
-                                href={`${commandHref(
-                                  group.add ? toVersion : fromVersion,
-                                  item.command,
-                                )}#${parameter.name}`}
-                                key={parameter.name}>
-                                {parameter.name}
-                              </a>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
-      ) : null}
+
+          {filtered.length > 0 ? (
+            <ul className="commandList_JIu9">
+              {filtered.map((change) => (
+                <CommandRow
+                  key={change.path}
+                  change={change}
+                  fromLink={resolveLink(fromVersion, change.path)}
+                  toLink={resolveLink(toVersion, change.path)}
+                />
+              ))}
+            </ul>
+          ) : (
+            <div className="notice_FmSW">
+              No parameter differences
+              {filter ? ' matching the filter' : ''}.
+            </div>
+          )}
+        </>
+      ) : (
+        <div className="notice_FmSW">
+          Select two different versions to compare.
+        </div>
+      )}
     </div>
   );
 }
