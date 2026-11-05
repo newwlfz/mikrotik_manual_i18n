@@ -13,9 +13,11 @@ type Command = {
 type CliData = {version: string; commandCount: number; commands: Record<string, Command>};
 type VersionInfo = {version: string; count: number};
 type CliIndex = {current: string; versions: VersionInfo[]};
+type DiffKind = 'param' | 'flag';
+type DiffItem = {command: string; name: string; kind: DiffKind};
 type Diff = {
-  addedParameters: {command: string; name: string}[];
-  removedParameters: {command: string; name: string}[];
+  addedParameters: DiffItem[];
+  removedParameters: DiffItem[];
   newCommands: string[];
   removedCommands: string[];
   changedCommands: {command: string; added: number; removed: number}[];
@@ -29,10 +31,12 @@ const EMPTY_DIFF: Diff = {
   changedCommands: [],
 };
 
-function argNames(command: Command) {
-  return new Set(
-    [...command.arguments, ...command.flags, ...command.readOnlyArguments].map((arg) => arg.name),
-  );
+function namesOf(command: Command, kind: DiffKind) {
+  const list =
+    kind === 'flag'
+      ? command.flags
+      : [...command.arguments, ...command.readOnlyArguments];
+  return new Set(list.map((arg) => arg.name));
 }
 
 function diff(from: CliData, to: CliData): Diff {
@@ -44,14 +48,20 @@ function diff(from: CliData, to: CliData): Diff {
   const newCommands = Array.from(toNames).filter((name) => !fromNames.has(name));
   const removedCommands = Array.from(fromNames).filter((name) => !toNames.has(name));
   for (const name of Array.from(fromNames).filter((n) => toNames.has(n))) {
-    const before = argNames(from.commands[name]);
-    const after = argNames(to.commands[name]);
-    const added = Array.from(after).filter((arg) => !before.has(arg));
-    const removed = Array.from(before).filter((arg) => !after.has(arg));
-    added.forEach((arg) => addedParameters.push({command: name, name: arg}));
-    removed.forEach((arg) => removedParameters.push({command: name, name: arg}));
-    if (added.length || removed.length) {
-      changedCommands.push({command: name, added: added.length, removed: removed.length});
+    let addedCount = 0;
+    let removedCount = 0;
+    for (const kind of ['param', 'flag'] as const) {
+      const before = namesOf(from.commands[name], kind);
+      const after = namesOf(to.commands[name], kind);
+      const added = Array.from(after).filter((arg) => !before.has(arg));
+      const removed = Array.from(before).filter((arg) => !after.has(arg));
+      added.forEach((arg) => addedParameters.push({command: name, name: arg, kind}));
+      removed.forEach((arg) => removedParameters.push({command: name, name: arg, kind}));
+      addedCount += added.length;
+      removedCount += removed.length;
+    }
+    if (addedCount || removedCount) {
+      changedCommands.push({command: name, added: addedCount, removed: removedCount});
     }
   }
   changedCommands.sort((a, b) => b.added + b.removed - (a.added + a.removed));
@@ -312,36 +322,68 @@ export default function CliCompare() {
       ) : null}
 
       {filtered.length ? (
-        <div>
-          <h2>Parameter changes <span>{filtered.length} commands</span></h2>
-          {filtered.map((item) => {
-            const added = result.addedParameters.filter(
-              (parameter) => parameter.command === item.command,
-            );
-            const removed = result.removedParameters.filter(
-              (parameter) => parameter.command === item.command,
-            );
-            return (
-              <div key={item.command}>
-                <code>{item.command}</code>
-                {added.length ? (
-                  <span className="statAdd_e9OD">
-                    {added.map((parameter) => (
-                      <code key={parameter.name}>{parameter.name}</code>
-                    ))}
-                  </span>
-                ) : null}
-                {removed.length ? (
-                  <span className="statRemove_ZPFd">
-                    {removed.map((parameter) => (
-                      <code key={parameter.name}>{parameter.name}</code>
-                    ))}
-                  </span>
-                ) : null}
-              </div>
-            );
-          })}
-        </div>
+        <section>
+          <div className="listHeader_Hahl">
+            <h2 className="listTitle_jQDQ">Parameter changes</h2>
+            <span className="listCount__lmH">{filtered.length} commands</span>
+          </div>
+          <ul className="commandList_JIu9">
+            {filtered.map((item) => {
+              const added = result.addedParameters.filter(
+                (parameter) => parameter.command === item.command,
+              );
+              const removed = result.removedParameters.filter(
+                (parameter) => parameter.command === item.command,
+              );
+              const groups: {kind: DiffKind; sign: '+' | '−'; items: DiffItem[]; add: boolean}[] = [
+                {kind: 'param', sign: '+', items: added.filter((p) => p.kind === 'param'), add: true},
+                {kind: 'flag', sign: '+', items: added.filter((p) => p.kind === 'flag'), add: true},
+                {kind: 'param', sign: '−', items: removed.filter((p) => p.kind === 'param'), add: false},
+                {kind: 'flag', sign: '−', items: removed.filter((p) => p.kind === 'flag'), add: false},
+              ];
+              return (
+                <li className="commandRow_Sd0w" key={item.command}>
+                  <div className="rowHeader_lPgh">
+                    <a
+                      className="path_G9dr pathLink_E0dm"
+                      href={commandHref(toVersion, item.command)}>
+                      {item.command}
+                    </a>
+                    <div className="rowCounts_xplj">
+                      {added.length ? (
+                        <span className="countBadge_N8vL badgeAdd_iBlj">+{added.length}</span>
+                      ) : null}
+                      {removed.length ? (
+                        <span className="countBadge_N8vL badgeRemove_W3hi">−{removed.length}</span>
+                      ) : null}
+                    </div>
+                  </div>
+                  <div className="lines_VluA">
+                    {groups
+                      .filter((group) => group.items.length)
+                      .map((group) => (
+                        <div
+                          className={`diffLine_hziN ${
+                            group.add ? 'diffAdd_WPoi' : 'diffRemove_KYro'
+                          }`}
+                          key={`${group.kind}-${group.sign}`}>
+                          <span className="sign_wADf">{group.sign}</span>
+                          <div className="diffContent_oNS4">
+                            <span className="kind_m0oH">{group.kind === 'param' ? 'parameters' : 'flags'}</span>
+                            {group.items.map((parameter) => (
+                              <span className="diffChip_qYMd" key={parameter.name}>
+                                {parameter.name}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
       ) : null}
     </div>
   );
