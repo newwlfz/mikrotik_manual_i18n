@@ -13,8 +13,8 @@ Summary of documentation changes made on May 27, 2026.
 
 ## Extended Features
 
-- **[Container Apps](/docs/7.24/containers/apps)**: Added the network-outgoing-access parameter, which controls whether a container app has outbound network access. When set to no, a mangle drop rule is automatically created to block outgoing traffic for that specific container.
+- **[Container Apps](/docs/containers/apps)**: Added the network-outgoing-access parameter, which controls whether a container app has outbound network access. When set to no, a mangle drop rule is automatically created to block outgoing traffic for that specific container.
 
 ## Getting Started
 
-- **[Backup](/docs/7.24/getting-started/configuration-management/backup)**: Clarified the introductory description — the backup feature saves the router configuration to a binary file (previously described as "cloning"), making the wording more accurate.
+- **[Backup](/docs/getting-started/configuration-management/backup)**: Clarified the introductory description — the backup feature saves the router configuration to a binary file (previously described as "cloning"), making the wording more accurate.

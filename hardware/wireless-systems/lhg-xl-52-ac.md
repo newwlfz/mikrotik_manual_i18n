@@ -97,7 +97,7 @@ The installation infrastructure (towers and masts), as well as the router itself
 
 ## Front status LED behavior
 
-RouterOS allows configuring each LED's activity the way that the user wishes. It is possible to configure the LEDs to display wireless strength, blink the LEDs on interface traffic activity and many other options. For further information please visit the [LEDs](/docs/7.24/hardware/leds) manual page. Default factory configuration for this device:
+RouterOS allows configuring each LED's activity the way that the user wishes. It is possible to configure the LEDs to display wireless strength, blink the LEDs on interface traffic activity and many other options. For further information please visit the [LEDs](/docs/hardware/leds) manual page. Default factory configuration for this device:
 
 ![](./img/image-64256ab0.webp)
 
@@ -144,7 +144,7 @@ Package includes the following accessories that come with the device:
 - LHG XL 550mm Dish
 - Montage assembly
 - LHG 2 fastening set.
-- LHG 60 fastening set. Please see the [MikroTik SFP module compatibility table](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility).
+- LHG 60 fastening set. Please see the [MikroTik SFP module compatibility table](/docs/wired-connections/mikrotik-wired-interface-compatibility).
 
 ## Specifications
 

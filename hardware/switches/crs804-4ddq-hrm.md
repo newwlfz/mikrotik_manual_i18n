@@ -41,7 +41,7 @@ Before you work on any equipment, be aware of the hazards involved with electric
 - Dimensions: 387 x 218 x 44 mm.
 - Operating system RouterOS: v7, License level 6.
 - Operating temperature: -10°C to +60°C.
-- IP: 20 See the [MikroTik wired interface compatibility](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility) table for supported SFP modules.
+- IP: 20 See the [MikroTik wired interface compatibility](/docs/wired-connections/mikrotik-wired-interface-compatibility) table for supported SFP modules.
 
 ## LED indicators
 

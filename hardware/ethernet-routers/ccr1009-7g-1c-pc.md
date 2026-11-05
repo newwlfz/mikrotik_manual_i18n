@@ -42,7 +42,7 @@ Cloud Core Router - Fully independent Ethernet ports each with a direct connecti
 **Reset button**:
 
 - Hold this button during boot time until the USER LED light starts flashing, release the button to reset RouterOS configuration.
-- Hold the Reset button and power on your device (wait until the "USER" LED is blinking then stable "On", and when the "USER" LED is "Off" - release the Reset button) - the device is booting in BOOTP mode to reinstall RouterOS using [Netinstall](/docs/7.24/getting-started/installation-and-upgrade/netinstall). **The MGMT/BOOT Ethernet port is used for the Netinstall process.** See RouterOS documentation about using the Netinstall recovery utility.
+- Hold the Reset button and power on your device (wait until the "USER" LED is blinking then stable "On", and when the "USER" LED is "Off" - release the Reset button) - the device is booting in BOOTP mode to reinstall RouterOS using [Netinstall](/docs/getting-started/installation-and-upgrade/netinstall). **The MGMT/BOOT Ethernet port is used for the Netinstall process.** See RouterOS documentation about using the Netinstall recovery utility.
 
 Regardless of the above option used, the system will load the backup RouterBOOT loader if the button is pressed before power is applied to the device. Release the button before LED begins to flash, to only load backup RouterBOOT without resetting. This is useful for RouterBOOT debugging and recovery.
 
@@ -53,11 +53,11 @@ The package includes the following accessories that come with the device:
 - EU/US power cord, D03+QT3 H05VV-F 3x0.75 mm2 1.83 m RoHS.
 - Power adapter 24VDC **⎓** 2.5 A 60 W 80% VI 121x54x33 cable 1.2 m plug 2.1 mm.
 - USB A Female to Micro B cable
-- Rackmount mounting set for the CRS110 case. Please see the [MikroTik SFP module compatibility table](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility).
+- Rackmount mounting set for the CRS110 case. Please see the [MikroTik SFP module compatibility table](/docs/wired-connections/mikrotik-wired-interface-compatibility).
 
 The SFP modules can become very hot when used, please take great care when unplugging them, refer to the general SFP module usage guidance:
 
-[S+RJ10 general guidance](/docs/7.24/hardware/s-plus-rj10-general-guidance)
+[S+RJ10 general guidance](/docs/hardware/s-plus-rj10-general-guidance)
 
 ## Specifications
 

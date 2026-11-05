@@ -13,16 +13,16 @@ Summary of documentation changes made on September 9, 2026.
 
 ## Network Management
 
-- **[DHCP](/docs/7.24/network-management/dhcp)**: Documented the DHCPv6 and DHCP-PD server options for creating dynamic DNS entries from leases (add-dns-entries and its suffix), and the FQDN DHCP option requested by the DHCPv6 client.
+- **[DHCP](/docs/network-management/dhcp)**: Documented the DHCPv6 and DHCP-PD server options for creating dynamic DNS entries from leases (add-dns-entries and its suffix), and the FQDN DHCP option requested by the DHCPv6 client.
 
 ## Diagnostics & Monitoring
 
-- **[SNMP](/docs/7.24/diagnostics-monitoring-and-troubleshooting/snmp)**: Fixed the engine-id description.
+- **[SNMP](/docs/diagnostics-monitoring-and-troubleshooting/snmp)**: Fixed the engine-id description.
 
 ## Developer Guides
 
-- **[Scripting](/docs/7.24/developer-guides/scripting)**: Documented the !comments parameter for print.
+- **[Scripting](/docs/developer-guides/scripting)**: Documented the !comments parameter for print.
 
 ## Authentication & AAA
 
-- **[HotSpot](/docs/7.24/authentication-authorization-accounting/hotspot-captive-portal)**: Standardized the feature name spelling to "HotSpot" throughout the manual.
+- **[HotSpot](/docs/authentication-authorization-accounting/hotspot-captive-portal)**: Standardized the feature name spelling to "HotSpot" throughout the manual.

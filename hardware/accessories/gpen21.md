@@ -72,7 +72,7 @@ Holding the Reset button for a few seconds while the device is booting will rese
 
 The package includes the following accessories that come with the device:
 
-- K-62 screw kit includes four screws and dowels for mounting on the wall. Please see the [MikroTik SFP module compatibility table](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility).
+- K-62 screw kit includes four screws and dowels for mounting on the wall. Please see the [MikroTik SFP module compatibility table](/docs/wired-connections/mikrotik-wired-interface-compatibility).
 
 ## Specifications
 

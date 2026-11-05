@@ -13,8 +13,8 @@ Summary of documentation changes made on June 2, 2026.
 
 ## System
 
-- **[Fetch](/docs/7.24/system-information-and-utilities/fetch)**: Added the ip-type parameter, which specifies whether to prefer IPv4 or IPv6 when resolving domain names (any, ipv4, or ipv6).
+- **[Fetch](/docs/system-information-and-utilities/fetch)**: Added the ip-type parameter, which specifies whether to prefer IPv4 or IPv6 when resolving domain names (any, ipv4, or ipv6).
 
 ## Introduction
 
-- **[Introduction](/docs/7.24/introduction)**: Expanded with sections on how the documentation is organized, how to find information, the CLI Reference, release notes, reporting mistakes, and machine-readable endpoints for AI tools (/llms.txt, /llms-full.txt, per-page Markdown, /sitemap.xml).
+- **[Introduction](/docs/introduction)**: Expanded with sections on how the documentation is organized, how to find information, the CLI Reference, release notes, reporting mistakes, and machine-readable endpoints for AI tools (/llms.txt, /llms-full.txt, per-page Markdown, /sitemap.xml).

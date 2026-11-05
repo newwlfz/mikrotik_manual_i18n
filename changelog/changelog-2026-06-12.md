@@ -18,7 +18,7 @@ Summary of documentation changes made on June 12, 2026.
 
 ## Getting Started
 
-- **[First Time Configuration](/docs/7.24/getting-started/first-time-configuration)**: Updated First Time Configuration page. Moved and replaced images to local img directory.
+- **[First Time Configuration](/docs/getting-started/first-time-configuration)**: Updated First Time Configuration page. Moved and replaced images to local img directory.
 
 ## Search
 

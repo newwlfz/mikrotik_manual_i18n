@@ -63,7 +63,7 @@ To access the Ethernet port and reset button, please open latch:
 
 ## Front status LED behavior
 
-RouterOS allows configuring each LED's activity the way that the user wishes. It is possible to configure the LEDs to display wireless strength, blink the LEDs on interface traffic activity, and many other options. For further information please visit the [LEDs](/docs/7.24/hardware/leds) manual page. Default factory configuration for this device:
+RouterOS allows configuring each LED's activity the way that the user wishes. It is possible to configure the LEDs to display wireless strength, blink the LEDs on interface traffic activity, and many other options. For further information please visit the [LEDs](/docs/hardware/leds) manual page. Default factory configuration for this device:
 
 ![](./img/worddav8166c6239ffec9eae13bd85db72a8eb4-930e3abc8cfa06cbddc0.webp)
 

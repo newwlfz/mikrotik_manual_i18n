@@ -13,4 +13,4 @@ Summary of documentation changes made on July 24, 2026.
 
 ## Management Tools
 
-- **[TR-069](/docs/7.24/management-tools/tr-069)**: Simplified the Parameters and Data Models description.
+- **[TR-069](/docs/management-tools/tr-069)**: Simplified the Parameters and Data Models description.

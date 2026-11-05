@@ -13,7 +13,7 @@ Summary of documentation changes made on October 8, 2026.
 
 ## Storage
 
-- **[Btrfs RAID](/docs/7.24/storage/btrfs/raid)**: New "Expanding Btrfs-RAID" guide. Adding members with add-device registers each disk at its full size but moves no data until balance-start converts the profiles (a two-disk RAID1 becomes a four-disk RAID10 with twice the usable capacity).
+- **[Btrfs RAID](/docs/storage/btrfs/raid)**: New "Expanding Btrfs-RAID" guide. Adding members with add-device registers each disk at its full size but moves no data until balance-start converts the profiles (a two-disk RAID1 becomes a four-disk RAID10 with twice the usable capacity).
 
 ## Management Tools
 
@@ -21,5 +21,5 @@ Summary of documentation changes made on October 8, 2026.
 
 ## Wireless
 
-- **[Wi-Fi](/docs/7.24/wireless/wifi)**: The page now covers Wi-Fi HaLow (802.11ah) interfaces next to Wi-Fi 6/7. The Network section explains provisioning: labels default to all, each radio automatically gets labels such as 2ghz, 5ghz and 6ghz plus its MAC address, - negates a label, and extra-labels assigns more. New "Converting to/from network-managed Wi-Fi" section: the order RouterOS follows to pick a configuration (static entry, provisioning, network, disabled stub) and how to convert with provision and /interface/wifi/liberate. Radio capabilities now document every hw-caps value (channel-switch, hw-protection-mode, qos-classifier-dscp, sniffer, spectral), and the new "Radio settings" section covers /interface/wifi/radio/settings (default-country, external-antenna, wifi-band).
-- **[Wi-Fi](/docs/7.24/wireless/wifi)**: Corrections in the same pass: warnings moved to the parameters they belong to (encryption ciphers, 802.11r roaming), distance and vlan-id descriptions clarified (HaLow and wifi-qcom-ac do not offload VLANs), and the spectral scan/history and WPS client examples fixed.
+- **[Wi-Fi](/docs/wireless/wifi)**: The page now covers Wi-Fi HaLow (802.11ah) interfaces next to Wi-Fi 6/7. The Network section explains provisioning: labels default to all, each radio automatically gets labels such as 2ghz, 5ghz and 6ghz plus its MAC address, - negates a label, and extra-labels assigns more. New "Converting to/from network-managed Wi-Fi" section: the order RouterOS follows to pick a configuration (static entry, provisioning, network, disabled stub) and how to convert with provision and /interface/wifi/liberate. Radio capabilities now document every hw-caps value (channel-switch, hw-protection-mode, qos-classifier-dscp, sniffer, spectral), and the new "Radio settings" section covers /interface/wifi/radio/settings (default-country, external-antenna, wifi-band).
+- **[Wi-Fi](/docs/wireless/wifi)**: Corrections in the same pass: warnings moved to the parameters they belong to (encryption ciphers, 802.11r roaming), distance and vlan-id descriptions clarified (HaLow and wifi-qcom-ac do not offload VLANs), and the spectral scan/history and WPS client examples fixed.

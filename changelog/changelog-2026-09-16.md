@@ -13,4 +13,4 @@ Summary of documentation changes made on September 16, 2026.
 
 ## Authentication & AAA
 
-- **[Certificates](/docs/7.24/authentication-authorization-accounting/certificates#list-of-built-in-cas)**: Updated the list of built-in certificate authorities: added SSL.com Root Certification Authority ECC and removed an entry for The Go Daddy Group, Inc.
+- **[Certificates](/docs/authentication-authorization-accounting/certificates#list-of-built-in-cas)**: Updated the list of built-in certificate authorities: added SSL.com Root Certification Authority ECC and removed an entry for The Go Daddy Group, Inc.

@@ -1,0 +1,19 @@
+---
+sidebar_key: "cli-reference/tool/wol"
+sidebar_position: 27
+title: "wol"
+source: https://manual.mikrotik.com/docs/cli-reference/tool/wol
+captured_at: '2026-11-01T21:30:27+08:00'
+---
+
+-----------
+
+## tool/wol 
+**Type:** Command
+
+See [Wake on LAN](/docs/system-information-and-utilities/wake-on-lan) for the full documentation.
+
+<ArgTable c1="Argument" c2="Type" c3="Description">
+<ArgTableRow arg="interface" typ="iface_enum">Interface through which the Magic Packet will be sent</ArgTableRow>
+<ArgTableRow arg="mac" typ="macAddr">MAC address of the target computer</ArgTableRow>
+</ArgTable>

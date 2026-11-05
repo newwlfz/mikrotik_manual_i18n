@@ -13,13 +13,13 @@ Summary of documentation changes made on May 20, 2026.
 
 ## Getting Started
 
-- **[RouterOS licensing](/docs/7.24/getting-started/routeros-licensing)**: Restructured the licensing documentation. The x86 licensing content was merged into a single [x86 licensing](/docs/7.24/getting-started/routeros-licensing/x86) page instead of a separate sub-page, and the accompanying screenshots were reorganized.
+- **[RouterOS licensing](/docs/getting-started/routeros-licensing)**: Restructured the licensing documentation. The x86 licensing content was merged into a single [x86 licensing](/docs/getting-started/routeros-licensing/x86) page instead of a separate sub-page, and the accompanying screenshots were reorganized.
 
 ## Containers
 
-- **[Containers](/docs/7.24/containers)**: Documented passing the serial terminal through to a container with devices=serial0:"", including a note that the RouterOS serial console under /system/console must be freed first.
+- **[Containers](/docs/containers)**: Documented passing the serial terminal through to a container with devices=serial0:"", including a note that the RouterOS serial console under /system/console must be freed first.
 
 ## Wireless
 
-- **[Nv2](/docs/7.24/wireless/abgn/nv2)**: Reorganized the protocol overview into continuous prose by removing redundant sub-headings, and tidied the synchronization and configuration example sections.
-- **[Spectral scan](/docs/7.24/wireless/abgn/spectral-scan)**: Corrected the formatting of the range option list and downgraded the unsupported-chipset callout from a danger to a warning admonition.
+- **[Nv2](/docs/wireless/abgn/nv2)**: Reorganized the protocol overview into continuous prose by removing redundant sub-headings, and tidied the synchronization and configuration example sections.
+- **[Spectral scan](/docs/wireless/abgn/spectral-scan)**: Corrected the formatting of the range option list and downgraded the unsupported-chipset callout from a danger to a warning admonition.

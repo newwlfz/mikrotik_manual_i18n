@@ -48,7 +48,7 @@ The devices accept power in the following ways:
 - For CRS109: One SFP cage, compatible with 1.25G SFP modules, Built-in 802.11b/g/n 2GHz wirelessaccess point.
 - For CRS112: Four SFP cages, compatible with 1.25G SFP modules.
 - For CRS210: Two SFP+ cages, SFP+1 compatible with 1.25G and 10G, SFP+2 compatible 10G SFPmodules only.
-- For CRS212: Ten SFP cages, one SFP+ cage, one Gigabit Ethernet port. The device is equipped with an RJ45 serial port, set by default to 115200bit/s, 8 data bits, 1 stop bit, no parity. Standard RJ45 to COM cable can be used, pinout can be found in the [Serial Console manual](/docs/7.24/management-tools/serial-console#rj45-type-serial-port)
+- For CRS212: Ten SFP cages, one SFP+ cage, one Gigabit Ethernet port. The device is equipped with an RJ45 serial port, set by default to 115200bit/s, 8 data bits, 1 stop bit, no parity. Standard RJ45 to COM cable can be used, pinout can be found in the [Serial Console manual](/docs/management-tools/serial-console#rj45-type-serial-port)
 
 ## Configuration
 
@@ -57,7 +57,7 @@ Once logged in, we recommend clicking the “Check for updates” button in the 
 ## Default configuration
 
 - CRS109-8G-1S-2HnD-IN: ports 2-8 are switched, wireless interface and switch are bridged, and bridgecontains a DHCP server. Eth1 and SFP1 have DHCP client configured.
-- All other models all the ports are switched. Both models can be accessed through the IP 192.168.88.1, the username is admin and there is no password. Please connect with your web browser to this IP address to configure it. See this page for connection and configuration guides: [RouterOS documentation](/docs/7.24/introduction)
+- All other models all the ports are switched. Both models can be accessed through the IP 192.168.88.1, the username is admin and there is no password. Please connect with your web browser to this IP address to configure it. See this page for connection and configuration guides: [RouterOS documentation](/docs/introduction)
 
 ## Reset button
 

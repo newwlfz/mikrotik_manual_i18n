@@ -29,7 +29,7 @@ Please follow these quick steps to set up your device:
 
 ## Configuration
 
-Full documentation for SwOS is available at: [https://mt.lv/help](https://mt.lv/help) The device can be discovered using WinBox utility, by clicking on the Neighbors list. The default management address is 192.168.88.1. See the [CSS610 series SwOS manual](/docs/7.24/bridging-and-switching/swos/css610) to get yourself accustomed to the possibilities. For recovery purposes, it is possible to boot the device for reinstallation, see section .
+Full documentation for SwOS is available at: [https://mt.lv/help](https://mt.lv/help) The device can be discovered using WinBox utility, by clicking on the Neighbors list. The default management address is 192.168.88.1. See the [CSS610 series SwOS manual](/docs/bridging-and-switching/swos/css610) to get yourself accustomed to the possibilities. For recovery purposes, it is possible to boot the device for reinstallation, see section .
 
 ## Buttons and jumpers
 

@@ -5,8 +5,12 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const siteUrl = process.env.SITE_URL || 'https://mirror.invalid';
 const baseUrl = process.env.BASE_URL || '/';
+const currentVersionFile = 'data/manifests/current-version.json';
+const currentVersion = fs.existsSync(currentVersionFile)
+  ? JSON.parse(fs.readFileSync(currentVersionFile, 'utf8')).version
+  : '7.24';
 const versionedRoot = 'versioned_docs';
-const availableVersions = fs.existsSync(versionedRoot)
+const versionedSnapshots = fs.existsSync(versionedRoot)
   ? fs
       .readdirSync(versionedRoot, {withFileTypes: true})
       .filter((entry) => entry.isDirectory() && entry.name.startsWith('version-'))
@@ -19,9 +23,7 @@ const availableVersions = fs.existsSync(versionedRoot)
         }
         return a.localeCompare(b);
       })
-  : ['7.24'];
-const latestVersion = availableVersions.at(-1)!;
-const currentRedirectTargets = new Set<string>();
+  : [];
 
 const config: Config = {
   title: 'RouterOS Manual',
@@ -63,14 +65,18 @@ const config: Config = {
         docs: {
           routeBasePath: 'docs',
           sidebarPath: './sidebars.ts',
-          lastVersion: latestVersion,
-          onlyIncludeVersions: availableVersions,
-          versions: Object.fromEntries(
-            availableVersions.map((version) => [
-              version,
-              {label: version, path: version, badge: true},
-            ]),
-          ),
+          versions: {
+            current: {
+              label: currentVersion,
+              badge: true,
+            },
+            ...Object.fromEntries(
+              versionedSnapshots.map((version) => [
+                version,
+                {label: version, path: version, badge: true},
+              ]),
+            ),
+          },
         },
         blog: {
           routeBasePath: 'blog',
@@ -89,25 +95,6 @@ const config: Config = {
 
   plugins: [
     [
-      '@docusaurus/plugin-client-redirects',
-      {
-        redirects: [{from: '/docs', to: `/docs/${latestVersion}/introduction`}],
-        createRedirects(existingPath) {
-          const prefix = `/docs/${latestVersion}/`;
-          if (existingPath === prefix) return ['/docs/'];
-          if (existingPath.endsWith('/index')) return undefined;
-          if (existingPath.startsWith(prefix)) {
-            const target = existingPath.replace(prefix, '/docs/');
-            const key = target.replace(/\/$/, '');
-            if (currentRedirectTargets.has(key)) return undefined;
-            currentRedirectTargets.add(key);
-            return [target];
-          }
-          return undefined;
-        },
-      },
-    ],
-    [
       'docusaurus-plugin-llms',
       {
         generateLLMsTxt: true,
@@ -115,24 +102,24 @@ const config: Config = {
         generateMarkdownFiles: true,
         docsDir: [
           {
-            path: `versioned_docs/version-${latestVersion}`,
+            path: 'docs',
             routeBasePath: 'docs',
           },
         ],
         versions: [
           {
             name: 'current',
-            label: latestVersion,
+            label: currentVersion,
             docsDir: [
               {
-                path: '.generated/current-docs',
+                path: 'docs',
                 routeBasePath: 'docs',
               },
             ],
             path: '',
             routePrefix: '',
           },
-          ...availableVersions.map((version) => ({
+          ...versionedSnapshots.map((version) => ({
             name: version,
             label: version,
             docsDir: [
@@ -232,8 +219,8 @@ const config: Config = {
         {
           title: 'Docs',
           items: [
-            {label: 'Introduction', to: '/docs/7.24/introduction'},
-            {label: 'CLI Reference', to: '/docs/7.24/cli-reference/'},
+            {label: 'Introduction', to: '/docs/introduction'},
+            {label: 'CLI Reference', to: '/docs/cli-reference/'},
           ],
         },
         {

@@ -120,7 +120,7 @@ The LEDs are located under the bottom cover.
 
 ![](./img/wlnmsbmkak.webp)
 
-RouterOS allows configuring each LED's activity the way that the user wishes. It is possible to configure the LEDs to display wireless strength, blink the LEDs on interface traffic activity and many other options. See the [LEDs](/docs/7.24/hardware/leds) page for further information. Default factory configuration for this device:
+RouterOS allows configuring each LED's activity the way that the user wishes. It is possible to configure the LEDs to display wireless strength, blink the LEDs on interface traffic activity and many other options. See the [LEDs](/docs/hardware/leds) page for further information. Default factory configuration for this device:
 
 ![](./img/image-7c85a8cc.webp)
 
@@ -158,7 +158,7 @@ To connect to the external antenna please use, the "Flex-guide" - can be obtaine
 
 Please connect and disconnect the antenna, when the device is turned off!
 
-See [Wireless Interface](/docs/7.24/wireless/abgn/wireless-interface) for configuration information.
+See [Wireless Interface](/docs/wireless/abgn/wireless-interface) for configuration information.
 
 ## Specifications
 

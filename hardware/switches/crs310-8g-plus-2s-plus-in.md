@@ -60,7 +60,7 @@ Full documentation for RouterOS is available at [https://mt.lv/help](https://mt.
 
 Open https://192.168.88.1 in a web browser to start setup. If the IP address is unavailable, use **WinBox** and choose the "**Neighbors**" tab to find the device. Proceed to connect using the MAC address. The username is "**admin**", and there is no password (or, for some models, check user and wireless passwords on the sticker). For recovery purposes, it is possible to reinstall the device from the network, see the Reset button.
 
-The Marvell Prestera switch chip features are described in the [Marvell Prestera switch chip features](/docs/7.24/bridging-and-switching/marvell-prestera-switch-chip-features) manual.
+The Marvell Prestera switch chip features are described in the [Marvell Prestera switch chip features](/docs/bridging-and-switching/marvell-prestera-switch-chip-features) manual.
 
 ## Reset button
 
@@ -68,7 +68,7 @@ The reset button has three functions:
 
 - To reset the configuration, unplug the device from power, press and hold the Reset button, plug in power again, and release the button when the PWR LED starts flashing.
 - To load the backup bootloader, press and hold the Reset button before applying power, then release it after three seconds.
-- To reinstall RouterOS using the [Netinstall](/docs/7.24/getting-started/installation-and-upgrade/netinstall/) utility, enter the device into BOOTP mode. Two booter options are available: the **Regular Booter** and the **Backup Booter**. It is recommended to verify both options in case one does not work.
+- To reinstall RouterOS using the [Netinstall](/docs/getting-started/installation-and-upgrade/netinstall/) utility, enter the device into BOOTP mode. Two booter options are available: the **Regular Booter** and the **Backup Booter**. It is recommended to verify both options in case one does not work.
 
 - **Regular Booter:** To enter etherboot mode, press the **Reset** button after powering on the device and waiting 1–2 seconds.
 - **Backup Booter:** Power off the device. Press and hold the **Reset** button, then power on the device. Wait for the **LED** sequence (blinking → steady → off), then release the button. The device will boot into **BOOTP** mode, ready for RouterOS reinstallation via Netinstall. Depending on the model, this may be indicated by the **USR, USER, System**, or **ACT** LED, or by the SFP port LED.

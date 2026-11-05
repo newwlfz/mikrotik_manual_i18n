@@ -12,10 +12,10 @@
     "sync": "node tools/sync/index.mjs",
     "translate": "node tools/translate/index.mjs",
     "verify": "node tools/verify/index.mjs",
-    "cli:build": "node tools/cli/build-cli-data.mjs && cp data/cli/7.24/en.json static/cli/7.24.json",
-    "current:build": "node tools/sync/materialize-current.mjs",
-    "prebuild": "npm run current:build",
-    "prestart": "npm run current:build"
+    "cli:build": "node tools/cli/build-cli-data.mjs && cp data/cli/$(node -p \"require('./data/manifests/current-version.json').version\")/en.json static/cli/current.json",
+    "metadata:build": "node tools/sync/extract-doc-metadata.mjs",
+    "metadata:apply": "node tools/sync/apply-doc-metadata.mjs",
+    "categories:build": "node tools/sync/build-category-metadata.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.1",
@@ -31,7 +31,6 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.10.1",
-    "@docusaurus/plugin-client-redirects": "3.10.1",
     "@docusaurus/tsconfig": "3.10.1",
     "@docusaurus/types": "3.10.1",
     "docusaurus-plugin-llms": "0.6.1",

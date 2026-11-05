@@ -7,6 +7,7 @@ import ArgTable from '@site/src/components/ArgTable';
 import ArgTableRow from '@site/src/components/ArgTableRow';
 import WideTable from '@site/src/components/WideTable';
 import Img from '@site/src/components/Img';
+import CliReferenceLinks from '@site/src/components/CliReferenceLinks';
 import {Column, Columns} from '@site/src/components/Columns';
 
 export default {
@@ -15,6 +16,7 @@ export default {
   ArgTableRow,
   WideTable,
   Img,
+  CliReferenceLinks,
   Columns,
   Column,
   Tabs,

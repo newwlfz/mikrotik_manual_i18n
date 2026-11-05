@@ -13,4 +13,4 @@ Summary of documentation changes made on July 27, 2026.
 
 ## Bridging & Switching
 
-- **[Bridging and Switching](/docs/7.24/bridging-and-switching)**: Documented the new arp-inspection, ip-source-guard, and trusted-arp bridge port properties, and reworked the ARP Inspection / IP Source Guard section for clarity.
+- **[Bridging and Switching](/docs/bridging-and-switching)**: Documented the new arp-inspection, ip-source-guard, and trusted-arp bridge port properties, and reworked the ARP Inspection / IP Source Guard section for clarity.

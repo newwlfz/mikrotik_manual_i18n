@@ -70,7 +70,7 @@ Package includes the following accessories that come with the device:
 - EU Switching Power Supply 48 V ⎓ 0.95 A 45.6 W.
 - Gigabit POE injector.
 - K-27 DIN rail bracket mounting set.
-- Hose clamp 40/60 w2 A2 9 mm. See the [MikroTik wired interface compatibility](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility) table for supported SFP modules.
+- Hose clamp 40/60 w2 A2 9 mm. See the [MikroTik wired interface compatibility](/docs/wired-connections/mikrotik-wired-interface-compatibility) table for supported SFP modules.
 
 ## MiniPCIe slot usage
 
@@ -113,7 +113,7 @@ Antenna Installation. WARNING: It is the installer's responsibility to ensure th
 
 -
 
-19 dBi Sector MTAS-5G-19D120 Antennas of the same type and lower gain than those listed above may be used in compliance with certification. More information on the wireless interface: [Wireless Interface](/docs/7.24/wireless/abgn/wireless-interface)
+19 dBi Sector MTAS-5G-19D120 Antennas of the same type and lower gain than those listed above may be used in compliance with certification. More information on the wireless interface: [Wireless Interface](/docs/wireless/abgn/wireless-interface)
 
 ## Specifications
 

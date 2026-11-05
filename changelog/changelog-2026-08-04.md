@@ -13,7 +13,7 @@ Summary of documentation changes made on August 4, 2026.
 
 ## CLI Reference
 
-- **[CLI Reference index](/docs/7.24/cli-reference)**: Removed internal documentation-generator notes ("Grafts and Captures", "Headings") from the reference index; that guidance now lives with the internal tooling docs.
+- **[CLI Reference index](/docs/cli-reference)**: Removed internal documentation-generator notes ("Grafts and Captures", "Headings") from the reference index; that guidance now lives with the internal tooling docs.
 
 ## Hardware
 

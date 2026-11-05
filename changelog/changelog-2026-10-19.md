@@ -13,8 +13,8 @@ Summary of documentation changes made on October 19, 2026.
 ## CLI Reference[​](#cli-reference "Direct link to CLI Reference")
 
 -   **[CLI Reference Version Comparison](/docs/cli-reference/compare-versions/)**: New page, linked as "CLI compare" in the top navigation. Pick two RouterOS versions to see which commands and parameters were added or removed between their CLI references.
--   **[CLI Reference](/docs/7.24/cli-reference/#standard-list-entry-properties)**: The index explains what every list menu shares and is not repeated on each menu page: the `comment`, `disabled` (with the `enable` and `disable` commands), `copy-from` and `place-before` properties, and the `detail` and `as-value` print modifiers. The argument types list adds `script`: the name of a `/system script` entry or inline script source. Also added to the 7.25 and 7.24 references.
--   **[7.24 CLI Reference](/docs/7.24/cli-reference/)**: Regenerated from RouterOS 7.24.5 console data, with one page per command like the 7.25 and 7.26 references: about 900 new pages replace 84 combined menu pages. Broken anchors in the BGP and VPLS descriptions are fixed.
+-   **[CLI Reference](/docs/cli-reference/#standard-list-entry-properties)**: The index explains what every list menu shares and is not repeated on each menu page: the `comment`, `disabled` (with the `enable` and `disable` commands), `copy-from` and `place-before` properties, and the `detail` and `as-value` print modifiers. The argument types list adds `script`: the name of a `/system script` entry or inline script source. Also added to the 7.25 and 7.24 references.
+-   **[7.24 CLI Reference](/docs/cli-reference/)**: Regenerated from RouterOS 7.24.5 console data, with one page per command like the 7.25 and 7.26 references: about 900 new pages replace 84 combined menu pages. Broken anchors in the BGP and VPLS descriptions are fixed.
 
 ## Hardware[​](#hardware "Direct link to Hardware")
 

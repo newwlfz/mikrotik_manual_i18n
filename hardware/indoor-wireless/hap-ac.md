@@ -79,7 +79,7 @@ We recommend clicking the "Check for updates" button and updating your RouterOS 
 - Five individual 10/100/1000 Gigabit Ethernet ports, supporting automatic cross/straight cable correction (Auto MDI/X), so you can use either straight or cross-over cables for connecting to other network devices.
 - Integrated Wireless 2.4 GHz and 5 GHz 802.11 a/b/g/n/ac, simultaneous triple-band radio with onboard antennas, max gain 2.5 dBi.
 - USB port.
-- SFP port. The Ether 5 port supports PoE output for powering other RouterBOARD devices. It has an auto-detection feature, so you can connect Laptops and other non-PoE devices without damaging them. The PoE on Ether5 outputs approximately 2 V below input voltage and supports up to 0.7 A (So provided 24 V PSU will provide 22 V 0.7 A output to the Ether 5 PoE port). See the [MikroTik wired interface compatibility](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility) table for supported SFP modules.
+- SFP port. The Ether 5 port supports PoE output for powering other RouterBOARD devices. It has an auto-detection feature, so you can connect Laptops and other non-PoE devices without damaging them. The PoE on Ether5 outputs approximately 2 V below input voltage and supports up to 0.7 A (So provided 24 V PSU will provide 22 V 0.7 A output to the Ether 5 PoE port). See the [MikroTik wired interface compatibility](/docs/wired-connections/mikrotik-wired-interface-compatibility) table for supported SFP modules.
 
 ## Buttons and jumpers
 
@@ -87,7 +87,7 @@ The reset button has three functions:
 
 - Hold this button during boot time until the green LED light starts flashing, release the button to reset RouterOS configuration.
 - Keep holding the reset button until the LED turns solid, then release it to enable CAP mode. The device will then start searching for a CAPsMAN server.
-- To reinstall RouterOS using the [Netinstall](/docs/7.24/getting-started/installation-and-upgrade/netinstall/) utility, enter the device into BOOTP mode. Two booter options are available: the **Regular Booter** and the **Backup Booter**. It is recommended to verify both options in case one does not work.
+- To reinstall RouterOS using the [Netinstall](/docs/getting-started/installation-and-upgrade/netinstall/) utility, enter the device into BOOTP mode. Two booter options are available: the **Regular Booter** and the **Backup Booter**. It is recommended to verify both options in case one does not work.
 
 - **Regular Booter:** To enter etherboot mode, press the **Reset** button after powering on the device and waiting 1–2 seconds.
 - **Backup Booter:** Power off the device. Press and hold the **Reset** button, then power on the device. Wait for the **LED** sequence (blinking → steady → off), then release the button. The device will boot into **BOOTP** mode, ready for RouterOS reinstallation via **Netinstall**. Depending on the model, this may be indicated by the **USR, USER, System**, or **ACT** LED, or by the SFP port LED.

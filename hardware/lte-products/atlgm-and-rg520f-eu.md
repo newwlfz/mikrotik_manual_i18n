@@ -120,7 +120,7 @@ By default the device is configured to use the SIM slot. To use the on-board eSI
 
 A single eSIM chip can store multiple eSIM profiles, the maximum profile count depends on the eSIM chip used.
 
-See the [LTE eSIM](/docs/7.24/mobile-networking/lte-5g#lte-esim) page for details.
+See the [LTE eSIM](/docs/mobile-networking/lte-5g#lte-esim) page for details.
 
 ## Reset button
 

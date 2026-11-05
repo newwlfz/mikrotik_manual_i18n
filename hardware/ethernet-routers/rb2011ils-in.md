@@ -75,7 +75,7 @@ When mounting on the wall, please ensure that cable feed is pointing downwards. 
 - Ether10 supports 500 mA output power, ~2 V below input voltage. Power-out supports auto-detect to protect non-PoE devices.
 - 1G SFP port.
 
-Please see the [MikroTik SFP module compatibility table](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility).
+Please see the [MikroTik SFP module compatibility table](/docs/wired-connections/mikrotik-wired-interface-compatibility).
 
 ## Reset button
 

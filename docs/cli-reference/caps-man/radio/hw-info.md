@@ -1,0 +1,23 @@
+---
+sidebar_key: "cli-reference/caps-man/radio/hw-info"
+sidebar_position: 1
+title: "hw-info"
+source: https://manual.mikrotik.com/docs/cli-reference/caps-man/radio/hw-info
+captured_at: '2026-11-01T21:26:21+08:00'
+---
+
+-----------
+
+## caps-man/radio/hw-info 
+**Package:** wireless-rep
+**Type:** Command
+
+<ArgTable c1="Read-only Argument" c2="Type" c3="Description">
+<ArgTableRow arg="ranges" typ="multi { array-id, range: string
+ }"></ArgTableRow>
+<ArgTableRow arg="tx-chains" typ="ubit (0, 1, 2, 3)"></ArgTableRow>
+<ArgTableRow arg="rx-chains" typ="ubit (0, 1, 2, 3)"></ArgTableRow>
+<ArgTableRow arg="antenna-gain" typ="num"></ArgTableRow>
+<ArgTableRow arg="locked-countries" typ="multi { array-id, country: enum
+ }"></ArgTableRow>
+</ArgTable>

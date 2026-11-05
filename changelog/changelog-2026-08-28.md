@@ -13,11 +13,11 @@ Summary of documentation changes made on August 28, 2026.
 
 ## Containers
 
-- **[Container Apps](/docs/7.24/containers/apps)**: Fixed the UDP port-mapping example (was missing the /udp suffix) and clarified that ports default to TCP unless marked otherwise; also fixed an incorrectly indented networks block in a compose example.
+- **[Container Apps](/docs/containers/apps)**: Fixed the UDP port-mapping example (was missing the /udp suffix) and clarified that ports default to TCP unless marked otherwise; also fixed an incorrectly indented networks block in a compose example.
 
 ## Management Tools
 
-- **[WinBox](/docs/7.24/management-tools/winbox)**: Marked the WinBox v4 page as a work in progress, updated the download link and Linux install steps, and added a Login screen section with a shortcuts table.
+- **[WinBox](/docs/management-tools/winbox)**: Marked the WinBox v4 page as a work in progress, updated the download link and Linux install steps, and added a Login screen section with a shortcuts table.
 
 ## Hardware
 

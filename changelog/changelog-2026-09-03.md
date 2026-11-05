@@ -13,15 +13,15 @@ Summary of documentation changes made on September 3, 2026.
 
 ## Diagnostics & Monitoring
 
-- **[Ping](/docs/7.24/diagnostics-monitoring-and-troubleshooting/ping)**: Documented nd-ping — IPv6 Neighbor Discovery ping, the counterpart of ARP ping for checking on-link IPv6 hosts without ICMPv6.
+- **[Ping](/docs/diagnostics-monitoring-and-troubleshooting/ping)**: Documented nd-ping — IPv6 Neighbor Discovery ping, the counterpart of ARP ping for checking on-link IPv6 hosts without ICMPv6.
 
 ## VPN
 
-- **[L2TP](/docs/7.24/virtual-private-networks/l2tp)**: Expanded the Ether over L2TP section.
+- **[L2TP](/docs/virtual-private-networks/l2tp)**: Expanded the Ether over L2TP section.
 
 ## Getting Started
 
-- **[CHR Licensing](/docs/7.24/getting-started/routeros-licensing/chr/chr-licensing)**: Clarified that multiple Prepaid keys cannot be combined to upgrade to a higher license level.
+- **[CHR Licensing](/docs/getting-started/routeros-licensing/chr/chr-licensing)**: Clarified that multiple Prepaid keys cannot be combined to upgrade to a higher license level.
 
 ## Hardware
 

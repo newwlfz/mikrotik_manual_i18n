@@ -13,7 +13,7 @@ Summary of documentation changes made on September 15, 2026.
 
 ## Site
 
-- Fixed the machine-readable Markdown (.md) versions of some pages being missing or listed at the wrong URL in llms.txt; the [Console](/docs/7.24/management-tools/console), [WinBox](/docs/7.24/management-tools/winbox), and [WinBox Legacy](https://manual.mikrotik.com/docs/management-tools/winbox-legacy) pages now have Markdown files matching their HTML addresses.
+- Fixed the machine-readable Markdown (.md) versions of some pages being missing or listed at the wrong URL in llms.txt; the [Console](/docs/management-tools/console), [WinBox](/docs/management-tools/winbox), and [WinBox Legacy](https://manual.mikrotik.com/docs/management-tools/winbox-legacy) pages now have Markdown files matching their HTML addresses.
 
 ## Hardware
 

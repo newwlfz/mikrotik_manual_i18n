@@ -10,11 +10,11 @@ const LOCAL = 'http://127.0.0.1:3000';
 const OFFICIAL = 'https://manual.mikrotik.com';
 
 const pages = [
-  ['docs', '/docs/7.24/introduction'],
-  ['hardware', '/hardware/netmetal-ax'],
-  ['blog', '/blog/news135'],
-  ['changelog', '/changelog/changelog-2026-11-03'],
-  ['compare', '/docs/cli-reference/compare-versions/'],
+  ['docs', '/docs/introduction', '/docs/7.24/introduction'],
+  ['hardware', '/hardware/netmetal-ax', '/hardware/netmetal-ax'],
+  ['blog', '/blog/news135', '/blog/news135'],
+  ['changelog', '/changelog/changelog-2026-11-03', '/changelog/changelog-2026-11-03'],
+  ['compare', '/docs/cli-reference/compare-versions/', '/docs/cli-reference/compare-versions/'],
 ];
 
 fs.mkdirSync(OUT, {recursive: true});
@@ -45,9 +45,9 @@ async function inspect(page) {
   });
 }
 
-async function capture(name, pathname) {
+async function capture(name, localPath, officialPath) {
   const page = await browser.newPage({viewport: {width: 1440, height: 900}});
-  const localUrl = LOCAL + pathname;
+  const localUrl = LOCAL + localPath;
   await page.goto(localUrl, {waitUntil: 'domcontentloaded', timeout: 90000});
   await page.waitForTimeout(1200);
   const local = await inspect(page);
@@ -55,7 +55,7 @@ async function capture(name, pathname) {
   await page.close();
 
   const officialPage = await browser.newPage({viewport: {width: 1440, height: 900}});
-  const officialUrl = OFFICIAL + pathname;
+  const officialUrl = OFFICIAL + officialPath;
   await officialPage.goto(officialUrl, {waitUntil: 'domcontentloaded', timeout: 90000});
   await officialPage.waitForTimeout(2500);
   const official = await inspect(officialPage);
@@ -64,18 +64,18 @@ async function capture(name, pathname) {
     fullPage: false,
   });
   await officialPage.close();
-  return {name, pathname, local_url: localUrl, official_url: officialUrl, local, official};
+  return {name, local_path: localPath, official_path: officialPath, local_url: localUrl, official_url: officialUrl, local, official};
 }
 
 const results = [];
-for (const [name, pathname] of pages) {
+for (const [name, localPath, officialPath] of pages) {
   try {
-    const result = await capture(name, pathname);
+    const result = await capture(name, localPath, officialPath);
     results.push(result);
     console.log(`captured ${name}`);
   } catch (error) {
     console.error(`FAILED ${name}: ${error.message}`);
-    results.push({name, pathname, error: error.message});
+    results.push({name, local_path: localPath, official_path: officialPath, error: error.message});
   }
 }
 
@@ -86,7 +86,7 @@ const cards = results
     if (r.error) return `<h2>${r.name}</h2><p class="error">${r.error}</p>`;
     return `<section>
       <h2>${r.name}</h2>
-      <p><code>${r.pathname}</code></p>
+      <p><code>${r.local_path}</code> vs <code>${r.official_path}</code></p>
       <div class="pair">
         <figure><img src="${r.name}-local.png"><figcaption>local</figcaption></figure>
         <figure><img src="${r.name}-official.png"><figcaption>official</figcaption></figure>

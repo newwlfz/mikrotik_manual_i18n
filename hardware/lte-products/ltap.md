@@ -70,7 +70,7 @@ The built-in GPS module requires an external antenna to be used (SMA connector i
 
 - Enabling - /system gps set enable=yes;
 - Setting antenna to external - /system gps set gps-antenna-select=external;
-- Checking configuration - /system gps print. Configuration information - [GPS manual, basic examples](/docs/7.24/mobile-networking/gps/#basic-examples)
+- Checking configuration - /system gps print. Configuration information - [GPS manual, basic examples](/docs/mobile-networking/gps/#basic-examples)
 
 ## Powering
 

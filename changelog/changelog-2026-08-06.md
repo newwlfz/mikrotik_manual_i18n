@@ -13,16 +13,16 @@ Summary of documentation changes made on August 6, 2026.
 
 ## Containers
 
-- **[Container Apps](/docs/7.24/containers/apps)**: Added a note about the app.yaml reference.
+- **[Container Apps](/docs/containers/apps)**: Added a note about the app.yaml reference.
 
 ## System
 
-- **[Precision Time Protocol](/docs/7.24/system-information-and-utilities/precision-time-protocol)**: Corrected information in the PTP section.
+- **[Precision Time Protocol](/docs/system-information-and-utilities/precision-time-protocol)**: Corrected information in the PTP section.
 
 ## Developer Guides
 
-- **[Scripting](/docs/7.24/developer-guides/scripting)**: Documented use-tz and UTC behavior for the :timestamp command.
+- **[Scripting](/docs/developer-guides/scripting)**: Documented use-tz and UTC behavior for the :timestamp command.
 
 ## Bridging & Switching
 
-- **[L3 Hardware Offloading](/docs/7.24/bridging-and-switching/l3-hardware-offloading)**: Removed the deprecated Controller Bridge and Port Extender documentation — the dedicated page was deleted, and references were removed from this page and from [Neighbor Discovery](/docs/7.24/system-information-and-utilities/neighbor-discovery).
+- **[L3 Hardware Offloading](/docs/bridging-and-switching/l3-hardware-offloading)**: Removed the deprecated Controller Bridge and Port Extender documentation — the dedicated page was deleted, and references were removed from this page and from [Neighbor Discovery](/docs/system-information-and-utilities/neighbor-discovery).

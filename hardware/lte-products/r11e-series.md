@@ -50,7 +50,7 @@ When installing outdoors ensure that the device case is waterproof and is design
 
 ## Configuration
 
-The device will be automatically recognized when used in a MikroTik RouterOS powered device. Configuration can be set in the “Wireless” menu. More information about the configuration of LTE can be found in our documentation: [LTE/5G manual](/docs/7.24/mobile-networking/lte-5g)
+The device will be automatically recognized when used in a MikroTik RouterOS powered device. Configuration can be set in the “Wireless” menu. More information about the configuration of LTE can be found in our documentation: [LTE/5G manual](/docs/mobile-networking/lte-5g)
 
 The device is tested with RouterOS v6 and above. It might be compatible with other operating systems, but drivers are not included with the card.
 

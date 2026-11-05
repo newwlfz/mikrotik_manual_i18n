@@ -193,7 +193,7 @@ Incorrect wiring can cause the temperature sensor to malfunction.The temperature
 
 ## Configuration
 
-The device can be discovered using WinBox utility, by clicking on the Neighbors list. The default management address is 192.168.88.1. See the [CSS610 series SwOS manual](/docs/7.24/bridging-and-switching/swos/css610) to get yourself accustomed to the possibilities. For recovery purposes, it is possible to boot the device for reinstallation, see section .
+The device can be discovered using WinBox utility, by clicking on the Neighbors list. The default management address is 192.168.88.1. See the [CSS610 series SwOS manual](/docs/bridging-and-switching/swos/css610) to get yourself accustomed to the possibilities. For recovery purposes, it is possible to boot the device for reinstallation, see section .
 
 ## Powering
 

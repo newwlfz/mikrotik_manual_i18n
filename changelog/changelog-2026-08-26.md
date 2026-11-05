@@ -13,4 +13,4 @@ Summary of documentation changes made on August 26, 2026.
 
 ## Management Tools
 
-- **[WinBox](/docs/7.24/management-tools/winbox)**: Split the page into a WinBox v4 page and a separate [WinBox Legacy](https://manual.mikrotik.com/docs/management-tools/winbox-legacy) (v3) page.
+- **[WinBox](/docs/management-tools/winbox)**: Split the page into a WinBox v4 page and a separate [WinBox Legacy](https://manual.mikrotik.com/docs/management-tools/winbox-legacy) (v3) page.

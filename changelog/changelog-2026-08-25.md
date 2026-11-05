@@ -13,17 +13,17 @@ Summary of documentation changes made on August 25, 2026.
 
 ## Management Tools
 
-- **[SSH](/docs/7.24/management-tools/ssh)**, **[Console](/docs/7.24/management-tools/console)**, **[Quick Set](/docs/7.24/management-tools/quick-set)**, **[RoMON](/docs/7.24/management-tools/romon)**, **[FlashFig](/docs/7.24/management-tools/flashfig)**, **[WinBox](/docs/7.24/management-tools/winbox)**, **[Serial Console](/docs/7.24/management-tools/serial-console)**, and **[WebFig](/docs/7.24/management-tools/webfig)**: Reworked wording and formatting throughout, and moved their CLI parameter tables into the CLI Reference.
+- **[SSH](/docs/management-tools/ssh)**, **[Console](/docs/management-tools/console)**, **[Quick Set](/docs/management-tools/quick-set)**, **[RoMON](/docs/management-tools/romon)**, **[FlashFig](/docs/management-tools/flashfig)**, **[WinBox](/docs/management-tools/winbox)**, **[Serial Console](/docs/management-tools/serial-console)**, and **[WebFig](/docs/management-tools/webfig)**: Reworked wording and formatting throughout, and moved their CLI parameter tables into the CLI Reference.
 
 ## Getting Started
 
-- **[RouterOS Licensing](/docs/7.24/getting-started/routeros-licensing)**: Fixed grammar and filled in licensing parameter descriptions in the CLI Reference (also restyled the [CHR Licensing](/docs/7.24/getting-started/routeros-licensing/chr/chr-licensing) page).
-- **[Backup](/docs/7.24/getting-started/configuration-management/backup)**: Fixed grammar and moved its CLI parameters into the CLI Reference.
-- **[Upgrading to v7](/docs/7.24/getting-started/upgrading-to-v7)** and **[Support Output File](/docs/7.24/getting-started/supout-rif)**: Fixed grammar and added relevant cross-links.
-- **[Default Configurations](/docs/7.24/getting-started/configuration-management/default-configurations)**: Restyled with tables in place of bullet lists, and improved wording.
-- **[Software Specifications](/docs/7.24/getting-started/software-specifications)**: Fixed grammar and added relevant cross-links.
-- **[Networking Fundamentals](/docs/7.24/getting-started/networking-fundamentals)**: Added cross-links and replaced a PNG diagram with a Mermaid graph in the IPv6 Neighbor Discovery section.
+- **[RouterOS Licensing](/docs/getting-started/routeros-licensing)**: Fixed grammar and filled in licensing parameter descriptions in the CLI Reference (also restyled the [CHR Licensing](/docs/getting-started/routeros-licensing/chr/chr-licensing) page).
+- **[Backup](/docs/getting-started/configuration-management/backup)**: Fixed grammar and moved its CLI parameters into the CLI Reference.
+- **[Upgrading to v7](/docs/getting-started/upgrading-to-v7)** and **[Support Output File](/docs/getting-started/supout-rif)**: Fixed grammar and added relevant cross-links.
+- **[Default Configurations](/docs/getting-started/configuration-management/default-configurations)**: Restyled with tables in place of bullet lists, and improved wording.
+- **[Software Specifications](/docs/getting-started/software-specifications)**: Fixed grammar and added relevant cross-links.
+- **[Networking Fundamentals](/docs/getting-started/networking-fundamentals)**: Added cross-links and replaced a PNG diagram with a Mermaid graph in the IPv6 Neighbor Discovery section.
 
 ## Containers
 
-- **[Container Apps](/docs/7.24/containers/apps)**: Significantly reworked the Custom Apps section — renamed from "User-Addable Apps" and expanded "How to add apps" into three methods — plus several typo and wording fixes throughout the day.
+- **[Container Apps](/docs/containers/apps)**: Significantly reworked the Custom Apps section — renamed from "User-Addable Apps" and expanded "How to add apps" into three methods — plus several typo and wording fixes throughout the day.

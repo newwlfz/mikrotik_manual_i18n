@@ -148,7 +148,7 @@ Attach a thinner thermal pad to the top of the card.
 
 In order to use GPS, an external antenna is needed to connect. Use the "ACGPSA" - can be obtained separately. ACGPSA is a standalone active GPS antenna, that works in the 1575.4 MHz spectrum. Antenna size is 46.5 mm x 26.5 mm x 12.5 mm with an IP67 rating and includes an internal magnet and double-sided tape, so it can easily be attached to various surfaces. It has a long 5m cable with an SMA connector, to be connected to LtAP mini via the ACSMAUFL pigtail (not included, product code ACSMAUFL) [https://mikrotik.com/product/acgpsa](https://mikrotik.com/product/acgpsa) [https://mikrotik.com/product/acsmaufl](https://mikrotik.com/product/acsmaufl) To connect a GPS antenna, see "miniPCIe slot usage" step 10. **Supports - GPS, GLONASS, BeiDou, Galileo).**
 
-Configuration information: [GPS basic examples](/docs/7.24/mobile-networking/gps#basic-examples).
+Configuration information: [GPS basic examples](/docs/mobile-networking/gps#basic-examples).
 
 The GPS uses an active antenna, connect only when power is turned off.
 

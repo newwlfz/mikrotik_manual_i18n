@@ -13,4 +13,4 @@ Summary of documentation changes made on July 29, 2026.
 
 ## Bridging & Switching
 
-- **[Marvell Prestera Switch Chip Features](/docs/7.24/bridging-and-switching/marvell-prestera-switch-chip-features)**: Fixed the new-vrf property description.
+- **[Marvell Prestera Switch Chip Features](/docs/bridging-and-switching/marvell-prestera-switch-chip-features)**: Fixed the new-vrf property description.

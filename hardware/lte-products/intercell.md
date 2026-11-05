@@ -217,7 +217,7 @@ The package includes:
 - Installation bracket.
 - Large-pole installation accessories.
 
-See the [MikroTik wired interface compatibility table](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility) for SFP module compatibility.
+See the [MikroTik wired interface compatibility table](/docs/wired-connections/mikrotik-wired-interface-compatibility) for SFP module compatibility.
 
 ## Upgrade example
 

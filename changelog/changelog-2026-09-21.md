@@ -13,4 +13,4 @@ Summary of documentation changes made on September 21, 2026.
 
 ## CLI Reference
 
-- **[/certificate/acme-renew](/docs/7.24/cli-reference/certificate/acme-renew)**: Added a description: the command renews an existing ACME certificate.
+- **[/certificate/acme-renew](/docs/cli-reference/certificate/acme-renew)**: Added a description: the command renews an existing ACME certificate.

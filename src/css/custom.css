@@ -102,3 +102,8 @@ html.content-wide .container,html.content-wide .docMainContainer,html.content-wi
 .navbar__items--right > .navbar__link[aria-pressed] { order: 0 !important; }
 
 [class*="colorModeToggle"] { order: 2 !important; }
+/* Keep the official hideable sidebar geometry: the imported official theme
+   rule is otherwise overridden by the generated docs layout width rule. */
+.theme-doc-sidebar-container.docSidebarContainerHidden_DPk8 {
+  width: var(--doc-sidebar-hidden-width) !important;
+}

@@ -13,4 +13,4 @@ Summary of documentation changes made on July 13, 2026.
 
 ## Bridging & Switching
 
-- **[L3 hardware offloading](/docs/7.24/bridging-and-switching/l3-hardware-offloading)**: Color-coded the HW/CPU/N/A/FW labels in the feature-support table for easier scanning, and fixed several small typos.
+- **[L3 hardware offloading](/docs/bridging-and-switching/l3-hardware-offloading)**: Color-coded the HW/CPU/N/A/FW labels in the feature-support table for easier scanning, and fixed several small typos.

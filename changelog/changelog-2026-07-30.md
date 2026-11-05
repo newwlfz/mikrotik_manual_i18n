@@ -13,8 +13,8 @@ Summary of documentation changes made on July 30, 2026.
 
 ## Firewall & QoS
 
-- **[Queues](/docs/7.24/firewall-and-quality-of-service/queues)** and **[CAKE](/docs/7.24/firewall-and-quality-of-service/queues/queue-types/cake)**: Substantially rewrote the CAKE documentation — added a beginner workflow, clarified how cake-bandwidth differs from HTB's limit-at/max-limit, explained transmit-vs-receive Interface Queue behavior, filled in several previously empty parameter descriptions, and trimmed the duplicate CAKE overview on the Queues page to link to the full guide.
+- **[Queues](/docs/firewall-and-quality-of-service/queues)** and **[CAKE](/docs/firewall-and-quality-of-service/queues/queue-types/cake)**: Substantially rewrote the CAKE documentation — added a beginner workflow, clarified how cake-bandwidth differs from HTB's limit-at/max-limit, explained transmit-vs-receive Interface Queue behavior, filled in several previously empty parameter descriptions, and trimmed the duplicate CAKE overview on the Queues page to link to the full guide.
 
 ## Getting Started
 
-- **[Netinstall Package](/docs/7.24/getting-started/installation-and-upgrade/netinstall/netinstall-package)**: Added an IP range configuration note for preboot-etherboot-server.
+- **[Netinstall Package](/docs/getting-started/installation-and-upgrade/netinstall/netinstall-package)**: Added an IP range configuration note for preboot-etherboot-server.

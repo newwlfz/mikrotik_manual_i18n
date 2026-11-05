@@ -48,7 +48,7 @@ The devices accept powering from the Ethernet port. The Ethernet port accepts Po
 
 ## Configuration
 
-We recommend clicking the "Check for updates" button and updating your RouterOS software to the latest version to ensure the best performance and stability. RouterOS includes many configuration options in addition to what is described in this document. We suggest starting here to get yourself accustomed to the possibilities: [https://mt.lv/help](https://mt.lv/help) In case the IP connection is not available, the WinBox tool ([https://mt.lv/winbox](https://mt.lv/winbox)) can be used to connect to the MAC address of the device from the LAN side. Please get yourself familiar with additional information on the [W60G interface](/docs/7.24/wireless/w60g/). For recovery purposes, it is possible to boot the device for reinstallation, see section .
+We recommend clicking the "Check for updates" button and updating your RouterOS software to the latest version to ensure the best performance and stability. RouterOS includes many configuration options in addition to what is described in this document. We suggest starting here to get yourself accustomed to the possibilities: [https://mt.lv/help](https://mt.lv/help) In case the IP connection is not available, the WinBox tool ([https://mt.lv/winbox](https://mt.lv/winbox)) can be used to connect to the MAC address of the device from the LAN side. Please get yourself familiar with additional information on the [W60G interface](/docs/wireless/w60g/). For recovery purposes, it is possible to boot the device for reinstallation, see section .
 
 ## Buttons and jumpers
 

@@ -13,11 +13,11 @@ Summary of documentation changes made on August 19, 2026.
 
 ## Authentication & AAA
 
-- **[User](/docs/7.24/authentication-authorization-accounting/user)**: Fixed broken markdown in the SSH key property tables that was rendering literal asterisks instead of italics.
+- **[User](/docs/authentication-authorization-accounting/user)**: Fixed broken markdown in the SSH key property tables that was rendering literal asterisks instead of italics.
 
 ## Management Tools
 
-- **[SSH](/docs/7.24/management-tools/ssh)**: Added the host-key-fingerprint read-only property, which shows the current host key's fingerprint for verifying you're connecting to the right router.
+- **[SSH](/docs/management-tools/ssh)**: Added the host-key-fingerprint read-only property, which shows the current host key's fingerprint for verifying you're connecting to the right router.
 
 ## Hardware
 
@@ -25,4 +25,4 @@ Summary of documentation changes made on August 19, 2026.
 
 ## Mobile Networking
 
-- **[LTE/5G](/docs/7.24/mobile-networking/lte-5g)**: Removed outdated, vendor-specific tethering-throttling examples and their dead links.
+- **[LTE/5G](/docs/mobile-networking/lte-5g)**: Removed outdated, vendor-specific tethering-throttling examples and their dead links.

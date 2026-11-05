@@ -71,7 +71,7 @@ Operating humidity can be from 5% to 95% non-condensing.
 ## Extension slots and ports
 
 - The Ethernet ports are connected in two groups of five, each group is connected through a switch chip. The ports can be configured individually and support automatic cross/straight cable correction (Auto MDI/X), so you can use either straight or cross-over cables for connecting to other network devices.
-- SFP+ port accepts SFP and SFP+ modules. Refer to the [MikroTik wired interface compatibility](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility) table.
+- SFP+ port accepts SFP and SFP+ modules. Refer to the [MikroTik wired interface compatibility](/docs/wired-connections/mikrotik-wired-interface-compatibility) table.
 - RJ45 console port for serial console access, set by default to 115200 bit/s, 8 data bits, 1 stop bit, no parity.
 
 ## Reset button
@@ -92,7 +92,7 @@ Package includes the following accessories that come with the device:
 - K-60 fastening set. DIN965, M3x6.
 - Mounting kit 4011 rm bracket.
 
-See the [MikroTik wired interface compatibility](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility) table for supported SFP modules.
+See the [MikroTik wired interface compatibility](/docs/wired-connections/mikrotik-wired-interface-compatibility) table for supported SFP modules.
 
 ## Specifications
 

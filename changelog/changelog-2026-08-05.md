@@ -13,4 +13,4 @@ Summary of documentation changes made on August 5, 2026.
 
 ## High Availability Solutions
 
-- **[MLAG](/docs/7.24/high-availability-solutions/multi-chassis-link-aggregation-group)**: Replaced the MLAG diagrams with corrected images and simplified the version references.
+- **[MLAG](/docs/high-availability-solutions/multi-chassis-link-aggregation-group)**: Replaced the MLAG diagrams with corrected images and simplified the version references.

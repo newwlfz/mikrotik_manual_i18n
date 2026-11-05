@@ -57,7 +57,7 @@ The power supply will be determined by a device and given the appropriate Voltag
 
 SwOS includes many configuration options in addition to what is described in this document. We suggest starting here to get yourself accustomed to the possibilities: [https://mt.lv/help](https://mt.lv/help) For recovery purposes, it is possible to boot the device for reinstallation, see section Buttons and Jumpers.
 
-First-time configuration: [CSS610 series SwOS manual](/docs/7.24/bridging-and-switching/swos/css610);
+First-time configuration: [CSS610 series SwOS manual](/docs/bridging-and-switching/swos/css610);
 
 The device upgrade [https://mt.lv/upgrade](https://mt.lv/upgrade);
 
@@ -72,7 +72,7 @@ The device upgrade [https://mt.lv/upgrade](https://mt.lv/upgrade);
 
 ## Specifications
 
-Please see the [MikroTik SFP module compatibility table](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility).
+Please see the [MikroTik SFP module compatibility table](/docs/wired-connections/mikrotik-wired-interface-compatibility).
 
 ## Mounting
 

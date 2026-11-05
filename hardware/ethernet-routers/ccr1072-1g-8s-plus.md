@@ -73,7 +73,7 @@ Once logged in, we recommend clicking the "Check for updates" button in the Quic
 **Reset button**:
 
 - Hold this button during boot time until the USER LED light starts flashing, release the button to reset RouterOS configuration.
-- Hold the Reset button and power on your device (wait until the "USER" LED is blinking then stable "On", and when the "USER" LED is "Off" - release the Reset button) - the device is booting in BOOTP mode to reinstall RouterOS using [Netinstall](/docs/7.24/getting-started/installation-and-upgrade/netinstall). **The MGMT/BOOT Ethernet port is used for the Netinstall process.** See RouterOS documentation about using the Netinstall recovery utility.
+- Hold the Reset button and power on your device (wait until the "USER" LED is blinking then stable "On", and when the "USER" LED is "Off" - release the Reset button) - the device is booting in BOOTP mode to reinstall RouterOS using [Netinstall](/docs/getting-started/installation-and-upgrade/netinstall). **The MGMT/BOOT Ethernet port is used for the Netinstall process.** See RouterOS documentation about using the Netinstall recovery utility.
 
 Regardless of the above option used, the system will load the backup RouterBOOT loader if the button is pressed before power is applied to the device. Release the button before LED begins to flash, to only load backup RouterBOOT without resetting. This is useful for RouterBOOT debugging and recovery.
 
@@ -83,7 +83,7 @@ Package includes the following accessories that come with the device:
 
 - EU/US AC **⏦** power cord, D03+QT3 H05VV-F 3x0.75 mm 2 1.83 m RoHS.
 - Fastening set for rackmount case K-10 R2.
-- Rackmount Case x72 Side Bracket. Please see the [MikroTik SFP module compatibility table](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility).
+- Rackmount Case x72 Side Bracket. Please see the [MikroTik SFP module compatibility table](/docs/wired-connections/mikrotik-wired-interface-compatibility).
 
 ## Specifications
 

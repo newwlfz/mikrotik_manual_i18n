@@ -13,4 +13,4 @@ Summary of documentation changes made on July 28, 2026.
 
 ## Getting Started
 
-- **[Securing Your Router](/docs/7.24/getting-started/securing-your-router)**: Reworked the WAN management access section with clearer security warnings, and made the guidance brand-neutral.
+- **[Securing Your Router](/docs/getting-started/securing-your-router)**: Reworked the WAN management access section with clearer security warnings, and made the guidance brand-neutral.

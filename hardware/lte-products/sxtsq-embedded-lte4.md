@@ -31,7 +31,7 @@ A cost-effective outdoor LTE device with an integrated 2×2 MIMO directional ant
 - Configure your device using a web browser through **WebFig** or the **WinBox** tool at [https://mt.lv/winbox](https://mt.lv/winbox). **Multiple configuration methods are available to ensure accessibility;**
 - Access **WebFig** by opening [https://192.168.188.1](https://192.168.188.1), and for **WinBox**, download the tool, navigate to the **Neighbors** tab, and select the MAC address. The username is "**admin**" with no password (or, for some models, check user and wireless passwords on the sticker);
 - Enter the PIN code, if required by your mobile network operator;
-- Select the "Check for updates" button and update RouterOS to the latest version. A valid SIM card must be inserted or an [eSIM](/docs/7.24/mobile-networking/lte-5g#lte-esim) must be set up, and an active Internet connection is required;
+- Select the "Check for updates" button and update RouterOS to the latest version. A valid SIM card must be inserted or an [eSIM](/docs/mobile-networking/lte-5g#lte-esim) must be set up, and an active Internet connection is required;
 - For a manual update of the device, visit mikrotik.com, select your model, and locate the required packages in the "Downloads" section;
 - Upload downloaded packages to the WebFig or WinBox "Files" menu and reboot the device;
 - By upgrading your RouterOS software to the latest version, you can ensure optimal performance, stability, and security updates;
@@ -101,7 +101,7 @@ By default the device is configured to use the SIM slot. To use the on-board eSI
 
 A single eSIM chip can store multiple eSIM profiles, the maximum profile count depends on the eSIM chip used.
 
-See the [LTE eSIM](/docs/7.24/mobile-networking/lte-5g#lte-esim) page for details.
+See the [LTE eSIM](/docs/mobile-networking/lte-5g#lte-esim) page for details.
 
 ## Reset button
 

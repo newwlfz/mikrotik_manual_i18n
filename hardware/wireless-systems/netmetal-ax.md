@@ -44,7 +44,7 @@ Please follow these quick steps to set up your device:
 - Click on the MAC address. The username is "**admin**" and there is no password (or, for some models, check user and wireless passwords on the sticker);
 - For a manual update of the device, visit the products page at [https://mikrotik.com/products](https://mikrotik.com/products) to find your product. The required packages are accessible under the "Support&Downloads" menu;
 - Upload downloaded packages to the **WinBox** "**Files**" menu and reboot the device. By upgrading your RouterOS software to the latest version, you can ensure optimal performance, stability, and security updates;
-- In the wifi-interface menu set up the following: Choose your country, to apply country regulation settings; SSID; mode; See the manual page: [WiFi](/docs/7.24/wireless/wifi)
+- In the wifi-interface menu set up the following: Choose your country, to apply country regulation settings; SSID; mode; See the manual page: [WiFi](/docs/wireless/wifi)
 - Set up your wireless network security profile;
 - If you need to use a SIM card, open the case and install your desired modem into miniPCIe slot;
 - Insert a Nano SIM card into the slot.
@@ -115,7 +115,7 @@ Please secure all loose Ethernet cables and antenna cables to the pole or mast a
 
 ## Front status LED behavior
 
-RouterOS allows configuring each LED's activity the way that the user wishes. It is possible to configure the LEDs to display wireless strength, blink the LEDs on interface traffic activity and many other options. See the [LEDs](/docs/7.24/hardware/leds) page for further information. Default factory configuration for this device:
+RouterOS allows configuring each LED's activity the way that the user wishes. It is possible to configure the LEDs to display wireless strength, blink the LEDs on interface traffic activity and many other options. See the [LEDs](/docs/hardware/leds) page for further information. Default factory configuration for this device:
 
 ![](./img/image-526195de.webp)
 
@@ -156,7 +156,7 @@ Package includes the following accessories that come with the device:
 - EU Switching Power Supply 24 V ⎓ 1,2 A.
 - Gigabit PoE injector.
 - K-27 DIN rail bracket mounting set.
-- Hose clamp 40/60 w2 A2 9 mm. See the [MikroTik wired interface compatibility](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility) table for supported SFP modules.
+- Hose clamp 40/60 w2 A2 9 mm. See the [MikroTik wired interface compatibility](/docs/wired-connections/mikrotik-wired-interface-compatibility) table for supported SFP modules.
 
 ## MiniPCIe slot usage
 
@@ -199,7 +199,7 @@ Antenna Installation. WARNING: It is the installer's responsibility to ensure th
 
 -
 
-19 dBi Sector MTAS-5G-19D120 Antennas of the same type and lower gain than those listed above may be used in compliance with certification. More information on the WiFi interface: [WiFi](/docs/7.24/wireless/wifi)
+19 dBi Sector MTAS-5G-19D120 Antennas of the same type and lower gain than those listed above may be used in compliance with certification. More information on the WiFi interface: [WiFi](/docs/wireless/wifi)
 
 ## Specifications
 

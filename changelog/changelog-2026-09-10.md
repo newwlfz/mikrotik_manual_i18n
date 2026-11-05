@@ -13,4 +13,4 @@ Summary of documentation changes made on September 10, 2026.
 
 ## Containers
 
-- **[Containers](/docs/7.24/containers)**: Documented the new /container/save command — a "Saving a container" section explains how to export a container as an OCI tar archive, re-import it on RouterOS, and commit root-dir changes and settings for loading into podman or docker.
+- **[Containers](/docs/containers)**: Documented the new /container/save command — a "Saving a container" section explains how to export a container as an OCI tar archive, re-import it on RouterOS, and commit root-dir changes and settings for loading into podman or docker.

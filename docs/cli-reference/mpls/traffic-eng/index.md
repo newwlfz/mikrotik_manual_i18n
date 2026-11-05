@@ -1,0 +1,13 @@
+---
+sidebar_key: "cli-reference/mpls/traffic-eng/index"
+sidebar_position: 2
+title: "traffic-eng"
+source: https://manual.mikrotik.com/docs/cli-reference/mpls/traffic-eng
+captured_at: '2026-11-01T21:29:16+08:00'
+---
+
+-----------
+
+## mpls/traffic-eng 
+**Conditions:** !smips
+**Type:** Directory

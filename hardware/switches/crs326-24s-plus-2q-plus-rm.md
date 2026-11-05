@@ -64,7 +64,7 @@ Open https://192.168.88.1 in a web browser to start setup. If the IP address is 
 
 The device is equipped with an RJ45 serial console port set by default to 115200 bit/s, 8 data bits, 1 stop bit, no parity. For recovery purposes, it is possible to reinstall the device from the network, see the Reset button.
 
-The Marvell Prestera switch chip features are described in the [Marvell Prestera switch chip features](/docs/7.24/bridging-and-switching/marvell-prestera-switch-chip-features) manual.
+The Marvell Prestera switch chip features are described in the [Marvell Prestera switch chip features](/docs/bridging-and-switching/marvell-prestera-switch-chip-features) manual.
 
 The device supports booting either RouterOS or SwOS. By default, the device boots into RouterOS. To switch to the other operating system:
 
@@ -77,7 +77,7 @@ It is also possible to choose the operating system and configure other boot opti
 
 <table><thead><tr><th>**Product Code**</th><th>CRS326-24S+2Q+RM</th></tr></thead><tbody><tr><td>**CPU**</td><td>QCA9531, 650 MHz</td></tr><tr><td>**CPU Architecture**</td><td>MIPSBE</td></tr><tr><td>**CPU Core Count**</td><td>1</td></tr><tr><td>**Switch Chip Model**</td><td>98DX8332</td></tr><tr><td>**RAM**</td><td>128 MB (64 MB on early hardware revisions)</td></tr><tr><td>**Storage**</td><td>16 MB Flash</td></tr><tr><td>**10/100 Ethernet (RJ45)**</td><td>1</td></tr><tr><td>**10G SFP+ Ports**</td><td>24</td></tr><tr><td>**40G QSFP+ Ports**</td><td>2</td></tr><tr><td>**USB Type-A Port**</td><td>1</td></tr><tr><td>**Serial Console (RJ45)**</td><td>1</td></tr><tr><td>**Operating System**</td><td>RouterOS v7 (license level 5) / SwOS (dual boot)</td></tr><tr><td>**Operating Temperature**</td><td>-20 °C to +60 °C</td></tr><tr><td>**Case Dimensions**</td><td>443 × 200 × 44 mm</td></tr></tbody></table>
 
-See the [MikroTik wired interface compatibility](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility) table for supported SFP modules.
+See the [MikroTik wired interface compatibility](/docs/wired-connections/mikrotik-wired-interface-compatibility) table for supported SFP modules.
 
 ## Reset button
 

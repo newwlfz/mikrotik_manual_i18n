@@ -79,7 +79,8 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for the full design.
 - Strict build passes with zero broken links.
 - Pagefind search (93+ result sets, CLI grouping, subresults and Show more), Widen/Narrow persistence, day/night mode and native accordion/hideable sidebar are implemented.
 - `docusaurus-plugin-llms` generates `/llms.txt`, `/llms-full.txt` and per-page `.md` files.
-- `/docs/*` redirects to the latest version (currently 7.24); the rule is regenerated from `versioned_docs`.
+- 7.24 is the native current docs at `/docs`; older versions will live under `/docs/<version>` snapshots.
+- Doc pages carry generated CLI-reference links, official tags, full metadata descriptions and sidebar labels.
 - Deletion/repair drill passes for docs, hardware and blog.
 - Local-vs-official visual report is in `../reports/visual/report.html`.
 - `tools/sync --update` is still disabled; the workflow is gated by `ENABLE_SYNC`.

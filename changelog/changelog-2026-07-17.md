@@ -13,8 +13,8 @@ Summary of documentation changes made on July 17, 2026.
 
 ## User Guides
 
-- **[PIM-SM](/docs/7.24/user-guides/routing-and-networking-protocols/multicast/pim-sm)**: Reworked the configuration examples. The basic example now splits the PIM interface template from a separate igmp-interface-template for the client-facing interface, so the PIM instance learns local group memberships. The static RP example replaces the loopback bridge with the built-in lo interface and adds IGMP querier configuration for R2 and R3.
-- **[IGMP proxy](/docs/7.24/user-guides/routing-and-networking-protocols/multicast/igmp-proxy)**: Removed the quick-leave configuration example.
+- **[PIM-SM](/docs/user-guides/routing-and-networking-protocols/multicast/pim-sm)**: Reworked the configuration examples. The basic example now splits the PIM interface template from a separate igmp-interface-template for the client-facing interface, so the PIM instance learns local group memberships. The static RP example replaces the loopback bridge with the built-in lo interface and adds IGMP querier configuration for R2 and R3.
+- **[IGMP proxy](/docs/user-guides/routing-and-networking-protocols/multicast/igmp-proxy)**: Removed the quick-leave configuration example.
 
 ## Hardware Guides
 

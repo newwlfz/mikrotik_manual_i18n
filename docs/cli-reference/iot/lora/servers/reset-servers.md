@@ -1,0 +1,13 @@
+---
+sidebar_key: "cli-reference/iot/lora/servers/reset-servers"
+sidebar_position: 2
+title: "reset-servers"
+source: https://manual.mikrotik.com/docs/cli-reference/iot/lora/servers/reset-servers
+captured_at: '2026-11-01T21:28:15+08:00'
+---
+
+-----------
+
+## iot/lora/servers/reset-servers 
+**Package:** iot
+**Type:** Command

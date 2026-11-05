@@ -13,4 +13,4 @@ Summary of documentation changes made on August 12, 2026.
 
 ## Getting Started
 
-- **[Netinstall Package](/docs/7.24/getting-started/installation-and-upgrade/netinstall/netinstall-package)**: Added a FlashFig configuration example.
+- **[Netinstall Package](/docs/getting-started/installation-and-upgrade/netinstall/netinstall-package)**: Added a FlashFig configuration example.

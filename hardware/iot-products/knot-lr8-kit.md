@@ -116,7 +116,7 @@ Attach your antennas to the SMA connectors:
 
 BG77 supports NB and GNSS. For the KNOT, KNOT LR8 and KNOT LR9 kit, both (NB+GNSS) cannot be used together simultaneously.
 
-An example of the configuration to automate the switch between the cellular and GNSS priority is shown below under the **Cellular and GNSS priority switch automation** section. Please also check the [WWAN and GNSS priority automatization](/docs/7.24/mobile-networking/bg77-modem-at-commands/wwan-and-gnss-priority-automatization) guide.
+An example of the configuration to automate the switch between the cellular and GNSS priority is shown below under the **Cellular and GNSS priority switch automation** section. Please also check the [WWAN and GNSS priority automatization](/docs/mobile-networking/bg77-modem-at-commands/wwan-and-gnss-priority-automatization) guide.
 
 External antennas must be connected to use the Narrow Band modem and GPS. Not provided with the package.
 
@@ -160,7 +160,7 @@ Flags: X - disabled; R - running
 
 For more details on modem port configuration please see the KNOT port configuration/map above.
 
-For more details on serial/PPP connection please check the [PPP Client](/docs/7.24/mobile-networking/ppp) documentation.
+For more details on serial/PPP connection please check the [PPP Client](/docs/mobile-networking/ppp) documentation.
 
 ### GNSS configuration
 
@@ -256,7 +256,7 @@ The reset button has three functions:
 
 - Hold this button during boot time until the green LED light starts flashing, release the button to reset RouterOS configuration.
 - Keep holding the reset button until the LED turns solid, then release it to enable CAP mode. The device will then start searching for a CAPsMAN server.
-- To reinstall RouterOS using the [Netinstall](/docs/7.24/getting-started/installation-and-upgrade/netinstall) utility, enter the device into BOOTP mode. Two booter options are available: the **Regular Booter** and the **Backup Booter**. It is recommended to verify both options in case one does not work.
+- To reinstall RouterOS using the [Netinstall](/docs/getting-started/installation-and-upgrade/netinstall) utility, enter the device into BOOTP mode. Two booter options are available: the **Regular Booter** and the **Backup Booter**. It is recommended to verify both options in case one does not work.
 
 - **Regular Booter:** To enter etherboot mode, press the **Reset** button after powering on the device and waiting 1–2 seconds.
 - **Backup Booter:** Power off the device. Press and hold the **Reset** button, then power on the device. Wait for the **LED** sequence (blinking → steady → off), then release the button. The device will boot into **BOOTP** mode, ready for RouterOS reinstallation via Netinstall. Depending on the model, this may be indicated by the **USR, USER, System**, or **ACT** LED, or by the SFP port LED.
@@ -329,7 +329,7 @@ The device supports RouterOS v7 and above. The specific factory-installed versio
 
 ## Configuration
 
-RouterOS includes many configuration options in addition to what is described in this document. We suggest starting here to get yourself accustomed to the possibilities: [https://mt.lv/help](https://mt.lv/help). In case an IP connection is not available, the WinBox tool ([https://mt.lv/winbox](https://mt.lv/winbox)) can be used to connect to the MAC address of the device from the LAN side (all access is blocked from the internet port by default). For recovery purposes, it is possible to boot the device from the network, see [Netinstall](/docs/7.24/getting-started/installation-and-upgrade/netinstall) documentation.
+RouterOS includes many configuration options in addition to what is described in this document. We suggest starting here to get yourself accustomed to the possibilities: [https://mt.lv/help](https://mt.lv/help). In case an IP connection is not available, the WinBox tool ([https://mt.lv/winbox](https://mt.lv/winbox)) can be used to connect to the MAC address of the device from the LAN side (all access is blocked from the internet port by default). For recovery purposes, it is possible to boot the device from the network, see [Netinstall](/docs/getting-started/installation-and-upgrade/netinstall) documentation.
 
 **Note:** Make sure that the **iot** package is installed beforehand.
 

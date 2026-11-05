@@ -13,9 +13,9 @@ Summary of documentation changes made on August 20, 2026.
 
 ## Network Management
 
-- **[File Share](/docs/7.24/network-management/cloud/file-share)**: Documented how to remove the automatically generated file share certificate.
-- **[DNS](/docs/7.24/network-management/dns)**: Noted the 64-adlist maximum.
-- **[Reverse Proxy](/docs/7.24/network-management/proxy/reverse-proxy)**: Noted that Reverse Proxy is not supported on SMIPS devices (hAP lite, hAP lite TC, hAP mini), and updated the [feature-support table](/docs/7.24/getting-started/software-specifications/feature-support-based-on-architecture) accordingly.
+- **[File Share](/docs/network-management/cloud/file-share)**: Documented how to remove the automatically generated file share certificate.
+- **[DNS](/docs/network-management/dns)**: Noted the 64-adlist maximum.
+- **[Reverse Proxy](/docs/network-management/proxy/reverse-proxy)**: Noted that Reverse Proxy is not supported on SMIPS devices (hAP lite, hAP lite TC, hAP mini), and updated the [feature-support table](/docs/getting-started/software-specifications/feature-support-based-on-architecture) accordingly.
 
 ## Hardware
 

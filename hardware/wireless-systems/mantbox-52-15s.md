@@ -104,7 +104,7 @@ The package includes the following accessories that come with the device:
 - Hose Clamp, 35-70 mm;
 - Fastening set K-41;
 - Gigabit POE injector cable with shielded connector;
-- Mounting bracket. Please see the [MikroTik SFP module compatibility table](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility).
+- Mounting bracket. Please see the [MikroTik SFP module compatibility table](/docs/wired-connections/mikrotik-wired-interface-compatibility).
 
 ## Operating system support
 

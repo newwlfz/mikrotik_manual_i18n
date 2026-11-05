@@ -45,7 +45,7 @@ wAP60G devices work in the 60GHz wireless spectrum, the operating temperature of
 - Choose your country, to apply country regulation settings;
 - Set the *Installation* to indoors or outdoors, depending on the usage type;
 - Secure your device and set a strong password;
-- For more configuration information, please visit the [W60G interface manual](/docs/7.24/wireless/w60g/);
+- For more configuration information, please visit the [W60G interface manual](/docs/wireless/w60g/);
 - wAP60G AP units come pre-configured with WISP Bridge default configuration;
 - Wireless Wire and wAP60G units come pre-configured with PTP Bridge default configuration;
 - Wireless Wire devices have already, randomly generated, matching SSID, and Wireless passwords.
@@ -59,7 +59,7 @@ The devices accept powering both from a power adapter, and through the ethernet 
 
 ## Configuration and connecting
 
-Full RouterOS documentation is located here: [https://mt.lv/help](https://mt.lv/help) Specific wAP 60G configuration can be found in the [W60G interface manual](/docs/7.24/wireless/w60g/). Access the device by connecting to the Ethernet port and then use the MikroTik WinBox utility for connection. For recovery purposes, it is possible to boot the device from the network, see section . In case the IP connection is not available, the WinBox utility can also be used to connect to the MAC address of the device.
+Full RouterOS documentation is located here: [https://mt.lv/help](https://mt.lv/help) Specific wAP 60G configuration can be found in the [W60G interface manual](/docs/wireless/w60g/). Access the device by connecting to the Ethernet port and then use the MikroTik WinBox utility for connection. For recovery purposes, it is possible to boot the device from the network, see section . In case the IP connection is not available, the WinBox utility can also be used to connect to the MAC address of the device.
 
 ## Mounting
 

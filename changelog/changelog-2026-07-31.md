@@ -13,4 +13,4 @@ Summary of documentation changes made on July 31, 2026.
 
 ## Getting Started
 
-- **[Upgrade](/docs/7.24/getting-started/installation-and-upgrade/upgrade)**: Added command, property, and read-only value tables.
+- **[Upgrade](/docs/getting-started/installation-and-upgrade/upgrade)**: Added command, property, and read-only value tables.

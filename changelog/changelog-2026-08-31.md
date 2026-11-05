@@ -13,4 +13,4 @@ Summary of documentation changes made on August 31, 2026.
 
 ## Authentication & AAA
 
-- **[Certificates](/docs/7.24/authentication-authorization-accounting/certificates)**: Noted that the SCEP client supports only RSA keys.
+- **[Certificates](/docs/authentication-authorization-accounting/certificates)**: Noted that the SCEP client supports only RSA keys.

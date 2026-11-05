@@ -87,7 +87,7 @@ The package includes the following accessories that come with the device:
 
 Please connect and disconnect the antenna, when the device is turned off!
 
-See [Wireless Interface](/docs/7.24/wireless/abgn/wireless-interface) for configuration information.
+See [Wireless Interface](/docs/wireless/abgn/wireless-interface) for configuration information.
 
 ## Compatible Enclosures
 

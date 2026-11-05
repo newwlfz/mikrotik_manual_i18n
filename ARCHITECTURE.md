@@ -266,17 +266,19 @@ unchanged. This is the deletion drill requirement.
 
 ## 8.1 Version/current rule
 
-`versioned_docs/version-*` is the source of truth produced by the external
-content workflow. The Docusaurus build discovers the newest semver directory
-and uses it for:
+`docs/` is the Docusaurus current source and is served at `/docs` without a
+version prefix. Historical snapshots live in `versioned_docs/version-*` and are
+served at `/docs/<version>`. This is the same layout as the official site:
+current 7.26 is `/docs`, while 7.24 and 7.25 are `/docs/7.24` and `/docs/7.25`.
 
-- the `/docs/*` client redirect (currently to `/docs/7.24/*`);
-- the current `llms.txt` / `.md` source (`.generated/current-docs`);
-- the next version automatically, without editing route tables.
+The external content workflow writes the current version number to
+`data/manifests/current-version.json`. When a new version is fetched, it updates
+that file and creates a version snapshot; no redirect table is edited.
 
-The versioned routes stay addressable. `tools/sync/materialize-current.mjs`
-only rewrites `/docs/<latest>/` links to `/docs/` for the current LLM copies;
-it does not duplicate HTML pages.
+`tools/sync/extract-doc-metadata.mjs` and `apply-doc-metadata.mjs` capture the
+official full description, tags, sidebar labels and CLI-reference links. The
+theme `DocItem/Content` wrapper renders the CLI-reference block; the mapping is
+generated data, not per-page patches.
 
 ## 9. Current inventory and legacy reuse
 

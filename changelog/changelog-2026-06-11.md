@@ -14,8 +14,8 @@ Summary of documentation changes made on June 11, 2026.
 ## Image & Asset Management
 
 - **Improved image asset organization**: Moved 737 image references from global attachments/ to local img/ directories next to articles. Downloaded missing images from Confluence API and renamed to meaningful kebab-case names.
-- **[Hardware Guides](/docs/7.24/hardware)**: Updated hAP be lite page and moved hAP be3 media with images.
-- **[Cloud](/docs/7.24/network-management/cloud)**: Moved File Share images to local docs folder.
+- **[Hardware Guides](/docs/hardware)**: Updated hAP be lite page and moved hAP be3 media with images.
+- **[Cloud](/docs/network-management/cloud)**: Moved File Share images to local docs folder.
 
 ## Link & Reference Fixes
 
@@ -25,4 +25,4 @@ Summary of documentation changes made on June 11, 2026.
 
 - **Documented image asset rules**: Added guidelines for image organization and naming conventions.
 - **Documented internal link format**: Added explanation of internal link formatting standards.
-- **[Hardware Guides](/docs/7.24/hardware)**: Restored theme-based image anchors and documented light/dark mode convention.
+- **[Hardware Guides](/docs/hardware)**: Restored theme-based image anchors and documented light/dark mode convention.

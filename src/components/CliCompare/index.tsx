@@ -67,10 +67,10 @@ function Option({version, count}: {version: string; count: number}) {
 }
 
 export default function CliCompare() {
-  const dataUrl = useBaseUrl('/cli/7.24.json');
+  const dataUrl = useBaseUrl('/cli/current.json');
   const [data, setData] = useState<CliData | null>(null);
-  const [fromVersion, setFromVersion] = useState('7.24');
-  const [toVersion, setToVersion] = useState('7.24');
+  const [fromVersion, setFromVersion] = useState('');
+  const [toVersion, setToVersion] = useState('');
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
@@ -81,7 +81,11 @@ export default function CliCompare() {
         return response.json();
       })
       .then((payload: CliData) => {
-        if (!cancelled) setData(payload);
+        if (!cancelled) {
+          setData(payload);
+          setFromVersion(payload.version);
+          setToVersion(payload.version);
+        }
       })
       .catch((error) => console.error('CLI data unavailable', error));
     return () => {
@@ -117,13 +121,13 @@ export default function CliCompare() {
         <label>
           <span>From</span>
           <select value={fromVersion} onChange={(event) => setFromVersion(event.target.value)}>
-            <option value="7.24">{Option({version: '7.24', count: data.commandCount})}</option>
+            <option value={data.version}>{Option({version: data.version, count: data.commandCount})}</option>
           </select>
         </label>
         <label>
           <span>To</span>
           <select value={toVersion} onChange={(event) => setToVersion(event.target.value)}>
-            <option value="7.24">{Option({version: '7.24', count: data.commandCount})}</option>
+            <option value={data.version}>{Option({version: data.version, count: data.commandCount})}</option>
           </select>
         </label>
         <label>
@@ -144,11 +148,6 @@ export default function CliCompare() {
         <div><strong>+{result.newCommands.length}</strong><span>NEW COMMANDS</span></div>
         <div><strong>−{result.removedCommands.length}</strong><span>COMMANDS REMOVED</span></div>
       </div>
-
-      <p className="cli-compare__hint">
-        Only RouterOS {data.version} is available in this phase; comparing it with itself
-        correctly reports zero differences.
-      </p>
 
       {filtered.length === 0 ? (
         <p className="cli-compare__empty">No parameter changes for the selected versions.</p>

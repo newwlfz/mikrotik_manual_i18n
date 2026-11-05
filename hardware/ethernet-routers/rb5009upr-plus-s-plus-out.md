@@ -95,7 +95,7 @@ The package includes the following accessories that come with the device:
 
 <p><Img src="/img/ca4b47fd9b0e4896.webp" alt="" width={553} height={236} /></p>
 
-See the [MikroTik wired interface compatibility](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility) table for supported SFP modules.
+See the [MikroTik wired interface compatibility](/docs/wired-connections/mikrotik-wired-interface-compatibility) table for supported SFP modules.
 
 ## Specifications
 

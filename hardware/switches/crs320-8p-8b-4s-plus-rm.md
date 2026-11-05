@@ -67,7 +67,7 @@ In case the IP connection is not available, the **WinBox** utility can also be u
 
 For recovery purposes, it is possible to boot the device from the network, see the Reset button.
 
-The device is equipped with an RJ45 serial port, set by default to 115200 bit/s, 8 data bits, 1 stop bit, no parity. A standard RJ45 to COM cable can be used; the pinout can be found in the [RouterOS documentation](https://mt.lv/help). The Marvell Prestera switch chip features are described in the [Marvell Prestera switch chip features](/docs/7.24/bridging-and-switching/marvell-prestera-switch-chip-features) manual.
+The device is equipped with an RJ45 serial port, set by default to 115200 bit/s, 8 data bits, 1 stop bit, no parity. A standard RJ45 to COM cable can be used; the pinout can be found in the [RouterOS documentation](https://mt.lv/help). The Marvell Prestera switch chip features are described in the [Marvell Prestera switch chip features](/docs/bridging-and-switching/marvell-prestera-switch-chip-features) manual.
 
 ## Power output
 
@@ -149,7 +149,7 @@ Package includes the following accessories that come with the device:
 
 ![](./img/image-185d3677.webp)
 
-See the [MikroTik wired interface compatibility](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility) table for supported SFP modules.
+See the [MikroTik wired interface compatibility](/docs/wired-connections/mikrotik-wired-interface-compatibility) table for supported SFP modules.
 
 ## Operating system support
 

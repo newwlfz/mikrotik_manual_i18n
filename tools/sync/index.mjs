@@ -6,8 +6,14 @@ import YAML from 'yaml';
 const CONFIG = YAML.parse(fs.readFileSync('config/mirror.yml', 'utf8'));
 const STATE_FILE = CONFIG.sync.state_file;
 const BACKUP = '../incoming/legacy/site';
+const BACKUP_SECTIONS = {
+  docs: '../incoming/legacy/site/versioned_docs/version-7.24',
+  hardware: '../incoming/legacy/site/hardware',
+  blog: '../incoming/legacy/site/blog',
+  changelog: '../incoming/legacy/site/changelog',
+};
 const SECTIONS = {
-  docs: 'versioned_docs/version-7.24',
+  docs: 'docs',
   hardware: 'hardware',
   blog: 'blog',
   changelog: 'changelog',
@@ -114,8 +120,8 @@ if (mode === '--repair') {
     if (fs.existsSync(entry.local_path) && hash(entry.local_path) === entry.sha256) continue;
     const rel = key.slice(key.indexOf(':') + 1);
     const candidates = [
+      path.join(BACKUP_SECTIONS[entry.section] ?? path.join(BACKUP, entry.section), rel),
       path.join(BACKUP, entry.section, rel),
-      path.join(BACKUP, SECTIONS[entry.section], rel),
     ];
     const backup = candidates.find((candidate) => fs.existsSync(candidate));
     if (!backup) {

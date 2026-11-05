@@ -13,4 +13,4 @@ Summary of documentation changes made on August 13, 2026.
 
 ## System
 
-- **[Neighbor Discovery](/docs/7.24/system-information-and-utilities/neighbor-discovery)**: Added an LLDP-MED Network Policy VLAN configuration example.
+- **[Neighbor Discovery](/docs/system-information-and-utilities/neighbor-discovery)**: Added an LLDP-MED Network Policy VLAN configuration example.

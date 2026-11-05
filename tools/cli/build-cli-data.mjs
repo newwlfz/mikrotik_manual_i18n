@@ -1,9 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const ROOT = 'versioned_docs/version-7.24';
+const VERSION = JSON.parse(fs.readFileSync('data/manifests/current-version.json', 'utf8')).version;
+const ROOT = 'docs';
 const CLI_ROOT = path.join(ROOT, 'cli-reference');
-const OUT = 'data/cli/7.24/en.json';
+const OUT = `data/cli/${VERSION}/en.json`;
 
 function text(value) {
   return value
@@ -42,6 +43,7 @@ const commands = {};
 for (const file of walk(CLI_ROOT)) {
   const source = fs.readFileSync(file, 'utf8');
   const rel = path.relative(CLI_ROOT, file).replace(/\.(md|mdx)$/, '');
+  if (rel === 'compare-versions') continue;
   const route = '/cli-reference/' + (rel === 'index' ? '' : rel.replace(/\/index$/, ''));
   const commandPath = '/' + route.replace(/^\/cli-reference\/?/, '');
   const title = source.match(/^title:\s*"?([^"\n]+)"?/m)?.[1]?.trim() || rel.split('/').at(-1);
@@ -74,7 +76,7 @@ for (const file of walk(CLI_ROOT)) {
 }
 
 const payload = {
-  version: '7.24',
+  version: VERSION,
   generatedFrom: 'versioned_docs/version-7.24/cli-reference',
   commandCount: Object.keys(commands).length,
   commands,

@@ -1,0 +1,19 @@
+---
+sidebar_key: "cli-reference/system/resource/monitor"
+sidebar_position: 5
+title: "monitor"
+source: https://manual.mikrotik.com/docs/cli-reference/system/resource/monitor
+captured_at: '2026-11-01T21:30:05+08:00'
+---
+
+-----------
+
+## system/resource/monitor 
+**Type:** Command
+
+<ArgTable c1="Read-only Argument" c2="Type" c3="Description">
+<ArgTableRow arg="cpu-used" typ="num"></ArgTableRow>
+<ArgTableRow arg="cpu-used-per-core" typ="multi { cpu-used: num
+ }" syscap="smp"></ArgTableRow>
+<ArgTableRow arg="free-memory" typ="num"></ArgTableRow>
+</ArgTable>

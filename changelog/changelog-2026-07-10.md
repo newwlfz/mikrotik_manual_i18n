@@ -13,9 +13,9 @@ Summary of documentation changes made on July 10, 2026.
 
 ## Bridging & Switching
 
-- **[Bridge](/docs/7.24/bridging-and-switching)**: Restructured the bridge hardware-offloading support table into separate, grouped per-chip-class tables for easier reading, and normalized switch chip names (for example QCA-8337 → QCA8337).
-- **[Switch chip features](/docs/7.24/bridging-and-switching/switch-chip-features)**: Transposed and simplified the switch chip features table.
+- **[Bridge](/docs/bridging-and-switching)**: Restructured the bridge hardware-offloading support table into separate, grouped per-chip-class tables for easier reading, and normalized switch chip names (for example QCA-8337 → QCA8337).
+- **[Switch chip features](/docs/bridging-and-switching/switch-chip-features)**: Transposed and simplified the switch chip features table.
 
 ## Authentication & AAA
 
-- **[Dot1x](/docs/7.24/authentication-authorization-accounting/dot1x)**: Renamed the reauth-timeout property to reauth-period to match RouterOS.
+- **[Dot1x](/docs/authentication-authorization-accounting/dot1x)**: Renamed the reauth-timeout property to reauth-period to match RouterOS.

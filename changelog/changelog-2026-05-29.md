@@ -13,4 +13,4 @@ Summary of documentation changes made on May 29, 2026.
 
 ## Getting Started
 
-- **[Netinstall](/docs/7.24/getting-started/installation-and-upgrade/netinstall)**: Consolidated the Netinstall documentation into a single complete guide by removing a duplicate unfinished stub page. Added a clarification to the Linux quick start that the [VERSION] placeholder in the download commands must be replaced with the actual RouterOS version number.
+- **[Netinstall](/docs/getting-started/installation-and-upgrade/netinstall)**: Consolidated the Netinstall documentation into a single complete guide by removing a duplicate unfinished stub page. Added a clarification to the Linux quick start that the [VERSION] placeholder in the download commands must be replaced with the actual RouterOS version number.

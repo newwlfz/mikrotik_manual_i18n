@@ -33,7 +33,7 @@ The power consumption of this device under maximum load is up to 11 W. The devic
 
 ## First use
 
-See [Connecting to the switch](/docs/7.24/bridging-and-switching/swos/css106#connecting-to-the-switch) in the SwOS manual.
+See [Connecting to the switch](/docs/bridging-and-switching/swos/css106#connecting-to-the-switch) in the SwOS manual.
 
 - Power the device either from the power jack (11-30 V accepted, a power adapter is bundled with the device) or from the first port over Passive PoE (11-30 V).
 - Download the latest version of SwitchOS software from [https://mikrotik.com/download](https://mikrotik.com/download);
@@ -52,7 +52,7 @@ SwOS is an operating system designed specifically for the administration of Mikr
 
 SwOS is configurable from your web browser. It gives you all the basic functionality for a managed switch, plus more: allows you to manage port-to-port forwarding, broadcast storm control, apply MAC filter, configure VLANs, mirror traffic, apply bandwidth limitation and even adjust some MAC and IP header fields.
 
-See the [CSS106 (RB260) series SwOS manual](/docs/7.24/bridging-and-switching/swos/css106) for configuration details.
+See the [CSS106 (RB260) series SwOS manual](/docs/bridging-and-switching/swos/css106) for configuration details.
 
 ## Power Output
 
@@ -62,11 +62,11 @@ The CSS106-1G-4P-1S model can supply PoE powering to external devices from its E
 
 Hold this button during boot time and release after LED light stops flashing to reset SwOS configuration and load primary backup firmware. Access to primary firmware allows the reinstallation of the main firmware.
 
-See [Reset](/docs/7.24/bridging-and-switching/swos/css106#reset) in the SwOS manual.
+See [Reset](/docs/bridging-and-switching/swos/css106#reset) in the SwOS manual.
 
 ## Operating system support
 
-The CSS runs SwOS, which is the only supported OS for this device. See the [SwOS manual](/docs/7.24/bridging-and-switching/swos) for more information.
+The CSS runs SwOS, which is the only supported OS for this device. See the [SwOS manual](/docs/bridging-and-switching/swos) for more information.
 
 ![](./img/image-8d9ce79c.webp)
 

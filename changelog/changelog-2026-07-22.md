@@ -13,8 +13,8 @@ Summary of documentation changes made on July 22, 2026.
 
 ## Containers
 
-- **[Containers](/docs/7.24/containers)**: Added a Memory Limits section covering memory-max and swap-max, and documented the domain-name parameter.
+- **[Containers](/docs/containers)**: Added a Memory Limits section covering memory-max and swap-max, and documented the domain-name parameter.
 
 ## System
 
-- **[Neighbor Discovery](/docs/7.24/system-information-and-utilities/neighbor-discovery)**: Documented the dying-gasp setting.
+- **[Neighbor Discovery](/docs/system-information-and-utilities/neighbor-discovery)**: Documented the dying-gasp setting.

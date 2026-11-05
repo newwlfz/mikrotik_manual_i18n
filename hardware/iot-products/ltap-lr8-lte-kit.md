@@ -82,11 +82,11 @@ The built-in GPS module requires an external antenna to be used (SMA connector i
 
 - Enabling - /system gps set enable=yes;
 - Setting antenna to external - /system gps set gps-antenna-select=external;
-- Checking configuration - /system gps print. For more details, see the [GPS manual](/docs/7.24/mobile-networking/gps/).
+- Checking configuration - /system gps print. For more details, see the [GPS manual](/docs/mobile-networking/gps/).
 
 ## LR usage
 
-For interface configuration please visit the [LoRa manual](/docs/7.24/internet-of-things/lora/).
+For interface configuration please visit the [LoRa manual](/docs/internet-of-things/lora/).
 
 We recommend using our antenna kit, [https://mikrotik.com/product/lora_antenna_kit](https://mikrotik.com/product/lora_antenna_kit)
 

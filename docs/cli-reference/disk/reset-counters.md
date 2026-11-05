@@ -1,0 +1,14 @@
+---
+sidebar_key: "cli-reference/disk/reset-counters"
+sidebar_position: 13
+title: "reset-counters"
+sidebar_label: 'reset-counters'
+source: https://manual.mikrotik.com/docs/cli-reference/disk/reset-counters
+captured_at: '2026-11-01T21:26:46+08:00'
+---
+
+-----------
+
+## disk/reset-counters 
+**Conditions:** !smips
+**Type:** Command

@@ -84,7 +84,7 @@ When mounting on the wall, please ensure that cable feed is pointing downwards. 
 - Serial port.
 - LCD for configuration.
 
-Please see the [MikroTik SFP module compatibility table](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility).
+Please see the [MikroTik SFP module compatibility table](/docs/wired-connections/mikrotik-wired-interface-compatibility).
 
 ## Reset button
 

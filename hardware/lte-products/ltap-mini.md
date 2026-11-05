@@ -149,7 +149,7 @@ In order to use GPS, an external antenna is needed to connect. Use the "ACGPSA" 
 
 **Supports - GPS, GLONASS, BeiDou, Galileo).**
 
-Configuration information - [GPS manual, basic examples](/docs/7.24/mobile-networking/gps/#basic-examples)
+Configuration information - [GPS manual, basic examples](/docs/mobile-networking/gps/#basic-examples)
 
 The GPS uses an active antenna, connect only when power is turned off.
 

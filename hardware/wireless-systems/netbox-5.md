@@ -113,7 +113,7 @@ When mounting on the DIN rail, please find a special bracket in the package and 
 
 ## Front status LED behavior
 
-RouterOS allows configuring each LED's activity the way that the user wishes. It is possible to configure the LEDs to display wireless strength, blink the LEDs on interface traffic activity and many other options. For further information please visit the [LEDs](/docs/7.24/hardware/leds) manual page. Default factory configuration for this device:
+RouterOS allows configuring each LED's activity the way that the user wishes. It is possible to configure the LEDs to display wireless strength, blink the LEDs on interface traffic activity and many other options. For further information please visit the [LEDs](/docs/hardware/leds) manual page. Default factory configuration for this device:
 
 ![](./img/image-7c85a8cc.webp)
 
@@ -154,7 +154,7 @@ To connect to the external antenna please use, the "Flex-guide" - can be obtaine
 
 Please connect and disconnect the antenna, when the device is turned off!
 
-See [Wireless Interface](/docs/7.24/wireless/abgn/wireless-interface) for configuration information.
+See [Wireless Interface](/docs/wireless/abgn/wireless-interface) for configuration information.
 
 ## Specifications
 

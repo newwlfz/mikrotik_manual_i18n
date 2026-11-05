@@ -67,7 +67,7 @@ It is possible to attach the device to a wall, using the provided screw holes on
 ## Extension slots and ports
 
 - The Ethernet ports are connected in two groups of five, each group is connected through a switch chip. The ports can be configured individually and support automatic cross/straight cable correction (Auto MDI/X), so you can use either straight or cross-over cables for connecting to other network devices.
-- SFP+ port accepts SFP and SFP+ modules. Refer to the [MikroTik SFP module compatibility table](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility).
+- SFP+ port accepts SFP and SFP+ modules. Refer to the [MikroTik SFP module compatibility table](/docs/wired-connections/mikrotik-wired-interface-compatibility).
 - RJ45 console port for serial console access, set by default to 115200 bit/s, 8 data bits, 1 stop bit, no parity.
 - Integrated QCA9984 Dual-Band 4x4 with 4 SS MIMO, 5 GHz 802.11a/n/ac.
 - One MiniPCIe slot, with installed MiniPCIe Card R11e-2HnD, 2.4 GHz 802.11b/g/n. Only Mini PCIe cards supported.
@@ -78,7 +78,7 @@ The reset button has three functions:
 
 - Hold this button during boot time until the green LED light starts flashing, release the button to reset RouterOS configuration.
 - Keep holding the reset button until the LED turns solid, then release it to enable CAP mode. The device will then start searching for a CAPsMAN server.
-- To reinstall RouterOS using the [Netinstall](/docs/7.24/getting-started/installation-and-upgrade/netinstall/) utility, enter the device into BOOTP mode. Two booter options are available: the **Regular Booter** and the **Backup Booter**. It is recommended to verify both options in case one does not work.
+- To reinstall RouterOS using the [Netinstall](/docs/getting-started/installation-and-upgrade/netinstall/) utility, enter the device into BOOTP mode. Two booter options are available: the **Regular Booter** and the **Backup Booter**. It is recommended to verify both options in case one does not work.
 
 - **Regular Booter:** To enter etherboot mode, press the **Reset** button after powering on the device and waiting 1–2 seconds.
 - **Backup Booter:** Power off the device. Press and hold the **Reset** button, then power on the device. Wait for the **LED** sequence (blinking → steady → off), then release the button. The device will boot into **BOOTP** mode, ready for RouterOS reinstallation via **Netinstall**. Depending on the model, this may be indicated by the **USR, USER, System**, or **ACT** LED, or by the SFP port LED.
@@ -95,7 +95,7 @@ Package includes the following accessories that come with the device:
 
 - Power adapter 24 V DC ⎓ 2.5 A 60 W 80 % VI 121x54x33 cable 2 m plug RA 2.1 mm.
 - EU/US power cord, D03+QT3 H05VV-F 3x0.75mm2 1.83m RoHS.
-- Mounting kit K-59 fastening set. Please see the [MikroTik SFP module compatibility table](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility).
+- Mounting kit K-59 fastening set. Please see the [MikroTik SFP module compatibility table](/docs/wired-connections/mikrotik-wired-interface-compatibility).
 
 ## MikroTik mobile app
 

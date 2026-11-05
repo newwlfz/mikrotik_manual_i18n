@@ -1,0 +1,23 @@
+---
+sidebar_key: "cli-reference/iot/modbus/index"
+sidebar_position: 1
+title: "modbus"
+source: https://manual.mikrotik.com/docs/cli-reference/iot/modbus
+captured_at: '2026-11-01T21:28:16+08:00'
+---
+
+-----------
+
+## iot/modbus 
+**Package:** iot
+**Type:** Settings Directory
+
+<ArgTable c1="Argument" c2="Type" c3="Description">
+<ArgTableRow arg="disabled" typ="bool"></ArgTableRow>
+<ArgTableRow arg="hardware-port" typ="enum"></ArgTableRow>
+<ArgTableRow arg="tcp-port" typ="num"></ArgTableRow>
+<ArgTableRow arg="timeout" typ="num"></ArgTableRow>
+<ArgTableRow arg="rx-switch-offset" typ="num"></ArgTableRow>
+<ArgTableRow arg="interframe-gap" typ="num"></ArgTableRow>
+<ArgTableRow arg="disable-security-rules" typ="bool"></ArgTableRow>
+</ArgTable>

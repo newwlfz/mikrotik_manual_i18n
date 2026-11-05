@@ -13,8 +13,8 @@ Summary of documentation changes made on September 8, 2026.
 
 ## Getting Started
 
-- **[Netinstall](/docs/7.24/getting-started/installation-and-upgrade/netinstall)**: Unified the Mode Script description between the [command-line](/docs/7.24/getting-started/installation-and-upgrade/netinstall/netinstall-linux) and [package configuration](/docs/7.24/getting-started/installation-and-upgrade/netinstall/netinstall-package) pages and added the required RouterOS/Netinstall 7.22 version note.
+- **[Netinstall](/docs/getting-started/installation-and-upgrade/netinstall)**: Unified the Mode Script description between the [command-line](/docs/getting-started/installation-and-upgrade/netinstall/netinstall-linux) and [package configuration](/docs/getting-started/installation-and-upgrade/netinstall/netinstall-package) pages and added the required RouterOS/Netinstall 7.22 version note.
 
 ## System
 
-- **[Device Mode](/docs/7.24/system-information-and-utilities/device-mode)**: Corrected the rose mode name in the list of available modes.
+- **[Device Mode](/docs/system-information-and-utilities/device-mode)**: Corrected the rose mode name in the list of available modes.

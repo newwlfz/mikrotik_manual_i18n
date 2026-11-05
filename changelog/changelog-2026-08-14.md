@@ -13,4 +13,4 @@ Summary of documentation changes made on August 14, 2026.
 
 ## System
 
-- **[Neighbor Discovery](/docs/7.24/system-information-and-utilities/neighbor-discovery)**: Recommended disabling only CDP for LLDP-MED, while keeping MNDP enabled.
+- **[Neighbor Discovery](/docs/system-information-and-utilities/neighbor-discovery)**: Recommended disabling only CDP for LLDP-MED, while keeping MNDP enabled.

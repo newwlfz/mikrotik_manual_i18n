@@ -12,11 +12,11 @@ Summary of documentation changes made on October 13, 2026.
 
 ## User Guides[​](#user-guides "Direct link to User Guides")
 
--   **[Route Selection and Filtering](/docs/7.24/user-guides/routing-and-networking-protocols/route-selection-and-filtering#community-regexp-matching)**: New "Community Regexp Matching" section. A community list entry holds either concrete `communities` or a `regexp`, and one list can mix both. The regexp is matched against the printed form of each community: `asn:value` or a well-known name for standard communities, the typed `rt:`/`soo:` form for extended communities, and three decimal fields for large communities. Examples delete or reject routes by the administrative domain of their large communities. Also new: on a route without the community attribute the "any" matchers return false and the "subset" matchers return true, so use `bgp-communities-empty` (or the extended and large variants) to test for an empty attribute; `delete` with a list also removes the communities that match its regexp entries, while `append` and `set` use only the concrete values.
+-   **[Route Selection and Filtering](/docs/user-guides/routing-and-networking-protocols/route-selection-and-filtering#community-regexp-matching)**: New "Community Regexp Matching" section. A community list entry holds either concrete `communities` or a `regexp`, and one list can mix both. The regexp is matched against the printed form of each community: `asn:value` or a well-known name for standard communities, the typed `rt:`/`soo:` form for extended communities, and three decimal fields for large communities. Examples delete or reject routes by the administrative domain of their large communities. Also new: on a route without the community attribute the "any" matchers return false and the "subset" matchers return true, so use `bgp-communities-empty` (or the extended and large variants) to test for an empty attribute; `delete` with a list also removes the communities that match its regexp entries, while `append` and `set` use only the concrete values.
 
 ## Getting Started[​](#getting-started "Direct link to Getting Started")
 
--   **[IPv6 Neighbor Discovery](/docs/7.24/getting-started/networking-fundamentals/ipv6-neighbor-discovery)**: The `/ipv6/nd` entry for interface `all` has lower priority than an entry configured for a specific interface.
+-   **[IPv6 Neighbor Discovery](/docs/getting-started/networking-fundamentals/ipv6-neighbor-discovery)**: The `/ipv6/nd` entry for interface `all` has lower priority than an entry configured for a specific interface.
 
 ## Management Tools[​](#management-tools "Direct link to Management Tools")
 

@@ -88,7 +88,7 @@ Marvell Prestera switch chip features user manual
 - Operating system RouterOS: v7, License level 6.
 - Hot-swap cooling fans: Four.
 - Operating temperature: -10°C to +50°C.
-- IP: 20. See the [MikroTik wired interface compatibility](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility) table for supported SFP modules.
+- IP: 20. See the [MikroTik wired interface compatibility](/docs/wired-connections/mikrotik-wired-interface-compatibility) table for supported SFP modules.
 
 ## LED indicators
 

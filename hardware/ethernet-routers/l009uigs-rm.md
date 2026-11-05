@@ -112,7 +112,7 @@ The package includes the following accessories that come with the device:
 - SET1_ K-55 fastening set
 - PAD1_ 4 pcs Pad D=7; H=1.5 mm, one side adhesive 3M988T
 
-Please see the [MikroTik SFP module compatibility table](/docs/7.24/wired-connections/mikrotik-wired-interface-compatibility).
+Please see the [MikroTik SFP module compatibility table](/docs/wired-connections/mikrotik-wired-interface-compatibility).
 
 ## Specifications
 
