@@ -2050,6 +2050,11 @@ const sidebars: SidebarsConfig = {
       },
       "items": [
         {
+          "type": "doc",
+          "id": "cli-reference/compare-versions",
+          "label": "Version comparison"
+        },
+        {
           "type": "category",
           "label": "app",
           "link": {
@@ -2093,11 +2098,6 @@ const sidebars: SidebarsConfig = {
               "label": "update"
             }
           ]
-        },
-        {
-          "type": "doc",
-          "id": "cli-reference/compare-versions",
-          "label": "Version comparison"
         },
         {
           "type": "doc",

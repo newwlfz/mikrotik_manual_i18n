@@ -1,13 +1,7 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-type Arg = {
-  name: string;
-  type: string;
-  mandatory?: boolean;
-  description?: string;
-};
-
+type Arg = {name: string; type: string; mandatory?: boolean; description?: string};
 type Command = {
   path: string;
   title: string;
@@ -16,13 +10,7 @@ type Command = {
   flags: Arg[];
   readOnlyArguments: Arg[];
 };
-
-type CliData = {
-  version: string;
-  commandCount: number;
-  commands: Record<string, Command>;
-};
-
+type CliData = {version: string; commandCount: number; commands: Record<string, Command>};
 type Diff = {
   addedParameters: {command: string; name: string}[];
   removedParameters: {command: string; name: string}[];
@@ -33,9 +21,7 @@ type Diff = {
 
 function argNames(command: Command) {
   return new Set(
-    [...command.arguments, ...command.flags, ...command.readOnlyArguments].map(
-      (arg) => arg.name,
-    ),
+    [...command.arguments, ...command.flags, ...command.readOnlyArguments].map((arg) => arg.name),
   );
 }
 
@@ -62,8 +48,32 @@ function diff(from: CliData, to: CliData): Diff {
   return {addedParameters, removedParameters, newCommands, removedCommands, changedCommands};
 }
 
-function Option({version, count}: {version: string; count: number}) {
+function optionLabel(version: string, count: number) {
   return `RouterOS ${version} · ${count.toLocaleString('en-US')} commands`;
+}
+
+function SelectChevron() {
+  return (
+    <svg className="selectChevron_UQlQ" viewBox="0 0 16 16" aria-hidden="true">
+      <path
+        d="M4 6l4 4 4-4"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function SearchIcon() {
+  return (
+    <svg className="searchIcon_gOn3" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+      <circle cx="7" cy="7" r="4.5" stroke="currentColor" strokeWidth="1.5" fill="none" />
+      <path d="M10.5 10.5L14 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  );
 }
 
 export default function CliCompare() {
@@ -81,11 +91,10 @@ export default function CliCompare() {
         return response.json();
       })
       .then((payload: CliData) => {
-        if (!cancelled) {
-          setData(payload);
-          setFromVersion(payload.version);
-          setToVersion(payload.version);
-        }
+        if (cancelled) return;
+        setData(payload);
+        setFromVersion(payload.version);
+        setToVersion(payload.version);
       })
       .catch((error) => console.error('CLI data unavailable', error));
     return () => {
@@ -108,60 +117,152 @@ export default function CliCompare() {
   }, [data, fromVersion, toVersion]);
 
   if (!data || !result) {
-    return <div className="cli-compare__notice">Loading CLI reference versions…</div>;
+    return <div className="root_EuB2" />;
   }
 
   const filtered = result.changedCommands.filter((item) =>
     item.command.toLowerCase().includes(filter.trim().toLowerCase()),
   );
+  const hasChanges =
+    result.addedParameters.length ||
+    result.removedParameters.length ||
+    result.newCommands.length ||
+    result.removedCommands.length ||
+    result.changedCommands.length;
 
   return (
-    <div className="cli-compare">
-      <div className="cli-compare__selectors">
-        <label>
-          <span>From</span>
-          <select value={fromVersion} onChange={(event) => setFromVersion(event.target.value)}>
-            <option value={data.version}>{Option({version: data.version, count: data.commandCount})}</option>
-          </select>
+    <div className="root_EuB2">
+      <div className="toolbar_PFPH">
+        <label className="field_G8QJ" htmlFor="cli-compare-from">
+          <span className="fieldLabel_Iokb">From</span>
+          <span className="selectWrap_wiqE">
+            <select
+              id="cli-compare-from"
+              className="select_Kbg9"
+              value={fromVersion}
+              onChange={(event) => setFromVersion(event.target.value)}>
+              <option value={data.version}>{optionLabel(data.version, data.commandCount)}</option>
+            </select>
+            <SelectChevron />
+          </span>
         </label>
-        <label>
-          <span>To</span>
-          <select value={toVersion} onChange={(event) => setToVersion(event.target.value)}>
-            <option value={data.version}>{Option({version: data.version, count: data.commandCount})}</option>
-          </select>
+        <button
+          type="button"
+          className="swapBtn_P3vE"
+          title="Swap versions"
+          aria-label="Swap From and To versions"
+          onClick={() => {
+            setFromVersion(toVersion);
+            setToVersion(fromVersion);
+          }}>
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+            <path
+              d="M2 5h9L8.5 2.5M14 11H5l2.5 2.5"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+        <label className="field_G8QJ" htmlFor="cli-compare-to">
+          <span className="fieldLabel_Iokb">To</span>
+          <span className="selectWrap_wiqE">
+            <select
+              id="cli-compare-to"
+              className="select_Kbg9"
+              value={toVersion}
+              onChange={(event) => setToVersion(event.target.value)}>
+              <option value={data.version}>{optionLabel(data.version, data.commandCount)}</option>
+            </select>
+            <SelectChevron />
+          </span>
         </label>
-        <label>
-          <span>Filter</span>
-          <input
-            type="search"
-            value={filter}
-            placeholder="Filter commands…"
-            onChange={(event) => setFilter(event.target.value)}
-          />
+        <label className="field_G8QJ searchField_zQ_9" htmlFor="cli-compare-filter">
+          <span className="fieldLabel_Iokb">Filter</span>
+          <span className="searchWrap_fent">
+            <SearchIcon />
+            <input
+              id="cli-compare-filter"
+              className="searchInput_ZexK"
+              placeholder="path, e.g. ip/firewall"
+              type="search"
+              value={filter}
+              onChange={(event) => setFilter(event.target.value)}
+            />
+          </span>
         </label>
       </div>
 
-      <div className="cli-compare__stats">
-        <div><strong>+{result.addedParameters.length}</strong><span>PARAMETERS ADDED</span></div>
-        <div><strong>−{result.removedParameters.length}</strong><span>PARAMETERS REMOVED</span></div>
-        <div><strong>{result.changedCommands.length}</strong><span>COMMANDS CHANGED</span></div>
-        <div><strong>+{result.newCommands.length}</strong><span>NEW COMMANDS</span></div>
-        <div><strong>−{result.removedCommands.length}</strong><span>COMMANDS REMOVED</span></div>
+      <div className="stats_c16J">
+        <div className="stat_H70o statAdd_e9OD">
+          <span className="statValue_KInA">+{result.addedParameters.length}</span>
+          <span className="statLabel_CfG4">parameters added</span>
+        </div>
+        <div className="stat_H70o statRemove_ZPFd">
+          <span className="statValue_KInA">−{result.removedParameters.length}</span>
+          <span className="statLabel_CfG4">parameters removed</span>
+        </div>
+        <div className="stat_H70o">
+          <span className="statValue_KInA">{result.changedCommands.length}</span>
+          <span className="statLabel_CfG4">commands changed</span>
+        </div>
+        <div className="stat_H70o statAdd_e9OD">
+          <span className="statValue_KInA">+{result.newCommands.length}</span>
+          <span className="statLabel_CfG4">new commands</span>
+        </div>
+        <div className="stat_H70o statRemove_ZPFd">
+          <span className="statValue_KInA">−{result.removedCommands.length}</span>
+          <span className="statLabel_CfG4">commands removed</span>
+        </div>
       </div>
 
-      {filtered.length === 0 ? (
-        <p className="cli-compare__empty">No parameter changes for the selected versions.</p>
-      ) : (
-        <div className="cli-compare__changes">
+      {hasChanges ? (
+        <div className="chipsRow_rke_">
+          {result.newCommands.length ? (
+            <details className="chipsBlock_NSmx">
+              <summary className="summaryAdd_XxR4">
+                <span className="chevron_UIoq" aria-hidden="true">›</span>
+                New commands
+                <span className="chipCount_q5DY">{result.newCommands.length}</span>
+              </summary>
+              <div className="chips_zpAM">
+                {result.newCommands.map((command) => (
+                  <a className="chip_rQgJ chipLink_TZ7w" href={`/docs/cli-reference${command}`} key={command}>
+                    {command}
+                  </a>
+                ))}
+              </div>
+            </details>
+          ) : null}
+          {result.removedCommands.length ? (
+            <details className="chipsBlock_NSmx">
+              <summary className="summaryRemove_UMTG">
+                <span className="chevron_UIoq" aria-hidden="true">›</span>
+                Removed commands
+                <span className="chipCount_q5DY">{result.removedCommands.length}</span>
+              </summary>
+              <div className="chips_zpAM">
+                {result.removedCommands.map((command) => (
+                  <span className="chip_rQgJ" key={command}>{command}</span>
+                ))}
+              </div>
+            </details>
+          ) : null}
+        </div>
+      ) : null}
+
+      {filtered.length ? (
+        <div>
           <h2>Parameter changes <span>{filtered.length} commands</span></h2>
           {filtered.map((item) => (
-            <div className="cli-compare__command" key={item.command}>
+            <div key={item.command}>
               <code>{item.command}</code>
-              <span>{item.added ? `+${item.added}` : ''} {item.removed ? `−${item.removed}` : ''}</span>
             </div>
           ))}
         </div>
-      )}
+      ) : null}
     </div>
   );
 }

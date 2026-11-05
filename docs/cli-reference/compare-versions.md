@@ -1,7 +1,7 @@
 ---
 title: CLI Reference Version Comparison
 sidebar_label: Version comparison
-sidebar_position: 999
+sidebar_position: 0
 tags:
   - cli-reference
 ---
