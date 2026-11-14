@@ -10,6 +10,14 @@
  *   LLM_TIMEOUT_MS     optional; default 120000
  *   LLM_MAX_RETRIES    optional; default 3
  *   LLM_EXTRA_HEADERS  optional; JSON object of extra request headers
+ *   LLM_SESSION_ID     optional; value of `x-opencode-session` for the Go channel
+ *
+ * An endpoint whose path contains `/inference/go` is OpenCode's Go channel,
+ * which refuses a request without `x-opencode-session` (`400 MissingSessionID`),
+ * so `loadLLMConfig()` adds that header automatically: `LLM_SESSION_ID` when it
+ * is set, otherwise one random UUID per process (reused by every request). Any
+ * other endpoint (`zen`, a plain provider URL) gets no such header, and an
+ * explicit value in `LLM_EXTRA_HEADERS` always wins over the automatic one.
  *
  * Values are resolved in this order, first non-empty value wins:
  *
@@ -27,10 +35,13 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import {randomUUID} from 'node:crypto';
 
 import {REPO} from './paths.mjs';
 
 export const ENV_FILE = '.env.local';
+/** Header the Go channel requires; a request without it is `400 MissingSessionID`. */
+export const SESSION_HEADER = 'x-opencode-session';
 export const REQUIRED_VARIABLES = ['LLM_BASE_URL', 'LLM_MODEL', 'LLM_API_KEY'];
 export const DEPRECATED_VARIABLES = ['OPENCODE_API_KEY'];
 export const DEFAULTS = {timeoutMs: 120000, maxRetries: 3};
@@ -273,6 +284,47 @@ function parseExtraHeaders(raw) {
   return headers;
 }
 
+/** `true` when the endpoint path selects the Go channel (`/inference/go`). */
+export function usesGoChannel(baseUrl) {
+  const text = String(baseUrl ?? '');
+  try {
+    return /(^|\/)inference\/go(\/|$)/i.test(new URL(text).pathname);
+  } catch {
+    return /(^|\/)inference\/go(\/|$)/i.test(text);
+  }
+}
+
+/** One UUID per process, shared by every request of every caller. */
+let processSessionId = null;
+export function autoSessionId() {
+  if (!processSessionId) processSessionId = randomUUID();
+  return processSessionId;
+}
+
+/**
+ * Decide the value of `x-opencode-session` for one configuration.
+ *
+ * An explicit header in `LLM_EXTRA_HEADERS` wins (and keeps the user's casing);
+ * otherwise only the Go channel needs one: `LLM_SESSION_ID`, or a per-process
+ * UUID. `value: null` means no header is added.
+ */
+export function resolveSessionHeader({baseUrl, extraHeaders = {}, sessionId}) {
+  const explicit = Object.keys(extraHeaders).find(
+    (name) => name.toLowerCase() === SESSION_HEADER,
+  );
+  if (explicit) {
+    return {header: explicit, value: extraHeaders[explicit], source: 'LLM_EXTRA_HEADERS', explicit: true};
+  }
+  if (!usesGoChannel(baseUrl)) {
+    return {header: SESSION_HEADER, value: null, source: null, explicit: false};
+  }
+  const configured = String(sessionId ?? '').trim();
+  if (configured) {
+    return {header: SESSION_HEADER, value: configured, source: 'LLM_SESSION_ID', explicit: false};
+  }
+  return {header: SESSION_HEADER, value: autoSessionId(), source: 'auto', explicit: false};
+}
+
 /** Keep only the first and last four characters of a secret. */
 export function maskSecret(value) {
   if (!value) return '(not set)';
@@ -344,6 +396,7 @@ export function loadLLMConfig(options = {}) {
   const rawTimeout = valueOf('LLM_TIMEOUT_MS');
   const rawRetries = valueOf('LLM_MAX_RETRIES');
   const rawHeaders = valueOf('LLM_EXTRA_HEADERS');
+  const rawSessionId = valueOf('LLM_SESSION_ID');
 
   const {baseUrl, endpoint} = normalizeBaseUrl(rawBaseUrl);
   const timeoutMs = readPositiveInteger('LLM_TIMEOUT_MS', rawTimeout, DEFAULTS.timeoutMs);
@@ -351,6 +404,18 @@ export function loadLLMConfig(options = {}) {
     allowZero: true,
   });
   const extraHeaders = parseExtraHeaders(rawHeaders);
+
+  if (rawSessionId && /[\r\n]/.test(rawSessionId)) {
+    throw new LLMConfigError('LLM_SESSION_ID must be a single line', {
+      code: 'invalid_value',
+      details: {variable: 'LLM_SESSION_ID'},
+    });
+  }
+  const session = resolveSessionHeader({baseUrl, extraHeaders, sessionId: rawSessionId});
+  // A value supplied through LLM_EXTRA_HEADERS is already in `extraHeaders`;
+  // this adds only the automatic one, so every request the client sends carries
+  // the header the Go channel demands.
+  if (session.value !== null && !session.explicit) extraHeaders[SESSION_HEADER] = session.value;
 
   const warnings = deprecated.map(
     (name) => `${name} is set but deprecated (已弃用，请改名); use LLM_API_KEY instead.`,
@@ -364,6 +429,7 @@ export function loadLLMConfig(options = {}) {
     timeoutMs,
     maxRetries,
     extraHeaders,
+    session,
     sources,
     warnings,
     envFiles: searchedFiles.filter((file) => fs.existsSync(file)),
@@ -385,9 +451,19 @@ export function peekLLMValues(options = {}) {
   }
 }
 
-/** Human-readable rows for `verify:llm --dry-run`; no secret is ever returned. */
+/**
+ * Human-readable rows for `verify:llm --dry-run`; no secret is ever returned.
+ *
+ * The automatically added session header is reported on its own row, so the
+ * `extra headers` row lists only what the user configured.
+ */
 export function describeLLMConfig(config) {
   const source = (key) => config.sources?.[key] || 'default';
+  const sessionIsAutomatic =
+    config.session?.source === 'auto' || config.session?.source === 'LLM_SESSION_ID';
+  const configuredHeaders = Object.keys(config.extraHeaders || {}).filter(
+    (name) => !(sessionIsAutomatic && name.toLowerCase() === SESSION_HEADER),
+  );
   return [
     {label: 'base URL', value: redactUrl(config.baseUrl), source: source('LLM_BASE_URL')},
     {label: 'endpoint', value: redactUrl(config.endpoint), source: 'derived'},
@@ -397,8 +473,17 @@ export function describeLLMConfig(config) {
     {label: 'max retries', value: String(config.maxRetries), source: source('LLM_MAX_RETRIES')},
     {
       label: 'extra headers',
-      value: Object.keys(config.extraHeaders).join(', ') || '(none)',
+      value: configuredHeaders.join(', ') || '(none)',
       source: source('LLM_EXTRA_HEADERS'),
+    },
+    {
+      label: 'session header',
+      value: config.session?.value
+        ? config.session.source === 'auto'
+          ? 'auto'
+          : config.session.value
+        : '(not needed)',
+      source: config.session?.source === 'auto' ? 'generated' : config.session?.source || 'default',
     },
   ];
 }
@@ -455,7 +540,8 @@ export function explainLLMError(error) {
     if (error.code === 'invalid_base_url') {
       return [
         'LLM_BASE_URL must be an http(s) URL without a query string, for example:',
-        '  https://api.deepseek.com/v1   or   https://opencode.ai/zen/v1',
+        '  https://opencode.ai/inference/go/v1   (Go channel; session header is added automatically)',
+        '  https://opencode.ai/zen/v1            (pay-as-you-go; an empty balance answers 402)',
         'A URL ending in /chat/completions is used as-is.',
       ].join('\n');
     }
@@ -496,6 +582,15 @@ export function explainLLMError(error) {
       return 'The request did not finish in time. Raise LLM_TIMEOUT_MS if the provider is slow, then retry.';
     case 'network':
       return 'The provider could not be reached. Check LLM_BASE_URL, DNS/network access and any proxy settings.';
+    case 'http_error':
+      if (/MissingSessionID/i.test(error.body || '')) {
+        return [
+          'The Go channel requires an `x-opencode-session` header (400 MissingSessionID).',
+          'These tools add it automatically when LLM_BASE_URL contains /inference/go.',
+          'If it is still missing, set LLM_SESSION_ID or add {"x-opencode-session":"..."} to LLM_EXTRA_HEADERS.',
+        ].join('\n');
+      }
+      return '';
     default:
       return '';
   }

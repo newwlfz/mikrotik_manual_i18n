@@ -7,8 +7,11 @@
  *       configuration with the key masked. Sends no request.
  *
  *   node tools/translate/verify-llm.mjs
- *       Send one minimal chat request ("把 hello 翻译成中文", max_tokens 32) and
- *       print the HTTP status, elapsed time and returned text.
+ *       Send one minimal chat request ("把 hello 翻译成中文", max_tokens 256) and
+ *       print the HTTP status, elapsed time and returned text. 256 leaves room
+ *       for the reasoning tokens a reasoning model (deepseek-v4.1-flash) emits
+ *       before the answer: at 32 the budget was consumed by reasoning and
+ *       `content` came back empty.
  *
  * The key is never printed in full; only the first and last four characters are
  * shown. Exit code 0 means success, 1 a configuration/request failure.
@@ -30,9 +33,9 @@ const USAGE = `Usage:
   node tools/translate/verify-llm.mjs --dry-run   # validate config, send nothing
   node tools/translate/verify-llm.mjs             # send one minimal request
 
-Reads LLM_BASE_URL, LLM_MODEL, LLM_API_KEY, LLM_TIMEOUT_MS and
-LLM_MAX_RETRIES from the environment, <repo>/.env.local, or
-<workspace>/.env.local (first value wins).`;
+Reads LLM_BASE_URL, LLM_MODEL, LLM_API_KEY, LLM_TIMEOUT_MS,
+LLM_MAX_RETRIES and LLM_SESSION_ID from the environment,
+<repo>/.env.local, or <workspace>/.env.local (first value wins).`;
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
@@ -82,9 +85,16 @@ if (dryRun) {
   process.exit(0);
 }
 
+const sessionLabel = config.session?.value
+  ? config.session.source === 'auto'
+    ? 'auto'
+    : config.session.value
+  : '(not needed)';
+
 process.stdout.write(
   `\nPOST ${redactUrl(config.endpoint)}\n` +
-    `model=${config.model} key=${maskSecret(config.apiKey)} max_tokens=32\n`,
+    `model=${config.model} key=${maskSecret(config.apiKey)} max_tokens=256 ` +
+    `session header: ${sessionLabel}\n`,
 );
 
 const started = Date.now();
@@ -103,7 +113,7 @@ try {
     body: JSON.stringify({
       model: config.model,
       messages: [{role: 'user', content: '把 hello 翻译成中文'}],
-      max_tokens: 32,
+      max_tokens: 256,
       temperature: 0,
     }),
     signal: AbortSignal.timeout(config.timeoutMs),
@@ -136,10 +146,30 @@ try {
   process.exit(1);
 }
 
-const text = data.choices?.[0]?.message?.content;
+const choice = data.choices?.[0];
+const text = choice?.message?.content;
 if (!text) {
-  process.stderr.write('\nresponse contains no choices[0].message.content:\n');
-  process.stderr.write(`${payload.slice(0, 500)}\n`);
+  // A reasoning model emits `reasoning_content` first and only then `content`.
+  // When the output budget runs out during reasoning, `content` is empty and
+  // the raw body looks successful: say what actually happened instead of
+  // "no content".
+  const reasoning =
+    typeof choice?.message?.reasoning_content === 'string'
+      ? choice.message.reasoning_content.trim()
+      : '';
+  if (reasoning) {
+    process.stderr.write(
+      '\nempty content: the reasoning model spent the whole max_tokens budget on reasoning\n' +
+        '(推理吃掉了额度), so no answer was left. Raise max_tokens or use a non-reasoning model.\n' +
+        `finish_reason=${choice?.finish_reason ?? '(none)'} max_tokens=256\n\n` +
+        `reasoning (first 120 chars): ${reasoning.slice(0, 120)}\n`,
+    );
+    process.exit(1);
+  }
+  process.stderr.write(
+    '\nresponse contains no choices[0].message.content:\n' +
+      `${payload.slice(0, 500)}\n`,
+  );
   process.exit(1);
 }
 

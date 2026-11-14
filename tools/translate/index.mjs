@@ -108,6 +108,15 @@ const VALUE_OPTIONS = new Set([
   'locale',
 ]);
 
+/** Options that are booleans when they carry no `=VALUE`. */
+const FLAG_OPTIONS = new Set([
+  'dry-run',
+  'adopt',
+  'allow-cjk-loss',
+  'all-locales',
+  'no-compile',
+]);
+
 /** Commands that translate into a target locale (and therefore validate it). */
 const LOCALE_COMMANDS = new Set([
   'import-legacy',
@@ -119,12 +128,21 @@ const LOCALE_COMMANDS = new Set([
   'tm',
 ]);
 
+/** A user error in the command line (unknown/bad option); exits 2, not 1. */
+class UsageError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'UsageError';
+  }
+}
+
 const USAGE =
   'usage: node tools/translate/index.mjs <import-legacy|apply|verify|translate|descriptions|comments|tm|admonitions|status> [options]\n' +
   '       [--section=NAME] [--locale=NAME] [--all-locales] [--dry-run] [--adopt] [--allow-cjk-loss] [--limit=N] ...\n' +
   'note: an option value must be attached with "=" (--section=hardware); a space is not accepted.\n' +
   'note: --locale defaults to zh-Hans and must not be the source locale (en).\n' +
-  'note: verify --all-locales and verify --locale are mutually exclusive.';
+  'note: verify --all-locales and verify --locale are mutually exclusive.\n' +
+  'note: --help prints this text and exits 0; an unknown option exits 2.';
 
 function parseArgs(argv) {
   const args = {_: []};
@@ -134,13 +152,20 @@ function parseArgs(argv) {
       const name = match[1];
       if (match[2] === undefined) {
         if (VALUE_OPTIONS.has(name)) {
-          throw new Error(`option --${name} needs a value written with "=" (--${name}=VALUE)\n${USAGE}`);
+          throw new UsageError(`option --${name} needs a value written with "=" (--${name}=VALUE)\n${USAGE}`);
+        }
+        if (!FLAG_OPTIONS.has(name)) {
+          // An unknown option used to be stored and ignored, so a typo ran the
+          // command with its default scope instead of failing.
+          throw new UsageError(`unknown option: --${name}\n${USAGE}`);
         }
         args[name] = true;
       } else if (match[2] === '' && VALUE_OPTIONS.has(name)) {
         // `--section=` used to read as a falsy value, so `apply` silently ran
         // every section instead of none.
-        throw new Error(`option --${name} needs a non-empty value (--${name}=VALUE)\n${USAGE}`);
+        throw new UsageError(`option --${name} needs a non-empty value (--${name}=VALUE)\n${USAGE}`);
+      } else if (!VALUE_OPTIONS.has(name) && !FLAG_OPTIONS.has(name)) {
+        throw new UsageError(`unknown option: --${name}\n${USAGE}`);
       } else {
         args[name] = match[2];
       }
@@ -153,7 +178,7 @@ function parseArgs(argv) {
       args._.push(arg);
       continue;
     }
-    throw new Error(`unexpected argument: ${arg}; option values must use "--name=value"\n${USAGE}`);
+    throw new UsageError(`unexpected argument: ${arg}; option values must use "--name=value"\n${USAGE}`);
   }
   return args;
 }
@@ -880,7 +905,15 @@ function printVerifyReport(report) {
 }
 
 async function main() {
-  const args = parseArgs(process.argv.slice(2));
+  // `--help` is answered before parsing and before any command runs: `translate
+  // --help` used to start a real translation run, and a bare `--help` fell
+  // through to the usage text with exit code 1.
+  const argv = process.argv.slice(2);
+  if (argv.includes('--help') || argv.includes('-h')) {
+    process.stdout.write(`${USAGE}\n`);
+    return;
+  }
+  const args = parseArgs(argv);
   const command = args._[0];
   const locale = LOCALE_COMMANDS.has(command) ? targetLocale(args) : DEFAULT_TARGET_LOCALE;
   const sections = LOCALE_COMMANDS.has(command) ? sectionsFor(locale) : SECTIONS;
@@ -1575,8 +1608,12 @@ async function translateComments(sections, client, {limit, batch, dryRun, only})
 }
 
 main().catch((error) => {
-  // A bad `--locale=` is a user error: one line, no stack trace.
-  const message = error instanceof LocaleError ? error.message : error.stack || error.message;
+  // A bad `--locale=` or a bad option is a user error: one line, no stack
+  // trace. A usage error exits 2 (a script's typo is not a runtime failure).
+  const message =
+    error instanceof LocaleError || error instanceof UsageError
+      ? error.message
+      : error.stack || error.message;
   process.stderr.write(`${message}\n`);
-  process.exitCode = 1;
+  process.exitCode = error instanceof UsageError ? 2 : 1;
 });
