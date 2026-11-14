@@ -69,7 +69,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
-import {normalizeBaseUrl, resolveBaseUrl} from '../lib/site-config.mjs';
+import {normalizeBaseUrl, resolveBaseUrl, resolveLocales} from '../lib/site-config.mjs';
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const LOCALE_RE = /^[a-z]{2}(?:-[A-Za-z]{2,})?$/;
@@ -143,22 +143,6 @@ function countExternalAssetRefs(root, origin) {
   return refs;
 }
 
-/** Locale names and default locale from docusaurus.config.ts, when readable. */
-function readLocaleConfig() {
-  const configPath = path.join(REPO, 'docusaurus.config.ts');
-  try {
-    const source = fs.readFileSync(configPath, 'utf8');
-    const defaultMatch = source.match(/defaultLocale\s*:\s*['"]([^'"]+)['"]/);
-    const localesMatch = source.match(/locales\s*:\s*\[([\s\S]*?)\]/);
-    if (!localesMatch) return null;
-    const locales = [...localesMatch[1].matchAll(/['"]([^'"]+)['"]/g)].map((m) => m[1]);
-    if (locales.length === 0) return null;
-    return {defaultLocale: defaultMatch ? defaultMatch[1] : locales[0], locales};
-  } catch {
-    return null;
-  }
-}
-
 function looksLikeLocaleDir(name) {
   return LOCALE_RE.test(name) && !RESERVED.has(name);
 }
@@ -175,18 +159,16 @@ function detectLocales(root) {
   if (!fs.existsSync(root) || !fs.statSync(root).isDirectory()) {
     throw new Error(`build directory not found: ${root}`);
   }
-  const config = readLocaleConfig();
+  const config = resolveLocales();
   const names = [];
   // The locale this deployment is built from: its tree is the site root, never
-  // a "duplicate" to slim. Defaults to the config's default locale.
+  // a "duplicate" to slim. Defaults to the registry's default locale.
   const producedLocale = (process.env.SITE_LOCALE || '').trim();
-  if (config) {
-    for (const locale of config.locales) {
-      if (locale === config.defaultLocale) continue;
-      if (producedLocale && locale === producedLocale) continue;
-      if (fs.existsSync(path.join(root, locale)) && hasLocaleContent(root, locale)) {
-        names.push(locale);
-      }
+  for (const locale of config.locales) {
+    if (locale === config.defaultLocale) continue;
+    if (producedLocale && locale === producedLocale) continue;
+    if (fs.existsSync(path.join(root, locale)) && hasLocaleContent(root, locale)) {
+      names.push(locale);
     }
   }
   if (names.length === 0) {

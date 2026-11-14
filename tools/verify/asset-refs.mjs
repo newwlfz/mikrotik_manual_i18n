@@ -44,7 +44,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
-import {normalizeBaseUrl, resolveBaseUrl} from '../lib/site-config.mjs';
+import {normalizeBaseUrl, resolveBaseUrl, resolveLocales} from '../lib/site-config.mjs';
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const TEXT_EXT = new Set(['.html', '.xml']);
@@ -116,20 +116,6 @@ function externalAssetPattern(origin) {
     `${escapeRegExp(origin)}/(?:img|assets|videos|official|cli)/[^\\s"'\`<>\\\\]+`,
     'g',
   );
-}
-
-function readLocaleConfig() {
-  try {
-    const source = fs.readFileSync(path.join(REPO, 'docusaurus.config.ts'), 'utf8');
-    const defaultMatch = source.match(/defaultLocale\s*:\s*['"]([^'"]+)['"]/);
-    const localesMatch = source.match(/locales\s*:\s*\[([\s\S]*?)\]/);
-    if (!localesMatch) return null;
-    const locales = [...localesMatch[1].matchAll(/['"]([^'"]+)['"]/g)].map((m) => m[1]);
-    if (locales.length === 0) return null;
-    return {defaultLocale: defaultMatch ? defaultMatch[1] : locales[0], locales};
-  } catch {
-    return null;
-  }
 }
 
 function walk(root, visit) {
@@ -215,10 +201,10 @@ function main() {
   const assetUrlRe = assetUrlPattern(baseUrl);
   const externalRe = assetOrigin ? externalAssetPattern(assetOrigin) : null;
 
-  const config = readLocaleConfig();
-  const nonDefaultLocales = config
-    ? config.locales.filter((locale) => locale !== config.defaultLocale)
-    : [];
+  // Locale list from locales.json (via site-config); never a second parser of
+  // docusaurus.config.ts, which is itself generated from the registry.
+  const config = resolveLocales();
+  const nonDefaultLocales = config.locales.filter((locale) => locale !== config.defaultLocale);
   const localePrefixRe = new RegExp(
     `/(?:${(nonDefaultLocales.length > 0 ? nonDefaultLocales : ['zh-Hans'])
       .map((locale) => locale.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))

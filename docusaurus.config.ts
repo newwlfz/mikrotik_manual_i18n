@@ -4,64 +4,91 @@ import type {Config, Plugin} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 /**
- * 站点标识：**两个仓库共用这一份 `docusaurus.config.ts`**（逐字节相同），
- * 两个站点之间的全部差异都由环境变量提供，配置文件里不再有「只对英文站
- * 成立」的字面量。
+ * 站点标识：**所有语种仓库共用这一份 `docusaurus.config.ts`**（逐字节相同），
+ * 站点之间的全部差异由仓库根的 `locales.json`（语种登记表）与环境变量提供，
+ * 配置文件里不再有「只对某个站点成立」的字面量。
  *
- *   SITE_LOCALE            本次构建产出的语种（默认 `en`）
+ * `locales.json` 是语种与部署地址的唯一事实源：
+ *   - 每个语种的 `label` / `htmlLang`、承载它的 GitHub 仓库、部署路径与绝对地址；
+ *   - 本文件据此生成 `i18n.locales` 与 `localeConfigs`，语言下拉、每页
+ *     `hreflang`、`og:locale:alternate` 都从这里取值；
+ *   - `tools/lib/site-config.mjs`（构建与断言）和 `tools/content/publish.mjs`
+ *     （总管向语种仓推送）也读同一份文件，三处不会各自漂移。
+ *
+ * 环境变量覆盖仍然有效（本地预览、fork 与既有工作流都不必改文件）：
+ *
+ *   SITE_LOCALE            本次构建产出的语种（默认 `locales.json` 的 default）
  *   SITE_URL / BASE_URL    本站的绝对域名与路径前缀
- *   LOCALE_EN_URL / _BASE_URL  英文站的绝对域名 / 前缀
- *   LOCALE_ZH_URL / _BASE_URL  中文站的绝对域名 / 前缀
+ *   LOCALE_<X>_URL / _BASE_URL  某个语种的绝对域名 / 前缀（`zh-Hans` → `ZH`）
  *   ASSET_ORIGIN           共享资源源站（英文站基址，例
  *                          `https://newwlfz.github.io/mikrotik_manual_i18n`）：
  *                          站内资源引用改写到该源站，语种仓不再自带 `static/`
  *
- * 缺省值描述的是 GitHub Pages 上的**站点对**：当前构建的语种占用
- * `SITE_URL`/`BASE_URL`，另一个语种回落到它自己的规范前缀。显式的
- * `LOCALE_<X>_BASE_URL` 永远优先，本地/预览时可以把另一语言指到任何地址。
+ * 缺省值描述的是 GitHub Pages 上的**站点组**：当前构建的语种占用
+ * `SITE_URL`/`BASE_URL`，其它语种回落到 `locales.json` 里的规范地址。
+ * 显式的 `LOCALE_<X>_*` 永远优先，本地/预览时可以把另一语言指到任何地址。
  *
  * 每个仓库只构建 `SITE_LOCALE` 指定的一个语种：`tools/build/index.mjs` 在
  * 该变量存在时只跑 `docusaurus build --locale <SITE_LOCALE>`，产物里没有
- * `build/<locale>/` 这一层，但 `i18n.locales` 仍声明两个语种，语言下拉与
- * `hreflang` 因此能指到另一个语种的站点（另一个仓库、另一个 Pages 站点）。
+ * `build/<locale>/` 这一层，但 `i18n.locales` 仍声明全部语种，语言下拉与
+ * `hreflang` 因此能指到其它语种的站点（其它仓库、其它 Pages 站点）。
  */
-const siteLocale = (process.env.SITE_LOCALE || 'en').trim() || 'en';
-const siteUrl = (process.env.SITE_URL || 'https://newwlfz.github.io').replace(/\/+$/, '');
+const localeRegistryLib = require('./tools/content/locales.js') as {
+  readRegistry: () => LocaleRegistry;
+  validateRegistry: (registry: unknown) => string[];
+  resolveSites: (
+    registry: LocaleRegistry,
+    options: {env?: Record<string, string | undefined>; siteLocale?: string},
+  ) => ResolvedSites;
+};
 
-function normalizeBaseUrlValue(value: string): string {
-  const trimmed = String(value ?? '').trim() || '/';
-  const withLeading = trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
-  return withLeading.endsWith('/') ? withLeading : `${withLeading}/`;
-}
-function normalizeSiteUrlValue(value: string): string {
-  return String(value ?? '').trim().replace(/\/+$/, '');
-}
+type LocaleRegistryEntry = {
+  label: string;
+  repo: string;
+  baseUrl: string;
+  site: string;
+  direction?: 'ltr' | 'rtl';
+  htmlLang?: string;
+};
+type LocaleRegistry = {default: string; locales: Record<string, LocaleRegistryEntry>};
+type ResolvedSites = {
+  defaultLocale: string;
+  siteLocale: string;
+  siteUrl: string;
+  baseUrl: string;
+  localeConfigs: NonNullable<Config['i18n']>['localeConfigs'];
+  homes: Record<string, string>;
+  zhHome: string | null;
+  defaultHome: string;
+};
 
-const baseUrl = normalizeBaseUrlValue(
-  process.env.BASE_URL ||
-    (siteLocale === 'zh-Hans' ? '/mikrotik_manual_zh_hans/' : '/mikrotik_manual_i18n/'),
-);
+const localeRegistry = localeRegistryLib.readRegistry();
+const localeRegistryErrors = localeRegistryLib.validateRegistry(localeRegistry);
+if (localeRegistryErrors.length > 0) {
+  throw new Error(
+    `locales.json is invalid:\n  - ${localeRegistryErrors.join('\n  - ')}\n` +
+      'Run `npm run locales:check` for the full report.',
+  );
+}
 
 /**
  * 每个语种的规范地址，`localeConfigs` 与 `zhHome`/`enHome` 都从这里取值。
  *
- * 当前构建的语种默认等于本站地址；另一个语种回落到兄弟仓库的规范前缀。
- * `zhHome` / `enHome` 是**不带尾斜杠**的绝对基址：`<head>` 首屏跳转脚本、
- * `src/clientModules/locale-detect.js`、`src/pages/index.tsx` 拼的是以 `/`
- * 开头的站内相对路径，带尾斜杠会拼出 `//`。
+ * 当前构建的语种默认等于本站地址；其它语种回落到 `locales.json` 里的规范
+ * 前缀。`zhHome` / `enHome` 是**不带尾斜杠**的绝对基址：`<head>` 首屏跳转
+ * 脚本、`src/clientModules/locale-detect.js`、`src/pages/index.tsx` 拼的是以
+ * `/` 开头的站内相对路径，带尾斜杠会拼出 `//`。
  */
-const enSiteUrl = normalizeSiteUrlValue(process.env.LOCALE_EN_URL || siteUrl);
-const enBaseUrl = normalizeBaseUrlValue(
-  process.env.LOCALE_EN_BASE_URL ||
-    (siteLocale === 'en' ? baseUrl : '/mikrotik_manual_i18n/'),
-);
-const zhSiteUrl = normalizeSiteUrlValue(process.env.LOCALE_ZH_URL || siteUrl);
-const zhBaseUrl = normalizeBaseUrlValue(
-  process.env.LOCALE_ZH_BASE_URL ||
-    (siteLocale === 'zh-Hans' ? baseUrl : '/mikrotik_manual_zh_hans/'),
-);
-const zhHome = `${zhSiteUrl}${zhBaseUrl}`.replace(/\/+$/, '');
-const enHome = `${enSiteUrl}${enBaseUrl}`.replace(/\/+$/, '');
+const sites: ResolvedSites = localeRegistryLib.resolveSites(localeRegistry, {
+  env: process.env,
+});
+const siteLocale = sites.siteLocale;
+const siteUrl = sites.siteUrl;
+const baseUrl = sites.baseUrl;
+const localeConfigs = sites.localeConfigs;
+const defaultLocale = localeRegistry.default;
+const enHome = sites.defaultHome;
+const zhHome = sites.zhHome;
 
 /**
  * 本产物自己的资源根：**不带 locale** 的 baseUrl。
@@ -82,7 +109,8 @@ const enHome = `${enSiteUrl}${enBaseUrl}`.replace(/\/+$/, '');
  *
  * 路由/链接仍用 `useBaseUrl`（页面 URL 必须带语种），两者解耦。
  * 取值与 `baseUrl` 同一表达式（`BASE_URL` 环境变量优先），只做前后 `/`
- * 规范化；不要改 `baseUrl` / `locales` / `localeConfigs`。
+ * 规范化；`baseUrl` / `locales` / `localeConfigs` 都由 `locales.json` 驱动，
+ * 不要在这里写死某个语种的前缀。
  */
 const assetBaseUrl = (() => {
   const value = baseUrl.trim() || '/';
@@ -352,13 +380,18 @@ function docusaurusBaseUrlMeta(): Plugin {
         },
         // 中文站（另一个 Pages 站点）的绝对基址，不含尾斜杠。客户端模块与
         // 落地页据此拼跨仓入口，不再假设 `baseUrl + zh-Hans` 一定存在。
-        {
-          tagName: 'meta',
-          attributes: {
-            name: 'docusaurus-zh-home',
-            content: zhHome,
-          },
-        },
+        // 只在 `locales.json` 声明了中文语种时注入：没有中文站就没有入口。
+        ...(zhHome
+          ? [
+              {
+                tagName: 'meta',
+                attributes: {
+                  name: 'docusaurus-zh-home',
+                  content: zhHome,
+                },
+              },
+            ]
+          : []),
         // 英文站的绝对基址，供中文产物里的跨仓入口使用（与 zh-home 对称）。
         {
           tagName: 'meta',
@@ -367,9 +400,10 @@ function docusaurusBaseUrlMeta(): Plugin {
             content: enHome,
           },
         },
-        // 首屏自动跳转只属于英文站：中文站已经是目标语种，再「跳中文」就是
-        // 自己跳自己。`SITE_LOCALE` 在构建期决定是否注入这段脚本。
-        ...(siteLocale === 'en'
+        // 首屏自动跳转只属于默认语种（英文站）：中文站已经是目标语种，再
+        // 「跳中文」就是自己跳自己。`SITE_LOCALE` 与 `locales.json` 在构建期
+        // 决定是否注入这段脚本。
+        ...(siteLocale === defaultLocale && zhHome
           ? [
               {
                 tagName: 'script',
@@ -461,48 +495,20 @@ const config: Config = {
   themes: ['@docusaurus/theme-mermaid'],
 
   i18n: {
-    defaultLocale: 'en',
-    // 两个语种都必须声明：语言下拉（`localeDropdown`）与每页的 hreflang
-    // 都按这个列表生成入口，删掉 zh-Hans 中文入口就消失了。
-    // 每次构建只产出 `SITE_LOCALE` 一个语种（`--locale`），另一个语种由
-    // 另一个仓库构建；但两份 `localeConfigs` 都必须显式给出 url/baseUrl。
-    locales: ['en', 'zh-Hans'],
-    localeConfigs: {
-      // 两个语种都显式给 url/baseUrl：Docusaurus 用它们生成语言下拉链接、
-      // 每页的 `hreflang` 与 `og:locale:alternate`；同时（见
-      // `@docusaurus/core/lib/server/site.js`）非默认语种的 `outDir` 由
-      // `baseUrl - siteConfig.baseUrl` 推导，显式值让中文构建也落在 `build/`
-      // 根，而不是 `build/zh-Hans/`。
-      en: {
-        label: 'English',
-        url: enSiteUrl,
-        baseUrl: enBaseUrl,
-        direction: 'ltr',
-        htmlLang: 'en',
-        // 英文是默认语种，没有 `i18n/en/` 覆盖；写 translation 清单的工具也
-        // 不应把另一语种的词条抄进本仓。
-        translate: false,
-      },
-      'zh-Hans': {
-        label: '简体中文',
-        // 跨仓入口：绝对地址与路径前缀都指向中文站，不是本产物的子目录。
-        // 中文仓用同一份配置构建时，这两个值由 `LOCALE_ZH_*` 环境变量给出，
-        // 与该仓的 `SITE_URL`/`BASE_URL` 一致。
-        url: zhSiteUrl,
-        baseUrl: zhBaseUrl,
-        direction: 'ltr',
-        htmlLang: 'zh-Hans',
-        // **必须是“本次构建的语种”**：Docusaurus 3.10 的 `translate:false`
-        // 不只是跳过 `write-translations`，它让 docs 插件把
-        // `contentPathLocalized` 设为 undefined、让 navbar/footer/sidebar
-        // 标签不翻译（`@docusaurus/core/lib/server/plugins/plugins.js` 的
-        // `shouldTranslate`）。写死 false 会让中文仓产出“英文正文 + 英文
-        // 外壳”。英文仓（`SITE_LOCALE=en`）里这个表达式恒为 false，行为与
-        // 原来一致；中文仓（`SITE_LOCALE=zh-Hans`）里为 true，覆盖层才会
-        // 真正参与构建。
-        translate: siteLocale === 'zh-Hans',
-      },
-    },
+    // 语种清单与部署地址全部来自 `locales.json`（见文件头）：语言下拉
+    // （`localeDropdown`）与每页的 `hreflang` 按它生成入口，删掉一个语种就
+    // 同时删掉对应入口。每次构建只产出 `SITE_LOCALE` 一个语种（`--locale`），
+    // 其它语种由各自的仓库构建；每个 `localeConfigs` 条目都带自己的
+    // url/baseUrl（`tools/content/locales.js` 的 `resolveSites`）。
+    defaultLocale,
+    locales: Object.keys(localeRegistry.locales),
+    // `translate` 只对本次构建的语种为 true：Docusaurus 3.10 的
+    // `translate:false` 不只是跳过 `write-translations`，它让 docs 插件把
+    // `contentPathLocalized` 设为 undefined、让 navbar/footer/sidebar 标签不
+    // 翻译（`@docusaurus/core/lib/server/plugins/plugins.js` 的
+    // `shouldTranslate`）。写死 false 会让中文仓产出“英文正文 + 英文外壳”；
+    // 写死 true 会让英文仓去读中文仓的 `i18n/zh-Hans/` 覆盖层。
+    localeConfigs,
   },
 
   // Official width preference survives client-side route changes because the

@@ -183,11 +183,7 @@ function main() {
 
   const fromConfig = resolveBaseUrl();
   const baseUrl = normalizeBaseUrl(options.baseUrl ?? fromConfig.value);
-  const baseUrlSource = options.baseUrl
-    ? '--base-url'
-    : fromConfig.source === 'BASE_URL env'
-      ? 'BASE_URL env'
-      : 'docusaurus.config.ts';
+  const baseUrlSource = options.baseUrl ? '--base-url' : fromConfig.source;
   const allowList = options.allow.map(normalizeAllow);
   const locales = resolveLocales().locales;
   const allowFiles = [...DEFAULT_ALLOW_FILES, ...options.allowFiles].map(normalizeFileId);

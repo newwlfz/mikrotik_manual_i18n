@@ -28,27 +28,30 @@ redirect) but no Chinese content and no `build/zh-Hans/` output — see
 npm ci
 SITE_LOCALE=en npm run build   # cli data + docusaurus build (en) + pagefind + llms.txt
 npm run serve                  # or: npx docusaurus serve --port 3013 --no-open
+
+npm run locales:check          # validate locales.json (no network)
+npm run content:publish:dry    # print the docs/ + locales.json publish plan
+npm run content:publish        # push to the language repos (needs CROSS_REPO_TOKEN)
 ```
 
 Deployment knobs (all optional, each has a working default):
 
 | Variable | Default | Meaning |
 | --- | --- | --- |
-| `SITE_URL` | `https://newwlfz.github.io` | This site's origin (`canonical`, `hreflang`) |
-| `BASE_URL` | `/mikrotik_manual_i18n/` (or `/mikrotik_manual_zh_hans/` when `SITE_LOCALE=zh-Hans`) | This site's path prefix |
-| `SITE_LOCALE` | `en` | The single locale this build produces (`docusaurus build --locale`) |
-| `LOCALE_EN_URL` | `SITE_URL` | English site origin |
-| `LOCALE_EN_BASE_URL` | `BASE_URL` for the English build, else `/mikrotik_manual_i18n/` | English site path prefix |
-| `LOCALE_ZH_URL` | `SITE_URL` | Chinese site origin |
-| `LOCALE_ZH_BASE_URL` | `BASE_URL` for the Chinese build, else `/mikrotik_manual_zh_hans/` | Chinese site path prefix |
-| `ASSET_ORIGIN` | unset (local assets) | Shared asset origin for localized sites: the English site base address, with its path prefix and no trailing slash. The Chinese build sets `/img/`, `/assets/`, `/videos/`, `/official/` and `/cli/` references to it; this repository leaves it unset. See `guides/CI.md`. |
-| `ASSET_HOST` | unset | Asset-host build: `slim` keeps the full `build/img` tree (~99 MiB) so localized sites can load `/img/…`; set in `pages.yml` |
+| `SITE_URL` | the build locale's `site` origin in `locales.json` | This site's origin (`canonical`, `hreflang`) |
+| `BASE_URL` | the build locale's `baseUrl` in `locales.json` | This site's path prefix |
+| `SITE_LOCALE` | `locales.json` `default` (`en`) | The single locale this build produces (`docusaurus build --locale`) |
+| `LOCALE_EN_URL` / `_BASE_URL` | `locales.json` entry for `en` | English site origin / path prefix |
+| `LOCALE_ZH_URL` / `_BASE_URL` | `locales.json` entry for `zh-Hans` | Chinese site origin / path prefix |
+| `ASSET_ORIGIN` | unset (local assets) | Shared asset origin for localized sites: the hub's site base address, with its path prefix and no trailing slash. The Chinese build sets `/img/`, `/assets/`, `/videos/`, `/official/` and `/cli/` references to it; this repository leaves it unset. See `guides/CI.md`. |
+| `ASSET_HOST` | unset | Asset-host build: `slim` keeps the full `build/img` tree (~99 MiB) so localized sites can load `/img/…`; set on the `build` job in `pages.yml` |
 | `BUILD_HEAP_MB` | `10240` | Node heap for the build (`npm run build:lowmem` uses 6144) |
 
-The Chinese mirror (`repo_zh_hans`) carries **the same `docusaurus.config.ts`
-file** and supplies the other side through these variables, so no site-specific
-literal lives in the config. It also does not ship `static/`: its assets come
-from this site through `ASSET_ORIGIN`.
+Every language repository carries **the same `docusaurus.config.ts` file** and
+supplies its own side through `SITE_LOCALE`/`SITE_URL`/`BASE_URL` (or the
+`LOCALE_<X>_*` overrides), so no site-specific literal lives in the config. A
+language site does not ship `static/`: its assets come from the hub through
+`ASSET_ORIGIN`.
 
 A local acceptance build:
 
@@ -57,26 +60,97 @@ SITE_URL=http://127.0.0.1:3013 BASE_URL=/mikrotik_manual_i18n/ SITE_LOCALE=en np
 npm run verify:deploy
 ```
 
-## Cross-repository language entry
+## Architecture: hub + language sites
 
-`docusaurus.config.ts` declares two locales but only builds one:
+This repository is the **hub**. It owns the corrected English source, the
+shared asset tree and the language registry; each translated site is a separate
+repository with its own translations, build and deployment.
 
-- `en` — this site (`url = SITE_URL`, `baseUrl = BASE_URL`).
-- `zh-Hans` — `url = LOCALE_ZH_URL`, `baseUrl = LOCALE_ZH_BASE_URL`. No
-  `i18n/zh-Hans/` overlays live here, and `translate` is off in this build
-  (`siteLocale === 'zh-Hans'` is false). The Chinese repository uses the same
-  config file with `SITE_LOCALE=zh-Hans`, which turns content/theme
-  translation on for its own overlay tree.
+```text
+hub  newwlfz/mikrotik_manual_i18n
+     docs/  static/  data/  locales.json
+       |
+       +-- build + deploy (pages.yml)
+       |     -> https://newwlfz.github.io/mikrotik_manual_i18n/
+       |
+       +-- publish-content (pages.yml, CROSS_REPO_TOKEN)
+             |  docs/ + locales.json, one commit, only when something changed
+             v
+     language site  newwlfz/mikrotik_manual_zh_hans
+       i18n/zh-Hans/ (own overlays)   docs/ (synced)   locales.json (synced)
+       |
+       +-- translate + build + deploy (its own pages.yml)
+             -> https://newwlfz.github.io/mikrotik_manual_zh_hans/
+```
+
+**What the hub publishes.** For every non-default locale in `locales.json` the
+`publish-content` job clones that locale's repository, replaces its `docs/`
+tree with the hub's (pages deleted here disappear there), writes the hub's
+`locales.json`, and commits only if `git status --porcelain` is non-empty. The
+push triggers the language repository's `pages.yml` (translate → build →
+deploy). The destination's `i18n/`, `config/` and `work/` are never touched.
+Failure isolation, the full data flow and the security model are in
+[`guides/ARCHITECTURE-MULTISITE.md`](guides/ARCHITECTURE-MULTISITE.md); the
+accepted decisions and their trade-offs are in
+[`guides/DECISIONS.md`](guides/DECISIONS.md).
+
+**`locales.json`** (repository root) is the single source of truth for the
+locale list and every deployment address:
+
+| Field | Meaning |
+| --- | --- |
+| `default` | Locale the hub builds; must be `en` (`npm run locales:check` enforces it) |
+| `locales.<tag>.label` | Name shown in the navbar language dropdown |
+| `locales.<tag>.repo` | `owner/name` of the repository that builds this locale |
+| `locales.<tag>.baseUrl` | GitHub Pages path prefix; must start and end with `/` |
+| `locales.<tag>.site` | Absolute site URL (origin + `baseUrl`); used for `hreflang` and language links |
+
+`docusaurus.config.ts` derives `i18n.locales` and `localeConfigs` from this
+file, and `tools/lib/site-config.mjs` uses it for the build and verification
+tools. `SITE_URL`, `BASE_URL` and the `LOCALE_<X>_*` environment variables
+still override it for local previews and forks.
+
+**`CROSS_REPO_TOKEN`.** A GitHub fine-grained personal access token with
+**Contents: Read and write** on the language repositories (nothing on the hub).
+It is stored as an Actions secret in **this (hub) repository**: *Settings →
+Secrets and variables → Actions → New repository secret →
+`CROSS_REPO_TOKEN`*. Only `publish-content` uses it; that job keeps
+`contents: read` because the PAT is not limited by this repository's workflow
+permissions. A missing secret fails the job with an explicit error, never a
+silent skip. Locally: `export CROSS_REPO_TOKEN=…` then
+`npm run content:publish`; the dry run does not need it.
+
+**Adding a language.**
+
+1. Create the repository with the same `docusaurus.config.ts` and tooling, and
+   its own `pages.yml` (translate + build + deploy).
+2. Add an entry to `locales.json` — key = BCP 47 tag, plus `label`, `repo`,
+   `baseUrl`, `site`. Locale-specific environment overrides, if needed, are
+   `LOCALE_<PRIMARY_SUBTAG>_URL` / `_BASE_URL` (`zh-Hans` → `ZH`).
+3. Run `npm run locales:check` and `npm run content:publish:dry` (no network).
+4. Run `npm run content:publish -- --only=<tag>` once locally, or let the next
+   push to `main` do it, then confirm the language repository's workflow
+   started.
+
+### Cross-repository language entry
+
+`docusaurus.config.ts` declares every locale in `locales.json` but each build
+produces exactly one of them:
+
+- the build's own locale — `url = SITE_URL`, `baseUrl = BASE_URL`, and
+  `translate: true`, so its own `i18n/<locale>/` overlays are used;
+- every other locale — the declared `site`/`baseUrl`, with `translate: false`.
+  No `i18n/` overlay for another locale exists in this repository.
 
 Because every `localeConfigs` entry carries its own `url`/`baseUrl`, Docusaurus
 generates the language dropdown, the per-page `hreflang` alternates and
-`og:locale:alternate` for the Chinese site without any Chinese page being
-built. `tools/build/index.mjs` builds with `--locale en` only, so
-`build/zh-Hans/` never exists; the Chinese base URL is injected into
+`og:locale:alternate` for the other sites without building any page for them.
+`tools/build/index.mjs` builds with `--locale en` only, so `build/zh-Hans/`
+never exists; the Chinese base URL is injected into
 `<meta name="docusaurus-zh-home">` and the build's own locale into
 `<meta name="docusaurus-site-locale">`. The head script,
 `src/clientModules/locale-detect.js` and `src/pages/index.tsx` only run the
-Chinese-browser redirect when that locale is `en` — the Chinese build of the
+Chinese-browser redirect from the default locale — the Chinese build of the
 same config therefore never redirects to itself.
 
 ## Route map
@@ -99,6 +173,8 @@ same config therefore never redirects to itself.
 - `tools/sync/` — content sync, version cut, sidebars, metadata.
 - `tools/build/` — build wrapper (`index.mjs`), `slim.mjs`, `llms.mjs`.
 - `tools/verify/` — deploy-shape assertions (`npm run verify:deploy`).
+- `tools/content/` — the locale registry (`locales.js`, `check-locales.mjs`)
+  and the cross-repository publisher (`publish.mjs`).
 
 ## Current status
 

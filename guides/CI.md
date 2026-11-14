@@ -1,40 +1,66 @@
 # CI 与自动更新
 
-仓库已有四个工作流：
+多仓模型下只有两类工作流，职责不重叠：
 
-| 工作流 | 触发 | 作用 |
-|---|---|---|
-| `ci.yml` | PR / push 到 `main` / 手动 | 译文自测、结构校验、表格、CLI、标签、侧边栏、构建 |
-| `pages.yml` | push 到 `main` / 手动 | 构建、瘦身、**部署门禁**，通过后部署到 GitHub Pages |
-| `sync.yml` | 每日 03:17 / 手动 | 跟随官方站、剪枝、构建、提交（需 `ENABLE_SYNC=true`） |
-| `translate.yml` | 每周一 04:37 / 手动 | 翻译待处理块、校验、构建、提交（需 `ENABLE_TRANSLATION=true` + `LLM_*`，见 [LLM.md](LLM.md)） |
+| 仓库 | 工作流 | 触发 | 作用 |
+|---|---|---|---|
+| 总管 `mikrotik_manual_i18n` | `pages.yml` | push `main` / 手动 | `build` 构建英文站；`deploy` 过部署门禁后发布；`publish-content` 把 `docs/` + `locales.json` 推到各语种仓 |
+| 语种仓（如 `mikrotik_manual_zh_hans`） | `pages.yml` | push `main` / 手动 | `translate`（读取推过来的英文正文 + 本仓 `i18n/` 覆盖层）→ `build` → 门禁 → `deploy` |
 
-## 打开自动更新（仓库设置，两步）
+总管**不构建**任何其它语种，语种仓也**不构建**英文站；两个站点的语言下拉与
+hreflang 通过 `locales.json` 里各自的绝对地址互相指向（见
+[ARCHITECTURE-MULTISITE.md](ARCHITECTURE-MULTISITE.md)）。
 
-1. **Variables**（Settings → Secrets and variables → Actions → Variables）
-   - `ENABLE_SYNC` = `true`
-   - `ENABLE_TRANSLATION` = `true`
-   - `SITE_URL` / `BASE_URL`：部署地址（Pages 的域名）
-   - `LLM_BASE_URL` / `LLM_MODEL`：翻译接口与模型（见 [LLM.md](LLM.md)）
-2. **Secrets**（同一页面的 Secrets）
-   - `LLM_API_KEY`：翻译服务的 key（旧名 `OPENCODE_API_KEY` 已弃用，请改名）
+## 总管：build + publish
+
+`pages.yml` 有三个 job：
+
+| job | 依赖 | 条件 | 说明 |
+|---|---|---|---|
+| `build` | — | 非 `publish_only` 的手动运行 | `npm ci` → `npm run build`（`SITE_LOCALE=en`、`ASSET_HOST=true`）→ `npm run verify:deploy` → 上传 Pages artifact |
+| `deploy` | `build` | `build` 成功 | `actions/deploy-pages` |
+| `publish-content` | `build`（`always()`） | push `main`，或手动勾选 `publish_only` | `locales:check` → 检查 `CROSS_REPO_TOKEN` → `node tools/content/publish.mjs` |
+
+`publish-content` 与本仓构建**解耦**：push `main` 时即使 `build` 失败也会执行
+（英文站上线失败不应阻断语种站拿到修正后的正文）；只想重推内容时用手动触发的
+`publish_only`，`build`/`deploy` 会跳过，省掉 13–14 分钟构建。语种仓自己的
+`build` 是第二道门禁：内容有问题它就不会部署。
+
+每个非 default 语种：clone → 替换 `docs/` → 写 `locales.json` → 只有
+`git status --porcelain` 非空才 commit → push。push 触发语种仓的 `pages.yml`。
+令牌是 fine-grained PAT，存在**总管仓**的 Actions secret `CROSS_REPO_TOKEN`，
+不受本仓 `permissions: contents: read` 限制；缺失时 job 明确失败并给出配置步骤，
+不会静默跳过。
+
+## 打开自动更新（GitHub 设置）
+
+1. **Secret**（总管仓 Settings → Secrets and variables → Actions → Secrets）
+   - `CROSS_REPO_TOKEN`：fine-grained PAT，Repository access 只勾语种仓，
+     Permissions 只给 **Contents: Read and write**。申请、最小权限与轮换见
+     [ARCHITECTURE-MULTISITE.md](ARCHITECTURE-MULTISITE.md#7-security-model)。
+2. **Variables**（可选）：`SITE_URL` / `BASE_URL` 已写在 `pages.yml` 的 workflow
+   env 里，`locales.json` 也有同样的默认值；只有 fork 或预览域名不同才需要改。
+3. **语种仓**：内容通过 git push 进入，所以它的 `docs/` 必须被 git 跟踪；
+   它自己的 `pages.yml` 负责 translate + build + deploy。迁移步骤见
+   [ARCHITECTURE-MULTISITE.md](ARCHITECTURE-MULTISITE.md#9-adopting-an-existing-language-repository)。
 
 ## 首次启用建议顺序
 
-1. Actions → **Sync official content** → `Run workflow`（不勾 force），确认能跑完并 commit；
-2. Actions → **Translate zh-Hans** → `Run workflow`，`limit` 先填 `50` 试水，通过后再让定时任务跑；
-3. 观察一两天：`sync.yml` 每日只应在官方有变化时产生提交；
-4. 若失败，先看 stage 名（日志里的 `=== <stage>`），本地用
-   `node tools/pipeline/sync.mjs --update --dry-run` 复现。
+1. 在总管仓跑一次 **Build and deploy site**，确认英文站构建与部署通过；
+2. 勾选 `publish_only` 再跑一次，确认 `publish-content` 成功、语种仓出现
+   `content: sync from hub <sha>` 提交并触发其工作流；
+3. 观察语种仓的 translate / build / deploy 三个 job；
+4. 本地复现用 `npm run content:publish:dry`（不联网）与
+   `node tools/content/publish.mjs --only=<tag>`。
 
 ## 本地等价命令
 
 ```bash
-node tools/pipeline/sync.mjs --update --dry-run   # 预演，不改文件
-node tools/pipeline/translate.mjs                 # 重建译文
-node tools/pipeline/build.mjs                     # 构建：CLI → Docusaurus → Pagefind（10 GiB 堆）
-node tools/pipeline/verify.mjs --browser          # 全部断言（需先 build）
-npm run verify:deploy                             # 部署前门禁：先 build:slim，再 asset-refs / base-url / orphan-assets / llms-links
+npm run locales:check                            # 校验 locales.json（不联网）
+npm run content:publish:dry                      # 打印发布计划（不克隆、不推送）
+CROSS_REPO_TOKEN=… npm run content:publish        # 真正推送（本地需要 PAT）
+SITE_LOCALE=en ASSET_HOST=true BUILD_HEAP_MB=6144 npm run build
+npm run verify:deploy                            # 部署门禁：slim → 四条断言
 ```
 
 `verify:assets`（`tools/verify/asset-refs.mjs`）**必须在 `build:slim` 之后跑**：
@@ -42,49 +68,41 @@ npm run verify:deploy                             # 部署前门禁：先 build:
 不先瘦身它只会报「产物里还有 locale 前缀」。`npm run verify:deploy` 已经把顺序固定好，
 单独跑断言时不要调换这两步。
 
-## 部署前置：仓库 Variables 必须设置
+## 部署前置：站点地址
 
-`pages.yml` 的 `build` job 在 `npm ci` 之前有一步 `Validate site variables`（该 job
-的第一个 `run` 步骤，紧跟 checkout 与 setup-node），它检查
-`vars.SITE_URL` / `vars.BASE_URL`：任一个为空，或者 `SITE_URL` 还带着
-`mirror.invalid` 占位符，就直接 exit 1，CI 立刻失败。这比让构建跑十几分钟再产出一套
-URL 全错的产物要划算——`build` 会用 `SITE_URL` 生成 canonical / `og:url` / sitemap，
-缺值或占位值不会报错，只会把整站指向错域名。
+站点地址有三层，优先级从高到低：workflow `env`（`pages.yml` 显式写的
+`SITE_URL`/`BASE_URL`/`LOCALE_*`）→ `locales.json` 里该语种的 `site`/`baseUrl`
+→ 代码默认值。`docusaurus.config.ts` 与 `tools/lib/site-config.mjs` 都通过
+`tools/content/locales.js` 解析，所以构建、`llms.txt`、瘦身脚本和产物断言看到
+的是同一组地址。
 
-设置位置：仓库 **Settings → Secrets and variables → Actions → Variables**，两个都要
-Repository variable（不是 Environment variable）：
-
-```text
-SITE_URL = https://newwlfz.github.io
-BASE_URL = /mikrotik_manual_i18n/
-```
-
-`SITE_URL` 是 origin（不带尾斜杠、不带仓库路径），`BASE_URL` 是站点子路径（必须带
-首尾斜杠）。该 job 只在 push `main` 与 `workflow_dispatch` 时跑，本地和 PR 上变量为空
-不受影响。另外 `build` job 设了 `timeout-minutes: 45`（默认 360），`concurrency` 用
+当前 `pages.yml` 在 workflow env 固定了英文站地址，不需要在 GitHub 里再建
+Variables；fork 或换域名时改 workflow env（或仓库 Variables）即可。**不要**只改
+`locales.json` 而忘了语种仓的 `ASSET_ORIGIN`：那会让语种站的图片、PDF 和视频
+全部 404。`build` job 设了 `timeout-minutes: 45`（默认 360），`concurrency` 用
 `cancel-in-progress: false`，避免新 push 取消正在进行的部署。
 
 ## 部署门禁（`pages.yml`）
 
-`pages.yml` 在 `npm run build` → `npm run build:slim` 之后、`upload-pages-artifact`
-之前跑四个断言；任何一个非 0 就停在构建阶段，不产出 Pages 制品：
+`pages.yml` 在 `npm run build` 之后、`upload-pages-artifact` 之前跑
+`npm run verify:deploy`（先 `slim`，再四个断言）；任何一个非 0 就停在构建阶段，
+不产出 Pages 制品，上一次成功的部署继续服务：
 
 | 步骤 | 断言内容 |
 |---|---|
 | `npm run verify:assets` | 产物与源 Markdown 里没有 locale 前缀资源引用、没有双哈希 PDF、没有指向不存在文件的引用 |
 | `npm run verify:base-url` | 资源型根绝对引用（`img`/`video`/`link`/`og:image` 等）都在 `baseUrl` 之下 |
 | `npm run verify:orphan-assets` | 站内 `/img/<file>` 引用都有对应文件 |
-| `npm run verify:llms` | 6 份 `llms.txt`（默认语种根、`zh-Hans/`、`docs/7.24` 与 `docs/7.25` 及其 `zh-Hans` 副本）里的 8,668 条站内链接都指向存在的产物文件；`llms-full.txt` 也按普通目标校验，被 `build:slim` 删掉就失败 |
+| `npm run verify:llms` | 产物里的每一份 `llms.txt`（站点根、各版本 `docs/<version>/`）中的站内链接都指向存在的产物文件；`llms-full.txt` 也按普通目标校验，被 `build:slim` 删掉就失败 |
 
 `verify:llms`（`tools/verify/llms-links.mjs`）补的是别的断言看不见的一类断链：`llms.txt` 里是
 绝对 URL 字符串而不是路由，`onBrokenLinks` 与浏览器检查都不会管，所以只能在瘦身后的产物上
 逐条比对（也必须排在 `build:slim` 之后）。
 
-CI 里用这四条而不是 `npm run verify:deploy`，因为 `build:slim` 刚跑过，`verify:deploy`
-会在断言前再瘦一次（幂等，但多花一遍全量扫描）；本地没有瘦身产物时用 `verify:deploy`
-一步到位。门禁步骤与 `build` 步骤共用 `SITE_URL` / `BASE_URL`，否则 `base-url-refs`
-会用 `docusaurus.config.ts` 的默认前缀去校验另一套产物。`build:slim` 也吃 `BASE_URL`
-（它按这个前缀重写产物里的绝对 URL），所以这一步同样显式传入，不能只靠配置文件的默认值。
+`verify:deploy` 已经按顺序包含 `slim` 与四个断言，别再拆成两步分别跑：`slim` 必须
+在断言之前（见上）。门禁与 `build` 共用同一组 `SITE_URL` / `BASE_URL`，否则
+`base-url-refs` 会用 `locales.json` 的默认前缀去校验另一套产物；`slim` 也按
+`BASE_URL` 重写绝对 URL，不能只靠配置文件默认值。
 
 ## Shared assets (`ASSET_ORIGIN`)
 

@@ -1,73 +1,53 @@
 #!/usr/bin/env node
 /**
- * `siteUrl` / `baseUrl` 的唯一解析入口：构建脚本与产物断言共用。
+ * `siteUrl` / `baseUrl` / 语种清单的唯一解析入口：构建脚本与产物断言共用。
  *
- * 取值必须和 Docusaurus 本体一致：读 `docusaurus.config.ts` 里
- * `const siteUrl = ...` / `const baseUrl = ...` 的赋值表达式，`SITE_URL` /
- * `BASE_URL` 环境变量优先，否则用表达式里的字面量 fallback。这样本地构建、
- * llms.txt 的绝对 URL、静态服务器和产物断言都走同一份取值，不会再出现第二套
- * fallback 各自漂移。
+ * 事实源是仓库根的 `locales.json`（见 `tools/content/locales.js`）：
  *
- * 注意：`docusaurus.config.ts` 的两个赋值必须保持内联字面量
- * （`process.env.BASE_URL || '/prefix/'`）——本模块用正则解析该表达式；
- * 抽成常量会让解析失败。
+ *   - `resolveBaseUrl()` 取本次构建语种（`SITE_LOCALE`，缺省为 default）的
+ *     `baseUrl`，`BASE_URL` 环境变量优先；
+ *   - `resolveSiteUrl()` 取该语种 `site` 的 origin，`SITE_URL` 环境变量优先；
+ *   - `resolveLocales()` 返回 `locales.json` 的语种清单与 default。
+ *
+ * 这与 `docusaurus.config.ts` 走同一份 `resolveSites()`，所以本地构建、llms.txt
+ * 的绝对 URL、瘦身脚本和产物断言不会再各自维护一套 fallback 而漂移。
+ *
+ * 注意：语种地址不再从 `docusaurus.config.ts` 的赋值表达式里正则解析——配置
+ * 文件现在也从 `locales.json` 生成，两处解析会互相耦合。需要新语种时改
+ * `locales.json`，然后跑 `npm run locales:check`。
  */
 
-import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
+import localeRegistry from '../content/locales.js';
+
 export const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
-export const CONFIG_FILE = path.join(REPO, 'docusaurus.config.ts');
+export const LOCALES_FILE = path.join(REPO, localeRegistry.FILE_NAME);
 
-function configSource() {
-  return fs.readFileSync(CONFIG_FILE, 'utf8');
-}
+/** 与 Docusaurus 一致：非空 baseUrl 以 `/` 开头、以 `/` 结尾；空值即 `/`。 */
+export const normalizeBaseUrl = localeRegistry.normalizeBaseUrl;
 
-function assignmentOf(source, name) {
-  const match = source.match(new RegExp(`(?:const|let|var)\\s+${name}\\s*=\\s*([^;]+);`));
-  return match ? match[1].trim() : null;
-}
+/** siteUrl 不带尾斜杠，便于拼绝对 URL。 */
+export const normalizeSiteUrl = localeRegistry.normalizeSiteUrl;
 
-function resolveExpression(name, expression, envName) {
-  if (!expression) throw new Error(`cannot find ${name} in docusaurus.config.ts`);
-  if (new RegExp(`process\\.env\\.${envName}`).test(expression)) {
-    if (process.env[envName]) return {value: process.env[envName], source: `${envName} env`};
-    const fallback = expression.match(/['"]([^'"]*)['"]/);
-    if (fallback) return {value: fallback[1], source: 'docusaurus.config.ts'};
-    throw new Error(`cannot resolve ${name} expression: ${expression}`);
-  }
-  const literal = expression.match(/^['"]([^'"]*)['"]$/);
-  if (literal) return {value: literal[1], source: 'docusaurus.config.ts'};
-  throw new Error(`cannot resolve ${name} expression: ${expression}`);
-}
+let localesCache = null;
 
 /**
- * 站点启用的语种与默认语种，唯一事实源是 `docusaurus.config.ts`。
+ * 站点启用的语种与默认语种，唯一事实源是 `locales.json`。
  *
- * 镜像不保留第二份语种清单：`config/mirror.yml` 曾经有一份 `locales:`，但没有任何
- * 脚本读它，删掉之后所有脚本（translate / build / verify）都从这里取。
- *
- * 依赖配置文件里两个内联字面量：`locales: ['en', 'zh-Hans']` 与
- * `defaultLocale: 'en'`（抽成变量会让正则解析失败，和上面 siteUrl/baseUrl 的约定
- * 一致）。
+ * 镜像不保留第二份语种清单：`config/mirror.yml` 曾经有一份 `locales:`，但没有
+ * 任何脚本读它；现在 `docusaurus.config.ts`、构建/断言脚本和
+ * `tools/content/publish.mjs` 都从这里取值。
  */
-let localesCache = null;
 export function resolveLocales() {
   if (localesCache) return localesCache;
-  const source = configSource();
-  const list = source.match(/\blocales\s*:\s*\[([\s\S]*?)\]/);
-  if (!list) throw new Error('cannot find i18n.locales in docusaurus.config.ts');
-  const locales = [...list[1].matchAll(/['"]([^'"]+)['"]/g)].map((match) => match[1]);
-  if (locales.length === 0) throw new Error('i18n.locales in docusaurus.config.ts is empty');
-  const field = source.match(/\bdefaultLocale\s*:\s*['"]([^'"]+)['"]/);
-  const defaultLocale = field ? field[1] : locales[0];
-  if (!locales.includes(defaultLocale)) {
-    throw new Error(
-      `i18n.defaultLocale "${defaultLocale}" is not in i18n.locales (${locales.join(', ')})`,
-    );
+  const registry = localeRegistry.readRegistry();
+  const errors = localeRegistry.validateRegistry(registry);
+  if (errors.length > 0) {
+    throw new Error(`locales.json is invalid:\n  - ${errors.join('\n  - ')}`);
   }
-  localesCache = {locales, defaultLocale};
+  localesCache = {locales: Object.keys(registry.locales), defaultLocale: registry.default};
   return localesCache;
 }
 
@@ -76,30 +56,35 @@ export function resetLocalesCache() {
   localesCache = null;
 }
 
-/** baseUrl 及其来源（`BASE_URL env` / `docusaurus.config.ts`）。 */
+/** 本次构建的语种；未设置 `SITE_LOCALE` 时是登记表的 default。 */
+function siteLocaleForBuild() {
+  return (process.env.SITE_LOCALE || '').trim() || resolveLocales().defaultLocale;
+}
+
+/** 语种条目；未知语种回落到 default（构建期 Docusaurus 会先报错）。 */
+function localeEntry(locale) {
+  const registry = localeRegistry.readRegistry();
+  return registry.locales[locale] ?? registry.locales[registry.default];
+}
+
+/** baseUrl 及其来源（`BASE_URL env` / `locales.json`）。 */
 export function resolveBaseUrl() {
-  const source = configSource();
-  const field = source.match(/^\s*baseUrl\s*:\s*(['"])([^'"]+)\1\s*,?\s*$/m);
-  if (field) return {value: field[2], source: 'docusaurus.config.ts'};
-  return resolveExpression('baseUrl', assignmentOf(source, 'baseUrl'), 'BASE_URL');
+  if (process.env.BASE_URL) {
+    return {value: normalizeBaseUrl(process.env.BASE_URL), source: 'BASE_URL env'};
+  }
+  return {
+    value: normalizeBaseUrl(localeEntry(siteLocaleForBuild()).baseUrl),
+    source: 'locales.json',
+  };
 }
 
-/** siteUrl 及其来源（`SITE_URL env` / `docusaurus.config.ts`）。 */
+/** siteUrl 及其来源（`SITE_URL env` / `locales.json`）。 */
 export function resolveSiteUrl() {
-  return resolveExpression('siteUrl', assignmentOf(configSource(), 'siteUrl'), 'SITE_URL');
-}
-
-/** 与 Docusaurus 一致：非空 baseUrl 以 `/` 开头、以 `/` 结尾；空值即 `/`。 */
-export function normalizeBaseUrl(value) {
-  const trimmed = String(value ?? '').trim();
-  if (!trimmed || trimmed === '/') return '/';
-  const leading = trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
-  return leading.endsWith('/') ? leading : `${leading}/`;
-}
-
-/** siteUrl 不带尾斜杠，便于拼绝对 URL。 */
-export function normalizeSiteUrl(value) {
-  const trimmed = String(value ?? '').trim();
-  if (!trimmed) throw new Error('siteUrl is empty');
-  return trimmed.replace(/\/+$/, '');
+  if (process.env.SITE_URL) {
+    return {value: normalizeSiteUrl(process.env.SITE_URL), source: 'SITE_URL env'};
+  }
+  return {
+    value: localeRegistry.siteOrigin(localeEntry(siteLocaleForBuild())),
+    source: 'locales.json',
+  };
 }

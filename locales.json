@@ -1,0 +1,17 @@
+{
+  "default": "en",
+  "locales": {
+    "en": {
+      "label": "English",
+      "repo": "newwlfz/mikrotik_manual_i18n",
+      "baseUrl": "/mikrotik_manual_i18n/",
+      "site": "https://newwlfz.github.io/mikrotik_manual_i18n/"
+    },
+    "zh-Hans": {
+      "label": "简体中文",
+      "repo": "newwlfz/mikrotik_manual_zh_hans",
+      "baseUrl": "/mikrotik_manual_zh_hans/",
+      "site": "https://newwlfz.github.io/mikrotik_manual_zh_hans/"
+    }
+  }
+}

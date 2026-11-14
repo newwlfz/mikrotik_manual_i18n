@@ -1,13 +1,24 @@
 name: Build and deploy site
 
-# 英文站（本仓库）单独构建成 `SITE_LOCALE=en` 的产物，部署到
-# https://newwlfz.github.io/mikrotik_manual_i18n/ 。
-# 中文站由 `mikrotik_manual_zh_hans` 用同一份 docusaurus.config.ts 构建，
-# 两个站点的语言下拉与 hreflang 互相指向对方的 Pages 地址。
+# 英文站（本仓库）是**总管**：
+#   1. build + deploy：把 docs/ 构建成英文站，部署到
+#      https://newwlfz.github.io/mikrotik_manual_i18n/ ；
+#   2. publish-content：把 docs/ 与 locales.json 推到各语种仓（当前是
+#      `mikrotik_manual_zh_hans`），由对方的工作流完成 translate + build +
+#      deploy。跨仓写入用 fine-grained PAT（secret `CROSS_REPO_TOKEN`），不受
+#      本仓 `permissions` 的限制；本仓权限仍是 `contents: read`。
+#
+# 语种清单与各语种部署地址在仓库根的 `locales.json`，不要在这里再加一份。
+# 架构与失败隔离见 guides/ARCHITECTURE-MULTISITE.md。
 on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      publish_only:
+        description: '只推送 docs/ + locales.json 到语种仓（跳过本仓 build/deploy）'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -20,7 +31,8 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
-# 站点身份全部走环境变量：仓库里的 docusaurus.config.ts 与中文站逐字节相同。
+# 站点身份仍可用环境变量覆盖（`locales.json` 已给出同样的默认值，这里显式写
+# 出来是为了让本仓的部署地址一眼可见，也方便 fork 改地址）。
 env:
   SITE_LOCALE: en
   SITE_URL: https://newwlfz.github.io
@@ -29,11 +41,6 @@ env:
   LOCALE_EN_BASE_URL: /mikrotik_manual_i18n/
   LOCALE_ZH_URL: https://newwlfz.github.io
   LOCALE_ZH_BASE_URL: /mikrotik_manual_zh_hans/
-  # 本仓是**资源宿主**：语种站通过 ASSET_ORIGIN 引用这里的 /img、/assets、/videos。
-  # `ASSET_HOST` 让 slim 保留完整的 build/img（约 99 MiB）——英文页面的 Markdown
-  # 图片走 assets/images，`/img` 本来可以剪掉，但中文站的 Markdown 图片指向
-  # `/img/<hash>`，剪掉就会 404。见 guides/CI.md「Shared assets」。
-  ASSET_HOST: 'true'
   # 静态渲染是峰值；6 GiB 堆在 16 GiB 的 runner 上留足余量。
   BUILD_HEAP_MB: '6144'
   # 注：`${{ runner.temp }}` 只在 job/step 级 env 可用，workflow 级 env 用了会
@@ -43,8 +50,17 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # 手动 publish_only：内容发布不依赖本仓构建产物，跳过 13–14 分钟的构建。
+    if: ${{ github.event_name != 'workflow_dispatch' || inputs.publish_only != true }}
     # 构建约 13–14 分钟（6 GiB 堆）；默认 360 分钟过于宽松，卡住时要等 6 小时。
     timeout-minutes: 45
+    env:
+      # 本仓是**资源宿主**：语种站通过 ASSET_ORIGIN 引用这里的 /img、/assets、
+      # /videos。`ASSET_HOST` 让 slim 保留完整的 build/img（约 99 MiB）——英文
+      # 页面的 Markdown 图片走 assets/images，`/img` 本来可以剪掉，但中文站的
+      # Markdown 图片指向 `/img/<hash>`，剪掉就会 404。见 guides/CI.md「Shared
+      # assets」。
+      ASSET_HOST: 'true'
     steps:
       - uses: actions/checkout@v4
       # `.npmrc` 把缓存指到 ../work/npm-cache（本地便利）；CI 改用 runner 临时
@@ -88,3 +104,42 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  publish-content:
+    # 内容同步与本仓构建**解耦**：
+    #   - push 到 main：即使 build 失败也执行（docs/ 与 locales.json 是语种仓的
+    #     输入，本仓构建失败可能只是资源/页面问题；语种仓自己的 build 是第二道
+    #     门禁，失败时它不会部署）；
+    #   - workflow_dispatch + publish_only：build 被跳过，这里仍可用（修 secret、
+    #     或只想重推内容时不必等 13 分钟的构建）。
+    needs: build
+    if: ${{ always() && (github.ref == 'refs/heads/main' || inputs.publish_only == true) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      # 只读本仓；跨仓写入由 `CROSS_REPO_TOKEN`（PAT）完成。
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      # 先校验登记表：地址或仓库写错时立刻停，而不是 clone 到一半才失败。
+      - name: Validate locale registry
+        run: npm run locales:check
+      # secret 未设置时给出**明确错误**（带配置步骤），绝不静默跳过：静默跳过
+      # 会让语种站停在旧内容上，而下一次 push 看起来一切正常。
+      - name: Check CROSS_REPO_TOKEN
+        env:
+          CROSS_REPO_TOKEN: ${{ secrets.CROSS_REPO_TOKEN }}
+        run: |
+          set -eu
+          if [ -z "${CROSS_REPO_TOKEN:-}" ]; then
+            echo "::error title=CROSS_REPO_TOKEN is not set::发布内容需要 fine-grained PAT（Contents: Read and write，覆盖 locales.json 里的语种仓）。在 Settings → Secrets and variables → Actions 添加 secret CROSS_REPO_TOKEN；申请与权限见 guides/ARCHITECTURE-MULTISITE.md。"
+            exit 1
+          fi
+          echo "[publish] CROSS_REPO_TOKEN is present"
+      - name: Publish content to language repositories
+        env:
+          CROSS_REPO_TOKEN: ${{ secrets.CROSS_REPO_TOKEN }}
+        run: node tools/content/publish.mjs
