@@ -42,8 +42,10 @@ env:
   BASE_URL: /mikrotik_manual_i18n/
   LOCALE_EN_URL: https://newwlfz.github.io
   LOCALE_EN_BASE_URL: /mikrotik_manual_i18n/
-  LOCALE_ZH_URL: https://newwlfz.github.io
-  LOCALE_ZH_BASE_URL: /mikrotik_manual_zh_hans/
+  # 其它语种站点的地址全部来自 `locales.json`。`LOCALE_<X>_*` 只按主语言子标签
+  # 匹配（`zh-Hans`、`zh-Hant` 都命中 `ZH`），在这里写 `LOCALE_ZH_BASE_URL` 会让
+  # 简体、繁体的语言下拉和 `hreflang` 都指向简体站；要覆盖中文站地址请用本地预览，
+  # 不要写进工作流。
   # 静态渲染是峰值；6 GiB 堆在 16 GiB 的 runner 上留足余量。
   BUILD_HEAP_MB: '6144'
   # 注：`${{ runner.temp }}` 只在 job/step 级 env 可用，workflow 级 env 用了会
