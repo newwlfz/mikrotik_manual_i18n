@@ -33,7 +33,7 @@ repo/
 │  └─ sync.yml                       # scheduled detect/update/translate/build
 ├─ config/
 │  ├─ mirror.yml                     # source, versions, sections
-│  ├─ translation.yml                # provider, model, glossary, preserve rules
+│  ├─ translation.yml                # glossary, batch, preserve, provenance label
 │  └─ glossary/zh-Hans.yml
 ├─ tools/
 │  ├─ sync/                          # inventory, fetch, render, transform, state
@@ -240,9 +240,11 @@ follow a naming convention (`config/glossary/<locale>.yml`,
 top-level key `<locale>` in `config/known-translations.yml`); the checklist for
 adding a language is in `guides/PIPELINE.md`.
 
-`config/translation.yml` controls provider, model, glossary, batch size and the
-structures that must be preserved. The API key is read from the environment
-variable named there (`DEEPSEEK_API_KEY` by default).
+`config/translation.yml` controls the translation policy: glossary, batch size,
+temperature, the structures that must be preserved and the provenance label
+written to overlay front matter. The endpoint, model, API key, timeout and retry
+budget come from `LLM_*` (`tools/translate/lib/llm-config.mjs`; see
+`guides/LLM.md`) and are never committed.
 
 ## 6. Workflow design
 

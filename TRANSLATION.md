@@ -239,7 +239,7 @@ Current artefacts:
 | --- | --- |
 | `config/translation-rules.yml` | rule ledger: id, layer, statement, enforcement |
 | `config/glossary/<locale>.yml` | terms that never translate |
-| `config/translation.yml` | provider, model, batch, preserved structures |
+| `config/translation.yml` | glossary, batch, preserved structures, provenance label (connection settings live in `LLM_*`) |
 | `config/translation-patches/` | page-level exceptions, versioned as data |
 | `tools/translate/lib/*` | the transforms that implement the rules |
 | `tools/translate/verify.mjs` | structural checks after generation |

@@ -1,17 +1,21 @@
-# Translation provider policy.
-# The workflow reads the API key from the environment variable named below.
+# Translation policy.
+#
+# The endpoint, model, API key, timeout and retry budget are connection
+# settings, not repository policy: they come from LLM_* (see
+# `tools/translate/lib/llm-config.mjs`, `guides/LLM.md` and
+# `.env.local.example`). They are never stored in this file.
 schema: 1
 
-# opencode-go speaks the OpenAI chat-completions dialect. It requires the
-# x-opencode-session header, which the client mints per run.
+# Provenance label written to an overlay's `translation_provider` front matter.
+# The wire protocol is always OpenAI chat-completions; this only names who
+# produced the wording.
 provider: opencode-go
+
+# Fallback for `translation_model` when an offline `apply`/`derive` runs with no
+# LLM_MODEL configured. A configured LLM_MODEL always wins.
 model: deepseek-v4.1-flash
-api_key_env: OPENCODE_API_KEY
-base_url: https://opencode.ai/inference/go/v1/chat/completions
-session_header: x-opencode-session
 
 glossary: config/glossary/zh-Hans.yml
-max_retries: 2
 temperature: 0
 
 # How one translation request is cut. `max_blocks` is the number of blocks the

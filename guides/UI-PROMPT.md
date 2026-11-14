@@ -46,7 +46,7 @@
 - 译文页在此基础上增加：**翻译时间**、**提供商 + 模型名**
 - 数据来自 front matter，不要运行时探测。需要在管线里补三个字段：
   - `translated_at`：apply/derive 写入本次时间（ISO 8601，带时区）
-  - `translation_provider` / `translation_model`：读 `config/translation.yml` 的 `provider` / `model`
+  - `translation_provider` / `translation_model`：provider 读 `config/translation.yml` 的 `provider`；model 优先读 `LLM_MODEL`，离线且未配置时回退到 `config/translation.yml` 的 `model`
   - 修改点：`tools/translate/lib/apply.mjs`、`tools/translate/derive.mjs` 的 front matter 组装处；
   - 注意 `translate verify` 的 `frontMatterDiff` 只比较**源文件里已有的键**，新增键不会误报，但要自己跑一遍确认。
 - 展示要求：等宽小字、`rel="noopener"`、日期本地化显示（`Intl.DateTimeFormat`），暗色主题可读。

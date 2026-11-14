@@ -7,7 +7,7 @@
 | `ci.yml` | PR / push 到 `main` / 手动 | 译文自测、结构校验、表格、CLI、标签、侧边栏、构建 |
 | `pages.yml` | push 到 `main` / 手动 | 构建、瘦身、**部署门禁**，通过后部署到 GitHub Pages |
 | `sync.yml` | 每日 03:17 / 手动 | 跟随官方站、剪枝、构建、提交（需 `ENABLE_SYNC=true`） |
-| `translate.yml` | 每周一 04:37 / 手动 | 翻译待处理块、校验、构建、提交（需 `ENABLE_TRANSLATION=true` + `OPENCODE_API_KEY`） |
+| `translate.yml` | 每周一 04:37 / 手动 | 翻译待处理块、校验、构建、提交（需 `ENABLE_TRANSLATION=true` + `LLM_*`，见 [LLM.md](LLM.md)） |
 
 ## 打开自动更新（仓库设置，两步）
 
@@ -15,8 +15,9 @@
    - `ENABLE_SYNC` = `true`
    - `ENABLE_TRANSLATION` = `true`
    - `SITE_URL` / `BASE_URL`：部署地址（Pages 的域名）
+   - `LLM_BASE_URL` / `LLM_MODEL`：翻译接口与模型（见 [LLM.md](LLM.md)）
 2. **Secrets**（同一页面的 Secrets）
-   - `OPENCODE_API_KEY`：翻译服务的 key
+   - `LLM_API_KEY`：翻译服务的 key（旧名 `OPENCODE_API_KEY` 已弃用，请改名）
 
 ## 首次启用建议顺序
 

@@ -2,54 +2,52 @@
  * OpenAI-compatible chat client for the translation batches.
  *
  * Only the units the overlay still has in English are ever sent, which keeps a
- * run small and resumable. Credentials come from the environment or a local
- * `.env`; they are never written to the repository.
+ * run small and resumable.
+ *
+ * Endpoint, model, API key, timeout and retry budget come from `LLM_*` through
+ * `lib/llm-config.mjs`; they are never written to the repository.
+ * `config/translation.yml` keeps the non-secret translation policy (glossary,
+ * batch segmentation, temperature, provenance label).
  */
 
 import fs from 'node:fs';
 import path from 'node:path';
-import crypto from 'node:crypto';
 import YAML from 'yaml';
-import {REPO, WORKSPACE, WORK_DIR, ensureDir} from './paths.mjs';
+import {REPO, WORK_DIR, ensureDir} from './paths.mjs';
 import {segmentation} from './segments.mjs';
-
-function readEnv() {
-  const out = {};
-  for (const file of [path.join(REPO, '.env'), path.join(WORKSPACE, '.env')]) {
-    if (!fs.existsSync(file)) continue;
-    for (const line of fs.readFileSync(file, 'utf8').split('\n')) {
-      const match = /^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/.exec(line);
-      if (!match) continue;
-      out[match[1]] = match[2].replace(/^["']|["']$/g, '');
-    }
-  }
-  return out;
-}
+import {
+  LLMRequestError,
+  errorFromNetwork,
+  errorFromResponse,
+  loadLLMConfig,
+} from './llm-config.mjs';
 
 export function loadConfig() {
   const raw = fs.readFileSync(path.join(REPO, 'config/translation.yml'), 'utf8');
   const config = YAML.parse(raw) || {};
-  const env = readEnv();
-  const keyName = config.api_key_env || 'DEEPSEEK_API_KEY';
-  const apiKey = process.env[keyName] || env[keyName];
-  if (!apiKey) throw new Error(`${keyName} is not set (environment or .env)`);
-  const baseUrl = config.base_url || 'https://api.deepseek.com/v1/chat/completions';
+  const llm = loadLLMConfig();
+  for (const warning of llm.warnings) process.stderr.write(`warning: ${warning}\n`);
+
   const glossaryFile = path.join(REPO, config.glossary || 'config/glossary/zh-Hans.yml');
   const glossary = fs.existsSync(glossaryFile)
     ? (YAML.parse(fs.readFileSync(glossaryFile, 'utf8'))?.terms || [])
     : [];
+
   return {
-    provider: config.provider || 'deepseek',
-    model: config.model || 'deepseek-chat',
-    baseUrl,
-    apiKey,
+    // Provenance label written to `translation_provider`; the wire protocol is
+    // always OpenAI chat-completions, so it is not used to select a client.
+    provider: config.provider || 'openai-compatible',
+    model: llm.model,
+    baseUrl: llm.endpoint,
+    apiKey: llm.apiKey,
     // Segmentation is policy, not a flag: one request carries at most
     // `max_blocks` blocks and `max_chars` characters (config/translation.yml).
     batchSize: segmentation().maxBlocks,
     maxChars: segmentation().maxChars,
-    maxRetries: config.max_retries ?? 2,
+    maxRetries: llm.maxRetries,
+    timeoutMs: llm.timeoutMs,
+    extraHeaders: llm.extraHeaders,
     temperature: config.temperature ?? 0,
-    sessionHeader: config.session_header || null,
     glossary,
   };
 }
@@ -79,10 +77,8 @@ export class Client {
       Accept: 'application/json',
       Authorization: `Bearer ${config.apiKey}`,
       'User-Agent': 'mikrotik-manual-i18n/2.0 (+https://github.com/newwlfz/mikrotik_manual_i18n)',
+      ...config.extraHeaders,
     };
-    if (config.sessionHeader) {
-      this.headers[config.sessionHeader] = crypto.randomUUID();
-    }
     this.usage = {prompt: 0, completion: 0, calls: 0};
   }
 
@@ -108,27 +104,54 @@ export class Client {
             ],
             temperature: this.config.temperature,
           }),
+          signal: AbortSignal.timeout(this.config.timeoutMs),
         });
-        if (response.status === 401 || response.status === 402) {
-          throw new Error(`fatal provider status ${response.status}: ${(await response.text()).slice(0, 200)}`);
-        }
+
+        const payload = await response.text();
         if (!response.ok) {
-          lastError = new Error(`HTTP ${response.status}: ${(await response.text()).slice(0, 200)}`);
-          await new Promise((resolve) => setTimeout(resolve, 1500 * (attempt + 1)));
-          continue;
+          // 401/402/403/404 are fatal; 408/429/5xx are retryable (see
+          // `LLMRequestError.retryable`).
+          throw errorFromResponse(response.status, payload);
         }
-        const data = await response.json();
+
+        let data;
+        try {
+          data = JSON.parse(payload);
+        } catch {
+          throw new LLMRequestError('provider returned a non-JSON body', {
+            code: 'invalid_response',
+            retryable: true,
+            body: payload.slice(0, 300),
+          });
+        }
+
         const choice = data.choices?.[0];
-        if (!choice?.message?.content) throw new Error('response without content');
+        if (!choice?.message?.content) {
+          throw new LLMRequestError('provider response has no content', {
+            code: 'invalid_response',
+            retryable: true,
+          });
+        }
         this.usage.prompt += data.usage?.prompt_tokens || 0;
         this.usage.completion += data.usage?.completion_tokens || 0;
         this.usage.calls++;
-        if (choice.finish_reason === 'length') throw new Error('response truncated at the output limit');
+        if (choice.finish_reason === 'length') {
+          throw new LLMRequestError('response truncated at the output limit', {
+            code: 'truncated',
+            retryable: true,
+          });
+        }
         return choice.message.content.trim();
       } catch (error) {
-        lastError = error;
-        if (/fatal provider status/.test(error.message)) throw error;
-        await new Promise((resolve) => setTimeout(resolve, 1500 * (attempt + 1)));
+        const failure =
+          error instanceof LLMRequestError
+            ? error
+            : errorFromNetwork(error, {timeoutMs: this.config.timeoutMs});
+        lastError = failure;
+        if (!failure.retryable) throw failure;
+        if (attempt < retries) {
+          await new Promise((resolve) => setTimeout(resolve, 1500 * (attempt + 1)));
+        }
       }
     }
     throw lastError;

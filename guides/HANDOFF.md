@@ -67,7 +67,7 @@
 |---|---|
 | `config/mirror.yml` | `schema`、`source`、`sync`、`assets`、`site`、`translation` |
 | `config/upstream.yml` | `schema`、`root`、`report_dir`、`fetch`、`structure`、`sections` |
-| `config/translation.yml` | `schema`、`provider`、`model`、`api_key_env`、`base_url`、`session_header`、`glossary`、`max_retries`、`temperature`、`segmentation`、`link_text_similarity`、`preserve`、`frontmatter_keys`、`translatable_frontmatter`、`preserve_overlays` |
+| `config/translation.yml` | `schema`、`provider`、`model`、`glossary`、`temperature`、`segmentation`、`link_text_similarity`、`preserve`、`frontmatter_keys`、`translatable_frontmatter`、`preserve_overlays`（连接配置从 `LLM_*` 读取，见 `guides/LLM.md`） |
 | `config/translation-rules.yml` | `schema`、`rules` |
 | `config/known-translations.yml` | `schema`、`zh-Hans` |
 | `config/cli-labels.yml` | `schema`、`headers`、`compare_versions` |
