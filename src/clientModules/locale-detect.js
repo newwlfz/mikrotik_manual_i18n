@@ -1,5 +1,8 @@
 /**
- * Send a first-time visitor whose browser prefers Chinese to the zh-Hans tree.
+ * Send a first-time visitor whose browser prefers Chinese to the Chinese site
+ * that matches the browser's variant (`zh-TW` -> Traditional, `zh-CN` ->
+ * Simplified; the table lives in `tools/content/locales.js` and arrives as a
+ * `<meta>` tag, so this module has no opinion of its own).
  *
  * Docusaurus localizes under `baseUrl + locale + path` (for a GitHub Pages
  * project site: `/mikrotik_manual_i18n/zh-Hans/docs/...`). The old code
@@ -22,8 +25,9 @@
  *   - no explicit choice (cookie or localStorage);
  *   - no automatic-detection marker (else the user already saw the result and
  *     deliberately navigated back to an English page);
- *   - the primary language (`navigator.languages[0]`, falling back to
- *     `navigator.language`) starts with `zh`;
+ *   - the preferred language (`navigator.languages[0]`, falling back to
+ *     `navigator.language`) maps to a **registered** Chinese locale;
+ *   - that locale is not the one this site builds;
  *   - the current path is inside `baseUrl` and outside `baseUrl + /zh-Hans`.
  *
  * The marker is written *before* `location.replace`, so the redirected page
@@ -235,35 +239,71 @@ function hasAutoMarker() {
  * Record that automatic detection ran. Deliberately **not** `docusaurus_locale`:
  * that key means "the user picked this", and only the dropdown may set it.
  */
-function writeAutoMarker() {
+function writeAutoMarker(locale) {
+  const tag = String(locale || 'zh');
   try {
-    document.cookie = `${AUTO_COOKIE_NAME}=zh-Hans; Path=/; Max-Age=${COOKIE_MAX_AGE}; SameSite=Lax`;
+    document.cookie = `${AUTO_COOKIE_NAME}=${tag}; Path=/; Max-Age=${COOKIE_MAX_AGE}; SameSite=Lax`;
   } catch {
     // Cookies can be disabled; the redirect still works for this page view.
   }
   try {
-    window.localStorage.setItem(AUTO_COOKIE_NAME, 'zh-Hans');
+    window.localStorage.setItem(AUTO_COOKIE_NAME, tag);
   } catch {
     // localStorage can be unavailable (private mode); the cookie is enough.
   }
 }
 
 /**
- * 只看**首选**语言：`<head>` 里的同步跳转脚本（`docusaurus.config.ts` 的
- * `localeRedirectScript`）就是这么判的。若这里用 `.some()`，脚本判定「不跳」
- * 之后本模块还会把页面拉去中文，形成「英文先绘制、随后又跳」的闪烁——正是
- * 用户 #20 报的问题。两边共用同一规则，站内二次检测只会补位、不会打架。
+ * 浏览器首选语言（`navigator.languages[0]`）。`<head>` 脚本、落地页与这里
+ * 都只看首选语言：若这里用 `.some()`，脚本判定「不跳」之后本模块还会把页面
+ * 拉去中文，形成「英文先绘制、随后又跳」的闪烁。共用同一规则，站内二次检测
+ * 只会补位、不会打架。
  */
-function prefersChinese() {
+function preferredLanguage() {
+  if (typeof navigator === 'undefined') return '';
   const languages =
     Array.isArray(navigator.languages) && navigator.languages.length
       ? navigator.languages
       : [navigator.language];
-  const first = languages.filter(Boolean)[0];
-  return String(first || '').toLowerCase().startsWith('zh');
+  return String(languages.filter(Boolean)[0] || '');
 }
 
-const LOCALE_SEGMENTS = new Set(['zh-Hans']);
+/**
+ * 浏览器语言 → 目标语种。规则表与站点地址都由构建期注入（`<meta
+ * name="docusaurus-zh-rules">` / `<meta name="docusaurus-locale-homes">`），
+ * 与 `tools/content/locales.js`、`<head>` 脚本同源；这里只实现查表与
+ * 「未注册 / 就是本站 → 不跳」的判定，不为任何站点写死目标。
+ *
+ * 导出给 `tools/verify/zh-redirect.test.mjs` 直接测。
+ *
+ * @param {string} language 首选语言（`navigator.languages[0]`）
+ * @param {Record<string, string>} rules 小写标签/子标签 → 语种或 `default`
+ * @param {Record<string, string>} homes 语种 → 绝对基址（不含尾斜杠）
+ * @param {string | null} defaultZh 裸 `zh` 的默认中文语种
+ * @param {string | null} siteLocale 本次构建的语种
+ * @returns {string | null}
+ */
+export function pickTargetLocale(language, rules, homes, defaultZh, siteLocale) {
+  const tag = String(language || '')
+    .trim()
+    .toLowerCase()
+    .replace(/_/g, '-');
+  if (!tag || !rules || !homes) return null;
+  const parts = tag.split('-').filter(Boolean);
+  if (parts[0] !== 'zh') return null;
+  let mapped = rules[tag];
+  if (!mapped) {
+    for (let i = 1; i < parts.length && !mapped; i += 1) mapped = rules[parts[i]];
+  }
+  if (!mapped && parts.length === 1) mapped = rules.zh;
+  if (!mapped) return null;
+  const target = mapped === 'default' ? defaultZh : mapped;
+  if (!target || !homes[target]) return null;
+  if (siteLocale && siteLocale === target) return null;
+  return target;
+}
+
+const LOCALE_SEGMENTS = new Set(['zh-Hans', 'zh-Hant']);
 
 /**
  * Resolve the deployment `baseUrl`, most reliable source first.
@@ -379,21 +419,56 @@ function baseUrlFromBundledAssets() {
   return null;
 }
 
-/**
- * Absolute base of the Chinese site, from
- * `<meta name="docusaurus-zh-home">` (injected at build time by
- * `docusaurus.config.ts` from `LOCALE_ZH_URL` + `LOCALE_ZH_BASE_URL`).
- *
- * The Chinese mirror is another repository and another Pages site; this
- * deployment has no `zh-Hans/` tree to send readers to. Returns `null` when the
- * meta is missing or not an absolute URL, and the caller then never redirects.
- */
-function detectZhHome() {
+/** Read a JSON `<meta>` injected at build time; `null` when absent/invalid. */
+function readMetaJson(name) {
   if (typeof document === 'undefined') return null;
+  const meta = document.querySelector(`meta[name="${name}"]`);
+  const value = meta?.getAttribute('content')?.trim();
+  if (!value) return null;
+  try {
+    const parsed = JSON.parse(value);
+    return parsed && typeof parsed === 'object' ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Absolute base of every locale site, from
+ * `<meta name="docusaurus-locale-homes">` (injected by `docusaurus.config.ts`
+ * from `locales.json`). Each language is a **separate** Pages deployment, so
+ * the destination cannot be derived from this site's `baseUrl`.
+ *
+ * Falls back to `<meta name="docusaurus-zh-home">` for builds that predate the
+ * map, so an old artifact still redirects somewhere sensible.
+ */
+function detectLocaleHomes() {
+  const homes = readMetaJson('docusaurus-locale-homes');
+  if (homes) {
+    const absolute = {};
+    for (const [locale, home] of Object.entries(homes)) {
+      const value = String(home || '').trim().replace(/\/+$/, '');
+      if (/^https?:\/\//i.test(value)) absolute[locale] = value;
+    }
+    return absolute;
+  }
+  if (typeof document === 'undefined') return {};
   const meta = document.querySelector('meta[name="docusaurus-zh-home"]');
   const value = meta?.getAttribute('content')?.trim();
-  if (!value || !/^https?:\/\//i.test(value)) return null;
-  return value.replace(/\/+$/, '');
+  if (!value || !/^https?:\/\//i.test(value)) return {};
+  return {'zh-Hans': value.replace(/\/+$/, '')};
+}
+
+/** Browser-language rules injected by the build (`tools/content/locales.js`). */
+function detectZhRules() {
+  const rules = readMetaJson('docusaurus-zh-rules');
+  return rules || null;
+}
+
+/** The registry's default Chinese locale (`<meta name="docusaurus-site-locale">` neighbours). */
+function detectDefaultZh(homes) {
+  if (homes['zh-Hans']) return 'zh-Hans';
+  return Object.keys(homes).find((locale) => locale.startsWith('zh')) || null;
 }
 
 /**
@@ -429,7 +504,7 @@ function run() {
   // detection ran (so a later English page is not silently redirected back),
   // but never claim it was a user choice.
   if (alreadyChinese) {
-    if (!explicitLocale() && !hasAutoMarker()) writeAutoMarker();
+    if (!explicitLocale() && !hasAutoMarker()) writeAutoMarker(siteLocale);
     markSettled();
     return;
   }
@@ -459,17 +534,27 @@ function run() {
     markSettled();
     return;
   }
-  if (!prefersChinese()) {
+  // 浏览器语言 → 目标语种（`zh-TW` → 繁体站、`zh-CN` → 简体站）。未注册、
+  // 或目标就是本站时不跳：繁体浏览器绝不能被送去简体站，反之亦然。
+  const homes = detectLocaleHomes();
+  const rules = detectZhRules();
+  const targetLocale = pickTargetLocale(
+    preferredLanguage(),
+    rules,
+    homes,
+    detectDefaultZh(homes),
+    siteLocale,
+  );
+  if (!targetLocale) {
     markSettled();
     return;
   }
 
-  // Cross-repo entry: keep the same path on the Chinese site (another Pages
-  // deployment). Without a declared Chinese site there is nothing safe to jump
-  // to, so the English page stays put instead of 404ing on `${baseUrl}zh-Hans/`.
-  const zhHome = detectZhHome();
+  // Cross-repo entry: keep the same path on the target site (another Pages
+  // deployment). Without a declared home there is nothing safe to jump to, so
+  // the English page stays put instead of 404ing on a guessed path.
   const {relative} = relativeSitePath(pathname, baseUrl);
-  const target = zhHome ? zhRedirectTarget(zhHome, relative) : null;
+  const target = zhRedirectTarget(homes[targetLocale], relative);
   if (!target) {
     markSettled();
     return;
@@ -480,7 +565,7 @@ function run() {
   // and the unload.
   redirected = true;
   // Write the marker first, then replace: the destination page sees it.
-  writeAutoMarker();
+  writeAutoMarker(targetLocale);
   markRedirecting();
   window.location.replace(`${target}${search}${hash}`);
 }

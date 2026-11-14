@@ -5,13 +5,25 @@
       "label": "English",
       "repo": "newwlfz/mikrotik_manual_i18n",
       "baseUrl": "/mikrotik_manual_i18n/",
-      "site": "https://newwlfz.github.io/mikrotik_manual_i18n/"
+      "site": "https://newwlfz.github.io/mikrotik_manual_i18n/",
+      "siteTitle": "RouterOS Manual",
+      "tagline": "MikroTik RouterOS documentation, hardware guides, news and CLI reference"
     },
     "zh-Hans": {
       "label": "简体中文",
       "repo": "newwlfz/mikrotik_manual_zh_hans",
       "baseUrl": "/mikrotik_manual_zh_hans/",
-      "site": "https://newwlfz.github.io/mikrotik_manual_zh_hans/"
+      "site": "https://newwlfz.github.io/mikrotik_manual_zh_hans/",
+      "siteTitle": "RouterOS 手册",
+      "tagline": "MikroTik RouterOS 文档、硬件指南、产品新闻与 CLI 参考"
+    },
+    "zh-Hant": {
+      "label": "繁體中文",
+      "repo": "newwlfz/mikrotik_manual_zh_hant",
+      "baseUrl": "/mikrotik_manual_zh_hant/",
+      "site": "https://newwlfz.github.io/mikrotik_manual_zh_hant/",
+      "siteTitle": "RouterOS 手冊",
+      "tagline": "MikroTik RouterOS 文件、硬體指南、產品新聞與 CLI 參考"
     }
   }
 }

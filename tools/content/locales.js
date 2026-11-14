@@ -203,8 +203,179 @@ function validateRegistry(registry) {
     if (entry.htmlLang !== undefined && typeof entry.htmlLang !== 'string') {
       errors.push(`${where}.htmlLang must be a string when set`);
     }
+    for (const key of ['siteTitle', 'tagline']) {
+      if (entry[key] !== undefined && (typeof entry[key] !== 'string' || !entry[key].trim())) {
+        errors.push(`${where}.${key} must be a non-empty string when set`);
+      }
+    }
   }
   return errors;
+}
+
+/**
+ * Which Chinese variant a browser language prefers.
+ *
+ * The table is the **only** place the mapping lives: the `<head>` redirect
+ * script, the client-side module and the landing page all receive it as data
+ * (a `<meta>` tag), so no site hardcodes "the Chinese site" any more. A tag that
+ * is not listed here does not redirect at all; `zh` alone (no region, no
+ * script) means "the registry's default Chinese locale", which is `zh-Hans`
+ * while it exists.
+ *
+ * Keys are lower-case BCP-47 tags or bare script/region subtags (`hant`, `tw`).
+ */
+const ZH_VARIANT_TARGETS = {
+  zh: 'default',
+  hant: 'zh-Hant',
+  hans: 'zh-Hans',
+  tw: 'zh-Hant',
+  hk: 'zh-Hant',
+  mo: 'zh-Hant',
+  cn: 'zh-Hans',
+  sg: 'zh-Hans',
+  my: 'zh-Hans',
+};
+
+/** Chinese locales the registry declares, in registry order. */
+function declaredChineseLocales(registry) {
+  const declared = (registry && registry.locales) || {};
+  return Object.keys(declared).filter((locale) => locale.toLowerCase().startsWith('zh'));
+}
+
+/** The locale a bare `zh` resolves to: `zh-Hans` if registered, else the first Chinese locale. */
+function defaultChineseLocale(registry) {
+  const zh = declaredChineseLocales(registry);
+  return zh.find((locale) => locale === 'zh-Hans') || zh[0] || null;
+}
+
+/**
+ * Target locale for one browser language tag, or `null` when it must not move.
+ *
+ * `zh-TW`/`zh-HK`/`zh-MO`/`zh-Hant*` -> `zh-Hant`; `zh-CN`/`zh-SG`/`zh-Hans*` ->
+ * `zh-Hans`; bare `zh` -> the registry's default Chinese locale; anything else
+ * -> `null`. A target that is not declared in `locales.json` is also `null`:
+ * redirecting to a site that is not registered would be a 404.
+ */
+function targetLocaleForLanguage(language, registry) {
+  const tag = String(language || '')
+    .trim()
+    .toLowerCase()
+    .replace(/_/g, '-');
+  if (!tag) return null;
+  const parts = tag.split('-').filter(Boolean);
+  if (parts[0] !== 'zh') return null;
+  const declared = (registry && registry.locales) || {};
+  // Full tag first (`zh-hant-tw`), then the script/region subtag (`hant`, `tw`),
+  // then the bare `zh` default.
+  const mapped =
+    ZH_VARIANT_TARGETS[tag] ||
+    parts.slice(1).map((part) => ZH_VARIANT_TARGETS[part]).find(Boolean) ||
+    (parts.length === 1 ? ZH_VARIANT_TARGETS.zh : null);
+  if (!mapped) return null;
+  const target = mapped === 'default' ? defaultChineseLocale(registry) : mapped;
+  return target && declared[target] ? target : null;
+}
+
+/**
+ * Target locale for one browser's language list.
+ *
+ * Only the **preferred** language (`navigator.languages[0]`) decides: the
+ * `<head>` script, the client module and the landing page all read the same
+ * list and must reach the same answer, and a "some later language is Chinese"
+ * rule would move a mostly-English reader.
+ */
+function pickRedirectLocale(registry, languages) {
+  const list = Array.isArray(languages) ? languages : [languages];
+  const preferred = list.filter(Boolean)[0];
+  return targetLocaleForLanguage(preferred, registry);
+}
+
+/**
+ * The redirect rules, as the plain object the browser-side code receives.
+ * Exported so the `<head>` script, the `<meta>` tag and the tests cannot drift.
+ */
+function zhVariantTargets() {
+  return {...ZH_VARIANT_TARGETS};
+}
+
+/**
+ * The `<head>` redirect script, as source text.
+ *
+ * It runs before React so a Chinese reader never sees the English page flash;
+ * everything it needs (rules, homes, this build's locale) is inlined at build
+ * time, so the same script is correct on the English site and on either
+ * Chinese site — the mapping decides, not the repository.
+ *
+ * Contract (mirrored by `src/clientModules/locale-detect.js`, which is the
+ * fallback for builds that predate this script):
+ *   - the user's explicit choice wins, then the auto marker;
+ *   - only the preferred browser language is mapped (`zh-TW` -> `zh-Hant`,
+ *     `zh-CN` -> `zh-Hans`, bare `zh` -> the registry's default Chinese locale);
+ *   - a target that is this very site, or a target without a home, does not
+ *     redirect (it only marks the locale settled);
+ *   - the marker is written *before* `location.replace`, so the destination
+ *     cannot bounce back.
+ *
+ * @param {{base: string, currentLocale: string, homes: Record<string,string>,
+ *          rules: Record<string,string>, defaultZh: string|null,
+ *          cookies: {explicit: string, auto: string, maxAge: number}}} options
+ * @returns {string} JavaScript for a `<script>` tag
+ */
+function localeRedirectScript({base, currentLocale, homes, rules, defaultZh, cookies}) {
+  return `(function(){
+var win=typeof window!=='undefined'?window:null;
+function settled(){
+  if(!win||win.__LOCALE_REDIRECTING__===true||win.__LOCALE_SETTLED__===true)return;
+  win.__LOCALE_SETTLED__=true;
+  try{win.dispatchEvent(new Event('locale-settled'))}catch(e){}
+}
+function redirecting(){
+  if(!win||win.__LOCALE_REDIRECTING__===true)return;
+  win.__LOCALE_REDIRECTING__=true;
+  try{win.dispatchEvent(new Event('locale-redirecting'))}catch(e){}
+}
+try{
+var base=${JSON.stringify(base)};
+var CURRENT=${JSON.stringify(currentLocale)};
+var RULES=${JSON.stringify(rules)};
+var HOMES=${JSON.stringify(homes)};
+var DEFAULT_ZH=${JSON.stringify(defaultZh || null)};
+var EXPLICIT=${JSON.stringify(cookies.explicit)};
+var AUTO=${JSON.stringify(cookies.auto)};
+var MAX_AGE=${JSON.stringify(cookies.maxAge)};
+var m=document.cookie.match(/(?:^|;\\s*)${cookies.explicit}=([^;]*)/);
+if(m&&m[1]){settled();return}
+try{if(window.localStorage&&window.localStorage.getItem(EXPLICIT)){settled();return}}catch(e){}
+if(document.cookie.match(/(?:^|;\\s*)${cookies.auto}=([^;]*)/)){settled();return}
+try{if(window.localStorage&&window.localStorage.getItem(AUTO)){settled();return}}catch(e){}
+function targetFor(tag){
+  tag=String(tag||'').toLowerCase().replace(/_/g,'-');
+  if(!tag)return null;
+  var parts=tag.split('-');
+  if(parts[0]!=='zh')return null;
+  var mapped=RULES[tag];
+  if(!mapped){for(var i=1;i<parts.length;i++){if(RULES[parts[i]]){mapped=RULES[parts[i]];break}}}
+  if(!mapped&&parts.length===1)mapped=RULES.zh;
+  if(!mapped)return null;
+  if(mapped==='default')mapped=DEFAULT_ZH;
+  if(!mapped||!HOMES[mapped])return null;
+  return mapped;
+}
+var langs=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||''];
+var target=null;
+for(var i=0;i<langs.length;i++){target=targetFor(langs[i]);if(target)break}
+if(!target){settled();return}
+if(target===CURRENT){settled();return}
+var p=location.pathname||'/';
+if(p.indexOf(base)!==0){settled();return}
+var rest=p.slice(base.length-1);
+if(rest==='/404.html'){settled();return}
+var home=HOMES[target];
+try{if(window.localStorage)window.localStorage.setItem(AUTO,target)}catch(e){}
+document.cookie=AUTO+'='+target+'; Path=/; Max-Age='+MAX_AGE+'; SameSite=Lax';
+redirecting();
+location.replace(home+rest+location.search+location.hash);
+}catch(e){}})();`;
 }
 
 /**
@@ -273,7 +444,8 @@ function resolveSites(registry, options = {}) {
   // The first Chinese locale is the target of the head-script redirect. It is
   // `zh-Hans` today; deriving it keeps the redirect working if the tag gains a
   // script or region subtag.
-  const zhLocale = Object.keys(declared).find((locale) => locale.toLowerCase().startsWith('zh'));
+  const zhLocale = defaultChineseLocale(registry);
+  const currentEntry = declared[siteLocale] || {};
 
   return {
     defaultLocale,
@@ -282,7 +454,16 @@ function resolveSites(registry, options = {}) {
     baseUrl,
     localeConfigs,
     homes,
+    // Deprecated: the first Chinese site. Kept for the "cross-site entry"
+    // links that predate `homes`; the redirect no longer uses it (see
+    // `pickRedirectLocale`), because "first Chinese locale" sent zh-TW
+    // browsers to the Simplified site.
     zhHome: zhLocale ? homes[zhLocale] : null,
+    defaultZh: zhLocale || null,
+    // Site identity is locale data, not a literal in `docusaurus.config.ts`:
+    // the hub pushes this registry to every language repository.
+    title: typeof currentEntry.siteTitle === 'string' ? currentEntry.siteTitle : null,
+    tagline: typeof currentEntry.tagline === 'string' ? currentEntry.tagline : null,
     defaultHome: homes[defaultLocale],
   };
 }
@@ -297,4 +478,9 @@ module.exports = {
   siteOrigin,
   localeEnvPrefix,
   resolveSites,
+  targetLocaleForLanguage,
+  pickRedirectLocale,
+  zhVariantTargets,
+  localeRedirectScript,
+  defaultChineseLocale,
 };

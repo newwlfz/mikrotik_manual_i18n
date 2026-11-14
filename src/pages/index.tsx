@@ -23,7 +23,6 @@ import {markLocaleRedirecting, markLocaleSettled} from '../lib/locale-signal';
  */
 
 const COOKIE_NAME = 'docusaurus_locale';
-const CHINESE_LOCALE = 'zh-Hans';
 const DOCS_ENTRY = 'docs/introduction/';
 
 type Copy = {
@@ -32,7 +31,7 @@ type Copy = {
   link: string;
 };
 
-const COPY: Record<'en' | 'zh-Hans', Copy> = {
+const COPY: Record<'en' | 'zh-Hans' | 'zh-Hant', Copy> = {
   en: {
     heading: 'RouterOS Manual',
     body: 'Opening the documentation introduction. If the page does not move on its own, follow the link below.',
@@ -42,6 +41,11 @@ const COPY: Record<'en' | 'zh-Hans', Copy> = {
     heading: 'RouterOS 手册',
     body: '正在打开文档简介页。如果没有自动跳转，请点下面的链接。',
     link: '前往简介',
+  },
+  'zh-Hant': {
+    heading: 'RouterOS 手冊',
+    body: '正在開啟文件簡介頁。如果沒有自動跳轉，請點下面的連結。',
+    link: '前往簡介',
   },
 };
 
@@ -79,33 +83,7 @@ function readCookie(name: string): string | null {
   }
 }
 
-/**
- * 只看**首选**语言（`navigator.languages[0]`），与 `<head>` 里注入的同步脚本
- * （`docusaurus.config.ts` 的 `localeRedirectScript`）判定完全一致：脚本决定
- * 「不跳」时这里也不跳，避免脚本先渲染英文、水合后又跳中文的二次闪烁。
- */
-function prefersChinese(): boolean {
-  if (typeof navigator === 'undefined') return false;
-  const languages =
-    Array.isArray(navigator.languages) && navigator.languages.length
-      ? navigator.languages
-      : [navigator.language];
-  const first = languages.filter(Boolean)[0];
-  return String(first || '').toLowerCase().startsWith('zh');
-}
-
-/**
- * 目标 locale 的判断顺序（与 `<head>` 脚本、locale-detect 一致）：
- *   1. 显式选择 `docusaurus_locale`（cookie，其次 localStorage）——只有语言
- *      下拉会写它；`en` 也是有效选择，必须尊重；
- *   2. 当前页面本身的 locale（`/zh-Hans/` 根路径）优先；
- *   3. 浏览器首选语言（`navigator.languages[0]`）；
- *   4. 以上都没有 → 默认英文。
- *
- * `docusaurus_locale_auto` 只是自动跳转的“已处理”标记，不是偏好，这里不读它：
- * 站点根 `/` 本来就是入口，按浏览器语言送一次是预期行为；手选过的用户由
- * 第 1 条保护。
- */
+/** 显式选择（语言下拉写入 localStorage；cookie 由 `readCookie` 读）。 */
 function readStoredLocale(): string | null {
   try {
     const value = window.localStorage.getItem(COOKIE_NAME);
@@ -115,24 +93,71 @@ function readStoredLocale(): string | null {
   }
 }
 
-function targetIsChinese(currentLocale: string): boolean {
-  const explicit = readCookie(COOKIE_NAME) || readStoredLocale();
-  if (explicit) return explicit.toLowerCase().startsWith('zh');
-  if (currentLocale === CHINESE_LOCALE) return true;
-  return prefersChinese();
+/** 首选语言；与 `<head>` 脚本、locale-detect 都只看这一项。 */
+function preferredLanguage(): string {
+  if (typeof navigator === 'undefined') return '';
+  const languages =
+    Array.isArray(navigator.languages) && navigator.languages.length
+      ? navigator.languages
+      : [navigator.language];
+  return String(languages.filter(Boolean)[0] || '');
 }
 
 /**
- * 中文站的绝对基址（不含尾斜杠），由 `docusaurus.config.ts` 的
- * `docusaurusBaseUrlMeta` 插件按 `LOCALE_ZH_URL` + `LOCALE_ZH_BASE_URL` 注入。
- * 中文站是**另一个仓库/另一个 Pages 站点**，本产物里没有 `/zh-Hans/` 目录。
+ * 目标语种：显式选择优先，其次浏览器首选语言；规则表与站点地址来自构建期
+ * 注入的 `<meta>`（与 `<head>` 脚本、locale-detect 同源）。
  */
-function readZhHome(): string | null {
+function pickTarget(): string | null {
+  const explicit = readCookie(COOKIE_NAME) || readStoredLocale();
+  const rules = readJsonMeta('docusaurus-zh-rules');
+  const homes = readLocaleHomes();
+  if (!rules || !homes) return null;
+  const languages = explicit ? [explicit] : [preferredLanguage()];
+  const tag = String(languages[0] || '')
+    .trim()
+    .toLowerCase()
+    .replace(/_/g, '-');
+  if (!tag || !tag.startsWith('zh')) return explicit ? explicit : null;
+  let mapped = rules[tag];
+  if (!mapped) {
+    const parts = tag.split('-').filter(Boolean);
+    for (let i = 1; i < parts.length && !mapped; i += 1) mapped = rules[parts[i]];
+  }
+  if (!mapped && tag === 'zh') mapped = rules.zh;
+  if (!mapped) return null;
+  const defaultZh = homes['zh-Hans']
+    ? 'zh-Hans'
+    : Object.keys(homes).find((locale) => locale.startsWith('zh')) || null;
+  const target = mapped === 'default' ? defaultZh : mapped;
+  return target && homes[target] ? target : null;
+}
+
+/** 构建期注入的 JSON `<meta>`；取不到时返回 `null`。 */
+function readJsonMeta(name: string): Record<string, string> | null {
   if (typeof document === 'undefined') return null;
-  const meta = document.querySelector('meta[name="docusaurus-zh-home"]');
+  const meta = document.querySelector(`meta[name="${name}"]`);
   const value = meta?.getAttribute('content')?.trim();
-  if (!value || !/^https?:\/\//i.test(value)) return null;
-  return value.replace(/\/+$/, '');
+  if (!value) return null;
+  try {
+    const parsed = JSON.parse(value);
+    return parsed && typeof parsed === 'object' ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
+/** 语种 → 绝对基址（不含尾斜杠），来自 `<meta name="docusaurus-locale-homes">`。 */
+function readLocaleHomes(): Record<string, string> {
+  const homes = readJsonMeta('docusaurus-locale-homes');
+  if (!homes) return {};
+  const absolute: Record<string, string> = {};
+  for (const [locale, home] of Object.entries(homes)) {
+    const value = String(home || '')
+      .trim()
+      .replace(/\/+$/, '');
+    if (/^https?:\/\//i.test(value)) absolute[locale] = value;
+  }
+  return absolute;
 }
 
 function readSiteLocale(): string | null {
@@ -141,29 +166,30 @@ function readSiteLocale(): string | null {
   return meta?.getAttribute('content')?.trim() || null;
 }
 
-function targetPath(currentLocale: string): string {
+function targetPath(): string {
   const baseUrl = readBaseUrl();
   // 中文站自己：落地页永远进本站文档，不做跨仓跳转。只有英文站才按浏览器
-  // 语言把读者送去中文站（与 locale-detect / <head> 脚本一致）。
+  // 语言把读者送去对应语种的中文站（与 locale-detect / <head> 脚本一致）。
   const siteLocale = readSiteLocale();
   if (siteLocale && siteLocale !== 'en') return `${baseUrl}${DOCS_ENTRY}`;
-  if (targetIsChinese(currentLocale)) {
-    const zhHome = readZhHome();
-    // 跨仓入口：落到中文站自己的文档入口，而不是英文站里不存在的子目录。
-    if (zhHome) return `${zhHome}/${DOCS_ENTRY}`;
-    return `${baseUrl}${DOCS_ENTRY}`;
-  }
+  const target = pickTarget();
+  const homes = readLocaleHomes();
+  // 跨仓入口：落到目标语种站自己的文档入口，而不是英文站里不存在的子目录。
+  if (target && homes[target]) return `${homes[target]}/${DOCS_ENTRY}`;
   return `${baseUrl}${DOCS_ENTRY}`;
 }
 
 export default function Home(): ReactNode {
   const {i18n} = useDocusaurusContext();
   const currentLocale = i18n.currentLocale;
-  const copy = COPY[currentLocale === CHINESE_LOCALE ? CHINESE_LOCALE : 'en'];
+  const copyKey = currentLocale.startsWith('zh')
+    ? (currentLocale === 'zh-Hant' ? 'zh-Hant' : 'zh-Hans')
+    : 'en';
+  const copy = COPY[copyKey];
 
   // `useEffect` 只在浏览器里跑：SSR 与预渲染完全不碰 `window`。
   useEffect(() => {
-    const target = targetPath(currentLocale);
+    const target = targetPath();
     const current = `${window.location.pathname}${window.location.search}${window.location.hash}`;
     // 已经在目标路径上就不要再 reload 一次（防循环）。
     if (current === target) {

@@ -40,6 +40,15 @@ const localeRegistryLib = require('./tools/content/locales.js') as {
     registry: LocaleRegistry,
     options: {env?: Record<string, string | undefined>; siteLocale?: string},
   ) => ResolvedSites;
+  zhVariantTargets: () => Record<string, string>;
+  localeRedirectScript: (options: {
+    base: string;
+    currentLocale: string;
+    homes: Record<string, string>;
+    rules: Record<string, string>;
+    defaultZh: string | null;
+    cookies: {explicit: string; auto: string; maxAge: number};
+  }) => string;
 };
 
 type LocaleRegistryEntry = {
@@ -59,6 +68,9 @@ type ResolvedSites = {
   localeConfigs: NonNullable<Config['i18n']>['localeConfigs'];
   homes: Record<string, string>;
   zhHome: string | null;
+  defaultZh: string | null;
+  title: string | null;
+  tagline: string | null;
   defaultHome: string;
 };
 
@@ -89,6 +101,13 @@ const localeConfigs = sites.localeConfigs;
 const defaultLocale = localeRegistry.default;
 const enHome = sites.defaultHome;
 const zhHome = sites.zhHome;
+const defaultZh = sites.defaultZh;
+const localeHomes = sites.homes;
+/**
+ * 浏览器语言 → 目标语种的映射表（`tools/content/locales.js` 里唯一一份），
+ * 原样内联进 `<head>` 脚本与 `<meta>`，浏览器侧不再有第二份规则。
+ */
+const zhVariantRules = localeRegistryLib.zhVariantTargets();
 
 /**
  * 本产物自己的资源根：**不带 locale** 的 baseUrl。
@@ -226,72 +245,6 @@ const LOCALE_COOKIE = 'docusaurus_locale';
 const AUTO_LOCALE_COOKIE = 'docusaurus_locale_auto';
 const LOCALE_COOKIE_MAX_AGE = 31536000;
 
-/**
- * 首屏语言切换：同步内联脚本，注入到 <head>（<meta name="docusaurus-base-url">
- * 之后）。浏览器解析到它时还没有绘制任何内容，中文用户不会先看到一帧英文。
- *
- * 判断顺序与 src/clientModules/locale-detect.js / src/pages/index.tsx 一致：
- *   1. 显式选择（`docusaurus_locale` cookie 或 localStorage）存在
- *      → 按用户选择，什么都不做；
- *   2. `docusaurus_locale_auto` 存在 → 自动判断已经跑过，不再自动跳转
- *      （避免每次访问英文页都被弹回中文）；
- *   3. 否则看 navigator.languages[0]（首选语言），以 zh 开头才继续；
- *   4. 当前路径必须在 baseUrl 下（同一个域名上的其它站点/陈旧路径不动）；
- *   5. 写 `docusaurus_locale_auto`（一年；**不写** `docusaurus_locale`）
- *      后再 location.replace，跳转后的页面看到标记就不会再跳，不会循环。
- *
- * 跳转目标是**中文站**（`LOCALE_ZH_URL` + `LOCALE_ZH_BASE_URL`，另一个
- * 仓库/另一个 Pages 站点）上同一路径；本仓库只构建 `en`，产物里没有
- * `build/zh-Hans/`，所以不能再像双语同仓时那样拼 `base + zh-Hans`。
- *
- * 两条结论都会在**首次绘制前**以全局标记 + 事件广播出去（与
- * `src/lib/locale-signal.ts` 的约定一致）：
- *   - 命中跳转 → `window.__LOCALE_REDIRECTING__ = true`，再 `location.replace`。
- *     `ConsentGate` 挂载时看到它就不渲染，于是英文页不会先弹一次版权框；
- *   - 任一条件不满足（不跳）→ `window.__LOCALE_SETTLED__ = true` 并派发
- *     `locale-settled`，版权框据此正常展示。事件只是加速：脚本早于 React，
- *     标记才是事实来源。
- *
- * baseUrl 与中文站基址在构建期内联进字符串（JSON.stringify），运行时不再猜。
- * 脚本被禁用时 src/pages/index.tsx 的 useEffect 仍然兜底。
- */
-function localeRedirectScript(base: string, zh: string): string {
-  return `(function(){
-var win=typeof window!=='undefined'?window:null;
-function settled(){
-  if(!win||win.__LOCALE_REDIRECTING__===true||win.__LOCALE_SETTLED__===true)return;
-  win.__LOCALE_SETTLED__=true;
-  try{win.dispatchEvent(new Event('locale-settled'))}catch(e){}
-}
-function redirecting(){
-  if(!win||win.__LOCALE_REDIRECTING__===true)return;
-  win.__LOCALE_REDIRECTING__=true;
-  try{win.dispatchEvent(new Event('locale-redirecting'))}catch(e){}
-}
-try{
-var base=${JSON.stringify(base)};
-var zh=${JSON.stringify(zh)};
-var EXPLICIT=${JSON.stringify(LOCALE_COOKIE)};
-var AUTO=${JSON.stringify(AUTO_LOCALE_COOKIE)};
-var m=document.cookie.match(/(?:^|;\\s*)${LOCALE_COOKIE}=([^;]*)/);
-if(m&&m[1]){settled();return}
-try{if(window.localStorage&&window.localStorage.getItem(EXPLICIT)){settled();return}}catch(e){}
-if(document.cookie.match(/(?:^|;\\s*)${AUTO_LOCALE_COOKIE}=([^;]*)/)){settled();return}
-try{if(window.localStorage&&window.localStorage.getItem(AUTO)){settled();return}}catch(e){}
-var langs=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||''];
-var first=String(langs[0]||'').toLowerCase();
-if(first.indexOf('zh')!==0){settled();return}
-var p=location.pathname||'/';
-if(p.indexOf(base)!==0){settled();return}
-var rest=p.slice(base.length-1);
-if(rest==='/404.html'){settled();return}
-if(!zh){settled();return}
-try{if(window.localStorage)window.localStorage.setItem(AUTO,'zh-Hans')}catch(e){}
-document.cookie=AUTO+'=zh-Hans; Path=/; Max-Age=${LOCALE_COOKIE_MAX_AGE}; SameSite=Lax';
-redirecting();
-location.replace(zh+rest+location.search+location.hash);
-}catch(e){}})();`;
-}
 
 /**
  * 代码块语言归一表（config/code-fence-languages.yml）是唯一事实源：
@@ -400,15 +353,43 @@ function docusaurusBaseUrlMeta(): Plugin {
             content: enHome,
           },
         },
+        // 每个语种站点的绝对基址（不含尾斜杠）。`<head>` 脚本、客户端模块与
+        // 落地页据此把读者送到**映射结果**对应的站点，而不是「第一个中文站」。
+        {
+          tagName: 'meta',
+          attributes: {
+            name: 'docusaurus-locale-homes',
+            content: JSON.stringify(localeHomes),
+          },
+        },
+        // 浏览器语言 → 目标语种的规则表，与 `<head>` 脚本内联的那份是同一份数据。
+        {
+          tagName: 'meta',
+          attributes: {
+            name: 'docusaurus-zh-rules',
+            content: JSON.stringify(zhVariantRules),
+          },
+        },
         // 首屏自动跳转只属于默认语种（英文站）：中文站已经是目标语种，再
         // 「跳中文」就是自己跳自己。`SITE_LOCALE` 与 `locales.json` 在构建期
         // 决定是否注入这段脚本。
-        ...(siteLocale === defaultLocale && zhHome
+        ...(siteLocale === defaultLocale && defaultZh
           ? [
               {
                 tagName: 'script',
                 attributes: {},
-                innerHTML: localeRedirectScript(content, zhHome),
+                innerHTML: localeRegistryLib.localeRedirectScript({
+                  base: content,
+                  currentLocale: siteLocale,
+                  homes: localeHomes,
+                  rules: zhVariantRules,
+                  defaultZh,
+                  cookies: {
+                    explicit: LOCALE_COOKIE,
+                    auto: AUTO_LOCALE_COOKIE,
+                    maxAge: LOCALE_COOKIE_MAX_AGE,
+                  },
+                }),
               },
             ]
           : []),
@@ -421,11 +402,10 @@ function docusaurusBaseUrlMeta(): Plugin {
  * 站点标题/副标题也跟随构建语种：同一份配置在中文仓构建时不应输出英文
  * 标题（`<title>`、`og:site_name`、导航栏品牌文字的来源）。
  */
-const siteTitle = siteLocale === 'zh-Hans' ? 'RouterOS 手册' : 'RouterOS Manual';
+const siteTitle = sites.title || 'RouterOS Manual';
 const siteTagline =
-  siteLocale === 'zh-Hans'
-    ? 'MikroTik RouterOS 文档、硬件指南、产品新闻与 CLI 参考'
-    : 'MikroTik RouterOS documentation, hardware guides, news and CLI reference';
+  sites.tagline ||
+  'MikroTik RouterOS documentation, hardware guides, news and CLI reference';
 
 const config: Config = {
   title: siteTitle,

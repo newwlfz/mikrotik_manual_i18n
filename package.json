@@ -74,6 +74,7 @@
     "verify:ui": "node tools/verify/browser-check.mjs",
     "verify:llm": "node tools/translate/verify-llm.mjs",
     "test:locale": "node tools/verify/locale-path.test.mjs",
+    "test:redirect": "node --test tools/verify/zh-redirect.test.mjs",
     "verify:tables": "node tools/verify/table-coverage.mjs",
     "verify:tables:check": "node tools/verify/table-coverage.mjs --check",
     "verify:labels": "node tools/verify/labels.mjs",
