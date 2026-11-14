@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/smb/users.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/smb/users.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/smb/users",
+  "md_sha256": "8fde542d1b114e7a2774812f200786c913ce39ec8a30c43ad79b56ca09d7794b",
+  "html_sha256": "3128ca75a1e0f2817a50f41c453b81e08e0a4211abb593f569dca2602762c3d1",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

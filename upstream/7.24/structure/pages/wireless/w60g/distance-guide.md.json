@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "wireless/w60g/distance-guide.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/wireless/w60g/distance-guide.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/wireless/w60g/distance-guide",
+  "md_sha256": "79f2271e3b4e97ae2fbb13f29f528fe2129ca7c9254f53fb4e3d9f1276b6d677",
+  "html_sha256": "b3aeac3aae857a9059816d50cba3537100a86f2b23bccec77e24fdc9cfe3d16a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 14,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

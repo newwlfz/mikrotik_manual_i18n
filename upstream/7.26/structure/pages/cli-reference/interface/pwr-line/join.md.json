@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/pwr-line/join.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/pwr-line/join.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/pwr-line/join",
+  "md_sha256": "51cfd001b03ce4b3269efa30644dae259831cf8dab6c136135bf485daa58dbe9",
+  "html_sha256": "24caf72ea5443f15b3ac37f1a60c0b53a022422476e41d89b7777354dc95fdee",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

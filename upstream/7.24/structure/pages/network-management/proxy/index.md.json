@@ -1,0 +1,152 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "network-management/proxy/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/network-management/proxy.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/network-management/proxy/",
+  "md_sha256": "ba0fda630e2e50e4d03d3f4570abb2d433a2634975abbb668983b2ac8a0e3b90",
+  "html_sha256": "ee573490ddc9ceba1d9e96a2f744ad6a6dce90103ee45473694556790f75392f",
+  "body": {
+    "html": {
+      "lists": 8,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 11,
+      "sup": 0,
+      "code": 18,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 26,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 11,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 26,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 11,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 17,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Specifies the action to perform on matched packets:<ul class=\"bullets\"><li>allow - always resolves matched requests directly bypassing the parent proxy</li><li>deny - resolves matched requests through the parent proxy. If none is specified this has the same effect as <strong>allow</strong>.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Specifies the action to perform on matched packets:<ul class=\"bullets\"><li>allow - cache objects from matched request</li><li>deny - do not cache objects from matched request</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Connection state:<ul class=\"bullets\"><li>closing - the data transfer is finished, and the connection is being finalized</li><li>connecting - establishing the connection</li><li>converting - replacing header and footer fields in response or request packet</li><li>hotspot - check if hotspot authentication allows continuing (for hotspot proxy)</li><li>idle - staying idle</li><li>resolving - resolving the server's DNS name</li><li>rx-header - receiving HTTP header</li><li>tx-body - transmitting HTTP body to the client</li><li>tx-eof - writing chunk-end (when converting to chunked response)</li><li>tx-header - transmitting HTTP header to the client</li><li>waiting - waiting for transmission from a peer</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 9,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 10,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

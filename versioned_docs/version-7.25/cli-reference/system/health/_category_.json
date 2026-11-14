@@ -1,0 +1,11 @@
+{
+  "position": 9,
+  "label": "Health",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/health/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/health"
+}

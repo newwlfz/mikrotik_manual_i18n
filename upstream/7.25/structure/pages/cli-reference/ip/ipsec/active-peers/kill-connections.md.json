@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/ipsec/active-peers/kill-connections.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/ipsec/active-peers/kill-connections.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/ipsec/active-peers/kill-connections",
+  "md_sha256": "7415eea860873e9ac02414f9d7df7e7a3e811a28b5055c40a0bdaeb6e141ebf5",
+  "html_sha256": "88342a8ce4c6e4f969687123cc7bc9d6b85d93fa24f37db4af756ef5e20961e3",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

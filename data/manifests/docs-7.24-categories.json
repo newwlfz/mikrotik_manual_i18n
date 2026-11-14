@@ -1,0 +1,2345 @@
+{
+  "version": "7.24",
+  "categories": {
+    "Getting Started": {
+      "label": "Getting Started",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "getting-started/index"
+      },
+      "items": 10,
+      "order": 1
+    },
+    "Getting Started/Networking Fundamentals": {
+      "label": "Networking Fundamentals",
+      "parent": "Getting Started",
+      "link": {
+        "type": "doc",
+        "id": "getting-started/networking-fundamentals/index"
+      },
+      "items": 0,
+      "order": 2
+    },
+    "Getting Started/Installation and Upgrade": {
+      "label": "Installation and Upgrade",
+      "parent": "Getting Started",
+      "link": {
+        "type": "doc",
+        "id": "getting-started/installation-and-upgrade/index"
+      },
+      "items": 6,
+      "order": 3
+    },
+    "Getting Started/Installation and Upgrade/Install": {
+      "label": "Install",
+      "parent": "Getting Started/Installation and Upgrade",
+      "link": {
+        "type": "doc",
+        "id": "getting-started/installation-and-upgrade/install/chr-installation/index"
+      },
+      "items": 1,
+      "order": 4
+    },
+    "Getting Started/Installation and Upgrade/Netinstall": {
+      "label": "Netinstall",
+      "parent": "Getting Started/Installation and Upgrade",
+      "link": {
+        "type": "doc",
+        "id": "getting-started/installation-and-upgrade/netinstall/index"
+      },
+      "items": 3,
+      "order": 5
+    },
+    "Getting Started/Configuration Management": {
+      "label": "Configuration Management",
+      "parent": "Getting Started",
+      "link": {
+        "type": "doc",
+        "id": "getting-started/configuration-management/index"
+      },
+      "items": 5,
+      "order": 6
+    },
+    "Getting Started/RouterOS Licensing": {
+      "label": "RouterOS Licensing",
+      "parent": "Getting Started",
+      "link": {
+        "type": "doc",
+        "id": "getting-started/routeros-licensing/index"
+      },
+      "items": 3,
+      "order": 7
+    },
+    "Getting Started/RouterOS Licensing/Cloud Hosted Router, CHR": {
+      "label": "Cloud Hosted Router, CHR",
+      "parent": "Getting Started/RouterOS Licensing",
+      "link": {
+        "type": "doc",
+        "id": "getting-started/routeros-licensing/chr/index"
+      },
+      "items": 1,
+      "order": 8
+    },
+    "Getting Started/Software Specifications": {
+      "label": "Software Specifications",
+      "parent": "Getting Started",
+      "link": {
+        "type": "doc",
+        "id": "getting-started/software-specifications/index"
+      },
+      "items": 1,
+      "order": 9
+    },
+    "Management Tools": {
+      "label": "Management Tools",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "management-tools/index"
+      },
+      "items": 13,
+      "order": 10
+    },
+    "System Information and Utilities": {
+      "label": "System Information and Utilities",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "system-information-and-utilities/index"
+      },
+      "items": 18,
+      "order": 11
+    },
+    "Diagnostics and Monitoring": {
+      "label": "Diagnostics and Monitoring",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "diagnostics-monitoring-and-troubleshooting/index"
+      },
+      "items": 22,
+      "order": 12
+    },
+    "Diagnostics and Monitoring/Logs": {
+      "label": "Logs",
+      "parent": "Diagnostics and Monitoring",
+      "link": {
+        "type": "doc",
+        "id": "diagnostics-monitoring-and-troubleshooting/log/index"
+      },
+      "items": 2,
+      "order": 13
+    },
+    "Diagnostics and Monitoring/Traffic Flow": {
+      "label": "Traffic Flow",
+      "parent": "Diagnostics and Monitoring",
+      "link": {
+        "type": "doc",
+        "id": "diagnostics-monitoring-and-troubleshooting/traffic-flow/index"
+      },
+      "items": 1,
+      "order": 14
+    },
+    "Hardware": {
+      "label": "Hardware",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "hardware/index"
+      },
+      "items": 13,
+      "order": 15
+    },
+    "Hardware/Disks": {
+      "label": "Disks",
+      "parent": "Hardware",
+      "link": {
+        "type": "doc",
+        "id": "hardware/disks/index"
+      },
+      "items": 0,
+      "order": 16
+    },
+    "Wired Connections": {
+      "label": "Wired Connections",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "wired-connections/index"
+      },
+      "items": 3,
+      "order": 17
+    },
+    "Wireless": {
+      "label": "Wireless",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "wireless/index"
+      },
+      "items": 5,
+      "order": 18
+    },
+    "Wireless/Wi-Fi 6 / 7 (802.11ax/be)": {
+      "label": "Wi-Fi 6 / 7 (802.11ax/be)",
+      "parent": "Wireless",
+      "link": {
+        "type": "doc",
+        "id": "wireless/wifi/index"
+      },
+      "items": 5,
+      "order": 19
+    },
+    "Wireless/802.11 a/b/g/n": {
+      "label": "802.11 a/b/g/n",
+      "parent": "Wireless",
+      "link": {
+        "type": "doc",
+        "id": "wireless/abgn/index"
+      },
+      "items": 8,
+      "order": 20
+    },
+    "Wireless/802.11 a/b/g/n/CAPsMAN": {
+      "label": "CAPsMAN",
+      "parent": "Wireless/802.11 a/b/g/n",
+      "link": {
+        "type": "doc",
+        "id": "wireless/abgn/capsman/index"
+      },
+      "items": 2,
+      "order": 21
+    },
+    "Wireless/60 GHz (W60G)": {
+      "label": "60 GHz (W60G)",
+      "parent": "Wireless",
+      "link": {
+        "type": "doc",
+        "id": "wireless/w60g/index"
+      },
+      "items": 6,
+      "order": 22
+    },
+    "Wireless/User Guides": {
+      "label": "User Guides",
+      "parent": "Wireless",
+      "link": {
+        "type": "doc",
+        "id": "wireless/user-guides/index"
+      },
+      "items": 2,
+      "order": 23
+    },
+    "Mobile Networking": {
+      "label": "Mobile Networking",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "mobile-networking/index"
+      },
+      "items": 6,
+      "order": 24
+    },
+    "Mobile Networking/GPS": {
+      "label": "GPS",
+      "parent": "Mobile Networking",
+      "link": {
+        "type": "doc",
+        "id": "mobile-networking/gps/index"
+      },
+      "items": 2,
+      "order": 25
+    },
+    "Mobile Networking/User Guides": {
+      "label": "User Guides",
+      "parent": "Mobile Networking",
+      "link": {
+        "type": "doc",
+        "id": "mobile-networking/bg77-modem-at-commands/index"
+      },
+      "items": 1,
+      "order": 26
+    },
+    "Bridging and Switching": {
+      "label": "Bridging and Switching",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "bridging-and-switching/index"
+      },
+      "items": 11,
+      "order": 27
+    },
+    "Bridging and Switching/SwOS": {
+      "label": "SwOS",
+      "parent": "Bridging and Switching",
+      "link": {
+        "type": "doc",
+        "id": "bridging-and-switching/swos/index"
+      },
+      "items": 5,
+      "order": 28
+    },
+    "Bridging and Switching/User Guides": {
+      "label": "User Guides",
+      "parent": "Bridging and Switching",
+      "link": {
+        "type": "doc",
+        "id": "bridging-and-switching/user-guides/index"
+      },
+      "items": 10,
+      "order": 29
+    },
+    "Network Services": {
+      "label": "Network Services",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "network-management/index"
+      },
+      "items": 7,
+      "order": 30
+    },
+    "Network Services/Cloud": {
+      "label": "Cloud",
+      "parent": "Network Services",
+      "link": {
+        "type": "doc",
+        "id": "network-management/cloud/index"
+      },
+      "items": 3,
+      "order": 31
+    },
+    "Network Services/Proxy": {
+      "label": "Proxy",
+      "parent": "Network Services",
+      "link": {
+        "type": "doc",
+        "id": "network-management/proxy/index"
+      },
+      "items": 0,
+      "order": 32
+    },
+    "Network Services/SOCKS": {
+      "label": "SOCKS",
+      "parent": "Network Services",
+      "link": {
+        "type": "doc",
+        "id": "network-management/socks/index"
+      },
+      "items": 1,
+      "order": 33
+    },
+    "Routing and Networking Protocols": {
+      "label": "Routing and Networking Protocols",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "user-guides/routing-and-networking-protocols/index"
+      },
+      "items": 10,
+      "order": 34
+    },
+    "Routing and Networking Protocols/Unicast": {
+      "label": "Unicast",
+      "parent": "Routing and Networking Protocols",
+      "link": {
+        "type": "doc",
+        "id": "user-guides/routing-and-networking-protocols/unicast/index"
+      },
+      "items": 7,
+      "order": 35
+    },
+    "Routing and Networking Protocols/Unicast/BGP": {
+      "label": "BGP",
+      "parent": "Routing and Networking Protocols/Unicast",
+      "link": {
+        "type": "doc",
+        "id": "user-guides/routing-and-networking-protocols/unicast/bgp/index"
+      },
+      "items": 4,
+      "order": 36
+    },
+    "Routing and Networking Protocols/Unicast/OSPF": {
+      "label": "OSPF",
+      "parent": "Routing and Networking Protocols/Unicast",
+      "link": {
+        "type": "doc",
+        "id": "user-guides/routing-and-networking-protocols/unicast/ospf/index"
+      },
+      "items": 5,
+      "order": 37
+    },
+    "Routing and Networking Protocols/MPLS": {
+      "label": "MPLS",
+      "parent": "Routing and Networking Protocols",
+      "link": {
+        "type": "doc",
+        "id": "user-guides/routing-and-networking-protocols/mpls/index"
+      },
+      "items": 4,
+      "order": 38
+    },
+    "Routing and Networking Protocols/MPLS/VPLS": {
+      "label": "VPLS",
+      "parent": "Routing and Networking Protocols/MPLS",
+      "link": {
+        "type": "doc",
+        "id": "user-guides/routing-and-networking-protocols/mpls/vpls/index"
+      },
+      "items": 1,
+      "order": 39
+    },
+    "Routing and Networking Protocols/Multicast": {
+      "label": "Multicast",
+      "parent": "Routing and Networking Protocols",
+      "link": {
+        "type": "doc",
+        "id": "user-guides/routing-and-networking-protocols/multicast/index"
+      },
+      "items": 3,
+      "order": 40
+    },
+    "Firewall and Quality of Service": {
+      "label": "Firewall and Quality of Service",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "firewall-and-quality-of-service/index"
+      },
+      "items": 8,
+      "order": 41
+    },
+    "Firewall and Quality of Service/Firewall": {
+      "label": "Firewall",
+      "parent": "Firewall and Quality of Service",
+      "link": {
+        "type": "doc",
+        "id": "firewall-and-quality-of-service/firewall/index"
+      },
+      "items": 6,
+      "order": 42
+    },
+    "Firewall and Quality of Service/Queues": {
+      "label": "Queues",
+      "parent": "Firewall and Quality of Service",
+      "link": {
+        "type": "doc",
+        "id": "firewall-and-quality-of-service/queues/index"
+      },
+      "items": 5,
+      "order": 43
+    },
+    "Firewall and Quality of Service/Queues/Queue types": {
+      "label": "Queue types",
+      "parent": "Firewall and Quality of Service/Queues",
+      "link": {
+        "type": "doc",
+        "id": "firewall-and-quality-of-service/queues/queue-types/index"
+      },
+      "items": 2,
+      "order": 44
+    },
+    "Firewall and Quality of Service/User Guides": {
+      "label": "User Guides",
+      "parent": "Firewall and Quality of Service",
+      "link": {
+        "type": "doc",
+        "id": "firewall-and-quality-of-service/user-guides/index"
+      },
+      "items": 5,
+      "order": 45
+    },
+    "Virtual Private Networks": {
+      "label": "Virtual Private Networks",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "virtual-private-networks/index"
+      },
+      "items": 12,
+      "order": 46
+    },
+    "Virtual Private Networks/IPsec": {
+      "label": "IPsec",
+      "parent": "Virtual Private Networks",
+      "link": {
+        "type": "doc",
+        "id": "virtual-private-networks/ipsec/index"
+      },
+      "items": 2,
+      "order": 47
+    },
+    "Virtual Private Networks/L2TP": {
+      "label": "L2TP",
+      "parent": "Virtual Private Networks",
+      "link": {
+        "type": "doc",
+        "id": "virtual-private-networks/l2tp/index"
+      },
+      "items": 1,
+      "order": 48
+    },
+    "Virtual Private Networks/PPPoE": {
+      "label": "PPPoE",
+      "parent": "Virtual Private Networks",
+      "link": {
+        "type": "doc",
+        "id": "virtual-private-networks/pppoe/index"
+      },
+      "items": 2,
+      "order": 49
+    },
+    "AAA and User Management": {
+      "label": "AAA and User Management",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "authentication-authorization-accounting/index"
+      },
+      "items": 7,
+      "order": 50
+    },
+    "AAA and User Management/HotSpot - Captive portal": {
+      "label": "HotSpot - Captive portal",
+      "parent": "AAA and User Management",
+      "link": {
+        "type": "doc",
+        "id": "authentication-authorization-accounting/hotspot-captive-portal/index"
+      },
+      "items": 1,
+      "order": 51
+    },
+    "High Availability Solutions": {
+      "label": "High Availability Solutions",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "high-availability-solutions/index"
+      },
+      "items": 5,
+      "order": 52
+    },
+    "High Availability Solutions/Load Balancing": {
+      "label": "Load Balancing",
+      "parent": "High Availability Solutions",
+      "link": {
+        "type": "doc",
+        "id": "high-availability-solutions/load-balancing/index"
+      },
+      "items": 2,
+      "order": 53
+    },
+    "High Availability Solutions/User Guides": {
+      "label": "User Guides",
+      "parent": "High Availability Solutions",
+      "link": {
+        "type": "doc",
+        "id": "high-availability-solutions/user-guides/bonding-examples"
+      },
+      "items": 0,
+      "order": 54
+    },
+    "Internet of Things": {
+      "label": "Internet of Things",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "internet-of-things/index"
+      },
+      "items": 6,
+      "order": 55
+    },
+    "Internet of Things/Bluetooth": {
+      "label": "Bluetooth",
+      "parent": "Internet of Things",
+      "link": {
+        "type": "doc",
+        "id": "internet-of-things/bluetooth/index"
+      },
+      "items": 2,
+      "order": 56
+    },
+    "Internet of Things/Bluetooth/MikroTik Beacon Manager": {
+      "label": "MikroTik Beacon Manager",
+      "parent": "Internet of Things/Bluetooth",
+      "link": {
+        "type": "doc",
+        "id": "internet-of-things/bluetooth/mikrotik-beacon-manager/index"
+      },
+      "items": 4,
+      "order": 57
+    },
+    "Internet of Things/Bluetooth/User Guides": {
+      "label": "User Guides",
+      "parent": "Internet of Things/Bluetooth",
+      "link": {
+        "type": "doc",
+        "id": "internet-of-things/bluetooth/user-guides/bluetooth-tag-tracking-mqtt-thingsboard"
+      },
+      "items": 0,
+      "order": 58
+    },
+    "Internet of Things/GPIO": {
+      "label": "GPIO",
+      "parent": "Internet of Things",
+      "link": {
+        "type": "doc",
+        "id": "internet-of-things/gpio/index"
+      },
+      "items": 1,
+      "order": 59
+    },
+    "Internet of Things/Lora": {
+      "label": "Lora",
+      "parent": "Internet of Things",
+      "link": {
+        "type": "doc",
+        "id": "internet-of-things/lora/index"
+      },
+      "items": 2,
+      "order": 60
+    },
+    "Internet of Things/Lora/User Guides": {
+      "label": "User Guides",
+      "parent": "Internet of Things/Lora",
+      "link": {
+        "type": "doc",
+        "id": "internet-of-things/lora/user-guides/index"
+      },
+      "items": 5,
+      "order": 61
+    },
+    "Internet of Things/MQTT": {
+      "label": "MQTT",
+      "parent": "Internet of Things",
+      "link": {
+        "type": "doc",
+        "id": "internet-of-things/mqtt/index"
+      },
+      "items": 2,
+      "order": 62
+    },
+    "Storage": {
+      "label": "Storage",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "storage/index"
+      },
+      "items": 12,
+      "order": 63
+    },
+    "Storage/Btrfs": {
+      "label": "Btrfs",
+      "parent": "Storage",
+      "link": {
+        "type": "doc",
+        "id": "storage/btrfs/index"
+      },
+      "items": 3,
+      "order": 64
+    },
+    "Storage/RAID": {
+      "label": "RAID",
+      "parent": "Storage",
+      "link": {
+        "type": "doc",
+        "id": "storage/raid/index"
+      },
+      "items": 2,
+      "order": 65
+    },
+    "Containers": {
+      "label": "Containers",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "containers/index"
+      },
+      "items": 0,
+      "order": 66
+    },
+    "Developer Guides": {
+      "label": "Developer Guides",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "developer-guides/index"
+      },
+      "items": 3,
+      "order": 67
+    },
+    "Developer Guides/API": {
+      "label": "API",
+      "parent": "Developer Guides",
+      "link": {
+        "type": "doc",
+        "id": "developer-guides/api/index"
+      },
+      "items": 1,
+      "order": 68
+    },
+    "Developer Guides/Scripting": {
+      "label": "Scripting",
+      "parent": "Developer Guides",
+      "link": {
+        "type": "doc",
+        "id": "developer-guides/scripting/index"
+      },
+      "items": 2,
+      "order": 69
+    },
+    "CLI Reference": {
+      "label": "CLI Reference",
+      "parent": "",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/index"
+      },
+      "items": 41,
+      "order": 70
+    },
+    "CLI Reference/app": {
+      "label": "app",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/app/index"
+      },
+      "items": 7,
+      "order": 71
+    },
+    "CLI Reference/caps-man": {
+      "label": "caps-man",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/caps-man/aaa"
+      },
+      "items": 0,
+      "order": 72
+    },
+    "CLI Reference/certificate": {
+      "label": "certificate",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/certificate/index"
+      },
+      "items": 17,
+      "order": 73
+    },
+    "CLI Reference/certificate/crl": {
+      "label": "crl",
+      "parent": "CLI Reference/certificate",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/certificate/crl/index"
+      },
+      "items": 2,
+      "order": 74
+    },
+    "CLI Reference/certificate/scep-server": {
+      "label": "scep-server",
+      "parent": "CLI Reference/certificate",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/certificate/scep-server/index"
+      },
+      "items": 3,
+      "order": 75
+    },
+    "CLI Reference/certificate/scep-server/otp": {
+      "label": "otp",
+      "parent": "CLI Reference/certificate/scep-server",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/certificate/scep-server/otp/index"
+      },
+      "items": 1,
+      "order": 76
+    },
+    "CLI Reference/certificate/scep-server/ra": {
+      "label": "ra",
+      "parent": "CLI Reference/certificate/scep-server",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/certificate/scep-server/ra/index"
+      },
+      "items": 1,
+      "order": 77
+    },
+    "CLI Reference/certificate/scep-server/requests": {
+      "label": "requests",
+      "parent": "CLI Reference/certificate/scep-server",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/certificate/scep-server/requests/index"
+      },
+      "items": 1,
+      "order": 78
+    },
+    "CLI Reference/console": {
+      "label": "console",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/console/inspect"
+      },
+      "items": 0,
+      "order": 79
+    },
+    "CLI Reference/container": {
+      "label": "container",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/container/index"
+      },
+      "items": 12,
+      "order": 80
+    },
+    "CLI Reference/disk": {
+      "label": "disk",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/disk/index"
+      },
+      "items": 17,
+      "order": 81
+    },
+    "CLI Reference/disk/btrfs": {
+      "label": "btrfs",
+      "parent": "CLI Reference/disk",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/disk/btrfs/index"
+      },
+      "items": 3,
+      "order": 82
+    },
+    "CLI Reference/disk/btrfs/filesystem": {
+      "label": "filesystem",
+      "parent": "CLI Reference/disk/btrfs",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/disk/btrfs/filesystem/index"
+      },
+      "items": 9,
+      "order": 83
+    },
+    "CLI Reference/dude": {
+      "label": "dude",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/dude/index"
+      },
+      "items": 11,
+      "order": 84
+    },
+    "CLI Reference/dude/ros": {
+      "label": "ros",
+      "parent": "CLI Reference/dude",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/dude/ros/index"
+      },
+      "items": 11,
+      "order": 85
+    },
+    "CLI Reference/file": {
+      "label": "file",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/file/index"
+      },
+      "items": 6,
+      "order": 86
+    },
+    "CLI Reference/file/sync": {
+      "label": "sync",
+      "parent": "CLI Reference/file",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/file/sync/index"
+      },
+      "items": 1,
+      "order": 87
+    },
+    "CLI Reference/interface": {
+      "label": "interface",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/index"
+      },
+      "items": 43,
+      "order": 88
+    },
+    "CLI Reference/interface/bonding": {
+      "label": "bonding",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/bonding/index"
+      },
+      "items": 2,
+      "order": 89
+    },
+    "CLI Reference/interface/bridge": {
+      "label": "bridge",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/bridge/index"
+      },
+      "items": 11,
+      "order": 90
+    },
+    "CLI Reference/interface/bridge/calea": {
+      "label": "calea",
+      "parent": "CLI Reference/interface/bridge",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/bridge/calea/index"
+      },
+      "items": 2,
+      "order": 91
+    },
+    "CLI Reference/interface/bridge/filter": {
+      "label": "filter",
+      "parent": "CLI Reference/interface/bridge",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/bridge/filter/index"
+      },
+      "items": 2,
+      "order": 92
+    },
+    "CLI Reference/interface/bridge/msrp": {
+      "label": "msrp",
+      "parent": "CLI Reference/interface/bridge",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/bridge/msrp/index"
+      },
+      "items": 2,
+      "order": 93
+    },
+    "CLI Reference/interface/bridge/msrp/domain": {
+      "label": "domain",
+      "parent": "CLI Reference/interface/bridge/msrp",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/bridge/msrp/domain/index"
+      },
+      "items": 2,
+      "order": 94
+    },
+    "CLI Reference/interface/bridge/msti": {
+      "label": "msti",
+      "parent": "CLI Reference/interface/bridge",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/bridge/msti/index"
+      },
+      "items": 1,
+      "order": 95
+    },
+    "CLI Reference/interface/bridge/nat": {
+      "label": "nat",
+      "parent": "CLI Reference/interface/bridge",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/bridge/nat/index"
+      },
+      "items": 2,
+      "order": 96
+    },
+    "CLI Reference/interface/bridge/port": {
+      "label": "port",
+      "parent": "CLI Reference/interface/bridge",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/bridge/port/index"
+      },
+      "items": 2,
+      "order": 97
+    },
+    "CLI Reference/interface/bridge/port/mst-override": {
+      "label": "mst-override",
+      "parent": "CLI Reference/interface/bridge/port",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/bridge/port/mst-override/index"
+      },
+      "items": 1,
+      "order": 98
+    },
+    "CLI Reference/interface/bridge/vlan": {
+      "label": "vlan",
+      "parent": "CLI Reference/interface/bridge",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/bridge/vlan/index"
+      },
+      "items": 1,
+      "order": 99
+    },
+    "CLI Reference/interface/detect-internet": {
+      "label": "detect-internet",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/detect-internet/index"
+      },
+      "items": 1,
+      "order": 100
+    },
+    "CLI Reference/interface/dot1x": {
+      "label": "dot1x",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/dot1x/index"
+      },
+      "items": 2,
+      "order": 101
+    },
+    "CLI Reference/interface/dot1x/server": {
+      "label": "server",
+      "parent": "CLI Reference/interface/dot1x",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/dot1x/server/index"
+      },
+      "items": 2,
+      "order": 102
+    },
+    "CLI Reference/interface/ethernet": {
+      "label": "ethernet",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/ethernet/index"
+      },
+      "items": 7,
+      "order": 103
+    },
+    "CLI Reference/interface/ethernet/poe": {
+      "label": "poe",
+      "parent": "CLI Reference/interface/ethernet",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/ethernet/poe/index"
+      },
+      "items": 3,
+      "order": 104
+    },
+    "CLI Reference/interface/ethernet/switch": {
+      "label": "switch",
+      "parent": "CLI Reference/interface/ethernet",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/ethernet/switch/index"
+      },
+      "items": 27,
+      "order": 105
+    },
+    "CLI Reference/interface/ethernet/switch/acl": {
+      "label": "acl",
+      "parent": "CLI Reference/interface/ethernet/switch",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/ethernet/switch/acl/index"
+      },
+      "items": 1,
+      "order": 106
+    },
+    "CLI Reference/interface/ethernet/switch/l3hw-settings": {
+      "label": "l3hw-settings",
+      "parent": "CLI Reference/interface/ethernet/switch",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/ethernet/switch/l3hw-settings/index"
+      },
+      "items": 2,
+      "order": 107
+    },
+    "CLI Reference/interface/ethernet/switch/l3hw-settings/advanced": {
+      "label": "advanced",
+      "parent": "CLI Reference/interface/ethernet/switch/l3hw-settings",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/ethernet/switch/l3hw-settings/advanced/index"
+      },
+      "items": 1,
+      "order": 108
+    },
+    "CLI Reference/interface/ethernet/switch/port": {
+      "label": "port",
+      "parent": "CLI Reference/interface/ethernet/switch",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/ethernet/switch/port/index"
+      },
+      "items": 1,
+      "order": 109
+    },
+    "CLI Reference/interface/ethernet/switch/qos": {
+      "label": "qos",
+      "parent": "CLI Reference/interface/ethernet/switch",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/ethernet/switch/qos/index"
+      },
+      "items": 7,
+      "order": 110
+    },
+    "CLI Reference/interface/ethernet/switch/qos/map": {
+      "label": "map",
+      "parent": "CLI Reference/interface/ethernet/switch/qos",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/ethernet/switch/qos/map/index"
+      },
+      "items": 2,
+      "order": 111
+    },
+    "CLI Reference/interface/ethernet/switch/qos/port": {
+      "label": "port",
+      "parent": "CLI Reference/interface/ethernet/switch/qos",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/ethernet/switch/qos/port/index"
+      },
+      "items": 1,
+      "order": 112
+    },
+    "CLI Reference/interface/ethernet/switch/qos/tx-manager": {
+      "label": "tx-manager",
+      "parent": "CLI Reference/interface/ethernet/switch/qos",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/ethernet/switch/qos/tx-manager/index"
+      },
+      "items": 1,
+      "order": 113
+    },
+    "CLI Reference/interface/ethernet/switch/unicast-fdb": {
+      "label": "unicast-fdb",
+      "parent": "CLI Reference/interface/ethernet/switch",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/ethernet/switch/unicast-fdb/index"
+      },
+      "items": 1,
+      "order": 114
+    },
+    "CLI Reference/interface/l2tp-client": {
+      "label": "l2tp-client",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/l2tp-client/index"
+      },
+      "items": 1,
+      "order": 115
+    },
+    "CLI Reference/interface/l2tp-ether": {
+      "label": "l2tp-ether",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/l2tp-ether/index"
+      },
+      "items": 1,
+      "order": 116
+    },
+    "CLI Reference/interface/l2tp-server": {
+      "label": "l2tp-server",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/l2tp-server/index"
+      },
+      "items": 2,
+      "order": 117
+    },
+    "CLI Reference/interface/list": {
+      "label": "list",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/list/index"
+      },
+      "items": 1,
+      "order": 118
+    },
+    "CLI Reference/interface/lte": {
+      "label": "lte",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/lte/index"
+      },
+      "items": 9,
+      "order": 119
+    },
+    "CLI Reference/interface/lte/esim": {
+      "label": "esim",
+      "parent": "CLI Reference/interface/lte",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/lte/esim/index"
+      },
+      "items": 8,
+      "order": 120
+    },
+    "CLI Reference/interface/macsec": {
+      "label": "macsec",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/macsec/index"
+      },
+      "items": 2,
+      "order": 121
+    },
+    "CLI Reference/interface/mesh": {
+      "label": "mesh",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/mesh/index"
+      },
+      "items": 3,
+      "order": 122
+    },
+    "CLI Reference/interface/ovpn-client": {
+      "label": "ovpn-client",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/ovpn-client/index"
+      },
+      "items": 2,
+      "order": 123
+    },
+    "CLI Reference/interface/ovpn-server": {
+      "label": "ovpn-server",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/ovpn-server/index"
+      },
+      "items": 2,
+      "order": 124
+    },
+    "CLI Reference/interface/ovpn-server/server": {
+      "label": "server",
+      "parent": "CLI Reference/interface/ovpn-server",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/ovpn-server/server/index"
+      },
+      "items": 1,
+      "order": 125
+    },
+    "CLI Reference/interface/ppp-client": {
+      "label": "ppp-client",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/ppp-client/index"
+      },
+      "items": 5,
+      "order": 126
+    },
+    "CLI Reference/interface/ppp-server": {
+      "label": "ppp-server",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/ppp-server/index"
+      },
+      "items": 1,
+      "order": 127
+    },
+    "CLI Reference/interface/pppoe-client": {
+      "label": "pppoe-client",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/pppoe-client/index"
+      },
+      "items": 2,
+      "order": 128
+    },
+    "CLI Reference/interface/pppoe-server": {
+      "label": "pppoe-server",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/pppoe-server/index"
+      },
+      "items": 2,
+      "order": 129
+    },
+    "CLI Reference/interface/pptp-client": {
+      "label": "pptp-client",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/pptp-client/index"
+      },
+      "items": 1,
+      "order": 130
+    },
+    "CLI Reference/interface/pptp-server": {
+      "label": "pptp-server",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/pptp-server/index"
+      },
+      "items": 2,
+      "order": 131
+    },
+    "CLI Reference/interface/pwr-line": {
+      "label": "pwr-line",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/pwr-line/index"
+      },
+      "items": 8,
+      "order": 132
+    },
+    "CLI Reference/interface/sstp-client": {
+      "label": "sstp-client",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/sstp-client/index"
+      },
+      "items": 1,
+      "order": 133
+    },
+    "CLI Reference/interface/sstp-server": {
+      "label": "sstp-server",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/sstp-server/index"
+      },
+      "items": 2,
+      "order": 134
+    },
+    "CLI Reference/interface/vpls": {
+      "label": "vpls",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/vpls/index"
+      },
+      "items": 1,
+      "order": 135
+    },
+    "CLI Reference/interface/vxlan": {
+      "label": "vxlan",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/vxlan/index"
+      },
+      "items": 2,
+      "order": 136
+    },
+    "CLI Reference/interface/w60g": {
+      "label": "w60g",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/w60g/index"
+      },
+      "items": 5,
+      "order": 137
+    },
+    "CLI Reference/interface/w60g/station": {
+      "label": "station",
+      "parent": "CLI Reference/interface/w60g",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/w60g/station/index"
+      },
+      "items": 1,
+      "order": 138
+    },
+    "CLI Reference/interface/wifi": {
+      "label": "wifi",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/wifi/index"
+      },
+      "items": 27,
+      "order": 139
+    },
+    "CLI Reference/interface/wifi/capsman": {
+      "label": "capsman",
+      "parent": "CLI Reference/interface/wifi",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/wifi/capsman/index"
+      },
+      "items": 1,
+      "order": 140
+    },
+    "CLI Reference/interface/wifi/capsman/remote-cap": {
+      "label": "remote-cap",
+      "parent": "CLI Reference/interface/wifi/capsman",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/wifi/capsman/remote-cap/index"
+      },
+      "items": 3,
+      "order": 141
+    },
+    "CLI Reference/interface/wifi/network": {
+      "label": "network",
+      "parent": "CLI Reference/interface/wifi",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/wifi/network/index"
+      },
+      "items": 1,
+      "order": 142
+    },
+    "CLI Reference/interface/wifi/radio": {
+      "label": "radio",
+      "parent": "CLI Reference/interface/wifi",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/wifi/radio/index"
+      },
+      "items": 3,
+      "order": 143
+    },
+    "CLI Reference/interface/wifi/security": {
+      "label": "security",
+      "parent": "CLI Reference/interface/wifi",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/wifi/security/index"
+      },
+      "items": 1,
+      "order": 144
+    },
+    "CLI Reference/interface/wifi/steering": {
+      "label": "steering",
+      "parent": "CLI Reference/interface/wifi",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/wifi/steering/index"
+      },
+      "items": 1,
+      "order": 145
+    },
+    "CLI Reference/interface/wireguard": {
+      "label": "wireguard",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/wireguard/index"
+      },
+      "items": 3,
+      "order": 146
+    },
+    "CLI Reference/interface/wireguard/peers": {
+      "label": "peers",
+      "parent": "CLI Reference/interface/wireguard",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/wireguard/peers/index"
+      },
+      "items": 1,
+      "order": 147
+    },
+    "CLI Reference/interface/wireless": {
+      "label": "wireless",
+      "parent": "CLI Reference/interface",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/wireless/index"
+      },
+      "items": 24,
+      "order": 148
+    },
+    "CLI Reference/interface/wireless/align": {
+      "label": "align",
+      "parent": "CLI Reference/interface/wireless",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/wireless/align/index"
+      },
+      "items": 2,
+      "order": 149
+    },
+    "CLI Reference/interface/wireless/info": {
+      "label": "info",
+      "parent": "CLI Reference/interface/wireless",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/wireless/info/index"
+      },
+      "items": 6,
+      "order": 150
+    },
+    "CLI Reference/interface/wireless/nstreme-dual": {
+      "label": "nstreme-dual",
+      "parent": "CLI Reference/interface/wireless",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/wireless/nstreme-dual/index"
+      },
+      "items": 2,
+      "order": 151
+    },
+    "CLI Reference/interface/wireless/registration-table": {
+      "label": "registration-table",
+      "parent": "CLI Reference/interface/wireless",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/wireless/registration-table/index"
+      },
+      "items": 1,
+      "order": 152
+    },
+    "CLI Reference/interface/wireless/sniffer": {
+      "label": "sniffer",
+      "parent": "CLI Reference/interface/wireless",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/wireless/sniffer/index"
+      },
+      "items": 3,
+      "order": 153
+    },
+    "CLI Reference/interface/wireless/snooper": {
+      "label": "snooper",
+      "parent": "CLI Reference/interface/wireless",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/wireless/snooper/index"
+      },
+      "items": 2,
+      "order": 154
+    },
+    "CLI Reference/interface/wireless/wds": {
+      "label": "wds",
+      "parent": "CLI Reference/interface/wireless",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/interface/wireless/wds/index"
+      },
+      "items": 1,
+      "order": 155
+    },
+    "CLI Reference/iot": {
+      "label": "iot",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/iot/bluetooth/index"
+      },
+      "items": 5,
+      "order": 156
+    },
+    "CLI Reference/iot/gpio": {
+      "label": "gpio",
+      "parent": "CLI Reference/iot",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/iot/gpio/index"
+      },
+      "items": 2,
+      "order": 157
+    },
+    "CLI Reference/iot/lora": {
+      "label": "lora",
+      "parent": "CLI Reference/iot",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/iot/lora/index"
+      },
+      "items": 8,
+      "order": 158
+    },
+    "CLI Reference/iot/lora/servers": {
+      "label": "servers",
+      "parent": "CLI Reference/iot/lora",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/iot/lora/servers/index"
+      },
+      "items": 1,
+      "order": 159
+    },
+    "CLI Reference/iot/lora/traffic": {
+      "label": "traffic",
+      "parent": "CLI Reference/iot/lora",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/iot/lora/traffic/index"
+      },
+      "items": 2,
+      "order": 160
+    },
+    "CLI Reference/iot/modbus": {
+      "label": "modbus",
+      "parent": "CLI Reference/iot",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/iot/modbus/index"
+      },
+      "items": 3,
+      "order": 161
+    },
+    "CLI Reference/iot/mqtt": {
+      "label": "mqtt",
+      "parent": "CLI Reference/iot",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/iot/mqtt/index"
+      },
+      "items": 7,
+      "order": 162
+    },
+    "CLI Reference/iot/mqtt/subscriptions": {
+      "label": "subscriptions",
+      "parent": "CLI Reference/iot/mqtt",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/iot/mqtt/subscriptions/index"
+      },
+      "items": 2,
+      "order": 163
+    },
+    "CLI Reference/iot/mqtt/subscriptions/recv": {
+      "label": "recv",
+      "parent": "CLI Reference/iot/mqtt/subscriptions",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/iot/mqtt/subscriptions/recv/index"
+      },
+      "items": 1,
+      "order": 164
+    },
+    "CLI Reference/iot/wiliot": {
+      "label": "wiliot",
+      "parent": "CLI Reference/iot",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/iot/wiliot/index"
+      },
+      "items": 7,
+      "order": 165
+    },
+    "CLI Reference/iot/wiliot/bluetooth-traffic": {
+      "label": "bluetooth-traffic",
+      "parent": "CLI Reference/iot/wiliot",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/iot/wiliot/bluetooth-traffic/index"
+      },
+      "items": 1,
+      "order": 166
+    },
+    "CLI Reference/iot/wiliot/mqtt-traffic": {
+      "label": "mqtt-traffic",
+      "parent": "CLI Reference/iot/wiliot",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/iot/wiliot/mqtt-traffic/index"
+      },
+      "items": 1,
+      "order": 167
+    },
+    "CLI Reference/iot/wiliot/servers": {
+      "label": "servers",
+      "parent": "CLI Reference/iot/wiliot",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/iot/wiliot/servers/index"
+      },
+      "items": 1,
+      "order": 168
+    },
+    "CLI Reference/ip": {
+      "label": "ip",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/ip/address"
+      },
+      "items": 0,
+      "order": 169
+    },
+    "CLI Reference/ipv6": {
+      "label": "ipv6",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/ipv6/address"
+      },
+      "items": 0,
+      "order": 170
+    },
+    "CLI Reference/lcd": {
+      "label": "lcd",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/lcd/index"
+      },
+      "items": 7,
+      "order": 171
+    },
+    "CLI Reference/lcd/interface": {
+      "label": "interface",
+      "parent": "CLI Reference/lcd",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/lcd/interface/index"
+      },
+      "items": 3,
+      "order": 172
+    },
+    "CLI Reference/mpls": {
+      "label": "mpls",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/mpls/forwarding-table"
+      },
+      "items": 0,
+      "order": 173
+    },
+    "CLI Reference/openflow": {
+      "label": "openflow",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/openflow/index"
+      },
+      "items": 4,
+      "order": 174
+    },
+    "CLI Reference/partitions": {
+      "label": "partitions",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/partitions/index"
+      },
+      "items": 5,
+      "order": 175
+    },
+    "CLI Reference/port": {
+      "label": "port",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/port/index"
+      },
+      "items": 1,
+      "order": 176
+    },
+    "CLI Reference/ppp": {
+      "label": "ppp",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/ppp/aaa"
+      },
+      "items": 0,
+      "order": 177
+    },
+    "CLI Reference/queue": {
+      "label": "queue",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/queue/interface"
+      },
+      "items": 0,
+      "order": 178
+    },
+    "CLI Reference/radius": {
+      "label": "radius",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/radius/index"
+      },
+      "items": 3,
+      "order": 179
+    },
+    "CLI Reference/radius/incoming": {
+      "label": "incoming",
+      "parent": "CLI Reference/radius",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/radius/incoming/index"
+      },
+      "items": 2,
+      "order": 180
+    },
+    "CLI Reference/root": {
+      "label": "root",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/root/terminal"
+      },
+      "items": 0,
+      "order": 181
+    },
+    "CLI Reference/routing": {
+      "label": "routing",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/routing/bfd/authentication"
+      },
+      "items": 0,
+      "order": 182
+    },
+    "CLI Reference/snmp": {
+      "label": "snmp",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/snmp/index"
+      },
+      "items": 2,
+      "order": 183
+    },
+    "CLI Reference/system": {
+      "label": "system",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/backup/cloud/index"
+      },
+      "items": 35,
+      "order": 184
+    },
+    "CLI Reference/system/clock": {
+      "label": "clock",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/clock/index"
+      },
+      "items": 1,
+      "order": 185
+    },
+    "CLI Reference/system/console": {
+      "label": "console",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/console/index"
+      },
+      "items": 1,
+      "order": 186
+    },
+    "CLI Reference/system/default-configuration": {
+      "label": "default-configuration",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/default-configuration/index"
+      },
+      "items": 4,
+      "order": 187
+    },
+    "CLI Reference/system/device-mode": {
+      "label": "device-mode",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/device-mode/index"
+      },
+      "items": 1,
+      "order": 188
+    },
+    "CLI Reference/system/gps": {
+      "label": "gps",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/gps/index"
+      },
+      "items": 1,
+      "order": 189
+    },
+    "CLI Reference/system/health": {
+      "label": "health",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/health/index"
+      },
+      "items": 1,
+      "order": 190
+    },
+    "CLI Reference/system/health/settings": {
+      "label": "settings",
+      "parent": "CLI Reference/system/health",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/health/settings/index"
+      },
+      "items": 1,
+      "order": 191
+    },
+    "CLI Reference/system/keymat-provider": {
+      "label": "keymat-provider",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/keymat-provider/index"
+      },
+      "items": 3,
+      "order": 192
+    },
+    "CLI Reference/system/leds": {
+      "label": "leds",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/leds/index"
+      },
+      "items": 1,
+      "order": 193
+    },
+    "CLI Reference/system/license": {
+      "label": "license",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/license/index"
+      },
+      "items": 3,
+      "order": 194
+    },
+    "CLI Reference/system/logging": {
+      "label": "logging",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/logging/index"
+      },
+      "items": 1,
+      "order": 195
+    },
+    "CLI Reference/system/logging/action": {
+      "label": "action",
+      "parent": "CLI Reference/system/logging",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/logging/action/index"
+      },
+      "items": 1,
+      "order": 196
+    },
+    "CLI Reference/system/ntp": {
+      "label": "ntp",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/ntp/client/index"
+      },
+      "items": 3,
+      "order": 197
+    },
+    "CLI Reference/system/package": {
+      "label": "package",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/package/index"
+      },
+      "items": 8,
+      "order": 198
+    },
+    "CLI Reference/system/package/local-update": {
+      "label": "local-update",
+      "parent": "CLI Reference/system/package",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/package/local-update/index"
+      },
+      "items": 5,
+      "order": 199
+    },
+    "CLI Reference/system/package/local-update/mirror": {
+      "label": "mirror",
+      "parent": "CLI Reference/system/package/local-update",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/package/local-update/mirror/index"
+      },
+      "items": 1,
+      "order": 200
+    },
+    "CLI Reference/system/package/update": {
+      "label": "update",
+      "parent": "CLI Reference/system/package",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/package/update/index"
+      },
+      "items": 4,
+      "order": 201
+    },
+    "CLI Reference/system/ptp": {
+      "label": "ptp",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/ptp/index"
+      },
+      "items": 3,
+      "order": 202
+    },
+    "CLI Reference/system/resource": {
+      "label": "resource",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/resource/index"
+      },
+      "items": 4,
+      "order": 203
+    },
+    "CLI Reference/system/resource/hardware": {
+      "label": "hardware",
+      "parent": "CLI Reference/system/resource",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/resource/hardware/index"
+      },
+      "items": 3,
+      "order": 204
+    },
+    "CLI Reference/system/resource/irq": {
+      "label": "irq",
+      "parent": "CLI Reference/system/resource",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/resource/irq/index"
+      },
+      "items": 1,
+      "order": 205
+    },
+    "CLI Reference/system/routerboard": {
+      "label": "routerboard",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/routerboard/index"
+      },
+      "items": 6,
+      "order": 206
+    },
+    "CLI Reference/system/routerboard/usb": {
+      "label": "usb",
+      "parent": "CLI Reference/system/routerboard",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/routerboard/usb/index"
+      },
+      "items": 1,
+      "order": 207
+    },
+    "CLI Reference/system/rtrace": {
+      "label": "rtrace",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/rtrace/index"
+      },
+      "items": 2,
+      "order": 208
+    },
+    "CLI Reference/system/script": {
+      "label": "script",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/script/index"
+      },
+      "items": 2,
+      "order": 209
+    },
+    "CLI Reference/system/swos": {
+      "label": "swos",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/swos/index"
+      },
+      "items": 5,
+      "order": 210
+    },
+    "CLI Reference/system/ups": {
+      "label": "ups",
+      "parent": "CLI Reference/system",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/system/ups/index"
+      },
+      "items": 4,
+      "order": 211
+    },
+    "CLI Reference/task": {
+      "label": "task",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/task/index"
+      },
+      "items": 3,
+      "order": 212
+    },
+    "CLI Reference/tool": {
+      "label": "tool",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/tool/bandwidth-server/index"
+      },
+      "items": 26,
+      "order": 213
+    },
+    "CLI Reference/tool/e-mail": {
+      "label": "e-mail",
+      "parent": "CLI Reference/tool",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/tool/e-mail/index"
+      },
+      "items": 1,
+      "order": 214
+    },
+    "CLI Reference/tool/graphing": {
+      "label": "graphing",
+      "parent": "CLI Reference/tool",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/tool/graphing/index"
+      },
+      "items": 3,
+      "order": 215
+    },
+    "CLI Reference/tool/mac-server": {
+      "label": "mac-server",
+      "parent": "CLI Reference/tool",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/tool/mac-server/index"
+      },
+      "items": 3,
+      "order": 216
+    },
+    "CLI Reference/tool/romon": {
+      "label": "romon",
+      "parent": "CLI Reference/tool",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/tool/romon/index"
+      },
+      "items": 4,
+      "order": 217
+    },
+    "CLI Reference/tool/sms": {
+      "label": "sms",
+      "parent": "CLI Reference/tool",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/tool/sms/index"
+      },
+      "items": 2,
+      "order": 218
+    },
+    "CLI Reference/tool/sniffer": {
+      "label": "sniffer",
+      "parent": "CLI Reference/tool",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/tool/sniffer/index"
+      },
+      "items": 8,
+      "order": 219
+    },
+    "CLI Reference/tool/traffic-generator": {
+      "label": "traffic-generator",
+      "parent": "CLI Reference/tool",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/tool/traffic-generator/index"
+      },
+      "items": 10,
+      "order": 220
+    },
+    "CLI Reference/tool/traffic-generator/stats": {
+      "label": "stats",
+      "parent": "CLI Reference/tool/traffic-generator",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/tool/traffic-generator/stats/latency-distribution"
+      },
+      "items": 0,
+      "order": 221
+    },
+    "CLI Reference/tr069-client": {
+      "label": "tr069-client",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/tr069-client/index"
+      },
+      "items": 1,
+      "order": 222
+    },
+    "CLI Reference/user": {
+      "label": "user",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/user/index"
+      },
+      "items": 6,
+      "order": 223
+    },
+    "CLI Reference/user/ssh-keys": {
+      "label": "ssh-keys",
+      "parent": "CLI Reference/user",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/user/ssh-keys/index"
+      },
+      "items": 2,
+      "order": 224
+    },
+    "CLI Reference/user/ssh-keys/private": {
+      "label": "private",
+      "parent": "CLI Reference/user/ssh-keys",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/user/ssh-keys/private/index"
+      },
+      "items": 1,
+      "order": 225
+    },
+    "CLI Reference/user-manager": {
+      "label": "user-manager",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/user-manager/index"
+      },
+      "items": 13,
+      "order": 226
+    },
+    "CLI Reference/user-manager/database": {
+      "label": "database",
+      "parent": "CLI Reference/user-manager",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/user-manager/database/index"
+      },
+      "items": 4,
+      "order": 227
+    },
+    "CLI Reference/user-manager/router": {
+      "label": "router",
+      "parent": "CLI Reference/user-manager",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/user-manager/router/index"
+      },
+      "items": 2,
+      "order": 228
+    },
+    "CLI Reference/user-manager/session": {
+      "label": "session",
+      "parent": "CLI Reference/user-manager",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/user-manager/session/index"
+      },
+      "items": 1,
+      "order": 229
+    },
+    "CLI Reference/user-manager/user": {
+      "label": "user",
+      "parent": "CLI Reference/user-manager",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/user-manager/user/index"
+      },
+      "items": 4,
+      "order": 230
+    },
+    "CLI Reference/user-manager/user-profile": {
+      "label": "user-profile",
+      "parent": "CLI Reference/user-manager",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/user-manager/user-profile/index"
+      },
+      "items": 1,
+      "order": 231
+    },
+    "CLI Reference/zerotier": {
+      "label": "zerotier",
+      "parent": "CLI Reference",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/zerotier/index"
+      },
+      "items": 3,
+      "order": 232
+    },
+    "CLI Reference/zerotier/controller": {
+      "label": "controller",
+      "parent": "CLI Reference/zerotier",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/zerotier/controller/index"
+      },
+      "items": 1,
+      "order": 233
+    },
+    "CLI Reference/zerotier/peer": {
+      "label": "peer",
+      "parent": "CLI Reference/zerotier",
+      "link": {
+        "type": "doc",
+        "id": "cli-reference/zerotier/peer/index"
+      },
+      "items": 1,
+      "order": 234
+    }
+  }
+}

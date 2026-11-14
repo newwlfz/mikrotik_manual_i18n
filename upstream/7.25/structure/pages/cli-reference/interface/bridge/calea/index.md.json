@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/bridge/calea/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/calea.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/calea/",
+  "md_sha256": "8c3129a9fed75ed8585939720ed4fc533f06d9f0842187fdb7b968e3b3a0bbec",
+  "html_sha256": "e779415ed659996c31189b5e1d0e45ab55ff1a566ac7605be7b965e5355e4046",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

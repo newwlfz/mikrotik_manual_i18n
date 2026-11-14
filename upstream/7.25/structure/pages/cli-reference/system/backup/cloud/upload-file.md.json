@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/backup/cloud/upload-file.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/backup/cloud/upload-file.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/backup/cloud/upload-file",
+  "md_sha256": "b2767e49022cecf2fe5ea05914bff104f550dfc712fb3cebaff9108847f5f2b5",
+  "html_sha256": "50e9c15165c14b7254a0888aad0fc51ba1f8875b1fe9fe5f00f817b20163d536",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

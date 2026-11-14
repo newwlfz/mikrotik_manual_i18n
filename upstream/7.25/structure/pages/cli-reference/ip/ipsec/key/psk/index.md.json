@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/ipsec/key/psk/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/ipsec/key/psk.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/ipsec/key/psk/",
+  "md_sha256": "a6fce0aa73b0488fb1ffe4b55af82c94d9a4a70383737434a695cb946c01d1ea",
+  "html_sha256": "5dda0e1c47114abf00f455cdf6c5ede8a80997c54276185975924afaa13a7969",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

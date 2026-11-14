@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "management-tools/webfig.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/management-tools/webfig.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/management-tools/webfig",
+  "md_sha256": "508642567b09001a4600404c7840167b4f74713316add03c27c2256779093e8a",
+  "html_sha256": "7c7bfa28e54135465c29f016600db0274e7d68f794151432ebc2c72b104a28ae",
+  "body": {
+    "html": {
+      "lists": 7,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 30,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 26,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 26,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

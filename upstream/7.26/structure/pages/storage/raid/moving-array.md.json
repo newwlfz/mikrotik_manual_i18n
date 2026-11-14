@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "storage/raid/moving-array.md",
+  "source_url": "https://manual.mikrotik.com/docs/storage/raid/moving-array.md",
+  "html_url": "https://manual.mikrotik.com/docs/storage/raid/moving-array",
+  "md_sha256": "e9fefa7f389e3398969d8eabb33d0689618b27136b5127b71ebfe88440ec5508",
+  "html_sha256": "d3fdbadd149a51cc9c87dee5b5c6bcae8a915d040d3bc633127558d9e5535307",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/ethernet/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/monitor",
+  "md_sha256": "c453a3f4ebdd5264b9069f2e07678996f9fab4130121f531228e0f4aec312c0b",
+  "html_sha256": "37f013c613ed3b5f4531f737f20bfde9a94c57c145b0d8bd74f1fab9539e963d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

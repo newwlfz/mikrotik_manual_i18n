@@ -1,0 +1,84 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "network-management/dns.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/network-management/dns.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/network-management/dns",
+  "md_sha256": "0906aa52b9f429dbc74c92971fc1ee738cb1ff4731c06116d21fe05b6ab709db",
+  "html_sha256": "ccf7dab0254bce2422358eaf10e91c4f631a5759ed1130deabbda9455a9d8fcd",
+  "body": {
+    "html": {
+      "lists": 6,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 19,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 19,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 19,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 20,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 20,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Checks for updates for all lists, if updates are found, the list is updated, removing or adding entries as needed, the lists are not redownloaded in full when issuing a reload, instead only necessary updates are done. <br/><br/><strong>Important:</strong> It's not mandatory to use reload to update the lists, Adlist checks for new updates once every four hours. <br/><br/>"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

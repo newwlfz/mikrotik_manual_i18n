@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/ptp/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/ptp/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/ptp/monitor",
+  "md_sha256": "92a698bee8f2c85ee36521d43f71218d092e0629e002f35ac031beb38f38d73d",
+  "html_sha256": "95686c0d72943d0eac4b2d15ecf24eb25bacfca34188e320cc93cdd07cf69fde",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

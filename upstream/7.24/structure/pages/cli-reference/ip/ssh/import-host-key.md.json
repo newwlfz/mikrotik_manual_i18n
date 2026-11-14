@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/ssh/import-host-key.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/ssh/import-host-key.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/ssh/import-host-key",
+  "md_sha256": "c69fcb0bbf10747e0fadf73e720be26239a88b5b791759924fefe39e37413611",
+  "html_sha256": "609e38492ef0aa9eb874e841a77babdfc48138f8e974a16e963a6c846c533110",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "firewall-and-quality-of-service/firewall/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/firewall.md",
+  "html_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/firewall/",
+  "md_sha256": "076a3458107e3e14916bdf2cae1cab1babdd171f5b6a90e6d262506396cf9ca7",
+  "html_sha256": "2d341e74f25dfadb424585c8c146c8ff44afebca4ac03eff990bf00ac4edc2d6",
+  "body": {
+    "html": {
+      "lists": 8,
+      "listItems": 38,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 38,
+      "listItems": 38,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 38,
+      "listItems": 38,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

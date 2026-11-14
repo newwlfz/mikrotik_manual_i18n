@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "wireless/wifi/configuring-standalone-access-point.md",
+  "source_url": "https://manual.mikrotik.com/docs/wireless/wifi/configuring-standalone-access-point.md",
+  "html_url": "https://manual.mikrotik.com/docs/wireless/wifi/configuring-standalone-access-point",
+  "md_sha256": "54bfcbf90b872e328d9e1d3c21f72b81038ce5dd58bfbc9af383ca1b5aa6618a",
+  "html_sha256": "f59114a2c0b36d57762dda799f7bbc4fe24fffc83093152a7e3b536df1a965a7",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 16,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 33,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 16,
+      "listItems": 16,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 16,
+      "listItems": 16,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

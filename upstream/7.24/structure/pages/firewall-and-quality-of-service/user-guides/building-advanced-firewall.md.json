@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "firewall-and-quality-of-service/user-guides/building-advanced-firewall.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/user-guides/building-advanced-firewall.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/user-guides/building-advanced-firewall",
+  "md_sha256": "ad544687f147fb5d9106fd949c2ba4c18a4eaefbc6f155ddbbcd605bd8906fb9",
+  "html_sha256": "c746eca817139b676125d998cb04890ab96df30aa613fcda093a393b32d002d5",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 24,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 8,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 24,
+      "listItems": 24,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 24,
+      "listItems": 24,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,10 @@
+/**
+ * Copied from @docusaurus/theme-classic 3.10.1
+ * (theme/NavbarItem/LocaleDropdownNavbarItem/styles.module.css) because the
+ * swizzled component lives in this repository.
+ */
+
+.iconLanguage {
+  vertical-align: text-bottom;
+  margin-right: 5px;
+}

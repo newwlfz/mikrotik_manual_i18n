@@ -1,0 +1,285 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "developer-guides/scripting/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/developer-guides/scripting.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/developer-guides/scripting/",
+  "md_sha256": "bb992f6b5aa89c7239edcb0c6502de8b3acf54574bdb977a1b08765378e79ecd",
+  "html_sha256": "9f251f0bbb3c1b87e617b6cea29b17826cfd66e993d046f326bce64deee181fd",
+  "body": {
+    "html": {
+      "lists": 10,
+      "listItems": 28,
+      "br": 0,
+      "details": 0,
+      "tables": 13,
+      "sup": 0,
+      "code": 61,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 28,
+      "listItems": 28,
+      "br": 0,
+      "details": 0,
+      "tables": 13,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 28,
+      "listItems": 28,
+      "br": 0,
+      "details": 0,
+      "tables": 13,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 13,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 7,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 7,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 5,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 7,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 3,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 6,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "unaligned": {
+        "reason": "cell-count",
+        "row": 1,
+        "markdown": 2,
+        "html": 3
+      },
+      "rebuild": true,
+      "rebuild_rows": [
+        [
+          "<strong><code>[]</code></strong>",
+          "Command substitution can contain only a single command line`",
+          "<code>:put [&nbsp;:len \"my test string\"; ];</code>"
+        ],
+        [
+          "<strong><code>()</code></strong>",
+          "Subexpression or grouping operator.",
+          "<code>:put ( \"value is \" . (4+5));</code>"
+        ],
+        [
+          "<strong><code>$</code></strong>",
+          "Substitution operator.",
+          "<code>:global a 5;&nbsp;:put $a;</code>"
+        ],
+        [
+          "<strong><code>~</code></strong>",
+          "The binary operator that matches value against POSIX extended regular expression.",
+          "Print all routes whose gateway ends with 202: <code>/ip/route/print where gateway~\"^[0-9 \\\\.]*202\\$\"</code>"
+        ],
+        [
+          "<strong><code>-&gt;</code></strong>",
+          "Get an array element by key.",
+          "<br/><code>[admin@x86] &gt;:global aaa &#123;a=1;b=2&#125;</code><br/><code>[admin@x86] &gt;&nbsp;:put ($aaa-&gt;\"a\")</code><br/><code>1</code><br/><code>[admin@x86] &gt;&nbsp;:put ($aaa-&gt;\"b\")</code><br/><code>2</code><br/>"
+        ]
+      ]
+    },
+    {
+      "index": 8,
+      "rows": 44,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 7,
+          "col": 2,
+          "html": "Converts specified value from one format to another. By default uses an automatically parsed value, if the <code>from</code> format is not specified (for example, \"001\" becomes \"1\", \"10.1\" becomes \"10.0.0.1\", etc.). <ul><li><strong><code>from</code></strong> - Specifies the format of the value: <em>base32, base64, bit-array-lsb, bit-array-msb, byte-array, hex, num, raw, url</em>. </li><li><strong><code>to</code></strong> - Specifies the format of the output value: <em>base32, base64, bit-array-lsb, bit-array-msb, byte-array, hex, num, raw, url</em>. </li><li><strong><code>transform</code></strong> - Specifies how to transform values: <em>lc (transforms value to be in lowercases), uc (uppercases), lcfirst (first value to lowercase), ucfirst (first value to uppercase), crlf, ed25519-private-to-x25519-private, none, rot 13, x25519-private-to-x25519-public, ed25519-private-to-ed25519-public, ed25519-public-to-x25519-public, md5, reverse (reverses text), sha512.</em></li></ul>"
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "html": "<code>:put [:convert 001 to=hex ]</code><br/><code>31</code><br/><code>:put [:convert [/ip dhcp-client/option/get hostname raw-value] from=hex to=raw ]</code><br/><code>MikroTik</code><br/><code>:put [:convert transform=lc \"AAA\"]</code><br/><code>aaa</code>"
+        },
+        {
+          "row": 11,
+          "col": 2,
+          "html": "Execute the script in the background. The result can be written in the file by setting a <code>file</code> parameter or printed to the CLI by setting <code>as-string</code>. <br/> When using the <code>as-string</code> parameter executed script is blocked (not executed in the background). <br/> Executed scripts cannot be larger than&nbsp;64 kB."
+        },
+        {
+          "row": 17,
+          "col": 2,
+          "html": "Catch errors and get error details. The <strong><code>do=&#123;...&#125;</code></strong> block is executed, when <strong><code>in=&#123;...&#125;</code></strong> block has an error, &nbsp;and error details are written in <code>&lt;var_name&gt;</code> variable.&nbsp; <br/> Parameter order is important. The <code>error</code> parameter must be set before <code>do</code> block, otherwise <code>do</code> block will not see the local variable. <br/><code>:onerror</code> will return <code>false</code> (if there is no error) and <code>true</code> (if there is an error) unless otherwise specified (with commands such as <code>:return</code> or <code>:error</code>), so it can be used in&nbsp;<strong><code>:if</code></strong> condition statement scripts."
+        },
+        {
+          "row": 19,
+          "col": 2,
+          "html": "Return range of elements or substring. If the count is not specified, it will return only one element from an array. <br/><ul><li><code>var</code> - value to pick elements from.</li><li><code>start</code> - element to start picking from (the first element index is 0).</li><li><code>end</code> - terminating index (element at this index is not included).</li></ul>"
+        },
+        {
+          "row": 19,
+          "col": 3,
+          "html": "<code>[admin@MikroTik] &gt; :put [:pick \"abcde\" 1 3]</code><br/><code>bc</code>"
+        },
+        {
+          "row": 22,
+          "col": 2,
+          "html": "Return the IP address of the given DNS name <br/><ul><li><code>domain-name</code> - DNS name that needs to be resolved.</li><li><code>server</code> - Specific server that will be used to resolve DNS name (returned results will not be cached).</li><li><code>server-port</code> - Server port to connect to.</li><li><code>type</code> - any/any6/ipv4/ipv6:<ul><li><code>any</code> - Try to resolve ipv4, on failure try ipv6.</li><li><code>any6</code> - Try to resolve ipv6, on failure try ipv4.</li><li><code>ipv4</code> - Try to resolve only ipv4.</li><li><code>ipv6</code> - Try to resolve only ipv6.</li></ul></li></ul>"
+        },
+        {
+          "row": 22,
+          "col": 3,
+          "html": "<code>:put [:resolve \"www.mikrotik.com\"];</code><br/><code>:put [:resolve domain-name=\"www.mikrotik.com\"];</code><br/><code>:put [:resolve domain-name=\"www.mikrotik.com\" server=192.168.88.1 server-port=53];</code><br/><code>:put [:resolve domain-name=\"www.mikrotik.com\" type=ipv6];</code>"
+        },
+        {
+          "row": 26,
+          "col": 2,
+          "html": "Random string generator. <br/><strong><code>from</code></strong> specifies characters to construct the string from and defaults to all ASCII letters and numerals. <br/><strong><code>length</code></strong> specifies the length of the string to create and defaults to 16."
+        },
+        {
+          "row": 28,
+          "col": 2,
+          "html": "Serialize specified value/array to JSON or dsv (delimiter separated values) format. <br/><strong><code>value</code></strong> specifies which values to process. <br/><strong><code>to</code></strong> specifies the format -&nbsp;<em>json, dsv</em><br/><strong><code>delimiter</code></strong> sets the \"separator\". <br/><strong><code>order</code></strong> specifies the order for variables. <br/><strong><code>options</code></strong> specifies additional options*:* <br/><ul><li><em>json.pretty</em>&nbsp; - makes the JSON output more visually appealing<em>;</em></li><li><em>json.no-string-conversion</em> - prevents implicit conversions from console string type to json number type;</li><li><em>dsv.wrap-strings</em> - wraps string values inside quotation marks;</li><li><em>dsv.ignore-size -&nbsp;</em>if array values have different sizes, e.g.&nbsp;<code>a=(1,2);b=(3,4);c=(5,6,7)</code>, this option will work around <code>array size mismatch</code> error and set \"empty\" values in those slots.</li><li><em>dsv.remap</em> - merges array of dictionaries into a single dictionary (useful when working with \"<code>print as-value</code>\")</li></ul><strong>file-name</strong> enables the option to generate command's output into a file (available for download in the \"/files\" section)."
+        },
+        {
+          "row": 28,
+          "col": 3,
+          "html": "<code>:put [:serialize value=a,b,c to=json]</code><br/><code>[\"a\",\"b\",\"c\"]</code><br/><br/><code>:local test &#123;a=(1,2,3);b=(4,5,6);c=(7,\"text\",9)&#125;; :put [ :serialize to=dsv delimiter=\";\" value=$test order=(\"c\",\"a\",\"b\") ]</code><br/><code>c;a;b</code><br/><code>7;1;4</code><br/><code>text;2;5</code><br/><code>9;3;6</code><br/><br/><code>:global var (&#123; \"string\"=\"1234\"; \"number\"=1234 &#125;);:put [ :serialize to=json value=$var ]</code><br/><code>&#123;\"number\":1234,\"string\":1234.000000&#125;</code><br/><code>:put [ :serialize to=json value=$var options=json.no-string-conversion ]</code><br/><code>&#123;\"number\":1234,\"string\":\"1234\"&#125;</code><br/><br/><code>:put [:serialize to=dsv options=dsv.remap delimiter=\"#\" [/ip/address/print as-value]]</code><br/><code>.id#address#comment#interface#network</code><br/><code>*1#192.168.88.1/24#defconf#bridge#192.168.88.0</code><br/><code>*2#192.168.69.190/24##ether1#192.168.69.0</code>"
+        },
+        {
+          "row": 29,
+          "col": 2,
+          "html": "Deserialize specified value/array from JSON or dsv (delimiter separated values) format. <br/><strong><code>from</code></strong> specifies the format -&nbsp;<em>json, dsv</em><br/><strong><code>delimiter</code></strong> sets the \"separator\". <br/><strong><code>options</code></strong> specifies additional options*:* <br/><ul><li><em>dsv.plain</em> - deserializes every line as an array (input does not have a header or column names);</li><li><em>dsv.array</em> - expects a header (column names) and will return an array of dictionaries, where values are mapped to column names provided in the header.</li><li><em>json.no-string-conversion</em> - prevents implicit conversions from json string type to console values (number, ip, etc.).</li></ul>"
+        },
+        {
+          "row": 29,
+          "col": 3,
+          "html": "<code>:put [:deserialize from=json value=\"[\\\"a\\\",\\\"b\\\",\\\"c\\\"]\"]</code><br/><code>a;b;c</code><br/><br/><code>:put ([ :deserialize from=dsv delimiter=\";\" value=\"a;b;c\\n1;findme;3\" options=dsv.plain ]-&gt;1-&gt;1)</code><br/><code>findme</code><br/><br/><code>:put ([ :deserialize from=dsv delimiter=\";\" value=\"a;b;c\\n1;findme;3\" options=dsv.plain ]-&gt;0-&gt;1) </code><br/><code>b</code><br/><br/><code>:put ([:deserialize from=dsv \"a;b;c\\n1;2;3\\n4;5;6\" delimiter=\";\" options=dsv.array]-&gt;1-&gt;\"b\") </code><br/><code>5</code><br/><br/><code>:put ([:deserialize from=dsv \"a;b;c\\n1;2;3\\n4;5;6\" delimiter=\";\" options=dsv.array]-&gt;0-&gt;\"c\") </code><br/><code>3</code><br/><br/><code>:put [typeof ([:deserialize \"&#123; \\\"str\\\": \\\"123\\\" &#125;\" from=json options=json.no-string-conversion]-&gt;\"str\")]</code><br/><code>str</code><br/><br/><code>:deserialize [/file/get file.json contents] from=json</code>"
+        },
+        {
+          "row": 31,
+          "col": 3,
+          "html": "<code>[admin@MikroTik] &gt; :put [:timestamp]</code><br/><code>2735w21:41:43.481891543</code><br/>or<br/><code>[admin@MikroTik] &gt; :put [:timestamp]</code><br/><code>2735w1d21:41:43.481891543</code><br/>with the day offset."
+        },
+        {
+          "row": 41,
+          "col": 3,
+          "html": "<code>:put [:tocrlf \"AAA\\r\\nBBB\\r\\nCCC\" ]</code><br/><code>AAA</code><br/><code>BBB</code><br/><code>CCC</code><br/>"
+        },
+        {
+          "row": 42,
+          "col": 3,
+          "html": "<code>:put [:tolf &nbsp;\"AAA\\nBBB\\nCCC\" ]</code><br/><code>AAA</code><br/><code>&nbsp; &nbsp;BBB</code><br/><code>&nbsp; &nbsp; &nbsp; CCC</code><br/>"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "rows": 14,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 2,
+          "html": "Add new item. This command usually has all the same arguments as <strong>set</strong>, except the item number argument. It adds a new item with the values you have specified, usually at the end of the item list, in places where the order of items is relevant. There are some required properties that you have to supply, such as the interface for a new address, while other properties are set to defaults unless you explicitly specify them. Returns the internal number of the item it has added.<br/>Common parameters:<ul><li><em>copy-from</em> - Copies an existing item. It takes the default values of a new item's properties from another item. If you do not want to make an exact copy, you can specify new values for some properties. When copying items that have names, you will usually have to give a new name to a copy.</li><li><em>place-before</em> - Places a new item before an existing item with a specified position. Thus, you do not need to use the move command after adding an item to the list.</li><li><em>disabled</em> - Controls the disabled/enabled state of the newly added item(-s).</li><li><em>comment</em> - Holds the description of a newly created item.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "rows": 17,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 13,
+          "col": 2,
+          "html": "<code>/ip/arp/print order-by=address</code><br/><code>/interface/print order-by=-link-downs proplist=name,link-downs</code><br/><code>/interface/ethernet/print stats order-by=-driver-rx-packet where running</code>"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "rows": 4,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 12,
+      "rows": 2,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": [
+    {
+      "table": 7,
+      "reason": "cell-count",
+      "row": 1,
+      "markdown": 2,
+      "html": 3
+    }
+  ]
+}

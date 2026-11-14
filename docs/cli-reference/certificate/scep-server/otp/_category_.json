@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "Otp",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/certificate/scep-server/otp/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/certificate/scep-server/otp"
+}

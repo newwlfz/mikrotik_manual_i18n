@@ -1,0 +1,191 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "internet-of-things/bluetooth/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/internet-of-things/bluetooth.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/internet-of-things/bluetooth/",
+  "md_sha256": "e640c35bfafe2f93cb5efd6ccd86305fcd7c6ebdce07d710f89c8c261ff9ba16",
+  "html_sha256": "ae9f7ff2659f77d3c7045c4d979aa0913116eeeb0f4e97208c93409ea2be6be3",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 10,
+      "br": 1,
+      "details": 0,
+      "tables": 8,
+      "sup": 0,
+      "code": 25,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 8,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 8,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "unaligned": {
+        "reason": "cell-count",
+        "row": 1,
+        "markdown": 3,
+        "html": 2
+      },
+      "rebuild": true,
+      "rebuild_rows": [
+        [
+          "Preamble",
+          "1 octet"
+        ],
+        [
+          "Access-Address",
+          "4 octets"
+        ],
+        [
+          "PDU",
+          "<ul><li>PDU Header = 2 octets</li><li>PDU Payload = AdvA (6 octets)+AdvData (0...31 octets)</li></ul>"
+        ],
+        [
+          "CRC",
+          "3 octets"
+        ]
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 6,
+          "col": 1,
+          "html": "The MAC address that is going to be used in the advertising packet's payload: <br/><ul><li>public → To use the IEEE registered, permanent address.</li><li>random-static → To use a user-configurable address (will be changed on the next power-cycle).</li><li>rpa-fallback-to-public → To use a Resolvable Random Private Address (RPA) that can only be resolved if the receiver has our Identity Resolving Key (IRK). If RPA can not be generated, the public address will be used instead.</li><li>rpa-fallback-to-random → Same as \"rpa-fallback-to-public\" but if RPA can not be generated, the random-static address will be used instead.</li></ul>"
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Set the \"physical layer\" for the device to use during advertising: <br/><ul><li>CODED → the lowest rate of 125 kbps = longer range;</li><li>1M → the standard rate of 1 Mbps = average range;</li><li>2M → the highest rate of 2 Mbps = short range;</li></ul><br/><strong>Important:</strong> CODED is only supported by <a href=\"https://mikrotik.com/product/knot_embedded_lte4\" target=\"_blank\" rel=\"noopener noreferrer\">KNOT Embedded LTE</a>. <br/>"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Set the advertising type → extended or legacy. <br/> When using <code>legacy=no</code>, AD structure length is extended up to 191 bytes. When using <code>legacy=yes</code>, AD structure length is limited to 31 bytes. <br/> Legacy advertising uses only the \"primary\" Bluetooth channel to advertise the payload. Extended advertising uses \"primary\" and \"secondary\" channels at the same time. <br/>"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "An option to set AD structure's type: <br/><ul><li>0x08 \"Shortened Local Name\" (in \"text\" format)</li><li>0x09 \"Complete Local Name\" (in \"text\" format)</li><li>0xFF \"Manufacturer Specific Data\" (in \"hex\" format)</li><li>0x20 \"Service Data 32-bit\" (in \"hex\" format)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "An option to discard duplicate advertisements from the same advertiser: <br/><ul><li>keep-newest → Keeps the newest report (discards the oldest). Only the newest PDU from a single AdvA will be kept.</li><li>keep-oldest → Keeps the oldest report (discards the newest). Only the oldest PDU from a single AdvA will be kept. This type of PDU filtering happens at the controller level and as such it's the most efficient (energy/bandwidth-wise) method of duplicate filtering.</li><li>keep-unique → Only displays advertisements that have a unique payload. Meaning, if 1+ identical payloads (AdvData) are found, only the first payload is going to be displayed, while the \"clones\" are discarded/ignored.</li><li>off → Duplicates are not discarded. All PDUs with the same AdvA will be kept.</li></ul><br/><strong>Important:</strong> A duplicate advertising report is an advertising report sent from the same device address. The actual data (\"AdvData\" part of the payload) may change/differ and it is not considered significant when determining duplicate advertising reports. Meaning that, for example, if the Bluetooth interface receives 10 payloads (payload after payload with a 1-second interval) from the same tag: <br/><ul><li> if you are using the \"keep-oldest\" setting → Bluetooth interface will only display the first payload received (9 follow-up payloads will be filtered out) from that tag.<br/></li><li>if you are using the \"keep-newest\" setting → Bluetooth interface will only display the last payload received (each follow-up payload will rewrite the previous one) from that tag.</li></ul>"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "An option to set up a filtering policy (controller-level advertisement filtering): <br/><ul><li>default → When this policy is enabled, the scanner will only accept ADV_IND, ADV_NOCONN_IND, ADV_SCAN_IND, SCAN_RSP, and ADV_DIRECT_IND (where TargetA is the scanner's own Bluetooth address) PDU types.</li><li>whitelist → When this policy is enabled, the scanner will only accept ADV_IND, ADV_NOCONN_IND, ADV_SCAN_IND, SCAN_RSP PDU types that are broadcasted by the advertiser, whose address is configured in the \"Whitelist\" section, and ADV_DIRECT_IND type PDU (where TargetA is the scanner's own Bluetooth address).</li></ul>"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Address type used in scan requests (if active scanning type is used): <br/><ul><li>public → To use the IEEE registered, permanent address.</li><li>random-static → To use a user-configurable address (will be changed on the next power-cycle).</li><li>rpa-fallback-to-public → To use a Resolvable Random Private Address (RPA) that can only be resolved with our Identity Resolving Key (IRK). If RPA can not be generated, the public address will be used instead.</li><li>rpa-fallback-to-random → Same as \"rpa-fallback-to-public\" but if RPA can not be generated, the random-static address will be used instead.</li></ul>"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Defines the scanner's type: <br/><ul><li>active → Scanner can send scan requests if it receives a scannable advertisement. The scanner can send a SCAN_REQ in order to acquire a SCAN_RSP response.</li><li>passive → Scanner will only listen for advertisements, no data (e.g. scan requests) will be sent.</li></ul>"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Set the \"physical layer\" for the device to use during scanning: <br/><ul><li>CODED → the lowest rate of 125 kbps = longer range;</li><li>1M → standard rate of 1 Mbps = average range;</li><li>2M → the highest rate of 2 Mbps = short range;</li></ul><br/><strong>Important:</strong> CODED is only supported by <a href=\"https://mikrotik.com/product/knot_embedded_lte4\" target=\"_blank\" rel=\"noopener noreferrer\">KNOT Embedded LTE</a>. <br/><br/>"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": [
+    {
+      "table": 0,
+      "reason": "cell-count",
+      "row": 1,
+      "markdown": 3,
+      "html": 2
+    }
+  ]
+}

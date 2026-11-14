@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/wireless/sniffer/sniff.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/sniffer/sniff.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/sniffer/sniff",
+  "md_sha256": "c5c35fbca6dc9d3ea4083eefd7c518801da8fe75cbeebc2b828a685423ee0198",
+  "html_sha256": "15338e9f88bb42efd4bda957b7e1f9a70614e2add30501bc8646f6f385add4a0",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

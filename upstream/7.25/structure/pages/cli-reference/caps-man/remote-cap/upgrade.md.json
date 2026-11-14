@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/caps-man/remote-cap/upgrade.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/remote-cap/upgrade.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/remote-cap/upgrade",
+  "md_sha256": "bad6f4bf0ba2cb65d17225a2502efe468f21b38bdcf41ffa4a4f4304736d8a7b",
+  "html_sha256": "82bb86a71ed50771e45eb0d81580bc6ad1f3bd28c5bcaf4087ec4b55dd5dfc58",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

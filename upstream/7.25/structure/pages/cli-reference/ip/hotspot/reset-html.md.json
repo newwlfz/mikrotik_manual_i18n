@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/hotspot/reset-html.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/hotspot/reset-html.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/hotspot/reset-html",
+  "md_sha256": "0094833faf6d4b727b50a508b9580f5f3f45a1461bf1fdc6584f774136d01040",
+  "html_sha256": "a94c339827ae1b2279422429813399286af271d86130667b3130d405937da564",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Area",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/routing/ospf/area/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/routing/ospf/area"
+}

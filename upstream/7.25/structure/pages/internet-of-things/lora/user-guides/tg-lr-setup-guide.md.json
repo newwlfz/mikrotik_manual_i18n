@@ -1,0 +1,478 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "internet-of-things/lora/user-guides/tg-lr-setup-guide.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/internet-of-things/lora/user-guides/tg-lr-setup-guide.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/internet-of-things/lora/user-guides/tg-lr-setup-guide",
+  "md_sha256": "2df1070fe49f816b736ddb9af9a768485d3cd02e28a5f50840d5b18568fa2a44",
+  "html_sha256": "7e1b3df7baa251d2d9e0d793e65d4553174fd4c8dc7a566a0668f69a7a81e020",
+  "body": {
+    "html": {
+      "lists": 7,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 54,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 18,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 54,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 18,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 54,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 3,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 3,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 3,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 10,
+      "cols": 5,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 7,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 8,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 7,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 8,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 9,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 10,
+      "rows": 15,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 11,
+      "rows": 5,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 12,
+      "rows": 6,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 13,
+      "rows": 5,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 14,
+      "rows": 6,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 15,
+      "rows": 5,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 16,
+      "rows": 5,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 17,
+      "rows": 11,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 18,
+      "rows": 5,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 19,
+      "rows": 5,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 20,
+      "rows": 8,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 21,
+      "rows": 7,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 22,
+      "rows": 6,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 23,
+      "rows": 10,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 24,
+      "rows": 13,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 25,
+      "rows": 5,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 26,
+      "rows": 12,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 27,
+      "rows": 20,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 28,
+      "rows": 7,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 29,
+      "rows": 4,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 30,
+      "rows": 11,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 31,
+      "rows": 4,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 32,
+      "rows": 9,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 33,
+      "rows": 6,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 34,
+      "rows": 2,
+      "cols": 1,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 35,
+      "rows": 4,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 36,
+      "rows": 18,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 37,
+      "rows": 31,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 38,
+      "rows": 31,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 39,
+      "rows": 16,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 40,
+      "rows": 11,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 41,
+      "rows": 33,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 42,
+      "rows": 17,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 43,
+      "rows": 11,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 44,
+      "rows": 4,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 45,
+      "rows": 4,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 46,
+      "rows": 16,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 47,
+      "rows": 7,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 48,
+      "rows": 8,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 49,
+      "rows": 26,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 50,
+      "rows": 41,
+      "cols": 5,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 51,
+      "rows": 33,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 52,
+      "rows": 4,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 53,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

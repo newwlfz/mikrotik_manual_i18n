@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/iot/lora/servers/reset-servers.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/iot/lora/servers/reset-servers.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/iot/lora/servers/reset-servers",
+  "md_sha256": "b907c0d4b05aebfa16adff4ed098bc8fb551424ef573b936b31aa2dc47cde2ae",
+  "html_sha256": "e256a8144e60724b6424b292de19617d87e25c17a14016d16feb0f6b2c68f50b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Apps",
+  "key": "containers/apps",
+  "link": {
+    "type": "doc",
+    "id": "containers/apps/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

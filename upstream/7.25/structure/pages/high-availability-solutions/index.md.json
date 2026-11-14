@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "high-availability-solutions/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/high-availability-solutions.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/high-availability-solutions/",
+  "md_sha256": "72161745319c997217a125beeba3554031b5f5cf7d543acf3c098e44321d3fbf",
+  "html_sha256": "abea1e4312a1f7c0a7efbb6efe92fc6512f6d539cdc9afbb8f9cee4209b1c578",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

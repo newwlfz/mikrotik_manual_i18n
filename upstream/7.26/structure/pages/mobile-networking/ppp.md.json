@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "mobile-networking/ppp.md",
+  "source_url": "https://manual.mikrotik.com/docs/mobile-networking/ppp.md",
+  "html_url": "https://manual.mikrotik.com/docs/mobile-networking/ppp",
+  "md_sha256": "3d7b9421853894d1be88b80428e9e2eac8a8c6d2b0bc03d050d6c7d6fa20c4a3",
+  "html_sha256": "08de3b44cdb90b907e839e40d36f9c6451ae8040a2180225131573c03414679c",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

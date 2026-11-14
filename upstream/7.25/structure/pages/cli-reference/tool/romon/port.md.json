@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/tool/romon/port.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/romon/port.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/romon/port",
+  "md_sha256": "7ea442437c7054561291cbf81e866ee146242bc03aaa5cedef7a9e0d658197f4",
+  "html_sha256": "461ca805e4dca008c32e1dec8078a311f070637c758ddb686c3081af848068e8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "user-guides/routing-and-networking-protocols/multicast/pim-sm.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/multicast/pim-sm.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/multicast/pim-sm",
+  "md_sha256": "21607920888039d41bfb2508ca11c4865fc16e35a5f58dc04b579890297abb79",
+  "html_sha256": "a77d7c7f5646d4208a623e3b9b60174016979cc1026576d71e67d5b34cbc4c10",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,11 @@
+{
+  "position": 14,
+  "label": "License",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/license/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/license"
+}

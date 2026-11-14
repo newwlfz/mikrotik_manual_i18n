@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/bonding/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bonding.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bonding/",
+  "md_sha256": "8124500de831cd60a17b9739b0e24b3eb20878e28ef35503a9ec6970d7c68d9c",
+  "html_sha256": "4b36f5649a45cfc338da116e73ae817435e020fed31d234022e7d534fdccb274",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 17,
+      "listItems": 17,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 17,
+      "listItems": 17,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

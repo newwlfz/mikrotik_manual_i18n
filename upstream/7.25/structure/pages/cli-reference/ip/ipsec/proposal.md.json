@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/ipsec/proposal.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/ipsec/proposal.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/ipsec/proposal",
+  "md_sha256": "31e2601301a709a4f3621c53352209416ff1399900c6ff70153c0a8b7eb18c94",
+  "html_sha256": "ba98484f1172e78144175f6e348996f2b6704871aa42b95bc280bd8a0ec28401",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

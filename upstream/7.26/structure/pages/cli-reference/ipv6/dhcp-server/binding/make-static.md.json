@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ipv6/dhcp-server/binding/make-static.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ipv6/dhcp-server/binding/make-static.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ipv6/dhcp-server/binding/make-static",
+  "md_sha256": "e5eb1d96332194ab28f6bc2c3ace0adef3e464c3c7d6fd8f8feda856ddae5e12",
+  "html_sha256": "0abb2c1a3abe6d9190e968a4f6da30a9cc4e6bdfbb41a288beb9dc88846c28a1",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

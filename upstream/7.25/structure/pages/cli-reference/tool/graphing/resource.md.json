@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/tool/graphing/resource.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/graphing/resource.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/graphing/resource",
+  "md_sha256": "3aa4ef0256477abca60bdaadb8ed251977e6d6d2e264177563c58af438a71f1f",
+  "html_sha256": "dd829204ad6eef7cdc876389a5aa23707cf6287d658c993c7f1247301de02f43",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

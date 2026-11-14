@@ -1,0 +1,11 @@
+{
+  "position": 28,
+  "label": "Pppoe Client",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/pppoe-client/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/pppoe-client"
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/user-manager/user/generate-voucher.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/user/generate-voucher.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/user/generate-voucher",
+  "md_sha256": "e5a7796a60abbdc1c995c63e627f45b67f70ea302684d6e498e998b6da3d3527",
+  "html_sha256": "5e52c85f1116b02df49bd4b61a452c7b1292b0d1a7e27896981e5a9f9d72ca46",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

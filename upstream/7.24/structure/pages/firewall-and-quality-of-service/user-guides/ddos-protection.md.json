@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "firewall-and-quality-of-service/user-guides/ddos-protection.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/user-guides/ddos-protection.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/user-guides/ddos-protection",
+  "md_sha256": "b634aa2e9c9b6c9c3842d908c62c1bff4578ed18d596bdd85a401325cf0f957a",
+  "html_sha256": "e5f25b3ad6c06a16689131c1c7e0a4749d1a8ef084b8f3d68451a7d3d2579faa",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

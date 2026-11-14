@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "user-guides/routing-and-networking-protocols/mpls/ldp.md",
+  "source_url": "https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/mpls/ldp.md",
+  "html_url": "https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/mpls/ldp",
+  "md_sha256": "17e32470b4b4dbe860c4dd4d864c13e851e6a4c32eba778e5f58fd1fdee2bba4",
+  "html_sha256": "28235bf15dd7a52eac166723c135ac2ecd853787c00aa8be63304aab84a02d5c",
+  "body": {
+    "html": {
+      "lists": 14,
+      "listItems": 37,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 12,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 37,
+      "listItems": 37,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 37,
+      "listItems": 37,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

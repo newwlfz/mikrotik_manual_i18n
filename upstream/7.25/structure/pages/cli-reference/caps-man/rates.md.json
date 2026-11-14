@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/caps-man/rates.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/rates.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/rates",
+  "md_sha256": "c8b39120feeec5a9aded2a4f9877b7d28bbabfb259e1e73180006ffe713c7e9c",
+  "html_sha256": "ef7b72b0d4d013655ce666404d81c9d6bb5d9eda3a500a8205e31c5fe2325f49",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

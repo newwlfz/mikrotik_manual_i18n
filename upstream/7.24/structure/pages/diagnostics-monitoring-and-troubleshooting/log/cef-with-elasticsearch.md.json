@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "diagnostics-monitoring-and-troubleshooting/log/cef-with-elasticsearch.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/log/cef-with-elasticsearch.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/log/cef-with-elasticsearch",
+  "md_sha256": "a8ab9c8821cf0676a15dd314252a0a80efe021bcd0ee14df43e9c0a4aa1604a9",
+  "html_sha256": "12dbf383fad3181b39c491d4b4ce19c62939b66ef4f5d38faff4702e0fc7baba",
+  "body": {
+    "html": {
+      "lists": 6,
+      "listItems": 39,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 39,
+      "listItems": 39,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 39,
+      "listItems": 39,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        0,
+        11
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/resource/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/resource/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/resource/monitor",
+  "md_sha256": "6baea0c7e0e5f8235295235ce96a16e1161916d64d7c98a2e28847a01ce58811",
+  "html_sha256": "936ffc28ead8b215c7ca9597384d6245feaead21becc0eff7fe0a2a2703193fc",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/tool/mac-scan.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/mac-scan.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/mac-scan",
+  "md_sha256": "33acaee93c3c3f7fa75abc58bbc828e18e1eddba8eae828130da21e6cc3881d7",
+  "html_sha256": "cb1564cba56107c26ebdffc84cbabbd82375244af869b2946aa4abd4dcfa1e8b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

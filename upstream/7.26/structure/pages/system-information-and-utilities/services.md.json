@@ -1,0 +1,78 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "system-information-and-utilities/services.md",
+  "source_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/services.md",
+  "html_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/services",
+  "md_sha256": "5243a52c67ce42141e6624c72527e82a6d3481009536087b806df094359fc737",
+  "html_sha256": "4bbc0d57ace07385b2846d4d63d509eab223e67d512e110137860eb6bf8395aa",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 41,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 10,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 19,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 24,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 13,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

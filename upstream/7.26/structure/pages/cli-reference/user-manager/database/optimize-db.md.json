@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/user-manager/database/optimize-db.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/database/optimize-db.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/database/optimize-db",
+  "md_sha256": "199c54eb23bb24eba758eb8f3f78ef6cc6538ced17bb9bb9ff8da5fd872e5622",
+  "html_sha256": "7ce559d15f28c37c326085acaea81dec4ea4c11f3dce4061aa1863156b320ab7",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

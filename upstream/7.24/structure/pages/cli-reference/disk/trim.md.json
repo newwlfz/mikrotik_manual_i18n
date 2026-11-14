@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/disk/trim.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/disk/trim.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/disk/trim",
+  "md_sha256": "29f31383997b32b2df4d67244b833bc186fc75de0b200bdb4ad876dd28aaa597",
+  "html_sha256": "e9fce5ed9bd6c2492d48b08b85d4d54601f5f582292e9c4969b3589046b4183d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

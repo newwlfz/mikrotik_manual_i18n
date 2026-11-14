@@ -1,0 +1,11 @@
+{
+  "position": 7,
+  "label": "Subscriptions",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/iot/mqtt/subscriptions/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/iot/mqtt/subscriptions"
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/user-manager/database/save.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/database/save.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/database/save",
+  "md_sha256": "ba4e5675d4f036ea9c542d4695366f0a03691e2dbaa0ada6acc4fa5341a48757",
+  "html_sha256": "6e7f8b9a901bad6d4d8f5dadab0603bfb7919f6d96b52dd22672d23659169b25",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

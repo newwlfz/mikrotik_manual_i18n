@@ -1,0 +1,11 @@
+{
+  "position": 9,
+  "label": "SwOS",
+  "key": "bridging-and-switching/swos",
+  "link": {
+    "type": "doc",
+    "id": "bridging-and-switching/swos/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

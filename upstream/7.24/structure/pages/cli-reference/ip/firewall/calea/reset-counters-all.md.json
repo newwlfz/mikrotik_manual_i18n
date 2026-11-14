@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/firewall/calea/reset-counters-all.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/firewall/calea/reset-counters-all.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/firewall/calea/reset-counters-all",
+  "md_sha256": "a74b832506a0d3756b180cacbd32b9357ade69a810e3f44392c8c00f1c97f19c",
+  "html_sha256": "9c9f18429cf0227ff46a42ee00338748abdf1d9c7f5fdf52cd7d78e568ffbd8c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

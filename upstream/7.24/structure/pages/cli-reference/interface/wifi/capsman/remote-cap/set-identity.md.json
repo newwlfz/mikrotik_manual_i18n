@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/wifi/capsman/remote-cap/set-identity.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/capsman/remote-cap/set-identity.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/capsman/remote-cap/set-identity",
+  "md_sha256": "b9c455f54bb1beb7cb54f9ecfc039b56dde5f252b01f630c799bc2d22337ae01",
+  "html_sha256": "9368be50376addf26a383724a1982752deea19b932115f33a54234f95ce3516f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

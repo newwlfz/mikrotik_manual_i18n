@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/rtrace/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/rtrace.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/rtrace/",
+  "md_sha256": "b6d54a35968c8539477a9d20104deb3ecc3ce5c10e530af1f16c3088b4d1ea53",
+  "html_sha256": "759f940f981884f4eb7efafb8596da889023cadb215b7477593f35f6bdd2be3a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

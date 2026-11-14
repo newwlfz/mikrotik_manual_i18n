@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/user-manager/user/add-batch-users.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/user/add-batch-users.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/user/add-batch-users",
+  "md_sha256": "7b13804ba798cdf82d39d13f87137108c615238b9f9136b441cd8b4533e94800",
+  "html_sha256": "eaacf62370f58e9c033bcae32ffc53af3bf98a3765a623bfe8f25d11beb88fc1",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

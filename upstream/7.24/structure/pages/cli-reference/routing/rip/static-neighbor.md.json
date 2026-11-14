@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/routing/rip/static-neighbor.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/routing/rip/static-neighbor.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/routing/rip/static-neighbor",
+  "md_sha256": "4c22fdd275d89510e2c6cb261f56c711059490537da475f7b531bfc43bec0fef",
+  "html_sha256": "fffc5e8322085463113d98e3997fcdbddf7218945c7b523006efeb1b8a074391",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

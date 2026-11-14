@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "bridging-and-switching/user-guides/basic-vlan-switching.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/user-guides/basic-vlan-switching.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/user-guides/basic-vlan-switching",
+  "md_sha256": "121be8fb7553a6894358f0c5f7b403d509b63cada7e87442bfd579728ee25cb1",
+  "html_sha256": "70987e5b1935a58fd541adb1d7bead6481a4e553445f203a7a616e2c8d55c803",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 11,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

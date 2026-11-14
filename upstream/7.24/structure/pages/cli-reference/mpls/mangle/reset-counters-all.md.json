@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/mpls/mangle/reset-counters-all.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/mpls/mangle/reset-counters-all.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/mpls/mangle/reset-counters-all",
+  "md_sha256": "202c0ceab1fb5207785d708a83eddc05eea2b1765c627e34a94489cff806cafd",
+  "html_sha256": "caf4f79e63a92569790d6c4c0cb1280216e30aaeda13d91a20cefc9483db981e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

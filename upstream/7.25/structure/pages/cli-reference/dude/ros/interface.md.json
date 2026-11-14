@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/dude/ros/interface.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/dude/ros/interface.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/dude/ros/interface",
+  "md_sha256": "88984902210f3579ebf798f3cc7cb2f90644b37cbe275a4ecf9553d3a484c28b",
+  "html_sha256": "a7481ce74f31db01729b75fe88e0843539c0b81c1575cb402cfe60793873cf94",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

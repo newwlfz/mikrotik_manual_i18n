@@ -1,0 +1,86 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "internet-of-things/modbus.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/internet-of-things/modbus.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/internet-of-things/modbus",
+  "md_sha256": "b1bb0a54533a1e516e490ab10427f661d88f5b4e157fc9eb0d17e7c34620e581",
+  "html_sha256": "a2a0be0f23cb4be5131d37626b034ceade52a85031ab539d4f20af2df8c3e090",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Specify the function code. For example: <ul><li> function=3 → Read Holding Register function code;</li><li> function=6 → Write Single Holding Register function code. </li></ul>"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Input data string that usually specifies register address and data to be sent. For example: <br/><ul><li> data=20000001 The data string is 4 bytes long. \"0x2000\" is the command to the register (2 bytes long) and \"0x0001\" (2 bytes long) is the device's address. See the Modbus device's specifications for the exact data string that needs to be sent. </li></ul>"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "An alternative way to send the data (see <strong>data</strong> parameter above). In this case, each value specified represents 1 byte of the data payload/string. For example: <ul><li> values=32,0,0,1 </li></ul> Equals to the output of data=20000001. <br/>32(dec)=0x20(hex), 0(dec)=0x00(hex), 0(dec)=0x00(hex), 1(dec)=0x01(hex) → 0x20000001."
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

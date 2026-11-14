@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/disk/reset-counters.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/disk/reset-counters.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/disk/reset-counters",
+  "md_sha256": "753e4da4ebfee6c2fa559a8e716ef30b356693ac9fe1e9c31433818a4e3081c2",
+  "html_sha256": "0b41c52fa9a3c101ee6d484d1e0e93ce03841f6a002eda09ed48827c7730261f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

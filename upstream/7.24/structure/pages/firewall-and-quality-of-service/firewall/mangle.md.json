@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "firewall-and-quality-of-service/firewall/mangle.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/firewall/mangle.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/firewall/mangle",
+  "md_sha256": "1c26f87e57339d4fbd237ecf24201996b6101b34360840d6a53f907328357069",
+  "html_sha256": "b922d2e480af2936b9870e0a7acd8a47466d2ba897534c891e96e8c8464693ce",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

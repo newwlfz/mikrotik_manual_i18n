@@ -1,0 +1,68 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "virtual-private-networks/openvpn.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/virtual-private-networks/openvpn.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/virtual-private-networks/openvpn",
+  "md_sha256": "a2102de83f1ed3c2c00918c30ce109e7a665079a261c1b4e4e3b98bfb763a732",
+  "html_sha256": "037b994ae5664c685a8b3f2efc7731c96397077fe6b2034922af7bbed40a95f0",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 6,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 30,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 21,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 24,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 15,
+          "col": 1,
+          "html": "Specifies what kind of routes the OVPN client must add to the routing table. <br/><code>def1</code> – Use this flag to override the default gateway by using 0.0.0.0/1 and 128.0.0.0/1 rather than 0.0.0.0/0. This has the benefit of overriding but not wiping out the original default gateway. <code>disabled</code> - Do not send redirect-gateway flags to the OVPN client. <code>ipv6</code> - Redirect IPv6 routing into the tunnel on the client side. This works similarly to the def1 flag, that is, more specific IPv6 routes are added (2000::/4 and 3000::/4), covering the whole IPv6 unicast space."
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

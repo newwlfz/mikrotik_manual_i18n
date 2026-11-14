@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/tool/wol.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/wol.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/wol",
+  "md_sha256": "dc5356df6628bbf7ffba1ac46f2c4207f196e46dfe0d627c7d25a630a96cc8cc",
+  "html_sha256": "ab7714621169d594cdff2abf040bba3bb0b01d8d2925acb185c298e2e55c17e6",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

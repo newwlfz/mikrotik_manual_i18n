@@ -1,0 +1,102 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "high-availability-solutions/bonding.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/high-availability-solutions/bonding.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/high-availability-solutions/bonding",
+  "md_sha256": "9932a59e2df748e12c8cd7b92093552db267192c7f9532ff837af2d033828d06",
+  "html_sha256": "d930442bbfa1a997eaced477a070e7d85e2450eb23972e5308c541204ab77fa8",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 5,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Shows the local LACP flags: <br/> A - activity (link is active, otherwise passive) T - timeout (link is using short 1-second timeout, otherwise using 30-second timeout) G - aggregation (link can be aggregatable) S - synchronization (link is synchronized) C - collecting (link is able to collect incoming frames) D - distributing (link is able to distribute outgoing frames) F - defaulted (link is using defaulted partner information, indicating that no LACPDU has been received from the partner) E - expired (link has expired state)"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 22,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Address Resolution Protocol for the interface.<ul class=\"bullets\"><li><code>disabled</code> - the interface will not use ARP</li><li><code>enabled</code> - the interface will use ARP</li><li><code>proxy-arp</code> - the interface will use the ARP proxy feature</li><li><code>reply-only</code> - the interface will only reply to requests originated from matching IP address/MAC address combinations which are entered as static entries in the <code>/ip/arp</code> table. No dynamic entries will be automatically stored in the <code>/ip/arp</code> table. Therefore for communications to be successful, a valid static entry must already exist.</li></ul>"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Specifies whether ports actively or passively participates in the LACP: <br/><ul><li><code>active</code> - ports actively initiate LACP communication, regardless of the partner's LACP mode (i.e, it \"speaks\" even if the partner is silent),</li><li><code>passive</code> - ports only respond to LACP messages and do not initiate them unless the partner is in active mode (i.e., it \"listens\" and responds only if spoken to).</li></ul>"
+        },
+        {
+          "row": 11,
+          "col": 1,
+          "html": "Method to use for monitoring the link (whether it is up or down)<ul class=\"bullets\"><li><code>arp</code> - uses Address Resolution Protocol to determine whether the remote interface is reachable</li><li><code>mii</code> - uses Media Independent Interface to determine link status. Link status determination relies on the device driver.</li><li><code>none</code> - no method for link monitoring is used.</li></ul><br/><strong>Warning:</strong> Some bonding modes require specific link monitoring to work properly. <br/>"
+        },
+        {
+          "row": 15,
+          "col": 1,
+          "html": "Specifies one of the bonding policies<ul class=\"bullets\"><li><code>802.3ad</code> - LACP, IEEE 802.3ad dynamic link aggregation. In this mode, the interfaces are aggregated in a group where each slave shares the same speed. It provides fault tolerance and load balancing. Slave selection for outgoing traffic is done according to the transmit-hash-policy.</li><li><code>active-backup</code> - provides link backup. Only one slave can be active at a time. Another slave only becomes active, if the first one fails.</li><li><code>balance-alb</code> - adaptive load balancing. The same as balance-tlb but received traffic is also balanced. The device driver should have support for changing its MAC address.</li><li><code>balance-rr</code> - round-robin load balancing. Slaves in a bonding interface will transmit and receive data in sequential order. It provides load balancing and fault tolerance.</li><li><code>balance-tlb</code> - Outgoing traffic is distributed according to the current load on each slave. Incoming traffic is not balanced and is received by the current slave. If receiving slave fails, then another slave takes the MAC address of the failed slave.</li><li><code>balance-xor</code> - static LAG, transmit based on the selected transmit-hash-policy. This mode provides load balancing and fault tolerance.</li><li><code>broadcast</code> - Broadcasts the same data on all interfaces at once. This provides fault tolerance but slows down traffic throughput on some slow machines.</li></ul><br/><strong>Important:</strong> MikroTik devices with Marvell Prestera switch and 88E6393X, 88E6191X, 88E6190 switch chips support bridge hardware offloading with bonding interfaces. <br/> Only <code>802.3ad</code> (LACP), <code>balance-xor</code> (static LAG) and <code>active-backup</code> bonding modes are hardware offloaded, other bonding modes will use the CPU's resources. <br/>"
+        },
+        {
+          "row": 21,
+          "col": 1,
+          "html": "Selects the transmit hash policy to use for slave selection in balance-xor and 802.3ad modes <br/><ul class=\"bullets\"><li><code>encap-2-and-3</code> - This policy works like the layer-2-and-3 method for distributing traffic, but uses a process to also analyze the encapsulated packet headers. If an encapsulation protocol (like tunneling) is used, it may select the inner headers instead of the outer ones. RouterOS can use this feature when tunnels like 6to4, GRE, GRE6, IPIP, IPIP6, PPPoE, or PPTP are run over a bonding interface.</li><li><code>encap-3-and-4</code> - This policy works like the layer-3-and-4 method for distributing traffic, but uses a process to also analyze the encapsulated packet headers. If an encapsulation protocol (like tunneling) is used, it may select the inner headers instead of the outer ones. RouterOS can use this feature when tunnels like 6to4, GRE, GRE6, IPIP, IPIP6, PPPoE, or PPTP are run over a bonding interface.</li><li><code>layer-2</code> - Uses XOR of hardware MAC addresses to generate the hash. This algorithm will place all traffic to a particular network peer on the same slave. This algorithm is 802.3ad compliant.</li><li><code>layer-2-and-3</code> - This policy uses a combination of layer2 and layer3 protocol information to generate the hash. Uses XOR of hardware MAC addresses and IP addresses to generate the hash. This algorithm will place all traffic to a particular network peer on the same slave. For non-IP traffic, the formula is the same as for the layer2 transmit hash policy. This policy is intended to provide a more balanced distribution of traffic than layer2 alone, especially in environments where a layer3 gateway device is required to reach most destinations. This algorithm is 802.3ad compliant.</li><li><code>layer-3-and-4</code> - This policy uses upper layer protocol information, when available, to generate the hash. This allows for traffic to a particular network peer to span multiple slaves, although a single connection will not span multiple slaves. For fragmented TCP or UDP packets and all other IP protocol traffic, the source and destination port information is omitted. For non-IP traffic, the formula is the same as for the layer2 transmit hash policy. This algorithm is not fully 802.3ad compliant.</li></ul><br/><strong>Important:</strong> MikroTik devices with Marvell Prestera switch will always use Layer2+Layer3+Layer4 for a transmit hash policy, while 88E6393X, 88E6191X, 88E6190 switch chips are limited to Layer2 transmit hash. Changing the transmit hash policy manually while HW offloading is used will have no effect. <br/>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

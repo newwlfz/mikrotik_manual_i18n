@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/w60g/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/w60g/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/w60g/monitor",
+  "md_sha256": "73390c0fe06e005492a3641f2b1e5480ed605e2152c2aac80e843880265069ad",
+  "html_sha256": "7746c870a3f5bef2f314e554721e54b41efd81067652a806ce94353d263eebe7",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

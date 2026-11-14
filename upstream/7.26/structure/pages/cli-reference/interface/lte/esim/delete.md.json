@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/lte/esim/delete.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim/delete.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim/delete",
+  "md_sha256": "7d42de94c6ed16ff4cf6385b31aa568f72fc91a5c2a745cd2dd62ef1b7417574",
+  "html_sha256": "3e82e82a8acddc9f6246b3a27a4a7c8056c69df2c30cab896b30c35ed8e807df",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

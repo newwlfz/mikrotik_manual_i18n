@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "getting-started/installation-and-upgrade/install/chr-installation/vultr.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/install/chr-installation/vultr.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/install/chr-installation/vultr",
+  "md_sha256": "dda6a2aec11b8bacf8cd4cbeb60742bdd2657a2a6626b21eca0e6cf1eb93439e",
+  "html_sha256": "80e2e68b3cdf291aed6e4626d672cfb7792e352d4f82bd2e686b9b0109aadb39",
+  "body": {
+    "html": {
+      "lists": 5,
+      "listItems": 25,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 24,
+      "listItems": 24,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 24,
+      "listItems": 24,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "listItems": [
+        25,
+        24
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/proxy/connections.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/proxy/connections.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/proxy/connections",
+  "md_sha256": "50e2397a90c25132abb52918f7a0c337309e112e900ef64d1934bb93e63c858c",
+  "html_sha256": "a21e4b9b94aaca4a2bfa1aa6be4d2e9210b9d3d7c7f2eb3e02da089e917c4a3d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/backup/cloud/remove-file.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/backup/cloud/remove-file.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/backup/cloud/remove-file",
+  "md_sha256": "243183d5bfcb4d103a491a5f3e04ad19ed046d264a2848104b83bbbf03a0d087",
+  "html_sha256": "b01c8f4cd4a6b90e1ced5055989a56f80e787968945b15d2948cedadf175d0a2",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

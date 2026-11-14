@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/routing/pimsm/uib-g.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/pimsm/uib-g.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/pimsm/uib-g",
+  "md_sha256": "31bcbac376eb36cb89dfae04fc37b7f2c5a214f4c04857da2920f578c97df41d",
+  "html_sha256": "74fa66596d3162214c53c5e66815d662358c01c2848f61b98905a790c9c2a598",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

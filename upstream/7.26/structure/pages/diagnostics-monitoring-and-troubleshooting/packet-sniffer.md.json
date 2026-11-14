@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "diagnostics-monitoring-and-troubleshooting/packet-sniffer.md",
+  "source_url": "https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/packet-sniffer.md",
+  "html_url": "https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/packet-sniffer",
+  "md_sha256": "62712ca912f197a50d6d2d09ce877180554372ac9c09c94f12a43128e64dff31",
+  "html_sha256": "d1a65710952c8c8eeca368e312fd6aeebf35da5dce8ecd5488cce9b8b5ec3498",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 76,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 15,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 15,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

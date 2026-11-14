@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/task/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/task.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/task/",
+  "md_sha256": "b05f1f268237c5c7937de98472d1f920a30d6dd669bd6315bf07068f3cf09d44",
+  "html_sha256": "26fc475bc2fddd467bb6312b59cb25f8558142a48432b0472a2251b348a26d33",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

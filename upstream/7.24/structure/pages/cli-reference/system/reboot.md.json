@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/reboot.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/reboot.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/reboot",
+  "md_sha256": "616263a5efc45802dce93098a667d4a29ec830edbc398c100a5dc2ef21c185a0",
+  "html_sha256": "9f8c3ad61dad799894690a7ca1f121e3ddd3e34d599078bb043a2a7317e6d527",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "user-guides/routing-and-networking-protocols/unicast/bfd.md",
+  "source_url": "https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/bfd.md",
+  "html_url": "https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/bfd",
+  "md_sha256": "adc81d8dc22c0700d814bb32b57a28f76988cdd2263dd5731e15648aeb58edbb",
+  "html_sha256": "1912fbd68587f6c0259cb28a9804ab99aa8ceb1babf11cb5836ccdd3d5f0fff4",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 7,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 10,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

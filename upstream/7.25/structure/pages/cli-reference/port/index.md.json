@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/port/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/port.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/port/",
+  "md_sha256": "0ba34f66970a65ba91f5d53015322fe7f239f2ec9e7063d0505720bd05973480",
+  "html_sha256": "4e1f602602dba5ade15823a4cf510875b160fc50166e3736c2e5d4d2224a7acf",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

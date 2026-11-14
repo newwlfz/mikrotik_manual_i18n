@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "network-management/dhcp/client.md",
+  "source_url": "https://manual.mikrotik.com/docs/network-management/dhcp/client.md",
+  "html_url": "https://manual.mikrotik.com/docs/network-management/dhcp/client",
+  "md_sha256": "363ecc9cdfad3bc7b7b40d9c9835786acab285e6fc466b714390a4ca660ee937",
+  "html_sha256": "6ffe4b330ab86a4f7094a785d733905c650006b8d58d960bc56d6d5ce1b1283d",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 30,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 15,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 15,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 4,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/firewall/mangle/reset-counters-all.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/firewall/mangle/reset-counters-all.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/firewall/mangle/reset-counters-all",
+  "md_sha256": "314b0bad9b06acda89b6572aa66e7f6f1cc50d54a4eed5deac99ed65c8ffaaa4",
+  "html_sha256": "8f866c158297972058acd3d61331e544d76318d345bdeac1268a09f1483b2384",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

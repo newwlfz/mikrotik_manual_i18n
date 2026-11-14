@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/l2tp-server/server.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/l2tp-server/server.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/l2tp-server/server",
+  "md_sha256": "63924421ad5f7be510019f87b50945a221d9207366d8a7021297b92f9fc604c5",
+  "html_sha256": "21ee810f694a4ec04253cda4649f0200a6f0fd8cd1cf58475921f0e783a35dee",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

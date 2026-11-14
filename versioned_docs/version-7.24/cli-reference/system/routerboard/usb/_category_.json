@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "Usb",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/routerboard/usb/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/routerboard/usb"
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/ethernet/switch/qos/tx-manager/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/qos/tx-manager.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/qos/tx-manager/",
+  "md_sha256": "ababe3a24d24327e3ca3664cdb998ad2862fdd4719be192bab1fa1b0e46e6dbb",
+  "html_sha256": "16550bffcc5896a99b9aa1411e26879d0804561f005d0dde7229be8580f7431e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

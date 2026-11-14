@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/device-mode/update.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/device-mode/update.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/device-mode/update",
+  "md_sha256": "15b553dc4b10a2292b77bdf56269afdc449020062cf11a2618c8748339972ae1",
+  "html_sha256": "f00264fc95b96003b0c4300b3bc3eda24ae3d44d2896b75ac8b724b68ffe0935",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

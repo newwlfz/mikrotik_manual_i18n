@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "virtual-private-networks/pptp.md",
+  "source_url": "https://manual.mikrotik.com/docs/virtual-private-networks/pptp.md",
+  "html_url": "https://manual.mikrotik.com/docs/virtual-private-networks/pptp",
+  "md_sha256": "2444b9aadf7c833ebc729b5ff4dec7663684c9063e5a5f407d5bded9b4decd5d",
+  "html_sha256": "bc1247ce21f0fe5ca6eb2a6a752d4456e851213e4dfcfb60d907f74e687e7a49",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,70 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "firewall-and-quality-of-service/queues/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/queues.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/firewall-and-quality-of-service/queues/",
+  "md_sha256": "26754cae232eb50e26a29af1e80ded6dff37c7a3d02bd300c604bdba8b4f7e4d",
+  "html_sha256": "04a9b525d0e0fd8aa224f001dda2b175a672a2711678fdb809577acfae12e630",
+  "body": {
+    "html": {
+      "lists": 16,
+      "listItems": 75,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 18,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 75,
+      "listItems": 75,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 75,
+      "listItems": 75,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

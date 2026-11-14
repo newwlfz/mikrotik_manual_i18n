@@ -1,0 +1,11 @@
+{
+  "position": 5,
+  "label": "Console",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/console/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/console"
+}

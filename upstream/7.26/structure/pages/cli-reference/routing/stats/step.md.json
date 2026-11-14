@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/stats/step.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/stats/step.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/stats/step",
+  "md_sha256": "ef79d9ceb3643c5b4d3d300777886496106eb28e0e8216b3b34445fcbbab6616",
+  "html_sha256": "6ae3b5d749e3286c9fb9d6b5824de4d7d6b4a5f2eaf0983fc2411589acec00db",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/routing/ospf/instance.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/ospf/instance.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/ospf/instance",
+  "md_sha256": "fe0a7d086c6ccefdc1b2acf178a41dd0978c0496b27589e39aa04a8434b45603",
+  "html_sha256": "ac2a8b656b0b83d41d02d08f2eed290bfa327b77bc0302867235975e68ca118c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

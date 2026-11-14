@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "firewall-and-quality-of-service/nat-pmp.md",
+  "source_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/nat-pmp.md",
+  "html_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/nat-pmp",
+  "md_sha256": "16a7646696b6d65e93aca6a82ae5753ce4a69fea91fa2e7cc0c3e44e3409dee8",
+  "html_sha256": "6f4faf6310af1b5d8dd3a4945434f9fb48e8339caa2b1f89ef4f333444e9fbb3",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 9,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

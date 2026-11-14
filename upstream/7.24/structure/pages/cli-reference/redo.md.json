@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/redo.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/redo.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/redo",
+  "md_sha256": "bdb91ae8eb1624fb670da4adb054b81789cedba2eb6c23933e6e5dfc10231290",
+  "html_sha256": "0e44340a1b028a65346a1e54b19d8ee4f15924d976de89ad5bf6154348597f1d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

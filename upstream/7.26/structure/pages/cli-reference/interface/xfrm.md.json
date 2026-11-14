@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/xfrm.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/xfrm.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/xfrm",
+  "md_sha256": "16b77079b713d87e350aec065acadc855181af37b090dcd7c6540fcc932f3887",
+  "html_sha256": "9e981f45d3732a6b3bc713f20378794e1a447ceaa9abe7b0e5d23c4bbb2098b9",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

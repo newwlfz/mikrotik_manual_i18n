@@ -1,0 +1,11 @@
+{
+  "position": 17,
+  "label": "Radio",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/wifi/radio/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/wifi/radio"
+}

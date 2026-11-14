@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/disk/smart-info.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/disk/smart-info.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/disk/smart-info",
+  "md_sha256": "36e068d5d7528e5fbba1b9c29c4bd5b9dc84072fe4f15a0af363d6e266778657",
+  "html_sha256": "68d307e0bd309158b7b665b39734f591aaf6a207a17abc85e45a8d7b75658edb",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

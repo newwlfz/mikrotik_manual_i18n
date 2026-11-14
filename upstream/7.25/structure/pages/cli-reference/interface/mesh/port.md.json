@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/mesh/port.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/mesh/port.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/mesh/port",
+  "md_sha256": "9e7e51c4a91327a18673c17ac1bcf60e9467d146ed649757ce0ee1bca3649bf6",
+  "html_sha256": "1bbb4791ed58e52277c1b0de794425a3b53ddfc4f371233cba644f33660460d0",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

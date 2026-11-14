@@ -1,0 +1,11 @@
+{
+  "position": 21,
+  "label": "CLI Reference",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/index"
+  },
+  "key": "cli-reference"
+}

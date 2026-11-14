@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/nat-pmp/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/nat-pmp.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/nat-pmp/",
+  "md_sha256": "13f97073e1dde1b9f0da9601be76bd362a363768982cf33ea09e34349e17a20b",
+  "html_sha256": "d7b6279d10bf167b339110ff8f0b89aec1e04444ccd884c5327e6b00a79d67bd",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

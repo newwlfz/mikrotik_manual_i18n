@@ -1,0 +1,11 @@
+{
+  "position": 19,
+  "label": "Ptp",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/ptp/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/ptp"
+}

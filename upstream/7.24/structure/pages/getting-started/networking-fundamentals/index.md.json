@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "getting-started/networking-fundamentals/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/getting-started/networking-fundamentals.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/getting-started/networking-fundamentals/",
+  "md_sha256": "bfddee6f55caf8b920a2c1e0610f405d678838baa749d1aa4e6a1075a8c7eeb8",
+  "html_sha256": "312929b89d556d17c8f5d97d8af15afa4787fccacf936c2048b60ddaf6c31194",
+  "body": {
+    "html": {
+      "lists": 14,
+      "listItems": 54,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 11,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 54,
+      "listItems": 54,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 54,
+      "listItems": 54,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

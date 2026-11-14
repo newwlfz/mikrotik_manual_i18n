@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/certificate/scep-server/ra/renew.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/certificate/scep-server/ra/renew.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/certificate/scep-server/ra/renew",
+  "md_sha256": "0dabd9308195a1aa943d54ef8c09d43dfca0edb46180133ba0d2dbe16741638e",
+  "html_sha256": "df9d95f6ecd3c2103037a0ff57cdbad5db5f63464c8c9c1bceabd14cd0ddda7a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

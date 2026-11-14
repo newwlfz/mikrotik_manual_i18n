@@ -1,0 +1,62 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "wireless/abgn/nv2.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/wireless/abgn/nv2.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/wireless/abgn/nv2",
+  "md_sha256": "e472f67ea0d1d585f63b3f5acf7e3ec9d405a0c3f26cecec266764d1c8f06f17",
+  "html_sha256": "445587d8f23169bff9fe524e4056317d274a49053543404904d4df1a5f743b39",
+  "body": {
+    "html": {
+      "lists": 15,
+      "listItems": 61,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 61,
+      "listItems": 61,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 61,
+      "listItems": 61,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 8,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

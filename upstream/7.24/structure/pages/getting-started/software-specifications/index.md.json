@@ -1,0 +1,60 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "getting-started/software-specifications/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/getting-started/software-specifications.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/getting-started/software-specifications/",
+  "md_sha256": "7bc9d9cf26676386beb95af5c033865df274ca42d993984fcb1687cdd36983c0",
+  "html_sha256": "1f6e73502989635b9a2d7f93300d492e9d0a86356653cca7a846bb22aa0edd8d",
+  "body": {
+    "html": {
+      "lists": 17,
+      "listItems": 114,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 114,
+      "listItems": 114,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 114,
+      "listItems": 114,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 24,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 0,
+          "html": "<br/> IPSec"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

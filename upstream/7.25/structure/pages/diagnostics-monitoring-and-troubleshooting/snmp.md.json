@@ -1,0 +1,74 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "diagnostics-monitoring-and-troubleshooting/snmp.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/snmp.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/snmp",
+  "md_sha256": "e153932ef5cc400bc11e796f8a70ecbb43464f6117e4d02e43bfa4766ba9e1d2",
+  "html_sha256": "240269fbdde8f523e4cdd57aff51b67e5dddaa1aea6dc9ee3e849a5e894dcace",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 21,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 21,
+      "listItems": 21,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 21,
+      "listItems": 21,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 6,
+          "col": 1,
+          "html": "What action will generate traps:<ul><li>interfaces - interface changes;</li><li>start-trap - SNMP server starting on the router</li><li>temp-exception - send trap when temperature reached 100c (or value configured for cpu-overtemp-threshold at <code>/system/health</code> )</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Security levels: <ul><li>none - no encryption or authentication required (noAuthNoPriv)</li><li>authorized - no encryption, but authentication is required (authNoPriv)</li><li>private - both encryption and authentication are required (authPriv)</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

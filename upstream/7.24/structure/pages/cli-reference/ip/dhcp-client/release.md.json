@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/dhcp-client/release.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dhcp-client/release.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dhcp-client/release",
+  "md_sha256": "9835cac9856616aa482d15353dd39d93fadc6ca4b0ee678022f70753dd575242",
+  "html_sha256": "3d927a40cfb76db60cfbc163add154da5284d62afc150351c033fcde4417d538",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

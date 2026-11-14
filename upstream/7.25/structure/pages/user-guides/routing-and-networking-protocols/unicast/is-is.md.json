@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "user-guides/routing-and-networking-protocols/unicast/is-is.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/unicast/is-is.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/unicast/is-is",
+  "md_sha256": "ca030df7699aa2c3baff5edaa87da99374bf65d439bc9c3708a66939f8dc6125",
+  "html_sha256": "2a2675f0eba1ccea702231fb3b8c4899ecb517c0b9b8283585dd595387ddfeb9",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 22,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 15,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 22,
+      "listItems": 22,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 22,
+      "listItems": 22,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

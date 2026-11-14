@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/neighbor/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/neighbor.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/neighbor/",
+  "md_sha256": "870bdf4a3bab3aaeda3a8c5c824625ef3294081215c7f1d8fba24d6e6480866b",
+  "html_sha256": "2891e904abe080e60ce75873378e2e23d9948ac5fb24f43a4f77d4d02fc68a99",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

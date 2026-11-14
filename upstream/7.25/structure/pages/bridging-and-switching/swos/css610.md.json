@@ -1,0 +1,293 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "bridging-and-switching/swos/css610.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/swos/css610.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/swos/css610",
+  "md_sha256": "09e84f2c6e8c4d7f72f4b075d6a5319374ff882cdd41ae941aa9d3347b217758",
+  "html_sha256": "aa3df5d237b6e51dd05b28da90c8fbbfac923353307494106e701408324e0ddc",
+  "body": {
+    "html": {
+      "lists": 10,
+      "listItems": 38,
+      "br": 0,
+      "details": 0,
+      "tables": 15,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 35,
+      "listItems": 35,
+      "br": 0,
+      "details": 0,
+      "tables": 15,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 35,
+      "listItems": 35,
+      "br": 0,
+      "details": 0,
+      "tables": 15,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "listItems": [
+        38,
+        35
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Full non-blocking wirespeed switching<br/>Up to 16k MAC entries in the Host table<br/>Forwarding Database works based only on SVL<br/>Port Isolation<br/>Jumbo frame support - 10218 bytes"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Supports 802.3ad LACP groups<br/>Supports static link aggregation groups<br/>Up to 16 link aggregation groups<br/>Up to 8 member ports per a group<br/>Hardware automatic failover and load balancing"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "IGMP Snooping support<br/>Unknown Multicast Filtering"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Fully compatible with IEEE802.1Q<br/>Port-based VLAN<br/>Up to 250 VLAN entries (limited by SwOS)<br/>VLAN filtering"
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Port Lock<br/>Broadcast Storm Control<br/>DHCP &amp; PPPoE Snooping"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Ingress traffic limiting<br/>Egress traffic limiting"
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "html": "Ingress ACL tables<br/>Up to 32 ACL rules (limited by SwOS)<br/>Classification based on ports, L2, L3, L4 protocol header fields<br/>ACL actions include filtering, forwarding, and modifying the protocol header fields"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 19,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Specify which address acquisition method to use:<br/><code>DHCP with fallback</code> - switch is trying to request an IPv4 address from a DHCP server. If the requests are unsuccessful, then the switch can be accessed using a <strong>Static IP Address</strong> value<br/><code>static</code> - address is set as a <strong>Static IP Address</strong> value (IPv4 only)<br/><code>DHCP only</code> - switch uses DHCPv4 client to acquire address"
+        },
+        {
+          "row": 17,
+          "col": 1,
+          "html": "Specifies PoE-Out state (CSS610-1Gi-7R-2S+ model only):<br/><code>auto-on</code> - the board will attempt to detect if power can be applied to the port. For power-on to happen there should be resistance on spare pairs in the range from 3kΩ to 26.5kΩ<br/><code>forced-on</code> - detection range is removed. As a result power over Ethernet will be always on<br/><code>off</code> - all detection and power is turned off for this port"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Enables or disables DHCP Option-82 information. When enabled, the Option-82 information (Agent Remote ID and Circuit ID) is added for DHCP packets received from untrusted ports. Can be used together with an Option-82 capable DHCP server to assign IP addresses and implement policies. The setting does not apply to DHCPv6 packets.<br/>For Agent Remote ID, SwOS uses the interface name where DHCP client resides. For Agent Circuit ID, SwOS uses the identity of the SwOS device, internally used port ID and VLAN ID. For example:<br/>Agent Remote ID - <code>Port1</code><br/>Agent Circuit ID - <code>MikroTik eth 0/1:100</code>"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "rows": 13,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Specify LACP packet exchange mode or Static LAG mode on ports:<br/><code>Passive</code> - place port in listening state, use LACP only when its contrary port uses active LACP mode<br/><code>Active</code> - prefer to start LACP regardless of contrary port mode<br/><code>Static</code> - set port in a Static LAG mode; requires setting the same <strong>Group</strong> setting for all ports that need to be included in the same static LAG"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "<code>Port Lock</code> - Enables or disables MAC address learning on this port. When the option is enabled, it will restrict MAC address learning and static MAC addresses should be configured. Any received frames with unknown source MAC address will be dropped<br/><code>Lock On First</code> - Allows learning of the source MAC address from the first received frame; this property should be used together with <code>Port Lock</code>. Learning of the first MAC address will reset every time an interface status changes"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "<code>Mirror Ingress</code> - Whether traffic entering this port must be copied and forwarded to the mirroring target port<br/><code>Mirror Egress</code> - Whether traffic leaving this port must be copied and forwarded to the mirroring target port<br/><code>Mirror To</code> - Mirroring target port"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "<code>Storm Rate</code> - Limit the number of broadcast packets transmitted by an interface. The rate is measured in bits per second (bps)<br/><code>Include Unknown Unicast</code> - Include unicast packets without an entry in the host table in <code>Storm Rate</code> limitation"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "<code>Ingress Rate</code> - Limit traffic entering this port (bps)<br/><code>Egress Rate</code> - Limit traffic leaving this port (bps)"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "There are two methods for automatically detecting RSTP port cost depending on link speed.<br/><code>short</code>: 40G - 1; 10G - 2; 1G - 4; 100M - 10; 10M - 100<br/><code>long</code>: 40G - 500; 10G - 2000; 1G - 20000; 100M - 200000; 10M - 2000000"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Whether to forward IEEE reserved multicast MAC address that are in the <strong>01:80:C2:00:00:0x</strong> range. Switches compliant with R/M/STP standards should refrain from forwarding these packets.<br/><br/>If you enable this setting, SwOS will forward reserved multicast MAC packets and disable RSTP:<br/>- the switch will not process incoming BPDUs (Bridge Protocol Data Units)<br/>- it will also not send its own BPDUs<br/>- Bridge Priority and per-port RSTP configuration settings will no longer have any effect.<br/><br/>Enabling forwarding of reserved MAC addresses may affect certain protocols relying on these addresses. It is advisable to enable forwarding only when absolutely necessary, such as in transparent bridging setups (e.g., extending long links, using bridge as media converters, or conducting network analysis).<br/><br/>Notable MAC addresses and protocol examples (used by RouterOS):<br/><code>01:80:C2:00:00:00</code> - Spanning Tree Protocol (STP)<br/><code>01:80:C2:00:00:01</code> - Ethernet Flow Control<br/><code>01:80:C2:00:00:02</code> - Link Aggregation Control Protocol (LACP)<br/><code>01:80:C2:00:00:03</code> - Dot1x client and server<br/><code>01:80:C2:00:00:08</code> - Spanning Tree Protocol (for 802.1ad bridges, using <code>ether-type=0x88a8</code>)<br/><code>01:80:C2:00:00:0D</code> - Multiple VLAN Registration Protocol (for 802.1ad bridges, using <code>ether-type=0x88a8</code>)<br/><code>01:80:C2:00:00:0E</code> - Link Layer Discovery Protocol, Multi-chassis Link Aggregation Group and Precision Time Protocol<br/><br/>The Flow Control MAC address <code>01:80:C2:00:00:01</code> is an exception — it does not get forwarded by SwOS."
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Shows STP/RSTP functionality mode on a specific port (read-only):<br/><code>RSTP</code><br/><code>STP</code>"
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Shows specific port role (read-only):<br/><code>root</code> - port that is facing towards the root bridge and will be used to forward traffic from/to the root bridge<br/><code>alternate</code> - port that is facing towards root bridge, but is not going to forward traffic (a backup for root port)<br/><code>backup</code> - port that is facing away from the root bridge, but is not going to forward traffic (a backup for non-root port)<br/><code>designated</code> - port that is facing away from the root bridge and is going to forward traffic<br/><code>disabled</code> - port that is not strictly part of STP (RSTP functionality is disabled)"
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "html": "<code>edge</code> - ports that are not supposed to receive any BPDUs, should be connected to the end station (read-only)<br/><code>point-to-point</code> - ports that operate in full-duplex links, can be part of STP and operate in a forwarding state (read-only)"
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "html": "Shows each port state (read-only):<br/><code>forwarding</code> - port participates in traffic forwarding and is learning MAC addresses, is receiving BPDUs<br/><code>discarding</code> - port does not participate in traffic forwarding and is not learning MAC addresses, is receiving BPDU<br/><code>learning</code> - port does not participate in traffic forwarding but is learning MAC addresses"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "VLAN filtering mode; these options are relevant to egress ports (except for strict mode).<br/><code>disabled</code> - VLAN table is not used. The switch discards packets with a VLAN tag on egress ports. If the packet has a VLAN tag and the VLAN ID matches <code>Default VLAN ID</code> on egress ports, then with <code>VLAN Receive=any</code> the switch will remove the VLAN tag and forward the packet.<br/><code>optional</code> - Disabled VLAN filtering. Handle packets with VLAN tag ID that is not present in the VLAN table just like packets without VLAN tag.<br/><code>strict</code> - Enabled VLAN filtering with additional ingress filtering, which checks if the ingress port is a member of the received VLAN ID in the VLAN table. Received packets on the ingress port with a VLAN ID that does not match the VLAN table will be dropped. Default VLAN ID must be specified for access ports since it will be used to tag ingress traffic and untag egress traffic for a certain port."
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Received traffic filtering based on VLAN tag presence.<br/><code>any</code> - allows tagged and untagged packets on a certain port<br/><code>only tagged</code> - allows only packets with a VLAN tag. The \"Default VLAN ID\" will not work, because it only applies for untagged traffic<br/><code>only untagged</code> - allows only packets without a VLAN tag"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 10,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 11,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 12,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 13,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 14,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

@@ -1,0 +1,68 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "bridging-and-switching/user-guides/loop-protect.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/user-guides/loop-protect.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/user-guides/loop-protect",
+  "md_sha256": "12a070283577aed3c6dabb4479e73c8adfeff72bc1bb11ad3a12cb281f4e30b3",
+  "html_sha256": "15d4e4fca61a87374e2b491bddbcb06ba1670c1eb08a0f8c41081f272cf02f3f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "<ul><li><strong>on</strong> - loop-protect feature is turned on, the interface is sending and listening for loop protect packets</li><li><strong>off</strong> - loop-protect feature is turned off</li><li><strong>disable</strong> - loop-protect feature is turned on, the interface has received a loop protect packet and disabled itself to prevent a loop.</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

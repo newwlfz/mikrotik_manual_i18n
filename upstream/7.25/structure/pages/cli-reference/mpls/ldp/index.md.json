@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/mpls/ldp/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/ldp.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/ldp/",
+  "md_sha256": "252327eb239f7cb02d5bccdf4cc0951e001dc46a6b8f59a6ce13e99e8529c070",
+  "html_sha256": "62a6a5c6b3e1de046acedbd4c9f5d41316679b30a16c2bbbaa1a862d06cbb571",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

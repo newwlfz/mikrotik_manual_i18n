@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/dns/adlist/pause.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dns/adlist/pause.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dns/adlist/pause",
+  "md_sha256": "d12a5ac82a6adc0a044b99039bf9ffd56a84a7b09ed9ce6415eca919c27840e5",
+  "html_sha256": "714751c44534f6578ef6fec62f832b40330b6de12cb78313547d7100bc289e59",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

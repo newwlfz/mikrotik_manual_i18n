@@ -1,0 +1,204 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "virtual-private-networks/zerotier.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/virtual-private-networks/zerotier.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/virtual-private-networks/zerotier",
+  "md_sha256": "c4f5aee044f083b042890edf4cd2705e6344d98a044f2268be71531699c58453",
+  "html_sha256": "45d5b9141d775f4edb1402e60ef6b3cda9d12462fa4178fee3b41be284c29e9a",
+  "body": {
+    "html": {
+      "lists": 6,
+      "listItems": 27,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 24,
+      "listItems": 24,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 24,
+      "listItems": 24,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "listItems": [
+        27,
+        24
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "unaligned": {
+        "reason": "cell-count",
+        "row": 1,
+        "markdown": 3,
+        "html": 2
+      },
+      "rebuild": true,
+      "rebuild_rows": [
+        [
+          "<strong>allow-default</strong> (*string; yes",
+          "no)*"
+        ],
+        [
+          "<strong>allow-global</strong>(*string; yes",
+          "no)*"
+        ],
+        [
+          "<strong>allow-managed</strong>(*string; yes",
+          "no)*"
+        ],
+        [
+          "<strong>arp-timeout</strong> ( <em>number</em>; default: <strong>auto</strong>)",
+          "ARP timeout value."
+        ],
+        [
+          "<strong>comment</strong> (<em>string</em>; Default: )",
+          "Descriptive comment for the interface."
+        ],
+        [
+          "<strong>copy-from</strong>",
+          "Allows copying existing interface configuration."
+        ],
+        [
+          "<strong>disable-running-check</strong>(*string; yes",
+          "no)*"
+        ],
+        [
+          "<strong>instance</strong>(<em>string</em>; Default:<strong>zt1</strong>)",
+          "ZeroTier instance name."
+        ],
+        [
+          "<strong>name</strong>(<em>string</em>; default: <strong>zerotier1</strong>)",
+          "A short name."
+        ],
+        [
+          "<strong>network</strong>(<em>string</em>; Default)",
+          "16-digit network ID."
+        ]
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 15,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "unaligned": {
+        "reason": "cell-count",
+        "row": 1,
+        "markdown": 3,
+        "html": 2
+      },
+      "rebuild": true,
+      "rebuild_rows": [
+        [
+          "<strong>broadcast</strong> *( yes",
+          "no; Default: <strong>yes</strong>)*"
+        ],
+        [
+          "<strong>comment</strong> (<em>string</em>; Default: )",
+          "Descriptive comment for the controller."
+        ],
+        [
+          "<strong>copy-from</strong> (<em>string</em>; Default: ) <br/>",
+          "Copies an existing item. It takes default values of a new item's properties from another item. If you do not want to make an exact copy, you can specify new values for some properties. When copying items that have names, you will usually have to give a new name to a copy."
+        ],
+        [
+          "<strong>instance</strong> (<em>string</em>; Default: <strong>zt1</strong>)",
+          "ZeroTier instance name."
+        ],
+        [
+          "<strong>ip-range</strong> (<em>IP</em>; Default: )",
+          "IP range, <em>for example, 172.16.16.1-172.16.16.254.</em>"
+        ],
+        [
+          "<strong>ip6-6plane</strong> *( yes",
+          "no; Default: <strong>no</strong>)*"
+        ],
+        [
+          "<strong>ip6-rfc4193</strong> *( yes",
+          "no; Default: <strong>no</strong>)*"
+        ],
+        [
+          "<strong>ip6-range</strong> (<em>IPv6</em>; Default: )",
+          "IPv6 range, <em>for example fd00:feed:feed:beef::-fd00:feed:feed:beef:ffff:ffff:ffff:ffff.</em>"
+        ],
+        [
+          "<strong>mtu</strong><em>(integer;</em> Default: <strong>2800</strong>)",
+          "Network MTU."
+        ],
+        [
+          "<strong>multicast-limit</strong> (<em>integer</em>: Default: <strong>32</strong>)",
+          "Maximum recipients for a multicast packet."
+        ],
+        [
+          "<strong>name</strong> (<em>string</em>; Default: )",
+          "A short name for this controller."
+        ],
+        [
+          "<strong>network</strong> (<em>string</em>; Default)",
+          "16-digit network ID."
+        ],
+        [
+          "<strong>private</strong> *( yes",
+          "no; Default: <strong>yes</strong>)*"
+        ],
+        [
+          "<strong>routes</strong> (<em>IP@GW</em>; Default: )",
+          "Push routes in the following format: <em>Routes ::= Route[,Routes]</em><em>Route ::= Dst[@Gw]</em>"
+        ]
+      ]
+    }
+  ],
+  "unaligned": [
+    {
+      "table": 1,
+      "reason": "cell-count",
+      "row": 1,
+      "markdown": 3,
+      "html": 2
+    },
+    {
+      "table": 2,
+      "reason": "cell-count",
+      "row": 1,
+      "markdown": 3,
+      "html": 2
+    }
+  ]
+}

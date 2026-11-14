@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "user-guides/routing-and-networking-protocols/moving-from-rosv6-to-rosv7.md",
+  "source_url": "https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/moving-from-rosv6-to-rosv7.md",
+  "html_url": "https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/moving-from-rosv6-to-rosv7",
+  "md_sha256": "1be88355b96aa0ad752600edbc99dec662c826f6cfbd08449bc665cb2858d65e",
+  "html_sha256": "817d7db776d760bb9c6b32c6144092f67e8dc22bc483af2fe1b088cf79f2d48a",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 44,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

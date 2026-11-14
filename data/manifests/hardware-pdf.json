@@ -1,0 +1,123 @@
+{
+ "schema": 1,
+ "generated_at": "2026-11-10T07:25:57.397Z",
+ "pages": {
+  "https://manual.mikrotik.com/hardware/cube-60g-ac": {
+   "cube-60g-ac.pdf": "https://manual.mikrotik.com/assets/files/cube-60g-ac-0575326476d89f7f1ddf08a17bccceb7.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/cube-lite60": {
+   "cube-lite60.pdf": "https://manual.mikrotik.com/assets/files/cube-lite60-4d7ed9c7f2202d7a7a4f5a01d2a625ea.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/lhg-60g": {
+   "lhg-60g.pdf": "https://manual.mikrotik.com/assets/files/lhg-60g-d834c6f77e358b33f6d3fd47663765b4.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/lhg-lite60": {
+   "lhg-lite60.pdf": "https://manual.mikrotik.com/assets/files/lhg-lite60-78d98dce5497554c58a20e9c0f69791e.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/nray-series": {
+   "nray-series.pdf": "https://manual.mikrotik.com/assets/files/nray-series-8b1c8f47fdd8ce1e1b232581c0108acf.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/wap-60g-series": {
+   "wap-60g-series.pdf": "https://manual.mikrotik.com/assets/files/wap-60g-series-9b51ea18dc11beafdef583ebaff01300.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/wireless-wire-cube-pro-cube-60pro-ac": {
+   "wireless-wire-cube-pro-cube-60pro-ac.pdf": "https://manual.mikrotik.com/assets/files/wireless-wire-cube-pro-cube-60pro-ac-a657d8a471bc9a7bb7b1391f23f9879a.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/wireless-wire-cube": {
+   "wireless-wire-cube.pdf": "https://manual.mikrotik.com/assets/files/wireless-wire-cube-341547731816889727201641e27bbc3a.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/wireless-wire-dish": {
+   "wireless-wire-dish.pdf": "https://manual.mikrotik.com/assets/files/wireless-wire-dish-0b7f9054624012522cbc79e78af307a1.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/cme22-2n-bg77": {
+   "cme22-2n-bg77.pdf": "https://manual.mikrotik.com/assets/files/cme22-2n-bg77-d526c6030e99db740f8481f8d47777e7.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/iaqm-thc2pv-w-and-iaqm-thc2pv-g": {
+   "iaqm-thc2pv-w-and-iaqm-thc2pv-g.pdf": "https://manual.mikrotik.com/assets/files/iaqm-thc2pv-w-and-iaqm-thc2pv-g-ca07b49c7e0222e093e8d49c300e3b87.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/knot-embedded-lte4-ec25-eu-and-kne": {
+   "knot-embedded-lte4-ec25-eu-and-kne.pdf": "https://manual.mikrotik.com/assets/files/knot-embedded-lte4-ec25-eu-and-kne-1113311d8358f69531fb894713b38b2a.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/knot-embedded-lte4-global-eg25-g-and-kne": {
+   "knot-embedded-lte4-global-eg25-g-and-kne.pdf": "https://manual.mikrotik.com/assets/files/knot-embedded-lte4-global-eg25-g-and-kne-90ab457bdf749d4c1d6d36f3e9c20b44.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/knot-lr8-kit": {
+   "knot-lr8-kit.pdf": "https://manual.mikrotik.com/assets/files/knot-lr8-kit-14575ab2838632fcb5f7fa7175683a56.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/knot-lr8g-kit": {
+   "knot-lr8g-kit.pdf": "https://manual.mikrotik.com/assets/files/knot-lr8g-kit-eb514d60bec37cac504b3d907df8b108.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/knot-lr9-kit": {
+   "knot-lr9-kit.pdf": "https://manual.mikrotik.com/assets/files/knot-lr9-kit-ef58c68051243b5531c9c0a472008bf0.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/knot-lr9g-kit": {
+   "knot-lr9g-kit.pdf": "https://manual.mikrotik.com/assets/files/knot-lr9g-kit-b74fa0b50265ed036c2a40802b068492.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/knot": {
+   "knot.pdf": "https://manual.mikrotik.com/assets/files/knot-946091ad4c47a2e8a1e7e73892c75438.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/l14g-2ax-bt5-hl9-and-eg800q": {
+   "l14g-2ax-bt5-hl9-and-eg800q.pdf": "https://manual.mikrotik.com/assets/files/l14g-2ax-bt5-hl9-and-eg800q-87762c8938cbe57a3dcfaa63cee67b53.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/l14g-2ax-bt5-lr8-and-eg800k": {
+   "l14g-2ax-bt5-lr8-and-eg800k.pdf": "https://manual.mikrotik.com/assets/files/l14g-2ax-bt5-lr8-and-eg800k-ec6d57bb0b77794ca044e26fe7be0500.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/ltap-lr8-lte-kit": {
+   "ltap-lr8-lte-kit.pdf": "https://manual.mikrotik.com/assets/files/ltap-lr8-lte-kit-eeb73bd200953b5a8ca3fc070627ae4b.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/ltap-lr8-lte6-kit": {
+   "ltap-lr8-lte6-kit.pdf": "https://manual.mikrotik.com/assets/files/ltap-lr8-lte6-kit-71d41280de7103b44c39d02f829e279a.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/ltap-lr8g-lte6-kit": {
+   "ltap-lr8g-lte6-kit.pdf": "https://manual.mikrotik.com/assets/files/ltap-lr8g-lte6-kit-23522edeb754bc391b59ac9013a88060.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/r11e-lr2": {
+   "r11e-lr2.pdf": "https://manual.mikrotik.com/assets/files/r11e-lr2-31679419e5e4a56e1f4d2b5566cb004f.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/r11e-lr8": {
+   "r11e-lr8.pdf": "https://manual.mikrotik.com/assets/files/r11e-lr8-d0ac4256b0bb1ec57c362648c9c7ec3a.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/r11e-lr8g": {
+   "r11e-lr8g.pdf": "https://manual.mikrotik.com/assets/files/r11e-lr8g-bcf6bf714f70c7ec6186cd954670291d.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/r11e-lr9": {
+   "r11e-lr9.pdf": "https://manual.mikrotik.com/assets/files/r11e-lr9-43501007f1481be9eb0a4d0e5cd6fec0.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/r11e-lr9g": {
+   "r11e-lr9g.pdf": "https://manual.mikrotik.com/assets/files/r11e-lr9g-53967cbc5df54a2266a0515317a062b3.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/tg-bt5-in": {
+   "tg-bt5-in.pdf": "https://manual.mikrotik.com/assets/files/tg-bt5-in-c808773bd63bcc571c9cefe268e5bc79.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/tg-bt5-out": {
+   "tg-bt5-out.pdf": "https://manual.mikrotik.com/assets/files/tg-bt5-out-6701945c9c74459ee406756e165fb981.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/tg-lr82": {
+   "tg-lr82.pdf": "https://manual.mikrotik.com/assets/files/tg-lr82-69720aecca1b4446c1872862e03183cb.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/tg-lr92": {
+   "tg-lr92.pdf": "https://manual.mikrotik.com/assets/files/tg-lr92-8a6d0117f62f9c262e34369cb2d654fe.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/wap-lr2-kit": {
+   "wap-lr2-kit.pdf": "https://manual.mikrotik.com/assets/files/wap-lr2-kit-0ff0e8046d9b3541dfdd77380b8cc0f3.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/wap-lr8g-kit": {
+   "wap-lr8g-kit.pdf": "https://manual.mikrotik.com/assets/files/wap-lr8g-kit-082b4c6bbfcc22f5e953fc4f95bdcc16.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/wap-lr9-kit": {
+   "wap-lr9-kit.pdf": "https://manual.mikrotik.com/assets/files/wap-lr9-kit-122ca84be22e5dcfa960c751ce766fdb.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/wap-lr9g-kit": {
+   "wap-lr9g-kit.pdf": "https://manual.mikrotik.com/assets/files/wap-lr9g-kit-46c68ee366bf7ad6c33e4d51b7f68887.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/intercell": {
+   "intercell-upgrade-example.pdf": "https://manual.mikrotik.com/assets/files/intercell-upgrade-example-5ece1656a406f6ae31224ea25803dc93.pdf",
+   "intercell-b38-cfg-example.pdf": "https://manual.mikrotik.com/assets/files/intercell-b38-cfg-example-2078e289f3e5aef6e28fbbe0196d7f12.pdf",
+   "intercell-built-in-epc.pdf": "https://manual.mikrotik.com/assets/files/intercell-built-in-epc-75f9a8dc8ba16b3652fef99419e9caee.pdf",
+   "intercell-reset-serial-console.pdf": "https://manual.mikrotik.com/assets/files/intercell-reset-serial-console-a68ab7a25f27ea98bd8a568d1f3f9239.pdf",
+   "intercell-cfg-import.pdf": "https://manual.mikrotik.com/assets/files/intercell-cfg-import-6bea2be2b015b0d4b56eb4ed5763fd49.pdf",
+   "intercell-monitoring.pdf": "https://manual.mikrotik.com/assets/files/intercell-monitoring-e1bb86c0453d3c8c7d5bc77d71765444.pdf",
+   "intercell-dual-carrier-configuration.pdf": "https://manual.mikrotik.com/assets/files/intercell-dual-carrier-configuration-d2a48f833ca10c90ac192e01e2f96bee.pdf"
+  }
+ }
+}

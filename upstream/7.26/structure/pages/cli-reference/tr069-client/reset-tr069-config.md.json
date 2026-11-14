@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/tr069-client/reset-tr069-config.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/tr069-client/reset-tr069-config.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/tr069-client/reset-tr069-config",
+  "md_sha256": "d8ced8d12863c23b90b58ff7356182360fc80f126739f89f92c9d7adb75776e7",
+  "html_sha256": "b885c888ba3251f90c5be82437cbd90a0dc26e651ea654c05519b16defe1912b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Capsman",
+  "key": "wireless/abgn/capsman",
+  "link": {
+    "type": "doc",
+    "id": "wireless/abgn/capsman/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

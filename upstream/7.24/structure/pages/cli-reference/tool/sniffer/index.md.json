@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/tool/sniffer/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/sniffer.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/sniffer/",
+  "md_sha256": "9120057d50aedfd56b7361ce3f8250dc843ae4848ef862586e861beb9a7276b1",
+  "html_sha256": "7805b730209ca6d92179063782f811205fec871dd469f94f772f5d128cf6db34",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "containers/user-guides/container-haproxy.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/containers/user-guides/container-haproxy.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/containers/user-guides/container-haproxy",
+  "md_sha256": "e43063933b5de1d3c58dc4704a637a002990302d470f7039d8434b2f423dd53c",
+  "html_sha256": "8191126c14c0b1f236041fc443bc7efb8397fdffd6576db7ffdba575fde51af4",
+  "body": {
+    "html": {
+      "lists": 5,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 5,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 12,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 12,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        0,
+        11
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

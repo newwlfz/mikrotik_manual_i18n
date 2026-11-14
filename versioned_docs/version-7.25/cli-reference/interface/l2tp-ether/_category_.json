@@ -1,0 +1,11 @@
+{
+  "position": 16,
+  "label": "L2Tp Ether",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/l2tp-ether/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/l2tp-ether"
+}

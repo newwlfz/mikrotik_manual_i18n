@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/w60g/align.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/w60g/align.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/w60g/align",
+  "md_sha256": "094951c8799c79c6fc271dea149a868ac87284699e0591f31ef90f47e00e308c",
+  "html_sha256": "0d1b5848f8129fb0080300a0a1fbe2537fa8c1c0485980c35d76af2c952831d9",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

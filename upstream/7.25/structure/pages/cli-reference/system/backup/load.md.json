@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/backup/load.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/backup/load.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/backup/load",
+  "md_sha256": "e3c545172b4e650f190b1e8f3eebfe134d88c5f51300041f73a0570a469bb703",
+  "html_sha256": "92133552a1f8bffab30918688505a51bd07b079f7f35a59bf76a7a81250cec56",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

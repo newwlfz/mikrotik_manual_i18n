@@ -1,0 +1,135 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "authentication-authorization-accounting/certificates.md",
+  "source_url": "https://manual.mikrotik.com/docs/authentication-authorization-accounting/certificates.md",
+  "html_url": "https://manual.mikrotik.com/docs/authentication-authorization-accounting/certificates",
+  "md_sha256": "95a06aecc1119b3e6cd11b2ce5307fb07c2c6bab1b4f7f6f3d0eb53b29dcbbea",
+  "html_sha256": "e45b2c80f05cfcc90e808b47f6a034e8c54d11188c2eac74e6ee1291da14e0ef",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 9,
+      "sup": 0,
+      "code": 29,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 9,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 9,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 16,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 29,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Exported certificate type. <br/> In case of PEM, certificate will be exported with CRT extension, if export-passphrase is specified, also an encrypted private KEY file will be exported. <br/> In case of PKCS12, certificate will be exported with P12 extension, if export-passphrase is specified, exported certificate will contain an encrypted private key. The PKCS12 file is encrypted using AES."
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 14,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Services that can use <a href=\"#built-in-trust-store-authorities\">built-in trust store authorities</a> for certificate verification. <br/> The current defaults: <ul><li>fetch</li><li>mqtt</li><li>email</li><li>netwatch</li><li>container</li><li>lora</li><li>dns</li><li>www</li><li>reverse-proxy</li></ul>"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Where to store downloaded CRL information <br/> CRL will be automatically renewed every hour for certificates which have \"trusted=yes\" using http protocol (ldap and ftp are currently unsupported)"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 28,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 8,
+      "rows": 6,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

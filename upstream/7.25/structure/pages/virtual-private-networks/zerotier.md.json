@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "virtual-private-networks/zerotier.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/virtual-private-networks/zerotier.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/virtual-private-networks/zerotier",
+  "md_sha256": "e5834744f8e723cdfeb6930df1fd1cd0848d5f27ab1095b3c5237a7c445edafe",
+  "html_sha256": "d14faf1d90dc4d5d1d203cffb01a624b1d34a86f65ffe4de6bba7b6d279aa19e",
+  "body": {
+    "html": {
+      "lists": 6,
+      "listItems": 27,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 5,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 26,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 26,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "listItems": [
+        27,
+        26
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

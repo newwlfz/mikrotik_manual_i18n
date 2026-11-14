@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "diagnostics-monitoring-and-troubleshooting/ping.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/ping.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/ping",
+  "md_sha256": "31be1b66f5ceea8ae59b54d04a2d32b2787fe972f8f4387c629c6e84e03563d5",
+  "html_sha256": "7577a55fafd33199cad84643dbcdedc759ba1c305f41a62e28ea30f1ab1a5e89",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 72,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

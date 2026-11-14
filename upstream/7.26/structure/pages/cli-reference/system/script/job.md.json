@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/script/job.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/script/job.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/script/job",
+  "md_sha256": "ad5efdca95abf13b4ef53e66a234265a4b724e9f51000bb31416d4dc7cea9b06",
+  "html_sha256": "fab737ee23cc97a344cfde535753118f26997a9ca93b7fff72ee65fceee4a65e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

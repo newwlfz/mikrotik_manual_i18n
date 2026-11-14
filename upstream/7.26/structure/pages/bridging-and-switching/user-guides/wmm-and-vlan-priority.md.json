@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "bridging-and-switching/user-guides/wmm-and-vlan-priority.md",
+  "source_url": "https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/wmm-and-vlan-priority.md",
+  "html_url": "https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/wmm-and-vlan-priority",
+  "md_sha256": "529bce477378f0447ab0e1f5ad674166007af54c31a92a2b2ca8597d573efec1",
+  "html_sha256": "6c01f1e23250e8b5d4404fa73023716ff52376c7c14e3408ae8fead6c8105497",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 26,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

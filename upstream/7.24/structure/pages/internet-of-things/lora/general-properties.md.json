@@ -1,0 +1,128 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "internet-of-things/lora/general-properties.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/internet-of-things/lora/general-properties.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/internet-of-things/lora/general-properties",
+  "md_sha256": "f0ce276da6340f8155702ce034c5d1bf921dbf48295f36d30076318a5fe5defa",
+  "html_sha256": "d953bc2840b5e7e58f3b098a684c290215827566aeddb28e0a3c05f3a02b6301",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 6,
+      "sup": 0,
+      "code": 29,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 6,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 6,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "listItems": [
+        6,
+        0
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 14,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Antenna gain in dBi. This value should be equal to <code>setup-antenna-gain</code> minus <code>cable-loss</code>. Using a 6.5 dBi antenna, 6.5 is the value to be configured (not taking into account cable loss). <br/> Output power of the gateway is dictated by the server. The gateway will calculate its actual output power by subtracting <code>antenna-gain</code> setting from <code>server_value</code> (value received in the downlink message)."
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "Defines what kind of packets should be forwarded to Network server:<ul><li>crc-validation - Forward valid packets with correct CRC.</li><li>dev-addr-validation - Checks if DevAddr of the packet corresponds to the NetID and if not, drops the packet. The following sequence happens: 1) Dev. Addr value gets \"obtained\" from the received LoRa packet; 2) Dev. Addr is \"compared\" against <a href=\"https://www.thethingsnetwork.org/docs/lorawan/prefix-assignments/\" rel=\"nofollow\">\"valid\" Net IDs</a> list; 3) If there is no Net ID for the Dev. Addr, the packet is not forwarded; 4) If Net ID is valid, Dev. Addr range is valid, the packet is forwarded.</li><li>proprietary-traffic - Checks the content of the LoRa packet and if the \"type\" of the frame is \"proprietary\", the packet is not forwarded.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 4,
+          "col": 1,
+          "html": "Defines the type for the filter: <br/><ul><li>blacklist (if the range matches it blocks/drops packets)</li><li>whitelist (if the range matches it forwards the packets)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 4,
+          "col": 1,
+          "html": "Define the type for the filter: <br/><ul><li>blacklist (if the range matches, it blocks/drops packets)</li><li>whitelist (if the range matches, it forwards the packets)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "rows": 13,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Allows to configure additional options for the traffic tab: <br/><ul><li>crc-errors (yes &#124; no) → Set to \"no\" to discard packets that have \"crc error\" status from appearing in the traffic tab;</li><li>pckt-limit (10...1024) → To limit traffic tab's log list.</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

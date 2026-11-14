@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "management-tools/mac-server.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/management-tools/mac-server.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/management-tools/mac-server",
+  "md_sha256": "613cbb25e0e4e916596f28e64e082c0a3e4b41d206bc16cae282b4f8705a5d88",
+  "html_sha256": "d827fb5c746dd9fc6411cc0130bbc6bf83f16c677d4ceb0c9f72ec7c4c00a831",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 9,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

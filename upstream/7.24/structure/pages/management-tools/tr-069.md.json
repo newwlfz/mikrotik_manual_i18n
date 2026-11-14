@@ -1,0 +1,82 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "management-tools/tr-069.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/management-tools/tr-069.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/management-tools/tr-069",
+  "md_sha256": "fff075eff3480cd255b8cb7189ccb47d10a9b5cacc2ef82cbeb7e9c3823afefc",
+  "html_sha256": "0ebfe71e6efe6c7c9648ad298f78c443a613682a784d30e1459490e251466437",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 9,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "URL of ACS. Examples: \"<a href=\"https://example.com:8080/path/\" target=\"_blank\" rel=\"noopener noreferrer\">https://example.com:8080/path/</a>\", \"<a href=\"https://192.168.1.100/\" target=\"_blank\" rel=\"noopener noreferrer\">https://192.168.1.100/</a>\" <br/> If ACS is accessed using HTTPS, a Root CA must be imported on the client <a href=\"/docs/7.24/authentication-authorization-accounting/certificates\">certificate store</a> to verify the ACS server certificate."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "informative status of CWMP.<ul><li>disabled - protocol disabled,</li><li>waiting-URL - protocol enabled, but ACS URL not configured,</li><li>running - CWMP is configured correctly and will communicate with ACS on events</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

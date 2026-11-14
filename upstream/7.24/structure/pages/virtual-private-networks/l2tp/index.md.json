@@ -1,0 +1,87 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "virtual-private-networks/l2tp/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/virtual-private-networks/l2tp.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/virtual-private-networks/l2tp/",
+  "md_sha256": "b7fe638c366875307911f55abd995ac8947d292a844bf6f110088219999e539d",
+  "html_sha256": "b229786711be38db066c258b25d21d4a9212e223edf1e08915ee578aa14deefb",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 26,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Remote address of L2TP server (if the address is in the VRF table, VRF should be specified) <br/><code>/interface/l2tp-client</code><br/><code>add connect-to=192.168.88.1@vrf1 name=l2tp-out1 user=l2tp-client)</code><br/>"
+        },
+        {
+          "row": 16,
+          "col": 1,
+          "html": "When this option is enabled, dynamic IPSec peer configuration and policy (transport mode) is added to encapsulate the L2TP connection into an IPSec tunnel. <br/><br/><strong>Caution:</strong> Multiple L2tp/ipsec clients behind the same NAT will not work in this mode. To achieve such a scenario, disable use-ipsec and set static policies for clients with enabled tunnel=yes, level=unique settings. <br/><br/>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 20,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 23,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Remote address of L2TP server. <br/>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

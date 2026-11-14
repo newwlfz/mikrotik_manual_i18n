@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/dhcp-relay/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dhcp-relay/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dhcp-relay/monitor",
+  "md_sha256": "215c7fad84cc2470733326f74f52f031bad99c085183bee3469a61a22b28a8a5",
+  "html_sha256": "40cebe09f45ae3b839b4902f402a92441a4e52b49afaa48da6afc97033960d48",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

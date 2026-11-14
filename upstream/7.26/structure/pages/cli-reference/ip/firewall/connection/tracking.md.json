@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/firewall/connection/tracking.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/firewall/connection/tracking.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/firewall/connection/tracking",
+  "md_sha256": "1674c476fa7d6d844bab2f6525c9461c8cd3f451b87812b8c7b057f57f3400f9",
+  "html_sha256": "3e1f2f18b68300ed1e929e726d1df66e4914c32c1db4e3449933feeac867f9ea",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

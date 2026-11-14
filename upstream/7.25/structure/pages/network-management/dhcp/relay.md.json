@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "network-management/dhcp/relay.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/network-management/dhcp/relay.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/network-management/dhcp/relay",
+  "md_sha256": "78894d579698a284beed7bf7560c9899c04818fcf007f8797e842f84a9262d97",
+  "html_sha256": "fb64cbe8163395459e71e6f05683681a2f0959a2b5a0e2eea3729f96170dca7b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 31,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

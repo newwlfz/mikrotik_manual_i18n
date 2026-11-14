@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/bridge/host.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/host.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/host",
+  "md_sha256": "482a8fd8075c705e0ca88c8265f3f9bd61f01a918d543c27899189b0bc9c9d29",
+  "html_sha256": "7d0d741cd2f6d9b6fdc97042a43e4421b13132616d5e6d1d41708c978bc0f3e4",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

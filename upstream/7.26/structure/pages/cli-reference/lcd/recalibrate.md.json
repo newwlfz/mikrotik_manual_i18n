@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/lcd/recalibrate.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/lcd/recalibrate.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/lcd/recalibrate",
+  "md_sha256": "753d3f3f7a7ca7d1da81b91cba4e265154bfc540fe9a4232b36cd0b5a93ca2e1",
+  "html_sha256": "9b351ff652c5b281140d8392a4bd756e5ffd811b92b9f55ab029facdd3859170",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

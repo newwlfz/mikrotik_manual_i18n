@@ -1,0 +1,11 @@
+{
+  "position": 13,
+  "label": "openflow",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/openflow/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/openflow"
+}

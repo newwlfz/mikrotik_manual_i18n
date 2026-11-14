@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/bridge/calea/reset-counters.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bridge/calea/reset-counters.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bridge/calea/reset-counters",
+  "md_sha256": "77828e6851cd0dd37dc38464e98e076f42afd0fd276c6ecb37580c469a03ee44",
+  "html_sha256": "42a3e2c82b916dcd2082470ded79e3a93fd7dc268f1a7e43edf0b14c1f627d8b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

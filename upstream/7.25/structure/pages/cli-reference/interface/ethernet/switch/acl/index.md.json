@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/ethernet/switch/acl/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ethernet/switch/acl.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ethernet/switch/acl/",
+  "md_sha256": "d817828d88d292ada0da79e48de345fcd30b886362bebd66a8f18ef81b83a1c0",
+  "html_sha256": "011477210e75a1c166972b6933dbd8408e8986e95a3311927af803599c6fb58e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 30,
+      "listItems": 30,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 30,
+      "listItems": 30,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

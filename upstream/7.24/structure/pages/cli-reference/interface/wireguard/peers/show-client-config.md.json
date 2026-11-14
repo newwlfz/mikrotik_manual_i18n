@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/wireguard/peers/show-client-config.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireguard/peers/show-client-config.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireguard/peers/show-client-config",
+  "md_sha256": "e35b7135ee91c2aec43b123e24bdc7932f176d5ae779a0850ed603548f412d30",
+  "html_sha256": "19b4aada20ba69e0d5b01338d1f032989bc4911ca6d35b097dcfaa1b597f4725",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

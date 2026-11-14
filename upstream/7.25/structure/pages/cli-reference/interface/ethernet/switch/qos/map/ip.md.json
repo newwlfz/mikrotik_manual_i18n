@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/ethernet/switch/qos/map/ip.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ethernet/switch/qos/map/ip.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ethernet/switch/qos/map/ip",
+  "md_sha256": "a161a851e76ebd02ff0363cbe3ce6face6587f61faa86bdf46791e8679acc9bb",
+  "html_sha256": "d0d3cbbbe3bd303c4005a4a1e35fbc72e26fe8551f44203f87d10e5be34be1ff",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

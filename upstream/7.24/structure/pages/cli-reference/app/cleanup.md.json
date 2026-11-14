@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/app/cleanup.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/app/cleanup.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/app/cleanup",
+  "md_sha256": "185886fe7c208f670b019a9127d7b92c3c09fb04d0a99498951d2158de5d2e87",
+  "html_sha256": "08bc9701fde12213dd05594cbf47bb7e52f6c501b05c61f68a1dd70ec32d4f78",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

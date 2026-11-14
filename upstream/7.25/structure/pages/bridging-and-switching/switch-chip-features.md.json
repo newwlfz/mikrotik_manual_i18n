@@ -1,0 +1,199 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "bridging-and-switching/switch-chip-features.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/switch-chip-features.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/switch-chip-features",
+  "md_sha256": "6542e5f23b2cb7227fd82c403251dc421e0f15469ab0123a62d9d68532913638",
+  "html_sha256": "1a73ce5f4b0855fa17f2f703a38851f73146ea7db87c84ef36af7486d417f651",
+  "body": {
+    "html": {
+      "lists": 6,
+      "listItems": 28,
+      "br": 0,
+      "details": 0,
+      "tables": 17,
+      "sup": 0,
+      "code": 100,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 28,
+      "listItems": 28,
+      "br": 0,
+      "details": 0,
+      "tables": 17,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 28,
+      "listItems": 28,
+      "br": 0,
+      "details": 0,
+      "tables": 17,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 12,
+      "cols": 8,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 48,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Changes the ether1 switch group only on RB450G/RB435G/RB850Gx2 devices. <br/><ul><li><code>yes</code> - ether1 is part of the switch and supports switch grouping and all other advanced Atheros8316/Atheros8327 features including extended statistics (<code><code>/interface/ethernet/print</code> stats</code>).</li><li><code>no</code> - ether1 is not part of the switch, effectively making it a stand-alone ethernet port, this way increasing its throughput to other ports in bridged and routed mode, but removing the switching possibility on this port.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Changes the VLAN lookup mechanism against the <a href=\"/docs/7.25/bridging-and-switching/switch-chip-features#vlan-table\">VLAN Table</a> for ingress traffic.<ul><li><code>disabled</code> - disables checking against the VLAN Table completely for ingress traffic. No traffic is dropped when set on the ingress port.</li><li><code>fallback</code> - checks tagged traffic against the VLAN Table for ingress traffic and forwards all untagged traffic. If ingress traffic is tagged and the egress port is not found in the VLAN table for the appropriate VLAN ID, then traffic is dropped. If a VLAN ID is not found in the VLAN Table, then traffic is forwarded. Used to allow known VLANs only in specific ports.</li><li><code>check</code> - checks tagged traffic against the VLAN Table for ingress traffic and drops all untagged traffic. If ingress traffic is tagged and the egress port is not found in the VLAN table for the appropriate VLAN ID, then traffic is dropped.</li><li><code>secure</code> - checks tagged traffic against the VLAN Table for ingress traffic and drops all untagged traffic. Both ingress and egress ports must be found in the VLAN Table for the appropriate VLAN ID, otherwise, traffic is dropped.</li></ul>"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Sets the action which is performed on the port for egress traffic.<ul><li><code>add-if-missing</code> - adds a VLAN tag on egress traffic and uses default-vlan-id from the ingress port. Should be used for trunk ports.</li><li><code>always-strip</code> - removes a VLAN tag on egress traffic. Should be used for access ports.</li><li><code>leave-as-is</code> - does not add or remove a VLAN tag on egress traffic. Should be used for hybrid ports.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 9,
+      "rows": 7,
+      "cols": 7,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 10,
+      "rows": 7,
+      "cols": 7,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 11,
+      "rows": 7,
+      "cols": 7,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 12,
+      "rows": 7,
+      "cols": 7,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 13,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 14,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 15,
+      "rows": 20,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 16,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

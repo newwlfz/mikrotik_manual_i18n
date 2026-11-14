@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "mobile-networking/gps/gps-tracking-using-http-post.md",
+  "source_url": "https://manual.mikrotik.com/docs/mobile-networking/gps/gps-tracking-using-http-post.md",
+  "html_url": "https://manual.mikrotik.com/docs/mobile-networking/gps/gps-tracking-using-http-post",
+  "md_sha256": "84ce578044b3569c0b15ff4936b010906978fb55e316f0d17b4450ad69b7ce71",
+  "html_sha256": "04392aeaf62e8a25d45a02a9929a800eac8d3b1cb8ce29c1f9716544f5c421e9",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

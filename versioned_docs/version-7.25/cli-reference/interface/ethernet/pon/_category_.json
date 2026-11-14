@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "Pon",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/ethernet/pon/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/ethernet/pon"
+}

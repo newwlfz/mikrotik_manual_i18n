@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/certificate/scep-server/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/scep-server.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/scep-server/",
+  "md_sha256": "ce09051b2978d70fdcc72c5ef95e7741bbfd065b5762c34ac3bbe6145e946c08",
+  "html_sha256": "4030ce6384e0f1cf6ebf1abe4e05740db8a131d1e59bb6747bbb2d7ef5efd837",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

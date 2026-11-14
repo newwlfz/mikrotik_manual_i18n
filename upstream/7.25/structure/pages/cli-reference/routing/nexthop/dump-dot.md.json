@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/routing/nexthop/dump-dot.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/nexthop/dump-dot.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/nexthop/dump-dot",
+  "md_sha256": "b47316504861e2894e7e4d92f4911eca3a699578f16e277cf0ae1306b9504927",
+  "html_sha256": "d1ba1a11d550f30f8539a4d8d83d50854fe367feda209f6d52b73c9ed0e6a511",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

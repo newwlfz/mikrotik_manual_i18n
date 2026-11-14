@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "user-guides/routing-and-networking-protocols/mpls/exp-bit-and-mpls-queuing.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/mpls/exp-bit-and-mpls-queuing.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/mpls/exp-bit-and-mpls-queuing",
+  "md_sha256": "f40a14bfca788ce779a7f3cb707ecbbfcffb0461c3b1c5b155b701fe98ec0275",
+  "html_sha256": "a0018568fa17cf2d95fa189932c023c6ff714fc600309a0b1d8862b3131ff8d9",
+  "body": {
+    "html": {
+      "lists": 5,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 15,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 15,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

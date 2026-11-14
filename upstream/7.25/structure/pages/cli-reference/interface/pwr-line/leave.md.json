@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/pwr-line/leave.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/pwr-line/leave.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/pwr-line/leave",
+  "md_sha256": "916c9ed3a745ee6785a33c14d1e069d700344df765ef4c0c7cdb2ac921b7bcda",
+  "html_sha256": "fccc415e251597a694733e3026f1b9d519177d8d1a0a87c82d8d88eb4f91d950",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "storage/self-encrypting-drives.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/storage/self-encrypting-drives.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/storage/self-encrypting-drives",
+  "md_sha256": "0b91bb0670dcd93f43b7074bcd9f5688131da5d58d7c7c0755164fd2e3f2afb0",
+  "html_sha256": "7f0a5bfbff24bffb88a356f77a8eefd260a5030ad2760e03c7aa1874fbc664a5",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

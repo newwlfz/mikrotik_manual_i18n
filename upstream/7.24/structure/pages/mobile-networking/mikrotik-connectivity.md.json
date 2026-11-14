@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "mobile-networking/mikrotik-connectivity.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/mobile-networking/mikrotik-connectivity.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/mobile-networking/mikrotik-connectivity",
+  "md_sha256": "e1086e14324c9d0e19b391eb56951b9d7f591faa41d2b27290fc6792fc9f5e25",
+  "html_sha256": "4308458a995e72315c615924fab90b508797f70e5b3ffddb9d753bc9d8cfe6f1",
+  "body": {
+    "html": {
+      "lists": 7,
+      "listItems": 8,
+      "br": 0,
+      "details": 6,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 6,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 6,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "listItems": [
+        8,
+        2
+      ],
+      "br": [
+        0,
+        2
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

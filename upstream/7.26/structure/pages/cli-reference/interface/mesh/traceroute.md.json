@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/mesh/traceroute.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/mesh/traceroute.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/mesh/traceroute",
+  "md_sha256": "aa9147d5b36eb3b8a5f4e6f131117681c0fef80799384d5e664af73010a47022",
+  "html_sha256": "6b7d42d154d2d7479bc1dbff73bc8788b8b3edb2b39e917a98031b11f5ba72e6",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

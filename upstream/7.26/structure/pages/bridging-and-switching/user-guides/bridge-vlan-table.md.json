@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "bridging-and-switching/user-guides/bridge-vlan-table.md",
+  "source_url": "https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/bridge-vlan-table.md",
+  "html_url": "https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/bridge-vlan-table",
+  "md_sha256": "8b8bffa97adbb4093b38f44a78c1be84d0ab43a8b4fddd6e1f9af90d6f55c513",
+  "html_sha256": "6d6e2bc5ea867a6465804cfacd31041f38ee0a98d5628449933135789ddf0dec",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 33,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 13,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 13,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

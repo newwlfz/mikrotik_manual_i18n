@@ -1,0 +1,70 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "mobile-networking/sms.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/mobile-networking/sms.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/mobile-networking/sms",
+  "md_sha256": "f20644d405bd105fc6cbd9ac6725079f7a0d5fab337d7099a8b39f7e8e344c15",
+  "html_sha256": "ef3301d4596367a0046d7d84caaf050511922aaf2ccd5bfde903a2646d356242",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 13,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

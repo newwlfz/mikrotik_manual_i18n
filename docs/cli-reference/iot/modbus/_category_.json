@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Modbus",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/iot/modbus/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/iot/modbus"
+}

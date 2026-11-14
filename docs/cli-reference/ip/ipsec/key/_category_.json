@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Key",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/ipsec/key/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/ipsec/key"
+}

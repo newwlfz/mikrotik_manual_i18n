@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/pwr-line/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/pwr-line.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/pwr-line/",
+  "md_sha256": "075622bf509034e1f1c2af38407f545689e8dba10419852700f8e3e27c2e510f",
+  "html_sha256": "d47ddd0400308f025b280009530514e103aa42aef874dca4d8084cdb1e9e9fde",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

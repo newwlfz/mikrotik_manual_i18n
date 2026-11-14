@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/resource/cpu.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/resource/cpu.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/resource/cpu",
+  "md_sha256": "22ffae72e24f615bfb7026044bb3adda3cb53001d928987d52ae03646c84a2de",
+  "html_sha256": "5b94853d80bdac06a400aac533a43e15e2d596de043f47e4db2e598164f901bb",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

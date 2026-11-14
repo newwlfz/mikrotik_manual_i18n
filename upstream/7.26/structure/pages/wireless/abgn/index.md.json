@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "wireless/abgn/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/wireless/abgn.md",
+  "html_url": "https://manual.mikrotik.com/docs/wireless/abgn/",
+  "md_sha256": "55038d31cf53c6001a44cfc64923e5172ec5fef2a65f266a40b96f563c65b1c3",
+  "html_sha256": "445bde6918c5755ffefc39e6b0b4d5b1695a79623af0ee66675a5b3376a54d4d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 9,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

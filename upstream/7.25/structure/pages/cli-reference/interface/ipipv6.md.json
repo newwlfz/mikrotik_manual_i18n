@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/ipipv6.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ipipv6.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ipipv6",
+  "md_sha256": "d052e37686c2b6af975ceca0d0eef082d11afb73b66a0726f2a5a2212b8affa8",
+  "html_sha256": "8cc5edcbbf93279da11ace475c58ea193fe1173c2d35b0ddce92f77357d5ea91",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

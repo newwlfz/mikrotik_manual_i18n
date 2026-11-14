@@ -1,0 +1,47 @@
+# Sidebar label policy per section.
+#
+# The rule that is hard to get right is the Hardware Guides: the first level is a
+# *category* ("Switches", "Antennas") and reads better in Chinese, while the
+# children are product names ("Wireless Wire Cube", "hAP ax3") that must stay
+# verbatim - a translated model name is unrecognisable and cannot be searched.
+#
+# Sections not listed here keep the default behaviour (translate every label the
+# glossary knows).
+schema: 1
+
+hardware:
+  # Category labels, translated by hand because the legacy memory has no Chinese
+  # for them (the generator previously left all of them in English).
+  categories:
+    '60 GHz products': '60 GHz 产品'
+    'Accessories': '配件'
+    'Antennas': '天线'
+    'Data over Powerlines': '电力线通信'
+    'Ethernet routers': '以太网路由器'
+    'Indoor wireless': '室内无线'
+    'Interfaces': '接口'
+    'IoT products': '物联网产品'
+    'LTE products': 'LTE 产品'
+    'RouterBOARD': 'RouterBOARD'
+    'Switches': '交换机'
+    'Wireless systems': '无线系统'
+  # Product names are never translated. Listed so the intent is explicit and a
+  # future generator cannot quietly start translating them.
+  keep_product_names: true
+  # Category labels that are brand names too ("RouterBOARD" is a product line).
+  keep_english:
+    - 'RouterBOARD'
+  # A trailing "series" is the one part of a hardware title that *is* a category
+  # word, so it is the one part that may be translated ("mANT-series" ->
+  # "mANT 系列"). Both the post-pass (normalize-hardware-titles.mjs) and the
+  # verifier (verify/labels.mjs) read this list; a new spelling is a policy
+  # change here, not a regex edit in the script.
+  title_suffix:
+    from: ['series', '-series', '–series']
+    to: '系列'
+  # The landing page (`hardware/index.md`, or a page pinned to a category root
+  # with `slug: /`) and every category page are *not* models: they keep a Chinese
+  # title and label, so `normalize-hardware-titles` skips them. Their wording is
+  # pinned where the rest of the Chinese copy lives - the landing title in
+  # `config/translation-patches/zh-Hans/hardware/index.md.yml`, the category
+  # labels in `categories` above.

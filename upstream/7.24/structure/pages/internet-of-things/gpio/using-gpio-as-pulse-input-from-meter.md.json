@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "internet-of-things/gpio/using-gpio-as-pulse-input-from-meter.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/internet-of-things/gpio/using-gpio-as-pulse-input-from-meter.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/internet-of-things/gpio/using-gpio-as-pulse-input-from-meter",
+  "md_sha256": "ae8083d0e41f3e727b9a5e1a4cebb3fad39c3fa3ef5d5f3ac99fec08a4a2f1e3",
+  "html_sha256": "bc31099040c1031ebee0adcb657b586b7fbfa318d5687b8cf796deaf301d99a6",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

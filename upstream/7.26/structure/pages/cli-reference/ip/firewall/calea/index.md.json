@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/firewall/calea/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/firewall/calea.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/firewall/calea/",
+  "md_sha256": "6abc4ac3bb7fbc6ab8744d5445abf009f4b66c5ac0c21639002d4a27a0e7df66",
+  "html_sha256": "ee25ee5a17463d2689c5ca0f8747efdfbf45258c8c42843ba10729a2476435c9",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 44,
+      "listItems": 44,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 44,
+      "listItems": 44,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

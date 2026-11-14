@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "network-management/dns.md",
+  "source_url": "https://manual.mikrotik.com/docs/network-management/dns.md",
+  "html_url": "https://manual.mikrotik.com/docs/network-management/dns",
+  "md_sha256": "00eb3125c293f970700c79705b0f3b2b7cf17191fe6488bb25561719e203a6b7",
+  "html_sha256": "51a55f88f6bc113388350a7dd8721d98cdf1d66664b466744974166b6dd8f010",
+  "body": {
+    "html": {
+      "lists": 12,
+      "listItems": 37,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 102,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 37,
+      "listItems": 37,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 37,
+      "listItems": 37,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

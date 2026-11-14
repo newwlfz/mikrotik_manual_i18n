@@ -1,0 +1,91 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "bridging-and-switching/vxlan.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/vxlan.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/vxlan",
+  "md_sha256": "6e82af928eb04bfcc84d59c535f407d7b297653b68dc3eaafdf66c272398d882",
+  "html_sha256": "36994ef680995dc6216c5a28df699b7c4c70d7eaf36848c5632efa6c534564dc",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 9,
+      "br": 4,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 25,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Address Resolution Protocol setting<ul><li><code>disabled</code> - the interface will not use ARP</li><li><code>enabled</code> - the interface will use ARP</li><li><code>local-proxy-arp</code> - the router performs proxy ARP on the interface and sends replies to the same interface</li><li><code>proxy-arp</code> - the router performs proxy ARP on the interface and sends replies to other interfaces</li><li><code>reply-only</code> - the interface will only reply to requests originating from matching IP address/MAC address combinations which are entered as static entries in the IP/ARP table. No dynamic entries will be automatically stored in the IP/ARP table. Therefore for communications to be successful, a valid static entry must already exist.</li></ul>"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Setting controls whether a UDP checksum is calculated in the transmitted outer VXLAN packets: <br/><ul><li><code>no</code> – the UDP checksum is set to zero in transmitted outer packets. This also allows receiving VXLAN packets over IPv6 that have a zero UDP checksum.</li><li><code>yes</code> - the UDP checksum is calculated in transmitted outer packets.</li></ul> If hardware offloading is used for packet transmission, this setting is ignored, and the behavior defaults to sending packets with a zero UDP checksum."
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "html": "The Don't Fragment (DF) flag controls whether a packet can be broken into smaller packets, called fragments, before being sent over a network. When configuring VXLAN, this setting determines the presence of the DF flag on the outer IPv4 header and can control packet fragmentation if the encapsulated packet exceeds the outgoing interface MTU. This setting has three options: <br/><ul><li><code>auto</code> - if the device supports VXLAN offloading, the dont-fragment mode will operate as <code>enabled</code>. if VXLAN offloading is not supported, it will use the <code>inherit</code> mode.</li><li><code>disabled</code> - the DF flag is not set on the outer IPv4 header, which means that packets can be fragmented if they are too large to be sent over the outgoing interface. This also allows packet fragmentation when VXLAN uses IPv6 underlay. Disables hardware offloading on compatible devices.</li><li><code>enabled</code> - the DF flag is always set on the outer IPv4 header, which means that packets will not be fragmented and will be dropped if they exceed the outgoing interface's MTU. This also avoids packet fragmentation when VXLAN uses IPv6 underlay.</li><li><code>inherit</code> - The DF flag on the outer IPv4 header is based on the inner IPv4 DF flag. If the inner IPv4 header has the DF flag set, the outer IPv4 header will also have it set. If the packet exceeds the outgoing interface's MTU and DF is set, it will be dropped. If the inner packet is non-IP, the outer IPv4 header will not have the DF flag set and packets can be fragmented. If the inner packet is IPv6, the outer IPv4 header will always set the DF flag and packets cannot be fragmented. Note that when VXLAN uses IPv6 underlay, this setting does not have any effect and is treated the same as <code>disabled</code>.</li></ul> The setting is available since RouterOS version 7.8."
+        },
+        {
+          "row": 20,
+          "col": 1,
+          "html": "Changes the Remote Checksum Offload (RCO) settings for VXLAN interface. RCO is a technique for eliding the inner checksum of an encapsulated datagram, allowing the outer checksum to be offloaded by network driver. It does, however, involve a change to the encapsulation protocols, which the receiver must also support. For this reason, it is disabled by default and setting is available to ensure compatibility with systems that rely on this feature. <br/> RCO is detailed in the following Internet-Drafts: <br/> Remote checksum offload for VXLAN, draft-herbert-vxlan-rco-00. Remote checksum offload for encapsulation, draft-herbert-remotecsumoffload-00. <br/> If <a href=\"/docs/7.25/bridging-and-switching/vxlan#hardware-offloaded-vxlan\">hardware offloading</a> is used, this setting is ignored, and the behavior defaults to none."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

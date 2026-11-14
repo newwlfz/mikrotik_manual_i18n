@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/routerboard/usb/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/routerboard/usb.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/routerboard/usb/",
+  "md_sha256": "a40975d687c8b9e064272d4c636acbfd0091172c9eccd3eb1c765587485fa4ba",
+  "html_sha256": "d203f73ca13387d8bddf63c449dfccb706f169b9ca4a64c8ef2a32713e90d792",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "diagnostics-monitoring-and-troubleshooting/graphing.md",
+  "source_url": "https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/graphing.md",
+  "html_url": "https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/graphing",
+  "md_sha256": "74b5aa008bffd73b289f439eb586104c911ecc5cfb504237433d855898f9a4dc",
+  "html_sha256": "4d0da0c3f11e69ac5dc5366ff2333831d4f6f26ff453303dbaa94bee4c2fcbca",
+  "body": {
+    "html": {
+      "lists": 7,
+      "listItems": 30,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 99,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 30,
+      "listItems": 30,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 30,
+      "listItems": 30,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

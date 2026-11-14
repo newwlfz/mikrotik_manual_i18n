@@ -1,0 +1,97 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "network-management/cloud/back-to-home.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/network-management/cloud/back-to-home.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/network-management/cloud/back-to-home",
+  "md_sha256": "130cea086d5fbf5d374191601b41492e7dd31517a80454c6f8f510525db298a7",
+  "html_sha256": "3f07de2a5951abf65ab2576b7a38ad97e82e098f8683c516c81971cca6fd0b85",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 22,
+      "br": 3,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 16,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 22,
+      "listItems": 22,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 22,
+      "listItems": 22,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        3,
+        4
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 2,
+      "cols": 5,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 2,
+      "cols": 6,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 2,
+      "cols": 6,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 19,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 0,
+          "html": "<strong>expires</strong>(string; never &#124; date: <em>\"YYYY-MM-DD HH:MM:SS\";</em><br/> Default: <strong>never</strong>*)*"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

@@ -1,0 +1,11 @@
+{
+  "position": 25,
+  "label": "Rtrace",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/rtrace/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/rtrace"
+}

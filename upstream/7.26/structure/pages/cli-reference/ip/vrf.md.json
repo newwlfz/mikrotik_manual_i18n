@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/vrf.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/vrf.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/vrf",
+  "md_sha256": "83e5c474f543f8447a5252e880bb1828346492c84157b3d0b32d1414d49d3680",
+  "html_sha256": "20b6d5a78e87546ead8a51312a37b2541696db36118d39a30c134cba288ae015",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

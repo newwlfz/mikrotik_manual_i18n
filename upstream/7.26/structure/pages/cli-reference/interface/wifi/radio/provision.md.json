@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wifi/radio/provision.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/radio/provision.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/radio/provision",
+  "md_sha256": "788e37f4b2ceb5134d7eb3687dd756fff68436d702464c5fe4e8535f858169f8",
+  "html_sha256": "1c3049e0cedaae259c8dea0d8c1b2ed81c4e2d7c1a708347a3198c03b017c2db",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

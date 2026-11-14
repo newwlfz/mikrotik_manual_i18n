@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/resource/hardware/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/resource/hardware.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/resource/hardware/",
+  "md_sha256": "05270950f7f7ec6880064f99a3d1b9b3a277b83893059dd51a69018e9b12c1be",
+  "html_sha256": "2c004199226c342d232749d403d42b58318e2cf20639c41a4fe68a864df5cae1",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

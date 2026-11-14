@@ -1,0 +1,11 @@
+{
+  "position": 25,
+  "label": "Traffic Generator",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/tool/traffic-generator/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/tool/traffic-generator"
+}

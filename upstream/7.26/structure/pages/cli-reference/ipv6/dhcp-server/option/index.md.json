@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ipv6/dhcp-server/option/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ipv6/dhcp-server/option.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ipv6/dhcp-server/option/",
+  "md_sha256": "fc59b72e440944225ee732253e9b99e007163c10a873fc94792a6dbf20a099fc",
+  "html_sha256": "d816c2ab40c9686726c6de606c6fa7134b8a29acd8a4c83f1be03c890833855f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

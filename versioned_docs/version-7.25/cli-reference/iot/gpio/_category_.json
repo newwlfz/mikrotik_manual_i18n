@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "Gpio",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/iot/gpio/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/iot/gpio"
+}

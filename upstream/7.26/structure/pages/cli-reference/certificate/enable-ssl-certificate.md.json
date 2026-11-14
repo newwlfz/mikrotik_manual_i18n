@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/certificate/enable-ssl-certificate.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/certificate/enable-ssl-certificate.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/certificate/enable-ssl-certificate",
+  "md_sha256": "8913a9efb2bd7e8cd6c670a4429f701b2e2ffe8377a0658e33b01dea856da124",
+  "html_sha256": "7e47ff6a6ff0557d8083765773f7d8d3af523e7a640c96ecfbb500036fe7f7fd",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

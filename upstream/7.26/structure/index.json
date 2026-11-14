@@ -1,0 +1,83 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "generated_at": "2026-11-10T02:27:35.787Z",
+  "source_manifest": "upstream/7.26/manifest.json",
+  "totals": {
+    "pages": 1,
+    "tables": 54,
+    "cells": 0,
+    "flagged": 1,
+    "failed": 0
+  },
+  "pages": [
+    {
+      "local_path": "internet-of-things/lora/user-guides/tg-lr-setup-guide.md",
+      "md_sha256": "ba29c360d133cf8c550bdb4811cdbcc931431be5dc05309309a15f92a0add090",
+      "html_sha256": "b7cd99cdfe854b29242f8e120d34ebc0e3dd49cdcce6befa0a39217488e038b3",
+      "body": {
+        "html": {
+          "lists": 4,
+          "listItems": 18,
+          "br": 0,
+          "details": 0,
+          "tables": 54,
+          "sup": 0,
+          "code": 6,
+          "wideTables": 0
+        },
+        "md": {
+          "lists": 18,
+          "listItems": 18,
+          "br": 0,
+          "details": 0,
+          "tables": 16,
+          "sup": 0,
+          "code": 0,
+          "wideTables": 0
+        },
+        "local": {
+          "lists": 18,
+          "listItems": 18,
+          "br": 0,
+          "details": 0,
+          "tables": 16,
+          "sup": 0,
+          "code": 0,
+          "wideTables": 0
+        },
+        "flags": {
+          "br": [
+            0,
+            998
+          ],
+          "tables": [
+            54,
+            16
+          ]
+        }
+      },
+      "tables": 54,
+      "mdTables": 16,
+      "htmlTables": 54,
+      "wide": {
+        "md": 0,
+        "html": 0,
+        "local": 0
+      },
+      "unaligned": 38,
+      "flags": {
+        "br": [
+          0,
+          998
+        ],
+        "tables": [
+          54,
+          16
+        ]
+      },
+      "cache": "upstream/7.26/structure/pages/internet-of-things/lora/user-guides/tg-lr-setup-guide.md.json"
+    }
+  ],
+  "failures": []
+}

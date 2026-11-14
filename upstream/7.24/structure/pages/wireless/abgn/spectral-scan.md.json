@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "wireless/abgn/spectral-scan.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/wireless/abgn/spectral-scan.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/wireless/abgn/spectral-scan",
+  "md_sha256": "51755e93238ce4add9a10e1c8dd8c26d0af51a79bf05acd5a4a53645b1dfab1e",
+  "html_sha256": "5b04b816d02e67c6c68c76a4cb6a32a67384e0b53844a19e00e070eddb4d6656",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 20,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 20,
+      "listItems": 20,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 20,
+      "listItems": 20,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

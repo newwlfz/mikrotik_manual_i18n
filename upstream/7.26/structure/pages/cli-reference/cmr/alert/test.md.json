@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/cmr/alert/test.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/alert/test.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/alert/test",
+  "md_sha256": "43b4a2ca6bdc4e605180a27544a50c7c7c66104f9bbaccfbc2b88445d53cb22f",
+  "html_sha256": "45f299e3f9533653cdb0d8d5e2f0c390395b3a0ce2e05389c635addf0abe7964",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

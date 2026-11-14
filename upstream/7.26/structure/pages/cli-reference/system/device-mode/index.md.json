@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/device-mode/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/device-mode.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/device-mode/",
+  "md_sha256": "60fb1199507d4e94a2b7bf5bf40ca7ad218e7c0f33abb0debcc5c29c1239db15",
+  "html_sha256": "29de2bb5c481b54b1a571b54d2ce84a6006f656b4771f306514c96c8dcf29144",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

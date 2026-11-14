@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/iot/mqtt/connect.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/mqtt/connect.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/mqtt/connect",
+  "md_sha256": "63864ff308cd15335d0618685af0dfa1cc13cda1cc37336e0c55ef8e2a31db73",
+  "html_sha256": "428f48bb2846f5311332f42a1534ae6fbba2293934324a82208bb818d2bc6d40",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

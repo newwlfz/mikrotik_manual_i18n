@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/ethernet/switch/unicast-fdb/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/unicast-fdb.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/unicast-fdb/",
+  "md_sha256": "e1913d181a7c5c62980895fa271c123475aa8894233c69e2d6a5bc57ea5432b9",
+  "html_sha256": "2cc01dfa3fe9a29dd319ec93ea827fb2ae4b2d4e9bfa3a3a491b94ef894e5c8b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

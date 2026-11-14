@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "firewall-and-quality-of-service/queues/htb-hierarchical-token-bucket.md",
+  "source_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/htb-hierarchical-token-bucket.md",
+  "html_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/htb-hierarchical-token-bucket",
+  "md_sha256": "8f0ff038b644a6c109862134c024a1152a6c621dabf6f8468f148e503e73f6e0",
+  "html_sha256": "61e55043045a0450921b6dd22f2ccbd93ff148973ea0735694a3f33d00fdacc3",
+  "body": {
+    "html": {
+      "lists": 20,
+      "listItems": 64,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 64,
+      "listItems": 64,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 64,
+      "listItems": 64,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/certificate/issued-revoke.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/certificate/issued-revoke.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/certificate/issued-revoke",
+  "md_sha256": "df981547c2e4a1020d353e012b8eecba541b815c40ba80ff0286af4a3f436c5e",
+  "html_sha256": "09ba44fc7352ccc0e933c695ad1370fe2908163e9dc021707871a36ad62cbb77",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

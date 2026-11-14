@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/sup-output.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/sup-output.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/sup-output",
+  "md_sha256": "c57b45b5316da9b90f10a197c28b77c9e011f766a977532e0e51135971da55c2",
+  "html_sha256": "a5ce445065171ba3c23d572e95fab0cef93fb2a2bf65f9e7042addbf6cbb3885",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "storage/btrfs/raid.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/storage/btrfs/raid.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/storage/btrfs/raid",
+  "md_sha256": "4cd470d9eed6f2e2fe975800c1714fdfbe5cc4d57956552bddca3ae227fc51a9",
+  "html_sha256": "313a5d20955527c3a28b03d17cb2dca8eaf5b46c3a30ed96e229eaaf94cd0bdc",
+  "body": {
+    "html": {
+      "lists": 5,
+      "listItems": 32,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 48,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 32,
+      "listItems": 32,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 32,
+      "listItems": 32,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        0,
+        22
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

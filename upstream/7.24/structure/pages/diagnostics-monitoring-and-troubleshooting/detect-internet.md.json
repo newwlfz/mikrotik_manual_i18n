@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "diagnostics-monitoring-and-troubleshooting/detect-internet.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/detect-internet.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/detect-internet",
+  "md_sha256": "a405166d22c90bc00402a57965304624efb941c4c57d03928b34d5bea91eefca",
+  "html_sha256": "fd4b0c0a09668d0f818843b37d4a2bfd0b8b5bd8d4cc691f943ebd0946ee888c",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

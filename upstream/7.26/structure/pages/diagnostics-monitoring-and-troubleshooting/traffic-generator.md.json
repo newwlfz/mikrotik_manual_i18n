@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "diagnostics-monitoring-and-troubleshooting/traffic-generator.md",
+  "source_url": "https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/traffic-generator.md",
+  "html_url": "https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/traffic-generator",
+  "md_sha256": "e08a9842a273b71e7da3aca3a25faa08d331e033d4128384ef7e1aa4faca76cd",
+  "html_sha256": "35d9f1c8b1a91275d23b178e13e793aa24845b1cb857cc7404f1eb186627de52",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 56,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

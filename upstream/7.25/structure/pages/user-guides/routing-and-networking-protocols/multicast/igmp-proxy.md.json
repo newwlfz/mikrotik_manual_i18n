@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "user-guides/routing-and-networking-protocols/multicast/igmp-proxy.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/multicast/igmp-proxy.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/multicast/igmp-proxy",
+  "md_sha256": "b6298894e170c4144c502434a9e5c8f01c7702ee7d20ab1f5b0944f0f6c54b99",
+  "html_sha256": "c26336f29ef477af03430e7487429ea5f8adf1d7162abe1ee9851ae8df6f4c18",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

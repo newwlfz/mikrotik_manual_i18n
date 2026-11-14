@@ -1,0 +1,252 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "bridging-and-switching/quality-of-service.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/quality-of-service.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/quality-of-service",
+  "md_sha256": "b247b594f462e06596d5f69a1f61d294311e0944675fb7da432c7f110c39b8da",
+  "html_sha256": "25ae2c07525591f16340ce7a23110a4130ece043cd68b64d7af1242d0d7c2656",
+  "body": {
+    "html": {
+      "lists": 10,
+      "listItems": 39,
+      "br": 3,
+      "details": 0,
+      "tables": 19,
+      "sup": 6,
+      "code": 55,
+      "wideTables": 2
+    },
+    "md": {
+      "lists": 39,
+      "listItems": 39,
+      "br": 0,
+      "details": 0,
+      "tables": 19,
+      "sup": 6,
+      "code": 0,
+      "wideTables": 2
+    },
+    "local": {
+      "lists": 39,
+      "listItems": 39,
+      "br": 0,
+      "details": 0,
+      "tables": 19,
+      "sup": 6,
+      "code": 0,
+      "wideTables": 2
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 15,
+      "cols": 11,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "CRS305-1G-4S+IN <br/> CRS326-24G-2S+ (RM/IN) <br/> CRS328-24P-4S+RM <br/> CRS328-4C-20S-4S+RM"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "CRS305-1G-4S+OUT (FiberBox Plus) <br/> CRS310-1G-5S-4S+ (netFiber 9/IN) <br/> CRS310-8G+2S+IN <br/> CRS318-16P-2S+OUT (netPower 16P) <br/> CRS320-8P-8B-4S+RM <br/> CRS418-8P-8G-2S+RM <br/> CRS418-8P-8G-2S+5axQ2axQ-RM"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "CCR2216-1G-12XS-2XQ <br/> CRS518-16XS-2XQ-RM"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "CRS504-4XQ (IN/OUT) <br/> CRS510-8XS-2XQ-IN <br/> RDS2216-2XG-4S+4XS-2XQ"
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "html": "CRS326-24S+2Q+RM <br/> CRS326-4C+20G+2Q+RM"
+        },
+        {
+          "row": 11,
+          "col": 1,
+          "html": "CRS354-48G-4S+2Q+RM <br/> CRS354-48P-4S+2Q+RM"
+        },
+        {
+          "row": 14,
+          "col": 1,
+          "html": "CRS812-8DS-2DQ-2DDQ-RM <br/> CRS804-4DDQ-hRM"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 4,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 10,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 12,
+      "cols": 14,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Allows enabling QoS for the given switch chip (if it supports QoS). <br/> New generation devices force <strong>qos-hw-offloading=yes</strong> at all times."
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 13,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 8,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 9,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 10,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 4,
+          "col": 1,
+          "html": "Maximum number of packet buffers that are shared between ports (% of the total buffer memory). Setting it to 0 disables buffer sharing. The remaining buffer memory is split between the ports. <br/> All buffers are treated as shared on new generation switch chips that use <strong>Dynamic Buffers</strong>. The switch chip automatically adjusts port and queue buffer limits based on the current congestion level. Using the auto value allows the device to utilize 100% of the available buffer memory, which is the recommended setting for most scenarios. In specific use cases where latency is more important than avoiding packet drops, the buffer limit can be manually reduced."
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "rows": 25,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 12,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 13,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 14,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 15,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 16,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 17,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "<ul><li><strong>strict-priority</strong> - packets in the respective queue are always scheduled before moving to lower traffic classes. Packets with lower traffic classes are not transmitted until the current queue is empty.</li><li><strong>high-priority-group</strong> - all queues in the group are scheduled together by using a weighted round-robin principle. For example, if TC5 has weight 4, TC4 - 3, and TC3 - 2, then the scheduler transmits 4 packets from queue5, 3 packets from Q4, and 2 packets from Q3 in a single round. To achieve lower latency, each round is \"sliced\" between all queues in the group. In other words, the packet order in each round of the above example is \"Q5, Q4, Q3, Q5, Q4, Q3, Q5, Q4, Q5\".</li><li><strong>low-priority-group</strong> - similar logic to the high-priority-group, but the low-priority-group is scheduled only when all queues in the high-priority-group are empty.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

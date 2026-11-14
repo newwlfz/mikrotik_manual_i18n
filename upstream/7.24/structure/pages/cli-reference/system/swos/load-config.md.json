@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/swos/load-config.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/swos/load-config.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/swos/load-config",
+  "md_sha256": "6f13f70b5ab045523eac8b197e3a43dd2127d91a32a9b49348d35a39d2c09621",
+  "html_sha256": "d3ff862fd96b1cc2c2e0f8b70166f571ce65827332f251feba2bca50ecbdf6db",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

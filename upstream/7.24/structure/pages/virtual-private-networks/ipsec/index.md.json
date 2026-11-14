@@ -1,0 +1,361 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "virtual-private-networks/ipsec/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/virtual-private-networks/ipsec.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/virtual-private-networks/ipsec/",
+  "md_sha256": "b9b03019a157a464fcca1fa7efdaf5b96e784453d126b2ec309777d277e34d15",
+  "html_sha256": "d59bf2d04ab1a29c8e407a83cc62422846673a576078644e0ae9fa77b97cc582",
+  "body": {
+    "html": {
+      "lists": 12,
+      "listItems": 45,
+      "br": 0,
+      "details": 0,
+      "tables": 32,
+      "sup": 0,
+      "code": 20,
+      "wideTables": 1
+    },
+    "md": {
+      "lists": 45,
+      "listItems": 45,
+      "br": 0,
+      "details": 0,
+      "tables": 32,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 1
+    },
+    "local": {
+      "lists": 45,
+      "listItems": 45,
+      "br": 0,
+      "details": 0,
+      "tables": 32,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 1
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 12,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 19,
+      "cols": 17,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 16,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Specifies what to do with the packet matched by the policy.<ul><li>none - pass the packet unchanged.</li><li>discard - drop the packet.</li><li>encrypt - apply transformations specified in this policy and its SA.</li></ul>"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Specifies what to do if some of the SAs for this policy cannot be found:<ul><li>use - skip this transform, do not drop the packet, and do not acquire SA from IKE daemon;</li><li>require - drop the packet and acquire SA;</li><li>unique - drop the packet and acquire a unique SA that is only used with this particular policy. It is used in setups where multiple clients can sit behind one public IP address (clients behind NAT).</li></ul>"
+        },
+        {
+          "row": 14,
+          "col": 1,
+          "html": "Creates a template and assigns it to a specified policy group. Following parameters are used by template: <br/><ul><li>group - name of the policy group to which this template is assigned;</li><li>src-address, dst-address - Requested subnet must match in both directions(for example 0.0.0.0/0 to allow all);</li><li>protocol - protocol to match, if set to all, then any protocol is accepted;</li><li>proposal - SA parameters used for this template;</li><li>level - useful when unique is required in setups with multiple clients behind NAT.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 26,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 8,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 9,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 10,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 11,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 10,
+          "col": 1,
+          "html": "Phase 2 lifetime check logic:<ul><li>claim - take the shortest of proposed and configured lifetimes and notify the initiator about it</li><li>exact - require lifetimes to be the same</li><li>obey - accept whatever is sent by an initiator</li><li>strict - if the proposed lifetime is longer than the default then reject the proposal otherwise accept a proposed lifetime</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "rows": 20,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Authentication method:<ul><li>digital-signature - authenticate using a pair of RSA certificates;</li><li>eap - IKEv2 EAP authentication for the initiator (peer with a netmask of /32). Must be used together with eap-methods;</li><li>eap-radius - IKEv2 EAP RADIUS passthrough authentication for the responder (RFC 3579). A server certificate in this case is required. If a server certificate is not specified then only clients supporting EAP-only (RFC 5998) will be able to connect. Note that the EAP method should be compatible with EAP-only;</li><li>pre-shared-key - authenticate by a password (pre-shared secret) string shared between the peers (not recommended since an offline attack on the pre-shared key is possible);</li><li>rsa-key - authenticate using an RSA key imported in the keys menu. Only supported in IKEv1;</li><li>pre-shared-key-xauth - authenticate by a password (pre-shared secret) string shared between the peers + XAuth username and password. Only supported in IKEv1;</li><li>rsa-signature-hybrid - responder certificate authentication with initiator XAuth. Only supported in IKEv1.</li></ul>"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "All EAP methods require a whole certificate chain including intermediate and root CA certificates to be present in System/Certificates menu. Also, the username and password (if required by the authentication server) must be specified. Multiple EAP methods may be specified and will be used in a specified order. Currently supported EAP methods:<ul><li>eap-mschapv2;</li><li>eap-peap - also known as PEAPv0/EAP-MSCHAPv2;</li><li>eap-tls - requires additional client certificate specified under certificate parameter;</li><li>eap-ttls.</li></ul>"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Allow this peer to establish SA for non-existing policies. Such policies are created dynamically for the lifetime of SA. Automatic policies allow, for example, to create IPsec secured L2TP tunnels, or any other setup where remote peer's IP address is not known at the configuration time.<ul><li>no - do not generate policies;</li><li>port-override - generate policies and force policy to use <strong>any</strong> port (old behavior);</li><li>port-strict - use ports from peer's proposal, which should match peer's policy.</li></ul>"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Defines the logic used for peer's identity validation.<ul><li>remote-id - will verify the peer's ID according to remote-id setting.</li><li>certificate will verify the peer's certificate with what is specified under remote-certificate setting.</li></ul>"
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "html": "On the initiator, this controls what ID_i is sent to the responder. On the responder, this controls what ID_r is sent to the initiator. In IKEv2, the responder also expects this ID in received ID_r from the initiator.<ul><li>auto - tries to use correct ID automatically: IP for pre-shared key, SAN (DN if not present) for certificate based connections;</li><li>address - IP address is used as ID;</li><li>dn - the binary Distinguished Encoding Rules (DER) encoding of an ASN.1 X.500 Distinguished Name;</li><li>fqdn - fully qualified domain name;</li><li>key-id - use the specified key ID for the identity;</li><li>user fqdn - specifies a fully-qualified username string, for example, \"<a href=\"mailto:user@domain.com\" target=\"_blank\" rel=\"noopener noreferrer\">user@domain.com</a>\".</li></ul>"
+        },
+        {
+          "row": 16,
+          "col": 1,
+          "html": "This parameter controls what ID value to expect from the remote peer. Note that all types except for ignore will verify remote peer's ID with a received certificate. In case the peer sends the certificate name as its ID, it is checked against the certificate, else the ID is checked against Subject Alt. Name.<ul><li>auto - accept all IDs;</li><li>address - IP address is used as ID;</li><li>dn - the binary Distinguished Encoding Rules (DER) encoding of an ASN.1 X.500 Distinguished Name;</li><li>fqdn - fully qualified domain name. Only supported in IKEv2;</li><li>user fqdn - a fully-qualified username string, for example, \"<a href=\"mailto:user@domain.com\" target=\"_blank\" rel=\"noopener noreferrer\">user@domain.com</a>\". Only supported in IKEv2;</li><li>key-id - specific key ID for the identity. Only supported in IKEv2;</li><li>ignore - do not verify received ID with certificate (dangerous).</li></ul> * Wildcard key ID matching <strong>is not supported</strong>, for example remote-id=\"key-id:CN=*.domain.com\""
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 14,
+      "rows": 15,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 15,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 16,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 17,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 18,
+      "rows": 18,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Added lifetime for the SA in the format soft/hard:<ul><li>soft - time period after which IKE will try to establish a new SA;</li><li>hard - time period after which the SA is deleted.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 20,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 21,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 22,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 23,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 24,
+      "rows": 14,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 25,
+      "rows": 7,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 26,
+      "rows": 7,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 27,
+      "rows": 5,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 28,
+      "rows": 7,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 29,
+      "rows": 5,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 30,
+      "rows": 18,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 31,
+      "rows": 13,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

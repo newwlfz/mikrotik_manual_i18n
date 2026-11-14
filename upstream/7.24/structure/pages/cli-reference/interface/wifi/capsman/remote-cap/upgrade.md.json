@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/wifi/capsman/remote-cap/upgrade.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/capsman/remote-cap/upgrade.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wifi/capsman/remote-cap/upgrade",
+  "md_sha256": "ff271fcea8e0c5f009b308827b399598c3881f6cba1cec852d34aa836408f1f9",
+  "html_sha256": "813e861ac1e48b99b19195c696acf390c7e1e5445fbcb500ccc6ae6d3f7abf41",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

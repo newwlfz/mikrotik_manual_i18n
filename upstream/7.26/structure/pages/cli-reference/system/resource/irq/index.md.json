@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/resource/irq/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/resource/irq.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/resource/irq/",
+  "md_sha256": "27355293515562d46473a8cc46cdb44780994cc55ffd53204a47628a70e20a28",
+  "html_sha256": "105b72e48b33c0c3bc0064ef44a35b9701940b0a9972388e804c60a410a7eb11",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

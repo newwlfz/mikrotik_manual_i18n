@@ -1,0 +1,78 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "diagnostics-monitoring-and-troubleshooting/health.md",
+  "source_url": "https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/health.md",
+  "html_url": "https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/health",
+  "md_sha256": "e8bfcf5d682bb555d7c026c243d147a2180c2224cd4439575a1193a7c7542f57",
+  "html_sha256": "5f366d8b146d90f155ba32ea0929acc64c8d1d405089855b64f919c4f038718b",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 64,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 22,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 20,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

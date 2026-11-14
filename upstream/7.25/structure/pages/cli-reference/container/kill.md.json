@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/container/kill.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/container/kill.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/container/kill",
+  "md_sha256": "01b0968621d85cea5b8108b50fbb9dbb1a3fe988b35968f0991c4fa622201587",
+  "html_sha256": "693a32c0d5753f5d1b6fe57fd44fbeccda1b184853987a0f3db351cf66d6abf7",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

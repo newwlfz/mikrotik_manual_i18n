@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/clock/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/clock.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/clock/",
+  "md_sha256": "ea1897080fa7a0b228d1856173339fc48f8071c906a20cfbaf9dc22af74e6fd1",
+  "html_sha256": "1965a4396bf28ea978d02398ee4081e8101b42e99dff2c5decfa159cbf4d48d4",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/iot/mqtt/publish.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/mqtt/publish.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/mqtt/publish",
+  "md_sha256": "6fb0daf2d737ad9546d63a4f29dd64ff34bd2218c1bf00f142e9f0e2b28099a3",
+  "html_sha256": "8906b10eadf4262983072d3177bb37b58dd2dbdc5ec38a66b73f7c7f7c833e01",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

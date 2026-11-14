@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/ups/self-test.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/ups/self-test.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/ups/self-test",
+  "md_sha256": "f8effc0fbfcbe7623019ad56251f8bf3a822ca5575d5659dead5dd6ff3c73d4d",
+  "html_sha256": "30d51ae5341c5897e7445070757b3a7997c4a4ed5c419e98f6fd9aec2eb9c7b3",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

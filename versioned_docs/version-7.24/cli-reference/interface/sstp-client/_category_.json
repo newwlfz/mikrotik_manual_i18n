@@ -1,0 +1,11 @@
+{
+  "position": 34,
+  "label": "Sstp Client",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/sstp-client/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/sstp-client"
+}

@@ -1,0 +1,124 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "authentication-authorization-accounting/ppp-aaa.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting/ppp-aaa.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting/ppp-aaa",
+  "md_sha256": "bd35d4b9628f47809b6fb78acba54722e7c27473c9c03d26e12ba3beea4983d9",
+  "html_sha256": "f7b56e39c69597ee3e419b07c879bfe2bc68173f2328effeaf3fb6e8f36719bb",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 14,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 38,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Changes MAC learning behavior on the dynamically created bridge port:<ul><li>yes - enables MAC learning</li><li>no - disables MAC learning</li><li>default - derive this value from the interface default profile; same as yes if this is the interface default profile</li></ul>"
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "html": "Modifies connection MSS settings (applies only for IPv4):<ul><li>yes - adjust connection MSS value</li><li>no - do not adjust connection MSS value</li><li>default - derive this value from the interface default profile; same as no if this is the interface default profile</li></ul>"
+        },
+        {
+          "row": 22,
+          "col": 1,
+          "html": "Execute script on the user login-event. These are available variables that are accessible for the event script:<ul><li>user</li><li>local-address</li><li>remote-address</li><li>caller-id</li><li>called-id</li><li>interface</li></ul> The <em>interface</em> variable will return interface id value, not interface name."
+        },
+        {
+          "row": 24,
+          "col": 1,
+          "html": "Defines whether a user is allowed to have more than one ppp session at a time<ul><li>yes - a user is not allowed to have more than one ppp session at a time</li><li>no - the user is allowed to have more than one ppp session at a time</li><li>default - derive this value from the interface default profile; same as no if this is the interface default profile</li></ul>"
+        },
+        {
+          "row": 32,
+          "col": 1,
+          "html": "Specifies whether to use data compression or not.<ul><li>yes - enable data compression</li><li>no - disable data compression</li><li>default - derive this value from the interface default profile; same as no if this is the interface default profile</li></ul>This setting does not affect OVPN tunnels."
+        },
+        {
+          "row": 33,
+          "col": 1,
+          "html": "Specifies whether to use data encryption or not.<ul><li>yes - enable data encryption</li><li>no - disable data encryption</li><li>default - derive this value from the interface default profile; same as no if this is the interface default profile</li><li>require - explicitly requires encryption</li></ul>This setting does not work on OVPN and SSTP tunnels."
+        },
+        {
+          "row": 34,
+          "col": 1,
+          "html": "Specifies whether to allow IPv6. By default, it is enabled if IPv6 package is installed.<ul><li>yes - enable IPv6 support</li><li>no - disable IPv6 support</li><li>default - derive this value from the interface default profile; same as no if this is the interface default profile</li><li>require - explicitly requires IPv6 support</li></ul>"
+        },
+        {
+          "row": 35,
+          "col": 1,
+          "html": "Specifies whether to allow MPLS over PPP.<ul><li>yes - enable MPLS support</li><li>no - disable MPLS support</li><li>default - derive this value from the interface default profile; same as no if this is the interface default profile</li><li>require - explicitly requires MPLS support</li></ul>"
+        },
+        {
+          "row": 36,
+          "col": 1,
+          "html": "Specifies whether to allow UPnP:<ul><li>yes - enable UPnP.</li><li>no - disable UPnP.</li><li>default - derive this value from the interface default profile; same as no if this is the interface default profile.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 14,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

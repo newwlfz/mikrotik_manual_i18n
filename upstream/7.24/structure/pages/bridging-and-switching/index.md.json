@@ -1,0 +1,585 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "bridging-and-switching/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/",
+  "md_sha256": "1068ecb6883573f0cae3b9577249336c5d8b46eec74198dce1f5407b329cb2a2",
+  "html_sha256": "c096830c2bf1d1ce908cf3cbc9426b879f2f8ef8b3a7fb9ca5d2e55c971a7d87",
+  "body": {
+    "html": {
+      "lists": 14,
+      "listItems": 48,
+      "br": 3,
+      "details": 0,
+      "tables": 26,
+      "sup": 0,
+      "code": 170,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 48,
+      "listItems": 48,
+      "br": 0,
+      "details": 0,
+      "tables": 26,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 48,
+      "listItems": 48,
+      "br": 0,
+      "details": 0,
+      "tables": 26,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 50,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "<strong>Important:</strong> Starting from <strong>RouterOS version 7.23</strong>, this setting has been removed. Custom Remote ID and Circuit ID values can now be configured using predefined variables (such as BRIDGEMAC, HOSTNAME, INTERFACE, VID). See the <code>dhcp-agent-circuit-id</code> and <code>dhcp-agent-remote-id</code> properties below for details. If this setting was enabled in earlier versions (7.22 or earlier), upgrading will automatically update the configuration to the new format. <br/> Whether to add DHCP Option 82 information (Agent Remote ID and Agent Circuit ID) to DHCP packets. Can be used together with an Option 82 capable DHCP server to assign IP addresses and implement policies. This property only has an effect when <code>dhcp-snooping</code> is set to <code>yes</code>. <br/> In RouterOS versions 7.22 or earlier, the values are predefined and cannot be modified: <br/><ul><li>For Agent Remote ID, RouterOS uses the bridge interface MAC address, formatted as \"xx:xx:xx:xx:xx:xx\" (lowercase, colon-separated).</li><li>For Agent Circuit ID, RouterOS uses the interface name and VLAN ID separated by a colon (interface:vlan-id) where the DHCP client is connected. The VLAN ID is included only if <code>vlan-filtering</code> is enabled on the bridge.</li></ul> For example (<code>vlan-filtering=yes</code>): <br/> Agent Remote ID - cc:2d:e0:01:6a:43 Agent Circuit ID - ether2:10 <br/>"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "Address Resolution Protocol setting<ul><li><code>disabled</code> - the interface will not use ARP</li><li><code>enabled</code> - the interface will use ARP</li><li><code>local-proxy-arp</code> - the router performs proxy ARP on the interface and sends replies to the same interface</li><li><code>proxy-arp</code> - the router performs proxy ARP on the interface and sends replies to other interfaces</li><li><code>reply-only</code> - the interface will only respond to requests originating from matching IP address/MAC address combinations that are entered as static entries in the IP/ARP table. No dynamic entries will be automatically stored in the IP/ARP table. Therefore, for communications to be successful, a valid static entry must already exist.</li></ul>"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "When <code>auto-mac=yes</code> is configured, the bridge will automatically select a MAC address for the bridge interface based on the following order of priority: <br/><ol><li>From an Ethernet interface that is part of the bridge;</li><li>From a non-Ethernet interface in the bridge (e.g., WiFi or tunnel);</li><li>A randomly generated address if none of the above is available.</li></ol> If the configuration is changed, for example, if you add a new port to the bridge, the bridge’s MAC address will be updated only if a higher-priority address source becomes available. For example, if the bridge initially used a randomly generated MAC, then an Ethernet interface was added, the MAC would update according to the highest available priority (in this case, the Ethernet interface). The bridge will also update the MAC address if the current MAC is associated with a port that is moved to a different bridge. <br/> The current MAC address and its priority level are saved and will be reused after a reboot. <br/> When <code>auto-mac=no</code> is configured, you can set a static MAC address manually using the <code>admin-mac</code> property."
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Specify the <strong>Circuit ID</strong> suboption value of Option 82 for DHCP messages passing through the bridge. The string length is limited to 255 characters. <br/> This setting replaces the now deprecated <code>add-dhcp-option82</code> property. If <code>add-dhcp-option82</code> was enabled in earlier versions (7.22 or earlier), upgrading will automatically update the configuration to the new format: $(INTERFACE):$(VID). This format will also be shown when configuring the setting through the GUI. <br/> The following variables are supported: <br/><ul><li>$(BRIDGEMAC) - current bridge MAC address, formatted as \"xx:xx:xx:xx:xx:xx\" (lowercase, colon-separated);</li><li>$(HOSTNAME) - system identity;</li><li>$(INTERFACE) - interface name where the DHCP client is connected;</li><li>$(VID) - VLAN ID used by the DHCP client. If the DHCP client is untagged, the VID corresponds to the port's <code>pvid</code>. Applies only when <code>vlan-filtering</code> is enabled on the bridge.</li></ul> Variable syntax rules <br/><ul><li>Variables must be enclosed in parentheses and prefixed with a dollar sign ($).</li><li>When configuring from the terminal, the dollar sign must be escaped with a backslash (), otherwise it will be interpreted as a RouterOS script variable.</li></ul> Example: <br/><code>/interface/bridge</code><br/><code>add add-dhcp-option82=yes dhcp-agent-circuit-id=\"interface: \\$(INTERFACE), vlan: \\$(VID)\" dhcp-snooping=yes name=bridge1 vlan-filtering=yes</code> This property has an effect only when <code>dhcp-snooping</code> is set to yes. <br/>"
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "html": "Specify the <strong>Interface ID</strong> suboption value of Option 18 for DHCPv6 messages passing through the bridge. The <code>dhcpv6-agent-circuit-id</code> property follows the same rules as <code>dhcp-agent-circuit-id</code>. <br/>"
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "html": "Specify the <strong>Remote ID</strong> suboption value of Option 82 for DHCP messages passing through the bridge. The string length is limited to 255 characters. <br/> This setting replaces the now deprecated <code>add-dhcp-option82</code> property. If <code>add-dhcp-option82</code> was enabled in earlier versions (7.22 or earlier), upgrading will automatically update the configuration to the new format: $(BRIDGEMAC). This format will also be shown when configuring the setting through the GUI. <br/> The following variables are supported: <br/><ul><li>$(BRIDGEMAC) - current bridge MAC address, formatted as \"xx:xx:xx:xx:xx:xx\" (lowercase, colon-separated);</li><li>$(HOSTNAME) - system identity;</li><li>$(INTERFACE) - interface name where the DHCP client is connected;</li><li>$(VID) - VLAN ID used by the DHCP client. If the DHCP client is untagged, the VID corresponds to the port's <code>pvid</code>. Applies only when <code>vlan-filtering</code> is enabled on the bridge.</li></ul> Variable syntax rules <br/><ul><li>Variables must be enclosed in parentheses and prefixed with a dollar sign ($).</li><li>When configuring from the terminal, the dollar sign must be escaped with a backslash (), otherwise it will be interpreted as a RouterOS script variable.</li></ul> Example: <br/><code>/interface/bridge</code><br/><code>add add-dhcp-option82=yes dhcp-agent-remote-id=\"ip: 192.168.88.1, identity: \\$(HOSTNAME), mac: \\$(BRIDGEMAC)\" dhcp-snooping=yes name=bridge1 vlan-filtering=yes</code> This property has an effect only when <code>dhcp-snooping</code> is set to yes. <br/>"
+        },
+        {
+          "row": 11,
+          "col": 1,
+          "html": "Specify the <strong>Remote ID</strong> suboption value of Option 37 for DHCPv6 messages passing through the bridge. The <code>dhcpv6-agent-remote-id</code> property follows the same rules as <code>dhcp-agent-remote-id</code>. <br/>"
+        },
+        {
+          "row": 12,
+          "col": 1,
+          "html": "Enables or disables DHCP Snooping on the bridge. <br/><br/><strong>Caution:</strong> Enabling the DHCP snooping feature will turn off bridge <a href=\"/docs/7.24/firewall-and-quality-of-service/packet-flow-in-routeros#fast-path\">fast-path</a>, which in turn affects the ability to <a href=\"/docs/7.24/firewall-and-quality-of-service/packet-flow-in-routeros#fasttrack\">fasttrack</a> connections going over that bridge. <br/>"
+        },
+        {
+          "row": 13,
+          "col": 1,
+          "html": "Enables or disables DHCPv6 Snooping on the bridge. <br/><br/><strong>Caution:</strong> Enabling the DHCP snooping feature will turn off bridge <a href=\"/docs/7.24/firewall-and-quality-of-service/packet-flow-in-routeros#fast-path\">fast-path</a>, which in turn affects the ability to <a href=\"/docs/7.24/firewall-and-quality-of-service/packet-flow-in-routeros#fasttrack\">fasttrack</a> connections going over that bridge. <br/>"
+        },
+        {
+          "row": 18,
+          "col": 1,
+          "html": "Whether to forward IEEE reserved multicast MAC addresses that are in the <strong>01:80:C2:00:00:0x</strong> range. Bridges compliant with R/M/STP standards should refrain from forwarding these packets; this property can only be applied when <code>protocol-mode</code> is set to <code>none</code>. <br/> Enabling forwarding of reserved MAC addresses may affect certain protocols relying on these addresses. It is advisable to enable forwarding only when absolutely necessary, such as in transparent bridging setups (e.g., extending long links, using bridges as media converters, or conducting network analysis). <br/> Here are some notable MAC addresses and protocols used by RouterOS: <br/><ul><li>01:80:C2:00:00:00 - <a href=\"/docs/7.24/bridging-and-switching/index\" rel=\"nofollow\">Spanning Tree Protocol (STP)</a>;</li><li>01:80:C2:00:00:01 - <a href=\"/docs/7.24/wired-connections/ethernet\" rel=\"nofollow\">Ethernet</a> Flow Control;</li><li>01:80:C2:00:00:02 - <a href=\"/docs/7.24/high-availability-solutions/bonding\" rel=\"nofollow\">Link Aggregation Control Protocol (LACP)</a>;</li><li>01:80:C2:00:00:03 - <a href=\"/docs/7.24/authentication-authorization-accounting/dot1x\" rel=\"nofollow\">Dot1x</a> client and server;</li><li>01:80:C2:00:00:08 - Spanning Tree Protocol (for 802.1ad bridges, using <code>ether-type=0x88a8</code>);</li><li>01:80:C2:00:00:0D - <a href=\"/docs/7.24/bridging-and-switching/index\" rel=\"nofollow\">Multiple VLAN Registration protocol</a> (for 802.1ad bridges, using <code>ether-type=0x88a8</code>);</li><li>01:80:C2:00:00:0E - <a href=\"/docs/7.24/system-information-and-utilities/neighbor-discovery\" rel=\"nofollow\">Link Layer Discovery Protocol</a>, <a href=\"/docs/7.24/high-availability-solutions/multi-chassis-link-aggregation-group\" rel=\"nofollow\">Multi-chassis Link Aggregation Group</a> and <a href=\"/docs/7.24/system-information-and-utilities/precision-time-protocol\">Precision Time Protocol</a>;</li></ul><br/><strong>Important:</strong> The Flow Control MAC address 01:80:C2:00:00:01 is an exception; it does not get forwarded by the bridge. <br/>"
+        },
+        {
+          "row": 24,
+          "col": 1,
+          "html": "When the last client on the bridge port unsubscribes from a multicast group and the bridge is acting as an active querier, the bridge will send a group-specific IGMP/MLD query, to make sure that no other client is still subscribed. The setting changes the response time for these queries. In case no membership reports are received in a certain time period (<code>last-member-interval</code> * <code>last-member-query-count</code>), the multicast group is removed from the multicast database (MDB). <br/> If the bridge port is configured with fast-leave, the multicast group is removed right away without sending any queries. <br/> This property only has an effect when <code>igmp-snooping</code> and <code>multicast-querier</code> are set to <code>yes</code>."
+        },
+        {
+          "row": 27,
+          "col": 1,
+          "html": "Sets the maximum number of learned hosts for the bridge interface. The default value is <code>auto</code>, and it depends on the installed amount of RAM. It is possible to set a higher value than the default or choose the <code>unlimited</code> option, but it increases the risk of an out-of-memory condition. <br/> The default values for certain RAM sizes: <br/><ul><li>8192 for 64 MB;</li><li>16384 for 128 MB;</li><li>32768 for 256 MB;</li><li>65536 for 512 MB;</li><li>131072 for 1024 MB or higher.</li></ul> This limit specifically applies to the bridge interface, not the hardware limits on the switch FDB table. Even if the bridge limit is reached, the switch can continue to learn hosts up to its hardware limits and make correct forwarding decisions. However, these additional hosts will not show up in the <code>/interface/bridge/host</code> table nor can they be monitored. Additionally, hitting this limit could impact MLAG host synchronization. <br/> This setting has been available since RouterOS version 7.16."
+        },
+        {
+          "row": 31,
+          "col": 1,
+          "html": "Maximum transmission unit. By default, the bridge will set MTU automatically and it will use the lowest MTU value of any associated bridge port. The default bridge MTU value without any bridge ports added is 1500. The MTU value can be set manually, but it cannot exceed the bridge L2MTU or the lowest bridge port L2MTU. If a new bridge port is added with L2MTU which is smaller than the <code>actual-mtu</code> of the bridge (set by the <code>mtu</code> property), then the manually set value will be ignored and the bridge will act as if <code>mtu=auto</code> is set. <br/> When adding VLAN interfaces on the bridge, and when VLAN is using higher MTU than the default 1500, it is recommended to manually set the MTU of the bridge."
+        },
+        {
+          "row": 32,
+          "col": 1,
+          "html": "Multicast querier generates periodic IGMP/MLD general membership queries to which all IGMP/MLD capable devices respond with an IGMP/MLD membership report. Usually, a PIM (multicast) router or IGMP proxy generates these queries. <br/> By using this property you can make an IGMP/MLD snooping enabled bridge generate IGMP/MLD general membership queries. This property should be used whenever there is no active querier (PIM router or IGMP proxy) in a Layer2 network. Without a multicast querier in a Layer2 network, the Multicast Database (MDB) is not being updated; the learned entries will timeout and IGMP/MLD snooping will not function properly. <br/> Only untagged IGMP/MLD general membership queries are generated. IGMP queries are sent with the bridge interface's own IPv4 address as the source address (see <code>querier-uses-bridge-address</code>), MLD queries are sent with the IPv6 link-local address of the bridge interface. The bridge will not send queries if an external IGMP/MLD querier is detected (see the monitoring values <code>igmp-querier</code> and <code>mld-querier</code>). <br/> This property only has an effect when <code>igmp-snooping</code> is set to <code>yes</code>."
+        },
+        {
+          "row": 33,
+          "col": 1,
+          "html": "A multicast router port is a port where a multicast router or querier is connected. On this port, unregistered multicast streams and IGMP/MLD membership reports will be sent. This setting changes the state of the multicast router for a bridge interface itself. This property can be used to send IGMP/MLD membership reports to the bridge interface for further multicast routing or proxying. This property only has an effect when <code>igmp-snooping</code> is set to <code>yes</code>.<ul><li><code>disabled</code> - disabled multicast router state on the bridge interface. Unregistered multicast and IGMP/MLD membership reports are not sent to the bridge interface regardless of what is configured on the bridge interface.</li><li><code>permanent</code> - enabled multicast router state on the bridge interface. Unregistered multicast and IGMP/MLD membership reports are sent to the bridge interface itself regardless of what is configured on the bridge interface.</li><li><code>temporary-query</code> - automatically detect multicast router state on the bridge interface using IGMP/MLD queries.</li></ul>"
+        },
+        {
+          "row": 35,
+          "col": 1,
+          "html": "Changes the port path-cost and internal-path-cost mode for bridged ports, utilizing automatic values based on interface speed. This setting does not impact bridged ports with manually configured <code>path-cost</code> or <code>internal-path-cost</code> properties. Below are examples illustrating the path-costs corresponding to specific data rates (with proportionate calculations for intermediate rates): <br/><details><summary>Path-cost table</summary><table><thead><tr><th>Data rate</th><th>Long</th><th>Short</th></tr></thead><tbody><tr><td>10 Mbps</td><td>2,000,000</td><td>100</td></tr><tr><td>100 Mbps</td><td>200,000</td><td>19</td></tr><tr><td>1 Gbps</td><td>20,000</td><td>4</td></tr><tr><td>10 Gbps</td><td>2,000</td><td>2</td></tr><tr><td>25 Gbps</td><td>800</td><td>1</td></tr><tr><td>40 Gbps</td><td>500</td><td>1</td></tr><tr><td>50 Gbps</td><td>400</td><td>1</td></tr><tr><td>100 Gbps</td><td>200</td><td>1</td></tr></tbody></table></details> For HW offloaded bond interfaces, the highest path-cost among all bonded member ports is applied; this value remains unaffected by the total link speed of the bonding. <br/> For virtual interfaces (such as VLAN, EoIP, VXLAN and non-HW offloaded bond), as well as wifi, wireless, and 60GHz interfaces, a path-cost of 20,000 is assigned for long mode, and 10 for short mode. <br/> For dynamically bridged interfaces (e.g. wifi, wireless, PPP, VPLS), the path-cost defaults to 20,000 for long mode and 10 for short mode. However, this can be manually overridden by the service that dynamically adds interfaces to the bridge, for instance, by using the CAPsMAN <code>datapath.bridge-cost</code> setting. <br/> Use <a href=\"/docs/7.24/bridging-and-switching/#bridge-port-monitoring\">port monitor</a> to observe the applied path-cost. <br/> This property has an effect when <code>protocol-mode</code> is set to <code>stp</code>, <code>rstp</code>, or <code>mstp</code>."
+        },
+        {
+          "row": 36,
+          "col": 1,
+          "html": "Bridge priority, used by R/STP to determine the root bridge, used by MSTP to determine the CIST and IST regional root bridge. This property has no effect when <code>protocol-mode</code> is set to <code>none</code>. <br/><strong>Valid values:</strong> The bridge priority must be set in steps of 4096 (0x1000). The 12 lowest bits are ignored. Valid values are: 0x0000, 0x1000, 0x2000, 0x3000, 0x4000, 0x5000, 0x6000, 0x7000, 0x8000, 0x9000, 0xa000, 0xb000, 0xc000, 0xd000, 0xe000, 0xf000 (or their decimal equivalents: 0, 4096, 8192, 12288, 16384, 20480, 24576, 28672, 32768, 36864, 40960, 45056, 49152, 53248, 57344, 61440)."
+        },
+        {
+          "row": 37,
+          "col": 1,
+          "html": "Select Spanning tree protocol (STP) or Rapid spanning tree protocol (RSTP) to ensure a loop-free topology for any bridged LAN. RSTP provides a faster spanning tree convergence after a topology change. Select MSTP to ensure loop-free topology across multiple VLANs. <br/> The forwarding of reserved MAC addresses that are in the <strong>01:80:C2:00:00:0x</strong> range is separated from <code>protocol-mode=none</code>, and is now available as a controllable property <code>forward-reserved-addresses</code> since RouterOS v7.16."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 18,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Direct bridged traffic to <a href=\"/docs/7.24/firewall-and-quality-of-service/firewall/\">IP/IPv6 firewall</a> (prerouting, forward, and postrouting sections of IP/IPv6 routing, see more details on <a href=\"/docs/7.24/firewall-and-quality-of-service/packet-flow-in-routeros#flow-of-bridged-packet\">Packet Flow</a> article). Below are some use cases when this setting can be enabled to accomplish certain tasks: <br/><ul><li>In case you want to assign <a href=\"/docs/7.24/firewall-and-quality-of-service/queues/index\" rel=\"nofollow\">Simple Queues</a> or global <a href=\"/docs/7.24/firewall-and-quality-of-service/queues/index\" rel=\"nofollow\">Queue Tree</a> for traffic flowing through bridged ports.</li><li>In case you want to use IP/IPv6 firewall capabilities for traffic flowing through bridged ports, which would normally bypass IP/IPv6 firewall.</li></ul><br/><strong>Caution:</strong> Enabling the <code>use-ip-firewall</code> feature will turn off bridge <a href=\"/docs/7.24/firewall-and-quality-of-service/packet-flow-in-routeros#fast-path\">Fast Path</a>, which in turn affects the ability to <a href=\"/docs/7.24/firewall-and-quality-of-service/packet-flow-in-routeros#fasttrack\">fasttrack</a> connections going over that bridge. And because this setting introduces additional processing steps (prerouting, forward and postrouting chains), it will increase CPU usage even more when forwarding packets. <br/><strong>Routed traffic</strong>, including traffic from VLAN interfaces (e.g., <code>/interface/vlan</code> created on the bridge), <strong>is already processed by the IP firewall</strong>. In such cases, enabling this setting has no additional effect. <br/>"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Direct bridged VLAN tagged traffic to IP/IPv6 firewall. This property only has an effect when <code>use-ip-firewall</code> is set to <code>yes</code>. <br/> If you need to use the IP/IPv6 firewall and bridge <code>vlan-filtering</code> is enabled (which involves VLAN tag handling), then you should also enable <code>use-ip-firewall-for-vlan=yes</code>. <br/> When this setting is enabled and packets are routed between VLAN interfaces (e.g., <code>/interface/vlan</code>), the <code>in-interface</code> in the IP firewall's <strong>prerouting</strong> chain will match the bridge interface instead of the individual VLAN interface."
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 27,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Set a port as an edge port or a non-edge port, or enable edge discovery. Edge ports are connected to a LAN that has no other bridges attached. An edge port will skip the learning and the listening states in STP and will transition directly to the forwarding state. This reduces the STP initialization time. If the port is configured to discover an edge port, then as soon as the bridge detects a BPDU coming to an edge port, the port becomes a non-edge port. This property has no effect when <code>protocol-mode</code> is set to <code>none</code>.<ul><li><code>no</code> - non-edge port with disabled discovery. It will participate in learning and listening states in STP. It will not transition to the forwarding state until it exchanges BPDUs and reaches agreement with the connected bridge. If no BPDU is received, the port may remain in a non-forwarding state indefinitely.</li><li><code>no-discover</code> - non-edge port with enabled discovery. It will participate in learning and listening states in STP. A port can become an edge port if no BPDU is received.</li><li><code>yes</code> - edge port without discovery. It will transition directly to forwarding state.</li><li><code>yes-discover</code> - edge port with enabled discovery. It will transition directly to forwarding state.</li><li><code>auto</code> - same as <code>no-discover</code>, but will additionally detect if a bridge port is a Wireless interface with disabled bridge-mode. Such an interface will be automatically set as an edge port without discovery.</li></ul>"
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "html": "Changes MAC learning behavior on a bridge port<ul><li><code>yes</code> - enables MAC learning</li><li><code>no</code> - disables MAC learning</li><li><code>auto</code> - detects if the bridge port is a Wireless interface and uses a Wireless registration table instead of MAC learning, will use the Wireless registration table if the Wireless interface is set to one of <code>ap-bridge</code>, <code>bridge</code>, <code>wds-slave</code> mode and bridge mode for the Wireless interface is disabled.</li></ul>"
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "html": "A multicast router port is a port where a multicast router or querier is connected. On this port, unregistered multicast streams and IGMP/MLD membership reports will be sent. This setting changes the state of the multicast router for bridge ports. This property can be used to send IGMP/MLD membership reports to certain bridge ports for further multicast routing or proxying. This property only has an effect when <code>igmp-snooping</code> is set to <code>yes</code>.<ul><li><code>disabled</code> - disabled multicast router state on the bridge port. Unregistered multicast and IGMP/MLD membership reports are not sent to the bridge port regardless of what is connected to it.</li><li><code>permanent</code> - enabled multicast router state on the bridge port. Unregistered multicast and IGMP/MLD membership reports are sent to the bridge port regardless of what is connected to it.</li><li><code>temporary-query</code> - automatically detect multicast router state on the bridge port using IGMP/MLD queries.</li></ul>"
+        },
+        {
+          "row": 13,
+          "col": 1,
+          "html": "Path cost to the interface for MSTI0 inside a region. If not manually configured, the bridge automatically determines the internal-path-cost based on the interface speed and the <code>port-cost-mode</code> setting. To revert to the automatic determination and remove any manually applied value, simply use an exclamation mark before the <code>internal-path-cost</code> property. This property only has an effect when <code>protocol-mode</code> is set to <code>mstp</code>. <br/><code>/interface/bridge/port/set [find interface=sfp28-1] !internal-path-cost</code> Use <a href=\"/docs/7.24/bridging-and-switching/#bridge-port-monitoring\">port monitor</a> to observe the applied internal-path-cost. <br/>"
+        },
+        {
+          "row": 15,
+          "col": 1,
+          "html": "Path cost to the interface, used by STP and RSTP to determine the best path, and used by MSTP to determine the best path between regions. If not manually configured, the bridge automatically determines the path-cost based on the interface speed and the <code>port-cost-mode</code> setting. To revert to the automatic determination and remove any manually applied value, simply use an exclamation mark before the <code>path-cost</code> property. This property has no effect when <code>protocol-mode</code> is set to <code>none</code>. <br/><code>/interface/bridge/port/set [find interface=sfp28-1] !path-cost</code> Use <a href=\"/docs/7.24/bridging-and-switching/#bridge-port-monitoring\">port monitor</a> to observe the applied path-cost. <br/>"
+        },
+        {
+          "row": 25,
+          "col": 1,
+          "html": "Changes the multicast flood option on the bridge port and only controls the egress traffic. When enabled, the bridge allows flooding multicast packets to the specified bridge port, but when disabled, the bridge restricts multicast traffic from being flooded to the specified bridge port. The setting affects all multicast traffic. This includes non-IP, IPv4, IPv6 and the link-local multicast ranges (e.g. 224.0.0.0/24 and ff02::1). <br/> Note that when <code>igmp-snooping</code> is enabled and an IGMP/MLD querier is detected, the bridge will automatically restrict unknown IP multicast from being flooded, so the setting is not mandatory for IGMP/MLD snooping setups. <br/> When using this setting together with <code>igmp-snooping</code>, the only multicast traffic that is allowed on the bridge port is the known multicast from the MDB table."
+        },
+        {
+          "row": 26,
+          "col": 1,
+          "html": "Changes the unknown unicast flood option on the bridge port and only controls the egress traffic. When enabled, the bridge allows flooding unknown unicast packets to the specified bridge port, but when disabled, the bridge restricts unknown unicast traffic from being flooded to the specified bridge port. <br/> If a MAC address is not learned in the host table, then the traffic is considered unknown unicast traffic and will be flooded to all ports. MAC address is learned as soon as a packet on a bridge port is received and the source MAC address is added to the bridge host table. Since it is required for the bridge to receive at least one packet on the bridge port to learn the MAC address, it is recommended to use static bridge host entries to avoid packets being dropped until the MAC address has been learned."
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "rows": 31,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 24,
+          "col": 1,
+          "html": "(R/M)STP algorithm assigned port role: <br/><ul><li><code>disabled-port</code> - disabled or inactive port.</li><li><code>root-port</code> - port that is facing towards the root bridge and has the best (lowest cost) path to the root bridge. Only one root port is elected per bridge (except the root bridge itself).</li><li><code>alternative-port</code> - port that is facing towards the root bridge, but is not going to forward traffic. Port provides a backup path to the root bridge if the current root port fails.</li><li><code>designated-port</code> - port that is facing away from the root bridge and forwards traffic away from the root bridge to downstream devices.</li><li><code>backup-port</code> - port that is facing away from the root bridge, but is going to forward traffic. Port that serves as a backup for a designated port on the same segment.</li></ul> In RouterOS, the <strong>role</strong> monitoring property displays RSTP roles, such as <code>alternate-port</code> and <code>backup-port</code>, even when STP mode is enabled. While this is technically incorrect, it does not affect the operation of STP. This is because STP treats all blocked ports the same, without differentiating their purpose (e.g., as potential backup paths). The displayed roles are simply a reflection of RSTP functionality and have no practical impact when STP is in use. See more details on <a href=\"/docs/7.24/bridging-and-switching/user-guides/spanning-tree-protocol#stp-and-rstp\">STP and RSTP page</a>."
+        },
+        {
+          "row": 27,
+          "col": 1,
+          "html": "Port status:<ul><li><code>in-bridge</code> - port is enabled</li><li><code>inactive</code> - port is disabled.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "unaligned": {
+        "reason": "cell-count",
+        "row": 2,
+        "markdown": 4,
+        "html": 2
+      },
+      "rebuild": true,
+      "rebuild_rows": [
+        [
+          "<strong>bridge</strong> (<em>read-only: name</em>)",
+          "Shows the bridge interface the entry belongs to."
+        ],
+        [
+          "<strong>group</strong> (*read-only:*ipv4",
+          "ipv6"
+        ],
+        [
+          "<strong>on-interface</strong> (<em>read-only: name</em>)",
+          "Shows the bridge ports which are subscribed to the multicast group."
+        ],
+        [
+          "<strong>vid</strong> (<em>read-only: integer</em>)",
+          "Shows the VLAN ID for the multicast group, only applies when <code>vlan-filtering</code> is enabled."
+        ]
+      ]
+    },
+    {
+      "index": 8,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 9,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 10,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 11,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 12,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 13,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 14,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 15,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 16,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "unaligned": {
+        "reason": "cell-count",
+        "row": 2,
+        "markdown": 3,
+        "html": 2
+      },
+      "rebuild": true,
+      "rebuild_rows": [
+        [
+          "<strong>bridge</strong> (<em>name</em>; Default: <strong>none</strong>)",
+          "The bridge interface to which this VLAN entry applies."
+        ],
+        [
+          "<strong>disabled</strong> (<em>yes</em>",
+          "<em>no</em>; Default: <strong>no</strong>)"
+        ],
+        [
+          "<strong>tagged</strong> (<em>interface</em>; Default: <strong>none</strong>)",
+          "Interfaces or <a href=\"/docs/7.24/system-information-and-utilities/interface-lists\">interface list</a> that transmit frames with a VLAN tag. This setting accepts comma-separated values, for example <code>tagged=ether1,ether2</code>."
+        ],
+        [
+          "<strong>untagged</strong> (<em>interface</em>; Default: <strong>none</strong>)",
+          "Interfaces or <a href=\"/docs/7.24/system-information-and-utilities/interface-lists\">interface list</a> that transmit frames without a VLAN tag. This setting accepts comma-separated values, for example <code>untagged=ether3,ether4</code>."
+        ],
+        [
+          "<strong>vlan-ids</strong> (<em>integer 1..4094</em>; Default: <strong>1</strong>)",
+          "The VLAN ID or list of VLAN IDs for this port configuration. This setting accepts VLAN ID ranges as well as comma-separated values, for example <code>vlan-ids=100-115,120,122,128-130</code>."
+        ]
+      ]
+    },
+    {
+      "index": 17,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "unaligned": {
+        "reason": "cell-count",
+        "row": 1,
+        "markdown": 4,
+        "html": 2
+      },
+      "rebuild": true,
+      "rebuild_rows": [
+        [
+          "<strong>frame-types</strong> (<em>admit-all</em>",
+          "<em>admit-only-untagged-and-priority-tagged</em>"
+        ],
+        [
+          "<strong>ingress-filtering</strong> (<em>yes</em>",
+          "<em>no</em>; Default: <strong>yes</strong>)"
+        ],
+        [
+          "<strong>pvid</strong> (<em>integer: 1..4094</em>; Default: <strong>1</strong>)",
+          "Port VLAN ID (pvid) specifies which VLAN the untagged ingress traffic is assigned to. This property only has an effect when <code>vlan-filtering</code> is set to <code>yes</code>."
+        ],
+        [
+          "<strong>tag-stacking</strong> (<em>yes</em>",
+          "<em>no</em>; Default: <strong>no</strong>)"
+        ]
+      ]
+    },
+    {
+      "index": 18,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 19,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "MVRP applicant options: <br/><ul><li><strong>non-participant</strong> - port does not send any MRP messages;</li><li><strong>normal-participant </strong>- port participates normally in MRP exchanges.</li></ul>"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "MVRP registrar options: <br/><ul><li><strong>fixed</strong> - port ignores all MRP messages, and remains Registered (IN) in all configured vlans.</li><li><strong>normal </strong>- port receives MRP messages and handles them according to the standard.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 21,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "The Applicant state machine that declares attributes. Its state can be VO, VP, VN, AN, AA, QA, LA, AO, QO, AP, QP, or LO. Each state consists of two letters. <br/> The first letter indicates the state: <br/><ul><li>V—Very anxious;</li><li>A—Anxious;</li><li>Q—Quiet;</li><li>L—Leaving.</li></ul> The second letter indicates the membership state: <br/><ul><li>A - Active member;</li><li>P - Passive member;</li><li>O - Observer;</li><li>N - New.</li></ul> For example, VP indicates \"Very anxious, Passive member.\""
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "The Registrar state machine that records the registration state of attributes declared by other participants. Its state can be IN, LV, or MT: <br/><ul><li>IN—Registered;</li><li>LV—Previously registered, but now being timed out;</li><li>MT—Not registered.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "rows": 2,
+      "cols": 1,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 0,
+          "html": "<br/><code>#Layer 2 Access Switch - enabling RA guard on the main bridge</code><br/><code>/interface/bridge</code><br/><code>add name=bridge</code><br/><code>/interface/bridge</code><br/><code>set [find where name=\"bridge\"] ra-guard=yes</code><br/><code>/interface/bridge/port</code><br/><code>add bridge=bridge interface=etherUplink Trusted RA=yes</code><br/><code>add bridge=bridge interface=etherX</code><br/><code>add bridge=bridge interface=etherY</code><br/><code>add bridge=bridge interface=etherZ</code><br/>"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "rows": 56,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Action to take if the packet is matched by the rule:<ul><li>accept - accept the packet. The packet is not passed to the next firewall rule</li><li>drop - silently drop the packet</li><li>jump - jump to the user-defined chain specified by the value of <code>jump-target</code> parameter</li><li>log - add a message to the system log containing the following data: in-interface, out-interface, src-mac, protocol, src-ip:port-&gt;dst-ip:port and length of the packet. After the packet is matched it is passed to the next rule in the list, similar as <code>passthrough</code></li><li>mark-packet - place a mark specified by the new-packet-mark parameter on a packet that matches the rule</li><li>passthrough - if the packet is matched by the rule, increase counter and go to next rule (useful for statistics)</li><li>return - passes control back to the chain from where the jump took place</li><li>set-priority - set priority specified by the new-priority parameter on the packets sent out through a link that is capable of transporting priority (VLAN or WMM-enabled wireless interface). <a href=\"/docs/7.24/bridging-and-switching/user-guides/wmm-and-vlan-priority\" rel=\"nofollow\">Read more</a></li></ul>"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "ARP opcode (packet type)<ul><li>arp-nak - negative ARP reply (rarely used, mostly in ATM networks)</li><li>drarp-error - Dynamic RARP error code, saying that an IP address for the given MAC address can not be allocated</li><li>drarp-reply - Dynamic RARP reply, with a temporary IP address assignment for a host</li><li>drarp-request - Dynamic RARP request to assign a temporary IP address for the given MAC address</li><li>inarp-reply - InverseARP Reply</li><li>inarp-request - InverseARP Request</li><li>reply - standard ARP reply with a MAC address</li><li>reply-reverse - reverse ARP (RARP) reply with an IP address assigned</li><li>request - standard ARP request to a known IP address to find out unknown MAC address</li><li>request-reverse - reverse ARP (RARP) request to a known MAC address to find out the unknown IP address (intended to be used by hosts to find out their own IP address, similarly to DHCP service)</li></ul>"
+        },
+        {
+          "row": 22,
+          "col": 1,
+          "html": "IP protocol (only if MAC protocol is set to IPv4)<ul><li>dccp - Datagram Congestion Control Protocol</li><li>ddp - Datagram Delivery Protocol</li><li>egp - Exterior Gateway Protocol</li><li>encap - Encapsulation Header</li><li>etherip - Ethernet-within-IP Encapsulation</li><li>ggp - Gateway-to-Gateway Protocol</li><li>gre - Generic Routing Encapsulation</li><li>hmp - Host Monitoring Protocol</li><li>icmp - IPv4 Internet Control Message Protocol</li><li>icmpv6 - IPv6 Internet Control Message Protocol</li><li>idpr-cmtp - Inter-Domain Policy Routing Control Message Transport Protocol</li><li>igmp - Internet Group Management Protocol</li><li>ipencap - IP in IP (encapsulation)</li><li>ipip - IP-within-IP Encapsulation Protocol</li><li>ipsec-ah - IPsec Authentication Header</li><li>ipsec-esp - IPsec Encapsulating Security Payload</li><li>ipv6 - Internet Protocol version 6</li><li>ipv6-frag - Fragment Header for IPv6</li><li>ipv6-nonxt - No Next Header for IPv6</li><li>ipv6-opts - Destination Options for IPv6</li><li>ipv6-route - Routing Header for IPv6</li><li>iso-tp4 - ISO Transport Protocol Class 4</li><li>l2tp - Layer Two Tunneling Protocol</li><li>ospf - Open Shortest Path First</li><li>pim - Protocol Independent Multicast</li><li>pup - PARC Universal Packet</li><li>rdp - Reliable Data Protocol</li><li>rspf - Radio Shortest Path First</li><li>rsvp - Reservation Protocol</li><li>sctp - Stream Control Transmission Protocol</li><li>st - Internet Stream Protocol</li><li>tcp - Transmission Control Protocol</li><li>udp - User Datagram Protocol</li><li>udp-lite - Lightweight User Datagram Protocol</li><li>vmtp - Versatile Message Transaction Protocol</li><li>vrrp - Virtual Router Redundancy Protocol</li><li>xns-idp - Xerox Network Systems Internet Datagram Protocol</li><li>xtp - Xpress Transport Protocol</li></ul>"
+        },
+        {
+          "row": 24,
+          "col": 1,
+          "html": "Matches packets up to a limited rate. A rule using this matcher will match until this limit is reached. <ul><li>count - maximum average packet rate, measured in packets per second (pps), unless followed by Time option</li><li>time - specifies the time interval over which the packet rate is measured</li><li>burst - number of packets to match in a burst</li></ul>"
+        },
+        {
+          "row": 27,
+          "col": 1,
+          "html": "Ethernet payload type (MAC-level protocol). To match protocol type for VLAN encapsulated frames (0x8100 or 0x88a8), a vlan-encap property should be used.<ul><li>802.2 - 802.2 Frames (0x0004)</li><li>arp - Address Resolution Protocol (0x0806)</li><li>homeplug-av - HomePlug AV MME (0x88E1)</li><li>ip - Internet Protocol version 4 (0x0800)</li><li>ipv6 - Internet Protocol Version 6 (0x86DD)</li><li>ipx - Internetwork Packet Exchange (0x8137)</li><li>length - Packets with length field (0x0000-0x05DC)</li><li>lldp - Link Layer Discovery Protocol (0x88CC)</li><li>loop-protect - Loop Protect Protocol (0x9003)</li><li>mpls-multicast - MPLS multicast (0x8848)</li><li>mpls-unicast - MPLS unicast (0x8847)</li><li>mvrp - Multiple VLAN Registration protocol (0x88F5)</li><li>packing-compr - Encapsulated packets with compressed <a href=\"/docs/7.24/system-information-and-utilities/ip-packing\">IP packing</a> (0x9001)</li><li>packing-simple - Encapsulated packets with simple <a href=\"/docs/7.24/system-information-and-utilities/ip-packing\">IP packing</a> (0x9000)</li><li>pppoe - PPPoE Session Stage (0x8864)</li><li>pppoe-discovery - PPPoE Discovery Stage (0x8863)</li><li>rarp - Reverse Address Resolution Protocol (0x8035)</li><li>service-vlan - Provider Bridging (IEEE 802.1ad) &amp; Shortest Path Bridging IEEE 802.1aq (0x88A8)</li><li>vlan - VLAN-tagged frame (IEEE 802.1Q) and Shortest Path Bridging IEEE 802.1aq with NNI compatibility (0x8100)</li></ul>"
+        },
+        {
+          "row": 35,
+          "col": 1,
+          "html": "MAC frame type:<ul><li>broadcast - broadcast MAC packet</li><li>host - packet is destined to the bridge itself</li><li>multicast - multicast MAC packet</li><li>other-host - packet is destined to some other unicast address, not to the bridge itself</li></ul>"
+        },
+        {
+          "row": 40,
+          "col": 1,
+          "html": "The BPDU (Bridge Protocol Data Unit) flags. Bridges exchange configuration messages named BPDU periodically for preventing loops<ul><li>topology-change - topology change flag is set when a bridge detects port state change, to force all other bridges to drop their host tables and recalculate network topology</li><li>topology-change-ack - topology change acknowledgment flag is sent in replies to the notification packets</li></ul>"
+        },
+        {
+          "row": 51,
+          "col": 1,
+          "html": "The BPDU type:<ul><li>config - configuration BPDU</li><li>tcn - topology change notification</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Action to take if the packet is matched by the rule:<ul><li>accept - accept the packet. No action, i.e., the packet is passed through without undertaking any action, and no more rules are processed in the relevant list/chain</li><li>drop - silently drop the packet (without sending the ICMP reject message)</li><li>jump - jump to the chain specified by the value of the jump-target argument</li><li>log - add a message to the system log containing the following data: in-interface, out-interface, src-mac, dst-mac, eth-proto, protocol, src-ip:port-&gt;dst-ip:port and length of the packet. After the packet is matched it is passed to the next rule in the list, similar to passthrough</li><li>mark - mark the packet to use the mark later</li><li>passthrough - ignore this rule and go on to the next one. Acts the same way as a disabled rule, except for the ability to count packets</li><li>return - return to the previous chain, from where the jump took place</li><li>set-priority - set priority specified by the new-priority parameter on the packets sent out through a link that is capable of transporting priority (VLAN or WMM-enabled wireless interface). <a href=\"/docs/7.24/bridging-and-switching/user-guides/wmm-and-vlan-priority\" rel=\"nofollow\">Read more</a></li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Action to take if the packet is matched by the rule:<ul><li>accept - accept the packet. No action, i.e., the packet is passed through without undertaking any action, and no more rules are processed in the relevant list/chain</li><li>arp-reply - send a reply to an ARP request (any other packets will be ignored by this rule) with the specified MAC address (only valid in dstnat chain)</li><li>drop - silently drop the packet (without sending the ICMP reject message)</li><li>dst-nat - change the destination MAC address of a packet (only valid in dstnat chain)</li><li>jump - jump to the chain specified by the value of the jump-target argument</li><li>log - log the packet</li><li>mark - mark the packet to use the mark later</li><li>passthrough - ignore this rule and go on to the next one. Acts the same way as a disabled rule, except for the ability to count packets</li><li>redirect - redirect the packet to the bridge itself (only valid in dstnat chain)</li><li>return - return to the previous chain, from where the jump took place</li><li>set-priority - set the priority specified by the new-priority parameter on the packets sent out through a link that is capable of transporting priority (VLAN or WMM-enabled wireless interface). <a href=\"/docs/7.24/bridging-and-switching/user-guides/wmm-and-vlan-priority\" rel=\"nofollow\">Read more</a></li><li>src-nat - change the source MAC address of a packet (only valid in srcnat chain)</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": [
+    {
+      "table": 7,
+      "reason": "cell-count",
+      "row": 2,
+      "markdown": 4,
+      "html": 2
+    },
+    {
+      "table": 16,
+      "reason": "cell-count",
+      "row": 2,
+      "markdown": 3,
+      "html": 2
+    },
+    {
+      "table": 17,
+      "reason": "cell-count",
+      "row": 1,
+      "markdown": 4,
+      "html": 2
+    }
+  ]
+}

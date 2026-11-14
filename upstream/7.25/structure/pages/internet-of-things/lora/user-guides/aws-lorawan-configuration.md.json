@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "internet-of-things/lora/user-guides/aws-lorawan-configuration.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/internet-of-things/lora/user-guides/aws-lorawan-configuration.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/internet-of-things/lora/user-guides/aws-lorawan-configuration",
+  "md_sha256": "9f35240e59459f0118846c09c65800a4686897e8a7e08f10c54de7b27d62689b",
+  "html_sha256": "3f9a3f93a70aca772df9769565768bae980939b7379ace69ab0f118c732d35de",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 7,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 18,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 18,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

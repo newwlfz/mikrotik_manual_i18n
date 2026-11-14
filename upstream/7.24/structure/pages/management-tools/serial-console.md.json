@@ -1,0 +1,102 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "management-tools/serial-console.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/management-tools/serial-console.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/management-tools/serial-console",
+  "md_sha256": "d7d149f11ec16d6e3f2a8a2e70f364c9f096396d8bb696bae18e2fd5c9f748ba",
+  "html_sha256": "6f0496ed83441eb56b994376f8d89d262743c27d6ee924571ec6c0005e59f74d",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 7,
+      "sup": 0,
+      "code": 7,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 7,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 7,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 4,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 8,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 8,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 8,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 3,
+      "cols": 5,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 5,
+      "cols": 5,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 9,
+      "cols": 6,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

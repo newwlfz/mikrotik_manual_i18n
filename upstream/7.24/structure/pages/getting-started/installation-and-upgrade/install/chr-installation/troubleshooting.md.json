@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "getting-started/installation-and-upgrade/install/chr-installation/troubleshooting.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/install/chr-installation/troubleshooting.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/install/chr-installation/troubleshooting",
+  "md_sha256": "02f904ff932924c4a49ac60b7ee7ba31539eb730186e06722219e5fb84fac34d",
+  "html_sha256": "4e33755e063b78499941325ba7bd61d4ddba5620ce2ac677462eba75f0072473",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

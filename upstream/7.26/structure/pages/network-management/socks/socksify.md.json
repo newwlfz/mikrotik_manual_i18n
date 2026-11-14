@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "network-management/socks/socksify.md",
+  "source_url": "https://manual.mikrotik.com/docs/network-management/socks/socksify.md",
+  "html_url": "https://manual.mikrotik.com/docs/network-management/socks/socksify",
+  "md_sha256": "963cb8ad64977aa9e9f6ab78b6bae198d27a8d72439ddc0a59277d74faf850e2",
+  "html_sha256": "83d9ddec554bb66989d54ca50cd9829bbd90d811eb67b4577b346529e7ba9c5c",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 11,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

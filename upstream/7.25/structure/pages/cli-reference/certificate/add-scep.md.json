@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/certificate/add-scep.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/add-scep.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/add-scep",
+  "md_sha256": "7518d0ccbc0094301469ca8f346b46bca38c6c4b3cfa7e66cde8f0d024b2bfcf",
+  "html_sha256": "8c7d0c3afa331ba4709c180ebd5a6dd2d775d21285213b7c98a3582cc23c0a2b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

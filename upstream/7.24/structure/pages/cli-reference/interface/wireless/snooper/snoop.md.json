@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/wireless/snooper/snoop.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/snooper/snoop.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/snooper/snoop",
+  "md_sha256": "b7a3e467690f761ac033b11c6948c4d52cf4734d49504bf852786e137470de89",
+  "html_sha256": "bc0004bbdd9494882afe072cb9cd13bde8c52dc93618447b3accb632c74a10a8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

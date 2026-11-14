@@ -1,0 +1,11 @@
+{
+  "position": 24,
+  "label": "task",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/task/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/task"
+}

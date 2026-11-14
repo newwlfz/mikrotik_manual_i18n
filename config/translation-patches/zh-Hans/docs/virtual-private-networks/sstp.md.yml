@@ -1,0 +1,12 @@
+# `sstp.md` 的 :::info 正文分两段；生成时两段都原样留在 overlay 里，
+# `verify` 因此一直报 untranslatedAdmonitions。补丁在 apply/translate
+# 写回前做最后替换，译文与 7.24 已审核版本一致（并修正了原译文中
+# “设置中。”这一处断句）。不要直接改 i18n/ 下的文件。
+replace:
+  - from: "In P2P setups the network address is the same as the other endpoint's local address."
+    to: "在 P2P 设置中，网络地址将与其他端点的本地地址相同。"
+  - from: "**Important:** As with any other PPP tunnel, SSTP also supports BCP which allows it to bridge the SSTP tunnel with a local interface. For example, in setups where routers are connected to the Internet through ether1 and workstations and laptops are connected to ether2, both local networks are routed through the SSTP client and they are not in the same broadcast domain. BCP is used."
+    to: "**重要：** 与任何其他 PPP 隧道一样，SSTP 也支持 BCP，这允许它将 SSTP 隧道与本地接口桥接。例如，在路由器通过 ether1 连接到互联网、工作站和笔记本电脑连接到 ether2 的设置中，两个本地网络都通过 SSTP 客户端路由，并且它们不在同一广播域中。此处使用了 BCP。"
+  # 补丁也接受已经落盘的旧译法，保证重复 apply 时能收敛到上面这句。
+  - from: "**重要：** 与任何其他 PPP 隧道一样，SSTP 也支持 BCP，这允许它将 SSTP 隧道与本地接口桥接。例如，在路由器通过 ether1 连接到互联网、工作站和笔记本电脑连接到 ether2 的设置中。两个本地网络都通过 SSTP 客户端路由，并且它们不在同一广播域中。此处使用了 BCP。"
+    to: "**重要：** 与任何其他 PPP 隧道一样，SSTP 也支持 BCP，这允许它将 SSTP 隧道与本地接口桥接。例如，在路由器通过 ether1 连接到互联网、工作站和笔记本电脑连接到 ether2 的设置中，两个本地网络都通过 SSTP 客户端路由，并且它们不在同一广播域中。此处使用了 BCP。"

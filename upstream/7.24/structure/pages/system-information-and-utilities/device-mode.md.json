@@ -1,0 +1,115 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "system-information-and-utilities/device-mode.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/device-mode.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/device-mode",
+  "md_sha256": "38c5ceebd2d560b67569dd26f3294ba2fc85c73ffb0187eb1e00eef645ccaca0",
+  "html_sha256": "09cd0b7ffa270d393ab3a6518dad3badb33c7c4878e4b5a2846fb11520a47df1",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        0,
+        5
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 20,
+      "cols": 5,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Allows choosing from available modes that will limit device functionality. By default, <strong>advanced</strong> mode allows options except<strong>traffic-gen, container, partitions,</strong><strong>install-any-version</strong>**, routerboard.** So to use these features, you will need to turn it on by performing a device-mode update. <br/> By default, <strong>home</strong> mode disables the following features: <strong>scheduler, socks, fetch, bandwidth-test, traffic-gen, sniffer, romon, proxy, hotspot, email, zerotier, container,</strong><strong>install-any-version</strong>**, partitions, routerboard.**"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 20,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "<em><code>/tool/bandwidth-test</code></em><em><code>/tool/bandwidth-server</code></em><br/><em><code>/tool/speed-test</code></em>"
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "html": "<em><code>/interface/l2tp-server</code></em><br/><em><code>/interface/l2tp-client</code></em>"
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "html": "<em>/partitions</em><br/> does not allow changing the count of partitions. If your router is unable to boot, it will still be able to boot into your other partitions. No restriction for crash recovery."
+        },
+        {
+          "row": 11,
+          "col": 1,
+          "html": "<em><code>/interface/pptp-server</code></em><br/><em><code>/interface/pptp-client</code></em>"
+        },
+        {
+          "row": 18,
+          "col": 1,
+          "html": "<em><code>/tool/traffic-generator</code></em><br/><em><code>/tool/flood-ping</code></em><br/><em><code>/tool/ping-speed</code></em>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

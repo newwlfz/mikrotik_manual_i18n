@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/user-manager/profile-limitation.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/profile-limitation.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/profile-limitation",
+  "md_sha256": "121cd9d7cc2ae9469d5bf604f36059fb7e4be60c4a47c5df7095d53c91fe5c18",
+  "html_sha256": "092d11f35303deade75b9cd81019d755a3ed9ff8a9e05ea25e96e4e01584bb0f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

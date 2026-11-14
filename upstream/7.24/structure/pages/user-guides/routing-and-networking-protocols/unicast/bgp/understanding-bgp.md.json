@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "user-guides/routing-and-networking-protocols/unicast/bgp/understanding-bgp.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/bgp/understanding-bgp.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/bgp/understanding-bgp",
+  "md_sha256": "84538f3b2bdfd9d1cfb399776f8ed58aef8ba62d6fd3401bb124f5ebe8f9d521",
+  "html_sha256": "4cc649f5e6a82ba311186c93ad586d4a277ca7d8c4dee2a214e47365f4bc4789",
+  "body": {
+    "html": {
+      "lists": 7,
+      "listItems": 61,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 11,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 61,
+      "listItems": 61,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 61,
+      "listItems": 61,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

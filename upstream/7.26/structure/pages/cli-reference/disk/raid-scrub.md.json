@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/disk/raid-scrub.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/disk/raid-scrub.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/disk/raid-scrub",
+  "md_sha256": "e5f17b075fb63263384f1d5ed98d9e4abb24843adb05687e5991e5e6a5030c21",
+  "html_sha256": "bff9dba2d1eddf369726f9b4d73f74d5a253d4bda12bde10217abdb78a88fdb9",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,65 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "hardware/usb-features.md",
+  "source_url": "https://manual.mikrotik.com/docs/hardware/usb-features.md",
+  "html_url": "https://manual.mikrotik.com/docs/hardware/usb-features",
+  "md_sha256": "60983594ca04f2715240a27d33c5ff8e6189b45835900596fdfbffee2dec4671",
+  "html_sha256": "b757e8f19040477475c68c7e281ea03b80e2ba38a0581796ba4722201e789dde",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 4,
+      "br": 9,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        9,
+        10
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "During RouterOS startup check if a USB device is present in mini-PCIe slot: <br/><ul><li>if present - use device in mini-PCIe slot</li><li>if not present - defaults to the external USB Type A port</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

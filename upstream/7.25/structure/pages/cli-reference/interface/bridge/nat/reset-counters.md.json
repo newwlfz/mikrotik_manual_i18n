@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/bridge/nat/reset-counters.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/nat/reset-counters.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/nat/reset-counters",
+  "md_sha256": "197f49f95c442aef313cc083d59c21f043c7f086a6e0e1ccbe1b2b9c057f763c",
+  "html_sha256": "970f1f2b62a70d54d4c661c81cd13254380a3143cfc30d745f89818a3bd29bcb",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

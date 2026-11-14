@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/ethernet/switch/qos/priority-flow-control.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/qos/priority-flow-control.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/qos/priority-flow-control",
+  "md_sha256": "4fdf68e174b3bc14258ad969d46679a67b91652a4ba4cd4910f29231d22b77c5",
+  "html_sha256": "24674794df69da7cf2a767f099eec2cc2d453b1b17708bec56cff0a61bc0efe7",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/caps-man/actual-interface-configuration.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/caps-man/actual-interface-configuration.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/caps-man/actual-interface-configuration",
+  "md_sha256": "2e0db3e55de458867c7020da7a307f2a57b00a840b6e644fa7882080f7bf9117",
+  "html_sha256": "aa7e9b08fcfa01d0f2818c140fb993d6c02d13c1751ca7f6cfa00e33dc046e41",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

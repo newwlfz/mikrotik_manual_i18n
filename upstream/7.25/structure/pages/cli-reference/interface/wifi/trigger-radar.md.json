@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/wifi/trigger-radar.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wifi/trigger-radar.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wifi/trigger-radar",
+  "md_sha256": "2779c3058a12e394a3a95cb1b43310c339a1370e9f463eae3859c08418217459",
+  "html_sha256": "84ec15137288b178e7c687dda0fb2d7ba34aeae5adec8b0c128d301cd7f0b13f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

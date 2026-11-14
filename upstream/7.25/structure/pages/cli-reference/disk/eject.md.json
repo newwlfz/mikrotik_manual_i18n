@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/disk/eject.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/disk/eject.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/disk/eject",
+  "md_sha256": "ebd0a238bb9d3d27f7620a57412d7f6bfa0815f76aaaa93762d5d9727435cd00",
+  "html_sha256": "14bd8e13058a9a037d7f68c0390b84074bce696843cbd1fbdbeb751c48da9206",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/partitions/repartition.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/partitions/repartition.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/partitions/repartition",
+  "md_sha256": "6165dd05d218e1216e6b15a1a46eda10a4856fc5b2f9db8f4bb89a8a8d73c654",
+  "html_sha256": "39b3010e766a7f54c426ce0bc9d726db2f2c9456df21c0fd88d823c22d10bc23",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

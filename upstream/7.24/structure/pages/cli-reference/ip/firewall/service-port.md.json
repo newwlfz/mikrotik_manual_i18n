@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/firewall/service-port.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/firewall/service-port.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/firewall/service-port",
+  "md_sha256": "0b289cf74f661634bcb0430980c819ab42db76fb985c8f07baf4d2b669cc2e11",
+  "html_sha256": "c35c2ee38d5e06e25d85285208adf83ff588238c6a32e065f71dd5eee092edf4",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

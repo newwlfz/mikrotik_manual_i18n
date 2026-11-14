@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/mpls/mangle/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/mangle.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/mangle/",
+  "md_sha256": "b304775199d352f4fbeaa3b98f063a41d229f04e186657d2655d87528bb689d5",
+  "html_sha256": "4c913e24aa0509a19a3c8c20df71386b1a5675996ddfaa8e77102b120e22b2ff",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

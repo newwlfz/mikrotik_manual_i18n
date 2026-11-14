@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/container/repull.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/container/repull.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/container/repull",
+  "md_sha256": "6d359216059463bc30dd6193b12071ab21d20fed75916c2ba407ff166d80c0c4",
+  "html_sha256": "bea871d748415b724dd5be3e8661e12e34b6496fd8f5934fd842a80909e69027",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

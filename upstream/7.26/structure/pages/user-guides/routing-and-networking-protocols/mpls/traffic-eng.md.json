@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "user-guides/routing-and-networking-protocols/mpls/traffic-eng.md",
+  "source_url": "https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/mpls/traffic-eng.md",
+  "html_url": "https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/mpls/traffic-eng",
+  "md_sha256": "4234e0e170ecb064d3938c45d3add132232fcce86b621b06839a40c5b1ea10ad",
+  "html_sha256": "343fa08004ee41d769ecf3ad9bf655922eb6b59f502e11f13e13b48112f98301",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 7,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

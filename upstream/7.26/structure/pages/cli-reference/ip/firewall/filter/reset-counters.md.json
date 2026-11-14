@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/firewall/filter/reset-counters.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/firewall/filter/reset-counters.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/firewall/filter/reset-counters",
+  "md_sha256": "fe5f5934f840f2f840e30d2bc8ebe0ec7404ea119400c3774b6c156d9b43f076",
+  "html_sha256": "d83f6727d6b2f30d6d2d454f51108fdb7d9135e40b9b811e62064d3b2f8e2544",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

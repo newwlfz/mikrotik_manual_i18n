@@ -1,0 +1,11 @@
+{
+  "position": 8,
+  "label": "Igmp Proxy",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/routing/igmp-proxy/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/routing/igmp-proxy"
+}

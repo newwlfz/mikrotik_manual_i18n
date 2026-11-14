@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "user-guides/routing-and-networking-protocols/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/",
+  "md_sha256": "066cd243f321b4642a8518c83d9093b9c26e1fb68d291b629b503ab6047484ce",
+  "html_sha256": "cfe94dac4d156f7d88b67b3cfc74bb89af3267702eaee450ce2303511ca4f714",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

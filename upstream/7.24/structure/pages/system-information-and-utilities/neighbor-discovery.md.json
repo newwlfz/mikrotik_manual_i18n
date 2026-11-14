@@ -1,0 +1,83 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "system-information-and-utilities/neighbor-discovery.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/neighbor-discovery.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/neighbor-discovery",
+  "md_sha256": "5983fe0b132910103bfac4fc17c772e7c12d3e2e22516a8b602b97ec0d33e296",
+  "html_sha256": "5248256cfd175b8f9e2f5ba9a1da946d5cd618603802a10f21c9687251fa493b",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 9,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 19,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 19,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 21,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Whether to send Data Center Bridging Capabilities Exchange Protocol (DCBX) TLVs, which allows to communicate switch <a href=\"/docs/7.24/bridging-and-switching/quality-of-service\">QoS settings</a> and capabilities with other neighboring devices using LLDP. Only applies to MikroTik devices with a Marvell Prestera switch (e.g. CRS3xx). <br/> Enabled DCBX includes the following TLVs: <br/><ol><li><strong>ETS (Enhanced Transmission Selection) Configuration TLV</strong>. This TLV is used to share the switch's ETS configuration. It includes:<ol><li>The willingness bit, which indicates whether the device is willing to accept QoS configuration from neighboring devices. In RouterOS, the willing bit is set to disabled, meaning the switch will not accept remote configurations and instead uses its own settings.</li><li>The priority assignment table, which maps priorities to specific traffic-class.</li><li>The bandwidth allocation table, where RouterOS calculates the percentage of bandwidth allocated to each queue based on the <code>weight</code> property. This applies to queues using the <code>high-priority-group</code> in the <code><code>/interface/ethernet/switch/qos/tx-manager/queue</code></code> settings.</li><li>The Transmission Selection Algorithm (TSA) table, where <code>high-priority-group</code> queues are assigned to ETS, <code>strict-priority</code> queues to Strict Priority, and <code>low-priority-group</code> or non-hardware offloaded queues to the Vendor Specific Algorithm.</li></ol></li><li><strong>ETS Recommendation TLV</strong>. This provides a recommendation on how neighboring devices should configure ETS. RouterOS uses the same data as in the ETS Configuration TLV to give its recommendation.</li><li><strong>Priority-based Flow Control Configuration TLV</strong>. This TLV is used to share PFC configuration. Similar to the ETS TLV, the willingness bit is set to disabled, meaning the switch does not accept remote PFC configurations. PFC is enabled for specific priorities based on settings configured under <code><code>/interface/ethernet/switch/qos/priority-flow-control</code></code>, and <code><code>/interface/ethernet/switch/qos/port</code></code>.</li><li><strong>Application Priority TLV</strong>. This TLV is used to communicate how different applications are prioritized in the network.</li><li><strong>Application VLAN TLV</strong>. This TLV is used to share VLAN configurations for applications. RouterOS currently does not support sending values in this TLV and will send an empty VLAN table instead.</li></ol>"
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Two specific TLVs facilitate Power over Ethernet (PoE) management between Power Sourcing Equipment (PSE) and Powered Devices (PD): <br/><ul><li>IEEE 802.3 Organizationally Specific <strong>Power Via MDI</strong> TLV</li><li>TIA-1057 (LLDP-MED) Organizationally Specific <strong>Extended Power via MDI</strong> TLV</li></ul> The <code>lldp-poe-power</code> attribute determines whether to transmit the IEEE 802.3 Organizationally Specific Power Via MDI TLV in LLDP messages. <br/> The transmission of LLDP-MED Organizationally Specific Extended Power via MDI TLV is not configurable. It is automatically included in outgoing LLDP-MED packets when the remote device has transmitted the LLDP-MED capability of receiving power. <br/> These TLVs are relevant only for Ethernet interfaces that support <a href=\"/docs/7.24/hardware/poe-out\">PoE-Out</a>. The setting is available since RouterOS version 7.15, and it replaces PoE-out port <code>poe-lldp-enabled</code> setting."
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Advertised VLAN ID for LLDP-MED Network Policy TLV. This allows assigning a VLAN ID for LLDP-MED capable devices, such as VoIP phones. The TLV will only be added to interfaces where LLDP-MED capable devices are discovered and <code>lldp-med</code> is enabled. Other TLV values are predefined and cannot be changed: <br/><ul><li>Application Type - Voice</li><li>VLAN Type - Tagged</li><li>L2 Priority - 0</li><li>DSCP Priority - 0</li></ul> When used together with the bridge interface, the (R/M)STP protocol should be enabled with the <code>protocol-mode</code> setting. <br/> Additionally, other neighbor discovery protocols (e.g. CDP) should be excluded using the <code>protocol</code> setting to avoid LLDP-MED misconfiguration."
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "html": "Whether to send IEEE 802.1 Organizationally Specific TLVs in LLDP related to VLANs. <br/> When this setting is enabled, three TLVs are advertised: <br/><ul><li>Port VLAN ID. This applies to the bridge port's <code>pvid</code> property.</li><li>Port And Protocol VLAN ID. This TLV is not used and always indicates \"not supported\" and \"not enabled\".</li><li>VLAN Name. This includes up to 10 active VLANs from the \"<code><code>/interface/bridge/vlan</code></code>\" table.</li></ul> These TLVs are relevant to interfaces that are added to a <a href=\"/docs/7.24/bridging-and-switching/#bridge-vlan-filtering\">vlan-filtering</a> bridge, and the setting is available since RouterOS version 7.16."
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "firewall-and-quality-of-service/upnp.md",
+  "source_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/upnp.md",
+  "html_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/upnp",
+  "md_sha256": "016713f7132792f140e36f9d84012956899daf8979475691ae1206848ad6f5e9",
+  "html_sha256": "eee72cbb72aee3f4e60fd6357940ccf9e04e3595e36a828b30c88bb3b729a72d",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 18,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

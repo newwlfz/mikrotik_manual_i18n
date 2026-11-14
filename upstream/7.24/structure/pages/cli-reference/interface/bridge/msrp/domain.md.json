@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/bridge/msrp/domain.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bridge/msrp/domain.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bridge/msrp/domain",
+  "md_sha256": "10c1853f7ef7a56198dffd4f56a5225e52542ab623f922f290310efc3b808792",
+  "html_sha256": "d4efc08487e4c4331f9a2c2a1c41888eb18198d7704f1463b9855820d12a4aaf",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/hotspot/service-port.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/hotspot/service-port.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/hotspot/service-port",
+  "md_sha256": "718411ecd15d8f0662c8b554b1ed0b954694e9c1e026943bce4b0236d2d74972",
+  "html_sha256": "a7388bc9f2454fbb4b9f85d01192e62cca1dc749345a177acd06aaa366c0dd78",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

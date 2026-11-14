@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/app/network.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/app/network.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/app/network",
+  "md_sha256": "3931d13f0fcb1749e9e387a9f9e8db7dfdc0526d2b0c221be5bfbfaaac50bb1a",
+  "html_sha256": "02f42397f46fd5f3d65cb4c88789985b49afc7f29f27a2538da3d7263d1cc969",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

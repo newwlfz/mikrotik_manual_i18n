@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/sstp-client/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/sstp-client/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/sstp-client/monitor",
+  "md_sha256": "bd383ce384b670c22210ddfdeb4a3fc20fcb99d3dc89eb9ce2c3a11a076aad41",
+  "html_sha256": "50f0490159905baa0867d615b639e0b47959dae205b74b77af0af0b3fd624a0d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

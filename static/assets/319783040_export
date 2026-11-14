@@ -1,0 +1,8 @@
+[Interface]
+ListenPort = 13533
+PrivateKey = UBLqJEFZZf9wszZSUF2BPWa9dsMX99RbEcxlNfxWfXk=
+
+[Peer]
+PublicKey = EoF7HlFu3fbOnuYbyGqLMJkPZgQk9n3WwONZuJZ6qWc=
+AllowedIPs = 0.0.0.0/0
+Endpoint = 199.168.100.10:51820

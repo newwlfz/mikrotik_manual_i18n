@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/ethernet/switch/acl/policer.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/acl/policer.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/acl/policer",
+  "md_sha256": "ea98b1eb38bea7ac824fdc5000cbf32389fabba01f086ab70deb6d6f591a93de",
+  "html_sha256": "ca1c50fcea8583f02059d4aecf83e5afdb6f7f88d84b63771452ba0c0f7a3895",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

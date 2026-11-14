@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wifi/wps-client.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/wps-client.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/wps-client",
+  "md_sha256": "9f254fc1ab31245e46215c96c0d6c9d204212c33746a7d8759fb43baf4f062c7",
+  "html_sha256": "f695aeb63e2bf6747ab508518d14de2f44ca9ab992f5c5cbe129b7b66bc8f712",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

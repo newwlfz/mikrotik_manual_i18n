@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Bluetooth Traffic",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/iot/wiliot/bluetooth-traffic/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/iot/wiliot/bluetooth-traffic"
+}

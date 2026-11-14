@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/file/copy.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/file/copy.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/file/copy",
+  "md_sha256": "2b93aa3e3e5205dc7e52bd8eba1876c4328e6a32ebfcabb394c639ac1a2c02d9",
+  "html_sha256": "44b718b610401921831b67fbac89ea0875b30efd3cef2003ce2bfab5821e8fbe",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

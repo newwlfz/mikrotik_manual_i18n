@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "network-management/cloud/communication-mikrotik-cloud-servers.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/network-management/cloud/communication-mikrotik-cloud-servers.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/network-management/cloud/communication-mikrotik-cloud-servers",
+  "md_sha256": "63dd11d3fab82ebd99482baf6c7de5d8dc5b92d8da3f833301c8f46704376d8e",
+  "html_sha256": "49776b397bbe2f671851dc7e73d90a2690c2196e44615527e3d7f13e20082b14",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 12,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/tool/sniffer/connection.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/sniffer/connection.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/sniffer/connection",
+  "md_sha256": "6bbb886ec1a908a719309e7ad822f2b5ae97ea9a5dd35869612127458d24ac89",
+  "html_sha256": "0a387a929350ad5a4f7d9ca32656cf2678a5192692d37b4e36efc65629b706e7",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

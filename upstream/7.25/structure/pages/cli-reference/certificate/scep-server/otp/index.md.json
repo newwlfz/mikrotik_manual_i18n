@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/certificate/scep-server/otp/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/scep-server/otp.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/scep-server/otp/",
+  "md_sha256": "4ad05a54095019a7758227f633125f59893c518e4d862f9fa35442fe0208cbaf",
+  "html_sha256": "812accfdadb0af4c73a13f856a4d4e6b314239e0cabd014f0e63f87a375142fb",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

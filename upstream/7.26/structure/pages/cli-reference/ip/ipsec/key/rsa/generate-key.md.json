@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/ipsec/key/rsa/generate-key.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/key/rsa/generate-key.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/key/rsa/generate-key",
+  "md_sha256": "74347790e15be0e670f5dd7fc160e3701a65290bf62397925bc0e7fba9a5a1f7",
+  "html_sha256": "ec359aa8d75bff6eb7c7629cb4826407ae1b349cb0edad3596d416974b63fcbe",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

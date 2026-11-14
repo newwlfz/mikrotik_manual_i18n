@@ -1,0 +1,152 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "authentication-authorization-accounting/user.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting/user.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting/user",
+  "md_sha256": "fee31e69e13638a234dd4f42c07ddba62ea8484bb2cb5c3979a30cf577757350",
+  "html_sha256": "3aa00ae7660c9f9c4fa5b52aefd8715826cad75fece2237fd9940e6630205f14",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 11,
+      "sup": 0,
+      "code": 7,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 11,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 11,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Specifies the complexity requirements of the password, with categories being <em>uppercase, lowercase, digit, symbol.</em><br/>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "List of allowed policies: <br/> Login policies: <br/><ul><li>local - policy that grants rights to log in locally via console</li><li>telnet - policy that grants rights to log in remotely via telnet</li><li>ssh - policy that grants rights to log in remotely via secure shell protocol</li><li>web - policy that grants rights to log in remotely via WebFig.</li><li>winbox - policy that grants rights to log in remotely via WinBox and bandwidth test authentication</li><li>password - policy that grants rights to change the password for currently logged in user (own password) </li><li>api - grants rights to access the router via API.</li><li>rest-api - grants rights to access the router via REST API.</li><li>ftp - policy that grants full rights to log in remotely via FTP. Allows reading/writing/erasing files and to transfer files from/to the router. Should be used together with read/write policies.</li><li>romon - policy that grants rights to connect to the RoMon server.</li></ul> Config Policies: <br/><ul><li>reboot - policy that allows rebooting the router</li><li>read - policy that grants read access to the router's configuration. All console commands that do not alter the router's configuration are allowed. Doesn't affect FTP</li><li>write - policy that grants write access to the router's configuration, except for user management. This policy does not allow reading the configuration, so make sure to enable read policy as well</li><li>policy - policy that grants user management rights. Should be used together with the write policy. Also allows seeing global variables created by other users (requires also 'test' policy). Allows designing <a href=\"/docs/7.24/authentication-authorization-accounting/management-tools/webfig\" rel=\"nofollow\">skins</a> (requires also \"sensitive\" policy).</li><li>test - policy that grants rights to run ping, traceroute, bandwidth-test, wireless scan, snooper, fetch, email and other test commands</li><li>sensitive - grants rights to change the \"hide sensitive\" option, if this policy is disabled sensitive information is not displayed.</li><li>sniff - policy that grants rights to use the packet sniffer tool, torch tool, traffic generator.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Exclude-groups consist of the groups that should not be allowed to be used for users authenticated by radius. If the radius server provides a group specified in this list, the default-group will be used instead. This is to protect against privilege escalation when one user (without policy permission) can change the radius server list, set up their own radius server and <br/>log in as admin."
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 8,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 9,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 10,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/detect-internet/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/detect-internet.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/detect-internet/",
+  "md_sha256": "a2c6c79674c8c75b3ec0a5e7cd57231a41d4eea4be31b7bdd5597961eea8aead",
+  "html_sha256": "34b66047880c3562d65007b31ba111e6649f60d240146fb32a05bce4b0be2655",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

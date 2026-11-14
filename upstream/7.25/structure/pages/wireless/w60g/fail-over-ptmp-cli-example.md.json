@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "wireless/w60g/fail-over-ptmp-cli-example.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/wireless/w60g/fail-over-ptmp-cli-example.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/wireless/w60g/fail-over-ptmp-cli-example",
+  "md_sha256": "c0de9bce807ceda4d297fe1921450670fb1116ef3439fb320a8bacab44e65692",
+  "html_sha256": "d9dbcd6851728126ab51a23dd85513df3d5a523819f682cb0ccef002e9685b5e",
+  "body": {
+    "html": {
+      "lists": 11,
+      "listItems": 17,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 17,
+      "listItems": 17,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 17,
+      "listItems": 17,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        2,
+        5
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

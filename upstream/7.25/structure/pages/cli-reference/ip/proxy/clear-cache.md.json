@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/proxy/clear-cache.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/proxy/clear-cache.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/proxy/clear-cache",
+  "md_sha256": "22e0a9cf25c229dc951d3eff97ad0909cd94db521865351fca13e316ff4b6d9e",
+  "html_sha256": "f09a81267d4c3ad255b01158400de974b097c69dc0fd5134f6caf085bd0d44b9",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

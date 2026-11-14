@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "diagnostics-monitoring-and-troubleshooting/torch.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/torch.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/torch",
+  "md_sha256": "8aed100ab3eb0a119654b588038b845dd75117fb2d788c8685be8d6f662a83bc",
+  "html_sha256": "844e5826bb46203622014c26504b554b88a2c974fd7738f31fad5b8602176711",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

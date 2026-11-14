@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "containers/user-guides/container-matrix-synapse.md",
+  "source_url": "https://manual.mikrotik.com/docs/containers/user-guides/container-matrix-synapse.md",
+  "html_url": "https://manual.mikrotik.com/docs/containers/user-guides/container-matrix-synapse",
+  "md_sha256": "340393aaff0f802c8bd764442d9b0c32c4cdda76f70aa8dc20d5e7639527c258",
+  "html_sha256": "889cb7f0a80517d29f2c967dcd1bf25a44d6cf35e4cc8dc1de5274c483aba13c",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 21,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 11,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 21,
+      "listItems": 21,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 21,
+      "listItems": 21,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        0,
+        10
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

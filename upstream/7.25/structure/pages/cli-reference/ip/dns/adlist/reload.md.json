@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/dns/adlist/reload.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/dns/adlist/reload.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/dns/adlist/reload",
+  "md_sha256": "e020b048ecbe65ea299dc5e51b1f4ebaad6f575e9de6293058e551d14552b805",
+  "html_sha256": "b8c17ba3ea02db7960869579a9e6c45fa3aa99410fcad40c803819cd0a2aff93",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

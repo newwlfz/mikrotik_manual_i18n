@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "Align",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/wireless/align/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/wireless/align"
+}

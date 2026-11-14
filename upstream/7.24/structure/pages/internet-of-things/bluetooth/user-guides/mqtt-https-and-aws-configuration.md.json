@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "internet-of-things/bluetooth/user-guides/mqtt-https-and-aws-configuration.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/internet-of-things/bluetooth/user-guides/mqtt-https-and-aws-configuration.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/internet-of-things/bluetooth/user-guides/mqtt-https-and-aws-configuration",
+  "md_sha256": "8aa90fe8da9c11ac728a251dade9395d9d7bb5d52a296be740e0cbf0c2398498",
+  "html_sha256": "8955fb0227b318a4d42f889cea6e03a75012d512556272d83b744ba84b90bdc8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 19,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

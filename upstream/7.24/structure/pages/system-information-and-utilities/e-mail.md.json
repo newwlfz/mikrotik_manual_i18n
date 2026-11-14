@@ -1,0 +1,74 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "system-information-and-utilities/e-mail.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/e-mail.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/e-mail",
+  "md_sha256": "87c1b51da68dc624ea570f1edfec766e3b2e7e2296c17e63f29e07a51c7af8c1",
+  "html_sha256": "7141f2d34b418d7b27e13ba019296839b508633b17b9ccfb959836b477d58139",
+  "body": {
+    "html": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 5,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Whether to use TLS encryption:<ul><li>yes - sends STARTTLS and drops the session if TLS is not available on the server</li><li>no - does not send STARTTLS</li><li>starttls - sends STARTTLS and continues without TLS if a server responds that TLS is not available</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 13,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 9,
+          "col": 1,
+          "html": "Whether to use TLS encryption:<ul><li>yes - sends STARTTLS and drops the session if TLS is not available on the server</li><li>no - do not send STARTTLS</li><li>starttls - sends STARTTLS and continues without TLS if a server responds that TLS is not available</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

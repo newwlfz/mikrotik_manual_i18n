@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/dude/ros/arp.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/dude/ros/arp.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/dude/ros/arp",
+  "md_sha256": "745324d9be6a0ab72cdf0c5e785f46fbd3dfd82d3813dd7648b3ce0f2dfe766a",
+  "html_sha256": "8add4f68ea58a5fef41d90dd2bef53fa1001d535a2f472c130b287c16a15cd84",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

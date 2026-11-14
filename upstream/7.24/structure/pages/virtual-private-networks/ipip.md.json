@@ -1,0 +1,65 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "virtual-private-networks/ipip.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/virtual-private-networks/ipip.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/virtual-private-networks/ipip",
+  "md_sha256": "eb8b03e5e02afcf6b5fb376b6158b3055ac424efbf03321b9e56f348e1ff8b3d",
+  "html_sha256": "4aff04ae73ce77cda4e5fc94ed1aca3cac14532c4308529766be19ba25495407",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        0,
+        1
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Whether to include the DF bit in related packets: <br/><em>no</em> - fragment if needed, <em>inherit</em> - use the Don't Fragment flag of the original packet. <br/> (Without Don't Fragment: inherit - packet may be fragmented)."
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

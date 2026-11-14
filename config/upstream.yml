@@ -1,0 +1,59 @@
+# Upstream source and structure-audit configuration.
+#
+# Versions are not listed here: `data/manifests/current-version.json` names the
+# version installed in `docs/`, and `versions.json` lists the archived snapshots
+# under `versioned_docs/version-<version>`. tools/sync/lib/versions.mjs derives
+# every directory, manifest path and URL from those two files plus the routing
+# rules below.
+#
+# Why routing is a rule and not a per-version list: the official site serves the
+# current release unversioned (`/docs/<route>`, inventoried by `/llms.txt`) and
+# every archived release under its own prefix (`/docs/<version>/<route>`,
+# inventoried by `/docs/<version>/llms.txt`). Moving to 7.27 is therefore a data
+# change, not a code change.
+schema: 2
+
+root: upstream
+report_dir: reports
+
+fetch:
+  base_url: https://manual.mikrotik.com
+  user_agent: mikrotik-manual-mirror/1.0 (+https://github.com/newwlfz/mikrotik_manual_i18n)
+  concurrency: 6
+  timeout_seconds: 60
+  # Attempts per request, including the first. `fetch-upstream` reads this;
+  # the code default (3) only applies when the key is absent or invalid.
+  retry_limit: 3
+
+structure:
+  # The full audit needs one rendered page per document. It is resumable and
+  # skips a page whose cached md_sha256 still matches.
+  audit_body: true
+  table_selector: "main table, article table, table"
+  content_selector: "main article, article, main"
+
+sections:
+  docs:
+    versioned: true
+    base_url: https://manual.mikrotik.com
+    # Route base per page: "" for current, "/docs/{version}" for an archive.
+    routes:
+      current: ""
+      archived: "/docs/{version}"
+    # Page inventory per version.
+    llms:
+      current: "/llms.txt"
+      archived: "/docs/{version}/llms.txt"
+    # Whole-corpus single file used only for the ETag probe. It is derived from
+    # `llms` above by swapping llms.txt for llms-full.txt ("/llms-full.txt" for
+    # the current tree, "/docs/<version>/llms-full.txt" for an archive); a
+    # release that answers 404 is still fetched page by page. Set
+    # `overrides.<version>.llms_full_url` only when a release breaks that rule.
+    # Per-version escape hatch for a release that does not follow the rule
+    # above, e.g. an official current that also exposes a versioned route:
+    #
+    # overrides:
+    #   "7.26":
+    #     route_base: "/docs/7.26"
+    #     llms_url: "/docs/7.26/llms.txt"
+    overrides: {}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/ups/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/ups.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/ups/",
+  "md_sha256": "b356747455ef53379fbf6ac442ac257c785f03fd8ec10c3a6a88c78d0af1ae0d",
+  "html_sha256": "7e18c02d80a1a6109c81ea409851ec57e2b1f1f4cb3c2b56d4bb6b76c5c7860e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

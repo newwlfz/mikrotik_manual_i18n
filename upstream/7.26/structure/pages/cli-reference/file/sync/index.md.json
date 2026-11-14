@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/file/sync/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/file/sync.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/file/sync/",
+  "md_sha256": "2546ef7eda5459f89fba0f8fd78902cf456458ab1d4dbf271ea3bb4dc9e9c428",
+  "html_sha256": "ecff688c4c54dd56594a25f561227401093d2c37ed256a77cb57bfd0883ceefe",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/caps-man/provisioning.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/caps-man/provisioning.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/caps-man/provisioning",
+  "md_sha256": "d11422d5761607eb3afde0491b462245884a98555b8890ba576d5d9ea6b691b8",
+  "html_sha256": "eebb0405f47541e0bfd91076086c5f79fcf85e36c4764ad00a172e0e4e95d476",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

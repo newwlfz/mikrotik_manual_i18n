@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "getting-started/software-specifications/feature-support-based-on-architecture.md",
+  "source_url": "https://manual.mikrotik.com/docs/getting-started/software-specifications/feature-support-based-on-architecture.md",
+  "html_url": "https://manual.mikrotik.com/docs/getting-started/software-specifications/feature-support-based-on-architecture",
+  "md_sha256": "62ad2a0d7a26de29ada836f475f06a2969d3e19f91d4abd97acf9646ebccef40",
+  "html_sha256": "e80489813dfb56c1acee467b44aadf8f4c2a83471e78328cda4b6f3ba3f57fd5",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 10,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

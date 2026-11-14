@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "containers/user-guides/container-postgres.md",
+  "source_url": "https://manual.mikrotik.com/docs/containers/user-guides/container-postgres.md",
+  "html_url": "https://manual.mikrotik.com/docs/containers/user-guides/container-postgres",
+  "md_sha256": "5a370800bce7329e2f44a5f120d64359bc794cf51340783a46fc70e257379549",
+  "html_sha256": "942823735b35942f00f8e50691f8d94a8c23b912d69e7188d06fa01227031e3a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 15,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,100 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "virtual-private-networks/pppoe/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/virtual-private-networks/pppoe.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/virtual-private-networks/pppoe/",
+  "md_sha256": "8856a4a6708ca96f4435e34fc1dd64908093fdae4ee5fb7d5825fe3d94e675e9",
+  "html_sha256": "b4b58b610e9f349224ada82b18635ec3d2580cdb5b295ffa495c407a2e8de484",
+  "body": {
+    "html": {
+      "lists": 6,
+      "listItems": 16,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 5,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 16,
+      "listItems": 16,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 16,
+      "listItems": 16,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 17,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 10,
+          "col": 1,
+          "html": "current link status. Available values are:<ul class=\"bullets\"><li>dialing,</li><li>verifying password...,</li><li>connected,</li><li>disconnected.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 13,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "This setting controls whether the PPPoE server will accept untagged (non-VLAN) PPPoE packets on its interface, when <code>pppoe-over-vlan-range</code> is specified. <br/> By default, untagged PPPoE packets are accepted. If you are using the <code>pppoe-over-vlan-range</code> property (which enables PPPoE over 802.1Q VLANs), this option lets you decide whether to still allow untagged clients on the same interface. If you are not using the <code>pppoe-over-vlan-range</code>, this setting does not have any effect."
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Defines the time period (in seconds) after which the router is starting to send keepalive packets every second. If there is no traffic and no keepalive responses arrive for that period of time (i.e. 2 * keepalive-timeout), the non-responding client is proclaimed disconnected. <br/><br/><strong>Important:</strong> After a successful LCP handshake, the client sends LCP echo packets to verify MTU forwarding; if no reply is received, it falls back to a backup MTU of 1480. A new option, <code>keepalive-timeout=disabled</code>, disables sending echo packets, effectively turning off the MTU test. <br/><br/>"
+        },
+        {
+          "row": 11,
+          "col": 1,
+          "html": "This setting allows a PPPoE server to operate over 802.1Q VLANs. By default, a PPPoE server only accepts untagged packets on its interface. However, in scenarios where clients are on separate VLANs, instead of creating multiple 802.1Q VLAN interfaces and bridging them together or configuring individual PPPoE servers for each VLAN, you can specify the necessary VLANs directly in the PPPoE server settings. <br/> When you specify the VLAN IDs, the PPPoE server will accept 802.1Q tagged packets from clients, and it will reply using the same VLAN. You then have an option to accept or drop untagged PPPoE clients on the same interface using the <code>accept-untagged</code> property. <br/> You can configure the PPPoE server with <code>pppoe-over-vlan-range</code> setting even on <a href=\"/docs/7.24/bridging-and-switching/vlan\">VLAN interface</a> enabling the QinQ setups as well. But keep in mind that the inner VLAN tag should be 802.1Q. <br/> The setting supports a range of VLAN IDs, as well as individual VLANs specified using comma-separated values. For example: pppoe-over-vlan-range=100-115,120,122,128-130. <br/><br/><strong>Caution:</strong> Avoid configuring a server with <code>pppoe-over-vlan-range</code> on an interface while also creating a VLAN interface using a VLAN ID that falls within that range. For example: <br/><code>/interface/vlan</code><br/><code>add interface=ether2 name=vlan15 vlan-id=15</code><br/><code>/interface/pppoe-server/server</code><br/><code>add disabled=no interface=ether2 pppoe-over-vlan-range=10-20</code> If you need this type of setup, remove the overlapping VLAN ID from <code>pppoe-over-vlan-range</code> and create a separate PPPoE server instance directly on the VLAN interface, like this: <br/><code>/interface/vlan</code><br/><code>add interface=ether2 name=vlan15 vlan-id=15</code><br/><code>/interface/pppoe-server/server</code><br/><code>add disabled=no interface=ether2 pppoe-over-vlan-range=10-14,16-20</code><br/><code>add disabled=no interface=vlan15</code><br/>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

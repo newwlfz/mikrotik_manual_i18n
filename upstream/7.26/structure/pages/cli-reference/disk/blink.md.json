@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/disk/blink.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/disk/blink.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/disk/blink",
+  "md_sha256": "1a2d57a2837fa1481b7b498c89cbcb0209e61f4890312ad6c3f271b52affabd6",
+  "html_sha256": "3b3d1228c84e9b278e4b2773ad10cfc7288f4393094ebb2c151bc4ba7cae8842",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/ipsec/active-peers/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/active-peers.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/active-peers/",
+  "md_sha256": "51e7cbb8f38cb196c590e39b1b081e3251e5885335a8c880de80c7ff9dd94fca",
+  "html_sha256": "67c5e41a028e9c9fc467b148c405d94fca1bf8401f64959eff967826664dcae6",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

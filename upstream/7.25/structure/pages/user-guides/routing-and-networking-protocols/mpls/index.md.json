@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "user-guides/routing-and-networking-protocols/mpls/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/mpls.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/mpls/",
+  "md_sha256": "6f47281fe396c48dbb3cb2f1f9b31af10912eeeb96197b38ef07db6ac300816a",
+  "html_sha256": "3b7bb1149363976f48f3362a8231d8f215271065f7cfb6d225ff55aa91bf2009",
+  "body": {
+    "html": {
+      "lists": 8,
+      "listItems": 44,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 44,
+      "listItems": 44,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 44,
+      "listItems": 44,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

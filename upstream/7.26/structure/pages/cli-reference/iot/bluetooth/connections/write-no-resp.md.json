@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/iot/bluetooth/connections/write-no-resp.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/connections/write-no-resp.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/connections/write-no-resp",
+  "md_sha256": "bd45e6ea5709bd929edf19562ebc64b9341b0ba22fa6e1ba37a17aee09fe8ef7",
+  "html_sha256": "eceabebaa9dd8b7833176cdab8bdad372caf9a96e6cc9212bbf4e39dbc68ea24",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

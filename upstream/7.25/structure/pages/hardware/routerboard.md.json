@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "hardware/routerboard.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/hardware/routerboard.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/hardware/routerboard",
+  "md_sha256": "94b843b2bc55cb43f3aad004cedbb93ac421849b67821260bdebc7a2cdff1570",
+  "html_sha256": "835b8228ff9adbea42197e9b2efa276e84423adecddd562d883b77211911af39",
+  "body": {
+    "html": {
+      "lists": 8,
+      "listItems": 50,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 22,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 50,
+      "listItems": 50,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 50,
+      "listItems": 50,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

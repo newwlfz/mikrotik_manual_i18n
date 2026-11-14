@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "containers/user-guides/container-mosquitto-mqtt-server.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/containers/user-guides/container-mosquitto-mqtt-server.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/containers/user-guides/container-mosquitto-mqtt-server",
+  "md_sha256": "e79397a0f1b496389b187c39bacec738afefbdc6a0bfd1314d278372e01eab3f",
+  "html_sha256": "d98530936bb21fc971d0abba9c6c515c331dc3a288e4f393f036a6608bc90b17",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 11,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 17,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 11,
+      "listItems": 11,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 11,
+      "listItems": 11,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

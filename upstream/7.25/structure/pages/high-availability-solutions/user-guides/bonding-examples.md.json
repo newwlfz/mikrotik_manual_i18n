@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "high-availability-solutions/user-guides/bonding-examples.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/high-availability-solutions/user-guides/bonding-examples.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/high-availability-solutions/user-guides/bonding-examples",
+  "md_sha256": "6e4deb1bad1c1791d1b071c18892f6f06956edbe73dd95fc6e93fdafbc114741",
+  "html_sha256": "79070826d6914e6f8d0a3c272580d8fbb91ebadda91dbd7b54fcab0e4271e052",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

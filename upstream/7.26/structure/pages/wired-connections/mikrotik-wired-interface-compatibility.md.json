@@ -1,0 +1,126 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "wired-connections/mikrotik-wired-interface-compatibility.md",
+  "source_url": "https://manual.mikrotik.com/docs/wired-connections/mikrotik-wired-interface-compatibility.md",
+  "html_url": "https://manual.mikrotik.com/docs/wired-connections/mikrotik-wired-interface-compatibility",
+  "md_sha256": "261104c6d742cbcf155365202dfc25b458ef4cbe53376841840c94b6be7015c5",
+  "html_sha256": "6cce3633b57f8876f028ba4bfeebac13c2aa394f219b915a3b5f6f3ed4824d46",
+  "body": {
+    "html": {
+      "lists": 19,
+      "listItems": 97,
+      "br": 0,
+      "details": 0,
+      "tables": 10,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 3
+    },
+    "md": {
+      "lists": 97,
+      "listItems": 97,
+      "br": 0,
+      "details": 0,
+      "tables": 10,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 3
+    },
+    "local": {
+      "lists": 97,
+      "listItems": 97,
+      "br": 0,
+      "details": 0,
+      "tables": 10,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 3
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 65,
+      "cols": 11,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 64,
+      "cols": 14,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 14,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 14,
+      "cols": 8,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 4,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 3,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 41,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 8,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 8,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 9,
+      "rows": 7,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

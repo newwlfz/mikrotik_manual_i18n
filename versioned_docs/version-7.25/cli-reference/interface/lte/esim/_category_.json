@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Esim",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/lte/esim/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/lte/esim"
+}

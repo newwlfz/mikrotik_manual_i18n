@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/dhcp-server/lease/send-reconfigure.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-server/lease/send-reconfigure.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-server/lease/send-reconfigure",
+  "md_sha256": "754eed566adbdab7f73765ebd213d3d82fba1fef27ba08731b0a1bc3f045518a",
+  "html_sha256": "e8653fbca43e617040ab7b9e73ecd06ac6f1c97ac621bed3a450689b7e67953e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

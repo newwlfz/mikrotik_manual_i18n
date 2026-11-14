@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/cmr/device/wifi-logs.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/device/wifi-logs.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/device/wifi-logs",
+  "md_sha256": "a26f42a580d787874f4aa149f28d64c926371f40100dc642bfa06823ac951105",
+  "html_sha256": "6a8ed178389a1daa292dd62f59316327b8a5f22f860f83765a292d83c67942da",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

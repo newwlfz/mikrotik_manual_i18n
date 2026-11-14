@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "diagnostics-monitoring-and-troubleshooting/log/syslog-with-elasticsearch.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/log/syslog-with-elasticsearch.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/log/syslog-with-elasticsearch",
+  "md_sha256": "8b6453c711a31d04f41e666c7d81c8d9004e7a8e022e01d059e00d019b212f9a",
+  "html_sha256": "06e27924235e182095328f1a00e44d5fd8cb48464cac8d5756887efa6a8ee31f",
+  "body": {
+    "html": {
+      "lists": 6,
+      "listItems": 54,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 54,
+      "listItems": 54,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 54,
+      "listItems": 54,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        0,
+        16
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

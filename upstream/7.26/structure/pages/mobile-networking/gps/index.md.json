@@ -1,0 +1,62 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "mobile-networking/gps/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/mobile-networking/gps.md",
+  "html_url": "https://manual.mikrotik.com/docs/mobile-networking/gps/",
+  "md_sha256": "dfad5746b89041b354e8984926fb7fb16b79e204edd1b7a4c19f8e321644cf28",
+  "html_sha256": "cda067ff60e8d53ea16196ee1d98cd4fd3b542db8e8444d5b2a40dfe34cd5ff3",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 7,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 14,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

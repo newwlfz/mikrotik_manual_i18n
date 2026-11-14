@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "diagnostics-monitoring-and-troubleshooting/dynamic-dns.md",
+  "source_url": "https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/dynamic-dns.md",
+  "html_url": "https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/dynamic-dns",
+  "md_sha256": "7298a580c0a1caa46a3bd39bdde7a8d17e454d2f2f5ff76b78d130e7d3172de7",
+  "html_sha256": "94cb06834ae9225258d416d0c838d53d4ab49373509ad309b52891070b78689d",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 36,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 15,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 15,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

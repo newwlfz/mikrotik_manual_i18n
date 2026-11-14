@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/ntp/client/reset-freq-drift.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/ntp/client/reset-freq-drift.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/ntp/client/reset-freq-drift",
+  "md_sha256": "a8a38da1391f93a37e8fd030b73221e666a1dd54b6f8c3fb6c26578810f54086",
+  "html_sha256": "c682edf5ff54545025f3718b701ead31a645b8fdb7d0fc060036a708c7559f3a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

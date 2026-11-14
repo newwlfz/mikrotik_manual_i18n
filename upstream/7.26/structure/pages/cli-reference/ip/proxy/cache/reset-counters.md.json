@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/proxy/cache/reset-counters.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/proxy/cache/reset-counters.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/proxy/cache/reset-counters",
+  "md_sha256": "2e7f96d43016a986b3057a20b0d627225232008868ca969d1cad66db3f86278f",
+  "html_sha256": "b51c5af9227d640b99c2400b846c107d0f43c3a09986ad96384d3ddccbb3960b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

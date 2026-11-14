@@ -1,0 +1,11 @@
+{
+  "position": 5,
+  "label": "IPsec",
+  "key": "virtual-private-networks/ipsec",
+  "link": {
+    "type": "doc",
+    "id": "virtual-private-networks/ipsec/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

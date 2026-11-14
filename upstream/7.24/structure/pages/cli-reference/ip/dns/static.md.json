@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/dns/static.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dns/static.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dns/static",
+  "md_sha256": "c01ea1b4631867e2dccd341bd2d815f8ef2e37d5a8a5d3746203828debb2051b",
+  "html_sha256": "4e5cd05552aaf832dae8b0b037f587702fa1cc3003c9ec0e8f1c2e956e8af635",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

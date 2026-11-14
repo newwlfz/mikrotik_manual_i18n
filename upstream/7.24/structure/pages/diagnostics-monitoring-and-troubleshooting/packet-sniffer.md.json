@@ -1,0 +1,65 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "diagnostics-monitoring-and-troubleshooting/packet-sniffer.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/packet-sniffer.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/packet-sniffer",
+  "md_sha256": "9ce62ae744db57223499af759769beb7b511e3ca8b61548d3f2d328c51ef5dfa",
+  "html_sha256": "2f7b14cbf8aba1f4a7f0e0d2c505fe6c7406f80bfea3ea65501f2203c53c6852",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 8,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 31,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 16,
+          "col": 1,
+          "html": "Up to 16 comma-separated IP/IPv6 protocols used as a filter. IP protocols (instead of protocol names, protocol numbers can be used):<ul><li><strong>ipsec-ah</strong> - IPsec AH protocol</li><li><strong>ipsec-esp</strong> - IPsec ESP protocol</li><li><strong>ddp</strong> - datagram delivery protocol</li><li><strong>egp</strong> - exterior gateway protocol</li><li><strong>ggp</strong> - gateway-gateway protocol</li><li><strong>gre</strong> - general routing encapsulation</li><li><strong>hmp</strong> - host monitoring protocol</li><li><strong>idpr-cmtp</strong> - idpr control message transport</li><li><strong>icmp</strong> - internet control message protocol</li><li><strong>icmpv6</strong> - internet control message protocol v6</li><li><strong>igmp</strong> - internet group management protocol</li><li><strong>ipencap</strong> - ip encapsulated in ip</li><li><strong>ipip</strong> - ip encapsulation</li><li><strong>encap</strong> - ip encapsulation</li><li><strong>iso-tp4</strong> - iso transport protocol class 4</li><li><strong>ospf</strong> - open shortest path first</li><li><strong>pup</strong> - parc universal packet protocol</li><li><strong>pim</strong> - protocol independent multicast</li><li><strong>rspf</strong> - radio shortest path first</li><li><strong>rdp</strong> - reliable datagram protocol</li><li><strong>st</strong> - st datagram mode</li><li><strong>tcp</strong> - transmission control protocol</li><li><strong>udp</strong> - user datagram protocol</li><li><strong>vmtp</strong> - versatile message transport</li><li><strong>vrrp</strong> - virtual router redundancy protocol</li><li><strong>xns-idp</strong> - xerox xns idp</li><li><strong>xtp</strong> - xpress transfer protocol</li></ul>"
+        },
+        {
+          "row": 17,
+          "col": 1,
+          "html": "Up to 16 comma separated entries used as a filter. Mac protocols (instead of protocol names, protocol numbers can be used):<ul><li><strong>802.2</strong> - 802.2 Frames (0x0004)</li><li><strong>arp</strong> - Address Resolution Protocol (0x0806)</li><li><strong>capsman</strong> - CAPsMAN to CAP MAC layer connection (0x88BB)</li><li><strong>dot1x</strong> - EAPoL IEEE 802.1X (0x888E)</li><li><strong>homeplug-av</strong> - HomePlug AV MME (0x88E1)</li><li><strong>ip</strong> - Internet Protocol version 4 (0x0800)</li><li><strong>ipv6</strong> - Internet Protocol Version 6 (0x86DD)</li><li><strong>ipx</strong> - Internetwork Packet Exchange (0x8137)</li><li><strong>lacp</strong> - Link Aggregation Control Protocol (0x8809)</li><li><strong>lldp</strong> - Link Layer Discovery Protocol (0x88CC)</li><li><strong>loop-protect</strong> - Loop Protect Protocol (0x9003)</li><li><strong>macsec</strong> - MAC security IEEE 802.1AE (0x88E5)</li><li><strong>mpls-multicast</strong> - MPLS multicast (0x8848)</li><li><strong>mpls-unicast</strong> - MPLS unicast (0x8847)</li><li><strong>mvrp</strong> - Multiple VLAN Registration protocol (0x88F5)</li><li><strong>packing-compr</strong> - Encapsulated packets with compressed <a href=\"/docs/7.24/diagnostics-monitoring-and-troubleshooting/system-information-and-utilities/ip-packing\">IP packing</a> (0x9001)</li><li><strong>packing-simple</strong> - Encapsulated packets with simple <a href=\"/docs/7.24/diagnostics-monitoring-and-troubleshooting/system-information-and-utilities/ip-packing\">IP packing</a> (0x9000)</li><li><strong>pppoe</strong> - PPPoE Session Stage (0x8864)</li><li><strong>pppoe-discovery</strong> - PPPoE Discovery Stage (0x8863)</li><li><strong>rarp</strong> - Reverse Address Resolution Protocol (0x8035)</li><li><strong>romon</strong> - Router Management Overlay Network RoMON (0x88BF)</li><li><strong>service-vlan</strong> - Provider Bridging (IEEE 802.1ad) &amp; Shortest Path Bridging IEEE 802.1aq (0x88A8)</li><li><strong>vlan</strong> - VLAN-tagged frame (IEEE 802.1Q) and Shortest Path Bridging IEEE 802.1aq with NNI compatibility (0x8100)</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

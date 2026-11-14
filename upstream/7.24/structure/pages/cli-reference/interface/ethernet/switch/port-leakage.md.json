@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/ethernet/switch/port-leakage.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/port-leakage.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/port-leakage",
+  "md_sha256": "6ff00ef2c4eac63b93114e07c35d5617789dfb82a3ae5be93631a278aeeb042a",
+  "html_sha256": "5ce802c6aab81099760c14af95ef5e2e4841e18ba38d230678c2afb2bad9050f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

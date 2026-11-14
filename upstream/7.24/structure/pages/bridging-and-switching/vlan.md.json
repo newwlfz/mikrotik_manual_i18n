@@ -1,0 +1,65 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "bridging-and-switching/vlan.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/vlan.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/vlan",
+  "md_sha256": "6f5c4ea3462b1f056a339b726e99415cbada7372549c23d9e37052e8c15ce6a7",
+  "html_sha256": "ca051e719757d17967b3d00df5d76296f3a4deba2f5c2cba04dfae2e2d8f0238",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 5,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Address Resolution Protocol setting<ul><li><code>disabled</code> - the interface will not use ARP</li><li><code>enabled</code> - the interface will use ARP</li><li><code>local-proxy-arp</code> - the router performs proxy ARP on the interface and sends replies to the same interface</li><li><code>proxy-arp</code> - the router performs proxy ARP on the interface and sends replies to other interfaces</li><li><code>reply-only</code> - the interface will only reply to requests originated from matching IP address/MAC address combinations which are entered as static entries in the IP/ARP table. No dynamic entries will be automatically stored in the IP/ARP table. Therefore for communications to be successful, a valid static entry must already exist.</li></ul>"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "Name of the interface on top of which VLAN will work. <br/><br/><strong>Important:</strong> Adding a VLAN interface to a <a href=\"/docs/7.24/bridging-and-switching/#bridge-vlan-filtering\">bridge with vlan-filtering</a> enabled will automatically tag the bridge interface as a member port. A dynamic entry with the comment \"added by vlan on bridge\" will appear under the <code>/interface/bridge/vlan</code> menu. <br/>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

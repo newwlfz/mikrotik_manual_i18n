@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "virtual-private-networks/pppoe/ipv6-pd-over-ppp.md",
+  "source_url": "https://manual.mikrotik.com/docs/virtual-private-networks/pppoe/ipv6-pd-over-ppp.md",
+  "html_url": "https://manual.mikrotik.com/docs/virtual-private-networks/pppoe/ipv6-pd-over-ppp",
+  "md_sha256": "b14f973e9140e80837c76a80fbe36ee75bf99c89eab985b01a9791198e1dd3b2",
+  "html_sha256": "81eceaecbf5ee53381fd23cc5650bcc22a32c88d1521c0c1f216367a920f223c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

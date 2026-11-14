@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/proxy/cache/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/proxy/cache.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/proxy/cache/",
+  "md_sha256": "59a728f293c44186072ebaa7f6b1efb14a9e73b6a020c7e9fbb6272bcc9bd7a1",
+  "html_sha256": "c9f38660349b62630a5a7dfabb85983b7222afc4151f37bead7baee599817812",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

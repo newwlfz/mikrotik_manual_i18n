@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/ssh/export-host-key.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/ssh/export-host-key.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/ssh/export-host-key",
+  "md_sha256": "f8dab8e12e087780ce1a3cfbb94683f3bc452bcfc8955c860457b1533daf2157",
+  "html_sha256": "bdccce26a4d74f29a2d65491a5969e1a56cdfd700a6dce0e200f8f29fdd1267d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

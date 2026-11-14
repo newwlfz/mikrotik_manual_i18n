@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "internet-of-things/lora/user-guides/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides.md",
+  "html_url": "https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides/",
+  "md_sha256": "1fc9d767c8c31837007ae789764c7ae0cce260c720927b1cb627bcdbce3b70a2",
+  "html_sha256": "4439719f4c763cd4857d4b8f0dbb79306b949d4d60e38cb159ec0a8947d41c4d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

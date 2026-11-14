@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "virtual-private-networks/wireguard.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/virtual-private-networks/wireguard.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/virtual-private-networks/wireguard",
+  "md_sha256": "d5f8a64f91a591b9452302db3b31af72ded998a1e00e646f8159ac6d6f1fead1",
+  "html_sha256": "d1d851344039f6ce9544447f79e576ab7dfd64de3e2d3ed70a693517f6474928",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 10,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 67,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        10,
+        12
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

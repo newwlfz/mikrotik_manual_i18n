@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/port/remote-access.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/port/remote-access.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/port/remote-access",
+  "md_sha256": "7ad532d40270cc8a6ebbc0cbacacccb221e4134611aff98351f4e114cad927b3",
+  "html_sha256": "7e15930af9b90f32b2251bd4018c9b0f5a41864cea315a597309f15e605fe680",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/cmr/push-button.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/push-button.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/push-button",
+  "md_sha256": "ebd07e4cf8daa2e9483c05e6118f3aaae7da92f6cf19b0599e240eb3a1c82f4a",
+  "html_sha256": "611c9d3891366b79fcd71681786d348d279c98995bfd87cfea8b41e265d6eb62",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

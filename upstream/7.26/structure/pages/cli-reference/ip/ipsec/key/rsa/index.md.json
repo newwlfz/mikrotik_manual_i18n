@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/ipsec/key/rsa/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/key/rsa.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/key/rsa/",
+  "md_sha256": "01270f730c3d1c3718fe1d93852e1c44051cf82929546ca1639804ca0e1a721e",
+  "html_sha256": "8cfbca41d338bb6b6034e423be68c010a183835e31f55eafb29a49a06bf0ed8c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

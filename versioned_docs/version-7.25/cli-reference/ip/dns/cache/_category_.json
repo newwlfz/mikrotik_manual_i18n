@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "Cache",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/dns/cache/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/dns/cache"
+}

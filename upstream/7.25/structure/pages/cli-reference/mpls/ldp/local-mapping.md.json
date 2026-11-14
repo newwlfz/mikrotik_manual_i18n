@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/mpls/ldp/local-mapping.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/ldp/local-mapping.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/ldp/local-mapping",
+  "md_sha256": "5960643aefddcb02e2590034710bf6013bb5b1799c26c931230e6aa355153a72",
+  "html_sha256": "f23a3da5e4f44826a4924639c19aa2b344ad3a4903c59e5c518bc3d40ff4e8fe",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

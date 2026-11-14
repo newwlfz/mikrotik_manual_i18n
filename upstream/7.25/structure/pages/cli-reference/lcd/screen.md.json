@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/lcd/screen.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/lcd/screen.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/lcd/screen",
+  "md_sha256": "65342a7a68ee31c31be721c088eb469eab46460b6d21ae59bfe05a91ca4e1a97",
+  "html_sha256": "c0808f5f85f266ac6cacf33a9a8ed683df1bb740cddc3ce0e6862daefdbce128",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

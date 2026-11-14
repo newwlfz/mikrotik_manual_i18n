@@ -1,0 +1,6 @@
+# 7.24 的 WISP 网桥 :::info 列表项 "DHCP Client: enabled on bridge (LAN port);"
+# 仍是英文，`verify` 把它计为未翻译 admonition。列表项是说明文字而不是 CLI
+# 命令，按普通正文翻译；补丁保证以后 apply 重建 7.24 时仍产出这句中文。
+replace:
+  - from: "- DHCP Client: enabled on bridge (LAN port);"
+    to: "- DHCP 客户端：在网桥（LAN 口）上启用；"

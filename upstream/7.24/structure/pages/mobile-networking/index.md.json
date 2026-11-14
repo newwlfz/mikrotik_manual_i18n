@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "mobile-networking/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/mobile-networking.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/mobile-networking/",
+  "md_sha256": "5d1d2fadf84b2366a579633f9cbe22fa429078448d0944f92c7e1eb0a8cc5df9",
+  "html_sha256": "87980ed711ca1cb7be6733192fe262ee93cfeab37b9f8af3420f5fd7e729ab8a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

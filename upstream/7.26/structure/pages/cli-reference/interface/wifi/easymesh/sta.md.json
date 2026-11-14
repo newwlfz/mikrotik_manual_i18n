@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wifi/easymesh/sta.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/easymesh/sta.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/easymesh/sta",
+  "md_sha256": "2ea8211d1249315a1b901759d5ae84fec2d6785f83db15fb9ee308bbc99632b1",
+  "html_sha256": "f865c0f54f91d39f8ae421b93d23bca42b439d4bb7bf6adf5a0f6557941a2ec2",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

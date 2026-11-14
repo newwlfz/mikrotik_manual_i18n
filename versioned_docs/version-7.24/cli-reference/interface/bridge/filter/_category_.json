@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "Filter",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/bridge/filter/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/bridge/filter"
+}

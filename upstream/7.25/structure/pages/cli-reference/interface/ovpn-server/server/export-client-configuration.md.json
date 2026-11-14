@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/ovpn-server/server/export-client-configuration.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ovpn-server/server/export-client-configuration.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ovpn-server/server/export-client-configuration",
+  "md_sha256": "97f1b6b9639895aaae42a69c761aac1b464b66aea4628cdab55b88d2dac847ea",
+  "html_sha256": "e3ceaf1506f2bce5589e72927dfd7b3eb60a2caf6f6b2b1d91959c3d2aa8a564",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/tool/mac-server/mac-winbox.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/mac-server/mac-winbox.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/mac-server/mac-winbox",
+  "md_sha256": "fa39002c44bf7f67f394382ae6b3663a86e78c8641dfd20851cf4bb1d33190eb",
+  "html_sha256": "2a5892cdb1b19e3bd314efc7643c38fc01872293c34ff2bd9f1ff022e5e11231",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

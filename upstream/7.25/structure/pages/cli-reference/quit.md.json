@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/quit.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/quit.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/quit",
+  "md_sha256": "48d9737fde12fe05aaf5cd18a6b6c8e28bc075ba75274cba8ee9698c05dcae1a",
+  "html_sha256": "137bda145c07b7dda13c98173bdb7f90f39418c2e47ba59197efbc5f50e8c3aa",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/cmr/client/forget.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/client/forget.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/client/forget",
+  "md_sha256": "028273b26041419a101302a981c9e21e9a9204f4257d6647a2cc31af8db3217e",
+  "html_sha256": "f3d84c9dc5e0de4702ac4ec894ce7e37a903a33248b144f7e92c7ef8ea220514",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/iot/bluetooth/reset-counters.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/reset-counters.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/reset-counters",
+  "md_sha256": "6c89cdc096e0f7c36c571fd458349df1f03b16833273e1e56551d455d9ae10c1",
+  "html_sha256": "3e17e4bd7e002d502a21df4d46bb6cf960b91e0160de4be56a950efa65cf8ae4",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

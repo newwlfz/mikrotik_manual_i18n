@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/wireless/spectral-scan.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/spectral-scan.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/spectral-scan",
+  "md_sha256": "b7a6a625b36614840af65c1e5c96cb36f339cca149d72de7daf6a30efcb4ae93",
+  "html_sha256": "969dc2ead0b8db9f30585d65f15cf4ead5153d221898251f0c70632d12db36f2",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

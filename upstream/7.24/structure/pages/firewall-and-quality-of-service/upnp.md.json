@@ -1,0 +1,68 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "firewall-and-quality-of-service/upnp.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/upnp.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/upnp",
+  "md_sha256": "8ba41668b876eb3b3f5de2122a5d110a1cd5cb413704dd4c8736782a19f51726",
+  "html_sha256": "2321ce65566e6e78ea16b94a568293e665241205c47dc233b1e4d52d2dc6d518",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "UPnP interface type:<ul><li><code>external</code> - the interface a global IP address is assigned to</li><li><code>internal </code>- the router's local interface the clients are connected to</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

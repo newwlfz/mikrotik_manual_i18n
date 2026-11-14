@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "user-guides/routing-and-networking-protocols/multicast/group-management-protocol.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/multicast/group-management-protocol.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/multicast/group-management-protocol",
+  "md_sha256": "a62490222fcf797e200210cc2d9d229f63c229cbb1709607d43e7e146ea55a57",
+  "html_sha256": "ae6e1d72fd447d68b8a0799b3c10c173634ff8d2b83e1f2162f65fd223d0e55d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,121 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "hardware/peripherals.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/hardware/peripherals.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/hardware/peripherals",
+  "md_sha256": "81ee577f7f440c17c6054a0527589082a51b495b4d6da425f4a540fe9024488b",
+  "html_sha256": "11bdc66dabf9d0ec3264a68f2a9f0b5f218389763d34d99407bd1aaf073e9d94",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 17,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 2
+    },
+    "md": {
+      "lists": 17,
+      "listItems": 17,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 2
+    },
+    "local": {
+      "lists": 17,
+      "listItems": 17,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 2
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 92,
+      "cols": 6,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 9,
+          "col": 3,
+          "html": "See comments <br/>"
+        },
+        {
+          "row": 9,
+          "col": 4,
+          "html": "Multiple modem versions with the same marketing name exist: <br/><ul><li>H/W ver: A1 - supported as config-less LTE interface from RoS v6.38<br/>Modem firmware version starting from \"2.1.4EU\".</li><li>H/W ver: A3 - works as config-less LTE using modem firmware provided RNDIS interface (RouterOS v7 only)</li></ul>"
+        },
+        {
+          "row": 21,
+          "col": 4,
+          "html": "Config-less LTE interface for modems with vendor-id=\"0x12d1\" device-id=\"0x14db\" <br/> Models with suffixes -320 and -608 will not work with RouterOS v6, please use v7 instead <br/> Models with suffixes -325 work only with arm cpu"
+        },
+        {
+          "row": 28,
+          "col": 3,
+          "html": "v6.37 <br/> v7.0beta6"
+        },
+        {
+          "row": 28,
+          "col": 4,
+          "html": "v6 and v7 - config-less LTE interface <br/> v7 - by default will try to use the modem in MBIM mode"
+        },
+        {
+          "row": 41,
+          "col": 4,
+          "html": "Serial/PPP interface, single AT/modem channel <br/> Will not work on wAP R ac boards."
+        },
+        {
+          "row": 43,
+          "col": 4,
+          "html": "ppp/LTE interface. <br/> RouterOS v6 CDC-ECM mode - LTE interface receive address in modem's internal network. <br/> RouterOS v7 MBIM mode - LTE interface uses APN IP address."
+        },
+        {
+          "row": 44,
+          "col": 4,
+          "html": "RouterOS v6 CDC-ECM mode - LTE interface receive address in modems internal network. <br/> RouterOS v7 MBIM mode - LTE interface uses APN IP address. <br/> On some boards it may be required to disable SIM hot plug detection: <br/><br/><br/><code>&lt;br/&gt;/interface/lte/set [find] modem-init=\"AT+QSIMDET=0,1\"&lt;br/&gt;</code><br/>"
+        },
+        {
+          "row": 47,
+          "col": 4,
+          "html": "Basic support with at-chat, minimum firmware revision: RG255CGLABR01A04M4G_A0.004.A0.004 <br/> Modem composition: <code>at+qcfg=\"usbnet\",0</code>"
+        },
+        {
+          "row": 61,
+          "col": 4,
+          "html": "MBIM mode with extended support for USB compositions: <br/><ul><li>1009 - diag,modem,mbim</li><li>100D - diag,nmea,modem,mbim</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 53,
+      "cols": 7,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 20,
+      "cols": 8,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

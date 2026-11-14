@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Wi-Fi 6 / 7 (802.11ax/be)",
+  "key": "wireless/wifi",
+  "link": {
+    "type": "doc",
+    "id": "wireless/wifi/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

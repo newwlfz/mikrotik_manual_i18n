@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "diagnostics-monitoring-and-troubleshooting/speed-test.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/speed-test.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/speed-test",
+  "md_sha256": "ad804e8f1f9af5ba608349dc744fe5f0f066e7b2fbe73a1f83c99b635278496b",
+  "html_sha256": "346a0be85f5c52d4d2d81e7d04748618576b8e5ec72e46c2e3b67b7efd355561",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 48,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

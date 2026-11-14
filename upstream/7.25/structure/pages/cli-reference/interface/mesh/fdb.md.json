@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/mesh/fdb.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/mesh/fdb.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/mesh/fdb",
+  "md_sha256": "82a38e3d610d8904d7b6fa5a0bfaee5b39a8b1a917922ffbd86712c0be56f3b3",
+  "html_sha256": "273e09ee5cc3705cffc6ec22a8889e654a91180eab48a9cd29b1a23f785e3210",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

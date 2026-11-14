@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/lte/firmware-upgrade.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/lte/firmware-upgrade.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/lte/firmware-upgrade",
+  "md_sha256": "505116a82f7382695d03d8ebd7ec6129d83d7e55113cbe72f9d567cc6c28a2e0",
+  "html_sha256": "1fbb03d6e940b8fcd7cd36579661310f8bb9fd0937a0a2e5fc902bf420578624",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

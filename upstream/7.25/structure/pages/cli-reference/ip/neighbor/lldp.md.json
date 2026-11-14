@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/neighbor/lldp.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/neighbor/lldp.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/neighbor/lldp",
+  "md_sha256": "61200db545a093419f0744d72cd3d00941fec576f2a62b19b28251b6a111800a",
+  "html_sha256": "e7f37b23d3f6d8457002681c374a7289cf9c51494ed18c1de86850a66cf686a9",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

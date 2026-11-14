@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/routing/bgp/vpn.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/bgp/vpn.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/bgp/vpn",
+  "md_sha256": "e1afafbd5931e2caf297a1f482755908e56a1b7ed1da00033cdf551f5b729123",
+  "html_sha256": "bb55d05138df7b13c009e461cbe92aa9b96b5fe097cdea109fff5d99d4085a1b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

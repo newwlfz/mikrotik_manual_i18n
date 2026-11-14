@@ -1,0 +1,11 @@
+{
+  "position": 41,
+  "label": "W60G",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/w60g/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/w60g"
+}

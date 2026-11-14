@@ -1,0 +1,11 @@
+{
+  "position": 14,
+  "label": "Virtual Private Networks",
+  "key": "virtual-private-networks",
+  "link": {
+    "type": "doc",
+    "id": "virtual-private-networks/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

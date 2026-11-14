@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "developer-guides/api/python3-example.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/developer-guides/api/python3-example.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/developer-guides/api/python3-example",
+  "md_sha256": "9ccb5268bcd3403f18db6044f0329d3242fecf45a11fe54c2b3c93ca6cb03f2d",
+  "html_sha256": "d67170b19aad08af137fa9093865550a3fdc7008b2681dcf4fdf510f08065c42",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

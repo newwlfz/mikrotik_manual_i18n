@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/package/update/install.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/package/update/install.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/package/update/install",
+  "md_sha256": "c60bdc5a249d67347593ad4c602b9013dc399c821514a15bcc6492a51cbbe5d2",
+  "html_sha256": "d1f19df9433deebe86fd42216369636023427e472ad31e2b13d21813ccbc2c6f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

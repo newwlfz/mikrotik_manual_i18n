@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "firewall-and-quality-of-service/user-guides/port-knocking.md",
+  "source_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/user-guides/port-knocking.md",
+  "html_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/user-guides/port-knocking",
+  "md_sha256": "dedb47bb8fcee48ae38673725c64b49c706ee5ca3e8700a5247c82d3375a599d",
+  "html_sha256": "e86b2692ce2de7f2c6491e3baf16825a6c6fc5939707c8254df8e0bf17262dee",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 11,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 35,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 11,
+      "listItems": 11,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 11,
+      "listItems": 11,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

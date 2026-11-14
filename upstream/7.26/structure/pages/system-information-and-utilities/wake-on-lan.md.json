@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "system-information-and-utilities/wake-on-lan.md",
+  "source_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/wake-on-lan.md",
+  "html_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/wake-on-lan",
+  "md_sha256": "5788b9cdaf15effea6d94ce966ff44d52a7de94743d3a0211b19430d8b7e369b",
+  "html_sha256": "dc046b76c5c67eee9456bc256f555eff6b1557bc348223a91301eba12612fc67",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 13,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

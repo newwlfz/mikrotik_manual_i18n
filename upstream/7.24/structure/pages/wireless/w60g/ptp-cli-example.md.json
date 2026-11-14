@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "wireless/w60g/ptp-cli-example.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/wireless/w60g/ptp-cli-example.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/wireless/w60g/ptp-cli-example",
+  "md_sha256": "c8cf229a147ba41fe87d76f43ce0e2c03ab4e019f66e9b55bdd4c3bf34133a8d",
+  "html_sha256": "ce20dd650a0e8f969c113c08508a77d996ef233ed9ac4b270f45bfdcb40fe19c",
+  "body": {
+    "html": {
+      "lists": 7,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        0,
+        2
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

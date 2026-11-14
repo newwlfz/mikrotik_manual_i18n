@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "network-management/dhcp/dhcpv6-client.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/network-management/dhcp/dhcpv6-client.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/network-management/dhcp/dhcpv6-client",
+  "md_sha256": "1dfef3d126038b1e2fe7e2805139c95307091fb0884d14f53cb91fb2ab370e71",
+  "html_sha256": "d9f2ce94e09e50a197e818ad03dca4d91dcae41375faa65137fceef8da52b27d",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 14,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

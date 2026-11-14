@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "hardware/disks/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/hardware/disks.md",
+  "html_url": "https://manual.mikrotik.com/docs/hardware/disks/",
+  "md_sha256": "9d5a4dc964b5baf02b6a6ee8038406cffe71f42c242901fbb578179057a2ef96",
+  "html_sha256": "3b87bd31b44b370f0fe4a461116768805bcd01fa11e8d695de3aa27e4b45226c",
+  "body": {
+    "html": {
+      "lists": 6,
+      "listItems": 27,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 85,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 27,
+      "listItems": 27,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 27,
+      "listItems": 27,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

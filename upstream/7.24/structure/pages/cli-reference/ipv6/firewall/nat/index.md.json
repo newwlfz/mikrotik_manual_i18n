@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ipv6/firewall/nat/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/firewall/nat.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/firewall/nat/",
+  "md_sha256": "74a9d5c2f5fe098c35ff1988e2a8f13b08ae67e708ac15b85cbcd180fe504ff0",
+  "html_sha256": "bdfcdcaa1553506ecfffbccf4372b7f239733131cf8ccd53deb081986fa9226c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 13,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 13,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

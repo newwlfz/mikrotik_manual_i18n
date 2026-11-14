@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/disk/btrfs/filesystem/replace-device.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/disk/btrfs/filesystem/replace-device.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/disk/btrfs/filesystem/replace-device",
+  "md_sha256": "ab0fb045cfc3e76c6b5497a2aa60a5c2c07661ae549728923ba0efa89766174f",
+  "html_sha256": "0fcb513c99d8a25648a265cfe824f70b557beac5ccc8cb40c261e2174dd5bc5a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/filter/community-list.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/filter/community-list.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/filter/community-list",
+  "md_sha256": "e9926c6f6260cdf8f45c91fbc8ca29e2af5f7caead54fde89ece910c516e201c",
+  "html_sha256": "0c8a58f5b0ffb872952394c33efceddf16d06a199cee2eba56e750b1f226f540",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 15,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 15,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

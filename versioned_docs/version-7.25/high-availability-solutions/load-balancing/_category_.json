@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "Load Balancing",
+  "key": "high-availability-solutions/load-balancing",
+  "link": {
+    "type": "doc",
+    "id": "high-availability-solutions/load-balancing/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

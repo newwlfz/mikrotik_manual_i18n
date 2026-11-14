@@ -1,0 +1,45 @@
+# Agreed terminology.
+#
+# Two places read this file: the translation prompt (`lib/provider.mjs`) and the
+# lookup layer (`lib/tm.mjs`), where the glossary outranks the translation
+# memory: a remembered paragraph that still carries an English product term is
+# corrected on the way out. A term whose `target` differs from its `source` is
+# therefore applied to prose, so keep the English spelling when the site does
+# (product and feature names) and give the Chinese wording when it helps.
+#
+# Extend this file instead of editing prompts in code.
+terms:
+  - source: RouterOS
+    target: RouterOS
+  - source: MikroTik
+    target: MikroTik
+  - source: WinBox
+    target: WinBox
+  - source: WebFig
+    target: WebFig
+  - source: CAPsMAN
+    target: CAPsMAN
+  - source: PoE
+    target: PoE
+  - source: SFP
+    target: SFP
+  - source: VLAN
+    target: VLAN
+  - source: VPN
+    target: VPN
+  - source: BGP
+    target: BGP
+  - source: OSPF
+    target: OSPF
+  - source: MPLS
+    target: MPLS
+  # Recurring blog series and the wording used for it everywhere.
+  - source: Newsletter
+    target: 新闻简报
+  # IP cloud feature; the Chinese manual explains it as "remote home access".
+  # The term itself stays bare: the explanation is written once, on the first
+  # occurrence of each page, by tools/translate/lib/term-annotate.mjs. Mapping
+  # the term to the parenthesised form made every mention read like a repeated
+  # glossary footnote.
+  - source: Back To Home
+    target: Back To Home

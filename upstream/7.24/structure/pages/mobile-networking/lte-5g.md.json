@@ -1,0 +1,251 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "mobile-networking/lte-5g.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/mobile-networking/lte-5g.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/mobile-networking/lte-5g",
+  "md_sha256": "fb7e461ba803ac9519b27817de190962bdd033faabf3beeba375c004b4709abe",
+  "html_sha256": "4ab0c36faa9807b911785740c576bd36379ba458bbe299e24a903eefa039b8d4",
+  "body": {
+    "html": {
+      "lists": 7,
+      "listItems": 17,
+      "br": 0,
+      "details": 0,
+      "tables": 15,
+      "sup": 0,
+      "code": 25,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 17,
+      "listItems": 17,
+      "br": 0,
+      "details": 0,
+      "tables": 15,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 17,
+      "listItems": 17,
+      "br": 0,
+      "details": 0,
+      "tables": 15,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 14,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Maximum Transmission Unit. Max packet size that the LTE interface will be able to send without packet fragmentation. <ul><li>auto - use network advertised MTU for modems that support it (MBIM modems). Other modems will fall back to the default value (1500).</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 16,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Operation mode setting. <br/><ul><li>auto - automatically selects the operation mode.</li><li>serial - provides only serial ports</li><li>mbim - switches modem into MBIM mode if possible</li><li>user - OS will not attempt to automatically switch the modem mode. (Available from RouterOS 7.16)</li></ul>"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "This setting is only available for \"Chateau\" routers, except for Chateau 5G versions. <ul><li>auto - measures the signal levels on both internal and external antennas and selects the antennas with the best signal (RSRP).</li><li>both - both antennas are set to external</li><li>div - diversity antenna set to external</li><li>main - main antenna set to external</li><li>none - no external antenna selected (using internal antennas) </li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Deactivate (disable) eSIM profile. <br/><br/><code>/interface/lte/esim/deactivate number=0</code><br/>"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Activate (enable) eSIM profile. <br/><br/><code>/interface/lte/esim/activate number=0</code><br/>"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Permanently delete eSIM profile from the eSIM card. <br/><br/><code>/interface/lte/esim/delete number=0</code><br/>"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "List the eSIM profiles installed on the eSIM <br/><br/><code>/interface/lte/esim/print</code>"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Provision new eSIM profile. The command takes four parameters: <br/><ul><li><strong>interface</strong> - the interface for which the eSIM profile will be enabled.</li><li><strong>matching-id</strong> - an activation code token. Example: matching-id=ABCD10EFGHI5KL6M</li><li><strong>sm-dp-plus</strong> - SM-DP+ server hostname</li><li><strong>confirmation-code </strong>- confirmation code (a one-time password that is required in some cases)</li><li><strong>activate</strong> - Activate the newly created profile after it is provisioned (yes&#124;no; default: <em>yes</em>) [<em>Available starting from 7.20beta6 version. Before 7.20beta6, profiles do not get activated by default after provisioning.</em>]</li><li><strong>force-confirmation</strong> - if set to <strong>yes</strong>, the command does not wait for user confirmation and automatically accepts the profile provision (yes&#124;no; default: <em>no</em>)</li></ul> Example eSIM LPA string decoded from QR: <strong>LPA:1$server.example.io$ABCD10EFGHI5KL6M</strong><br/><br/><code>/interface/lte/esim/provision interface=lte1 sm-dp-plus=server.example.io matching-id=ABCD10EFGHI5KL6M</code>"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Query the eSIM ID. The command takes one parameter: <br/><ul><li><strong>interface</strong> - select the interface for which to query the eSIM ID.</li></ul><br/><br/><code>/interface/lte/esim/esim-id interface=lte1 eid: 8903302342630000000004181FFFFFFF</code><br/>"
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Set a nickname for an eSIM profile. <br/><br/><code>/interface/lte/esim/set-nickname number=0 nickname=nickname1</code><br/>"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Re-query the eSIM profile list. The command takes one parameter: <br/><ul><li><strong>interface</strong> - Select an interface for which the eSIM profiles will be re-queried.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 14,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 16,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 8,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Set command execution mode: <br/><ul><li><em>no</em> - displays current modem firmware version and shows latest available firmware version</li><li><em>yes</em> - performs firmware installation</li></ul>"
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "html": "<strong>update-channel</strong> (<em>stable &#124; testing</em>; Default: <strong>stable</strong>) <br/>"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Sets which firmware update channel is used: <br/><ul><li><em>stable</em> - firmware version for general use</li><li><em>testing</em> - early access/testing channel where modem firmware is published before releasing it in the stable channel</li></ul> Feature available from v7.17beta2."
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 0,
+          "html": "<strong>EC200A-EU</strong><br/> R11eL-EC200A-EU"
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "html": "<strong>FG621-EA</strong><br/> R11eL-FG621-EA"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 11,
+      "rows": 14,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 12,
+      "rows": 6,
+      "cols": 5,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 13,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 14,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

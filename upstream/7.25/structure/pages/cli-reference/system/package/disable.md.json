@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/package/disable.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/package/disable.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/package/disable",
+  "md_sha256": "1708a0f114c59059a0fd5e617f27030583125c2db97aa4661edb70bfa7ca4a73",
+  "html_sha256": "3b22310c03a8af05fe672435196d9d4ed05f83a70541d47278eccfa91a044c12",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/container/layers.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/container/layers.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/container/layers",
+  "md_sha256": "f7c061a9c94cb6d279e23540b5daa775ede0823c2ef336df12638caa4713157b",
+  "html_sha256": "b415f9cbf37fbfa5c3646bfe96fd8315dcd2900b07a8a8fcf9d393aeea67d1db",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

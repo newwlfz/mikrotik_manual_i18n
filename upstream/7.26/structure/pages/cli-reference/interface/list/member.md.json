@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/list/member.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/list/member.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/list/member",
+  "md_sha256": "a9baa707867da061df19974fd1bf934a7e2d46cfa79f79010bfdca4cd33a845f",
+  "html_sha256": "7d2dedb8412781716343cda693736f81cb4aeb03b233783c63c921a15fc7d52d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

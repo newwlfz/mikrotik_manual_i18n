@@ -1,0 +1,11 @@
+{
+  "position": 11,
+  "label": "Walled Garden",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/hotspot/walled-garden/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/hotspot/walled-garden"
+}

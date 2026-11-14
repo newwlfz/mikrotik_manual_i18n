@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/routing/stats/process/kill.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/stats/process/kill.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/stats/process/kill",
+  "md_sha256": "93409da2503817f5de887d3cf61afceb04ddf6398da38b2b5b07896303c64120",
+  "html_sha256": "bec0e9737b5d166e765f70294a86266ed12b4b4c9a181e98b9adc3b3c42fc2be",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

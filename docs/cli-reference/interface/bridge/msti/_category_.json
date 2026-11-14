@@ -1,0 +1,11 @@
+{
+  "position": 7,
+  "label": "Msti",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/bridge/msti/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/bridge/msti"
+}

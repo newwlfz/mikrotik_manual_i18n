@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/tool/mac-server/ping.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/mac-server/ping.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/mac-server/ping",
+  "md_sha256": "3a75d07d33b07c50d34c39bdf26d58af2a4b8763333a48cba4bb1fcae13106e3",
+  "html_sha256": "7867780b863c51fdc652a7aa2f1a33423eb452a36072f19da7088331974e30ec",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

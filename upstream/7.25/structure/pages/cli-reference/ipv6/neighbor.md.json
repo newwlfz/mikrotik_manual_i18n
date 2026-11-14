@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ipv6/neighbor.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ipv6/neighbor.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ipv6/neighbor",
+  "md_sha256": "b5b8dac3bb1f49684eea5da2adbc01f4af2f3a6af1077883bf1a28c9bff9ae6a",
+  "html_sha256": "1f844474f1d4652a7a36feb9682869982473fc11c70a1d9b541c4bd1e2487414",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

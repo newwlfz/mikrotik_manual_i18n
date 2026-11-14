@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/routing/nexthop/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/nexthop.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/nexthop/",
+  "md_sha256": "1294ec9dd9473c04d047c729093a5fafba7da5d1b920e314dcaf77e87d11dc52",
+  "html_sha256": "d3c21a054a4c1652e05ab6f91c9278a41c03d134c770023f0170474d41b5cd21",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

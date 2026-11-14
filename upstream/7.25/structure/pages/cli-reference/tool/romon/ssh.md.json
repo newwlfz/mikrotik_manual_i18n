@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/tool/romon/ssh.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/romon/ssh.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/romon/ssh",
+  "md_sha256": "9209a5032f9b24c99f4f88bc3eaafe6c250536be36964a236ac076a8bc07e865",
+  "html_sha256": "8ba4f4f6a35185931f2dab064d5847ce42988020bfc9c68d455885d5c642ed09",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

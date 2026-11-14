@@ -1,0 +1,11 @@
+{
+  "position": 5,
+  "label": "Installation and Upgrade",
+  "key": "getting-started/installation-and-upgrade",
+  "link": {
+    "type": "doc",
+    "id": "getting-started/installation-and-upgrade/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

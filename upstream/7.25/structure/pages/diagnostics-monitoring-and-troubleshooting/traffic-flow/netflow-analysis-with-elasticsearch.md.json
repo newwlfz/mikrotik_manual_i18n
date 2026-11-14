@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "diagnostics-monitoring-and-troubleshooting/traffic-flow/netflow-analysis-with-elasticsearch.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/traffic-flow/netflow-analysis-with-elasticsearch.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/diagnostics-monitoring-and-troubleshooting/traffic-flow/netflow-analysis-with-elasticsearch",
+  "md_sha256": "faf6c10cbee9ec7fac45db9f09ba5b1e1783d41bdf28d5319f73d1b2789202ce",
+  "html_sha256": "d0fc538e298b6f95db5367fd48d7bcc289381a41370b5247d8f0f2598ec6bb69",
+  "body": {
+    "html": {
+      "lists": 8,
+      "listItems": 40,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 40,
+      "listItems": 40,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 40,
+      "listItems": 40,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        0,
+        9
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

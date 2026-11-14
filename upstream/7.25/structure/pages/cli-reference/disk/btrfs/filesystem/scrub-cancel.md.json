@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/disk/btrfs/filesystem/scrub-cancel.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/disk/btrfs/filesystem/scrub-cancel.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/disk/btrfs/filesystem/scrub-cancel",
+  "md_sha256": "8dc8471dcae36f455ad53145393f1733f6c90704200ec31b61ede59efe85664a",
+  "html_sha256": "4b216b604d61626da54c1363c45899e784e1c1ae2fb1ad8a83018fad2c5def81",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

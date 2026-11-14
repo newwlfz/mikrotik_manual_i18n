@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "wireless/abgn/capsman/capsman-with-vlans.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/wireless/abgn/capsman/capsman-with-vlans.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/wireless/abgn/capsman/capsman-with-vlans",
+  "md_sha256": "cb72c1020bec74ee36124b34cbbc90abcee1e629570c1bed9ff30fc0d8d0d401",
+  "html_sha256": "74aba60d6db3aedf41977b978ace7e7dc5057471a09c160682394fb11db75514",
+  "body": {
+    "html": {
+      "lists": 19,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 19,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 19,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

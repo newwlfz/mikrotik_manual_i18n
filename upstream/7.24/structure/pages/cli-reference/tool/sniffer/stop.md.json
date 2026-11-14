@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/tool/sniffer/stop.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/sniffer/stop.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/sniffer/stop",
+  "md_sha256": "3087dadbb49fce095f990728a6fae8e98d5736121b12d9190e2c9aed0019acc3",
+  "html_sha256": "773a820e9bd09f20676599770c1496df5f57143a4e0dbef42acabafb548b451d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,9 @@
+{
+  "key": "antennas",
+  "label": "Antennas",
+  "position": 4,
+  "link": {
+    "type": "doc",
+    "id": "antennas/mant-series"
+  }
+}

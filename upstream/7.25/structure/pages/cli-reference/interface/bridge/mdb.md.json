@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/bridge/mdb.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/mdb.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge/mdb",
+  "md_sha256": "18a4541cb8a664dc758c0160fda5be6e427dacd927a2bca5aa2c9a652418b9bb",
+  "html_sha256": "69da0506b4c6940677ceb7bb87c18439599c7826cf5ae3e14026d9bc0ec77363",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

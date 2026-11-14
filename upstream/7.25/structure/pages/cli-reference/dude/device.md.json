@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/dude/device.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/dude/device.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/dude/device",
+  "md_sha256": "0c77da271674c179e9d31c6ad28abf98ad243e56b5804be03c6ff4652d2e491e",
+  "html_sha256": "0f200d63e96681c49174c84466e9b8437ff65649cb73d086d5525028e934ab19",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

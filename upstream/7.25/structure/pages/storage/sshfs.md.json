@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "storage/sshfs.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/storage/sshfs.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/storage/sshfs",
+  "md_sha256": "2a49c5b98e7e0118359bb098c022b180a12f92d10c69b53eaf036aed20f09193",
+  "html_sha256": "4ac3dff3cc5cec90f20b0b79dab6ef9e941ac55d5660c18b41df02ef2c452b53",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 17,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

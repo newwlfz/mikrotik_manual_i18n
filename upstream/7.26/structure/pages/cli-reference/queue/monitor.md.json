@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/queue/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/queue/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/queue/monitor",
+  "md_sha256": "59dd27a6a13ec86120c42e19000db0721d8e745eee28d97b808dd99ca72a8ef5",
+  "html_sha256": "f709e50a3587f673003916633784914548c4698ad529040c01dd6b7fbe6450f2",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

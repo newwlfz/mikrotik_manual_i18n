@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Netinstall",
+  "key": "getting-started/installation-and-upgrade/netinstall",
+  "link": {
+    "type": "doc",
+    "id": "getting-started/installation-and-upgrade/netinstall/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

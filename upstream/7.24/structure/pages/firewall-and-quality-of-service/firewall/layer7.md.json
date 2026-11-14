@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "firewall-and-quality-of-service/firewall/layer7.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/firewall/layer7.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/firewall/layer7",
+  "md_sha256": "de5cb687985ab4261d40aab1b5ed16a4496a7040eaab649049256c4eb5e9834f",
+  "html_sha256": "198500a46ff23b918e60d8e3f736daaff99e9bda4c22815e2c10454a5ade356d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

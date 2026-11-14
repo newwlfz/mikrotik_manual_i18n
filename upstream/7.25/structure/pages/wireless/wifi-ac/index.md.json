@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "wireless/wifi-ac/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/wireless/wifi-ac.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/wireless/wifi-ac/",
+  "md_sha256": "12b78f8db190dafd9c18249fe16eaf42dd7178f8467e5aa6c2e1f92ffd78ca2f",
+  "html_sha256": "fe5a995f26adba6708e02e0422cb12213c2b0c82b17be0cb7b7095356051f4a8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 14,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 3,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

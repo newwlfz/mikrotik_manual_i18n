@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "Local Update",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/package/local-update/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/package/local-update"
+}

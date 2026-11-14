@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wireless/info/default-scan-list.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/info/default-scan-list.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/info/default-scan-list",
+  "md_sha256": "a022649a655a15e3da8a5ba2cf2ba5c9aae72ce9a2baae5b3a8e0410a11824dc",
+  "html_sha256": "edb3d2515ce8598e053f7ee349a9d66d651e6e8b444d1486a6756dfdc3d18324",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,70 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "bridging-and-switching/macvlan.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/macvlan.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/macvlan",
+  "md_sha256": "1318b480f8a398dc12c128c640ff15662c49cc1371a0b0dbe5149cafed6c2b54",
+  "html_sha256": "1cff1da58e01a4bc14e0761d90cbeb5dc3546d1de83fb14966da89b9ea800888",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 13,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Address Resolution Protocol setting<ul><li><code>disabled</code> - the interface will not use ARP</li><li><code>enabled</code> - the interface will use ARP</li><li><code>local-proxy-arp</code> - the router performs proxy ARP on the interface and sends replies to the same interface</li><li><code>proxy-arp</code> - the router performs proxy ARP on the interface and sends replies to other interfaces</li><li><code>reply-only</code> - the interface will only reply to requests originating from matching IP address/MAC address combinations, which are entered as static entries in the IP/ARP table. No dynamic entries will be automatically stored in the IP/ARP table. Therefore, for communications to be successful, a valid static entry must already exist.</li></ul>"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "The name of the underlying interface on which the MACVLAN will operate. MACVLAN interfaces can be created on any interface that has a MAC address. <br/><br/><strong>Warning:</strong><ul><li>Adding a VLAN interface on top of a MACVLAN interface is not supported.</li><li>Adding MACVLAN on an interface which is already bridged or bonded is not supported.</li></ul>"
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "html": "Sets MACVLAN interface mode: <br/><ul><li><code>private</code> - does not allow communication between MACVLAN instances on the same parent <strong>interface</strong>.</li><li><code>bridge</code> - allows communication between MACVLAN instances on the same parent <strong>interface</strong>.</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

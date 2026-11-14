@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/tool/romon/ping.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/romon/ping.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/romon/ping",
+  "md_sha256": "b9107d8986b48e2c2ee2573ceb91501fcf40d90693d2788e47910fe4ff084fdd",
+  "html_sha256": "aa1b1e4f56a3736cb22d81915fe07c0083d8121c60c4b1e043772b6bf99a8735",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,11 @@
+{
+  "position": 17,
+  "label": "interface",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/index"
+  },
+  "key": "cli-reference/interface"
+}

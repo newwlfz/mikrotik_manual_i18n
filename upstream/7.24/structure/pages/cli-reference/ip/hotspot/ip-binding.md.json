@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/hotspot/ip-binding.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/hotspot/ip-binding.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/hotspot/ip-binding",
+  "md_sha256": "d0d06f78a7410779bf869ff3e2d035e37429c60995e8df14ccb05589fffd0df4",
+  "html_sha256": "597641a7feaab684b62cf5f98e0fb11d1ea38ba4eb8d36b69146ab28c0719ab5",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

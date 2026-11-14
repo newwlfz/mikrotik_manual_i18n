@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/packing.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/packing.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/packing",
+  "md_sha256": "a1ede131dbe7b322167c3a7f1cda44c19e91043a6b4712a597a9ea4c10b6e579",
+  "html_sha256": "f37ea8a0ecdaafe7cce507d62f20061d9f779f70e858a961ea08829e517af0d0",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

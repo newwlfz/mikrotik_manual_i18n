@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "high-availability-solutions/bonding.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/high-availability-solutions/bonding.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/high-availability-solutions/bonding",
+  "md_sha256": "c76642bdb83426222397981f389a9c6ac96091481d706fbdb2a0de827315c746",
+  "html_sha256": "5bb83595d3c69871af6b82c4ac5b979ffcbbbac3cfd122ccc5e5e6231b459bb5",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 5,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

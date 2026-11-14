@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/caps-man/datapath.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/caps-man/datapath.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/caps-man/datapath",
+  "md_sha256": "2fd999dad49ab1d086616a397ccc578b92ccde56daae1235c7d559a4ced82309",
+  "html_sha256": "4dba6d2b067fd8f5c289a2c7bf049e8140710b5b7812a3618714c598fd79fc9c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,105 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "wireless/wifi/capsman.md",
+  "source_url": "https://manual.mikrotik.com/docs/wireless/wifi/capsman.md",
+  "html_url": "https://manual.mikrotik.com/docs/wireless/wifi/capsman",
+  "md_sha256": "f76673fbeba6a135afc3837bf71efd9108ee64d1f7ea30f69dca6ef745fb4f05",
+  "html_sha256": "08998fa3799ef50daeac787912dc898c1ac3d715e8a7cb432dfba53387458c24",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 12,
+      "br": 2,
+      "details": 0,
+      "tables": 4,
+      "sup": 2,
+      "code": 41,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 12,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 2,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 12,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 2,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Upgrade policy options <br/><ul><li>none - do not perform upgrade</li><li>require-same-version - CAPsMAN suggests upgrading the CAP RouterOS version and, if it fails, it will not provision the CAP. (Manual provision is still possible)</li><li>suggest-same-version - CAPsMAN suggests upgrading the CAP RouterOS version and if it fails, it will still be provisioned</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 15,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Action to take if rule matches are specified by the following settings:<ul><li><strong>create-disabled</strong> - create disabled static interfaces for radio. I.e., the interfaces will be bound to the radio, but the radio will not be operational until the interface is manually enabled;</li><li><strong>create-enabled</strong> - create enabled static interfaces. I.e., the interfaces will be bound to the radio and the radio will be operational;</li><li><strong>create-dynamic-enabled</strong> - create enabled dynamic interfaces. I.e., the interfaces will be bound to the radio, and the radio will be operational;</li><li><strong>none</strong> - do nothing, leaves radio in the non-provisioned state;</li></ul> The basic difference between enabled and dynamic-enabled, is that dynamic interfaces can't be manually edited to override settings and can't be referenced in firewall or other menus, since they will be recreated. In both cases any <code>/interface/wifi/configuration</code> changes will be pushed to CAP automatically."
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "html": "Controls MLO (Multi-Link Operation) behavior during provisioning.<ul><li><strong>all</strong> or <strong>auto</strong> - CAPsMAN will automatically assign the provisioned WiFi interfaces as affiliated links of an MLD interface. If a matching MLD interface does not already exist, one will be created using the corresponding configuration. This applies to both master and slave interfaces;</li><li><strong>disabled</strong> - no MLD interface is created or assigned during provisioning;</li><li><strong>master</strong> - same behavior as <strong>all</strong> or <strong>auto</strong>, but only the master interface is added as an affiliated MLD link;</li></ul>"
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "html": "Base string to use when constructing names of provisioned interfaces. Each new interface will be created by taking the base string and appending a number to the end of it. A number will only be appended if the string is not unique. <br/> If included in the string, the character sequence <strong>%I</strong> will be replaced by the system identity of the cAP, <strong>%C</strong> will be replaced with the cAP's TLS certificate's Common Name, <strong>%R</strong>, or <strong>%r</strong> for lowercase, will be replaced with the CAP's radio MAC <br/> Default: \"cap-wifi\""
+        },
+        {
+          "row": 11,
+          "col": 1,
+          "html": "Base string to use when constructing names of virtual interfaces. Each new interface will be created by taking the base string and appending a number to the end of it. A number will only be appended if the string is not unique. <br/> If included in the string, the character sequence <strong>%v</strong> will be replaced with \"virtual\", the character sequence <strong>%m</strong> will be replaced with the name of the master interface, if included in the string, the character sequence <strong>%I</strong> will be replaced by the system identity of the cAP, <strong>%C</strong> will be replaced with the cAP's TLS certificate's Common Name, <strong>%R</strong>, or <strong>%r</strong> for lowercase, will be replaced with the CAP's radio MAC <br/> Default: \"<em>master-interface-name</em>-virtual\""
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 14,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

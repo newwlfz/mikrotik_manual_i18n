@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wifi/sniffer.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/sniffer.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/sniffer",
+  "md_sha256": "93c754b11855cf835a298f7d508879487f1ddfb9334ca30ea0bfd422200f9be1",
+  "html_sha256": "36aa3187513ccc490fcbb75f15923f89435e1f15e419082ae6d74f768591b069",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

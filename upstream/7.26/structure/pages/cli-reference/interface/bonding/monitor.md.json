@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/bonding/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/bonding/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/bonding/monitor",
+  "md_sha256": "77854022655a5193e5cb239854628ed265e2087ceefbd97224b5415e4125aa42",
+  "html_sha256": "bcb366b2bc267a16c7f898e080744c6a980b93d5549e666cd64b41674116290d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/task/add.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/task/add.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/task/add",
+  "md_sha256": "e2753acbdff281228930d89c453e1e5e12161db023dbe623872e9f0da5eb5eff",
+  "html_sha256": "9649c3e517c1110d191db57ae3cd9a5c9e6a714fbcfe23d89e7229299bb49639",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

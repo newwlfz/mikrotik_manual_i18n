@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "getting-started/securing-your-router.md",
+  "source_url": "https://manual.mikrotik.com/docs/getting-started/securing-your-router.md",
+  "html_url": "https://manual.mikrotik.com/docs/getting-started/securing-your-router",
+  "md_sha256": "5cbcbb6e012c225e6ad89f6e965daea400df9b4acd2edbc4d6e7f25984cd0b70",
+  "html_sha256": "b9fe05d7da5177758e447369df07e157b14ea4513c7e617be3ee1bccba59a70c",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 28,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 12,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 12,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

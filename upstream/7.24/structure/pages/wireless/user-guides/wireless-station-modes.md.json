@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "wireless/user-guides/wireless-station-modes.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/wireless/user-guides/wireless-station-modes.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/wireless/user-guides/wireless-station-modes",
+  "md_sha256": "57036000182d4a2f2de7d6c7627adf814bb542c297382792add83a98dbb8090f",
+  "html_sha256": "d0f7dcfd6f9ba01c74d1aa063c4512103557431780413b1a1c2b102b5bb085f5",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 12,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 12,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 6,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

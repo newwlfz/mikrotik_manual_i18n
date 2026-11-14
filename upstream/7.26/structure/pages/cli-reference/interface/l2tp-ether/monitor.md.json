@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/l2tp-ether/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/l2tp-ether/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/l2tp-ether/monitor",
+  "md_sha256": "9d29228adadf9a2ffcbc00121b9364f90f09cba4ffdf831ec26cd709b925343c",
+  "html_sha256": "d8417dcc30f61ec4ceeb1376bd42761e7de36a2578c6755dc65713be62c43faf",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

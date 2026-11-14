@@ -1,0 +1,86 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "bridging-and-switching/user-guides/spanning-tree-protocol.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/user-guides/spanning-tree-protocol.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/user-guides/spanning-tree-protocol",
+  "md_sha256": "871ab1c3152eb44465fc8f6f7402facd95dd80ac0ed8f51c72041d2018e92456",
+  "html_sha256": "afc7017ed6c700c2a7904780bc3306c6ca82005aaa52025e82ca70019ad9f896",
+  "body": {
+    "html": {
+      "lists": 34,
+      "listItems": 59,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 44,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 59,
+      "listItems": 59,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 59,
+      "listItems": 59,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 9,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

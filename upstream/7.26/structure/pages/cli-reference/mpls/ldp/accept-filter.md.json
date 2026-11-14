@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/mpls/ldp/accept-filter.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/mpls/ldp/accept-filter.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/mpls/ldp/accept-filter",
+  "md_sha256": "a38943f457068bb2ff358555712a12477c4c02eb23b49006b6be705e5f0113d7",
+  "html_sha256": "fb3fd9af983a3aaea13691e00e6def9997bcfd39205f67b1d03b5f62228149a9",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

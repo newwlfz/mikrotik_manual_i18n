@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/user-manager/limitation.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/limitation.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/user-manager/limitation",
+  "md_sha256": "0fb067d84427915d6b489a34440c9711210a2bbbc777a329eb9b002b28c78501",
+  "html_sha256": "1184f2638c0fcde413e6f8776dda01a92bd3624d8d6d2959421b3c7f4bcc3339",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

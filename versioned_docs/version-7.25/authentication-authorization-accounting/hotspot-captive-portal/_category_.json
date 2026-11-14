@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "HotSpot - Captive portal",
+  "key": "authentication-authorization-accounting/hotspot-captive-portal",
+  "link": {
+    "type": "doc",
+    "id": "authentication-authorization-accounting/hotspot-captive-portal/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

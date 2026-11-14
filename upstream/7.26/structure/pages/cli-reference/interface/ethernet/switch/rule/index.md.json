@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/ethernet/switch/rule/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/rule.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/rule/",
+  "md_sha256": "471b566be08c1ec12b21caa957a02700f5721507dd727cc2b5255795faa4e9b7",
+  "html_sha256": "0e88f9004adef12e26010f5fb4a3c78956e52d0daddf4bdfaa52a061be417d23",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

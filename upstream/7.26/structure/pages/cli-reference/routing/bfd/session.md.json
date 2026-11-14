@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/bfd/session.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/bfd/session.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/bfd/session",
+  "md_sha256": "f29f5477541b7dd9714403b322213a8be11c974f47b1a490904f6d24d6b966c6",
+  "html_sha256": "2d181b1cdf1397c4714db506f6f3f61f2aae0b16ef96158d028a74d67cd0169e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

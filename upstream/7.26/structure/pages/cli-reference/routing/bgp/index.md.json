@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/bgp/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/bgp.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/bgp/",
+  "md_sha256": "4889fd3f124dd29c9f4c8c5db5b5385ae6e07e49b2b1066561d9e0f6211836da",
+  "html_sha256": "8906ff4df9d5d235f04ae1499d5f6fda88ed0462c4c2415ef8ada8d7cc2caea0",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

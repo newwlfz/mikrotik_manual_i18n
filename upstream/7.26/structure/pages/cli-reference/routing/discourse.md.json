@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/discourse.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/discourse.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/discourse",
+  "md_sha256": "36778adc6583bbc8a700821e78b71387b76f1cdbbebe1bf9265c5f94041296c4",
+  "html_sha256": "b4ecded6b5ae44aced213d2fcda683c51adbe493d336ebc4956a5b3701b90320",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,11 @@
+{
+  "position": 9,
+  "label": "Switch",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/ethernet/switch/index"
+  },
+  "key": "cli-reference/interface/ethernet/switch"
+}

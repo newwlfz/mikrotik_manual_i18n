@@ -1,0 +1,11 @@
+{
+  "position": 11,
+  "label": "Router",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/user-manager/router/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/user-manager/router"
+}

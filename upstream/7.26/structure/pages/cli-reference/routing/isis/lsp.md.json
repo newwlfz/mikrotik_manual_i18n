@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/isis/lsp.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/isis/lsp.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/isis/lsp",
+  "md_sha256": "dd5a87643cef25380b5029a39466f9def4ed143c9d353ff99aa31522c2a1e405",
+  "html_sha256": "d9d58149811207bc7d81bec88267459e5ddbda2b7071517e7a4a1bc67a3d739f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

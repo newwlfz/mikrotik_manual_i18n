@@ -1,0 +1,11 @@
+{
+  "position": 8,
+  "label": "Graphing",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/tool/graphing/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/tool/graphing"
+}

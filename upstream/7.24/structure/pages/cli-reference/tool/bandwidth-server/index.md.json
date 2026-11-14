@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/tool/bandwidth-server/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/bandwidth-server.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/bandwidth-server/",
+  "md_sha256": "078a07a7c7fef2e2690f727c4f55dd002c5b7ac15cf9c54481954767c316c551",
+  "html_sha256": "b1f85924c34c39cddd6d1cca05eeda780afe645902f33a92f98b26609f32b40a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

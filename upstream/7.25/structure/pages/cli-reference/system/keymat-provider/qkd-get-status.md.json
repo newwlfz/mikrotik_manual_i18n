@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/keymat-provider/qkd-get-status.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/keymat-provider/qkd-get-status.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/keymat-provider/qkd-get-status",
+  "md_sha256": "700618c80722b97826acfaceed9ce6322d589908e0c1ac533e164bb7403459ba",
+  "html_sha256": "3edfc5105c39a4575222e9d4beb0ad4c2ccc46ff037bebc2ee7fb6359347072a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

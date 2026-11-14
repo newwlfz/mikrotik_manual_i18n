@@ -1,0 +1,91 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "system-information-and-utilities/ntp.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/ntp.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/ntp",
+  "md_sha256": "f1c0644e00854ec2e7ee6ea5227d908991a896fa764a3f5f40e716f1583c33b3",
+  "html_sha256": "409033a87c2e49de13947d72ad2215f5de1ce6d058747939d1d9b4f6a0d65f6b",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 17,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 17,
+      "listItems": 17,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 17,
+      "listItems": 17,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "The list of NTP servers. It is possible to add static entries. <br/> The following formats are accepted: <br/> - FQDN (\"Resolved Address\" will appear in the \"Servers\" window in an appropriate column if the address is resolved) or IP address can be used. If DHCP-Client property <strong>use-peer-ntp=yes</strong> - the dynamic entries advertised by <a href=\"/docs/7.24/network-management/dhcp\">DHCP</a><br/> - <em>ipv4</em><br/> - <em>ipv4</em><code>@</code><em>vrf</em><br/> - <em>ipv6</em><br/> - <em>ipv6</em><code>@</code><em>vrf</em><br/> - <em>ipv6-linklocal</em><code>%</code><em>interface</em>"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "A detailed table of dynamically and statically added NTP servers (Address, Resolved address, Min Poll, Max Poll, iBurst, Auth. Key) <br/> To set the NTP server using its FQDN. The domain name will be resolved each time an NTP request is sent. The Router has to have <em><code>/ip/dns</code></em> configured."
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Current parameter values <br/><code>[admin@ntp-example_v7] &gt; /system/ntp/monitor-peers</code><br/><code>type=\"ucast-client\" address=x.x.x.x refid=\"y.y.y.y\" stratum=3 hpoll=10 ppoll=10 root-delay=28.869 ms root-disp=50.994 ms</code><br/><code>offset=-0.973 ms delay=0.522 ms disp=15.032 ms jitter=0.521 ms</code><br/><code>-- [Q quit D dump C-z pause]</code>"
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "NTP symmetric keys, used for authentication between the NTP client and server. Key Identifier (Key ID) - an integer identifying the cryptographic key used to generate the message-authentication code. <br/>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

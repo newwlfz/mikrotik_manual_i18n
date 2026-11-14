@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/proxy/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/proxy/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/proxy/monitor",
+  "md_sha256": "3335a3909c9d03d79859130374687eaa4470bf5696a800c3ddb794f3911bf1d4",
+  "html_sha256": "a0fd00904f129c8137330cd8b34aff953720a6c0041b6885d228e8de7bd6f671",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

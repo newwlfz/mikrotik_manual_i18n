@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/cmr/layout/node.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/layout/node.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/layout/node",
+  "md_sha256": "65b0f54acaf8fcad8ade16eca4667d16f0c9edc4eaea38792735fc375225f44f",
+  "html_sha256": "3fc21d33becdcdcbb57a177c99c300c290ff98773823e478c3f8dccda62eb8b1",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

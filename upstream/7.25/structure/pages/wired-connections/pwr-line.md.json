@@ -1,0 +1,82 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "wired-connections/pwr-line.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/wired-connections/pwr-line.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/wired-connections/pwr-line",
+  "md_sha256": "abee5ebc724ee834f282d6e9aba253d6bfd9eb89f129a2af6c8118ebc294395f",
+  "html_sha256": "9be0260b95548a0b02e039ed81fdfabf2e45f5464599a79a3c1f8da6a8cecac8",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Address Resolution Protocol mode:<ul><li>disabled - the interface will not use ARP</li><li>enabled - the interface will use ARP</li><li>proxy-arp - the interface will use the ARP proxy feature</li><li>reply-only - the interface will only reply to requests originating from matching IP address/MAC address combinations which are entered as static entries in the <code>/ip/arp</code> table. No dynamic entries will be automatically stored in the ARP table. Therefore, for communications to be successful, a valid static entry must already exist.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Sets the PWR-Line device mode:<ul><li>auto - PWR-Line will automatically decide what role to take depending on the situation upon joining a PWR-Line network.</li><li>always - PWR-Line will always be forced to act as a \"central-coordinator\" or master device.</li><li>never - PWR-Line will always be forced to act as a slave device.</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

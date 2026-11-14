@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/zerotier/controller/member.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/zerotier/controller/member.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/zerotier/controller/member",
+  "md_sha256": "beb6e5db35babf2a38f3a4c147a5a8bef747c36b883fe8fc0caa2262fad557d1",
+  "html_sha256": "d53e4095ed8481660c2d24ddec8d3a6cc4c8b75fce656c71268f8b6c80dd23f0",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

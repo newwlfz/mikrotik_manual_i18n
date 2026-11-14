@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/iot/lora/reset-devices.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/iot/lora/reset-devices.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/iot/lora/reset-devices",
+  "md_sha256": "570378fc0c20e05b174311e9f16a35352cdb4bd7344ab60c240524e3b7903b2b",
+  "html_sha256": "8d9857bab81cc82e32de5e146900f8de5dc44b2c10b0ac67c1792608db339304",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

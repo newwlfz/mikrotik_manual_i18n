@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/task/terminate.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/task/terminate.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/task/terminate",
+  "md_sha256": "d647a9e0d4f192374aa03b131767009141cca09703c4d13a826fec2f47f9f1ad",
+  "html_sha256": "fc9d514435fa13383a5c7a5c2b5cdcd2ffddc049735b8ab7b714f83c93959e6d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

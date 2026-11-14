@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/package/unschedule.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/package/unschedule.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/package/unschedule",
+  "md_sha256": "7b38f0a2a93a3d23b052482bc342752c5caa8ea7a797b03814b202ef7432d3bd",
+  "html_sha256": "0ac9c1783b6bf7123b96feef703ad65a9b4a62c22d4639caad8711241ecff96d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

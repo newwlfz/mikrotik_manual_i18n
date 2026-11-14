@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/filter/filter-wizard.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/filter/filter-wizard.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/filter/filter-wizard",
+  "md_sha256": "07dbd3072d3b8aea1073e6e01b0c536aef0a7b0b384d1b20d480aad7e287b0d2",
+  "html_sha256": "beb199cb609cb63100cfa6fd95ec7826e3cd73af21e255c1bcdfb97ce496fa0e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

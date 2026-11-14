@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/ethernet/switch/port-isolation/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/port-isolation.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/port-isolation/",
+  "md_sha256": "79a2fda62ddcf57abe7e53d0cefe774ed392785a62d19ddf9fba44cc1c08bbea",
+  "html_sha256": "4f01a150e54ad93e10c36507b31c3536bdada75ad89281c2136b1e97243d9527",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 8,
+      "br": 4,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

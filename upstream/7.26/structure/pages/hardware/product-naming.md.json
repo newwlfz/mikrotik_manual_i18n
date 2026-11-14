@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "hardware/product-naming.md",
+  "source_url": "https://manual.mikrotik.com/docs/hardware/product-naming.md",
+  "html_url": "https://manual.mikrotik.com/docs/hardware/product-naming",
+  "md_sha256": "03e77b59ceb69e065186039018dd83bc5fccb91184add7011420788783905dc7",
+  "html_sha256": "00a48c9f5a0ac271a46a61f39a98e05fac34a4b352f277032ec6f56d522e5d5e",
+  "body": {
+    "html": {
+      "lists": 20,
+      "listItems": 143,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 143,
+      "listItems": 143,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 143,
+      "listItems": 143,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

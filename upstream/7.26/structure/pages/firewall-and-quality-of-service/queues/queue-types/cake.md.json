@@ -1,0 +1,62 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "firewall-and-quality-of-service/queues/queue-types/cake.md",
+  "source_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/queue-types/cake.md",
+  "html_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/queue-types/cake",
+  "md_sha256": "a0c84b7d65d620fb8d195e18515f4085d62cccfc08183c4aa38e8193f6c494aa",
+  "html_sha256": "092df77465a7a7c8e3917092231bd529cd6e4e0d37090074427a3054254a0a25",
+  "body": {
+    "html": {
+      "lists": 5,
+      "listItems": 30,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 63,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 30,
+      "listItems": 30,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 30,
+      "listItems": 30,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/tr069-client/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tr069-client.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tr069-client/",
+  "md_sha256": "4c750cf3e1be80064d853516df652a3e8620c8c89931b626d77dcd601ef6cba0",
+  "html_sha256": "3669e101ada49eee3048ae12973c8f3eec270085f4a48e5b09ea53d8bf13a478",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

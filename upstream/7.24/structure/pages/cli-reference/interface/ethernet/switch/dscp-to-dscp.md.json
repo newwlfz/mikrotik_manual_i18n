@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/ethernet/switch/dscp-to-dscp.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/dscp-to-dscp.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/dscp-to-dscp",
+  "md_sha256": "6df90f85ba0e234aaeaf0ddbbdc8e5331a24e27693952417e632af679f278e5e",
+  "html_sha256": "7b4aa50e8007b1aad3770a2758111134a0cac499a74e86042f539b0f0015bebf",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

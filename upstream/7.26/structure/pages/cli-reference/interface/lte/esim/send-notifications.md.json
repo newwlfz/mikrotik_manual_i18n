@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/lte/esim/send-notifications.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim/send-notifications.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim/send-notifications",
+  "md_sha256": "6e97e412f1ee1f6b02c2255335f97c48883916765f84e6cf50c9652c8781a4d6",
+  "html_sha256": "d3b7fa5811467b5dde84bab689789cf0d84a3eb1d0efa35340bfe758a99b263a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

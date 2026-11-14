@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/firewall/mangle/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/firewall/mangle.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/firewall/mangle/",
+  "md_sha256": "db2d83d43f9d6b6f8977bddd7b60c343c75aef2c7b0ae25467a4886706174cc5",
+  "html_sha256": "88609e354dd21b602f7c822fa3920cb70cc481a705e1b3c3ece9198c1e387896",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 76,
+      "listItems": 76,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 76,
+      "listItems": 76,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

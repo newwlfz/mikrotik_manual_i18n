@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ipv6/firewall/mangle/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ipv6/firewall/mangle.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ipv6/firewall/mangle/",
+  "md_sha256": "a6909112016aed64f4a31a82f07bf04b0a0b2ad87cb4b1fcbfcf560c94a91f5e",
+  "html_sha256": "d03f97aa889520c4e416a6699f56e7998025e95aa63a39a9f5c7df4d7f030f44",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 34,
+      "listItems": 34,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 34,
+      "listItems": 34,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

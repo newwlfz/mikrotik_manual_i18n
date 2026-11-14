@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/wireless/nstreme-dual/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/nstreme-dual/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireless/nstreme-dual/monitor",
+  "md_sha256": "2ea9a2116bb8646217527cf54efe5759d16e1938ff5c422603cefdd4063dd4d7",
+  "html_sha256": "94df9ed6dc27dc8d61da5ccbae93f24aacef235672632200a8dc61d3ceee79ff",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

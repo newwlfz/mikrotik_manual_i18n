@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/proxy/refreshes.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/proxy/refreshes.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/proxy/refreshes",
+  "md_sha256": "2c098c68108dbe879849d05dd179d50be97eccdc5991a681f3eaed74074878d7",
+  "html_sha256": "74a29559ad4d4f55facfc8fca32e1884c04270a885f34febc882313610622287",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

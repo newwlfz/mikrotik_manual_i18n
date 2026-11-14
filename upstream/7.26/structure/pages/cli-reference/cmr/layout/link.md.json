@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/cmr/layout/link.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/layout/link.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/layout/link",
+  "md_sha256": "e620bc92e8655304794c4c2033c8d8b67b8079357db0b4f38bbd47719a3ecd2e",
+  "html_sha256": "7644252d22d7dcd925d315b11c0c654e32260233181f47ebd6bdd3e59e249f2f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

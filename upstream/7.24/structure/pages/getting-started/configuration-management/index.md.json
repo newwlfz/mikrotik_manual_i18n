@@ -1,0 +1,89 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "getting-started/configuration-management/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/getting-started/configuration-management.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/getting-started/configuration-management/",
+  "md_sha256": "d2821cb3f594b202fc78ec9b5aba76c4937be912c29a68dc940633b72323d816",
+  "html_sha256": "e9e3134ecb4e6c6be07d233b2e8b5edc49a85fcf1b512892207a363eb5a2b87c",
+  "body": {
+    "html": {
+      "lists": 5,
+      "listItems": 9,
+      "br": 1,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 12,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 25,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 4,
+          "col": 1,
+          "html": "Run the specified .rsc file after reset. That way you can load your custom configuration. <br/><br/><strong>Warning:</strong> If a specific .rsc file execution takes more than 2 minutes, a script will fail, and LOG will contain <em>\"runtime limit exceeded\"</em> or in rare cases <em>\"std failure: timeout\"</em> error. <br/>"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Run the <em>caps-mode</em> script after configuration reset. <br/>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

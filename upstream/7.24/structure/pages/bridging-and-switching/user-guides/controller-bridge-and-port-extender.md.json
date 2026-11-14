@@ -1,0 +1,130 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "bridging-and-switching/user-guides/controller-bridge-and-port-extender.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/user-guides/controller-bridge-and-port-extender.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/user-guides/controller-bridge-and-port-extender",
+  "md_sha256": "0c88d6a078b7cc14baeb625f0e30757238a9f9ea4f68120f25261a6a948e81de",
+  "html_sha256": "13b3941e0e6d7728b013bcf5d3c49b751b882d57eba4d619a318e4fcf0dfa85c",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 9,
+      "br": 1,
+      "details": 0,
+      "tables": 7,
+      "sup": 0,
+      "code": 27,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 7,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 7,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        1,
+        0
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 14,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 13,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 2,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "unaligned": {
+        "reason": "row-count",
+        "markdown": 1,
+        "html": 2
+      },
+      "rebuild": true,
+      "rebuild_header": [
+        "",
+        ""
+      ],
+      "rebuild_rows": [
+        [
+          "<img decoding=\"async\" loading=\"lazy\" alt=\"CB Unicast 3\" src=\"/assets/images/controller-bridge-and-port-extender-02-c9b2dd45ed582b2c8780f52805fd11bc.webp\" width=\"822\" height=\"613\"/><br/>",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": [
+    {
+      "table": 2,
+      "reason": "row-count",
+      "markdown": 1,
+      "html": 2
+    }
+  ]
+}

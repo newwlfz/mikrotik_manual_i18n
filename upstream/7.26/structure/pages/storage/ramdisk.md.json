@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "storage/ramdisk.md",
+  "source_url": "https://manual.mikrotik.com/docs/storage/ramdisk.md",
+  "html_url": "https://manual.mikrotik.com/docs/storage/ramdisk",
+  "md_sha256": "3e7bda32ad0e81c4532c3342fcab1b5f21fbe8ccb87cf87fb9e801f381ac2860",
+  "html_sha256": "0322cf51fcc181edd1aa13cc9d68d6f43487cc02dd60370ea3e3ce0c363bce5e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 12,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

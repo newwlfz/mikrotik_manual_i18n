@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/iot/wiliot/disable.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/wiliot/disable.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/wiliot/disable",
+  "md_sha256": "b8d376c573caf95e655f38ce874985acd50529559352382ab6e36d0b32714435",
+  "html_sha256": "b0b476a8e0b144246261bf8654e6e7ca573fadef3380c5d9686050efccc7fcce",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

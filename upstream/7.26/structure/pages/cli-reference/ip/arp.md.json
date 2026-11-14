@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/arp.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/arp.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/arp",
+  "md_sha256": "ef947470ea50facb725967fb9bd1f835894b0e9e8e389a66052aa7e998ccd87c",
+  "html_sha256": "d6a1863d43bae3998cbca6555db87bcc8d9065dfd0d9e7228fc99dddd2524d6c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

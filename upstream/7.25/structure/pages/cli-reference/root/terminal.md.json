@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/root/terminal.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/root/terminal.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/root/terminal",
+  "md_sha256": "487ec841621202b2f24f5334bb426e8eda29cb53a405bf3a3b40b7b0424a2622",
+  "html_sha256": "16ae8f1b58aa1d13c9d5fc6edb57a0280c03c52bfb6e6f49c5d3eb6f4dc21f21",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

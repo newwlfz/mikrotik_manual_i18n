@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/iot/lora/joineui.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/iot/lora/joineui.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/iot/lora/joineui",
+  "md_sha256": "010b0e185ef00385ef9326f872f2e281917bce077ba6a9388c57d3d6a5c0d60e",
+  "html_sha256": "ca02ec9f235a639a719c255466915102ea373f72d11842c8e4e382643cf3d9f5",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

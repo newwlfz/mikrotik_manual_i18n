@@ -1,0 +1,403 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "network-management/dhcp.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/network-management/dhcp.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/network-management/dhcp",
+  "md_sha256": "e8212d8b612bc6951d01a355a3bbfffa0ee182ddb4be917b8b2570ec97dede53",
+  "html_sha256": "aab90475516a29bb6d085be8e38eef1ceac2c77a06f3d1e6e129ad80daab9b9c",
+  "body": {
+    "html": {
+      "lists": 18,
+      "listItems": 58,
+      "br": 0,
+      "details": 0,
+      "tables": 23,
+      "sup": 0,
+      "code": 41,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 58,
+      "listItems": 58,
+      "br": 0,
+      "details": 0,
+      "tables": 23,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 58,
+      "listItems": 58,
+      "br": 0,
+      "details": 0,
+      "tables": 23,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 4,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 18,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Whether to install a default route in the routing table received from DHCP server. By default, the RouterOS client complies with RFC and ignores option 3 if classless option 121 is received. To force the client not to ignore option 3 set <em>special-classless</em>. This parameter is available in v6rc12+<ul><li><strong>yes</strong> - adds a classless route if received, if not then adds a default route (old behavior)</li><li><strong>special-classless</strong> - adds both classless routes if received and a default route (MS style)</li></ul>"
+        },
+        {
+          "row": 13,
+          "col": 1,
+          "html": "Execute script when DHCP client obtains a new lease or loses an existing one, received gateway address or DNS server list is changed. Variables that are accessible for the event script:<ul><li>bound - 1 - lease is added/changed; 0 - lease is removed</li><li>server-address - server address</li><li>lease-address - lease address provided by a server</li><li>interface - name of the interface on which the client is configured</li><li>gateway-address - gateway address provided by a server</li><li>vendor-specific - stores value of option 43 received from DHCP server</li><li>lease-options - array of recieved options from server</li></ul><a href=\"#example\"><code>Example &gt;&gt;</code></a>"
+        },
+        {
+          "row": 14,
+          "col": 1,
+          "html": "Whether to set the <em>broadcast</em> bit in DHCPDISCOVER and DHCPREQUEST messages. <br/><em>always - broadcast</em>bit is set always <br/><em>both - broadcast</em> bit is set only for the first 15 seconds <br/><em>never - broadcast</em>bit is not set"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 17,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 19,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 12,
+          "col": 1,
+          "html": "Run this script on the DHCP-client status change. Available variables:<ul><li>pd-valid - if the prefix is acquired by the client;</li><li>pd-prefix - the prefix acquired by the client if any;</li><li>na-valid - if the address is acquired by the client;</li><li>na-address - the address acquired by the client if any.</li><li>options - an array of received options (only ROSv7)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Shows the status of DHCPv6 Client:<ul><li><strong>stopped</strong> - dhcpv6 client is stopped</li><li><strong>searching</strong> - sending \"solicit\" and trying to get \"advertise\"</li><li><strong>requesting</strong> - sent \"request\" waiting for \"reply\"</li><li><strong>bound</strong> - received \"reply\". Prefix assigned.</li><li><strong>renewing</strong> - sent \"renew\", waiting for \"reply\"</li><li><strong>rebinding</strong> - sent \"rebind\", waiting for \"reply\"</li><li><strong>error</strong> - reply was not received in time or some other error occurred.</li><li><strong>stopping</strong> - sent \"release\"</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 28,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Changes whether to force broadcast DHCP replies: <br/><ul><li>no - replies are sent based on the client's broadcast flag. If the server sends three consecutive offers, the third and fourth offer will be sent as a broadcast;</li><li>yes - replies are always broadcasted even when the client has not specified the broadcast flag.</li></ul>"
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Option changes the way a server responds to DHCP requests:<ul><li>yes - replies to clients' requests for an address that is not available from this server, DHCP server will send a negative acknowledgment (DHCPNAK);</li><li>no - DHCP server ignores clients' requests for addresses that are not available from this server;</li></ul><ul><li>after-10sec-delay - requests with \"secs &lt; 10\" will be processed as in \"no\" setting case and requests with \"secs &gt;= 10\" will be processed as in \"yes\" case;</li></ul><ul><li>after-2sec-delay - requests with \"secs &lt; 2\" will be processed as in \"no\" setting case and requests with \"secs &gt;= 2\" will be processed as in \"yes\" case;</li></ul><br/>If all requests with \"secs &lt; x\" should be ignored, then <strong>delay-threshold=x</strong> setting should be used."
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Accepts two predefined options or time value:<ul><li>forever - lease never expires</li><li>lease-time - use time from lease-time parameter</li></ul>"
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "html": "Support for BOOTP clients:<ul><li>none - do not respond to BOOTP requests</li><li>static - offer only static leases to BOOTP clients</li><li>dynamic - offer static and dynamic leases for BOOTP clients</li></ul>"
+        },
+        {
+          "row": 17,
+          "col": 1,
+          "html": "A script that will be executed after a lease is assigned or de-assigned. Internal \"global\" variables that can be used in the script:<ul><li>leaseBound - set to \"1\" if bound, otherwise set to \"0\"</li><li>leaseServerName - DHCP server name</li><li>leaseActMAC - active mac address</li><li>leaseActIP - active IP address</li><li>lease-agent-circuit-id - lease agent circuit ID</li><li>lease-agent-remote-id - lease agent remote ID</li><li>lease-hostname - client hostname</li><li>lease-options - array of options sent to client</li></ul>"
+        },
+        {
+          "row": 21,
+          "col": 1,
+          "html": "The IP address of the relay this DHCP server should process requests from:<ul><li>0.0.0.0 - the DHCP server will be used only for direct requests from clients (no DHCP relay allowed)</li><li>255.255.255.255 - the DHCP server should be used for any incoming request from a DHCP relay except for those, which are processed by another DHCP server that exists in the <code><code>/ip/dhcp-server</code></code> submenu.</li></ul>"
+        },
+        {
+          "row": 23,
+          "col": 1,
+          "html": "Enables or disables the inclusion of additional Option 82 suboptions (e.g. 0x81 actual upstream, 0x82 actual downstream) in RADIUS Access-Request and Accounting-Request messages as described in RFC 4679 and Broadband Forum TR-101. <br/> When enabled, the DHCP server includes specific suboptions under DHCP Option 82 (Relay Agent Information) that are used by RADIUS servers to identify subscriber line parameters in broadband access networks, especially those based on DSL infrastructure. <br/> This property only has an effect when <code>use-radius</code> is set to <code>yes</code> or <code>accounting</code>."
+        },
+        {
+          "row": 25,
+          "col": 1,
+          "html": "Whether to use RADIUS server:<ul><li>no - do not use RADIUS;</li><li>yes - use RADIUS for accounting and lease;</li><li>accounting - use RADIUS for accounting only.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "rows": 21,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Changes whether to force broadcast DHCP replies: <br/><ul><li>no - replies are sent based on the client's broadcast flag. If the server sends three consecutive offers, the third and fourth offer will be sent as a broadcast;</li><li>yes - replies are always broadcasted even when the client has not specified the broadcast flag.</li></ul>"
+        },
+        {
+          "row": 20,
+          "col": 1,
+          "html": "Shows the status of the DHCP <code>lease</code>: <ul><li><strong>waiting </strong>- waiting for static DHCP lease to get bound</li><li><strong>testing </strong>- checking for ARP conflicts</li><li><strong>declined </strong>- DHCP client replied with decline packet</li><li><strong>offered </strong>- server offered address to DHCP client, but did not yet receive DHCP request back</li><li><strong>bound </strong>- DHCP client accepted DHCP lease</li><li><strong>authorizing </strong>- communicating with RADIUS</li><li><strong>conflict </strong>- ARP conflict detected</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 10,
+      "rows": 15,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 7,
+          "col": 1,
+          "html": "DNS servers that will be passed to DHCP clients. Two comma-separated DNS servers can be specified to be used by the DHCP client as primary and secondary DNS servers <br/> By default, if there are no DNS servers configured, then the router dynamic DNS Servers from IP&gt;DNS will be passed to DHCP clients, if there are no dynamic DNS servers configured, the router static DNS servers from IP&gt;DNS will be passed to DHCP clients."
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 12,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 13,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 14,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Parameter's value. Available data types for options are:<ul><li><ul><li>'test' -&gt; ASCII to Hex 0x74657374</li><li>'10.10.10.10' -&gt; Unicode IP to Hex 0x0a0a0a0a</li><li>s'10.10.10.10' -&gt; ASCII to hex 0x31302e31302e31302e3130</li><li>s'160' -&gt; ASCII to hex 0x313630</li><li>'10' -&gt; Decimal to Hex 0x0a</li><li>0x0a0a -&gt; No conversion</li><li>$(VARIABLE) -&gt; hardcoded values</li></ul></li></ul> RouterOS has predefined variables that can be used: <br/><ul><li>HOSTNAME - client hostname</li><li>RADIUS_MT_STR1 - from radius MT attr nr. 24</li><li>RADIUS_MT_STR2 - from radius MT attr nr. 25</li><li>REMOTE_ID - agent remote-id</li><li>NETWORK_GATEWAY - the first gateway from '<em><code>/ip/dhcp-server/network</code></em>', note that this option won't work if used from lease</li></ul> Now it is also possible to combine data types into one, for example: \"0x01'vards'$(HOSTNAME)\" <br/> For example, if HOSTNAME is 'kvm', then the raw value will be 0x0176617264736b766d."
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Matching method: <br/><ul><li><em>exact </em>- option should match exactly the <em>value;</em></li><li><em>substring </em>- <em>value </em>can match anywhere in the option string — at the start, middle, or end.</li></ul>"
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "html": "A value that will be searched for in the option. <br/> Available data types for value are: <br/><ul><li>string;</li><li>HEX.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "rows": 20,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 5,
+          "col": 1,
+          "html": "A script that will be executed after binding is assigned or de-assigned. Internal \"global\" variables that can be used in the script:<ul><li>bindingBound - set to \"1\" if bound, otherwise set to \"0\"</li><li>bindingServerName - dhcp server name</li><li>bindingDUID - DUID</li><li>bindingAddress - active address</li><li>bindingPrefix - active prefix</li></ul>"
+        },
+        {
+          "row": 15,
+          "col": 1,
+          "html": "Whether to use a RADIUS server:<ul><li>no - do not use RADIUS;</li><li>yes - use RADIUS for accounting and lease;</li><li>accounting - use RADIUS for accounting only.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 18,
+      "rows": 17,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 19,
+      "rows": 11,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "unaligned": {
+        "reason": "row-count",
+        "markdown": 10,
+        "html": 11
+      },
+      "rebuild": true,
+      "rebuild_header": [
+        "Property",
+        "Description"
+      ],
+      "rebuild_rows": [
+        [
+          "<strong>dynamic</strong> (<em>yes &#124; no</em>)",
+          "Whether an item is dynamically created."
+        ],
+        [
+          "<strong>expires-after</strong> (<em>time</em>)",
+          "The time period after which binding expires."
+        ],
+        [
+          "<strong>last-seen</strong> (<em>time</em>)",
+          "Time period since the client was last seen."
+        ],
+        [
+          "<strong>status</strong> (<em>waiting &#124; offered &#124; bound</em>)",
+          "Three status values are possible:<ul><li><strong>waiting</strong> - Shown for static bindings if it is not used. For dynamic bindings this status is shown if it was used previously. The server will wait 10 minutes to allow an old client to get this binding, otherwise binding will be cleared and prefix will be offered to other clients.</li><li><strong>offered</strong> - if a <strong>solicit</strong> message was received, and the server responded with <strong>advertise</strong> a message, but the <strong>request</strong> was not received. During this state client has 2 minutes to get this binding, otherwise, it is freed or changes status to <strong>waiting</strong> for static bindings.</li><li><strong>bound</strong> - currently bound.</li></ul>"
+        ],
+        [
+          "<strong>reconfigure-key</strong> (string)",
+          "Reconfiguration authentication key"
+        ],
+        [
+          "<strong>reconfigure-last-sent</strong>(integer)",
+          "Count of sent Reconfigure (<em>forcerenew</em>) messages"
+        ],
+        [
+          "<strong>reconfigure-status</strong>",
+          ""
+        ],
+        [
+          "active-server",
+          ""
+        ],
+        [
+          "client-address",
+          ""
+        ],
+        [
+          "For example, dynamically assigned /62 prefix",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 20,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 21,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 22,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": [
+    {
+      "table": 19,
+      "reason": "row-count",
+      "markdown": 10,
+      "html": 11
+    }
+  ]
+}

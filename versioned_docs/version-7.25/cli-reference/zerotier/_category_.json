@@ -1,0 +1,11 @@
+{
+  "position": 29,
+  "label": "zerotier",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/zerotier/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/zerotier"
+}

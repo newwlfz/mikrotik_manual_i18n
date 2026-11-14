@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/dhcp-server/alert/reset-alert.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/dhcp-server/alert/reset-alert.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/dhcp-server/alert/reset-alert",
+  "md_sha256": "e47cad8c4483d3da89346f6aa3e54e3982216fce96c076e9a4485010a6503442",
+  "html_sha256": "07b4dc53c2d4ba841e599bf57edebbfc748c251672c8aedcd6bfc683962cbddc",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/iot/mqtt/subscriptions/monitor-data.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/mqtt/subscriptions/monitor-data.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/mqtt/subscriptions/monitor-data",
+  "md_sha256": "d64de96df503d9212bdee409cad34f750ce5a6f241df6e3f403ae75cc687b10e",
+  "html_sha256": "85f194c2014cac68330218306b1b8605106b5ebd685cabf5bc9e4176dbc0270c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

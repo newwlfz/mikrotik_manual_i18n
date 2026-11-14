@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/package/local-update/mirror/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/package/local-update/mirror.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/package/local-update/mirror/",
+  "md_sha256": "c5e7703903be08259072f10a7ba8fe46b259e47736fed6a6e4fe6c6d3033557a",
+  "html_sha256": "765493e0a8c4467ad2000fb18232caa1033d4cb0791666cf56ff4c9fb81e645a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

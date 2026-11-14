@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "system-information-and-utilities/files.md",
+  "source_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/files.md",
+  "html_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/files",
+  "md_sha256": "fd37589de85dae5855d6a0a71f9d8794b9cbd0b46cf27bde467837c85427c46e",
+  "html_sha256": "ecd7e57cf3248cafee3150411e3244a09cefe6ca9c6cde75d4a657c23bbf45b6",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 22,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

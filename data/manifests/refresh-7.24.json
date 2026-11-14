@@ -1,0 +1,40 @@
+{
+  "version": "7.24",
+  "total": 1418,
+  "unchanged": 1413,
+  "changed": [
+    {
+      "route": "bridging-and-switching/user-guides/controller-bridge-and-port-extender",
+      "added": 2,
+      "removed": 0,
+      "sample": "![CB Summary](LINK)"
+    },
+    {
+      "route": "cli-reference/ip/settings",
+      "added": 0,
+      "removed": 0,
+      "sample": "With [L3 hardware offloading](LINK) enabled, hardware-forwarded ECMP uses the switch chip's own hash"
+    },
+    {
+      "route": "cli-reference/ipv6/settings",
+      "added": 0,
+      "removed": 0,
+      "sample": "With [L3 hardware offloading](LINK) enabled, hardware-forwarded ECMP uses the switch chip's own hash"
+    },
+    {
+      "route": "getting-started/installation-and-upgrade/install/chr-installation/virtualbox",
+      "added": 0,
+      "removed": 0,
+      "sample": "**[![](LINK)](LINK)**"
+    },
+    {
+      "route": "getting-started/installation-and-upgrade/packages",
+      "added": 0,
+      "removed": 0,
+      "sample": "| [![](LINK)](LINK) | [![](LINK)](LINK) | [![](LINK)](LINK) | [![](LINK)](LINK) |"
+    }
+  ],
+  "added": [],
+  "removed": [],
+  "failed": []
+}

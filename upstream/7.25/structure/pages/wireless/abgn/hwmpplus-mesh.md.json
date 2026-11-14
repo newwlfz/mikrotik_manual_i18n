@@ -1,0 +1,87 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "wireless/abgn/hwmpplus-mesh.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/wireless/abgn/hwmpplus-mesh.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/wireless/abgn/hwmpplus-mesh",
+  "md_sha256": "ad87c308766475ace4b21f0c337351d391e5b8540d5013bfd90ac1c8723121e2",
+  "html_sha256": "1ef28ba1c23a86da73759b08f1cdd8c005043ae2b39747b5487eee7692d66450",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        0,
+        4
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 17,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 6,
+          "col": 1,
+          "html": "port type to use<ul><li>auto - port type is determined automatically based on the underlying interface's type</li><li>WDS - a Wireless Distribution System interface. Remote MAC address is learned from wireless connection data</li><li>ethernet - Remote MAC addresses are learned either from HWMP+ Hello messages or from source MAC addresses in received or forwarded traffic</li><li>wireless - Remote MAC addresses are learned from wireless connection data</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "type of this FDB entry<ul><li>local -- MAC address belongs to the local router itself</li><li>outsider -- MAC address belongs to a device external to the mesh network</li><li>direct -- MAC address belongs to a wireless client on an interface that is in the mesh network</li><li>mesh -- MAC address belongs to a device reachable over the mesh network; it can be either internal or external to the mesh network</li><li>neighbor -- MAC address belongs to a mesh router that is a direct neighbor to this router</li><li>larval -- MAC address belongs to an unknown device that is reachable over the mesh network</li><li>unknown -- MAC address belongs to an unknown device</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

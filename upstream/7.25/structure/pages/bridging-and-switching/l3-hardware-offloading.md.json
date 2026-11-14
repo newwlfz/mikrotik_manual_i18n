@@ -1,0 +1,141 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "bridging-and-switching/l3-hardware-offloading.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/l3-hardware-offloading.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/l3-hardware-offloading",
+  "md_sha256": "feaeeaddc6b37594885e9969d6a9d4aead7e1bbca59f9a03408cae38a3dbea17",
+  "html_sha256": "44827433276ded4ba1bcd63529a936567c00aadc956f1397817a3219d1fecfee",
+  "body": {
+    "html": {
+      "lists": 10,
+      "listItems": 34,
+      "br": 8,
+      "details": 0,
+      "tables": 4,
+      "sup": 11,
+      "code": 54,
+      "wideTables": 2
+    },
+    "md": {
+      "lists": 34,
+      "listItems": 34,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 11,
+      "code": 0,
+      "wideTables": 2
+    },
+    "local": {
+      "lists": 34,
+      "listItems": 34,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 11,
+      "code": 0,
+      "wideTables": 2
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 21,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 2,
+          "html": "<br/><code>/interface/ethernet/switch/l3hw-settings/set ipv6-hw=yes</code><br/>"
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "html": "<br/><code>/ip/route/add dst-address=10.0.99.0/24 blackhole</code><br/>"
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "html": "<br/><code>/ip/route/add dst-address=10.0.0.0/24 gateway=ether1</code><br/><br/> This works only for directly connected networks. Since HW does not know how to send ARP requests, CPU sends an ARP request and waits for a reply to find out the DST MAC address on the first received packet of the connection that matches a DST IP address. After DST MAC is determined, HW entry is added and all further packets will be processed by the switch chip."
+        },
+        {
+          "row": 9,
+          "col": 2,
+          "html": "Routing between VLAN interfaces that are created on hardware-offloaded bridge interface with <a href=\"/docs/7.25/bridging-and-switching/#bridge-vlan-filtering\">vlan-filtering</a>. <br/><br/>On <a href=\"#crs8xx-switch-98dx7xxx-series\">98DX7xxx</a> switches, also between VLAN interfaces created directly on Ethernet switch ports. <br/><br/><code>/interface/vlan</code><br/>"
+        },
+        {
+          "row": 10,
+          "col": 2,
+          "html": "Routing between bonding interfaces. <br/><br/><code>/interface/bonding</code><br/><br/> Only <code>802.3ad</code> and <code>balance-xor</code> bonding modes are hardware offloaded."
+        },
+        {
+          "row": 17,
+          "col": 2,
+          "html": "Support for hardware-offloaded <a href=\"/docs/7.25/bridging-and-switching/vxlan\">VXLAN</a> data plane, VXLAN encapsulation and decapsulation. This allows for static one-to-one VLAN-to-VXLAN mappings within a vlan-filtering bridge. At this point, some known features are not yet implemented. <br/><strong>Underlay (routing encapsulated VXLAN packets):</strong><br/> 1. VTEPs are not supported over ECMP <br/> 2. VTEPs are not supported over bond, bridge, VLAN interfaces (only stand-alone routed Ethernet interfaces are supported) <br/> 3. VTEPs are not supported over multicast <br/> 4. VXLAN hardware offloading is limited to the <code>main</code> routing table. VTEPs cannot operate within VRFs. <br/> 5. VTEPs are not supported with IPv6 <br/><strong>Overlay (forwarding between Ethernet and VXLAN):</strong><br/> 1. VLAN tagging over VXLAN is not supported <br/> 2. Routing between different VXLAN VNIs is not supported <br/> 3. VTEPs are isolated, and there is no mechanism to control \"horizon\" between them. <br/> 4. Bridged VXLAN interfaces do not support IGMP snooping. When snooping is enabled, MDB entries on VXLAN are not offloaded, and multicast traffic gets restricted between Ethernet and VXLAN. <br/> 5. Bridged VXLAN interfaces are not supported by MLAG. <br/><br/><code>/interface/vxlan</code><br/>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 5,
+      "cols": 6,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "CRS305-1G-4S+IN <br/> CRS326-24G-2S+ (RM/IN) <br/> CRS328-24P-4S+RM <br/> CRS328-4C-20S-4S+RM"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "CRS305-1G-4S+OUT (FiberBox Plus) <br/> CRS310-1G-5S-4S+ (netFiber 9/IN) <br/> CRS310-8G+2S+IN <br/> CRS318-16P-2S+OUT (netPower 16P) <br/> CRS320-8P-8B-4S+RM <br/> CRS418-8P-8G-2S+RM <br/> CRS418-8P-8G-2S+5axQ2axQ-RM"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 10,
+      "cols": 10,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": [
+        {
+          "row": 4,
+          "col": 1,
+          "html": "CRS326-24S+2Q+RM <br/> CRS326-4C+20G+2Q+RM"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "CRS354-48G-4S+2Q+RM <br/> CRS354-48P-4S+2Q+RM"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "CRS504-4XQ (IN/OUT) <br/> CRS510-8XS-2XQ-IN <br/> RDS2216-2XG-4S+4XS-2XQ"
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "html": "CCR2216-1G-12XS-2XQ <br/> CRS518-16XS-2XQ-RM"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 3,
+      "cols": 11,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

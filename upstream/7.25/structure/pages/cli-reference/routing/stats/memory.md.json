@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/routing/stats/memory.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/stats/memory.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/stats/memory",
+  "md_sha256": "6b0f4edfa6f740af431c1ea4759d55db1fc9934dcb82b20e1030e8d48f178b8d",
+  "html_sha256": "edc1b16b2ea3230e52e2f12efd4bfec9af66065ba3489a192a6bfe8c90fb7490",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

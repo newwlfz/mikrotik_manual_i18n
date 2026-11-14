@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/partitions/save-config-to.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/partitions/save-config-to.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/partitions/save-config-to",
+  "md_sha256": "b0fc91b56a14c2f8b8b9ce2878a23747c1cba63a40c81d398d5cb1802088e558",
+  "html_sha256": "6cb83427e8c75ed8deae445e2b3ee38e9a73c9b42d9e91a2b07d3f07d67bf37a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

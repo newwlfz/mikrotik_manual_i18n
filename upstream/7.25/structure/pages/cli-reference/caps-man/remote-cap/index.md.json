@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/caps-man/remote-cap/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/remote-cap.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/remote-cap/",
+  "md_sha256": "d53b208b0e1676e463ee491b7202605bceb18b2d7164f818002a221130ebad5f",
+  "html_sha256": "8318aaf41c573f2a50a69a84dbf5d53462f423973dbbecbdd8c0880ba321b2c6",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

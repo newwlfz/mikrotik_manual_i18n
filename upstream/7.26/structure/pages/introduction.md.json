@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "introduction.md",
+  "source_url": "https://manual.mikrotik.com/docs/introduction.md",
+  "html_url": "https://manual.mikrotik.com/docs/introduction",
+  "md_sha256": "5d7a56a5ed50ffbeb38e93faaff80b3d509293d14fdc0e270ec3d9ffd02ba43f",
+  "html_sha256": "982312d7e75f488512bbe68e207e2d5241c6c68163ee9144a2c4dac13eb8d5bc",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 5,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

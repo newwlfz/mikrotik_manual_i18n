@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "virtual-private-networks/ipip.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/virtual-private-networks/ipip.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/virtual-private-networks/ipip",
+  "md_sha256": "0f5d2959999f242f5e7628a1a92daf1ec6abc0fdfab5f899a7e1c78583459467",
+  "html_sha256": "1af9996d074652fd2af7394730ade49bca4b9d29e515f099b67984a6e9524999",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        0,
+        1
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

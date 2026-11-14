@@ -1,0 +1,11 @@
+{
+  "position": 15,
+  "label": "L2Tp Client",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/l2tp-client/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/l2tp-client"
+}

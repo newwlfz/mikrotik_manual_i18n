@@ -1,0 +1,11 @@
+{
+  "position": 23,
+  "label": "Rule",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/ethernet/switch/rule/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/ethernet/switch/rule"
+}

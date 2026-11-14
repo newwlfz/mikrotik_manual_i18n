@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "getting-started/installation-and-upgrade/install/x86-installation.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/getting-started/installation-and-upgrade/install/x86-installation.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/getting-started/installation-and-upgrade/install/x86-installation",
+  "md_sha256": "4226ef1dc060646321c701ba6f7a6e2b85b133366527dec145bc74019a1021e3",
+  "html_sha256": "cf433d387f1eb1ccc3c8f04e564febe632d0cc12df7fa6c0e0e0a78d225eed84",
+  "body": {
+    "html": {
+      "lists": 5,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 13,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 13,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

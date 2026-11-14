@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/cmr/upgrade/show-devices.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/upgrade/show-devices.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/upgrade/show-devices",
+  "md_sha256": "066344973746a89902723061a33033650e51e76f7ec62a589eed3a720a7b7c7b",
+  "html_sha256": "47d08a77b7281069e6d86290eedb5474ed7f6dde50412276ddbc3ec1da2ec6ba",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "storage/rsync.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/storage/rsync.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/storage/rsync",
+  "md_sha256": "d5bc456225c2168fba29c4d439c9ba46b9cb979d890d8fa46f33296c0886f87f",
+  "html_sha256": "be1979b75a6b7505314cf12c7d7c4414010d4dd566dc089687c67022ee8a06a5",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 10,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

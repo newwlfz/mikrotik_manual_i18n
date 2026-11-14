@@ -1,0 +1,11 @@
+{
+  "position": 32,
+  "label": "Pwr Line",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/pwr-line/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/pwr-line"
+}

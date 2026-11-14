@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/special-login.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/special-login.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/special-login",
+  "md_sha256": "42fa883d1e1a95392180220ada246115c35ae0fe640f0f96b63d977fd1dd9376",
+  "html_sha256": "6425b1244caef57e20b1bfae574468622abf5d216dd7eae73bb585e842294f1f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,99 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "diagnostics-monitoring-and-troubleshooting/bandwidth-test.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/bandwidth-test.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/bandwidth-test",
+  "md_sha256": "8cd2ff5729e4d55725a37af33fbb2a42a772e2aaf958aa2b381bdbc17e16cd55",
+  "html_sha256": "612630eb9540d7f126bdfe2fa3e8718dc8aa1b2b750c81ad1eff40dc622bd625",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 2,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "unaligned": {
+        "reason": "row-count",
+        "markdown": 1,
+        "html": 2
+      },
+      "rebuild": true,
+      "rebuild_header": [
+        "",
+        ""
+      ],
+      "rebuild_rows": [
+        [
+          "<strong>Sub-menu:</strong><code>/tool/bandwidth-server</code>",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 14,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 0,
+          "html": "<strong>direction</strong> (<em>both &#124; receive &#124; transmit</em>; Default:<strong>receive</strong>) <br/>"
+        }
+      ]
+    }
+  ],
+  "unaligned": [
+    {
+      "table": 0,
+      "reason": "row-count",
+      "markdown": 1,
+      "html": 2
+    }
+  ]
+}

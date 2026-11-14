@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/tool/traffic-generator/stats/port.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/traffic-generator/stats/port.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/traffic-generator/stats/port",
+  "md_sha256": "d7eac5930a0850a4ec7603df13d385571d13ecaf514bb467e2e8361424c40978",
+  "html_sha256": "a70a8ac44371b7410f1dca32484a24b4f1197ec9facc5c3ab2033f4acb175ed4",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

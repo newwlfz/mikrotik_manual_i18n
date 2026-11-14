@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/lte/at-chat.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/lte/at-chat.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/lte/at-chat",
+  "md_sha256": "3a154baf5c7299c9d9af3318294e3facf87b42016b98ebc5c68b514a556cf27c",
+  "html_sha256": "3ee1775cf9829accd159b431169fb12f57be17a26444dc68495408f74d546d88",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

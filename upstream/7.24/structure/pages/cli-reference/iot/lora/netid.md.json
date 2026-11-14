@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/iot/lora/netid.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/iot/lora/netid.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/iot/lora/netid",
+  "md_sha256": "ad9ac49b120a1e06936e962e494154db33f77b3071f4f4f6b9476f4af67f6e03",
+  "html_sha256": "03c194de0738e60da8f029d05a8c1adf57368ccaaa0a96395d7fd12e6861dbfc",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

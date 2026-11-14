@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Filter",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/firewall/filter/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/firewall/filter"
+}

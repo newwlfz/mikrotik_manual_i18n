@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/routing/rip/interface-template.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/rip/interface-template.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/rip/interface-template",
+  "md_sha256": "c89e88a5bae33bb6ed443047ec7ccda56ad069ed7ea43b80dd45e159381c59fe",
+  "html_sha256": "71b22a269ba26b2510312227ee910a7981de74fbf3c44aba7d6d46c7b37e8a65",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

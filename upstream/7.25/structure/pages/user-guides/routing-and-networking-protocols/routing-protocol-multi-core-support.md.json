@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "user-guides/routing-and-networking-protocols/routing-protocol-multi-core-support.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/routing-protocol-multi-core-support.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/routing-protocol-multi-core-support",
+  "md_sha256": "a4e95f6b972f212d2aa52f4f1f2a4d57b5e33ead5183391347fd21cb06b6c29e",
+  "html_sha256": "9d980ac96c401a89fe876f0cea5f67b00ec29fd54058b6086ce3eb3d3ebd7643",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 25,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 25,
+      "listItems": 25,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 25,
+      "listItems": 25,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,125 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "getting-started/configuration-management/list-of-menus-with-sensitive-parameters.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/getting-started/configuration-management/list-of-menus-with-sensitive-parameters.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/getting-started/configuration-management/list-of-menus-with-sensitive-parameters",
+  "md_sha256": "133a38a6c0d4f13aeb555a342da747b7baa609006643df882b3ca2b1e870fde4",
+  "html_sha256": "9fdccfca49536b18f1013e85f94bfa932dbdb427e721d2de95096678051024d2",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 49,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 2,
+          "html": "password - <a href=\"/docs/7.24/internet-of-things/mqtt/\">MQTT#Brokers</a><br/> key - <a href=\"/docs/7.24/internet-of-things/lora/general-properties#servers\">Lora#Servers</a>"
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "html": "<code>/interface/gre</code><br/><code>/interface/gre6</code>"
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "html": "<code>/interface/ipip</code><br/><code>/interface/ipipv6</code>"
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "html": "<code>/interface/eoip</code><br/><code>/interface/eoipv6</code>"
+        },
+        {
+          "row": 10,
+          "col": 0,
+          "html": "<code>/interface/l2tp-server</code><br/><code>/interface/l2tp-client</code><br/><code>/interface/l2tp-ether</code>"
+        },
+        {
+          "row": 10,
+          "col": 2,
+          "html": "ipsec-secret, password - <a href=\"/docs/7.24/virtual-private-networks/l2tp/#l2tp-client\">L2TP#L2TPClient</a><br/> ipsec-secret - <a href=\"/docs/7.24/virtual-private-networks/l2tp/#l2tp-server\">L2TP#L2TPServer</a><br/> ipsec-secret - <a href=\"/docs/7.24/virtual-private-networks/l2tp/#l2tp-ether\">L2TP#L2TPEther</a>"
+        },
+        {
+          "row": 16,
+          "col": 0,
+          "html": "<code>/ip/ssh/export-host-key</code><br/><code>/ip/ssh/import-host-key</code>"
+        },
+        {
+          "row": 17,
+          "col": 2,
+          "html": "auth-key, enc-key - <a href=\"/docs/7.24/virtual-private-networks/ipsec/#installed-sas\">IPsec#InstalledSAs</a><br/> secret, password - <a href=\"/docs/7.24/virtual-private-networks/ipsec/#identities\">IPsec#Identities</a><br/> ppk-secret - Work in Progress <a href=\"/docs/7.24/virtual-private-networks/ipsec/#peers\">IPsec#Peers</a><br/> key, passphrase - Work in Progress <a href=\"/docs/7.24/virtual-private-networks/ipsec/#keys\">IPsec#Keys</a>"
+        },
+        {
+          "row": 20,
+          "col": 2,
+          "html": "nvme-tcp-server-password, nvme-tcp-password - <a href=\"/docs/7.24/storage/nvme-over-tcp\">NVMe over TCP</a><br/> sshfs-password - Work in Progress <br/> smb-server-password, smb-password - <a href=\"/docs/7.24/storage/smb\">SMB</a><br/> self-encryption-password, encryption-key - <a href=\"/docs/7.24/storage/self-encrypting-drives\">Self-Encrypting Drives</a>"
+        },
+        {
+          "row": 31,
+          "col": 2,
+          "html": "password,key - <a href=\"/docs/7.24/cli-reference/routing/rip/instance\">/routing/rip</a><br/> tcp-md5-key - <a href=\"/docs/7.24/cli-reference/routing/bgp/connection\">/routing/bgp/connection</a><br/> auth-key - <a href=\"/docs/7.24/cli-reference/routing/ospf/interface-template\">/routing/ospf</a>"
+        },
+        {
+          "row": 42,
+          "col": 2,
+          "html": "shared-secret - <a href=\"/docs/7.24/authentication-authorization-accounting/user-manager#routers\">User Manager#Routers</a><br/> paypal-password, web-private-password - <a href=\"/docs/7.24/authentication-authorization-accounting/user-manager#advanced\">User Manager#Advanced</a><br/> password, otp-secret - <a href=\"/docs/7.24/authentication-authorization-accounting/user-manager#users\">User Manager#Users</a>"
+        },
+        {
+          "row": 44,
+          "col": 2,
+          "html": "private-passphrase - <a href=\"/docs/7.24/wireless/abgn/capsman/#capsman-access-list\">CAPsMAN#CAPsMANAccess-list</a><br/> passphrase - <a href=\"/docs/7.24/wireless/abgn/capsman/#capsman-configuration\">CAPsMAN#CAPsMANconfiguration</a>"
+        },
+        {
+          "row": 45,
+          "col": 2,
+          "html": "static-key-0, static-key-1, static-key-2, static-key-3, static-sta-private-key - <a href=\"/docs/7.24/wireless/\">Wireless Interface#WEPproperties</a><br/> management-protection-key, private-key, private-pre-shared-key - <a href=\"/docs/7.24/wireless/\">Wireless Interface#Properties</a><br/> wpa-pre-shared-key, wpa2-pre-shared-key - <a href=\"/docs/7.24/wireless/\">Wireless Interface#WPAproperties</a><br/> mschapv2-password - <a href=\"/docs/7.24/wireless/\">Wireless Interface#WPAEAPproperties</a><br/> nv2-preshared-key - <a href=\"/docs/7.24/wireless/\">Wireless Interface#Generalinterfaceproperties</a>"
+        },
+        {
+          "row": 48,
+          "col": 2,
+          "html": "pin - used for card-reinstall and card-verify commands, no dedicated documentation page available. <br/> export-passphrase - <a href=\"/docs/7.24/authentication-authorization-accounting/certificates#export-certificate\">Certificates#ExportCertificate</a><br/> passphrase - <a href=\"/docs/7.24/authentication-authorization-accounting/certificates#import-certificate\">Certificates#ImportCertificate</a><br/> challenge-password, key-passphrase, challenge-passphrase - Work in progress"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

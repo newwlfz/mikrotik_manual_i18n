@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/zerotier/peer/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/zerotier/peer.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/zerotier/peer/",
+  "md_sha256": "8cd4a799b3ec4951e268e9aa7c9eb56f05f55761692ef878f209616335444d11",
+  "html_sha256": "d818e68dba85e77d75ba3c342293c3298b84012fb51f7f1e0ee6c1820f3f1946",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

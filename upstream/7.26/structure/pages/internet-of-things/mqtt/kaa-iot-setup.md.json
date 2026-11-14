@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "internet-of-things/mqtt/kaa-iot-setup.md",
+  "source_url": "https://manual.mikrotik.com/docs/internet-of-things/mqtt/kaa-iot-setup.md",
+  "html_url": "https://manual.mikrotik.com/docs/internet-of-things/mqtt/kaa-iot-setup",
+  "md_sha256": "9fd991ecd678b07f0143e734dc43bf6a82d078a8cc2c39af4d584c6e28b8ecc4",
+  "html_sha256": "f786702b132a2849a806f6ad18cd83a3a8cf7ee5e86d81cf71a7cc3dfaa1b98c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 13,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

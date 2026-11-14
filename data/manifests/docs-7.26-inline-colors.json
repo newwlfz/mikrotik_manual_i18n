@@ -1,0 +1,445 @@
+{
+ "version": "7.26",
+ "generated": "2026-11-09T11:45:42.546Z",
+ "pages": {
+  "bridging-and-switching/index": {
+   "vlan-filtering": {
+    "key": "background-accent-green-bolder",
+    "color": "#1f845a",
+    "count": 3
+   },
+   "disabled": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 3
+   },
+   "enabled": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "local-proxy-arp": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "the router performs proxy ARP on the interface and sends replies to the same interface": {
+    "key": "text",
+    "color": "#333333",
+    "count": 1
+   },
+   "proxy-arp": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "the router performs proxy ARP on the interface and sends replies to other interfaces": {
+    "key": "text",
+    "color": "#333333",
+    "count": 1
+   },
+   "reply-only": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "he interface will only respond to requests originating from matching IP address/MAC address combinations that are entered as static entries in the IP/ARP table. No dynamic entries will be automatically stored in the IP/ARP table. Therefore, for communications to be successful, a valid static entry must already exist.": {
+    "key": "text",
+    "color": "#333333",
+    "count": 1
+   },
+   "pvid": {
+    "key": "background-accent-green-bolder",
+    "color": "#1f845a",
+    "count": 2
+   },
+   "01:80:C2:00:00:00 - Spanning Tree Protocol (STP);": {
+    "key": "text",
+    "color": "#333333",
+    "count": 1
+   },
+   "01:80:C2:00:00:01 - Ethernet Flow Control;": {
+    "key": "text",
+    "color": "#333333",
+    "count": 1
+   },
+   "01:80:C2:00:00:02 - Link Aggregation Control Protocol (LACP);": {
+    "key": "text",
+    "color": "#333333",
+    "count": 1
+   },
+   "01:80:C2:00:00:03 - Dot1x client and server;": {
+    "key": "text",
+    "color": "#333333",
+    "count": 1
+   },
+   "01:80:C2:00:00:08 - Spanning Tree Protocol (for 802.1ad bridges, using ether-type=0x88a8);": {
+    "key": "text",
+    "color": "#333333",
+    "count": 2
+   },
+   "Spanning Tree Protocol (for 802.1ad bridges, using ether-type=0x88a8);": {
+    "key": "text",
+    "color": "#333333",
+    "count": 2
+   },
+   "ether-type=0x88a8": {
+    "key": "background-accent-green-bolder",
+    "color": "#1f845a",
+    "count": 2
+   },
+   "01:80:C2:00:00:0D - Multiple VLAN Registration protocol (for 802.1ad bridges, using ether-type=0x88a8);": {
+    "key": "text",
+    "color": "#333333",
+    "count": 2
+   },
+   "(for 802.1ad bridges, using ether-type=0x88a8)": {
+    "key": "text",
+    "color": "#333333",
+    "count": 2
+   },
+   "01:80:C2:00:00:0E - Link Layer Discovery Protocol, Multi-chassis Link Aggregation Group and Precision Time Protocol;": {
+    "key": "text",
+    "color": "#333333",
+    "count": 2
+   },
+   "permanent": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 2
+   },
+   "temporary-query": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 2
+   },
+   "no": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 2
+   },
+   "no-discover": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 2
+   },
+   "yes": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 2
+   },
+   "yes-discover": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "auto": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 2
+   },
+   "ap-bridge": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "bridge": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "wds-slave": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "disabled-port": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "root-port": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "alternative-port": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "designated-port": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "backup-port": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "in-bridge": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "inactive": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "jump-target": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "passthrough": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   }
+  },
+  "bridging-and-switching/macvlan": {
+   "disabled": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "enabled": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "local-proxy-arp": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "the router performs proxy ARP on the interface and sends replies to the same interface": {
+    "key": "text",
+    "color": "#333333",
+    "count": 1
+   },
+   "proxy-arp": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "the router performs proxy ARP on the interface and sends replies to other interfaces": {
+    "key": "text",
+    "color": "#333333",
+    "count": 1
+   },
+   "reply-only": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "no": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "yes": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "private": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "bridge": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   }
+  },
+  "bridging-and-switching/marvell-prestera-switch-chip-features": {
+   "Timing and synchronization for Audio Video Bridging (AVB) and Time-Sensitive Networking (TSN).": {
+    "key": "text",
+    "color": "#172b4d",
+    "count": 1
+   }
+  },
+  "bridging-and-switching/user-guides/bridge-igmp-mld-snooping": {
+   "disabled": {
+    "key": "icon-success",
+    "color": "#22A06B",
+    "count": 2
+   },
+   "permanent": {
+    "key": "icon-success",
+    "color": "#22A06B",
+    "count": 2
+   },
+   "temporary-query": {
+    "key": "icon-success",
+    "color": "#22A06B",
+    "count": 2
+   }
+  },
+  "bridging-and-switching/vlan": {
+   "disabled": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "enabled": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "local-proxy-arp": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "the router performs proxy ARP on the interface and sends replies to the same interface": {
+    "key": "text",
+    "color": "#333333",
+    "count": 1
+   },
+   "proxy-arp": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "the router performs proxy ARP on the interface and sends replies to other interfaces": {
+    "key": "text",
+    "color": "#333333",
+    "count": 1
+   },
+   "reply-only": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "no": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "yes": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   }
+  },
+  "bridging-and-switching/vxlan": {
+   "disabled": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 3
+   },
+   "enabled": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 3
+   },
+   "local-proxy-arp": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "the router performs proxy ARP on the interface and sends replies to the same interface": {
+    "key": "text",
+    "color": "#333333",
+    "count": 1
+   },
+   "proxy-arp": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "the router performs proxy ARP on the interface and sends replies to other interfaces": {
+    "key": "text",
+    "color": "#333333",
+    "count": 1
+   },
+   "reply-only": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "no": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 2
+   },
+   "yes": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 2
+   },
+   "auto": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "inherit": {
+    "key": "background-accent-green-bolder",
+    "color": "#1f845a",
+    "count": 2
+   }
+  },
+  "wired-connections/ethernet": {
+   "disabled": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "enabled": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "local-proxy-arp": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "proxy-arp": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "reply-only": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "no": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "yes": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "auto": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "off": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 2
+   },
+   "fec74": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   },
+   "fec91": {
+    "key": "icon-success",
+    "color": "#22a06b",
+    "count": 1
+   }
+  }
+ }
+}

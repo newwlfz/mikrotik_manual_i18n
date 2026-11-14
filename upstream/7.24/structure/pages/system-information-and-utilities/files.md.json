@@ -1,0 +1,86 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "system-information-and-utilities/files.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/files.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/files",
+  "md_sha256": "6db2a495729e11676e28950a4f6a43c7bd4f3f4a9b01f123cf696f176c8a178a",
+  "html_sha256": "964c8e6c9d760d99c178e38be698d6a03d8a1c547928d1fcb3de39d3934e4327",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 0,
+          "html": "<strong>creation-time</strong> (<em>time</em>) <br/><br/><strong>Warning:</strong> Until RouterOS 7.16 <br/>"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "A time when the file was created <br/>"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "The time when the file was created or last modified. Introduced instead of <strong>creation-time</strong> in RouterOS 7.16. <br/>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

@@ -1,0 +1,11 @@
+{
+  "position": 23,
+  "label": "Resource",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/resource/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/resource"
+}

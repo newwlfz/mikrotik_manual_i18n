@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/user/ssh-keys/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/user/ssh-keys.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/user/ssh-keys/",
+  "md_sha256": "ae461d5d0edd12f683be98bc47e173f116793862ee1a0830a49dd6b78de37be1",
+  "html_sha256": "be893a433dce87ebd1fc5ebdedcb5a8368839a59c3564cbebed188d2515c159d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

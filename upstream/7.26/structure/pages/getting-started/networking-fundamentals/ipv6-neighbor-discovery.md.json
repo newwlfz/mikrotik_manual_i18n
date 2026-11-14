@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "getting-started/networking-fundamentals/ipv6-neighbor-discovery.md",
+  "source_url": "https://manual.mikrotik.com/docs/getting-started/networking-fundamentals/ipv6-neighbor-discovery.md",
+  "html_url": "https://manual.mikrotik.com/docs/getting-started/networking-fundamentals/ipv6-neighbor-discovery",
+  "md_sha256": "683f33e917d7443c67a33de7891c4f0321523224f3ddbeffb1a7ac273ac07325",
+  "html_sha256": "e55130a3f0f31158de499d5477a1cdff6816a9f070f68b9e62dc375bcc8026ec",
+  "body": {
+    "html": {
+      "lists": 9,
+      "listItems": 24,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 20,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 24,
+      "listItems": 24,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 24,
+      "listItems": 24,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

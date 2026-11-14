@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/routerboard/usb/power-reset.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/routerboard/usb/power-reset.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/routerboard/usb/power-reset",
+  "md_sha256": "1816c4625937421a10ccb19ea881a7a42e6c125b100ccf65c3d3fbfb7c8d8ca1",
+  "html_sha256": "0b03d21a17cd99a07dd1ea49928bd6af6015d57e7c67c080a165b771fd0ce017",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

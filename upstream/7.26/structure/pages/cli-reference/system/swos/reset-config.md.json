@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/swos/reset-config.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/swos/reset-config.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/swos/reset-config",
+  "md_sha256": "d7aac671acb25cd35b5a0156a4a95fd592b6e952a264340ad7955c536cd425c8",
+  "html_sha256": "860d18d6d459f28b0c3c069a211f628779e30b5db2787f856ecbb57534765eb2",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

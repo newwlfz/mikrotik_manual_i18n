@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ipv6/firewall/filter/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ipv6/firewall/filter.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ipv6/firewall/filter/",
+  "md_sha256": "587fc9d565fea6a81f3773df262cc9dda8d9c6fc52794a92dde61020b7efc68a",
+  "html_sha256": "189d2dd1f155b3ed970f2932400c1f098af0e6c7bbcc411d5b3152aae2a802b2",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 23,
+      "listItems": 23,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 23,
+      "listItems": 23,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

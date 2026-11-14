@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/certificate/import.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/certificate/import.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/certificate/import",
+  "md_sha256": "22bca86e5974b9dce16a0e7a14a66d53ffc8d005bcd4f59ce782d9a8093ed15d",
+  "html_sha256": "0e13604d0918e04a6a119eaafc1d56af4f0469570dd428a20ee105f5b302aa39",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

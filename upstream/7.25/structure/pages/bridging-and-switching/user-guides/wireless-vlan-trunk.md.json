@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "bridging-and-switching/user-guides/wireless-vlan-trunk.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/user-guides/wireless-vlan-trunk.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/user-guides/wireless-vlan-trunk",
+  "md_sha256": "bdb5ea5409d04f983db3d871fe158537c581e80795f086d2d6ad62810867b915",
+  "html_sha256": "e550200cf5cb99826c5c5d07d6e6fe648322111101c80143533e865b59cc9b0b",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 5,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

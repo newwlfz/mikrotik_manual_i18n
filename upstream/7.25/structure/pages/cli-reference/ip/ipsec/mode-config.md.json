@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/ipsec/mode-config.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/ipsec/mode-config.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/ipsec/mode-config",
+  "md_sha256": "072f566e123bdc281163dd0d883a471314f085554efba1f8d5c6fbacd463ca2b",
+  "html_sha256": "7ffc67e47ee47f4fae945336d297a36fba345302f238914f0bc1e968b33e156e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

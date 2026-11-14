@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/ipsec/identity.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/ipsec/identity.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/ipsec/identity",
+  "md_sha256": "5db748cdd3a6fbcb727917d595c070fe94061841fd987ae4d4fe87b53970fdc3",
+  "html_sha256": "d49cf73bd4018265d8697a690b21d24d0a46eba6f84ef69cd107c6643dc2d793",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 29,
+      "listItems": 29,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 29,
+      "listItems": 29,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

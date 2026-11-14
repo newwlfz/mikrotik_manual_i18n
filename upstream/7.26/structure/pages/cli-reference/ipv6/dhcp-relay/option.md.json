@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ipv6/dhcp-relay/option.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ipv6/dhcp-relay/option.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ipv6/dhcp-relay/option",
+  "md_sha256": "ad4c8966bb91777dd89e6226e310eccad8329018469e0aef8f91819b1765c6b4",
+  "html_sha256": "3aebe2e2bc609359aafc19f8a78418197a32c2947a49bd02e5557e758ffc4232",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

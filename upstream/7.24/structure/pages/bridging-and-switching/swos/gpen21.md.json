@@ -1,0 +1,208 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "bridging-and-switching/swos/gpen21.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/swos/gpen21.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/swos/gpen21",
+  "md_sha256": "6027b78e80eadc10248a9f29af81e86e67df1658f86028d7afc3b78a32fb378c",
+  "html_sha256": "6374a9cec7ca8a2b483aad7da95096117ef3f1b26a92cc02e0711ac91ec5b7ea",
+  "body": {
+    "html": {
+      "lists": 9,
+      "listItems": 32,
+      "br": 0,
+      "details": 0,
+      "tables": 11,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 31,
+      "listItems": 31,
+      "br": 0,
+      "details": 0,
+      "tables": 11,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 31,
+      "listItems": 31,
+      "br": 0,
+      "details": 0,
+      "tables": 11,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "listItems": [
+        32,
+        31
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Full non-blocking wirespeed switching<br/>Up to 2k MAC entries in the Host table ¹<br/>Forwarding Database works based only on SVL<br/>Jumbo frame support - 10222 bytes"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "SNMP<br/>Link fault detection<br/>SFP diagnostics<br/>Interface statistics"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Fully compatible with IEEE802.1Q<br/>Port-based VLAN<br/>Up to 250 VLAN entries (limited by SwOS)<br/>VLAN filtering"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "Port Lock<br/>Broadcast Storm Control"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Ingress traffic limiting<br/>Egress traffic limiting"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Ingress ACL tables<br/>Up to 32 ACL rules (limited by SwOS)<br/>Classification based on ports, L2, L3, L4 protocol header fields<br/>ACL actions include filtering, forwarding, and modifying the protocol header fields"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 16,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Specify which address acquisition method to use:<br/><code>DHCP with fallback</code> - device is trying to request an IPv4 address from a DHCP server. If the requests are unsuccessful, then the device can be accessed using a <strong>Static IP Address</strong> value<br/><code>static</code> - address is set as a <strong>Static IP Address</strong> value (IPv4 only)<br/><code>DHCP only</code> - device uses DHCPv4 client to acquire address"
+        },
+        {
+          "row": 14,
+          "col": 1,
+          "html": "Specifies PoE-Out state:<br/><code>auto-on</code> - the board will attempt to detect if power can be applied to the port. For power-on to happen there should be resistance on spare pairs in the range from 3kΩ to 26.5kΩ<br/><code>forced-on</code> - detection range is removed. As a result power over Ethernet will be always on<br/><code>off</code> - all detection and power is turned off for this port"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "<code>Port Lock</code> - Enables or disables MAC address learning on this port. When the option is enabled, it will restrict MAC address learning and static MAC addresses should be configured. Any received frames with an unknown source MAC address will be dropped.<br/><code>Lock On First</code> - Allows learning of the source MAC address from the first received frame; this property should be used together with <code>Port Lock</code>. Learning of the first MAC address will reset every time an interface status changes."
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "<code>Storm Rate</code> - Limit the number of broadcast packets transmitted by an interface. The rate is measured in bits per second (bps).<br/><code>Limit Unknown Unicast</code> - Include unicast packets without an entry in the host table in <code>Storm Rate</code> limitation."
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "<code>Ingress Rate</code> - Limit traffic entering this port (bps)<br/><code>Egress Rate</code> - Limit traffic leaving this port (bps)"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "VLAN filtering mode; these options are relevant to egress ports (except for strict mode).<br/><code>disabled</code> - VLAN table is not used. The device discards packets with a VLAN tag on egress ports. If the packet has a VLAN tag and the VLAN ID matches <code>Default VLAN ID</code> on egress ports, then with <code>VLAN Receive=any</code> the device will remove the VLAN tag and forward the packet.<br/><code>optional</code> - Disabled VLAN filtering. Handle packets with VLAN tag ID that is not present in the VLAN table just like packets without VLAN tag.<br/><code>strict</code> - Enabled VLAN filtering with additional ingress filtering, which checks if the ingress port is a member of the received VLAN ID in the VLAN table. Received packets on the ingress port with a VLAN ID that does not match with the VLAN table will be dropped. Default VLAN ID must be specified for access ports since it will be used to tag ingress traffic and untag egress traffic for a certain port."
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Received traffic filtering based on VLAN tag presence.<br/><code>any</code> - allows tagged and untagged packets on a certain port<br/><code>only tagged</code> - allows only packets with a VLAN tag. The \"Default VLAN ID\" will not work, because it only applies for untagged traffic<br/><code>only untagged</code> - allows only packets without a VLAN tag"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 8,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 9,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 10,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

@@ -1,0 +1,26 @@
+---
+sidebar_key: "cli-reference/iot/bluetooth/connections/read"
+sidebar_position: 5
+title: "read"
+sidebar_label: 'read'
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/bluetooth/connections/read
+captured_at: '2026-11-01T21:23:35+08:00'
+---
+
+-----------
+
+## iot/bluetooth/connections/read 
+**Package:** iot
+**Type:** Command
+
+<ArgTable c1="Argument" c2="Type" c3="Description">
+<ArgTableRow arg="uuid" typ="enum ()"></ArgTableRow>
+<ArgTableRow arg="pdev" typ="enum ()"></ArgTableRow>
+</ArgTable>
+
+<ArgTable c1="Read-only Argument" c2="Type" c3="Description">
+<ArgTableRow arg="value" typ="string"></ArgTableRow>
+<ArgTableRow arg="hex" typ="string"></ArgTableRow>
+<ArgTableRow arg="bytes" typ="multi { array-id, value: num
+ }"></ArgTableRow>
+</ArgTable>

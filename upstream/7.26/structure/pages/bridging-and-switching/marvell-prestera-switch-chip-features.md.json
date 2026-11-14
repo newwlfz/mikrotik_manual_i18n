@@ -1,0 +1,317 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "bridging-and-switching/marvell-prestera-switch-chip-features.md",
+  "source_url": "https://manual.mikrotik.com/docs/bridging-and-switching/marvell-prestera-switch-chip-features.md",
+  "html_url": "https://manual.mikrotik.com/docs/bridging-and-switching/marvell-prestera-switch-chip-features",
+  "md_sha256": "602daaa8e3550f7cb3cb97b98c5cbce7c1cdd038c7d5a2c3e411476871aad39c",
+  "html_sha256": "ac03600f97148d5b4a03a8e58838c9273195b13575eea44c0e2a28bc84355da6",
+  "body": {
+    "html": {
+      "lists": 13,
+      "listItems": 52,
+      "br": 1,
+      "details": 0,
+      "tables": 9,
+      "sup": 0,
+      "code": 96,
+      "wideTables": 2
+    },
+    "md": {
+      "lists": 52,
+      "listItems": 52,
+      "br": 0,
+      "details": 0,
+      "tables": 9,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 2
+    },
+    "local": {
+      "lists": 52,
+      "listItems": 52,
+      "br": 0,
+      "details": 0,
+      "tables": 9,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 2
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "<ul class=\"bullets\"><li>Configurable ports for switching or routing</li><li>Full non-blocking wire-speed switching</li><li>Large Unicast FDB for Layer 2 unicast forwarding</li><li>Forwarding Databases work based on IVL</li><li>Jumbo frame support</li><li>IGMP/MLD Snooping support</li><li>DHCP Snooping support with custom Option 82 (Circuit ID, Remote ID)</li><li>DHCPv6 Snooping support with custom Option 18 (Interface ID) and Option 37 (Remote ID)</li><li>RA Guard support</li></ul>"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "<ul><li>Layer 3 Hardware Offloading:<ul><li>IPv4, IPv6 Unicast Routing</li><li>Supported on Ethernet, Bridge, Bonding, and VLAN interfaces</li><li>ECMP</li><li>Blackholes</li><li>Offloaded Fasttrack connections <sup>1</sup></li><li>Offloaded NAT for Fasttrack connections <sup>1</sup></li><li>Hardware-offloaded VRF <sup>1</sup></li><li>VRRP <sup>1</sup></li><li>Multiple MTU profiles</li></ul></li></ul><br/><strong>Important:</strong> 1. Applies only to <a href=\"/docs/bridging-and-switching/l3-hardware-offloading#l3hw-device-support\">certain switch models</a><br/>"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "<ul class=\"bullets\"><li>STP</li><li>RSTP</li><li>MSTP</li><li>Edge port, BPDU Guard, Root Guard</li></ul>"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "<ul class=\"bullets\"><li>Various types of mirroring:<ul class=\"bullets\"><li>Port based mirroring</li><li>VLAN based mirroring</li><li>MAC based mirroring</li><li>Remote Switch Port Analyzer (RSPAN)</li></ul></li></ul>"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "<ul class=\"bullets\"><li>Fully compatible with IEEE802.1Q and IEEE802.1ad VLAN</li><li>4k active VLANs</li><li>Flexible VLAN assignment:<ul class=\"bullets\"><li>Port based VLAN</li><li>Protocol based VLAN</li><li>MAC based VLAN</li></ul></li><li>VLAN filtering</li><li>Ingress VLAN translation</li><li>Multiple VLAN Registration protocol (MVRP)</li></ul>"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "<ul class=\"bullets\"><li>Supports 802.3ad (LACP), balance-xor and active-backup modes</li><li>Up to 8 member ports per bonding interface</li><li>Hardware automatic failover and load balancing</li><li>MLAG</li></ul>"
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "<ul class=\"bullets\"><li>Eight output queues per port</li><li>DSCP and 802.1p PCP mapping</li><li>Port based Layer2 and Layer3 trust settings</li><li>Port and Queue based egress rate limiter</li><li>Policy based QoS via ACL rules</li><li>Strict Priority (SP) and Shaped Deficit Weighted Round Robin (SDWRR) queuing</li><li>Enhanced Transmission Selection (ETS) scheduling</li><li>Weighted Random Early Detection (WRED) <sup>1</sup></li><li>Explicit Congestion Notification (ECN) <sup>1</sup></li><li>Priority-based Flow Control (PFC) <sup>1</sup></li><li>Resource allocation control (queue, shared-pool and multicast based) with extensive monitoring capabilities</li><li>Compatible with Dante environments</li><li>Compatible with RDMA over Converged Ethernet (RoCE) environment <sup>1</sup></li><li>Ingress traffic limiting (port based or via ACL rules)</li><li>Traffic storm control</li></ul><br/><strong>Important:</strong> 1. Applies only to <a href=\"/docs/bridging-and-switching/quality-of-service#qos-device-support\">certain switch models</a><br/>"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "<ul class=\"bullets\"><li>Applicable for Private VLAN implementation</li></ul>"
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "html": "<ul class=\"bullets\"><li>Ingress ACL tables</li><li>Classification based on ports, L2, L3, L4 protocol header fields</li><li>ACL actions include filtering, forwarding and modifying of the protocol header fields</li></ul>"
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "html": "<ul class=\"alternate\"><li>Two-step Ordinary Clock and Boundary Clock.</li><li>Hardware timestamping, ensuring clock synchronization in the nanosecond(ns) range.</li><li>IPv4 and Layer 2 (L2) multicast transport modes.</li><li>End-to-End (E2E) and Peer-to-Peer (P2P) delay mechanisms.</li><li>IEEE 1588-2008 (PTPv2).</li><li>Profile Support for:<ul><li>802.1AS: Timing and synchronization for Audio Video Bridging (AVB) and Time-Sensitive Networking (TSN).</li><li>AES67: High-performance audio-over-IP interoperability.</li><li>G.8275.1: Frequency and phase synchronization in PTP-aware networks.</li><li>SMPTE: Audio/video synchronization in professional broadcast environments.</li></ul></li></ul><br/><strong>Important:</strong> PTP support is hardware-dependent, please refer to the list of <a href=\"/docs/system-information-and-utilities/precision-time-protocol#supported-devices\">supported devices.</a><br/>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 30,
+      "cols": 9,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": [
+        {
+          "row": 2,
+          "col": 4,
+          "html": "16x 10/100M Ethernet <br/> 2x 1G SFP"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "html": "16x 10/100/1000M Ethernet <br/> 2x 10G SFP+"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "html": "1x 10/100/1000M Ethernet <br/> 5x 1G SFP <br/> 4x 10G SFP+"
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "html": "8x 2.5G Ethernet <br/> 2x 10G SFP+"
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "html": "16x 10/100/1000M Ethernet <br/> 4x 10G SFP+"
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "html": "8x 802.3af/at <br/> 8x 802.3bt"
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "html": "24x 10/100/1000M Ethernet <br/> 2x 10G SFP+"
+        },
+        {
+          "row": 9,
+          "col": 4,
+          "html": "24x 10/100/1000M Ethernet <br/> 4x 10G SFP+"
+        },
+        {
+          "row": 10,
+          "col": 4,
+          "html": "20x 1G SFP <br/> 4x 1G combo <br/> 4x 10G SFP+"
+        },
+        {
+          "row": 11,
+          "col": 4,
+          "html": "1x 10/100/1000M Ethernet <br/> 4x 10G SFP+"
+        },
+        {
+          "row": 12,
+          "col": 4,
+          "html": "1x 10/100/1000M Ethernet <br/> 4x 10G SFP+"
+        },
+        {
+          "row": 13,
+          "col": 4,
+          "html": "1x 10/100/1000M Ethernet <br/> 8x 10G SFP+"
+        },
+        {
+          "row": 14,
+          "col": 4,
+          "html": "1x 10/100/1000M Ethernet <br/> 16x 10G SFP+"
+        },
+        {
+          "row": 15,
+          "col": 4,
+          "html": "4x 10G combo <br/> 8x 1/2.5/5/10G Ethernet"
+        },
+        {
+          "row": 16,
+          "col": 4,
+          "html": "24x 10G SFP+ <br/> 2x 40G QSFP+"
+        },
+        {
+          "row": 17,
+          "col": 4,
+          "html": "4x 2.5G Ethernet/10G SFP+ combo <br/> 20x 2.5G Ethernet <br/> 2x 40G QSFP+"
+        },
+        {
+          "row": 18,
+          "col": 4,
+          "html": "48x 10/100/1000M Ethernet <br/> 4x 10G SFP+ <br/> 2x 40G QSFP+"
+        },
+        {
+          "row": 19,
+          "col": 4,
+          "html": "48x 10/100/1000M Ethernet <br/> 4x 10G SFP+ <br/> 2x 40G QSFP+"
+        },
+        {
+          "row": 20,
+          "col": 0,
+          "html": "<strong>CRS418-8P-8G-2S+RM</strong><br/><strong>CRS418-8P-8G-2S+5axQ2axQ-RM</strong>"
+        },
+        {
+          "row": 20,
+          "col": 4,
+          "html": "16x 10/100/1000M Ethernet <br/> 2x 10G SFP+"
+        },
+        {
+          "row": 22,
+          "col": 4,
+          "html": "8x 25G SFP28 <br/> 2x 100G QSFP28"
+        },
+        {
+          "row": 23,
+          "col": 4,
+          "html": "16x 25G SFP28 <br/> 2x 100G QSFP28"
+        },
+        {
+          "row": 24,
+          "col": 4,
+          "html": "4x 25G SFP28 <br/> 16x 100G QSFP28"
+        },
+        {
+          "row": 25,
+          "col": 4,
+          "html": "8x 50G SFP56 <br/> 2x 200G QSFP56 <br/> 2x 400G QSFP56-DD"
+        },
+        {
+          "row": 27,
+          "col": 4,
+          "html": "12x 10/100/1000M Ethernet <br/> 4x 10G SFP+"
+        },
+        {
+          "row": 28,
+          "col": 4,
+          "html": "12x 25G SFP28 <br/> 2x 100G QSFP28"
+        },
+        {
+          "row": 29,
+          "col": 4,
+          "html": "2x 1/2.5/5/10G Ethernet <br/> 4x 10G SFP+ <br/> 4x 25G SFP28 <br/> 2x 100G QSFP28"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 28,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 11,
+          "col": 1,
+          "html": "Changes the destination port to the specified value: <br/><ul><li>If the setting is left empty (e.g. <code>new-dst-ports=\"\"</code>), the packet will be dropped;</li><li>If a port or <a href=\"/docs/bridging-and-switching/marvell-prestera-switch-chip-features/marvell-prestera-switch-chip-features\" rel=\"nofollow\"> hardware-offloaded bonding </a>interface is specified, the packet will be redirected to that port. Only a single port or bond interface is supported;</li><li>if you use the <code>all</code> argument, packet will be allowed to pass through to the egress processing without being dropped;</li><li>If this parameter is not used, the packet will be accepted as is.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Changes address acquisition method: dhcp-only - uses only a DHCP client to acquire an address <br/> dhcp-with-fallback - for the first 10 seconds, it will try to acquire an address using a DHCP client. If the request is unsuccessful, then the address falls back to static as defined by the static-ip-address property <br/> static - the address is set as defined by the static-ip-address property"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

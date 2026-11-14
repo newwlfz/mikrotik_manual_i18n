@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/tool/sms/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/sms.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/sms/",
+  "md_sha256": "9fab4571ce38b11bca2d598b7363ff83d2fc1cd89366e1cb9439cc32e5f51bef",
+  "html_sha256": "446470776dcfb3b18d38b9690f4e95b3f0d8a1c644a62e4c2a10aec5cd7818b8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "Hardware",
+  "collapsible": true,
+  "collapsed": true,
+  "key": "hardware",
+  "link": {
+    "type": "doc",
+    "id": "hardware/index"
+  }
+}

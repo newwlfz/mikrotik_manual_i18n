@@ -1,0 +1,2847 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "internet-of-things/lora/user-guides/tg-lr-setup-guide.md",
+  "source_url": "https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides/tg-lr-setup-guide.md",
+  "html_url": "https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides/tg-lr-setup-guide",
+  "md_sha256": "ba29c360d133cf8c550bdb4811cdbcc931431be5dc05309309a15f92a0add090",
+  "html_sha256": "b7cd99cdfe854b29242f8e120d34ebc0e3dd49cdcce6befa0a39217488e038b3",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 54,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 18,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 16,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 18,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 16,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        0,
+        998
+      ],
+      "tables": [
+        54,
+        16
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 3,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 3,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 3,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 10,
+      "cols": 5,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 7,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 8,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 7,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 8,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 9,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 10,
+      "rows": 15,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 11,
+      "rows": 5,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 5
+      },
+      "rebuild_header": [
+        "<strong>app set-mode &lt;mode&gt;</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Set device operating mode"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "mode",
+          "0",
+          "<a href=\"#shutdown\">SHUTDOWN</a>"
+        ],
+        [
+          "",
+          "1",
+          "<a href=\"#run\">RUN</a>"
+        ]
+      ]
+    },
+    {
+      "index": 12,
+      "rows": 6,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 6
+      },
+      "rebuild_header": [
+        "<strong>app profile &lt;profile-num&gt;,&lt;make-default&gt;</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Switch active profile and optionally make default"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "profile-num",
+          "0..5",
+          ""
+        ],
+        [
+          "make-default",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ]
+      ]
+    },
+    {
+      "index": 13,
+      "rows": 5,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 5
+      },
+      "rebuild_header": [
+        "<strong>app reset &lt;type&gt;</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "System reset"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "type",
+          "0",
+          "board"
+        ],
+        [
+          "",
+          "1",
+          "app only"
+        ]
+      ]
+    },
+    {
+      "index": 14,
+      "rows": 6,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 6
+      },
+      "rebuild_header": [
+        "<strong>app factory-reset &lt;key&gt;,[&lt;fw-def&gt;],&lt;delay-ms&gt;</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Reboot device, clear saved configuration and set to defaults (optional)"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "key",
+          "984651411",
+          ""
+        ],
+        [
+          "fw-def",
+          "784565141",
+          "don’t apply default configuration"
+        ],
+        [
+          "delay-ms",
+          "0..65535",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 15,
+      "rows": 5,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 5
+      },
+      "rebuild_header": [
+        "<strong>app led [&lt;enable&gt;]</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Configure application LED signals"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "enable",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ]
+      ]
+    },
+    {
+      "index": 16,
+      "rows": 5,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 5
+      },
+      "rebuild_header": [
+        "<strong>app set-time [&lt;unix-time-s&gt;],&lt;uptime-s&gt;</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Set UNIX time relative to device uptime"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "unix-time-s",
+          "0..4294967295",
+          ""
+        ],
+        [
+          "uptime-s",
+          "0..4294967295",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 17,
+      "rows": 11,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 11
+      },
+      "rebuild_header": [
+        "<strong>lora set-region &lt;region-code&gt;</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Set LoRaWAN region for sub GHz band"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "region-code",
+          "1",
+          "EU868"
+        ],
+        [
+          "",
+          "2",
+          "AS923-1"
+        ],
+        [
+          "",
+          "3",
+          "US915"
+        ],
+        [
+          "",
+          "4",
+          "AU915"
+        ],
+        [
+          "",
+          "7",
+          "AS923-2"
+        ],
+        [
+          "",
+          "8",
+          "AS923-3"
+        ],
+        [
+          "",
+          "9",
+          "IN868"
+        ],
+        [
+          "",
+          "10",
+          "KR920"
+        ]
+      ]
+    },
+    {
+      "index": 18,
+      "rows": 5,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 5
+      },
+      "rebuild_header": [
+        "<strong>lora primary-band &lt;band&gt;</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Select primary band"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "band",
+          "1",
+          "&lt;1GHz"
+        ],
+        [
+          "",
+          "2",
+          "2.45GHz"
+        ]
+      ]
+    },
+    {
+      "index": 19,
+      "rows": 5,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 5
+      },
+      "rebuild_header": [
+        "<strong>lora second-band &lt;mode&gt;</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Enable or disable secondary band"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "mode",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1",
+          "on"
+        ]
+      ]
+    },
+    {
+      "index": 20,
+      "rows": 8,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 8
+      },
+      "rebuild_header": [
+        "<strong>lora join-cfg &lt;band&gt;,&lt;duty&gt;</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Configure join duty cycle for band"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "band",
+          "1",
+          "&lt;1GHz"
+        ],
+        [
+          "",
+          "2",
+          "2.45GHz"
+        ],
+        [
+          "duty",
+          "0",
+          "0.1%"
+        ],
+        [
+          "",
+          "1..254",
+          ""
+        ],
+        [
+          "",
+          "255",
+          "1%"
+        ]
+      ]
+    },
+    {
+      "index": 21,
+      "rows": 7,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 7
+      },
+      "rebuild_header": [
+        "<strong>lora link-chk &lt;band&gt;,&lt;int-minutes&gt;</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Set band specific link check interval and timeout"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "band",
+          "1",
+          "&lt;1GHz"
+        ],
+        [
+          "",
+          "2",
+          "2.45GHz"
+        ],
+        [
+          "int-minutes",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "5..500000",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 22,
+      "rows": 6,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 6
+      },
+      "rebuild_header": [
+        "<strong>lora adr-cfg &lt;en-netw-adr&gt;,[&lt;fixed-data-rate&gt;]</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Enable network ADR or configure fixed data rate"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "en-netw-adr",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1",
+          "on"
+        ],
+        [
+          "fixed-data-rate",
+          "0..6",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 23,
+      "rows": 10,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 10
+      },
+      "rebuild_header": [
+        "<strong>lora clk-sync [&lt;int-minutes&gt;],[&lt;leap-sec&gt;],&lt;sync-now&gt;,[&lt;retry-s&gt;],[&lt;retry-cnt&gt;]</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Absolute time synchronization"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "int-minutes",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1..65535",
+          ""
+        ],
+        [
+          "leap-sec",
+          "-128..127",
+          ""
+        ],
+        [
+          "sync-now",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ],
+        [
+          "retry-s",
+          "0..255",
+          ""
+        ],
+        [
+          "retry-cnt",
+          "0..255",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 24,
+      "rows": 13,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 13
+      },
+      "rebuild_header": [
+        "<strong>lora cfg-class-b [&lt;auto-en&gt;],[&lt;ping-slot-int-s&gt;]</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Configure LoRaWAN Class B"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "auto-en",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1",
+          "on"
+        ],
+        [
+          "ping-slot-int-s",
+          "1",
+          ""
+        ],
+        [
+          "",
+          "2",
+          ""
+        ],
+        [
+          "",
+          "4",
+          ""
+        ],
+        [
+          "",
+          "8",
+          ""
+        ],
+        [
+          "",
+          "16",
+          ""
+        ],
+        [
+          "",
+          "32",
+          ""
+        ],
+        [
+          "",
+          "64",
+          ""
+        ],
+        [
+          "",
+          "128",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 25,
+      "rows": 5,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 5
+      },
+      "rebuild_header": [
+        "<strong>lora class &lt;class&gt;</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Switch LoRaWAN class"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "class",
+          "0",
+          "A"
+        ],
+        [
+          "",
+          "1",
+          "B"
+        ]
+      ]
+    },
+    {
+      "index": 26,
+      "rows": 12,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 12
+      },
+      "rebuild_header": [
+        "<strong>lora join-eui &lt;cred-ch-key&gt;,&lt;eui-0&gt;,&lt;eui-1&gt;,&lt;eui-2&gt;,&lt;eui-3&gt;,&lt;eui-4&gt;,&lt;eui-5&gt;,&lt;eui-6&gt;,&lt;eui-7&gt;</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Override network JoinEUI"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "cred-ch-key",
+          "87904163",
+          ""
+        ],
+        [
+          "eui-0",
+          "0..255",
+          ""
+        ],
+        [
+          "eui-1",
+          "0..255",
+          ""
+        ],
+        [
+          "eui-2",
+          "0..255",
+          ""
+        ],
+        [
+          "eui-3",
+          "0..255",
+          ""
+        ],
+        [
+          "eui-4",
+          "0..255",
+          ""
+        ],
+        [
+          "eui-5",
+          "0..255",
+          ""
+        ],
+        [
+          "eui-6",
+          "0..255",
+          ""
+        ],
+        [
+          "eui-7",
+          "0..255",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 27,
+      "rows": 20,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 20
+      },
+      "rebuild_header": [
+        "<strong>lora net-key &lt;cred-ch-key&gt;,&lt;key-0&gt;,&lt;key-1&gt;,&lt;key-2&gt;,&lt;key-3&gt;,&lt;key-4&gt;,&lt;key-5&gt;,&lt;key-6&gt;,&lt;key-7&gt;,&lt;key-8&gt;,&lt;key-9&gt;,&lt;key-10&gt;, &lt;key-11&gt;,&lt;key-12&gt;,&lt;key-13&gt;,&lt;key-14&gt;,&lt;key-15&gt;</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Override network AppKey"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "cred-ch-key",
+          "87904163",
+          ""
+        ],
+        [
+          "key-0",
+          "0..255",
+          ""
+        ],
+        [
+          "key-1",
+          "0..255",
+          ""
+        ],
+        [
+          "key-2",
+          "0..255",
+          ""
+        ],
+        [
+          "key-3",
+          "0..255",
+          ""
+        ],
+        [
+          "key-4",
+          "0..255",
+          ""
+        ],
+        [
+          "key-5",
+          "0..255",
+          ""
+        ],
+        [
+          "key-6",
+          "0..255",
+          ""
+        ],
+        [
+          "key-7",
+          "0..255",
+          ""
+        ],
+        [
+          "key-8",
+          "0..255",
+          ""
+        ],
+        [
+          "key-9",
+          "0..255",
+          ""
+        ],
+        [
+          "key-10",
+          "0..255",
+          ""
+        ],
+        [
+          "key-11",
+          "0..255",
+          ""
+        ],
+        [
+          "key-12",
+          "0..255",
+          ""
+        ],
+        [
+          "key-13",
+          "0..255",
+          ""
+        ],
+        [
+          "key-14",
+          "0..255",
+          ""
+        ],
+        [
+          "key-15",
+          "0..255",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 28,
+      "rows": 7,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 7
+      },
+      "rebuild_header": [
+        "<strong>lora cred [&lt;confirm-timeout-s&gt;],[&lt;action&gt;]</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "User network credential management"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "confirm-timeout-s",
+          "60..65535",
+          "revert if not joined"
+        ],
+        [
+          "action",
+          "0",
+          "clear pending"
+        ],
+        [
+          "",
+          "1",
+          "try now"
+        ],
+        [
+          "",
+          "87904163",
+          "force confirm"
+        ]
+      ]
+    },
+    {
+      "index": 29,
+      "rows": 4,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 4
+      },
+      "rebuild_header": [
+        "<strong>frame send &lt;frame-id&gt;,…</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Schedule uplink frames"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "frame-id",
+          "<a href=\"#frame-type\">frame-type</a>",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 30,
+      "rows": 11,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 11
+      },
+      "rebuild_header": [
+        "<strong>frame set-cfg &lt;profile-mask&gt;,[&lt;ul-period-s&gt;],[&lt;confirmed&gt;],[&lt;on-join&gt;],&lt;frame-id&gt;,…</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Set uplink frame configuration"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "profile-mask",
+          "1..63",
+          "bitfield"
+        ],
+        [
+          "ul-period-s",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1..65535",
+          ""
+        ],
+        [
+          "confirmed",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ],
+        [
+          "on-join",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ],
+        [
+          "frame-id",
+          "<a href=\"#frame-type\">frame-type</a>",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 31,
+      "rows": 4,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 4
+      },
+      "rebuild_header": [
+        "<strong>frame clear-cfg &lt;profile-mask&gt;</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Clear all frame config for specified profiles (as if ‘set-cfg profile-mask,0,0,0,…’)"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "profile-mask",
+          "1..63",
+          "bitfield"
+        ]
+      ]
+    },
+    {
+      "index": 32,
+      "rows": 9,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 9
+      },
+      "rebuild_header": [
+        "<strong>mag cfg [&lt;pin-timeout&gt;],[&lt;pin-protect&gt;],[&lt;blink-mode&gt;]</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Set configuration"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "pin-timeout",
+          "0..65535",
+          ""
+        ],
+        [
+          "pin-protect",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1",
+          "on"
+        ],
+        [
+          "blink-mode",
+          "0",
+          "half duty"
+        ],
+        [
+          "",
+          "1",
+          "pulse"
+        ],
+        [
+          "",
+          "2",
+          "off"
+        ]
+      ]
+    },
+    {
+      "index": 33,
+      "rows": 6,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 6
+      },
+      "rebuild_header": [
+        "<strong>mag svc &lt;new-state&gt;,&lt;key&gt;</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Enable or disable magnet command interface"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "new-state",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1",
+          "on"
+        ],
+        [
+          "key",
+          "649864801",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 34,
+      "rows": 2,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 2
+      },
+      "rebuild_header": [
+        "<strong>data sample</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Force sensor polling"
+        ]
+      ]
+    },
+    {
+      "index": 35,
+      "rows": 4,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 4
+      },
+      "rebuild_header": [
+        "<strong>data next-epoch &lt;type&gt;</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Manually start next histogram epoch"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "type",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 36,
+      "rows": 18,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 18
+      },
+      "rebuild_header": [
+        "<strong>data poll-cfg &lt;profile-mask&gt;,[&lt;th-poll-int&gt;],[&lt;sync-period&gt;],[&lt;on-mag-switch&gt;],[&lt;on-activity-change&gt;],[&lt;on-impact&gt;], [&lt;on-free-fall&gt;],[&lt;on-ul-stale&gt;],[&lt;bat-poll-int&gt;]</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Set data polling configuration"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "profile-mask",
+          "1..63",
+          "bitfield"
+        ],
+        [
+          "th-poll-int",
+          "1..4294967295",
+          "temperature and humidity"
+        ],
+        [
+          "sync-period",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ],
+        [
+          "on-mag-switch",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ],
+        [
+          "on-activity-change",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ],
+        [
+          "on-impact",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ],
+        [
+          "on-free-fall",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ],
+        [
+          "on-ul-stale",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ],
+        [
+          "bat-poll-int",
+          "1..4294967295",
+          "battery voltage"
+        ]
+      ]
+    },
+    {
+      "index": 37,
+      "rows": 31,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 31
+      },
+      "rebuild_header": [
+        "<strong>data temp-histo-cfg &lt;profile-mask&gt;,[&lt;epoch-interval-s&gt;],[&lt;epoch-interval-cnt&gt;],[&lt;epoch-max-bin-cnt&gt;], [&lt;frame-on-new-epoch&gt;],[&lt;lim-divider&gt;],[&lt;bin-limit-0&gt;],[&lt;bin-limit-1&gt;],[&lt;bin-limit-2&gt;],[&lt;bin-limit-3&gt;],[&lt;bin-limit-4&gt;], [&lt;bin-limit-5&gt;],[&lt;bin-limit-6&gt;],[&lt;bin-limit-7&gt;],[&lt;bin-limit-8&gt;]</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Set temperature histogram configuration"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "profile-mask",
+          "1..63",
+          "bitfield"
+        ],
+        [
+          "epoch-interval-s",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1..4294967295",
+          ""
+        ],
+        [
+          "epoch-interval-cnt",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1..4294967295",
+          ""
+        ],
+        [
+          "epoch-max-bin-cnt",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1..4294967295",
+          ""
+        ],
+        [
+          "frame-on-new-epoch",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ],
+        [
+          "lim-divider",
+          "1..4294967295",
+          ""
+        ],
+        [
+          "bin-limit-0",
+          "-128..127",
+          "°C"
+        ],
+        [
+          "",
+          "%f",
+          ""
+        ],
+        [
+          "bin-limit-1",
+          "-128..127",
+          "°C"
+        ],
+        [
+          "",
+          "%f",
+          ""
+        ],
+        [
+          "bin-limit-2",
+          "-128..127",
+          "°C"
+        ],
+        [
+          "",
+          "%f",
+          ""
+        ],
+        [
+          "bin-limit-3",
+          "-128..127",
+          "°C"
+        ],
+        [
+          "",
+          "%f",
+          ""
+        ],
+        [
+          "bin-limit-4",
+          "-128..127",
+          "°C"
+        ],
+        [
+          "",
+          "%f",
+          ""
+        ],
+        [
+          "bin-limit-5",
+          "-128..127",
+          "°C"
+        ],
+        [
+          "",
+          "%f",
+          ""
+        ],
+        [
+          "bin-limit-6",
+          "-128..127",
+          "°C"
+        ],
+        [
+          "",
+          "%f",
+          ""
+        ],
+        [
+          "bin-limit-7",
+          "-128..127",
+          "°C"
+        ],
+        [
+          "",
+          "%f",
+          ""
+        ],
+        [
+          "bin-limit-8",
+          "-128..127",
+          "°C"
+        ],
+        [
+          "",
+          "%f",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 38,
+      "rows": 31,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 31
+      },
+      "rebuild_header": [
+        "<strong>data humid-histo-cfg &lt;profile-mask&gt;,[&lt;epoch-interval-s&gt;],[&lt;epoch-interval-cnt&gt;],[&lt;epoch-max-bin-cnt&gt;], [&lt;frame-on-new-epoch&gt;],[&lt;lim-divider&gt;],[&lt;bin-limit-0&gt;],[&lt;bin-limit-1&gt;],[&lt;bin-limit-2&gt;],[&lt;bin-limit-3&gt;],[&lt;bin-limit-4&gt;], [&lt;bin-limit-5&gt;],[&lt;bin-limit-6&gt;],[&lt;bin-limit-7&gt;],[&lt;bin-limit-8&gt;]</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Set humidity histogram configuration"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "profile-mask",
+          "1..63",
+          "bitfield"
+        ],
+        [
+          "epoch-interval-s",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1..4294967295",
+          ""
+        ],
+        [
+          "epoch-interval-cnt",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1..4294967295",
+          ""
+        ],
+        [
+          "epoch-max-bin-cnt",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1..4294967295",
+          ""
+        ],
+        [
+          "frame-on-new-epoch",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ],
+        [
+          "lim-divider",
+          "1..4294967295",
+          ""
+        ],
+        [
+          "bin-limit-0",
+          "0..99",
+          "RH%"
+        ],
+        [
+          "",
+          "%f",
+          ""
+        ],
+        [
+          "bin-limit-1",
+          "0..99",
+          "RH%"
+        ],
+        [
+          "",
+          "%f",
+          ""
+        ],
+        [
+          "bin-limit-2",
+          "0..99",
+          "RH%"
+        ],
+        [
+          "",
+          "%f",
+          ""
+        ],
+        [
+          "bin-limit-3",
+          "0..99",
+          "RH%"
+        ],
+        [
+          "",
+          "%f",
+          ""
+        ],
+        [
+          "bin-limit-4",
+          "0..99",
+          "RH%"
+        ],
+        [
+          "",
+          "%f",
+          ""
+        ],
+        [
+          "bin-limit-5",
+          "0..99",
+          "RH%"
+        ],
+        [
+          "",
+          "%f",
+          ""
+        ],
+        [
+          "bin-limit-6",
+          "0..99",
+          "RH%"
+        ],
+        [
+          "",
+          "%f",
+          ""
+        ],
+        [
+          "bin-limit-7",
+          "0..99",
+          "RH%"
+        ],
+        [
+          "",
+          "%f",
+          ""
+        ],
+        [
+          "bin-limit-8",
+          "0..99",
+          "RH%"
+        ],
+        [
+          "",
+          "%f",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 39,
+      "rows": 16,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 16
+      },
+      "rebuild_header": [
+        "<strong>data ema-cfg &lt;profile-mask&gt;,[&lt;temp-cnt&gt;],[&lt;humid-cnt&gt;],[&lt;bat-cnt&gt;],[&lt;orient-cnt&gt;],[&lt;send-ema-temp&gt;],[&lt;send-ema-humid&gt;], [&lt;send-ema-bat&gt;],[&lt;send-ema-orient&gt;]</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Set exponential moving average (EMA) configuration"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "profile-mask",
+          "1..63",
+          "bitfield"
+        ],
+        [
+          "temp-cnt",
+          "1..32766",
+          "a = 2 / (temp-cnt + 1)"
+        ],
+        [
+          "humid-cnt",
+          "1..32766",
+          "a = 2 / (humid-cnt + 1)"
+        ],
+        [
+          "bat-cnt",
+          "1..32766",
+          "a = 2 / (bat-cnt + 1)"
+        ],
+        [
+          "orient-cnt",
+          "1..32766",
+          "a = 2 / (orient-cnt + 1)"
+        ],
+        [
+          "send-ema-temp",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ],
+        [
+          "send-ema-humid",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ],
+        [
+          "send-ema-bat",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ],
+        [
+          "send-ema-orient",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ]
+      ]
+    },
+    {
+      "index": 40,
+      "rows": 11,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 11
+      },
+      "rebuild_header": [
+        "<strong>data activity-cfg &lt;profile-mask&gt;,[&lt;mode&gt;],[&lt;level1-th&gt;],[&lt;level2-th&gt;],[&lt;en-led&gt;]</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Set activity monitor configuration"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "profile-mask",
+          "1..63",
+          "bitfield"
+        ],
+        [
+          "mode",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1",
+          "single"
+        ],
+        [
+          "",
+          "2",
+          "dual"
+        ],
+        [
+          "level1-th",
+          "1..63",
+          ""
+        ],
+        [
+          "level2-th",
+          "1..63",
+          ""
+        ],
+        [
+          "en-led",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1",
+          "on"
+        ]
+      ]
+    },
+    {
+      "index": 41,
+      "rows": 33,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 33
+      },
+      "rebuild_header": [
+        "<strong>data acc-cfg &lt;profile-mask&gt;,[&lt;full-scale&gt;],[&lt;en-impact-x&gt;],[&lt;en-impact-y&gt;],[&lt;en-impact-z&gt;],[&lt;impact-th&gt;],[&lt;impact-dur&gt;], [&lt;en-ff&gt;],[&lt;ff-th&gt;],[&lt;ff-dur&gt;],[&lt;data-rate&gt;],[&lt;filter&gt;],[&lt;lp-mode&gt;],[&lt;low-noise&gt;]</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Set accelerometer configuration"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "profile-mask",
+          "1..63",
+          "bitfield"
+        ],
+        [
+          "full-scale",
+          "0",
+          "2G"
+        ],
+        [
+          "",
+          "1",
+          "4G"
+        ],
+        [
+          "",
+          "2",
+          "8G"
+        ],
+        [
+          "",
+          "3",
+          "16G"
+        ],
+        [
+          "en-impact-x",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1",
+          "on"
+        ],
+        [
+          "en-impact-y",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1",
+          "on"
+        ],
+        [
+          "en-impact-z",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1",
+          "on"
+        ],
+        [
+          "impact-th",
+          "1..63",
+          "impact-th * full-scale / 64"
+        ],
+        [
+          "impact-dur",
+          "0..3",
+          ""
+        ],
+        [
+          "en-ff",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1",
+          "on"
+        ],
+        [
+          "ff-th",
+          "0..7",
+          ""
+        ],
+        [
+          "ff-dur",
+          "0..63",
+          ""
+        ],
+        [
+          "data-rate",
+          "2",
+          "Hz"
+        ],
+        [
+          "",
+          "13",
+          ""
+        ],
+        [
+          "",
+          "25",
+          ""
+        ],
+        [
+          "",
+          "500",
+          ""
+        ],
+        [
+          "",
+          "100",
+          ""
+        ],
+        [
+          "",
+          "200",
+          ""
+        ],
+        [
+          "filter",
+          "2",
+          "cutoff = data-rate/filter"
+        ],
+        [
+          "",
+          "4",
+          ""
+        ],
+        [
+          "",
+          "10",
+          ""
+        ],
+        [
+          "",
+          "20",
+          ""
+        ],
+        [
+          "lp-mode",
+          "0..3",
+          ""
+        ],
+        [
+          "low-noise",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ]
+      ]
+    },
+    {
+      "index": 42,
+      "rows": 17,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 17
+      },
+      "rebuild_header": [
+        "<strong>data orient-cfg &lt;profile-mask&gt;,[&lt;enable&gt;],[&lt;max-1G-offset&gt;],[&lt;poll-interval-s&gt;],[&lt;ref-1-x&gt;],[&lt;ref-1-y&gt;],[&lt;ref-1-z&gt;], [&lt;ref-2-x&gt;],[&lt;ref-2-y&gt;],[&lt;ref-2-z&gt;],[&lt;ref-3-x&gt;],[&lt;ref-3-y&gt;],[&lt;ref-3-z&gt;]</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Set orientation sense configuration"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "profile-mask",
+          "1..63",
+          "bitfield"
+        ],
+        [
+          "enable",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1",
+          "on"
+        ],
+        [
+          "max-1G-offset",
+          "1..20",
+          ""
+        ],
+        [
+          "poll-interval-s",
+          "1..4294967295",
+          ""
+        ],
+        [
+          "ref-1-x",
+          "-32768..32767",
+          ""
+        ],
+        [
+          "ref-1-y",
+          "-32768..32767",
+          ""
+        ],
+        [
+          "ref-1-z",
+          "-32768..32767",
+          ""
+        ],
+        [
+          "ref-2-x",
+          "-32768..32767",
+          ""
+        ],
+        [
+          "ref-2-y",
+          "-32768..32767",
+          ""
+        ],
+        [
+          "ref-2-z",
+          "-32768..32767",
+          ""
+        ],
+        [
+          "ref-3-x",
+          "-32768..32767",
+          ""
+        ],
+        [
+          "ref-3-y",
+          "-32768..32767",
+          ""
+        ],
+        [
+          "ref-3-z",
+          "-32768..32767",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 43,
+      "rows": 11,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 11
+      },
+      "rebuild_header": [
+        "<strong>data event-cfg &lt;profile-mask&gt;,[&lt;max-count&gt;],[&lt;send-th&gt;],[&lt;discard&gt;],[&lt;send-all&gt;]</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Set event storage configuration"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "profile-mask",
+          "1..63",
+          "bitfield"
+        ],
+        [
+          "max-count",
+          "0",
+          "disabled"
+        ],
+        [
+          "",
+          "1..100",
+          ""
+        ],
+        [
+          "send-th",
+          "0..65535",
+          "if count &gt;= send-th: send(device-events)"
+        ],
+        [
+          "discard",
+          "0",
+          "oldest",
+          "if no free space"
+        ],
+        [
+          "",
+          "1",
+          "newest"
+        ],
+        [
+          "send-all",
+          "0",
+          "off"
+        ],
+        [
+          "",
+          "1",
+          "on"
+        ]
+      ]
+    },
+    {
+      "index": 44,
+      "rows": 4,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 4
+      },
+      "rebuild_header": [
+        "<strong>data erase-events [&lt;num-oldest&gt;]</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Erase &lt;num-oldest&gt; events if provided, otherwise all"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "num-oldest",
+          "0..65535",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 45,
+      "rows": 4,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 4
+      },
+      "rebuild_header": [
+        "<strong>data del-rule [&lt;rule-num&gt;]</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Delete &lt;rule-num&gt; rules if provided, otherwise delete all"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "rule-num",
+          "0..31",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 46,
+      "rows": 16,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 16
+      },
+      "rebuild_header": [
+        "<strong>data set-rule [&lt;rule-num&gt;],&lt;test-expr&gt;,[&lt;input-expr&gt;],[&lt;switch-profile&gt;],[&lt;make-event-0&gt;],[&lt;make-event-1&gt;], [&lt;make-event-2&gt;],[&lt;make-event-3&gt;],[&lt;send-frame-0&gt;],[&lt;send-frame-1&gt;],[&lt;send-frame-2&gt;],[&lt;send-frame-3&gt;],[&lt;clr-timer-mask&gt;]</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Set data rule &lt;rule-num&gt;"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "rule-num",
+          "0..31",
+          ""
+        ],
+        [
+          "test-expr",
+          "",
+          ""
+        ],
+        [
+          "input-expr",
+          "",
+          ""
+        ],
+        [
+          "switch-profile",
+          "0..5",
+          ""
+        ],
+        [
+          "make-event-0",
+          "<a href=\"#variable-type\">variable-type</a>",
+          ""
+        ],
+        [
+          "make-event-1",
+          "<a href=\"#variable-type\">variable-type</a>",
+          ""
+        ],
+        [
+          "make-event-2",
+          "<a href=\"#variable-type\">variable-type</a>",
+          ""
+        ],
+        [
+          "make-event-3",
+          "<a href=\"#variable-type\">variable-type</a>",
+          ""
+        ],
+        [
+          "send-frame-0",
+          "<a href=\"#frame-type\">frame-type</a>",
+          ""
+        ],
+        [
+          "send-frame-1",
+          "<a href=\"#frame-type\">frame-type</a>",
+          ""
+        ],
+        [
+          "send-frame-2",
+          "<a href=\"#frame-type\">frame-type</a>",
+          ""
+        ],
+        [
+          "send-frame-3",
+          "<a href=\"#frame-type\">frame-type</a>",
+          ""
+        ],
+        [
+          "clr-timer-mask",
+          "0..15",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 47,
+      "rows": 7,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 7
+      },
+      "rebuild_header": [
+        "<strong>data timer [&lt;timer_1&gt;],[&lt;timer_2&gt;],[&lt;timer_3&gt;],[&lt;timer_4&gt;]</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Set user timer value"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "timer_1",
+          "0..4294967295",
+          "<a href=\"#timer-1\">timer_1</a>"
+        ],
+        [
+          "timer_2",
+          "0..4294967295",
+          "<a href=\"#timer-2\">timer_2</a>"
+        ],
+        [
+          "timer_3",
+          "0..4294967295",
+          "<a href=\"#timer-3\">timer_3</a>"
+        ],
+        [
+          "timer_4",
+          "0..4294967295",
+          "<a href=\"#timer-4\">timer_4</a>"
+        ]
+      ]
+    },
+    {
+      "index": 48,
+      "rows": 8,
+      "cols": 0,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "slot": true,
+      "rebuild": true,
+      "unaligned": {
+        "reason": "colgroup-slot",
+        "markdown": 0,
+        "html": 8
+      },
+      "rebuild_header": [
+        "<strong>data activity-cal &lt;profile-mask&gt;,&lt;cal-level&gt;,&lt;cal-led&gt;</strong>"
+      ],
+      "rebuild_rows": [
+        [
+          "Run activity monitor calibration and apply result to profiles"
+        ],
+        [
+          "Parameter",
+          "Range",
+          "Description"
+        ],
+        [
+          "profile-mask",
+          "1..63",
+          "bitfield"
+        ],
+        [
+          "cal-level",
+          "1",
+          "level-one"
+        ],
+        [
+          "",
+          "2",
+          "level-two"
+        ],
+        [
+          "cal-led",
+          "0",
+          "no"
+        ],
+        [
+          "",
+          "1",
+          "yes"
+        ]
+      ]
+    },
+    {
+      "index": 49,
+      "rows": 26,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 50,
+      "rows": 41,
+      "cols": 5,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 51,
+      "rows": 33,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 52,
+      "rows": 6,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 53,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": [
+    {
+      "table": 11,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 5
+    },
+    {
+      "table": 12,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 6
+    },
+    {
+      "table": 13,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 5
+    },
+    {
+      "table": 14,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 6
+    },
+    {
+      "table": 15,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 5
+    },
+    {
+      "table": 16,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 5
+    },
+    {
+      "table": 17,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 11
+    },
+    {
+      "table": 18,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 5
+    },
+    {
+      "table": 19,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 5
+    },
+    {
+      "table": 20,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 8
+    },
+    {
+      "table": 21,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 7
+    },
+    {
+      "table": 22,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 6
+    },
+    {
+      "table": 23,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 10
+    },
+    {
+      "table": 24,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 13
+    },
+    {
+      "table": 25,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 5
+    },
+    {
+      "table": 26,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 12
+    },
+    {
+      "table": 27,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 20
+    },
+    {
+      "table": 28,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 7
+    },
+    {
+      "table": 29,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 4
+    },
+    {
+      "table": 30,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 11
+    },
+    {
+      "table": 31,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 4
+    },
+    {
+      "table": 32,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 9
+    },
+    {
+      "table": 33,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 6
+    },
+    {
+      "table": 34,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 2
+    },
+    {
+      "table": 35,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 4
+    },
+    {
+      "table": 36,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 18
+    },
+    {
+      "table": 37,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 31
+    },
+    {
+      "table": 38,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 31
+    },
+    {
+      "table": 39,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 16
+    },
+    {
+      "table": 40,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 11
+    },
+    {
+      "table": 41,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 33
+    },
+    {
+      "table": 42,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 17
+    },
+    {
+      "table": 43,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 11
+    },
+    {
+      "table": 44,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 4
+    },
+    {
+      "table": 45,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 4
+    },
+    {
+      "table": 46,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 16
+    },
+    {
+      "table": 47,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 7
+    },
+    {
+      "table": 48,
+      "reason": "colgroup-slot",
+      "markdown": 0,
+      "html": 8
+    }
+  ]
+}

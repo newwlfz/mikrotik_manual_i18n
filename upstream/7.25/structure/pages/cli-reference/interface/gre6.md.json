@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/gre6.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/gre6.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/gre6",
+  "md_sha256": "279e7445100927233e9f1b94cf0c462ad045abb92e498a2e179b55b29546f6f2",
+  "html_sha256": "f34f13dab21eacb764c878a44dab79975e24611a604b704b42de404486ce000e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

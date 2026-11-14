@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/ipsec/statistics.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/statistics.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/statistics",
+  "md_sha256": "a51d782f904e2537f79e612334c82a61123f84e56c51628a1b30cdb13750062b",
+  "html_sha256": "815f8f1699611f6f192d8d7d26f3328a3e358da4f777b2efdd5adfe72ba3feda",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

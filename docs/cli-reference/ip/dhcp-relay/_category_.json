@@ -1,0 +1,11 @@
+{
+  "position": 5,
+  "label": "Dhcp Relay",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/dhcp-relay/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/dhcp-relay"
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/wireless/nstreme-dual/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/nstreme-dual.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/nstreme-dual/",
+  "md_sha256": "6bf134acc8ac136177a6651de5798e4b996c6698770644d7595f588a3887c52a",
+  "html_sha256": "165e4634a2adba9afdb89a4581795766d7990390ecfa5868d3ab674f09eb9127",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

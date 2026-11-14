@@ -1,0 +1,65 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "system-information-and-utilities/ip-packing.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/ip-packing.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/ip-packing",
+  "md_sha256": "9787b67e3c8d4350a36841004ffbcffe926bd2f44174aecabafbf0f0a3183be7",
+  "html_sha256": "d77f9b91198dcbf0448c50f75399158e3a84ea3abacd4c3a21ea264049473e2d",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 4,
+          "col": 1,
+          "html": "the action it should perform when a packet is leaving the interface the packing rule is configured on:<ul><li><code>simple</code> - do just aggregate packets</li><li><code>compress-all</code> - do aggregation and attempt to compress headers and payload of a packet</li><li><code>compress-headers</code> - do aggregation and attempt to compress headers and leave the payload of a packet as is</li><li><code>none</code> - send packets as is</li></ul>"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "the action that should be performed when a packet is received on the interface the packing rule is configured on:<ul><li><code>simple</code> - unpack received packets from aggregated packets received from the interface</li><li><code>compress-all</code> - unpack aggregated packet and uncompress headers and payload of a packet</li><li><code>compress-headers </code>- unpack aggregated packets and decompress headers of a packet</li><li><code>none</code> - do nothing with a received packet</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

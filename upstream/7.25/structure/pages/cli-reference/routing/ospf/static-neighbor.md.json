@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/routing/ospf/static-neighbor.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/ospf/static-neighbor.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/ospf/static-neighbor",
+  "md_sha256": "0e9b67e648b468e0d2cfa657288a904e23c237e119fdf1e6c762a76026ed3757",
+  "html_sha256": "4728094ace17d9ff008676617ad40e1ebd42508aa5faf0481cfd0046d931e397",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

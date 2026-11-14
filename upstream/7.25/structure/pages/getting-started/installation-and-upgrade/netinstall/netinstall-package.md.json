@@ -1,0 +1,83 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "getting-started/installation-and-upgrade/netinstall/netinstall-package.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/getting-started/installation-and-upgrade/netinstall/netinstall-package.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/getting-started/installation-and-upgrade/netinstall/netinstall-package",
+  "md_sha256": "7705c4bf1333fdd35852fe6a8c2e5a56ac664c27178926992fe85061dd07147f",
+  "html_sha256": "a4466e1dc62c38649e01c9de36cea05f16b7bfe28e87135238e911721f95a47b",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 12,
+      "br": 1,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 21,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 12,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 12,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        1,
+        0
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 19,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

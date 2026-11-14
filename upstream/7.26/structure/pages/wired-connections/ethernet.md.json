@@ -1,0 +1,162 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "wired-connections/ethernet.md",
+  "source_url": "https://manual.mikrotik.com/docs/wired-connections/ethernet.md",
+  "html_url": "https://manual.mikrotik.com/docs/wired-connections/ethernet",
+  "md_sha256": "10cd47db5f6ee80bce6953dba9ad68af48a4c06a61109ef388bdd50600cd2852",
+  "html_sha256": "f7bb93de1c32e1421316fd925ef97084ffe1aa7e55051ac492abe646fe15d68d",
+  "body": {
+    "html": {
+      "lists": 9,
+      "listItems": 19,
+      "br": 1,
+      "details": 0,
+      "tables": 8,
+      "sup": 0,
+      "code": 13,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 19,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 8,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 19,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 8,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        1,
+        4
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 31,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 17,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 27,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 0,
+          "html": "<strong>advertise</strong> (since RouterOS v7.12: <em>10M-baseT-half &#124; 10M-baseT-full&#124; 100M-baseT-half &#124; 100M-baseT-full &#124; 1G-baseT-half &#124; 1G-baseT-full &#124; 1G-baseX &#124; 2.5G-baseT &#124; 2.5G-baseX &#124; 5G-baseT &#124; 10G-baseT &#124; 10G-baseSR-LR &#124; 10G-baseCR &#124; 40G-baseSR4-LR4 &#124; 40G-baseCR4 &#124; 25G-baseSR-LR &#124; 25G-baseCR &#124; 50G-baseSR2-LR2 &#124; 50G-baseCR2 &#124; 100G-baseSR4-LR4 &#124; 100G-baseCR4;</em> Default: ) <br/> (older RouterOS: <em>10M-full &#124; 10M-half &#124; 100M-full &#124; 100M-half &#124; 1000M-full &#124; 1000M-half &#124; 2500M-full &#124; 5000M-full &#124; 10000M-full</em>; Default: )"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Address Resolution Protocol mode:<ul><li>disabled - the interface will not use ARP</li><li>enabled - the interface will use ARP</li><li>local-proxy-arp - the router performs proxy ARP on the interface and sends replies to the same interface</li><li>proxy-arp - the router performs proxy ARP on the interface and sends replies to other interfaces</li><li>reply-only - the interface will only reply to requests originated from matching IP address/MAC address combinations which are entered as static entries in the <a href=\"/docs/wired-connections/network-management/arp\" rel=\"nofollow\">ARP</a> table. No dynamic entries will be automatically stored in the ARP table. Therefore for communications to be successful, a valid static entry must already exist.</li></ul>"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "Defines the behavior for accepting gratuitous ARP (GARP) frames received from devices that are not already present in the ARP table:<ul><li>no - new entries are not created in the ARP table</li><li>yes - new entries are created in the ARP table</li></ul> The setting is available since RouterOS version 7.25.1."
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "When enabled, the interface \"advertises\" its maximum capabilities to achieve the best connection possible.<ul><li><strong>Note1:</strong> Auto-negotiation should not be disabled on one end only, otherwise Ethernet Interfaces may not work properly.</li><li><strong>Note2:</strong> Gigabit Ethernet and NBASE-T Ethernet links cannot work with auto-negotiation disabled.</li></ul>"
+        },
+        {
+          "row": 11,
+          "col": 1,
+          "html": "Changes Forward Error Correction (FEC) mode for SFP28, QSFP+ and QSFP28 interfaces. The same mode should be used on both link ends, otherwise FEC mismatch could result in non-working link or even false link-ups. <br/><strong>It is recommended to enable FEC, particularly when creating a link between CRS3xx, CRS5xx series switches. Some optical modules might rely on FEC functionality in MACs.</strong><br/><ul><li>auto - same as off</li><li>fec74 - enables IEEE 802.3 clause 74 FEC (aka FC-FEC), can be used with 25Gbps, 40Gbps and 50Gbps link modes</li><li>fec91 - enables IEEE 802.3 clause 91 FEC (aka RS-FEC), can be used with 25Gbps, 50Gbps, 100Gbps, 200Gbps and 400Gbps link modes</li><li>off - disables FEC.</li></ul>"
+        },
+        {
+          "row": 26,
+          "col": 0,
+          "html": "<strong>speed</strong> (since RouterOS v7.12: <em>10M-baseT-half &#124; 10M-baseT-full&#124; 100M-baseT-half &#124; 100M-baseT-full &#124; 1G-baseT-half &#124; 1G-baseT-full &#124; 1G-baseX &#124; 2.5G-baseT &#124; 2.5G-baseX &#124; 5G-baseT &#124; 10G-baseT &#124; 10G-baseSR-LR &#124; 10G-baseCR &#124; 40G-baseSR4-LR4 &#124; 40G-baseCR4 &#124; 25G-baseSR-LR &#124; 25G-baseCR &#124; 50G-baseSR2-LR2 &#124; 50G-baseCR2 &#124; 100G-baseSR4-LR4 &#124; 100G-baseCR4;</em> Default: ) <br/> (older RouterOS: <em>10Mbps &#124; 10Gbps &#124; 100Mbps &#124; 1Gbps &#124; 2.5Gbps &#124; 5Gbps &#124; 25Gbps &#124; 40Gbps &#124; 100Gbps</em>; Default: )"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 43,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Current auto-negotiation status:<ul><li>disabled - negotiation disabled</li><li>done - negotiation completed</li><li>failed - negotiation failed</li><li>incomplete - negotiation not completed yet</li></ul>"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Default cable length setting (only applicable to NS DP83815/6 cards)<ul><li>short - supports short cables</li><li>standard - supports standard cables</li></ul>"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Current link status of an interface<ul><li>link-ok - the card is connected to the network</li><li>no-link - the card is not connected to the network</li><li>unknown - the connection is not recognized (if the card does not report connection status)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "rows": 15,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 80,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

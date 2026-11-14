@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wireless/reset-configuration.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/reset-configuration.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/reset-configuration",
+  "md_sha256": "539aa55a079f5b34f0e2151ec26717e4e1e35afd1d5aa7d99d46e073fd3deb10",
+  "html_sha256": "46a705d6e23f8f17c58fd9224455a8fdd76e9f991d6b16e849cdbe5ff19a63a9",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

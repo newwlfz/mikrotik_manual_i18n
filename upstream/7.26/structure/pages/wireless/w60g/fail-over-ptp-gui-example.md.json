@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "wireless/w60g/fail-over-ptp-gui-example.md",
+  "source_url": "https://manual.mikrotik.com/docs/wireless/w60g/fail-over-ptp-gui-example.md",
+  "html_url": "https://manual.mikrotik.com/docs/wireless/w60g/fail-over-ptp-gui-example",
+  "md_sha256": "26804013897f28d3cb52aeea1b008bbed2ea656011d331b6ee6b6c66f915f4f8",
+  "html_sha256": "1a6afefba340f2eac05acc7eab4ae48608317ce6e173c62844ee2e6b36c51f36",
+  "body": {
+    "html": {
+      "lists": 12,
+      "listItems": 60,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 60,
+      "listItems": 60,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 60,
+      "listItems": 60,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

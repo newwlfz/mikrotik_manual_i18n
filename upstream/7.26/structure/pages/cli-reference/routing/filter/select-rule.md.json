@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/filter/select-rule.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/filter/select-rule.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/filter/select-rule",
+  "md_sha256": "c1f050537c6d0d4e3fa6e9bb9939386e91fadfb350df6d26d95e89c70a807da5",
+  "html_sha256": "ca3c1d9fa4f41b10473f6cb8242c21c47d6f100222e8f16e2377bad813af668d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

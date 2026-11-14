@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/leds/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/leds.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/leds/",
+  "md_sha256": "c459b505f99d62790d8950cfca5de2df0c08aac60533206319fd6fe16f83d064",
+  "html_sha256": "48ac54da9e2b8f997b9331c07910295d56a37d2f534d5d8e52de3fa96d53950d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

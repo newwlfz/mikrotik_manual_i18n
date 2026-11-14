@@ -1,0 +1,34 @@
+{
+ "version": "7.24",
+ "generated": "2026-11-09T02:55:41.894Z",
+ "pages": {
+  "getting-started/networking-fundamentals/index": [
+   "flowchart LR\n  H1 --- H2\n\n  H1[\"**Host 1**<br />____________________<br /> **Address**: 192.168.0.1/32<br />**Network**: 192.168.0.2\"]\n  H2[\"**Host 2**<br />____________________<br /> **Address**: 192.168.0.2/32<br />**Network**: 192.168.0.1\"]\n\n  style H1 text-align:left\n  style H2 text-align:left",
+   "sequenceDiagram\n    HostA->>HostB: Syn sent\n    HostB->>HostA: Syn-Ack sent\n    HostA->>HostB: Ack sent\nNote right of HostB: Established",
+   "sequenceDiagram\n    HostA->>HostB: Window size of 1000\n    HostB->>HostA: Ack1 window size=2\n    HostA->>HostB: Window size of 2000\n    HostA->>HostB:\n    HostB->>HostA: Ack2 window size=3\nrect rgb(185, 50, 50)\n    HostA->>HostB: Window size of 3000\n    HostA->>HostB:\n    HostA->>HostB:\nNote left of HostB: Buffer is full, stop sending...\n    HostB->>HostA: Ack3 window size=0\nend\nNote left of HostB: Buffer have been freed, continue...\n    HostB->>HostA: Ack window size=1",
+   "sequenceDiagram\n    HostA->>HostB: Fin sent\nNote right of HostB: CLOSE_WAIT\n    HostB->>HostA: Ack sent\n    HostB->>HostA: Fin sent\nNote right of HostB: LAST_ACK\n    HostA->>HostB: Ack sent\nNote right of HostB: Terminated"
+  ],
+  "user-guides/routing-and-networking-protocols/mpls/ldp": [
+   "graph LR\n    R1[\"<b>R1</b><br/>(lo:111.111.111.1)\"]\n    R2[\"<b>R2</b><br/>(lo:111.111.111.2)\"]\n    R3[\"<b>R3</b><br/>(lo:111.111.111.3)\"]\n    R4[\"<b>R4</b><br/>(lo:111.111.111.4)\"]\n\n    R1 ---|\"111.11.0.0/24\"| R2\n    R2 ---|\"111.12.0.0/24\"| R3\n    R3 ---|\"111.13.0.0/24\"| R4"
+  ],
+  "user-guides/routing-and-networking-protocols/routing-decision": [
+   "---\nconfig:\n  layout: elk\n---\ngraph LR\n    subgraph **RIB**\n        direction LR\n        P[**Private**] --> F{\"in-filter\"}\n        F --> U[**Update**]\n        U --> calc{ Calculation }\n        calc --> C[**Current**]\n    end\n\n    A@{ shape: f-circ } -->|prefix in| P\n    C -->|BGP peer /<br /> protocol output| O@{ shape: f-circ }"
+  ],
+  "user-guides/routing-and-networking-protocols/unicast/bgp/peering-sessions": [
+   "graph LR\n    R1 <--> R2\n    R2 <--> R3\n    R3 <--> R1",
+   "graph TB\n    R2(R2 RR) <--> R1\n    R2 <--> R3"
+  ],
+  "user-guides/routing-and-networking-protocols/unicast/ospf/neighbour-relationship": [
+   "flowchart LR\n\n  subgraph OSPFH[\"<b>OSPF Header</b>\"]\n    OSPFHF[\"<b>Version</b>: 1byte<br/><b>Packet Type</b>: 1byte<br/><b>Packet Length</b>: 2bytes<br/><b>Router ID</b>: 4bytes<br/><b>Area ID</b>: 4bytes<br/><b>Checksum</b>: 2bytes<br/><b>AuthType</b>: 2bytes<br/><b>Authentication</b>: 8bytes\"]\n  end\n\n  IPH[\"IP Header\"] --> OSPFH --> DATA[\"Data\"]",
+   "flowchart LR\n\n  subgraph HDATA[\"<b>Hello Data</b>\"]\n  HDATAF[\"Netmask\n    Hello Interval\n    Options | Priority\n    Dead Interval\n    DR\n    BDR\n    1st neighbor ID\"]\n  end\n\n  IPH[\"IP Header\"] --> OSPFH[\"OSPF Header\"] --> HDATA"
+  ],
+  "user-guides/routing-and-networking-protocols/unicast/ospf/routing-calculation": [
+   "graph LR\n\n    R1[R1]\n    R2[R2]\n    R3[R3]\n    R4[R4]\n    N1[192.168.1.0]:::N1\n    N2[172.16.1.0]:::N2\n    N3[192.168.2.0]:::N3\n\n    %% Connections within 192.168.1.0\n    R1 -- \"cost:10\" --> N1\n    N1 --- R2\n    N1 --- R3\n\n    R2 -- \"cost:10\" --> N2\n    R4 -- \"cost:4\" --> N2\n\n    R3 -- \"cost:6\" --> N3\n    N3 --> R4\n\n%% Style the network node\n    classDef N1,N2,N3 stroke:#4682b4,stroke-width:3px,rx:50%,ry:30%",
+   "graph \n\n    R1[R1]\n    R2[R2]\n    R3[R3]\n    R4[R4]\n    N1[192.168.1.0]:::N1\n    N2[172.16.1.0]:::N2\n    N3[192.168.2.0]:::N3\n\n    %% Connections within 192.168.1.0\n    R1 -- \"cost:10\" --> N1\n    R1 -- \"cost:10\" --> R3\n    R1 -- \"cost:10\" --> R2\n\n    R2 -- \"cost:10\" --> N2\n    R4 -- \"cost:4\" --> N2\n\n    R3 -- \"cost:6\" --> N3\n    R3 -- \"cost:6\" --> R4\n\n    R1 -- \"Total cost:16\" --> N3\n    R1 --> R2\n    R2 -- \"Total cost:20\" --> N2\n\n    R1 --> R4\n    R4 -- \"Total cost:20\" --> N2\n\n%% Style all dotted lines red (including the new one)\n    linkStyle 7,8,9,10,11 stroke:#ff0000,stroke-width:2px,stroke-dasharray:5,5,color:#ff0000\n\n%% Style the network node\n    classDef N1,N2,N3 stroke:#4682b4,stroke-width:3px,rx:50%,ry:30%"
+  ],
+  "user-guides/routing-and-networking-protocols/vrf": [
+   "graph LR\n    client1[\"<b>client1</b>\nip (*.2)\"] -->|10.11.0.0/24| vrf1[\"<b>vrf1</b>\nip (*.1)\"]\n    vrf2[\"<b>vrf2</b>\nip (*.1)\"] -->|10.12.0.0/24| client2[\"<b>client2</b>\nip (*.2)\"]\n    subgraph Router[\"<b>Router</b>\"]\n        direction LR\n        vrf1 ~~~ vrf2\n    end",
+   "graph LR\n    CUST_A1[\"<b>client1</b>\"] ---|10.12.0.0/24| cust_a1_vrf[\"<b>cust_a</b><br />vrf\"] ---|BGP VPN| cust_a2_vrf[\"<b>cust_a</b><br />vrf\"] ---|10.12.0.0/24| CUST_A2[\"<b>client2</b>\"]\n    subgraph PE1[\"<b>PE1</b>\"]\n        direction LR\n        cust_a1_vrf\n    end\n    subgraph PE2[\"<b>PE2</b>\"]\n        direction LR\n        cust_a2_vrf\n    end\n    PE1 --- PE2"
+  ]
+ }
+}

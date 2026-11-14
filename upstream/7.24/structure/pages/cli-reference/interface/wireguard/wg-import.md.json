@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/wireguard/wg-import.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireguard/wg-import.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/wireguard/wg-import",
+  "md_sha256": "1f3ee4558ea75e4c64883789c74413e96978d8c88e56c304c4bceb96342138ee",
+  "html_sha256": "2425942c5e470448382033dd1a83bef1bc20ce61b3719ab06d0bd6830f196928",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

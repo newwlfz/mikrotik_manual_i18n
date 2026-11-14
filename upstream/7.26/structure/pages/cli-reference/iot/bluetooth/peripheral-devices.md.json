@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/iot/bluetooth/peripheral-devices.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/peripheral-devices.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/peripheral-devices",
+  "md_sha256": "4b736417a13a1bdcf49a8f2cc6119ac029755d51b5150eb535c6bd90526112c7",
+  "html_sha256": "834d4fc5257bab5dbd43e4d5432045025d51cbc09ea5daa01d0c11eb375424ef",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

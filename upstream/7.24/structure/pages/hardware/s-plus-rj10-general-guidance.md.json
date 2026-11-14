@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "hardware/s-plus-rj10-general-guidance.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/hardware/s-plus-rj10-general-guidance.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/hardware/s-plus-rj10-general-guidance",
+  "md_sha256": "0c512a5593b0fbc8151cd7b6fc7340a6544e4c24c3abc43e9d5e3b32188a9a36",
+  "html_sha256": "f5fa0ab6f9adbbd81e3eed1635cb7eae9a3568db7d3ff5a6937c46b981dbc6c8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

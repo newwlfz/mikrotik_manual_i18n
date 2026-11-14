@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/tool/traffic-monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/tool/traffic-monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/tool/traffic-monitor",
+  "md_sha256": "81c14c30796a0cdb8526aa7073617af5bef2eba33750481af7b51ee71ad9bd62",
+  "html_sha256": "fcf17affe0271b18e72c3652e3a8fe73c427f0efcdf88f2f6815074443fbb361",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

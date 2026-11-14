@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/dhcp-server/lease/check-status.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-server/lease/check-status.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-server/lease/check-status",
+  "md_sha256": "01356a7527dc22f93baf5eadca2720016f2d39dc1e1ad4fd37b1f3b95ad21e50",
+  "html_sha256": "4c2e544d5f6171f01644a5d8e63811c34653ccd27fe5b18a1930ebd1748c1ad0",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

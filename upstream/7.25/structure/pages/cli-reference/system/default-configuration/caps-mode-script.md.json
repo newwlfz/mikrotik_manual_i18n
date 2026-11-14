@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/default-configuration/caps-mode-script.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/default-configuration/caps-mode-script.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/default-configuration/caps-mode-script",
+  "md_sha256": "bdb9c181fd43d2ef14e7f33fc57ce5568dbaf18f2ce4ff5eb731cfcab33835aa",
+  "html_sha256": "ec20cbd68f42a61bef10ef149f16c1e4c764cd555bbc3a955e87d60be471afdd",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

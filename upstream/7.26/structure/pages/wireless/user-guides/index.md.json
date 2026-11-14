@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "wireless/user-guides/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/wireless/user-guides.md",
+  "html_url": "https://manual.mikrotik.com/docs/wireless/user-guides/",
+  "md_sha256": "e78d7948003140a63550e67d305913abe90add0d87595566c36b409a8dc1bc32",
+  "html_sha256": "410f88815ef2a0aa913f24e717aaacbf717e15a1d9fdbb75d29b8e4554787d82",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "user-guides/routing-and-networking-protocols/unicast/ospf/understanding-ospf.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/ospf/understanding-ospf.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/ospf/understanding-ospf",
+  "md_sha256": "d5d4ec1380e18b449e47afaff8efda8418e473bd95a41739143a55bf603586cb",
+  "html_sha256": "7b45b118681ffa762a132dc0ee91bd1216226570bdcfbb9c59cebb4cc54a32e4",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 35,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 35,
+      "listItems": 35,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 35,
+      "listItems": 35,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

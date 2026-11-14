@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/disk/format.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/disk/format.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/disk/format",
+  "md_sha256": "ea2d6c49c069585b56f10c74d4f0de5fa4c269d6b1b92f3cc79e6de2a4378cdd",
+  "html_sha256": "d05574abafadab7feb2afc5a43813bc382cda123a031b6fc8dec83f1d40fd95e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

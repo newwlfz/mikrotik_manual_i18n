@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/disk/btrfs/filesystem/remove-device.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/disk/btrfs/filesystem/remove-device.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/disk/btrfs/filesystem/remove-device",
+  "md_sha256": "a52b5379f44d5acb6d1a648ed50d71a4604e23137f40158f1095badaf6def96f",
+  "html_sha256": "195d282cb11b08b44d94ef1559d47a96ba3baf488e7dec89f087747d45277538",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

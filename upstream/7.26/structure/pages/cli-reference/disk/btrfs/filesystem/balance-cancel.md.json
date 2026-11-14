@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/disk/btrfs/filesystem/balance-cancel.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/disk/btrfs/filesystem/balance-cancel.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/disk/btrfs/filesystem/balance-cancel",
+  "md_sha256": "9323295c873da5e7d1b504fb29e7a9eee9ff89bc2e6ddc48f1718131080e8523",
+  "html_sha256": "42bc84820e883229812870c705c9055bccf5eea3abe9c63080d02b84e7c8b439",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

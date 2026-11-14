@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "getting-started/supout-rif.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/getting-started/supout-rif.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/getting-started/supout-rif",
+  "md_sha256": "499dd69695631099bc63825b8c521d834130803da7166772c91446d2fae24cce",
+  "html_sha256": "de3eac6d0b8aee06439d2124e8f1a9824577b6596083585433fd7c3473e9341e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 26,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

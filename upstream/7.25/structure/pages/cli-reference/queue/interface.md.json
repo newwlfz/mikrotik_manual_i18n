@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/queue/interface.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/queue/interface.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/queue/interface",
+  "md_sha256": "0bc7a8c82489eb79dd34238f599b8bcafd2daf7fffe624b4dd072afbd914190b",
+  "html_sha256": "883903b8c89efe80e4f9a80dd00dab99a3d942edf7c8ebbb100f3e7834b5f1b7",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

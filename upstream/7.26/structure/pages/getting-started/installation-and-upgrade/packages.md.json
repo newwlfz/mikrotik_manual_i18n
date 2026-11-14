@@ -1,0 +1,86 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "getting-started/installation-and-upgrade/packages.md",
+  "source_url": "https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/packages.md",
+  "html_url": "https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/packages",
+  "md_sha256": "b30b242d43b66aa806d18362416c1f33d6973a063ab40702b37082826f8011f0",
+  "html_sha256": "6bd8732ced01f82d76467747f20cef3d831ba547361ce1bf22df8051f7340c73",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 9,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 2,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 22,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Enables: <br/><ul><li><a href=\"/docs/getting-started/internet-of-things/mqtt/index\" rel=\"nofollow\">MQTT</a></li><li><a href=\"/docs/getting-started/internet-of-things/lora/general-properties\" rel=\"nofollow\">LoRa</a> (for devices with LR8/9/2 miniPCIe cards)</li><li><a href=\"/docs/getting-started/internet-of-things/bluetooth/index\" rel=\"nofollow\">Bluetooth</a> (for devices with Bluetooth chip)</li><li><a href=\"/docs/getting-started/internet-of-things/gpio\" rel=\"nofollow\">GPIO</a> (for devices with GPIO pins)</li><li><a href=\"https://help.mikrotik.com/docs/pages/viewpage.action?pageId=61046813\" rel=\"nofollow\">Modbus</a> (for devices with RS485 port)</li></ul>"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "A package for ARM and ARM64 devices which enables the use of USB Bluetooth adapters (must support LE 4.0+). <br/> *<strong>note:</strong> Not all adapters were tested. We cannot guarantee beforehand that a specific adapter will work."
+        },
+        {
+          "row": 20,
+          "col": 1,
+          "html": "Utilities and drivers for managing WiFi (up to 802.11ac) and 60GHz wireless interfaces. This package is bundled into RouterOS for versions up to 7.12. Starting with 7.13, it is a separate package. <br/> The <strong>wireless</strong> package conflicts with <strong>wifi-qcom</strong> and <strong>wifi-qcom-ac</strong> packages — they cannot be active at the same time."
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/dhcp-server/lease/make-static.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dhcp-server/lease/make-static.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dhcp-server/lease/make-static",
+  "md_sha256": "d1aaa177a67cd159d932f775115d9149c1ec5433fe8099c2a22d39ddb98fc3ae",
+  "html_sha256": "d3ed88c26b64579041700474319b628aaf47690e0f08e21ae1539c69b3ec8d91",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

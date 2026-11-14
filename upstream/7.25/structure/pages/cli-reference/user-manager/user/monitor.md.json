@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/user-manager/user/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/user/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/user/monitor",
+  "md_sha256": "0b9c2d99f3640976a7f54eaf603100cc8e890f6751a82c7a052aac2dbb78ad9d",
+  "html_sha256": "c17fe0f4f5635347c93ab5c658c8da096bf36c7f2bbdfdc5cab41b4921348ce6",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

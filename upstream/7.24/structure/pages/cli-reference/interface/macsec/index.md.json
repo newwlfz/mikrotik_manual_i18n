@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/macsec/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/macsec.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/macsec/",
+  "md_sha256": "f5756b644e69b443aceb6d7c72062f13148c208df882a52264b5d21166bbb98f",
+  "html_sha256": "0a3d3312cd49a8271676cdfdc7391609d74fc35a36bbc112a444cf8de1a3f3f5",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

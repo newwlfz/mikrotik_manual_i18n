@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "bridging-and-switching/swos/crs3.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/swos/crs3.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/swos/crs3",
+  "md_sha256": "9aeb7d52d23689f4859d243de0dae561212fa6a50e08f868a19d8b0b8c4036dd",
+  "html_sha256": "d0bf701f4aee61bf211d62038806c6d743ba5fdee763afc8fbe2dc52de6ba93a",
+  "body": {
+    "html": {
+      "lists": 13,
+      "listItems": 27,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 9,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 27,
+      "listItems": 27,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 27,
+      "listItems": 27,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

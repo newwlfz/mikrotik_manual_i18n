@@ -1,0 +1,11 @@
+{
+  "position": 17,
+  "label": "L2Tp Server",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/l2tp-server/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/l2tp-server"
+}

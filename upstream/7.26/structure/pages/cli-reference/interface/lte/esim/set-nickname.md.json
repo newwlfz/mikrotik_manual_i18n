@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/lte/esim/set-nickname.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim/set-nickname.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim/set-nickname",
+  "md_sha256": "5029899b0ea937120827983fc50a83ae0b869ecafb1d9ad12c2e31e4fc9cf30e",
+  "html_sha256": "850acb1d552e4859342881600c82079fd48787b6801b8c4e3d0c5795f067751b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

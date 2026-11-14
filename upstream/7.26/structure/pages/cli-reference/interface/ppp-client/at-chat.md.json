@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/ppp-client/at-chat.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ppp-client/at-chat.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ppp-client/at-chat",
+  "md_sha256": "f9b0a035d695e3db8e4d2b6abc22c81362960a1e97040317c7c19177ceedf394",
+  "html_sha256": "48fb4703de98cebb2baa89ddfdaf0567790513ceda00dc432997f04049acb6ad",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

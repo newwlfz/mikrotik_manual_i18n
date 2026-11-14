@@ -1,0 +1,156 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "hardware/poe-out.md",
+  "source_url": "https://manual.mikrotik.com/docs/hardware/poe-out.md",
+  "html_url": "https://manual.mikrotik.com/docs/hardware/poe-out",
+  "md_sha256": "6d7036eb19b67114dca8fe5074a01d3144fc85116421fbec050c79b3a48760d2",
+  "html_sha256": "a8dab12d8b9e36793488c70a127b20e7fe5c6ec2d9222806b8e7fe7d3d8e5880",
+  "body": {
+    "html": {
+      "lists": 14,
+      "listItems": 58,
+      "br": 0,
+      "details": 0,
+      "tables": 11,
+      "sup": 0,
+      "code": 48,
+      "wideTables": 1
+    },
+    "md": {
+      "lists": 58,
+      "listItems": 58,
+      "br": 0,
+      "details": 0,
+      "tables": 11,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 1
+    },
+    "local": {
+      "lists": 58,
+      "listItems": 58,
+      "br": 0,
+      "details": 0,
+      "tables": 11,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 1
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 7,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 15,
+      "cols": 8,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 0,
+          "html": "<strong>psuX-max-power</strong><br/><strong>jack-max-power</strong><br/><strong>2pin-max-power</strong>"
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "html": "<strong>psuX-poe-out-max-power</strong><br/><strong>jack-poe-out-max-power</strong><br/><strong>2pin-poe-out-max-power</strong><br/><strong>poe-in-poe-out-max-power</strong>"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Specifies PoE out state<ul><li>auto-on - the resistance on the port is checked first, and power is applied only if it is in the range from 3kΩ to 26.5kΩ</li><li>forced-on - resistance detection is disabled and power is always provided on pair B (alt)</li><li>off - all detection and power is turned off for this port</li></ul>Additional states on PSEs that support 802.3bt PoE out:<ul><li>forced-on-a - same as forced-on, but power is provided on pair A (main)</li><li>forced-on-bt - same as forced-on, but power is provided on all 4 pairs (available only from the CLI, this state cannot be selected in Winbox/WebFig)</li></ul><strong>Note:</strong> Short-circuit and overload protection is always on, independently of the selected PoE out state."
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "poe-priority specifies the importance of PoE out ports, in cases when a total PoE out limit is reached, the interface with the lowest port priority will be powered off first. Highest priority is 0, the lowest priority is 99. If there are 2 or more ports with the same priority then the port with the smallest port number will have a higher priority. <br/>Every 6 seconds ports will be checked for a possibility to provide PoE out if it was turned off due to port priority."
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 10,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

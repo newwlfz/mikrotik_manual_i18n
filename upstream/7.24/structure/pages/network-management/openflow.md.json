@@ -1,0 +1,102 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "network-management/openflow.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/network-management/openflow.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/network-management/openflow",
+  "md_sha256": "affd66c275a0cf23f2718d1246204a4666b9f96f9ab61562bb6a299b57c27608",
+  "html_sha256": "cb3d8ff21370bd4eaad86519d7bae972ea7724a2764c2e06656fdf28041c97a6",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 7,
+      "sup": 0,
+      "code": 16,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 19,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 7,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 19,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 7,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

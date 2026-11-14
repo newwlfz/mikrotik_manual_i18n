@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/caps-man/access-list.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/access-list.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/access-list",
+  "md_sha256": "129584f38d0c672b09e0673d85c0e454ffb891e56b72cb6946e889a5c31a00fa",
+  "html_sha256": "04a67b81fd357d4217f89674a9e17d0779501e00b2fbc332da9520e15b53229d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

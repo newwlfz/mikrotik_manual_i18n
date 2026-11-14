@@ -1,0 +1,11 @@
+{
+  "position": 7,
+  "label": "Ospf",
+  "key": "routing-and-networking-protocols/unicast/ospf",
+  "link": {
+    "type": "doc",
+    "id": "routing-and-networking-protocols/unicast/ospf/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

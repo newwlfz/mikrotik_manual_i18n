@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/disk/btrfs/subvolume.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/disk/btrfs/subvolume.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/disk/btrfs/subvolume",
+  "md_sha256": "7c232439e710b3be614ad4bcebde1f00f56f9af2cbbdec2c6f6bbbb714f63157",
+  "html_sha256": "328e3e701b961e91503c936da1ba5821e606e70a7e8e06b9425526943559a585",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

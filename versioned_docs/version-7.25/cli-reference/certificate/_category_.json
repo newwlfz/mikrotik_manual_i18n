@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "certificate",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/certificate/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/certificate"
+}

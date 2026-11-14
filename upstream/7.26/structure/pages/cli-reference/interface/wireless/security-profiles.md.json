@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wireless/security-profiles.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/security-profiles.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/security-profiles",
+  "md_sha256": "2625cad9e6505a598062de91d060a927f6d298b866e35a94d7bc34c83f00e5a8",
+  "html_sha256": "853a75b548471e49246a89cb28e53a89007c741a2858f3966662ec323ebd256b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

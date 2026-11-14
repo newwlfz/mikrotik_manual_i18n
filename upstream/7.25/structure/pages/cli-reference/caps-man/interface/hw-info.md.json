@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/caps-man/interface/hw-info.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/interface/hw-info.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/interface/hw-info",
+  "md_sha256": "54976410bb2e8dc44564c27e44e8ec49d28df09ad22a0bff919c3e9ffe0f7b40",
+  "html_sha256": "7dab57d571c073887d51a94378fc774795fbfdf47c39bed86a232d8326a02a71",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

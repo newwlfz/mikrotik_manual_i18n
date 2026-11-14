@@ -1,0 +1,11 @@
+{
+  "position": 8,
+  "label": "Tx Manager",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/ethernet/switch/qos/tx-manager/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/ethernet/switch/qos/tx-manager"
+}

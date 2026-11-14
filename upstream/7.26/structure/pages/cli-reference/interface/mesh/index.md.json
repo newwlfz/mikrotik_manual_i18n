@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/mesh/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/mesh.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/mesh/",
+  "md_sha256": "ad43372c0bcbb4b0388e6401f681a08caff4e36bef5bcd302c3ebad3c191c854",
+  "html_sha256": "86ac535ba4f796f45da0dfc1233850017c9f905276c82722ba797c9a35e73509",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

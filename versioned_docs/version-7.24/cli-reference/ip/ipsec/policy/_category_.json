@@ -1,0 +1,11 @@
+{
+  "position": 7,
+  "label": "Policy",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/ipsec/policy/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/ipsec/policy"
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/proxy/access/reset-counters-all.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/proxy/access/reset-counters-all.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/proxy/access/reset-counters-all",
+  "md_sha256": "e4afa648f8b536f6d405bdb7fb0204a92df4aec8fd865a23b7f56edcd6cba9b3",
+  "html_sha256": "2c9a7c0f3fa79a4ccd0b7ffdb336d7686e93625673a364f203f0630a7dcbd778",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

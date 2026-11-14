@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "virtual-private-networks/l2tp/lac-and-lns-setup-with-cisco-as-lac.md",
+  "source_url": "https://manual.mikrotik.com/docs/virtual-private-networks/l2tp/lac-and-lns-setup-with-cisco-as-lac.md",
+  "html_url": "https://manual.mikrotik.com/docs/virtual-private-networks/l2tp/lac-and-lns-setup-with-cisco-as-lac",
+  "md_sha256": "76164949ca3b5d90b2b87dfb7cc51b5e124625ce8c196409c0d60400ea538440",
+  "html_sha256": "88079d39ab6be9e79d1e3523c3f0a738083d9734a6aebb4d9063a955c96ee7e2",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

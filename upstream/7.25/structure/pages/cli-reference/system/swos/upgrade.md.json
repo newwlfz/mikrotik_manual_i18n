@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/swos/upgrade.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/swos/upgrade.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/swos/upgrade",
+  "md_sha256": "b31d594e7f43911795273853fcd1d2da7078f02b72e5d1b9b0fd25cf38665c12",
+  "html_sha256": "9acbc9145ed3e4cd009d92481596c78c5385e86ef1dcca538410cd4d396c9374",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

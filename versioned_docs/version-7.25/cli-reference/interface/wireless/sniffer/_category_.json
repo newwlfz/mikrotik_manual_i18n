@@ -1,0 +1,11 @@
+{
+  "position": 20,
+  "label": "Sniffer",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/wireless/sniffer/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/wireless/sniffer"
+}

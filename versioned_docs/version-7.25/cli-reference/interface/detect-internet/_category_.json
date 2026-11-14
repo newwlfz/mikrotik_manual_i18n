@@ -1,0 +1,11 @@
+{
+  "position": 5,
+  "label": "Detect Internet",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/detect-internet/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/detect-internet"
+}

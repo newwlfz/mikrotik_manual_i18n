@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "network-management/cloud/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/network-management/cloud.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/network-management/cloud/",
+  "md_sha256": "ab4c8c117dd3802eb94b027450ed7ff4b752bdf5faf2c70cf0a9dda2d5e14ef1",
+  "html_sha256": "f4ca3a214b72f97c1dd4eeab9d250bc57cf1304984408e789c976ab0dbb5d172",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 23,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

@@ -1,0 +1,89 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "high-availability-solutions/multi-chassis-link-aggregation-group.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/high-availability-solutions/multi-chassis-link-aggregation-group.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/high-availability-solutions/multi-chassis-link-aggregation-group",
+  "md_sha256": "4e41672c1dc8198ce38aed63f8ff5944735dc654fcd40c0d9dee927075395630",
+  "html_sha256": "0a29a1ac46ba4b7c5841e8217c8d30b860b50a002cb0e57edfdbf894f8794769",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 1,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 26,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        1,
+        3
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "An interface that will be used as a peer port. Both peer devices are using inter-chassis communication over these peer ports to establish MLAG and update the host table. <br/> Peer ports can be configured as single Ethernet interfaces or bonding interfaces. However, using a bonding interface is recommended, as it helps prevent a single interface failure from affecting connectivity, especially when both MLAG nodes are still up and running. <br/> It is recommended to keep the untagged VLAN used by the peer ports separate from the rest of your network, either by assigning a dedicated untagged VLAN (using <code>pvid</code>), or by setting the peer port to only allow VLAN tagged frames (using <code>frame-types=admit-only-vlan-tagged</code>). <br/> All VLANs used for bridge slave ports must also be configured as tagged VLANs for peer-port (in the <code>/interface/bridge/vlan</code> table), so that peer-port is a member of those VLANs and can forward data."
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

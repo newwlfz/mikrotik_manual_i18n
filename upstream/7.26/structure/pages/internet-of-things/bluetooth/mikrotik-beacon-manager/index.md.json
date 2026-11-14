@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "internet-of-things/bluetooth/mikrotik-beacon-manager/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/internet-of-things/bluetooth/mikrotik-beacon-manager.md",
+  "html_url": "https://manual.mikrotik.com/docs/internet-of-things/bluetooth/mikrotik-beacon-manager/",
+  "md_sha256": "35d6871675b47f185d78322eeaf5a9f464b99a5b5dd083f26ea894e643f6c8cc",
+  "html_sha256": "841d21ba89365d00829de6978c99917368c38271c511362c7fa2326bfcbf516f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

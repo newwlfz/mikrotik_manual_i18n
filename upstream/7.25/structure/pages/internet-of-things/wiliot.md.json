@@ -1,0 +1,76 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "internet-of-things/wiliot.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/internet-of-things/wiliot.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/internet-of-things/wiliot",
+  "md_sha256": "b187266b024d87131b62c2354a5f03f300a0e51a5556e6d75f7078b1c00bb89c",
+  "html_sha256": "8ca130d971d493add365b5dffab22c25b88f6d9da43dcd21d8e21c1e32531219",
+  "body": {
+    "html": {
+      "lists": 8,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 12,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 15,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 15,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Select a role for the device: <br/><ul><li><strong>gateway</strong>. In this mode, the device establishes MQTT connection with the server and forwards scanner's captured IoT Pixel beacons to it. It also advertises commands to the nearby bridges received from the subscribed topic.</li><li><strong>bridge</strong>. In this mode, the device energizes surrounding IoT Pixels (powering them up).</li></ul><br/><strong>Caution:</strong><code>bridge</code> mode is not implemented yet. <br/>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

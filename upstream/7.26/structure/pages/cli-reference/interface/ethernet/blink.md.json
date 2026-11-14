@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/ethernet/blink.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/blink.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/blink",
+  "md_sha256": "7e4723c668fac8a29bb711653665172e6191605002bc22dbfa49f2acc3b9657c",
+  "html_sha256": "60f042765c67995274e59c119be4646bcbb48af0e32fcdb4f6318c2a35d5a6df",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

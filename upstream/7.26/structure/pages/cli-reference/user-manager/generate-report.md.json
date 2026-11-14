@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/user-manager/generate-report.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/generate-report.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/generate-report",
+  "md_sha256": "75a1396fbe40f8c23ba215c086fa73fcad1b317c521a8abee21ea0080c8cc7f5",
+  "html_sha256": "ae4d88a767dd3e4848cbeb2d4f66e66f3ae2b816a71dfbe72e463598b00fed3a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

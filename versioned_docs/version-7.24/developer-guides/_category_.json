@@ -1,0 +1,11 @@
+{
+  "position": 20,
+  "label": "Developer Guides",
+  "key": "developer-guides",
+  "link": {
+    "type": "doc",
+    "id": "developer-guides/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

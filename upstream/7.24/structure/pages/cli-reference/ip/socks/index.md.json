@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/socks/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/socks.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/socks/",
+  "md_sha256": "05f9f9c14f305a07855a307f6e4930b0b981dcc65b4459dda5bfb958730647e2",
+  "html_sha256": "48832327a2dc9b19d9efb07d9b08903010a48e27b01c406010278302ec66495f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

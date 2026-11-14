@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "Dhcp Relay",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ipv6/dhcp-relay/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ipv6/dhcp-relay"
+}

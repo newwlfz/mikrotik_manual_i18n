@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/caps-man/remote-cap/provision.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/caps-man/remote-cap/provision.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/caps-man/remote-cap/provision",
+  "md_sha256": "26b0bd51073610c3e4e5c147ccab18b5df099e096f1ab03f5a3bbea150355bf4",
+  "html_sha256": "c2e9cb5806f940bdedb99ab5c85730f57be86c83d4eb726e70edcdf0a59a9729",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,11 @@
+{
+  "position": 18,
+  "label": "Sms",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/tool/sms/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/tool/sms"
+}

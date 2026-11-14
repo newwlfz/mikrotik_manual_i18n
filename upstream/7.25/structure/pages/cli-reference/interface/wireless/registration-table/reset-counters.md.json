@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/wireless/registration-table/reset-counters.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/registration-table/reset-counters.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireless/registration-table/reset-counters",
+  "md_sha256": "ea5186573d5c90f62908f0c0002495f60a626236e295bfcc20712f3c323abf9f",
+  "html_sha256": "e83dc257259c15c67c96cfeb6952d0da0d6e285b8544b54f328624472ee20c3f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

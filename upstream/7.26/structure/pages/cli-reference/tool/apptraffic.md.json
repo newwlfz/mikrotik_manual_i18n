@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/tool/apptraffic.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/tool/apptraffic.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/tool/apptraffic",
+  "md_sha256": "0d321c8fa6840448f79694f1b71f7ca6e1c8f44a9324e8b235ff6ee8bba4c188",
+  "html_sha256": "b93a22b7892fcd904445cb8f730d9da5ffe9afb03dd3dac822539fe2e918eb90",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

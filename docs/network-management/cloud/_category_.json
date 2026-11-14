@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Cloud",
+  "key": "network-management/cloud",
+  "link": {
+    "type": "doc",
+    "id": "network-management/cloud/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

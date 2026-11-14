@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "mobile-networking/gps/gps-tracking-using-mqtt-and-thingsboard.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/mobile-networking/gps/gps-tracking-using-mqtt-and-thingsboard.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/mobile-networking/gps/gps-tracking-using-mqtt-and-thingsboard",
+  "md_sha256": "5954989c0ffe9a3602acdd2ff4384446b0a8b016238f313125c1db39699ad799",
+  "html_sha256": "7e2a646f0085cb7ef28df29fe2c85391cac443e79b80460d6e6190b3cbc7fac3",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 13,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

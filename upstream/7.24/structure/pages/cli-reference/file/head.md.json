@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/file/head.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/file/head.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/file/head",
+  "md_sha256": "df5b9d66538a9859ce5cc36a81fbce6bb9b9197c83edcf3056dce0612d28000c",
+  "html_sha256": "c9fcb0a8649fbc51dfb6d17ddc5e001e0f5023df0948441336df1f53e21d1d1e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

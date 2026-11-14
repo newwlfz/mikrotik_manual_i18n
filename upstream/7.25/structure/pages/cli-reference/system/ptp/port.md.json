@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/ptp/port.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/ptp/port.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/ptp/port",
+  "md_sha256": "45ffb607b3ac2fa39306e07d9471ddd6365ef4e69c8c129f3d9208e7b6d5f485",
+  "html_sha256": "5f6a627653796c429f052749fbf127a2bf2e60bd99a37d68d6df8682e1f74bc6",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

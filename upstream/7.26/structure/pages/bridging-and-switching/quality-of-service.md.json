@@ -1,0 +1,114 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "bridging-and-switching/quality-of-service.md",
+  "source_url": "https://manual.mikrotik.com/docs/bridging-and-switching/quality-of-service.md",
+  "html_url": "https://manual.mikrotik.com/docs/bridging-and-switching/quality-of-service",
+  "md_sha256": "a623f6ab50c8a8bc2d6df3a1f2d952d9892cc79b512871d6fc4a7914b68820b1",
+  "html_sha256": "e65f1138b0dad021d0dc68fa88832ffe242ff94d3793eb5dd0958a7d8c425a0a",
+  "body": {
+    "html": {
+      "lists": 8,
+      "listItems": 35,
+      "br": 2,
+      "details": 0,
+      "tables": 4,
+      "sup": 4,
+      "code": 32,
+      "wideTables": 2
+    },
+    "md": {
+      "lists": 35,
+      "listItems": 35,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 4,
+      "code": 0,
+      "wideTables": 2
+    },
+    "local": {
+      "lists": 35,
+      "listItems": 35,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 4,
+      "code": 0,
+      "wideTables": 2
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 15,
+      "cols": 11,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "CRS305-1G-4S+IN <br/> CRS326-24G-2S+ (RM/IN) <br/> CRS328-24P-4S+RM <br/> CRS328-4C-20S-4S+RM"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "CRS305-1G-4S+OUT (FiberBox Plus) <br/> CRS310-1G-5S-4S+ (netFiber 9/IN) <br/> CRS310-8G+2S+IN <br/> CRS318-16P-2S+OUT (netPower 16P) <br/> CRS320-8P-8B-4S+RM <br/> CRS418-8P-8G-2S+RM <br/> CRS418-8P-8G-2S+5axQ2axQ-RM"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "CCR2216-1G-12XS-2XQ <br/> CRS518-16XS-2XQ-RM"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "CRS504-4XQ (IN/OUT) <br/> CRS510-8XS-2XQ-IN <br/> RDS2216-2XG-4S+4XS-2XQ"
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "html": "CRS326-24S+2Q+RM <br/> CRS326-4C+20G+2Q+RM"
+        },
+        {
+          "row": 11,
+          "col": 1,
+          "html": "CRS354-48G-4S+2Q+RM <br/> CRS354-48P-4S+2Q+RM"
+        },
+        {
+          "row": 14,
+          "col": 1,
+          "html": "CRS812-8DS-2DQ-2DDQ-RM <br/> CRS804-4DDQ-hRM"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 4,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 10,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 12,
+      "cols": 14,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

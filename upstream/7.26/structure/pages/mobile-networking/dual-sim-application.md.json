@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "mobile-networking/dual-sim-application.md",
+  "source_url": "https://manual.mikrotik.com/docs/mobile-networking/dual-sim-application.md",
+  "html_url": "https://manual.mikrotik.com/docs/mobile-networking/dual-sim-application",
+  "md_sha256": "87cb8229d473a72a14129054c31b4ffbf12414be9f169d21ca0bc044fbe4e0e8",
+  "html_sha256": "0ff896449f970b8bacd1b9bd1f9bd7b44724633428a511767175f3b3a351f7f7",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 5,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

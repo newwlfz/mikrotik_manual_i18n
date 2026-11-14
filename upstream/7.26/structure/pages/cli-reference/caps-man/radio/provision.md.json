@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/caps-man/radio/provision.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/caps-man/radio/provision.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/caps-man/radio/provision",
+  "md_sha256": "1b3f57f1f410dd4776b707b6dd7b696dac96fb13317199dfa4ca91590e032a91",
+  "html_sha256": "518e66c0d9830024d3c866acecc2575dae5c214b1a6e149748eb73408849580b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

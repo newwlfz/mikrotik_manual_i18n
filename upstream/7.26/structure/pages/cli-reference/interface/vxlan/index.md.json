@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/vxlan/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/vxlan.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/vxlan/",
+  "md_sha256": "78fbd5488b4169df940809d117df58e9c414e27374ba8f87cd4e32d511a01ec7",
+  "html_sha256": "a3620ddd50c2aa381c43fb33eb71c2ea5553db1455b95c13ec66868982c19f4e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

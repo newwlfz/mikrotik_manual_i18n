@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/firewall/layer7-protocol.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/firewall/layer7-protocol.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/firewall/layer7-protocol",
+  "md_sha256": "20a3907b98bdd2f518397840fd8135cff0ff8bae7fc192d3e96a43c3210f6bc6",
+  "html_sha256": "612a8aebc4c5c1b4b4da73c78ce3570115f9db0a65be795cd31ede4ed8b5402a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

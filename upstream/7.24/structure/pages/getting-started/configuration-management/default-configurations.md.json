@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "getting-started/configuration-management/default-configurations.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/getting-started/configuration-management/default-configurations.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/getting-started/configuration-management/default-configurations",
+  "md_sha256": "398ec623861c7e8c4fcdcaff35670d769c80b5a203c7086db7c9f13932fd7ece",
+  "html_sha256": "b66425d0ed1590f422ae93d2c36cabf4e8967bbf4bcc9c32d0c1a74fb0a4709c",
+  "body": {
+    "html": {
+      "lists": 32,
+      "listItems": 117,
+      "br": 6,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 7,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 117,
+      "listItems": 117,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 117,
+      "listItems": 117,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        6,
+        7
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

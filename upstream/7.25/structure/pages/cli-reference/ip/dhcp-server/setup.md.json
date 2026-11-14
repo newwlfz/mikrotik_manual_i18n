@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/dhcp-server/setup.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/dhcp-server/setup.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/dhcp-server/setup",
+  "md_sha256": "9a02e01dea2b3957c8739fb93cc9fc915d136fd223bdd4463da4feeb153a90ef",
+  "html_sha256": "931772c14f91bd573b1643c43efbaea017fcf476b3e5abd0c9441d2bd276b9b0",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

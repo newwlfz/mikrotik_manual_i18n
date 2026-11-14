@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/tool/dns-update.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/dns-update.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/dns-update",
+  "md_sha256": "deddaac852cdb6d45d2abd240472142be07032917b4902ab977423d5e9da87ae",
+  "html_sha256": "f3779b2081e10a386e94ec697bd8ef7406eef930a4534260072dce65e7fc9c0c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

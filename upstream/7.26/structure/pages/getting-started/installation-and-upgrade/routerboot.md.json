@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "getting-started/installation-and-upgrade/routerboot.md",
+  "source_url": "https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/routerboot.md",
+  "html_url": "https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/routerboot",
+  "md_sha256": "a1a394f45a380f41405144d23206ff7a896adca666368e1651f1037c25178c2f",
+  "html_sha256": "681a20dd6a563c96c05243a7ef047b0245cd54871a5fcbfca0462dffbf925b76",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 5,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 19,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

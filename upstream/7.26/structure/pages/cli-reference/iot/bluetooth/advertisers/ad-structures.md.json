@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/iot/bluetooth/advertisers/ad-structures.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/advertisers/ad-structures.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/advertisers/ad-structures",
+  "md_sha256": "2f670e260953cfe007a8bee8d9dc48296a32d5d066f1f873c3f90340d68da440",
+  "html_sha256": "28c88d25bd1dbaaab6db6569d1112da3d3b55afcefa4eef67d501d8aa472cf49",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

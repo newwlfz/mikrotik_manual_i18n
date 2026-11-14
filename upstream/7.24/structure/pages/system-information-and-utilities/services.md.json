@@ -1,0 +1,297 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "system-information-and-utilities/services.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/services.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/services",
+  "md_sha256": "7874d13df22fa9de0d81086903e1a7b60ebc32a6f65f8aa79dda553f7d3f4401",
+  "html_sha256": "adb72c4250e129d0bb2e0b868dacb409adfbce15132588de78d3e3f5d9466765",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "List of IP/IPv6 prefixes from which the service is accessible. When this parameter is set, packets are not dropped at the network level, but access to the service is denied for sources not matching the specified addresses. This option is best suited for restricting access within trusted networks. <br/> To block access from external or untrusted networks, we recommend using a Firewall instead."
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 48,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "unaligned": {
+        "reason": "cell-count",
+        "row": 38,
+        "markdown": 3,
+        "html": 2
+      },
+      "rebuild": true,
+      "rebuild_rows": [
+        [
+          "<strong>20/tcp</strong>",
+          "FTP data connection"
+        ],
+        [
+          "<strong>21/tcp</strong>",
+          "FTP control connection"
+        ],
+        [
+          "<strong>22/tcp</strong>",
+          "Secure Shell (SSH) remote login protocol"
+        ],
+        [
+          "<strong>23/tcp</strong>",
+          "Telnet protocol"
+        ],
+        [
+          "<strong>53/tcp 53/udp</strong>",
+          "DNS"
+        ],
+        [
+          "<strong>67/udp</strong>",
+          "Bootstrap protocol or <a href=\"/docs/7.24/network-management/dhcp#dhcp-server\">DHCP Server</a>"
+        ],
+        [
+          "<strong>68/udp</strong>",
+          "Bootstrap protocol or <a href=\"/docs/7.24/network-management/dhcp#dhcp-client\">DHCP Client</a>"
+        ],
+        [
+          "<strong>80/tcp</strong>",
+          "World Wide Web HTTP"
+        ],
+        [
+          "<strong>123/udp</strong>",
+          "Network Time Protocol (<a href=\"/docs/7.24/system-information-and-utilities/ntp\">NTP</a>"
+        ],
+        [
+          "<strong>161/udp</strong>",
+          "Simple Network Management Protocol (<a href=\"/docs/7.24/diagnostics-monitoring-and-troubleshooting/snmp\">SNMP</a>"
+        ],
+        [
+          "<strong>179/tcp</strong>",
+          "Border Gateway Protocol (<a href=\"/docs/7.24/user-guides/routing-and-networking-protocols/unicast/bgp/\">BGP</a>"
+        ],
+        [
+          "<strong>443/tcp</strong>",
+          "Secure Socket Layer (SSL) encrypted HTTP"
+        ],
+        [
+          "<strong>500/udp</strong>",
+          "Internet Key Exchange (IKE) protocol"
+        ],
+        [
+          "<strong>520/udp 521/udp</strong>",
+          "<a href=\"/docs/7.24/user-guides/routing-and-networking-protocols/unicast/rip\">RIP</a> routing protocol"
+        ],
+        [
+          "<strong>546/udp</strong>",
+          "<a href=\"/docs/7.24/network-management/dhcp\">DHCPv6 Client</a> message"
+        ],
+        [
+          "<strong>547/udp</strong>",
+          "<a href=\"/docs/7.24/network-management/dhcp\">DHCPv6 Server</a> message"
+        ],
+        [
+          "<strong>646/tcp</strong>",
+          "<a href=\"/docs/7.24/user-guides/routing-and-networking-protocols/mpls/ldp\">LDP</a> transport session"
+        ],
+        [
+          "<strong>646/udp</strong>",
+          "<a href=\"/docs/7.24/user-guides/routing-and-networking-protocols/mpls/ldp\">LDP</a> hello protocol"
+        ],
+        [
+          "<strong>1080/tcp</strong>",
+          "<a href=\"/docs/7.24/network-management/socks/\">SOCKS</a> proxy protocol"
+        ],
+        [
+          "<strong>1698/udp 1699/udp</strong>",
+          "RSVP TE Tunnels"
+        ],
+        [
+          "<strong>1701/udp</strong>",
+          "Layer 2 Tunnel Protocol (<a href=\"/docs/7.24/virtual-private-networks/l2tp/\">L2TP</a>)"
+        ],
+        [
+          "<strong>1723/tcp</strong>",
+          "Point-To-Point Tunneling Protocol (<a href=\"/docs/7.24/virtual-private-networks/pptp\">PPTP</a>)"
+        ],
+        [
+          "<strong>1900/udp 2828/tcp</strong>",
+          "Universal Plug and Play (<a href=\"/docs/7.24/firewall-and-quality-of-service/upnp\">uPnP</a>)"
+        ],
+        [
+          "<strong>1966/udp</strong>",
+          "MME originator message traffic"
+        ],
+        [
+          "<strong>1966/tcp</strong>",
+          "MME gateway protocol"
+        ],
+        [
+          "<strong>2000/tcp</strong>",
+          "Bandwidth test server"
+        ],
+        [
+          "<strong>5246,5247/udp</strong>",
+          "<a href=\"/docs/7.24/wireless/abgn/capsman/ap-controller-capsman\">CAPsMAN</a>"
+        ],
+        [
+          "<strong>5350/udp</strong>",
+          "NAT-PMP client"
+        ],
+        [
+          "<strong>5351/udp</strong>",
+          "NAT-PMP server"
+        ],
+        [
+          "<strong>5678/udp</strong>",
+          "Mikrotik Neighbor Discovery Protocol"
+        ],
+        [
+          "<strong>6343/tcp</strong>",
+          "Default OpenFlow port"
+        ],
+        [
+          "<strong>8080/tcp</strong>",
+          "HTTP Web Proxy"
+        ],
+        [
+          "<strong>8291/tcp</strong>",
+          "<a href=\"/docs/7.24/management-tools/winbox\">Winbox</a>"
+        ],
+        [
+          "<strong>8728/tcp</strong>",
+          "<a href=\"/docs/7.24/developer-guides/api/\">API</a>"
+        ],
+        [
+          "<strong>8729/tcp</strong>",
+          "API-SSL"
+        ],
+        [
+          "<strong>20561/udp</strong>",
+          "MAC winbox"
+        ],
+        [
+          "<strong>/1</strong>",
+          "ICMP"
+        ],
+        [
+          "<strong>/2</strong>",
+          "[Multicast"
+        ],
+        [
+          "<strong>/4</strong>",
+          "<a href=\"/docs/7.24/virtual-private-networks/ipip\">IPIP</a> encapsulation"
+        ],
+        [
+          "<strong>/41</strong>",
+          "IPv6 (encapsulation)"
+        ],
+        [
+          "<strong>/46</strong>",
+          "RSVP TE tunnels"
+        ],
+        [
+          "<strong>/47</strong>",
+          "General Routing Encapsulation (GRE) - used for PPTP and <a href=\"/docs/7.24/virtual-private-networks/eoip\">EoIP</a> tunnels"
+        ],
+        [
+          "<strong>/50</strong>",
+          "Encapsulating Security Payload for IPv4 (ESP)"
+        ],
+        [
+          "<strong>/51</strong>",
+          "Authentication Header for IPv4 (AH)"
+        ],
+        [
+          "<strong>/89</strong>",
+          "<a href=\"/docs/7.24/user-guides/routing-and-networking-protocols/unicast/ospf/\">OSPF</a> routing protocol"
+        ],
+        [
+          "<strong>/103</strong>",
+          "[Multicast"
+        ],
+        [
+          "<strong>/112</strong>",
+          "<a href=\"/docs/7.24/high-availability-solutions/vrrp\">VRRP</a>"
+        ]
+      ]
+    },
+    {
+      "index": 4,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": [
+    {
+      "table": 3,
+      "reason": "cell-count",
+      "row": 38,
+      "markdown": 3,
+      "html": 2
+    }
+  ]
+}

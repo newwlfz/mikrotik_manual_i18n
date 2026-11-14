@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/hotspot/active/login.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/hotspot/active/login.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/hotspot/active/login",
+  "md_sha256": "c7b1fb4f442b3f81c2133b507b8e062a0de77d519994873559587734fadb19ea",
+  "html_sha256": "86873295294fca98d9cdcffb8e7434418cfc5342986022788ddd62af95d21b12",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wifi/provisioning.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/provisioning.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/provisioning",
+  "md_sha256": "aecb877530e62dd2db31c5753e29651acfecd22e191b2ad27a1c17a500dab663",
+  "html_sha256": "83979639b026ce21cd84b0c726d01cfc8b9a589bb66e598aadf4f1fe0c1f91f2",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

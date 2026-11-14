@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "getting-started/installation-and-upgrade/install/chr-installation/esxi.md",
+  "source_url": "https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation/esxi.md",
+  "html_url": "https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation/esxi",
+  "md_sha256": "514fcfb040d55bbbf40d1459ef2377061b32175cb63c7c95df468231110e70ed",
+  "html_sha256": "a798ee8b829efbe8d886b2ec8e3de1a8dc7f77c09a88811db9a382416c416e13",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

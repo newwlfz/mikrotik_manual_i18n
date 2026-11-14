@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/iot/gpio/analog.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/gpio/analog.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/gpio/analog",
+  "md_sha256": "69a4ca0b14e9096e2b0e1048de293db14291660f167faf9d4df423345bc823a1",
+  "html_sha256": "2058dbbe1900f5e3a21858b26aad1339e4ec8e0ab22ca2ccec1a74f7e2daa116",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

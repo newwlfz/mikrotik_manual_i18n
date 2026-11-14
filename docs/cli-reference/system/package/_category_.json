@@ -1,0 +1,11 @@
+{
+  "position": 18,
+  "label": "Package",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/package/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/package"
+}

@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "Back To Home File",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/cloud/back-to-home-file/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/cloud/back-to-home-file"
+}

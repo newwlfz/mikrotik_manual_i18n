@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/container/config.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/container/config.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/container/config",
+  "md_sha256": "39323532a67976524726baf5224b705362f9fe459d4714546775eec2f0d7e878",
+  "html_sha256": "14cfcee37e97915dc4d8cb1b271cf51ebe1da3208680c5b6abce519f4c9c0c48",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

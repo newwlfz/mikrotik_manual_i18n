@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wireless/access-list.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/access-list.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/access-list",
+  "md_sha256": "1965611b7ed89317490dc751bb1a794d4a7ecb8a7ea76824295cc8f5e8c2731b",
+  "html_sha256": "23ec90d13d9c81733ac7454e4e1ac41b582324320318514c2fcc591b94d380c8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

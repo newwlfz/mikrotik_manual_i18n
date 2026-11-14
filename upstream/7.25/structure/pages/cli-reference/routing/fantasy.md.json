@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/routing/fantasy.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/fantasy.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/fantasy",
+  "md_sha256": "1ac1582201379391471ca9a5bc29a9a8d46c3eafc5a6c437c2539e66261d5c35",
+  "html_sha256": "bd870dee196b675d633ca4cce6ac9f27115d73b31d62394a9f9ffa588c9fd56a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

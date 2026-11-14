@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/dude/ros/registration-table.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/dude/ros/registration-table.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/dude/ros/registration-table",
+  "md_sha256": "c6a6fa3f921ed5eb46514cc81f619e92f43427e3e9823a956639388b2279ee26",
+  "html_sha256": "a28b9cae01e1f3162b8ef0806ef438976a51a876574e18a5d3b7f2e67b532e98",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

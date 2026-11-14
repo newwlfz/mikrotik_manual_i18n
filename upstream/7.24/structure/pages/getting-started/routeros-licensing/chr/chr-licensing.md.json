@@ -1,0 +1,68 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "getting-started/routeros-licensing/chr/chr-licensing.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/getting-started/routeros-licensing/chr/chr-licensing.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/getting-started/routeros-licensing/chr/chr-licensing",
+  "md_sha256": "7ef8929670f1122a90694b6ae869643980f152b651c22a1adf190994a7148503",
+  "html_sha256": "d1dd3afc711939511c3a038292eef93ef210c9496780f325a62139e5a9bb26d3",
+  "body": {
+    "html": {
+      "lists": 34,
+      "listItems": 67,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 67,
+      "listItems": 67,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 67,
+      "listItems": 67,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 5,
+          "col": 3,
+          "html": "In addition to the Free license, you can evaluate higher performance levels (P1, P10, or P-Unlimited) using a 60-day trial. <br/>A registered <a href=\"https://mikrotik.com\" target=\"_blank\" rel=\"noopener noreferrer\">MikroTik.com</a> account is required. From the CHR instance, you can request a trial license. This associates the instance System ID with your MikroTik account and enables license management and purchases.<br/>All paid license levels are available for trial. The trial period is valid for 60 days from activation.<br/>After expiration, the license status changes to <strong>\"Limited upgrades\"</strong>, meaning RouterOS cannot be upgraded.<br/><strong>Note:</strong> If you intend to purchase the license, complete the purchase before the trial expires. If no purchase is made within 2 months after expiration, the CHR instance is removed from your MikroTik account. In that case, a new CHR installation is required.<br/>To request a trial license, run the following command on the CHR instance: <code>/system license renew</code> You will be prompted to enter your MikroTik.com account username and password. (<em><a href=\"/docs/7.24/getting-started/configuration-management/list-of-menus-with-sensitive-parameters\">sensitive</a></em>)."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 4,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

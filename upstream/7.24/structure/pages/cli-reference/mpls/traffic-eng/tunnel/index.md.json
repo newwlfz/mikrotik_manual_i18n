@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/mpls/traffic-eng/tunnel/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/mpls/traffic-eng/tunnel.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/mpls/traffic-eng/tunnel/",
+  "md_sha256": "dd40eb2ebfe679c366272f96fb9a4220f6067b9ac05979570e89c88ec198a22e",
+  "html_sha256": "a01fe8f5a8e0617a0394eb23e52b5675ce5af15fcc8342ae099b003d36a2b385",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

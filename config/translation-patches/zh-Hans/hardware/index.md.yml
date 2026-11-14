@@ -1,0 +1,5 @@
+# The Hardware Guides landing page is the section's own name, not a model.
+# `normalize-hardware-titles` keeps model titles English; this page must not be
+# part of that rule, so its Chinese title is pinned here and `apply` reproduces
+# it on every rebuild (the sidebar navbar label already reads 硬件指南).
+title: "硬件指南"

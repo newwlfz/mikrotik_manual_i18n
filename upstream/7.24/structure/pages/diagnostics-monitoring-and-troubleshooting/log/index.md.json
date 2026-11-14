@@ -1,0 +1,121 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "diagnostics-monitoring-and-troubleshooting/log/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/log.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/log/",
+  "md_sha256": "f5d8d4b58a5493e020b189cdb98620ab7d54ffa6668a55569056e430c347fec7",
+  "html_sha256": "24515e2292a74baa8164fa837928053febd0cfa9e34afd79552a2606272d4e62",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 14,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        0,
+        2
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Regular expression used to match log messages. <br/>If the regex does not match, the action is not performed, <br/>even if the topic is configured for logging."
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "html": "<strong>topics</strong> (<em>account, acme-client, amt, async, backup, bfd, <br/>bgp, bridge, calc, caps, certificate, clock, container, <br/>critical, ddns, debug, dhcp, discover, disk, dns, dot1x, <br/>dude, e-mail, error, event, evpn, fetch, firewall, gps, <br/>gsm, health, hotspot, igmp-proxy, info, interface, ipsec, <br/>iscsi, isdn, isis, kvm, l2tp, lora, ldp, lte, manager, mme, <br/>mpls, mqtt, mvrp, natpmp, netwatch, ntp, ospf, ovpn, <br/>packet, pim, poe-in, poe-out, ppp, pppoe, pptp, ptp, <br/>queue, radvd, radius, raw, read, rip, route, rpki, rproxy, <br/>rsvp, script, sertcp, simulator, smb, snmp, socksify, ssh, <br/>ssld, sstp, state, store, stp, system, telephony, tftp, <br/>timer, tr069, update, upnp, ups, vpls, vrrp, warning, <br/>watchdog, web-proxy, wiliot, wireguard, wireless, write, zerotier</em>; Default: <strong>info</strong>)"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "Logs all messages that match the specified topic or list of topics.<br/>Use the <strong>!</strong> character before a topic to exclude matching messages. <br/>For example, to log NTP debug messages without packet details:<br/><br/><code>/system/logging/add topics=ntp,debug,!packet</code>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 25,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 15,
+          "col": 1,
+          "html": "Format for logs to be sent to remote instance: <br/><ul><li>cef - logs are sent in CEF format;</li><li>default - logs are sent as it is;</li><li>syslog - logs are sent in BSD-syslog format</li></ul>"
+        },
+        {
+          "row": 21,
+          "col": 1,
+          "html": "Severity level indicator defined in RFC 3164:<ul class=\"bullets\"><li>Emergency: system is unusable</li><li>Alert: action must be taken immediately</li><li>Critical: critical conditions</li><li>Error: error conditions</li><li>Warning: warning conditions</li><li>Notice: normal but significant condition</li><li>Informational: informational messages</li><li>Debug: debug-level messages</li></ul>"
+        },
+        {
+          "row": 23,
+          "col": 1,
+          "html": "Storage facility or target of log messages<ul class=\"bullets\"><li>disk - logs are saved to the hard drive</li><li>echo - logs are displayed on the console screen</li><li>email - logs are sent by email</li><li>memory - logs are stored in local memory buffer or multiple separate buffers (RAM files). </li><li>remote - logs are sent to remote host</li><li>script - executes a script from /system/script/ when a log message matches the rule. The script receives two variables: topics (log topic string) and message (log message content).</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 61,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 54,
+          "col": 1,
+          "html": "Log messages that are related to timers used in RouterOS. For example bgp keepalive logs<br/><br/><code>12:41:40 route,bgp,debug,timer KeepaliveTimer expired</code><br/><code>12:41:40 route,bgp,debug,timer RemoteAddress=2001:470:1f09:131::1</code><br/>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/proxy/reset-html.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/proxy/reset-html.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/proxy/reset-html",
+  "md_sha256": "07932bd004227d9392e1ebbdf76f7746131ac1316f6e9592c740245baea956a0",
+  "html_sha256": "a2d6ebb5712655f2d1416f889043b19a3d4485c35cdf6aceb4af5c8448f8fcb0",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 10,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

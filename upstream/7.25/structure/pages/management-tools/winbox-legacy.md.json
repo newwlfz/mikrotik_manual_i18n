@@ -1,0 +1,62 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "management-tools/winbox-legacy.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/management-tools/winbox-legacy.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/management-tools/winbox-legacy",
+  "md_sha256": "ae6d6570881b6df946c686ebf187f8f3a061e210f2dc15ba052a6925585c2e38",
+  "html_sha256": "51043782751f7d0024e4b2392df80fded1dfc271d355b8f498417fb846032440",
+  "body": {
+    "html": {
+      "lists": 16,
+      "listItems": 65,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 65,
+      "listItems": 65,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 65,
+      "listItems": 65,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 17,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 17,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

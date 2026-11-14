@@ -1,0 +1,73 @@
+# Translation provider policy.
+# The workflow reads the API key from the environment variable named below.
+schema: 1
+
+# opencode-go speaks the OpenAI chat-completions dialect. It requires the
+# x-opencode-session header, which the client mints per run.
+provider: opencode-go
+model: deepseek-v4.1-flash
+api_key_env: OPENCODE_API_KEY
+base_url: https://opencode.ai/inference/go/v1/chat/completions
+session_header: x-opencode-session
+
+glossary: config/glossary/zh-Hans.yml
+max_retries: 2
+temperature: 0
+
+# How one translation request is cut. `max_blocks` is the number of blocks the
+# model gets at once and `max_chars` the size budget of that request; a page
+# that exceeds either is sent as several requests (see
+# `tools/translate/lib/segments.mjs`). These were command-line flags
+# (`--batch`, `--max-chars`) with the same defaults, which is how an oversized
+# page used to be split by hand after the endpoint refused it.
+segmentation:
+  max_blocks: 8
+  max_chars: 8000
+
+# How close a link's visible text must be to the target page's English title
+# before the label is replaced with that page's Chinese title.
+#
+# The English source is not consistent - "Quick start" links to a page titled
+# "Quick Start guide", "Routing" to "Routing decision" - so an exact comparison
+# left English labels pointing at Chinese pages. 0.6 is the Sørensen-Dice
+# overlap of the folded word sets: it catches the subtitle/short-form variants
+# (>= 0.67) while a single shared word out of three stays below it. Technical
+# identifiers (`tmpfs`, `poe-out`) and glossary terms are never re-labelled,
+# whatever the score. Read by `tools/translate/lib/links.mjs`; `verify:links`
+# counts a similar-but-untranslated label as `failedTitle`.
+link_text_similarity: 0.6
+
+# These structures are copied verbatim, never translated.
+preserve:
+  - frontmatter_keys
+  - code_fences
+  - inline_code
+  - urls
+  - cli_paths
+  - mdx_component_names
+  - image_paths
+
+frontmatter_keys:
+  - id
+  - slug
+  - sidebar_position
+  - sidebar_class_name
+  - displayed_sidebar
+  - tags
+  - keywords
+  - image
+  - draft
+
+# Only these frontmatter values may be translated.
+translatable_frontmatter:
+  - title
+  - sidebar_label
+  - description
+
+# Overlays kept as-is instead of being rebuilt from the English source.
+#
+# `hardware/iot-products/knot-lr9g-kit.md` comes from a bilingual legacy page
+# (each paragraph is an English block followed by a `→` Chinese block). Block
+# alignment cannot reconstruct it without duplicating text, and the reviewed
+# (empty: no overlay is preserved byte for byte any more)
+preserve_overlays: []

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/certificate/export-certificate.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/certificate/export-certificate.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/certificate/export-certificate",
+  "md_sha256": "0d4e9dd401166ad85c915c1ad97fd3f5b363e66c818a07510ed38842e5d1e59e",
+  "html_sha256": "aa69c2c673d1d90da1289681537dada184d21aada30556efc3e9854c4e02550c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

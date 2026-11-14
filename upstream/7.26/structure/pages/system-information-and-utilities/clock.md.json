@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "system-information-and-utilities/clock.md",
+  "source_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/clock.md",
+  "html_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/clock",
+  "md_sha256": "0df176420ec3a22e81d03bc10572c381b7261693271923c0a37ea3ea7497682d",
+  "html_sha256": "9d5c1a9ca617052253ed37e541bd4df52fd115f0177c710cda555042a293e2f2",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 58,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 15,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 15,
+      "listItems": 15,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

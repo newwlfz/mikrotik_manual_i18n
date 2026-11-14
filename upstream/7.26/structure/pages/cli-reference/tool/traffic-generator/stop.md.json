@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/tool/traffic-generator/stop.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/stop.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/stop",
+  "md_sha256": "dbb862ec3690e2d6c54979787a4382102caba67c0559bfc3ca85ba1874acbcb3",
+  "html_sha256": "a6bd49cd59b72e0d89bdd638b2a3b54ccce841e6151855850c3e1b7fdc2dfc56",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

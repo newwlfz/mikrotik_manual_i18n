@@ -1,0 +1,11 @@
+{
+  "position": 22,
+  "label": "Mesh",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/mesh/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/mesh"
+}

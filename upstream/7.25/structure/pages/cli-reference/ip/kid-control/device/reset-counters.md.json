@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/kid-control/device/reset-counters.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/kid-control/device/reset-counters.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/kid-control/device/reset-counters",
+  "md_sha256": "72271ee2dcb22db4bbc2057f07657a27b27b137a4838e3c6f2ee4fab9fbd96e7",
+  "html_sha256": "0125fb91e0390d8e7c251120a258962db1931181a3fb57ab194b103f2c11e90e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

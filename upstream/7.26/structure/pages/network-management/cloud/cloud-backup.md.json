@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "network-management/cloud/cloud-backup.md",
+  "source_url": "https://manual.mikrotik.com/docs/network-management/cloud/cloud-backup.md",
+  "html_url": "https://manual.mikrotik.com/docs/network-management/cloud/cloud-backup",
+  "md_sha256": "4db59c4de0e7331f60893557148b15e1b1c3339f828f8e07116fd7f5b569fb61",
+  "html_sha256": "e95a3f18645c61e6e22dfe26c8a9390e95177d8029f24d3b235d4189a3cf9057",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 22,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

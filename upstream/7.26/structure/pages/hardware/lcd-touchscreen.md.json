@@ -1,0 +1,191 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "hardware/lcd-touchscreen.md",
+  "source_url": "https://manual.mikrotik.com/docs/hardware/lcd-touchscreen.md",
+  "html_url": "https://manual.mikrotik.com/docs/hardware/lcd-touchscreen",
+  "md_sha256": "7865b3fea66ceff1bf8ad370fd4654c74f69174e503f798c26b1d39a6c25414b",
+  "html_sha256": "3ae98085823627f1bcb2cef19780b454e74f12e6e16cf9dd9cee22d09642a805",
+  "body": {
+    "html": {
+      "lists": 10,
+      "listItems": 31,
+      "br": 0,
+      "details": 0,
+      "tables": 7,
+      "sup": 0,
+      "code": 12,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 31,
+      "listItems": 31,
+      "br": 0,
+      "details": 0,
+      "tables": 7,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 31,
+      "listItems": 31,
+      "br": 0,
+      "details": 0,
+      "tables": 7,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "unaligned": {
+        "reason": "cell-count",
+        "row": 1,
+        "markdown": 3,
+        "html": 2
+      },
+      "rebuild": true,
+      "rebuild_header": [
+        "Property",
+        "Description"
+      ],
+      "rebuild_rows": [
+        [
+          "<strong>disabled</strong> (*yes",
+          "no*; Default: <strong>no</strong>)"
+        ],
+        [
+          "<strong>max-speed</strong> (*integer",
+          "auto*; Default:)"
+        ],
+        [
+          "<strong>timeout</strong> (<em>time interval: 1s..1m</em>; Default: <strong>10s</strong>)",
+          "Specifies how long each interface slide displays during the slideshow"
+        ]
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "unaligned": {
+        "reason": "cell-count",
+        "row": 1,
+        "markdown": 3,
+        "html": 2
+      },
+      "rebuild": true,
+      "rebuild_header": [
+        "Property",
+        "Description"
+      ],
+      "rebuild_rows": [
+        [
+          "<strong>disabled</strong> (*yes",
+          "no*; Default: <strong>no</strong>)"
+        ],
+        [
+          "<strong>timeout</strong> (<em>time interval: 1s..1m</em>; Default: <strong>10s</strong>)",
+          "Duration that each informative slide is displayed"
+        ]
+      ]
+    },
+    {
+      "index": 4,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "unaligned": {
+        "reason": "cell-count",
+        "row": 2,
+        "markdown": 3,
+        "html": 2
+      },
+      "rebuild": true,
+      "rebuild_header": [
+        "Property",
+        "Description"
+      ],
+      "rebuild_rows": [
+        [
+          "<strong>pin-number</strong> (<em>number</em>; Default: <strong>1234</strong>)",
+          "PIN protection code"
+        ],
+        [
+          "<strong>hide-pin-number</strong> (*yes",
+          "no*; Default: <strong>no</strong>)"
+        ]
+      ]
+    },
+    {
+      "index": 5,
+      "rows": 2,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 2,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": [
+    {
+      "table": 1,
+      "reason": "cell-count",
+      "row": 1,
+      "markdown": 3,
+      "html": 2
+    },
+    {
+      "table": 3,
+      "reason": "cell-count",
+      "row": 1,
+      "markdown": 3,
+      "html": 2
+    },
+    {
+      "table": 4,
+      "reason": "cell-count",
+      "row": 2,
+      "markdown": 3,
+      "html": 2
+    }
+  ]
+}

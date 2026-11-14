@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/rpki/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/rpki.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/rpki/",
+  "md_sha256": "596a95f79a0d4949d6ca2409f39e7e856d3d9fb4f97c7c8f24267534d274ba42",
+  "html_sha256": "27f81144cc0e762f7e61d185099d10f6f8e554b8f9f69f5e362624cfc1ba0e69",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

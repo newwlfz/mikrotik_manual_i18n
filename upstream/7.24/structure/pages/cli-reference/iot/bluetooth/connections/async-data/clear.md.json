@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/iot/bluetooth/connections/async-data/clear.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/iot/bluetooth/connections/async-data/clear.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/iot/bluetooth/connections/async-data/clear",
+  "md_sha256": "b7c449246c6214b27a3e83d1d9f9ca04247ace17f6b64a51f6d3445637452188",
+  "html_sha256": "9c99286503b27d39f479c838161ac8435b34288ee3b93e00a821a7822b7b8e90",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

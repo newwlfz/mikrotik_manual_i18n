@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "Raw",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ipv6/firewall/raw/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ipv6/firewall/raw"
+}

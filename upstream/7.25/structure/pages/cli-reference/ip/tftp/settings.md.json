@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/tftp/settings.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/tftp/settings.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/tftp/settings",
+  "md_sha256": "8f00388d083ca51e59939808afdd90d9418800b301e74d59c67b529773a4969a",
+  "html_sha256": "7b5de935a6aa99dcdb09a67294892bc05a5e15587a0109a1674281128308e863",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/iot/modbus/read-holding-registers.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/modbus/read-holding-registers.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/modbus/read-holding-registers",
+  "md_sha256": "ed9ad738f3ee41ea6c5f819d18c86928764bd1a2a60d9b957e00ee517a9afa1b",
+  "html_sha256": "43751f49334ce3d180df0d34c93d14a621a783e807c91d3ac4aaf7744a282d76",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

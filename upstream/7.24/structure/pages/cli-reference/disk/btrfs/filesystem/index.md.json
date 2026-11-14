@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/disk/btrfs/filesystem/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/disk/btrfs/filesystem.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/disk/btrfs/filesystem/",
+  "md_sha256": "1b89d7602041dc3da1552d6998a48c424bc8801565a92c15afd522ad8538280c",
+  "html_sha256": "72e1fc7f8e333186714e47f0c46dee719e637be059d91af51fb56bd32d2a3358",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

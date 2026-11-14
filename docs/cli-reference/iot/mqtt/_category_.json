@@ -1,0 +1,11 @@
+{
+  "position": 5,
+  "label": "Mqtt",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/iot/mqtt/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/iot/mqtt"
+}

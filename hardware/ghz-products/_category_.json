@@ -1,0 +1,9 @@
+{
+  "key": "ghz-products",
+  "label": "60 GHz products",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "ghz-products/cube-60g-ac"
+  }
+}

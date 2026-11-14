@@ -1,0 +1,68 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "network-management/arp.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/network-management/arp.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/network-management/arp",
+  "md_sha256": "f6e151ec5a7bf6b5f0f8d9c23e74cfb976d37beea589a09e6ebae474d112adee",
+  "html_sha256": "91c4401a5042bfae6957ec808937e057470d8eb5f57a0e9cdf1e8e46226bba67",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 18,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Shows the ARP entry state: <br/><ul><li><code>delay</code> - neighbor entry validation is currently delayed</li><li><code>failed</code> - ARP resolution has failed, the system was not able to obtain the MAC address for the given IP address</li><li><code>incomplete</code> - system does not have the MAC address information for the IP address, it has not yet been resolved</li><li><code>permanent</code> - ARP entry is considered permanent and will not be removed from the table, even if it is not actively being used. This is set for manually configured ARP entries</li><li><code>probe</code> - neighbor is being probed</li><li><code>reachable</code> - ARP resolution is successful, and the MAC address associated with the IP address is known, the entry is valid until the reachability timeout expires</li><li><code>stale</code> - entry is still valid, but it is aged. This means that the system has not recently communicated with the device associated with the IP address.</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

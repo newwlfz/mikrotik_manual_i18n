@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/lte/settings.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/lte/settings.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/lte/settings",
+  "md_sha256": "8d5ed259c670cb873fe959c06869b801e66c4b479821a8511c33c080d31e9cb8",
+  "html_sha256": "8f4d59f5939f619c37257f12a7a5238e42a2845e24a023c555bdcbede368508f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

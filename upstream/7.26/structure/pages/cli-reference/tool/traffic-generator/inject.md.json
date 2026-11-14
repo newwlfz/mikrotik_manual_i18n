@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/tool/traffic-generator/inject.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/inject.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/inject",
+  "md_sha256": "a9cd5e83743f5849eb4775882c7f514ded0c4dee1ed5ad2597e9a156ddfb7356",
+  "html_sha256": "f09ccf13b545d68951dfdbea8a3d83135e74d25e2a7426fd7e956e567fd39be9",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

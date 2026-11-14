@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/routing/stats/pcap.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/routing/stats/pcap.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/routing/stats/pcap",
+  "md_sha256": "297d14f242253fc6f04562cb2ca9e76e48d8e27fc7730bef5ccfb3eda4e0d337",
+  "html_sha256": "9b5086f623e72b21aa69f0407bab0d0bf53de53685199b4be497b50b37ac2287",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

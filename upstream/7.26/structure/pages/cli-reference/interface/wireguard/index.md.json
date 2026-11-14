@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wireguard/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireguard.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireguard/",
+  "md_sha256": "cfd3b6a8fbe9e87b77243b05041cee4de68c06d04f1de664cb6104e30c907803",
+  "html_sha256": "f978a5d862ad4874473aa809219773aa950001d8bb6d7c5980a93b587d581eb2",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

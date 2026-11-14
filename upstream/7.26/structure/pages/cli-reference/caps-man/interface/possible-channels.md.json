@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/caps-man/interface/possible-channels.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/caps-man/interface/possible-channels.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/caps-man/interface/possible-channels",
+  "md_sha256": "4933dcec29f1683838b03e4c98725e91d95ea5d8a2f733545c6dce7956533c00",
+  "html_sha256": "1913d12c5bc351b44300a8edde3c717002c0a122aa7dfa67810ba03eb2885ec4",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

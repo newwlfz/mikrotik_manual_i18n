@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "firewall-and-quality-of-service/queues/pcq-example.md",
+  "source_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/pcq-example.md",
+  "html_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/pcq-example",
+  "md_sha256": "588ae34f2bfdf962cec1a9f5e972704b4d1ba703a5985ba0afdbfc6578e5d318",
+  "html_sha256": "521b26389c0c81ba4edc4a724d0c90d95d0583f732750d0eee8ac9963d3a731b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 15,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

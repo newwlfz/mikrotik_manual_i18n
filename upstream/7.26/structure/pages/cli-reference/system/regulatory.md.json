@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/regulatory.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/regulatory.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/regulatory",
+  "md_sha256": "93c0b98875b2380a5a44d971d3bb16cadbdc8b6127ec0991d3948f525ebb5f2b",
+  "html_sha256": "8e0e6f4b5fbb8b1bd9a5451872df57f671dfbf0345a6c85db1108acde97daf0e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

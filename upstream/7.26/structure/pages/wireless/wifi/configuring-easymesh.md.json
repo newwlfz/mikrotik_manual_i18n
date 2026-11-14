@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "wireless/wifi/configuring-easymesh.md",
+  "source_url": "https://manual.mikrotik.com/docs/wireless/wifi/configuring-easymesh.md",
+  "html_url": "https://manual.mikrotik.com/docs/wireless/wifi/configuring-easymesh",
+  "md_sha256": "8ce08864c5a301f09b38f30e599b5a12486ad9f614b4c7452d946e0fcde0cf5e",
+  "html_sha256": "bcc3a423ef7d5cc12490fa12b585143f751ad2e28afac327d01d2e64097019c6",
+  "body": {
+    "html": {
+      "lists": 8,
+      "listItems": 27,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 45,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 27,
+      "listItems": 27,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 27,
+      "listItems": 27,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

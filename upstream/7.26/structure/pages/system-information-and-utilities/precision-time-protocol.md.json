@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "system-information-and-utilities/precision-time-protocol.md",
+  "source_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/precision-time-protocol.md",
+  "html_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/precision-time-protocol",
+  "md_sha256": "80b9d4b6395d02c95ef37fd51571da75678be51078c3a91f707e7a98742911bb",
+  "html_sha256": "99d110ea7954f150b16f8d851e513396ac950b9fb19cfd30683fe5b0c3eff7f9",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 24,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 31,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 24,
+      "listItems": 24,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 24,
+      "listItems": 24,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 6,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

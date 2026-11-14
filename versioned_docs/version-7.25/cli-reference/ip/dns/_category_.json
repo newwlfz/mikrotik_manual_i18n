@@ -1,0 +1,11 @@
+{
+  "position": 7,
+  "label": "Dns",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/dns/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/dns"
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/dude/export-db.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/dude/export-db.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/dude/export-db",
+  "md_sha256": "0cd5b934794de2cb01bf5bc436cb620e604fe3bea55b3c96f6e73cec70c3e474",
+  "html_sha256": "876f119698696f2bba2d22a2f782369f2ae3b7d2dc8ad7dd36e98642f2dc0b06",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

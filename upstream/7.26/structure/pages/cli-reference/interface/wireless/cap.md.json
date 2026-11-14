@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wireless/cap.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/cap.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/cap",
+  "md_sha256": "a1b3c7cd76f2509148048e4e77e91b4582a165df197c0f273abb586ff7a586e0",
+  "html_sha256": "0f57dcb5d26b8464e092d816cba6702e3bc793388075ad862059bf3da4b768f8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

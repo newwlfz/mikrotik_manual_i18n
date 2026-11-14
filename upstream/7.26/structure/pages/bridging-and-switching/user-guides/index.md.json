@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "bridging-and-switching/user-guides/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/bridging-and-switching/user-guides.md",
+  "html_url": "https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/",
+  "md_sha256": "3157a9ac938d06caa7a35415a8ab5a31d4d8830259e50bad18d32173053cba84",
+  "html_sha256": "3d838737e0b6d283df028ea4791ff975c13b186b5d3adae7f24a1d347d1e749c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

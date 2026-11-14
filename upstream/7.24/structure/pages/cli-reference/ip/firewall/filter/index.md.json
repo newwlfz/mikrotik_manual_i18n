@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/firewall/filter/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/firewall/filter.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/firewall/filter/",
+  "md_sha256": "c14b31802d304d0a39e64b3ae86377a179bb9dde9320571c27c464c7b88c53dc",
+  "html_sha256": "17fdd83f98a1edfb42bb7f335c0deee9f6f42f04460e77ebbb17835b046cb59d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 74,
+      "listItems": 74,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 74,
+      "listItems": 74,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

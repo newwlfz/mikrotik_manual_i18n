@@ -1,0 +1,28 @@
+# dhcp-relay
+
+> RouterOS directory reference for /ip/dhcp-relay.
+
+-----------
+
+## ip/dhcp-relay 
+**Type:** Directory
+
+<ArgTable c1="Flag" c2="Name" c3="Description">
+<ArgTableRow arg="X" typ="disabled">disabled</ArgTableRow>
+<ArgTableRow arg="I" typ="invalid">invalid</ArgTableRow>
+</ArgTable>
+
+<ArgTable c1="Argument" c2="Type" c3="Description">
+<ArgTableRow arg="name" typ="string"></ArgTableRow>
+<ArgTableRow arg="interface" typ="iface_enum" mandatory="1"></ArgTableRow>
+<ArgTableRow arg="dhcp-server-vrf" typ="enum"></ArgTableRow>
+<ArgTableRow arg="dhcp-server" typ="multi { address: ipAddr
+ }" mandatory="1"></ArgTableRow>
+<ArgTableRow arg="delay-threshold" typ="alt { const: enum (none) { none:0 }
+, time: time
+ }"></ArgTableRow>
+<ArgTableRow arg="local-address" typ="ipAddr"></ArgTableRow>
+<ArgTableRow arg="add-relay-info" typ="bool"></ArgTableRow>
+<ArgTableRow arg="relay-info-remote-id" typ="string"></ArgTableRow>
+<ArgTableRow arg="local-address-as-src-ip" typ="bool"></ArgTableRow>
+</ArgTable>

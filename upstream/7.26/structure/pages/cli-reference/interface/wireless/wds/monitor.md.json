@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wireless/wds/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/wds/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/wds/monitor",
+  "md_sha256": "8207e4cd3e1f1d10ab6937f51efa2ba389318bc74f32849d84279d7a9ef73ee2",
+  "html_sha256": "742c5b4ccebf1afd3626b6ddeea0605d0c028b32eb3b4e5d8bb66dce8d548862",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

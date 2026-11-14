@@ -1,0 +1,62 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "system-information-and-utilities/tftp.md",
+  "source_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/tftp.md",
+  "html_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/tftp",
+  "md_sha256": "a1a3e697dd00e7061ec08c256a684ef0a008b11648fd5725729813e930b9031e",
+  "html_sha256": "ef74609ef4dfc7468211e665b6d08737699fba8d3b605d3ea91ce91d7cd51072",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 14,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 91,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 14,
+      "listItems": 14,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 14,
+      "listItems": 14,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 9,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

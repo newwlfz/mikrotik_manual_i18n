@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/disk/scan.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/disk/scan.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/disk/scan",
+  "md_sha256": "ff6fa051f42a369dadcff0e2f456b9a288cdb07f1d0c4f6f4842f3b39b938161",
+  "html_sha256": "bcb413f05781adc9706683cf5c056dad0705c9628d66694aa0788d7a7b7f8722",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

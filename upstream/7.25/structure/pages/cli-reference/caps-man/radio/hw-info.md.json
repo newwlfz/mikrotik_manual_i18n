@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/caps-man/radio/hw-info.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/radio/hw-info.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/radio/hw-info",
+  "md_sha256": "107023ef141d8e440b81dd85340c9c83ace6c0974fda6d0654b41e0775e14f8b",
+  "html_sha256": "ed868bad9b4c6e77ea90d432901e66f5f9bc8432b7634c854b4650dc06327f48",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

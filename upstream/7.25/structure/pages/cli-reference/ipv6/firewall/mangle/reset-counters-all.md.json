@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ipv6/firewall/mangle/reset-counters-all.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ipv6/firewall/mangle/reset-counters-all.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ipv6/firewall/mangle/reset-counters-all",
+  "md_sha256": "49f658b57e0e667c1d96db9ea7a76a13d0d784caad2d4e8e1ff725b93757fc5b",
+  "html_sha256": "fbf4e85f94fa022bb9275b99838e10db1ea78ce05eed3f862bfa2bd1334ced22",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

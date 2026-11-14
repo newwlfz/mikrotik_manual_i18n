@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wireless/info/country-info.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/info/country-info.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/info/country-info",
+  "md_sha256": "724871db1f5e8ef15279e2ce51c13d4828f406b1c91d3e6fc1ec0fdd786f918c",
+  "html_sha256": "4eacc61dad2b1fa7a09d13770c2dcdf8c87de472a72dc385cfb4f28c436a6ff1",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

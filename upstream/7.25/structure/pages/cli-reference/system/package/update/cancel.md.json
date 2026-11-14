@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/package/update/cancel.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/package/update/cancel.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/package/update/cancel",
+  "md_sha256": "f9a33a38708b489383afbc97c5dc751b8254f07c3b292ec3a89efdef495647f8",
+  "html_sha256": "41663c1ff8d1658b7976e09ea9b79ccb468cb1c38355df66201b893d2382b08f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

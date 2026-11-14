@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/resource/hardware/power-reset.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/resource/hardware/power-reset.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/resource/hardware/power-reset",
+  "md_sha256": "b3671b00241d84408904515d9c900e02d3f70ea7cc9faa25e628ff0ea0c4224a",
+  "html_sha256": "79a932d8716b9d8543cc453f1f63e6e27676c7688f010f5846f34840979f8a53",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

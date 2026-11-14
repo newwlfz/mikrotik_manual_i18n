@@ -1,0 +1,59 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "getting-started/routeros-licensing/x86/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/getting-started/routeros-licensing/x86.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/getting-started/routeros-licensing/x86/",
+  "md_sha256": "64ea16be893324773a9c0dabada2f48cf8589fd2ca2f87f3cc09a4f74b6352c5",
+  "html_sha256": "79f5ba0dde68415e3450c33a7ff19049d211bf4e048045e29bed05f886a38eed",
+  "body": {
+    "html": {
+      "lists": 24,
+      "listItems": 61,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 8,
+      "wideTables": 1
+    },
+    "md": {
+      "lists": 61,
+      "listItems": 61,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 1
+    },
+    "local": {
+      "lists": 61,
+      "listItems": 61,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 1
+    },
+    "flags": {
+      "br": [
+        2,
+        0
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 10,
+      "cols": 6,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

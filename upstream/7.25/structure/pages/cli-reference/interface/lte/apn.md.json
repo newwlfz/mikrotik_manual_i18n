@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/lte/apn.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/lte/apn.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/lte/apn",
+  "md_sha256": "b86a8e7b296250fc14e1b96ca006ed409605a72e131263b54034442e1f9dc07a",
+  "html_sha256": "580231c5d6632477eba9531ca1d8054d0fe64b308f56cb6f9d382e6aec96c0d7",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

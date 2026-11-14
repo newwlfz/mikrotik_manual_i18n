@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/dns/cache/flush.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dns/cache/flush.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/dns/cache/flush",
+  "md_sha256": "8c0ef2536c9ea6bd15d07df964a1efa9d06ddb00e10d1833834d0e5ce807e247",
+  "html_sha256": "f98fd8161944da8c6652552afc6384003e1d761da9fba84bcf264a4acd69dcf6",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

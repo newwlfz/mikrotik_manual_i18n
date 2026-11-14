@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/iot/mqtt/subscribe.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/mqtt/subscribe.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/mqtt/subscribe",
+  "md_sha256": "883e5cdb374a6f652e7acbd33c4d56c31aacb5f4ff873eab75518882eb63234f",
+  "html_sha256": "b4d541ab2c7612d68e31b5cee31108695ad967094d50f5c301fb4d48850f58f1",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,103 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "network-management/cloud/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/network-management/cloud.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/network-management/cloud/",
+  "md_sha256": "f516b5a26e8b60d3aac7d7be5808e72b0ea641e35a21a47964e62ce372de6cb0",
+  "html_sha256": "b47218d42d0ad48c902164db4c29bca3291756857da59bb56b62cb181300318e",
+  "body": {
+    "html": {
+      "lists": 6,
+      "listItems": 14,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 11,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 14,
+      "listItems": 14,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 14,
+      "listItems": 14,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "If set to <code>yes</code>, then the device will send an encrypted message to MikroTik's Cloud server. The server will then decrypt the message and verify that the sender is an authentic MikroTik device. If all is OK, then MikroTik's Cloud server will create a DDNS record for this device and send a response to the device. Every minute the IP/Cloud service on the router will check if the WAN IP address matches the one sent to MikroTik's Cloud server and will send an encrypted update to the cloud server if the IP address changes. <br/> If set to auto, ddns will only be enabled if <a href=\"/docs/7.24/network-management/cloud/back-to-home\">Back To Home</a> is enabled. <br/><br/><strong>Important:</strong> Prior to the 7.17 versions, the default value was \"no\". <br/><br/>"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Contains a text string that describes the current dns-service state. The messages are self-explanatory:<ul><li><strong>updating...</strong></li><li><strong>updated</strong></li><li><strong>Error: no Internet connection</strong></li><li><strong>Error: request timed out</strong></li><li><strong>Error: REJECTED. Contact MikroTik support</strong></li><li><strong>Error: internal error</strong> - should not happen. One possible cause is if the router runs out of memory</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Uploads a backup file to MikroTik's Cloud server.<ul><li><code>create-and-upload</code> - creates a new backup file with the specified password and uploads it</li><li><code>upload</code> - uploads a created system's backup file.</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

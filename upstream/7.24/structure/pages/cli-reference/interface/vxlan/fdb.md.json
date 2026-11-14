@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/vxlan/fdb.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/vxlan/fdb.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/vxlan/fdb",
+  "md_sha256": "caaef0318211e275597ca8798a5ee4efb2c4f68e106df8e48e3db8ba09af600a",
+  "html_sha256": "b82e77f9e0df85d061364df659677cc6542d209d4e4b915427bc988ad56ec214",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

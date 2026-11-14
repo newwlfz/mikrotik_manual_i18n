@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/user/ssh-keys/private/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/user/ssh-keys/private.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/user/ssh-keys/private/",
+  "md_sha256": "675b1f3df95c02181e389c06211968c4abee3bf44d742b78570cabf685a72eea",
+  "html_sha256": "b9b47046c93afc2fb68e8df263e3e8f15a98eb8eb50bf1052fbd2101ff552f4c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

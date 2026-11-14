@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/partitions/copy-to.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/partitions/copy-to.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/partitions/copy-to",
+  "md_sha256": "7dec08e3b65b3448e6e32d0094f041e0c2d9d46b009d3b0b9912432c3bad1221",
+  "html_sha256": "c5446f8c4c6ab5196ba27195a9f49910b2e10f9221b0367dc5fdaedfbebd6096",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

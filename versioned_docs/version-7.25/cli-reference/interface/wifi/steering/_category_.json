@@ -1,0 +1,11 @@
+{
+  "position": 25,
+  "label": "Steering",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/wifi/steering/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/wifi/steering"
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "user-guides/routing-and-networking-protocols/unicast/ospf/areas-and-virtual-links.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/ospf/areas-and-virtual-links.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/unicast/ospf/areas-and-virtual-links",
+  "md_sha256": "03c2798279fbcbf275c7fd6dd6ab8b907d7977957e04d4e62981cb0d3e3698f2",
+  "html_sha256": "acbc608bf7d9638f91415302952da038ce3856d0a2455b8927a793ac24d3e78c",
+  "body": {
+    "html": {
+      "lists": 9,
+      "listItems": 36,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 33,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 36,
+      "listItems": 36,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 36,
+      "listItems": 36,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "management-tools/romon.md",
+  "source_url": "https://manual.mikrotik.com/docs/management-tools/romon.md",
+  "html_url": "https://manual.mikrotik.com/docs/management-tools/romon",
+  "md_sha256": "7331be0320c53824ae30b8dbe8aee6799b5681a9cbc30ca77ec83b3fdb04f030",
+  "html_sha256": "e7b21d9e5ac4a264907e640b88d0c25a67f1e44b4f20c08481a7a855e3705172",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 32,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

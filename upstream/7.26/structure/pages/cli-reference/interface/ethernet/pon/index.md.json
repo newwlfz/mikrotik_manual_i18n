@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/ethernet/pon/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/pon.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/pon/",
+  "md_sha256": "5d904098bcbc3dc3e2181d7bbec47a2c338db8a21475f27719e4e19374dbf687",
+  "html_sha256": "226d334c0063b81b2b1ebc2ec7599d156588ce90394ef23bbaf9363be0b6e663",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

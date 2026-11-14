@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wifi/easymesh/dpp-trigger.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/easymesh/dpp-trigger.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/easymesh/dpp-trigger",
+  "md_sha256": "272131019e8928605d29fd35e023d55b843be7c0b1fd63f8a956f5220619ca12",
+  "html_sha256": "7ca504a02cb3edee46a937c6392d294d567f4ce82554379babff801b16b3752b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

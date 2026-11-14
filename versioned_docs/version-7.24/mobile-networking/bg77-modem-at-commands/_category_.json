@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "User Guides",
+  "key": "mobile-networking/bg77-modem-at-commands",
+  "link": {
+    "type": "doc",
+    "id": "mobile-networking/bg77-modem-at-commands/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

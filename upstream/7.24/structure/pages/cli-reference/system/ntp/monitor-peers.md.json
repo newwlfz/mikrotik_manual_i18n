@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/ntp/monitor-peers.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/ntp/monitor-peers.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/ntp/monitor-peers",
+  "md_sha256": "6c742982719fa21bb90d1b69112290c07594f595c62b8bdd166f7f317ee9cf8e",
+  "html_sha256": "6e855cfd1638f3ee009834f1ba27e0a80f7f47cf5bca6188dfc4c63ee59445c5",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

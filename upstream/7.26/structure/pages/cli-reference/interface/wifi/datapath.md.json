@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wifi/datapath.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/datapath.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/datapath",
+  "md_sha256": "0353360049aee6d2c3eaf675138591df7ceaadc664d94062c35630c0e4d7d600",
+  "html_sha256": "944f73303e250496f3703dcca548338425a73991873f11417151d073d31b54e4",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

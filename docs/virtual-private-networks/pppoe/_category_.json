@@ -1,0 +1,11 @@
+{
+  "position": 8,
+  "label": "PPPoE",
+  "key": "virtual-private-networks/pppoe",
+  "link": {
+    "type": "doc",
+    "id": "virtual-private-networks/pppoe/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

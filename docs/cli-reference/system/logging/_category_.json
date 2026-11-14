@@ -1,0 +1,11 @@
+{
+  "position": 15,
+  "label": "Logging",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/logging/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/logging"
+}

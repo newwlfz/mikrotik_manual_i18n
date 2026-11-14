@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/safe-mode.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/safe-mode.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/safe-mode",
+  "md_sha256": "723bbcae686e3415d688c57915a218b119d8eefdd1a6dd669df06ab6f2827af9",
+  "html_sha256": "8ae0e38a3221fb9642dbb40c5d4b9053d7811a2a54ade72fcb8c0d7a70ebc0be",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

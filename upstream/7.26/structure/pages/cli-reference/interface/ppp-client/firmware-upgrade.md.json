@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/ppp-client/firmware-upgrade.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ppp-client/firmware-upgrade.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ppp-client/firmware-upgrade",
+  "md_sha256": "dadfbdce89126425e4b66a6d66a67ca95f630c4ddc806907cbe3bf82b5d61763",
+  "html_sha256": "483730bc03277b6d08232a519e88d9abd2ac703dd8af3bd7252644b984d9015c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

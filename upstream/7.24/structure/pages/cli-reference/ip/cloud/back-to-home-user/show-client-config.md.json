@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/cloud/back-to-home-user/show-client-config.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/cloud/back-to-home-user/show-client-config.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/cloud/back-to-home-user/show-client-config",
+  "md_sha256": "59e4c27c48a33eaba50d6da8fdbc9ffe4a03a56b40ca58565c9ad0dcb272a9d1",
+  "html_sha256": "a95fa770dd394892f06d9a4299cc9c5fd8ecd637aa787463ed9eeb38139bb828",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

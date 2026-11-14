@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Adlist",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/dns/adlist/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/dns/adlist"
+}

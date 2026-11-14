@@ -1,0 +1,11 @@
+{
+  "position": 21,
+  "label": "Logs",
+  "key": "diagnostics-monitoring-and-troubleshooting/log",
+  "link": {
+    "type": "doc",
+    "id": "diagnostics-monitoring-and-troubleshooting/log/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

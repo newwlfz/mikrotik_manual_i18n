@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/shutdown.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/shutdown.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/shutdown",
+  "md_sha256": "b8fcc989ad83d0e2211f43e875a7729396bbb8facdb4adaf7344809206ff3440",
+  "html_sha256": "1ea5f741655e8bb6b2c7575cdf87668b06836c85880122a8ece7dc95f560ede7",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,11 @@
+{
+  "position": 28,
+  "label": "Vlan",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/ethernet/switch/vlan/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/ethernet/switch/vlan"
+}

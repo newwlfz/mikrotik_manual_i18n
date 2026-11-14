@@ -1,0 +1,11 @@
+{
+  "position": 5,
+  "label": "E Mail",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/tool/e-mail/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/tool/e-mail"
+}

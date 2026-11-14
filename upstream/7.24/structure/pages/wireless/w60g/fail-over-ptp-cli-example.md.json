@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "wireless/w60g/fail-over-ptp-cli-example.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/wireless/w60g/fail-over-ptp-cli-example.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/wireless/w60g/fail-over-ptp-cli-example",
+  "md_sha256": "eb2fafc8af8dc9fa45aa4ed62113c5bbf5407773924fed309545ce615c802d7c",
+  "html_sha256": "d853b4e99fb202bf4dcb8b49ed42a4fa86bf99aa4c92dc5a5e77316d9c7bfab3",
+  "body": {
+    "html": {
+      "lists": 10,
+      "listItems": 14,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 14,
+      "listItems": 14,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 14,
+      "listItems": 14,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        2,
+        3
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

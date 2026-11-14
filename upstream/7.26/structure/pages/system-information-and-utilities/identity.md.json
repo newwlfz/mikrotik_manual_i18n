@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "system-information-and-utilities/identity.md",
+  "source_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/identity.md",
+  "html_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/identity",
+  "md_sha256": "75fa843cb05e87673fa39dc0dd300734e52e2443c7de7f156696baab88a3d131",
+  "html_sha256": "41a0ef5f0302a031d86c0f1cb0c5cf92d5fd6aa39353054dec27b07813bee7e6",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 17,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

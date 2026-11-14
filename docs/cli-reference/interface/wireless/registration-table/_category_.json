@@ -1,0 +1,11 @@
+{
+  "position": 14,
+  "label": "Registration Table",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/wireless/registration-table/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/wireless/registration-table"
+}

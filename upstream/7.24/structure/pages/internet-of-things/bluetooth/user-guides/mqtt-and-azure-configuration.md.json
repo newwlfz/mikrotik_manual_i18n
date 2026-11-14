@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "internet-of-things/bluetooth/user-guides/mqtt-and-azure-configuration.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/internet-of-things/bluetooth/user-guides/mqtt-and-azure-configuration.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/internet-of-things/bluetooth/user-guides/mqtt-and-azure-configuration",
+  "md_sha256": "1ac5f107ea27a9a55db20305781ed806e367cda4509c363315c8599c1ed8975b",
+  "html_sha256": "dc818e7da11ef26417cbf7fa8eabc5c3f54d4035e7b7ab368296aeca7f19b6f3",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 10,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "X86",
+  "key": "getting-started/routeros-licensing/x86",
+  "link": {
+    "type": "doc",
+    "id": "getting-started/routeros-licensing/x86/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

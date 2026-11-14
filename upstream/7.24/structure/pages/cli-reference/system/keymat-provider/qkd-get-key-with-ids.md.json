@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/keymat-provider/qkd-get-key-with-ids.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/keymat-provider/qkd-get-key-with-ids.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/keymat-provider/qkd-get-key-with-ids",
+  "md_sha256": "b09c472d2e107d85ab1138a382314c0b22847f553671fa5cfd035282fa5ffda2",
+  "html_sha256": "53d9426ea671aed2b6bbe07727c9257941c22ed7b7fadd234d6d0dac44e6bf5a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

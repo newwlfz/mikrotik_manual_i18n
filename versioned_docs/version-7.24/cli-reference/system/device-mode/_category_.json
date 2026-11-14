@@ -1,0 +1,11 @@
+{
+  "position": 7,
+  "label": "Device Mode",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/device-mode/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/device-mode"
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/iot/bluetooth/advertisers/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/bluetooth/advertisers.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/bluetooth/advertisers/",
+  "md_sha256": "f594126249fc9d0a2475511ed41ce8ad2973c37f5ae56ec1ff797798c0d6c242",
+  "html_sha256": "841616f6297fe5032c5c75b400245ada61c671c0f1bf745ed32e0c0feeb38e5e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

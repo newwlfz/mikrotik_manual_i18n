@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/tool/sniffer/protocol.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/sniffer/protocol.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/sniffer/protocol",
+  "md_sha256": "5b865745a7d30c5d98cd8babcbdda9bf7632065e81268c4fb2c173bd581f052c",
+  "html_sha256": "e9d4ccb29b2ec37ed424951f2a308a52dcaebd95277c6ecdcf6b3dc0e17865d4",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

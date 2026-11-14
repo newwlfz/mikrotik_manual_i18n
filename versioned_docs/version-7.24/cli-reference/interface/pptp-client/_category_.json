@@ -1,0 +1,11 @@
+{
+  "position": 30,
+  "label": "Pptp Client",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/pptp-client/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/pptp-client"
+}

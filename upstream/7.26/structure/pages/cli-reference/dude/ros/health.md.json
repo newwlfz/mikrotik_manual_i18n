@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/dude/ros/health.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/dude/ros/health.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/dude/ros/health",
+  "md_sha256": "61828119d6c7ff939545fac38322907edd80e18f3b52ba241e9834d6946305fd",
+  "html_sha256": "f4f7a4d35934c31614670b78f6ce7d887faf812875a52802cc538d38b4c59148",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wifi/dashboard/settings.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/dashboard/settings.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/dashboard/settings",
+  "md_sha256": "39bc50c11d83382500e7580c0d73525ea2a4e2cf21af95497e5a077bae7af81b",
+  "html_sha256": "96f79f4860b0965764a658e62726a9476733bc141539b834b962d80bc7a13ffc",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/gps/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/gps/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/gps/monitor",
+  "md_sha256": "b6b64d760204a486d567af96aac8b553d0468ad0b1d9556ffa57d41e2f619633",
+  "html_sha256": "bdf3aa5732aa4ae84eda1f9d10b5184a27544285453e4b01cfcdc823d361981c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

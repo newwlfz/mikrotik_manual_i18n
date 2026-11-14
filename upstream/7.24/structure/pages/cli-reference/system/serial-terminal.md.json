@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/serial-terminal.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/serial-terminal.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/serial-terminal",
+  "md_sha256": "12c0969e134e280c9ed387b4b8d0b8f4fc43aa6c342b1a2ed860e58cc2d811c4",
+  "html_sha256": "60268703db186b453dd3ae1b8faf3692900b773c8d0974f0ccf9a0e5b4e74275",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

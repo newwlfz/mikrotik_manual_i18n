@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "network-management/openflow.md",
+  "source_url": "https://manual.mikrotik.com/docs/network-management/openflow.md",
+  "html_url": "https://manual.mikrotik.com/docs/network-management/openflow",
+  "md_sha256": "2c069df42d518d1c173cb6aa96ab4078fc8b2f5b3058cb61f404ad64c91c2f23",
+  "html_sha256": "75d9077cc153725aca923f36d20ff1dcf781fb540e54b6158b72caadd2bd629a",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 15,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 19,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 19,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

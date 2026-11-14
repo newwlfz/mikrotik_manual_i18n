@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples",
+  "md_sha256": "2024671588a383b69de50bc3600f68d64c9d711299a299cf5f0f09c782966875",
+  "html_sha256": "51f1325e1adc61226ebb53d0ba800b81c6db4aa59b6944da497c30048ff9a83f",
+  "body": {
+    "html": {
+      "lists": 10,
+      "listItems": 25,
+      "br": 7,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 15,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 25,
+      "listItems": 25,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 25,
+      "listItems": 25,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,11 @@
+{
+  "position": 8,
+  "label": "Pool",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ipv6/pool/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ipv6/pool"
+}

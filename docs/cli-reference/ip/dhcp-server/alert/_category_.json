@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Alert",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/dhcp-server/alert/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/dhcp-server/alert"
+}

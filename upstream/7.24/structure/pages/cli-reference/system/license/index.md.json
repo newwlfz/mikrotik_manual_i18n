@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/license/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/license.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/license/",
+  "md_sha256": "9ff09af262d92651f895017e7773bedaeb2676dc2186e5994ef804f7a63b338f",
+  "html_sha256": "a50d6aa4d32c1891d349fe8371862ff684b9fe0a0ad9fecdfe03bf4d277a7d23",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

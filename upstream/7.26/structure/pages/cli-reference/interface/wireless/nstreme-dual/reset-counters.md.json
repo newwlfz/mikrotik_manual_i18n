@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wireless/nstreme-dual/reset-counters.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/nstreme-dual/reset-counters.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/nstreme-dual/reset-counters",
+  "md_sha256": "655b9a635248f52d7610f5a77b3e2205ce06ce22d7ec44e7cbb5a1ad0e8995e7",
+  "html_sha256": "b1f13ab03b9ae88634119d8ab62d70e868e285fc35b4325cf094bb47f1db3b98",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

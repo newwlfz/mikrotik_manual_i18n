@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "management-tools/quick-set.md",
+  "source_url": "https://manual.mikrotik.com/docs/management-tools/quick-set.md",
+  "html_url": "https://manual.mikrotik.com/docs/management-tools/quick-set",
+  "md_sha256": "7f0cbd8c5b5974822dffe60d502e5cd7e02590ed00428d8990d1b84508680a16",
+  "html_sha256": "fee06f091b1d451cada724b1e6ebc011cbaa0de6f1395ada9f84f9d24000ebef",
+  "body": {
+    "html": {
+      "lists": 8,
+      "listItems": 42,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 42,
+      "listItems": 42,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 42,
+      "listItems": 42,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

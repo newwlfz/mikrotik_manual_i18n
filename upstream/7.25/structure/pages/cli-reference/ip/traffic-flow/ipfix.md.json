@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/traffic-flow/ipfix.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/traffic-flow/ipfix.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/traffic-flow/ipfix",
+  "md_sha256": "5e644201859fafa70e93e4ba42207229fb331d4cf46821c6a88ae413926682ee",
+  "html_sha256": "58a57eb328ab1980c9c7c5a527c1b92db742bf7931edc14dbadd488797bd4ac8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

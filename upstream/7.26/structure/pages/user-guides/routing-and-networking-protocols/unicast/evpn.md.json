@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "user-guides/routing-and-networking-protocols/unicast/evpn.md",
+  "source_url": "https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/evpn.md",
+  "html_url": "https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/evpn",
+  "md_sha256": "32e6b410584d28d4b14525d133ca029b949bbe812f6c6976e3484b2004dc667c",
+  "html_sha256": "dfea0a1b1fdf6ed0bed45c7c91cfdd183d20dc689352cb33f7ca60706153e365",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 22,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 16,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 22,
+      "listItems": 22,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 22,
+      "listItems": 22,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

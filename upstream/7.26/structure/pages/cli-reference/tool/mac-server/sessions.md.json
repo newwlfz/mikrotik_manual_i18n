@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/tool/mac-server/sessions.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/tool/mac-server/sessions.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/tool/mac-server/sessions",
+  "md_sha256": "18f57c7f32ead8db85323b3a68b8ad133dfaae9da7a4e5e8e79c45452c2abaf8",
+  "html_sha256": "fe8eddcae9f6024dff522c05b050f40d5f6a6ec8e350295104a3a52ac3111414",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

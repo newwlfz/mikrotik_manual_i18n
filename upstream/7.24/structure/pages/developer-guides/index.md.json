@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "developer-guides/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/developer-guides.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/developer-guides/",
+  "md_sha256": "218ce84668d68cb407b909db1098646c9c3f22167c8d8e643a59ca3d0fab4594",
+  "html_sha256": "15386bda8453787124e51c63992cd280823dea15cac7ec4c502fa745f231b083",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

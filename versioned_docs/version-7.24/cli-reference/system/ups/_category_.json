@@ -1,0 +1,11 @@
+{
+  "position": 35,
+  "label": "Ups",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/ups/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/ups"
+}

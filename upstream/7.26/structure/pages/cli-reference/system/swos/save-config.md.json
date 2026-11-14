@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/swos/save-config.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/swos/save-config.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/swos/save-config",
+  "md_sha256": "5da9e9a1005d65c4308311a3cb7d2344d7e2d0a61ab4c5f79b6d8479ecfd4d9f",
+  "html_sha256": "e83f31c49c31db187f08c8bc03b9825ffc911da27d91d749b2bf17f5ade8e0df",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

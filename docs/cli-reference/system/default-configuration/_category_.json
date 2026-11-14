@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "Default Configuration",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/default-configuration/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/default-configuration"
+}

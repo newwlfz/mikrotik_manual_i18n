@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/rule.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/rule.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/rule",
+  "md_sha256": "9ea419ba5865f10a97641decfbab93ab8608b9cb93f68e35e95d1e327b94bcc8",
+  "html_sha256": "de9fb8869cf1a7f9611ddac3af56b0a5f4a0ea1b6bfa6e55f3fa89b288a91594",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

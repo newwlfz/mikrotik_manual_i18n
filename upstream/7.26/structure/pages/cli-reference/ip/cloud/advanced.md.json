@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/cloud/advanced.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/cloud/advanced.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/cloud/advanced",
+  "md_sha256": "636e51f740164a81f0d78c8c483a75371266cd43e772778fd3b4db85c42cb76d",
+  "html_sha256": "6127aebb52dbfde8dd26b8c9b19147d0dd13b28cc4b404d6841f86ed335582ea",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

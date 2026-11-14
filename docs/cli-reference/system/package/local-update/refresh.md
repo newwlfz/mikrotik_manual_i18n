@@ -1,0 +1,15 @@
+---
+sidebar_key: "cli-reference/system/package/local-update/refresh"
+sidebar_position: 4
+title: "refresh"
+sidebar_label: 'refresh'
+source: https://manual.mikrotik.com/docs/cli-reference/system/package/local-update/refresh
+captured_at: '2026-11-09T11:35:47.715Z'
+---
+
+-----------
+
+## system/package/local-update/refresh 
+**Type:** Command
+
+Refresh and check the list of available compatible (matching device architecture) packages on the local package server.

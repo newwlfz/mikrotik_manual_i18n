@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/iot/lora/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/iot/lora.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/iot/lora/",
+  "md_sha256": "49ae8bad3f263550ab145193dac7a8898bc2b3179d113239c208f929a5a4d002",
+  "html_sha256": "508f5998eca126f2cc862e2a931949a73e26e86e08c9461cd254829e147ab838",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

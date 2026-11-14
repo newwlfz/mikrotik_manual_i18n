@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "getting-started/installation-and-upgrade/install/chr-installation/virtualbox.md",
+  "source_url": "https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation/virtualbox.md",
+  "html_url": "https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation/virtualbox",
+  "md_sha256": "801f363575430f81f27ebbc45e7199cfd4c81da6d58685fc06c6bfb0880daa05",
+  "html_sha256": "433ca262d7f1f9dabd50166cd095d9dd35e6ba1339b519ca8a1e84ca59fc9ce3",
+  "body": {
+    "html": {
+      "lists": 14,
+      "listItems": 24,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 24,
+      "listItems": 24,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 24,
+      "listItems": 24,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/kid-control/pause.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/kid-control/pause.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/kid-control/pause",
+  "md_sha256": "a5a0f7e63a3a1fcf04e8064fb3f38799f715434d42faf084faecb145171298f4",
+  "html_sha256": "f90934efa1be0b72eaaf50bd03cfa9d13c61f28b98d1e461843ef76c861b8c4f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

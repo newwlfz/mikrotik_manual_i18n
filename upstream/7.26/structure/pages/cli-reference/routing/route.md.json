@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/route.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/route.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/route",
+  "md_sha256": "17e5ddf80c80bcef8285c97b1363056c412809cb801fa9aa2b9149075a948808",
+  "html_sha256": "b61027df0b6e6629d0a721baeb7c92c9a2722ea99f2598ec74cc649b22811c96",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

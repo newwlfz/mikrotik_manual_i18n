@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/tool/graphing/queue.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/tool/graphing/queue.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/tool/graphing/queue",
+  "md_sha256": "82cc4c4df40e14c823d7c380599ec09aae3ac981cef3c6fcad9f47f082badfd6",
+  "html_sha256": "e9084703e6758ed8eb3713398d32d26491ec2e5d69603bd6fa6e6460cb703474",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 7,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

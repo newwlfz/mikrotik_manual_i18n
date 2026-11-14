@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "developer-guides/scripting/scripting-tips-and-tricks.md",
+  "source_url": "https://manual.mikrotik.com/docs/developer-guides/scripting/scripting-tips-and-tricks.md",
+  "html_url": "https://manual.mikrotik.com/docs/developer-guides/scripting/scripting-tips-and-tricks",
+  "md_sha256": "98a024c3c9827436fd1aa0e7f7dc06877a8485188f6f446171c629ad7b9191e5",
+  "html_sha256": "62bdb59ee39c4ede19541a2858829d8b118a6c4373d37276fa81b09d7f0ed22d",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 38,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

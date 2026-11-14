@@ -1,0 +1,11 @@
+{
+  "position": 19,
+  "label": "Sniffer",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/tool/sniffer/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/tool/sniffer"
+}

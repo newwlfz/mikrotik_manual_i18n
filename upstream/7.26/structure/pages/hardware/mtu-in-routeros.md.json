@@ -1,0 +1,68 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "hardware/mtu-in-routeros.md",
+  "source_url": "https://manual.mikrotik.com/docs/hardware/mtu-in-routeros.md",
+  "html_url": "https://manual.mikrotik.com/docs/hardware/mtu-in-routeros",
+  "md_sha256": "dd3589b64b314f4e1df8cdded0a27422ab48acdde8110bccbe73ce08cf00b898",
+  "html_sha256": "b20af5e5f5a3234624d023aab385d662f26f43e4f4763c930fc6c390811fc2be",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 7,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "<br/> Mikrotik RouterOS recognizes several types of MTU: <br/><ul><li>IP/Layer-3/L3 MTU</li><li>MPLS/Layer-2.5/L2.5 MTU</li><li>MAC/Layer-2/L2 MTU</li><li>Full frame MTU</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 80,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

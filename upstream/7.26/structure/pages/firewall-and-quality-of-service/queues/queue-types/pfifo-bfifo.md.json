@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "firewall-and-quality-of-service/queues/queue-types/pfifo-bfifo.md",
+  "source_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/queue-types/pfifo-bfifo.md",
+  "html_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/queue-types/pfifo-bfifo",
+  "md_sha256": "360b8102906f7341df0e9bf6c5151ce5c59ba434c16895470d1db15062e702b8",
+  "html_sha256": "438db5b180e6257da5b18b768106ee9925234a894c7a9d2cb42fadd120ecc26d",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

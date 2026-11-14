@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/telnet.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/telnet.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/telnet",
+  "md_sha256": "23ab37c4db92bdca5b6dfd3041fcd8fecbf2c80be7f40a9057d27e1116cebed2",
+  "html_sha256": "4d979860dad765d371b4a55307f886745d4ede6d7af940ba4cbf92f190284a88",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

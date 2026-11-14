@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/routing/filter/community-ext-list.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/filter/community-ext-list.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/filter/community-ext-list",
+  "md_sha256": "dbef2957e4fcc219b38e4f743c098709bd054e2c7231674bf2a1c453a8980e90",
+  "html_sha256": "1617f0cead53b41202364ce07da361bb1765a8534c4dd2c66da7fdd20967c67f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

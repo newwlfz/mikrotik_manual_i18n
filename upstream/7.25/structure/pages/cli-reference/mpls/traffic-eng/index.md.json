@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/mpls/traffic-eng/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/traffic-eng.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/traffic-eng/",
+  "md_sha256": "4912e8a5b2b27a8bb3c377425ffa03a64685f58b1d5722ed34f7e04b811975d9",
+  "html_sha256": "4611132c01fd39307092be7a7529e03cb63f510346dabeb68e5044ad07e60c3d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

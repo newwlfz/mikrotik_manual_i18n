@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/tool/speed-test.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/tool/speed-test.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/tool/speed-test",
+  "md_sha256": "fd89d202003b1760e67997b32482421af1b08c543f0f3b74d72d8e88278f189d",
+  "html_sha256": "aefe511b9a3f8eba0824323757069cade1598ad69e9231768d8302ab7fc3b014",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 5,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

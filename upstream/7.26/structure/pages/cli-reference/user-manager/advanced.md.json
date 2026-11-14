@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/user-manager/advanced.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/advanced.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/advanced",
+  "md_sha256": "68696996d496eae0bce6a2adb558b9be903621389e8e8f0ec1954558d41f01ca",
+  "html_sha256": "bdc144140ee165d25d0f1337def21fbafe607dcfbb58b31a1c765be3ea4bf915",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

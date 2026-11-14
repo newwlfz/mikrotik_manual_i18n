@@ -1,0 +1,84 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "hardware/ports.md",
+  "source_url": "https://manual.mikrotik.com/docs/hardware/ports.md",
+  "html_url": "https://manual.mikrotik.com/docs/hardware/ports",
+  "md_sha256": "517887111dead13614cbd32a54581108482d08d74164de439cfd565814917dc8",
+  "html_sha256": "df094f11f032c4e2c4dab6ab9c44866b7ef41359223af1b3b88c81ae14d4d240",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "The number of data bits in each character.<ul><li><strong>7</strong> - true ASCII</li><li><strong>8</strong> - any data (matches the size of a byte)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

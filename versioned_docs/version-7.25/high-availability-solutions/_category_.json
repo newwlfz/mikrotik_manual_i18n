@@ -1,0 +1,11 @@
+{
+  "position": 16,
+  "label": "High Availability Solutions",
+  "key": "high-availability-solutions",
+  "link": {
+    "type": "doc",
+    "id": "high-availability-solutions/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

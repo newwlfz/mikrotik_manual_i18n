@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/socksify.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/socksify.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/socksify",
+  "md_sha256": "ec96b49101581d92f87c21fa27694540618d0fbbb0cf4c442f24d889d7a37664",
+  "html_sha256": "108713c4ef72a9c875c51cb0d1cd0954114d73643d54be8101b4ec1453983c1c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

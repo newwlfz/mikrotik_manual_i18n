@@ -1,0 +1,90 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "network-management/socks/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/network-management/socks.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/network-management/socks/",
+  "md_sha256": "bc23a8602d2feeb53d70c97065372dcd4abd55e5c4e3731808d4de7ae86babc6",
+  "html_sha256": "2d4cd4baf1b21df601db3146ece23a5fc5c6294dd723f8303a75127bd4da5d96",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "allow - allow packets matching this rule to be forwarded for further processing <br/> deny - deny access for packets matching this rule"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 5,
+          "col": 1,
+          "html": "in - incoming connection <br/> out - outgoing connection <br/> unknown - connection has just been initiated"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

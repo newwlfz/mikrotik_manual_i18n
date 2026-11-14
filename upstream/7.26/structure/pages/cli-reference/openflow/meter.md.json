@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/openflow/meter.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/openflow/meter.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/openflow/meter",
+  "md_sha256": "78c8e7d086f212b407bd975443ff1c606aa939b6a860c07872a8deaeb2c6d8c7",
+  "html_sha256": "71d16f30f234eedd70eac03249a2a4f19d054daf0bddb552f211b56c130d3a8f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

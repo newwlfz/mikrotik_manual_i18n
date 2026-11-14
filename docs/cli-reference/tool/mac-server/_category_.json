@@ -1,0 +1,11 @@
+{
+  "position": 11,
+  "label": "Mac Server",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/tool/mac-server/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/tool/mac-server"
+}

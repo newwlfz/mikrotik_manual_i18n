@@ -1,0 +1,131 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "wireless/abgn/capsman/ap-controller-capsman.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/wireless/abgn/capsman/ap-controller-capsman.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/wireless/abgn/capsman/ap-controller-capsman",
+  "md_sha256": "625cae3c88e889de9c52e90878dcdad9cc53071f93269d9c36812dbb39858095",
+  "html_sha256": "fa0e833acf38a9742e51a7d0b1562459455e944d7c91020fe91e69e71344c69e",
+  "body": {
+    "html": {
+      "lists": 20,
+      "listItems": 71,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 33,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 71,
+      "listItems": 71,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 71,
+      "listItems": 71,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Upgrade policy options<ul><li>none - do not perform an upgrade</li><li>require-same-version - CAPsMAN suggests to upgrade the CAP RouterOS version and if it fails it will not provision the CAP. (Manual provision is still possible)</li><li>suggest-same-version - CAPsMAN suggests to upgrade the CAP RouterOS version and if it fails it will still be provisioned</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Action to take if a rule match is specified by the following settings:<ul><li><strong>create-disabled</strong> - create disabled static interfaces for the radio. I.e., the interfaces will be bound to the radio, but the radio will not be operational until the interface is manually enabled;</li><li><strong>create-enabled</strong> - create enabled static interfaces. I.e., the interfaces will be bound to the radio and the radio will be operational;</li><li><strong>create-dynamic-enabled</strong> - create enabled dynamic interfaces. I.e., the interfaces will be bound to the radio, and the radio will be operational;</li><li><strong>none</strong> - do nothing, leave the radio in a non-provisioned state;</li></ul>"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Specify the syntax of the CAP interface name creation<ul><li>cap - default name</li><li>identity - CAP boards <code>/system/identity</code> name</li><li>prefix - name from the name-prefix value</li><li>prefix-identity - name from the name-prefix value and the CAP boards <code>/system/identity</code> name</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 61,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 30,
+          "col": 1,
+          "html": "<ul><li><em>yes</em> - AP does not include SSID in the beacon frames and does not reply to probe requests that have broadcast SSID.</li><li><em>no</em> - AP includes SSID in the beacon frames and replies to probe requests that have broadcast SSID.</li></ul>This property has effect only in AP mode. Setting it to <em>yes</em> can remove this network from the list of wireless networks that are shown by some client software. Changing this setting does not improve the security of the wireless network, because SSID is included in other frames sent by the AP."
+        },
+        {
+          "row": 38,
+          "col": 1,
+          "html": "When set to full multicast packets will be sent with unicast destination MAC address, resolving multicast problems on a wireless link. This option should be enabled only on the access point; clients should be configured in <strong>station-bridge</strong> mode.<ul><li>disabled - disables the helper and sends multicast packets with multicast destination MAC addresses</li><li>full - all multicast packet mac addresses are changed to unicast mac addresses prior to sending them out</li><li>default - default choice that currently is set to <em>disabled</em>. Value can be changed in future releases.</li></ul>"
+        },
+        {
+          "row": 45,
+          "col": 1,
+          "html": "<a href=\"https://en.wikipedia.org/wiki/IEEE_802.11ac#Data_rates_and_speed\" target=\"_blank\" rel=\"noopener noreferrer\">Modulation and Coding Schemes</a> that every connecting client must support. Refer to 802.11ac for MCS specification. You can set MCS interval for each of Spatial Stream <br/><ul><li><em>none</em> - will not use selected Spatial Stream</li><li><em>MCS 0-7</em> - client must support MCS-0 to MCS-7</li><li><em>MCS 0-8</em> - client must support MCS-0 to MCS-8</li><li><em>MCS 0-9</em> - client must support MCS-0 to MCS-9</li></ul>"
+        },
+        {
+          "row": 46,
+          "col": 1,
+          "html": "<a href=\"https://en.wikipedia.org/wiki/IEEE_802.11ac#Data_rates_and_speed\" target=\"_blank\" rel=\"noopener noreferrer\">Modulation and Coding Schemes</a> that this device advertises as supported. Refer to 802.11ac for MCS specification. You can set MCS interval for each of Spatial Stream <br/><ul><li><em>none</em> - will not use selected Spatial Stream</li><li><em>MCS 0-7</em> - devices will advertise as supported MCS-0 to MCS-7</li><li><em>MCS 0-8</em> - devices will advertise as supported MCS-0 to MCS-8</li><li><em>MCS 0-9</em> - devices will advertise as supported MCS-0 to MCS-9</li></ul>"
+        },
+        {
+          "row": 51,
+          "col": 1,
+          "html": "<ul><li>eap-tls - Use built-in EAP TLS authentication.</li><li>passthrough - Access point will relay authentication process to the RADIUS server.</li></ul>"
+        },
+        {
+          "row": 54,
+          "col": 1,
+          "html": "Access Point advertises one of these ciphers, multiple values can be selected. Access Point uses it to encrypt all broadcast and multicast frames. Client attempts connection only to Access Points that use one of the specified group ciphers.<ul><li>tkip - Temporal Key Integrity Protocol - encryption protocol, compatible with legacy WEP equipment, but enhanced to correct some of the WEP flaws.</li><li>aes-ccm - more secure WPA encryption protocol, based on the reliable AES (Advanced Encryption Standard). Networks free of WEP legacy should use only this cipher.</li></ul>"
+        },
+        {
+          "row": 58,
+          "col": 1,
+          "html": "This property has effect only when <strong>security.eap-methods</strong> contains <em>eap-tls</em>.<ul><li>verify-certificate - Require the remote device to have a valid certificate. Check that it is signed by a known certificate authority. No additional identity verification is done. The certificate may include information about time period during which it is valid. If the router has incorrect time and date, it may reject valid certificate because router's clock is outside that period. See also the <a href=\"/docs/7.24/wireless/abgn/authentication-authorization-accounting/certificates\"> Certificates</a> configuration.</li><li>dont-verify-certificate - Do not check certificate of the remote device. Access Point will not require client to provide certificate.</li><li>no-certificates - Do not use certificates. TLS session is established using 2048 bit anonymous Diffie-Hellman key exchange.</li><li>verify-certificate-with-crl - Same as verify-certificate but also checks if the certificate is valid by checking the Certificate Revocation List.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

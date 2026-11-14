@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/cloud/force-update.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/cloud/force-update.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/cloud/force-update",
+  "md_sha256": "3497c352037b041446bc4a2c4d72b1c2935e335c36eaf37f1b052d5bed8e2f80",
+  "html_sha256": "c412f83b108440934af7cd287dc6f93da72e25041cb61a0bbd21afd2568a0e6f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/tool/sniffer/quick.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/sniffer/quick.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/sniffer/quick",
+  "md_sha256": "a4e24e9ab5a5eeef6a34d5b40147b77ad41c180c5b1c3b7fbd22e3cf243fc871",
+  "html_sha256": "e250458f28f1882e3a25a77b8374234f2b8979fd31fda13a748c3b0c3862b458",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 10,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

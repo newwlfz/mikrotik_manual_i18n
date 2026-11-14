@@ -1,0 +1,11 @@
+{
+  "position": 8,
+  "label": "Wireless",
+  "key": "wireless",
+  "link": {
+    "type": "doc",
+    "id": "wireless/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

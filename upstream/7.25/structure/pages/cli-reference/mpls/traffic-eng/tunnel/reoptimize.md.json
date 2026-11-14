@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/mpls/traffic-eng/tunnel/reoptimize.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/traffic-eng/tunnel/reoptimize.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/traffic-eng/tunnel/reoptimize",
+  "md_sha256": "5e7701740ad719f15cd60128811a10be0cc8e091be1621b5fb8f4f52e7528dd7",
+  "html_sha256": "ecd743f0d76339d9e34f64c01d7061b2e3826926bb91cac32d12fbc7ac1a27be",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

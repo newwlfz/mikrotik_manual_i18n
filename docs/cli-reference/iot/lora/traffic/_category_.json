@@ -1,0 +1,11 @@
+{
+  "position": 9,
+  "label": "Traffic",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/iot/lora/traffic/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/iot/lora/traffic"
+}

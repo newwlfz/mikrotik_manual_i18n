@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "virtual-private-networks/sstp.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/virtual-private-networks/sstp.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/virtual-private-networks/sstp",
+  "md_sha256": "eca344e7cee8093e61908ed8604ec8ee8d0c80440f1dfc8e78e6cc1762d4e490",
+  "html_sha256": "d6129373ee4919cb386c99b9d3fffe8d2b73ea4df1ea8d2fdb2e9858f402342d",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 12,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 12,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

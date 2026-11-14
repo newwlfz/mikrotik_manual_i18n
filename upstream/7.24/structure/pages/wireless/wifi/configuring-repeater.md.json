@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "wireless/wifi/configuring-repeater.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/wireless/wifi/configuring-repeater.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/wireless/wifi/configuring-repeater",
+  "md_sha256": "41544aaf648e09896f6399a1cb20292ad4af03a3bebc9300afe65b0ade0a6aa4",
+  "html_sha256": "be0b61aab1775836149a9320ba059de65ab6e58e1dddacb47f3d3e53fbbab699",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 16,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 38,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 16,
+      "listItems": 16,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 16,
+      "listItems": 16,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/caps-man/manager/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/caps-man/manager.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/caps-man/manager/",
+  "md_sha256": "d5b2d481e5b713279ace79f2c41024447df22bca4d15e03e1b05110f0693703f",
+  "html_sha256": "15ac3d3ff84e1088e7e97b5e77842c98721c7cac7f85b9d064657ce67743c448",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

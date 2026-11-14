@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/partitions/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/partitions.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/partitions/",
+  "md_sha256": "b3a514db2ec4adfa359bb7374b3a0fd0b6739c19ddbe718d1a697d2b3f20086d",
+  "html_sha256": "f7a50496e83f5d9358a0bf6365cba437e4aca59482436328a325a350decafe87",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

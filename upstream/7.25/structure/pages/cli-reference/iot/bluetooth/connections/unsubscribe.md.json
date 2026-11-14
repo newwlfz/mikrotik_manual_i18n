@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/iot/bluetooth/connections/unsubscribe.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/bluetooth/connections/unsubscribe.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/bluetooth/connections/unsubscribe",
+  "md_sha256": "cd60cfd02319ed1994c741141dd8743bf72905c3e8beb629b077547ddccdfd34",
+  "html_sha256": "1f6a297d68f9f12c4abef2fa7b38d8552cf4ddfd9927502b9c2d5d0598e3167c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,784 @@
+fw-version: 2.0.0
+rpc:
+  "app":
+    id: 0
+    description: "application commands"
+    commands:
+      "set-mode":
+        id: 2
+        description: "set device operating mode"
+        params: "mode (`SHUTDOWN`_:0/`RUN`_:1)"
+      "profile":
+        id: 3
+        description: "switch active profile and optionally make default"
+        params: "profile-num (0..5), make-default (no:0/yes:1) =0"
+      "reset":
+        id: 4
+        description: "system reset"
+        params: "type (board:0/app only:1) =0"
+      "factory-reset":
+        id: 8
+        description: "reboot device, clear saved configuration and set to defaults (optional)"
+        params: "key (984651411), [fw-def (784565141) {don't apply default configuration}], delay-ms (u16) =100"
+      "led":
+        id: 9
+        description: "configure application LED signals"
+        params: "[enable (no:0/yes:1)]"
+      "set-time":
+        id: 12
+        description: "set UNIX time relative to device uptime"
+        params: "[unix-time-s (u32), uptime-s (u32) =current uptime]"
+  "lora":
+    id: 1
+    description: "LoRa commands"
+    commands:
+      "set-region":
+        id: 3
+        description: "set LoRaWAN region for sub GHz band"
+        params: "region-code (EU868:1/AS923-1:2/US915:3/AU915:4/AS923-2:7/AS923-3:8/IN868:9/KR920:10)"
+      "primary-band":
+        id: 4
+        description: "select primary band"
+        params: "band (<1GHz:1/2.45GHz:2)"
+      "second-band":
+        id: 5
+        description: "enable or disable secondary band"
+        params: "mode (off:0/on:1) =0"
+      "join-cfg":
+        id: 6
+        description: "configure join duty cycle for band"
+        params: "band (<1GHz:1/2.45GHz:2) =1, duty (0.1%:0/1..254/1%:255)"
+      "link-chk":
+        id: 7
+        description: "set band specific link check interval and timeout"
+        params: "band (<1GHz:1/2.45GHz:2) =1, int-minutes (off:0/5..500000)"
+      "adr-cfg":
+        id: 9
+        description: "enable network ADR or configure fixed data rate"
+        params: "en-netw-adr (off:0/on:1) =0, [fixed-data-rate (0..6)]"
+      "clk-sync":
+        id: 10
+        description: "absolute time synchronization"
+        params: "[int-minutes (off:0/1..u16max)], [leap-sec (i8)], sync-now (no:0/yes:1) =0, [retry-s (0..u8max)], [retry-cnt (0..u8max)]"
+      "cfg-class-b":
+        id: 11
+        description: "configure LoRaWAN Class B"
+        params: "[auto-en (off:0/on:1)], [ping-slot-int-s (1/2/4/8/16/32/64/128)]"
+      "class":
+        id: 12
+        description: "switch LoRaWAN class"
+        params: "class (A:0/B:1) =0"
+      "join-eui":
+        id: 14
+        description: "override network JoinEUI"
+        params: "cred-ch-key (87904163) =0, 8* eui (u8)"
+      "net-key":
+        id: 15
+        description: "override network AppKey"
+        params: "cred-ch-key (87904163) =0, 16* key (u8)"
+      "cred":
+        id: 16
+        description: "user network credential management"
+        params: "[confirm-timeout-s (60..u16max) {revert if not joined}], [action (clear pending:0/try now:1/force confirm:87904163)]"
+  "frame":
+    id: 2
+    description: "network frame commands"
+    commands:
+      "send":
+        id: 1
+        description: "schedule uplink frames"
+        params: "+frame-id (fr-id)"
+      "set-cfg":
+        id: 2
+        description: "set uplink frame configuration"
+        params: "profile-mask (1..63) {bitfield} =0, [ul-period-s (off:0/1..u16max)], [confirmed (no:0/yes:1)], [on-join (no:0/yes:1)], +frame-id (fr-id)"
+      "clear-cfg":
+        id: 4
+        description: "clear all frame config for specified profiles (as if 'set-cfg profile-mask,0,0,0,...')"
+        params: "profile-mask (1..63) {bitfield} =0"
+  "mag":
+    id: 3
+    description: "magnet switch commands"
+    commands:
+      "cfg":
+        id: 2
+        description: "set configuration"
+        params: "[pin-timeout (0..u16max)], [pin-protect (off:0/on:1)], [blink-mode (half duty:0/pulse:1/off:2)]"
+      "svc":
+        id: 3
+        description: "enable or disable magnet command interface"
+        params: "new-state (off:0/on:1), key (649864801)"
+  "data":
+    id: 4
+    description: "data commands"
+    commands:
+      "sample":
+        id: 4
+        description: "force sensor polling"
+        params: ""
+      "next-epoch":
+        id: 5
+        description: "manually start next histogram epoch"
+        params: "type (all/temp/humid) =all"
+      "poll-cfg":
+        id: 8
+        description: "set data polling configuration"
+        params: "profile-mask (1..63) {bitfield} =0, [th-poll-int (1..u32max) {temperature and humidity}], [sync-period (no:0/yes:1)], [on-mag-switch (no:0/yes:1)], [on-activity-change (no:0/yes:1)], [on-impact (no:0/yes:1)], [on-free-fall (no:0/yes:1)], [on-ul-stale (no:0/yes:1)],[bat-poll-int (1..u32max) {battery voltage}]"
+      "temp-histo-cfg":
+        id: 9
+        description: "set temperature histogram configuration"
+        params: "profile-mask (1..63) {bitfield} =0, [epoch-interval-s (off:0/1..u32max)], [epoch-interval-cnt (off:0/1..u32max)], [epoch-max-bin-cnt (off:0/1..u32max)],[frame-on-new-epoch (no:0/yes:1)], [lim-divider (1..u32max)], 9* [bin-limit (i8/fp) {°C}]"
+      "humid-histo-cfg":
+        id: 10
+        description: "set humidity histogram configuration"
+        params: "profile-mask (1..63) {bitfield} =0, [epoch-interval-s (off:0/1..u32max)], [epoch-interval-cnt (off:0/1..u32max)], [epoch-max-bin-cnt (off:0/1..u32max)],[frame-on-new-epoch (no:0/yes:1)], [lim-divider (1..u32max)], 9* [bin-limit (0..99/fp) {RH%}]"
+      "ema-cfg":
+        id: 11
+        description: "set exponential moving average (EMA) configuration"
+        params: "profile-mask (1..63) {bitfield} =0, [temp-cnt (1..32766) {a = 2 / (temp-cnt + 1)}], [humid-cnt (1..32766) {a = 2 / (humid-cnt + 1)}], [bat-cnt (1..32766) {a = 2 / (bat-cnt + 1)}], [orient-cnt (1..32766) {a = 2 / (orient-cnt + 1)}], [send-ema-temp (no:0/yes:1)], [send-ema-humid (no:0/yes:1)], [send-ema-bat (no:0/yes:1)], [send-ema-orient (no:0/yes:1)]"
+      "activity-cfg":
+        id: 12
+        description: "set activity monitor configuration"
+        params: "profile-mask (1..63) {bitfield} =0, [mode (off:0/single:1/dual:2)],[level1-th (1..63)], [level2-th (1..63)], [en-led (off:0/on:1)]"
+      "acc-cfg":
+        id: 13
+        description: "set accelerometer configuration"
+        params: "profile-mask (1..63) {bitfield} =0, [full-scale (2G:0/4G:1/8G:2/16G:3)], [en-impact-x (off:0/on:1)],[en-impact-y (off:0/on:1)], [en-impact-z (off:0/on:1)], [impact-th (1..63) {impact-th * full-scale / 64}],[impact-dur (0..3)], [en-ff (off:0/on:1)], [ff-th (0..7)], [ff-dur (0..63)],[data-rate (2/13/25/500/100/200) {Hz}], [filter (2/4/10/20) {cutoff = data-rate/filter}],[lp-mode (0..3)], [low-noise (no:0/yes:1)]"
+      "orient-cfg":
+        id: 14
+        description: "set orientation sense configuration"
+        params: "profile-mask (1..63) {bitfield} =0, [enable (off:0/on:1)], [max-1G-offset (1..20)], [poll-interval-s (1..u32max)], [ref-1-x (i16)], [ref-1-y (i16)], [ref-1-z (i16)],[ref-2-x (i16)], [ref-2-y (i16)], [ref-2-z (i16)], [ref-3-x (i16)], [ref-3-y (i16)], [ref-3-z (i16)]"
+      "event-cfg":
+        id: 15
+        description: "set event storage configuration"
+        params: "profile-mask (1..63) {bitfield} =0, [max-count (disabled:0/1..100)], [send-th (0..u16max) {if count >= send-th: send(device-events)}], [discard (oldest:0/newest:1) {if no free space}], [send-all (off:0/on:1)]"
+      "erase-events":
+        id: 18
+        description: "erase <num-oldest> events if provided, otherwise all"
+        params: "[num-oldest (u16)]"
+      "del-rule":
+        id: 19
+        description: "delete <rule-num> rules if provided, otherwise delete all"
+        params: "[rule-num (0..31)]"
+      "set-rule":
+        id: 20
+        description: "set data rule <rule-num>"
+        params: "[rule-num (0..31)], test-expr (texp), [input-expr (iexp)], [switch-profile (0..5)],4* [make-event (var-id)], 4* [send-frame (fr-id)], [clr-timer-mask (0..15)]"
+      "timer":
+        id: 22
+        description: "set user timer value"
+        params: "[timer_1 (u32) {`timer_1`_}], [timer_2 (u32) {`timer_2`_}], [timer_3 (u32) {`timer_3`_}], [timer_4 (u32) {`timer_4`_}]"
+      "activity-cal":
+        id: 24
+        description: "run activity monitor calibration and apply result to profiles"
+        params: "profile-mask (1..63) {bitfield} =0, cal-level (level-one:1/level-two:2), cal-led (no:0/yes:1) =0"
+frames:
+  current-state:
+    id: 1
+    len: 5
+    content:
+      - temperature
+      - humidity
+      - mag_sw_cnt_u8
+      - major_axis_orientation
+      - activity_state
+      - free_fall_evnt
+      - impact_evnt
+      - pending_evnt
+  device-events:
+    id: 2
+    len: 0
+    content:
+      - event-list
+  temp-histogram:
+    id: 3
+    len: 11
+    content:
+      - temp_histo_epoch
+      - temp_histo_bin[10]
+  humid-histogram:
+    id: 4
+    len: 11
+    content:
+      - humid_histo_epoch
+      - humid_histo_bin[10]
+  device-orientation:
+    id: 5
+    len: 3
+    content:
+      - orientation_x
+      - orientation_y
+      - orientation_z
+  full-activity:
+    id: 6
+    len: 9
+    content:
+      - activity_state
+      - activity_s
+      - high_activity_s
+  motion-events:
+    id: 7
+    len: 8
+    content:
+      - impact_cnt
+      - free_fall_cnt
+  mag-switch:
+    id: 8
+    len: 8
+    content:
+      - mag_sw_cnt
+      - mag_switch_ts
+  impact-count:
+    id: 9
+    len: 8
+    content:
+      - impact_cnt_u16
+      - impact_cnt_x_u16
+      - impact_cnt_y_u16
+      - impact_cnt_z_u16
+  last-temp:
+    id: 10
+    len: 2
+    content:
+      - temperature
+  ema-temp:
+    id: 11
+    len: 2
+    content:
+      - temperature_ema
+  last-humid:
+    id: 12
+    len: 1
+    content:
+      - humidity
+  ema-humid:
+    id: 13
+    len: 1
+    content:
+      - humidity_ema
+  activity:
+    id: 14
+    len: 5
+    content:
+      - activity_state
+      - total_activity_s
+  dev-time:
+    id: 20
+    len: 8
+    content:
+      - uptime_s
+      - unix_time
+  dev-health:
+    id: 21
+    len: 2
+    content:
+      - battery_mv
+  version:
+    id: 22
+    len: 11
+    content:
+      - version_pid
+      - version_maj
+      - version_min
+      - version_rev
+      - version_hash[6]
+  serial-number:
+    id: 23
+    len: 11
+    content:
+      - serial_number[11]
+  cfg-state:
+    id: 24
+    len: 10
+    content:
+      - cfg_app_crc
+      - cfg_net_crc
+      - cfg_frames_crc
+      - cfg_data_crc
+      - cfg_rules_crc
+  full-cfg:
+    id: 25
+    len: 0
+    content:
+      - content-offset
+      - content-final
+      - content-len
+      - content-binary-blob
+  app-cfg:
+    id: 26
+    len: 0
+    content:
+      - content-offset
+      - content-final
+      - content-len
+      - content-binary-blob
+  net-cfg:
+    id: 27
+    len: 0
+    content:
+      - content-offset
+      - content-final
+      - content-len
+      - content-binary-blob
+  frame-cfg:
+    id: 28
+    len: 0
+    content:
+      - content-offset
+      - content-final
+      - content-len
+      - content-binary-blob
+  data-cfg:
+    id: 29
+    len: 0
+    content:
+      - content-offset
+      - content-final
+      - content-len
+      - content-binary-blob
+  rules-cfg:
+    id: 30
+    len: 0
+    content:
+      - content-offset
+      - content-final
+      - content-len
+      - content-binary-blob
+data-fields:
+  mag_sw_cnt_u8:
+    id: 42
+    fmt: "u8"
+    len: 1
+    bit_len: 8
+    description: "LSB of internal magnet switch counter `mag_sw_cnt`_"
+  pending_evnt:
+    id: 43
+    fmt: "bool"
+    len: 1
+    bit_len: 1
+    description: "indicates device has stored events"
+  event-list:
+    id: 44
+    fmt: ""
+    len: 0
+    bit_len: 0
+    description: "variable length list of: event time stamp, code and optional value"
+  temp_histo_epoch:
+    id: 45
+    fmt: "u8"
+    len: 1
+    bit_len: 8
+    description: "temperature histogram epoch number"
+  temp_histo_bin[10]:
+    id: 46
+    fmt: "u8[10]"
+    len: 10
+    bit_len: 80
+    description: "temperature histogram bin counter values"
+  humid_histo_epoch:
+    id: 47
+    fmt: "u8"
+    len: 1
+    bit_len: 8
+    description: "humidity histogram epoch number"
+  humid_histo_bin[10]:
+    id: 48
+    fmt: "u8[10]"
+    len: 10
+    bit_len: 80
+    description: "humidity histogram bin counter values"
+  orientation_x:
+    id: 49
+    fmt: "i8"
+    len: 1
+    bit_len: 8
+    description: "device orientation normal vector X axis"
+  orientation_y:
+    id: 50
+    fmt: "i8"
+    len: 1
+    bit_len: 8
+    description: "device orientation normal vector Y axis"
+  orientation_z:
+    id: 51
+    fmt: "i8"
+    len: 1
+    bit_len: 8
+    description: "device orientation normal vector Z axis"
+  mag_switch_ts:
+    id: 52
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "time stamp of last time magnetic switch state change"
+  impact_cnt_u16:
+    id: 53
+    fmt: "u16"
+    len: 2
+    bit_len: 16
+    description: "impact event counter"
+  impact_cnt_x_u16:
+    id: 54
+    fmt: "u16"
+    len: 2
+    bit_len: 16
+    description: "X axis impact event counter"
+  impact_cnt_y_u16:
+    id: 55
+    fmt: "u16"
+    len: 2
+    bit_len: 16
+    description: "Y axis impact event counter"
+  impact_cnt_z_u16:
+    id: 56
+    fmt: "u16"
+    len: 2
+    bit_len: 16
+    description: "Z axis impact event counter"
+  total_activity_s:
+    id: 57
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "total activity state time (level 1 + level 2)"
+  uptime_s:
+    id: 58
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "device FW uptime"
+  version_pid:
+    id: 59
+    fmt: "u16"
+    len: 2
+    bit_len: 16
+    description: "TG-LR82:0x0000, TG-LR92:0x0001"
+  version_maj:
+    id: 60
+    fmt: "u8"
+    len: 1
+    bit_len: 8
+    description: "FW version major number"
+  version_min:
+    id: 61
+    fmt: "u8"
+    len: 1
+    bit_len: 8
+    description: "FW version minor number"
+  version_rev:
+    id: 62
+    fmt: "u8"
+    len: 1
+    bit_len: 8
+    description: "FW version patch number"
+  version_hash[6]:
+    id: 63
+    fmt: "u8[6]"
+    len: 6
+    bit_len: 48
+    description: "FW version hash"
+  serial_number[11]:
+    id: 64
+    fmt: "u8[11]"
+    len: 11
+    bit_len: 88
+    description: "last 11 characters of device serial number"
+  cfg_app_crc:
+    id: 65
+    fmt: "u16"
+    len: 2
+    bit_len: 16
+    description: "app & mag configuration group 16 bit checksum"
+  cfg_net_crc:
+    id: 66
+    fmt: "u16"
+    len: 2
+    bit_len: 16
+    description: "net configuration group 16 bit checksum"
+  cfg_frames_crc:
+    id: 67
+    fmt: "u16"
+    len: 2
+    bit_len: 16
+    description: "frame configuration group 16 bit checksum"
+  cfg_data_crc:
+    id: 68
+    fmt: "u16"
+    len: 2
+    bit_len: 16
+    description: "data configuration group 16 bit checksum"
+  cfg_rules_crc:
+    id: 69
+    fmt: "u16"
+    len: 2
+    bit_len: 16
+    description: "data rule configuration 16 bit checksum"
+  content-final:
+    id: 70
+    fmt: "bool"
+    len: 1
+    bit_len: 1
+    description: "flag indicating last chunk of content"
+  content-offset:
+    id: 71
+    fmt: "u15"
+    len: 2
+    bit_len: 15
+    description: "byte offset of content data"
+  content-len:
+    id: 72
+    fmt: "u8"
+    len: 1
+    bit_len: 8
+    description: "length of content"
+  content-binary-blob:
+    id: 73
+    fmt: ""
+    len: 0
+    bit_len: 0
+    description: "binary data of content chunk"
+variables:
+  profile:
+    id: 0
+    fmt: "u8"
+    len: 1
+    bit_len: 8
+    description: "current data profile (0..5)"
+  profile_etm:
+    id: 1
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "elapsed time [s] since last profile switch"
+  daytime_tm:
+    id: 2
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "seconds since midnight 00:00 GMT or 0 if unknown"
+  unix_time:
+    id: 3
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "current UNIX time or device uptime if unknown"
+  net_frame_etm:
+    id: 4
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "elapsed time since last network uplink"
+  net_joined_flag:
+    id: 5
+    fmt: "bool"
+    len: 1
+    bit_len: 1
+    description: "network join state"
+  net_class:
+    id: 6
+    fmt: "u8"
+    len: 1
+    bit_len: 8
+    description: "currently selected LoRaWAN :ref:`class <lora class>`"
+  net_region:
+    id: 7
+    fmt: "u8"
+    len: 1
+    bit_len: 8
+    description: "currently used LoRaWAN :ref:`region code <lora set-region>`"
+  temperature:
+    id: 8
+    fmt: "f8.8"
+    len: 2
+    bit_len: 16
+    description: "last measured temperature"
+  temperature_ema:
+    id: 9
+    fmt: "f8.8"
+    len: 2
+    bit_len: 16
+    description: "EMA of measured temperature"
+  humidity:
+    id: 10
+    fmt: "u8"
+    len: 1
+    bit_len: 8
+    description: "last measured humidity"
+  humidity_ema:
+    id: 11
+    fmt: "u8"
+    len: 1
+    bit_len: 8
+    description: "EMA of measured humidity"
+  mag_sw_cnt:
+    id: 12
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "magnetic switch state change counter"
+  mag_sw_etm:
+    id: 13
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "elapsed time since last magnetic switch change [s]"
+  mag_sw_flag:
+    id: 14
+    fmt: "bool"
+    len: 1
+    bit_len: 1
+    description: "current state of magnetic switch"
+  activity_state:
+    id: 15
+    fmt: "activity"
+    len: 1
+    bit_len: 2
+    description: "current device activity state"
+  activity_s:
+    id: 16
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "low activity (level 1) state counter [s]"
+  high_activity_s:
+    id: 17
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "high activity (level 2) state counter [s]"
+  major_axis_orientation:
+    id: 18
+    fmt: "orient"
+    len: 1
+    bit_len: 3
+    description: "coarse device orientation"
+  impact_cnt_x:
+    id: 19
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "X axis impact event counter"
+  impact_cnt_y:
+    id: 20
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "Y axis impact event counter"
+  impact_cnt_z:
+    id: 21
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "Z axis impact event counter"
+  impact_cnt:
+    id: 22
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "impact event counter"
+  impact_evnt:
+    id: 23
+    fmt: "bool"
+    len: 1
+    bit_len: 1
+    description: "impact event flag, cleared by `current-state`_, `motion-events`_, `impact-count`_ frames"
+  impact_etm:
+    id: 24
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "elapsed time since last impact event event [s]"
+  free_fall_cnt:
+    id: 25
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "free-fall event counter"
+  free_fall_evnt:
+    id: 26
+    fmt: "bool"
+    len: 1
+    bit_len: 1
+    description: "free-fall event flag, cleared by `current-state`_, `motion-events`_ frames"
+  free_fall_etm:
+    id: 27
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "elapsed time since last free-fall event [s]"
+  angle_1:
+    id: 28
+    fmt: "u8"
+    len: 1
+    bit_len: 8
+    description: "angle between current orientation and user ref-1 vector, see `data orient-cfg`_"
+  angle_2:
+    id: 29
+    fmt: "u8"
+    len: 1
+    bit_len: 8
+    description: "angle between current orientation and user ref-2 vector, see `data orient-cfg`_"
+  angle_3:
+    id: 30
+    fmt: "u8"
+    len: 1
+    bit_len: 8
+    description: "angle between current orientation and user ref-3 vector, see `data orient-cfg`_"
+  angle_ema:
+    id: 31
+    fmt: "u8"
+    len: 1
+    bit_len: 8
+    description: "angle between current orientation and EMA of device orientation"
+  battery_mv:
+    id: 32
+    fmt: "u16"
+    len: 2
+    bit_len: 16
+    description: "last measured battery voltage [mV]"
+  battery_mv_ema:
+    id: 33
+    fmt: "u16"
+    len: 2
+    bit_len: 16
+    description: "EMA of battery voltage [mV]"
+  meta_rule_id:
+    id: 34
+    fmt: "u16"
+    len: 2
+    bit_len: 16
+    description: "meta variable to send generate event with rule number"
+  timer_1:
+    id: 35
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "resettable continues up counting timer [s]"
+  timer_2:
+    id: 36
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "resettable continues up counting timer [s]"
+  timer_3:
+    id: 37
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "resettable continues up counting timer [s]"
+  timer_4:
+    id: 38
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "resettable continues up counting timer [s]"
+  activity_state_etm:
+    id: 39
+    fmt: "u32"
+    len: 4
+    bit_len: 32
+    description: "time since `activity_state`_ state change [s]"
+ports:
+  cfg: 2
+  cmd: 3
+  txt: 10

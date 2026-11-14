@@ -1,0 +1,11 @@
+{
+  "position": 26,
+  "label": "Tftp",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/tftp/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/tftp"
+}

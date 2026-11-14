@@ -1,0 +1,17 @@
+{
+  "current": "7.26",
+  "versions": [
+    {
+      "version": "7.24",
+      "count": 1055
+    },
+    {
+      "version": "7.25",
+      "count": 1057
+    },
+    {
+      "version": "7.26",
+      "count": 1110
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "containers/apps/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/containers/apps.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/containers/apps/",
+  "md_sha256": "70a6581291a63fc0922f3b6959085ee7248c74ebdae07e117427bd7344589433",
+  "html_sha256": "b4bc10875c640cae823da35e0d9a35f76e095531d775d53a72b6eced1ecf33b9",
+  "body": {
+    "html": {
+      "lists": 14,
+      "listItems": 60,
+      "br": 1,
+      "details": 0,
+      "tables": 7,
+      "sup": 0,
+      "code": 27,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 60,
+      "listItems": 60,
+      "br": 0,
+      "details": 0,
+      "tables": 7,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 60,
+      "listItems": 60,
+      "br": 0,
+      "details": 0,
+      "tables": 7,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 15,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 11,
+          "col": 3,
+          "html": "Hardware devices that must be present on the host for the container to start. This property is configurable only after adding the YAML configuration. <br/><br/><strong>Compose format:</strong><code>[host-hw-device]:[device-in-app]</code>"
+        },
+        {
+          "row": 12,
+          "col": 3,
+          "html": "Mount directories required for the container to start. This property is configurable only after adding the YAML configuration. <br/><br/><strong>Compose format:</strong><code>[dir-on-host]:[dir-in-app]</code>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 19,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 10,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 5,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 16,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 21,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

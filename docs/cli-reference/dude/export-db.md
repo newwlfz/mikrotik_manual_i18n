@@ -1,0 +1,22 @@
+---
+sidebar_key: "cli-reference/dude/export-db"
+sidebar_position: 4
+title: "export-db"
+sidebar_label: 'export-db'
+source: https://manual.mikrotik.com/docs/cli-reference/dude/export-db
+captured_at: '2026-11-09T11:35:47.715Z'
+---
+
+-----------
+
+## dude/export-db 
+**Package:** dude
+**Type:** Command
+
+<ArgTable c1="Argument" c2="Type" c3="Description">
+<ArgTableRow arg="backup-file" typ="file"></ArgTableRow>
+</ArgTable>
+
+<ArgTable c1="Read-only Argument" c2="Type" c3="Description">
+<ArgTableRow arg="status" typ="string"></ArgTableRow>
+</ArgTable>

@@ -1,0 +1,11 @@
+{
+  "position": 11,
+  "label": "lcd",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/lcd/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/lcd"
+}

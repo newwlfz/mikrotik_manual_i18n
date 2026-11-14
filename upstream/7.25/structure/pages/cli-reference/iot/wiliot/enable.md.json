@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/iot/wiliot/enable.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/wiliot/enable.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/wiliot/enable",
+  "md_sha256": "824186fb06416ad61aec820539709dcfbeb23518b34cef920efb86722ae4417f",
+  "html_sha256": "29e7693ff8797d86a79fa30e48c0cd57e5c095b3e40d361387ae5812eedf4e2f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

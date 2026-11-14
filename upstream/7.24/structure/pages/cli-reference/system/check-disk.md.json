@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/check-disk.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/check-disk.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/check-disk",
+  "md_sha256": "dbfa90417a7283797c11e4a0f696a9da307755577d51b893fb9170c1abba8b1f",
+  "html_sha256": "811806c16f2207ec5f0458c1746b535d09f975081f536e79b7d0a8d7067d5759",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

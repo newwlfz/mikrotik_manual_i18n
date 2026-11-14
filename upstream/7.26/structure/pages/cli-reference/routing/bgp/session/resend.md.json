@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/bgp/session/resend.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/bgp/session/resend.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/bgp/session/resend",
+  "md_sha256": "26532c2305e591b836fddec30e218f3b293928d564669e1a6673f35e5fbaa1f8",
+  "html_sha256": "b92ddac6fc4b1f0648106e30ab30788bf3dad8f8f4a30fc7b321107df419d2f3",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/bridge/port/mst-override/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/bridge/port/mst-override/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/bridge/port/mst-override/monitor",
+  "md_sha256": "8797cad311498cab187491a749d9c74deda34abab4cb60de307e8e8868e43802",
+  "html_sha256": "504b204a27e4e10f88da6e715a55fb8b3394aa40b7e87798e24e2eaf7bf2711c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,60 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "bridging-and-switching/swos/crs3.md",
+  "source_url": "https://manual.mikrotik.com/docs/bridging-and-switching/swos/crs3.md",
+  "html_url": "https://manual.mikrotik.com/docs/bridging-and-switching/swos/crs3",
+  "md_sha256": "fa9307c4fee5ab4d956529a8bd4b3f849b8c9293af9b89098bf573edcc48206e",
+  "html_sha256": "d4fa30c75eb7bd13c953ba10206644f8ec1dfd4b406f9a0b18df9f3778e2416b",
+  "body": {
+    "html": {
+      "lists": 13,
+      "listItems": 27,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 9,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 27,
+      "listItems": 27,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 27,
+      "listItems": 27,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Specify which address acquisition method to use:<br/><code>DHCP with fallback</code> - the switch sends DHCP requests every second and, while no DHCP server is answering, immediately uses the configured <strong>Static IP Address</strong> value. When a server answers, the switch obtains a lease in 1-2 seconds and renews it at half the lease time. If a renewal goes unanswered, the switch returns to the <strong>Static IP Address</strong> value in 5 seconds and resumes sending requests every second.<br/><code>static</code> - address is set as a <strong>Static IP Address</strong> value (IPv4 only)<br/><code>DHCP only</code> - switch uses DHCPv4 client to acquire address"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

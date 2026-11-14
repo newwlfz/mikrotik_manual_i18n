@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "Management Tools",
+  "key": "management-tools",
+  "link": {
+    "type": "doc",
+    "id": "management-tools/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

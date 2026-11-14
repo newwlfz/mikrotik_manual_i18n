@@ -1,0 +1,27 @@
+---
+sidebar_key: "cli-reference/cmr/device/wifi-logs"
+sidebar_position: 7
+title: "wifi-logs"
+sidebar_label: 'wifi-logs'
+source: https://manual.mikrotik.com/docs/cli-reference/cmr/device/wifi-logs
+captured_at: '2026-11-09T11:35:47.715Z'
+pagination_next: "cli-reference/cmr/layout"
+---
+
+-----------
+
+## cmr/device/wifi-logs 
+**Package:** cmr
+**Type:** Command
+
+WiFi log monitor for the selected devices. Press `c` to switch to the clients view and `l` to return to the log entries.
+
+<ArgTable c1="Argument" c2="Type" c3="Description">
+<ArgTableRow arg="labels" typ="object" unset="1">Select the devices to monitor using labels. Supports + and - signs as AND and AND NOT operators, respectively; if no sign is provided, the OR operator is used.</ArgTableRow>
+<ArgTableRow arg="address" typ="macAddr" unset="1">Filter by client MAC address.</ArgTableRow>
+<ArgTableRow arg="bssid" typ="macAddr" unset="1">Filter by BSSID.</ArgTableRow>
+<ArgTableRow arg="time" typ="time" unset="1">Filter by time.</ArgTableRow>
+<ArgTableRow arg="time-start" typ="date" unset="1">Filter logs from this time.</ArgTableRow>
+<ArgTableRow arg="time-end" typ="date" unset="1">Filter logs up to this time.</ArgTableRow>
+<ArgTableRow arg="event" typ="enum (connected | disconnected | failed)" unset="1">Filter by event: `connected`, `disconnected`, or `failed`.</ArgTableRow>
+</ArgTable>

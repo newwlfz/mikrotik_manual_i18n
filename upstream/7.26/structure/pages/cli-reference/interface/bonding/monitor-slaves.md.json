@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/bonding/monitor-slaves.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/bonding/monitor-slaves.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/bonding/monitor-slaves",
+  "md_sha256": "fcf1699cf13410f01ff3ee5631349229a183917603f2ee620e15bc294570575b",
+  "html_sha256": "c09561534c5b2b1c78ee26ded9115435d8d01aff14e61adfb69183fd06f531e3",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

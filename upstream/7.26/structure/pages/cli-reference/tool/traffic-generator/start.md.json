@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/tool/traffic-generator/start.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/start.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/start",
+  "md_sha256": "e9621a731586ce967a25946f8fa483170d0b9472be11b859f085af545f4a63a2",
+  "html_sha256": "98c52e6d69252e5313de2526544d1f4a6441119d73652ce5f341b0c18b46e397",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

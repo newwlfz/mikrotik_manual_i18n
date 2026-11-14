@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "internet-of-things/bluetooth/user-guides/sending-temperature-readings-from-tg.md",
+  "source_url": "https://manual.mikrotik.com/docs/internet-of-things/bluetooth/user-guides/sending-temperature-readings-from-tg.md",
+  "html_url": "https://manual.mikrotik.com/docs/internet-of-things/bluetooth/user-guides/sending-temperature-readings-from-tg",
+  "md_sha256": "22afe4f4315e4751c3fb2dbcf5c48b480d9a24e8f4aeb6fddd7a036a32ea51ec",
+  "html_sha256": "bfb5b06bf93f18a725fbf974aaca3654f41fa93ebdd6d849cab0cd0ce5ab610c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 1,
+      "cols": 1,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

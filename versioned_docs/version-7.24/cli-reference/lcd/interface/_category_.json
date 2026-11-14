@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "Interface",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/lcd/interface/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/lcd/interface"
+}

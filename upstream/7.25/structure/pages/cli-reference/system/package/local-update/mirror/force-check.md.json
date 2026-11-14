@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/package/local-update/mirror/force-check.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/package/local-update/mirror/force-check.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/package/local-update/mirror/force-check",
+  "md_sha256": "6d4f9b9320fe422e0d11e92c9b2b4851915764906acbb8787b1ac9428611b320",
+  "html_sha256": "e85c8583d78709e400d9df2ad69fcabdf0819612ac9cbc327a3488c524cb1676",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

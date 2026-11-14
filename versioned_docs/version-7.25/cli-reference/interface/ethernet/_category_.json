@@ -1,0 +1,11 @@
+{
+  "position": 9,
+  "label": "Ethernet",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/ethernet/index"
+  },
+  "key": "cli-reference/interface/ethernet"
+}

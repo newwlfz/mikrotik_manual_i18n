@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/user-manager/payment.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/payment.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/payment",
+  "md_sha256": "0a8eb9e7857874a94026e063b86d16315a24ae093efcadce6bb4910c91e49558",
+  "html_sha256": "40f258e11686dfb300c2de35b1a8513bda0a7be3a1d93405a5b8fb80c1fb1cf3",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

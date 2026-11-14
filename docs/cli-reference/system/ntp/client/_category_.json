@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Client",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/ntp/client/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/ntp/client"
+}

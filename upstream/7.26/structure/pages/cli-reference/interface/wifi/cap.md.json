@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wifi/cap.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/cap.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/cap",
+  "md_sha256": "df66e86200e8c04f6fdbf012a67f21a59097ae80683c1c1d076b0b63f3bb21fc",
+  "html_sha256": "3fb1889222ba186e803395f70097c4ee32d274f98a4d0e4a9dd1ea5b93f9ad37",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

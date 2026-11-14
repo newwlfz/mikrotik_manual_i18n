@@ -1,0 +1,191 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "user-guides/routing-and-networking-protocols/route-selection-and-filtering.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/route-selection-and-filtering.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/user-guides/routing-and-networking-protocols/route-selection-and-filtering",
+  "md_sha256": "a316f5724a9ab25b99c3e3387964aa8afec3208a47388d0dfc86d2346bf8b4f1",
+  "html_sha256": "4be5f37e307ab6383067b0a99006b69acd567378e0cd5e462845095c319c938e",
+  "body": {
+    "html": {
+      "lists": 6,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 9,
+      "sup": 0,
+      "code": 40,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 19,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 9,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 19,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 9,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 38,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 33,
+          "col": 2,
+          "html": "Type of the OSPF route: <br/><ul><li>ext1 - external (Type 5 LSA) with type1 metric</li><li>ext2 - external (Type 5 LSA) with type2 metric</li><li>inter - inter-area-route (Type 3 LSA)</li><li>intra - intra-area-route (Type 1/2 LSA)</li><li>nssa1 - Type 7 LSA with type1 metric</li><li>nssa2 - Type 7 LSA with type2 metric</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 34,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 10,
+          "col": 2,
+          "html": "Prepend last received remote peer's ASN. If the prefix is originated from the router, then this parameter will not do anything on the router's output, because ASN does not exist yet. <br/><br/> If used as a matcher in BGP input, it is possible to filter prefixes exceeding a certain number of prepends. For example, if a remote peer prepends its ASN 5 times, but we want to allow max 4 times prepended ASN, then we can use: <code>if (bgp-path-peer-prepend &gt; 4) &#123;reject&#125;</code><br/><br/> This parameter also overrides any prepends received from the remote peer, for example, if the remote peer prepended its AS 3 times, we can remove this prepend by setting <code>bgp-path-peer-prepend 1</code> in BGP input"
+        },
+        {
+          "row": 22,
+          "col": 2,
+          "html": "IPv4/IPv6 address or interface name. In the case of BGP output, a gateway can be adjusted in the following setups: <br/><ul><li>is a BGP reflector</li><li>nexthop-choice is set to propagate</li><li>is not eBGP and nexthop-choice=force-self is not set.</li></ul>"
+        },
+        {
+          "row": 23,
+          "col": 2,
+          "html": "ipv6 link local nexthop attribute. In the case of BGP output, a gateway can be adjusted in the following setups: <br/><ul><li>is a BGP reflector</li><li>nexthop-choice is set to propagate</li><li>is not eBGP and <code>nexthop-choice=force-self</code> is not set.</li></ul>"
+        },
+        {
+          "row": 32,
+          "col": 2,
+          "html": "BGP Extended Communities attribute is defined in <a href=\"https://tools.ietf.org/html/rfc4360\" target=\"_blank\" rel=\"noopener noreferrer\">RFC 4360</a>. RouterOS parses <code>site-of-origin</code> (prefixed with <code>soo:</code>) and <code>route-target</code> (prefixed with <code>rt:</code>) extended communities.<br/> For example, <br/><code>set bgp-ext-communities rt:1111:2.3.4.5;</code><br/> It is possible to set/match RAW extended community value in 64-bit hex, for example, <br/><code>set bgp-ext-communities 0x.........;</code>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 11,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 4,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 11,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 8,
+      "rows": 10,
+      "cols": 5,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 4,
+          "html": "<strong>Match:</strong><br/> 1234 <br/> 1234 1234 1234 <br/> Null path <br/><strong>No Match:</strong><br/> 1234 5678"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "html": "<strong>Match:</strong><br/> 1234 <br/> 3 1234 6 <br/><strong>No match:</strong><br/> 12345 678"
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "html": "<strong>Match</strong>: <br/> 5678 <br/> 1234 5678 <br/><strong>No match:</strong><br/> 1234 1234 5678 <br/> 12345 5678"
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "html": "<strong>Match:</strong><br/> 12345 <br/> 45678 <br/><strong>No match:</strong><br/> 1234 5678"
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "html": "<strong>Match</strong>: <br/> 1234 <br/> 5678 <br/> 1234 5678 <br/><strong>No Match:</strong><br/> 91011"
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "html": "<code>[ ]</code><br/><code>[^ ]</code>"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Represents the set of AS numbers where one AS number from the list must match. <br/> Use ^ after opening the bracket to negate the set. <br/> It is also possible to reference the pre-defined num-lists from <a href=\"#community-and-num-lists\">num-list</a> with [[:numset_name:]]"
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "html": "<strong>Match:</strong><br/> 1234 <br/> 99 <br/> 5678 <br/><strong>No Match:</strong><br/> 101"
+        },
+        {
+          "row": 9,
+          "col": 4,
+          "html": "<strong>Match:</strong><br/> 1234 <br/> 5678 9999 <br/><strong>No Match:</strong><br/> 1234 5678"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

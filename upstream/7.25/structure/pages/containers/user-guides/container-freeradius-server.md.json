@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "containers/user-guides/container-freeradius-server.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/containers/user-guides/container-freeradius-server.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/containers/user-guides/container-freeradius-server",
+  "md_sha256": "985927b5e3107d6f58a8a939718b75ee1fe973cbab8cd3b3eb97921ffc3d99de",
+  "html_sha256": "99ce01ea496e2d59501357c55c6d6400de13fdfda0428a372acf007ed399a8ad",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 21,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

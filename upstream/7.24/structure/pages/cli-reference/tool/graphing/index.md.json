@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/tool/graphing/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/graphing.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/graphing/",
+  "md_sha256": "4edb8ee0d9d5259325ec9c707997b1461b6b22fa1e8999423e0ff6514a5b2bf9",
+  "html_sha256": "ecb7375af9c7959e61f99e25c3c655bb400a2c9d973c593f7dbdabf402f14f5f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

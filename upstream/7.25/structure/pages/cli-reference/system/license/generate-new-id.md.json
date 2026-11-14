@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/license/generate-new-id.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/license/generate-new-id.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/license/generate-new-id",
+  "md_sha256": "e50c37304ecaac1c3e625317abb4a65da3156d116dddba7a79ae8028c42fcb7f",
+  "html_sha256": "7e5c2db74f9eb24fc1c658f98ab7186d70193f4accd3a077e69cb00edb485ef4",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

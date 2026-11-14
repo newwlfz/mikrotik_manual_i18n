@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wifi/wps-push-button.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/wps-push-button.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/wps-push-button",
+  "md_sha256": "e912b239fc189424255db4fd623f1aff94fdbb826170755588693afd98899a03",
+  "html_sha256": "8d4a1d98a0511b6db5e664e6a14f8a4337610bab8fa9ad7562c2c88e048fa8e8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

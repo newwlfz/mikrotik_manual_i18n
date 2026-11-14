@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "storage/raid/hot-spare.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/storage/raid/hot-spare.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/storage/raid/hot-spare",
+  "md_sha256": "dba9d8f4e226c4d07657c7a9a0078c9fbd12a0063cfc433a887859fba0b448f8",
+  "html_sha256": "fd18b229e2524ca919ed5f32900c00725613b363477b0bc2fb303170ce29e3a0",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

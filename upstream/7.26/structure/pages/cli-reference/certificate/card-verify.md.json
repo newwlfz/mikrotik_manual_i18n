@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/certificate/card-verify.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/certificate/card-verify.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/certificate/card-verify",
+  "md_sha256": "926d899d83c5a8abe1746604be485ec11e1498c31dbd82c5679c70c16604d0b2",
+  "html_sha256": "86161a1332c61b452eab81154f7f134139175bb97d93a34116d68b7013d8f6e8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

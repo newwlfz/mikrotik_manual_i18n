@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/bridge/msrp.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bridge/msrp.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/bridge/msrp",
+  "md_sha256": "f7e13c2ae546f8dc54dba19558aac21c8d4cc50204b3c2e1c4676bc909d6f2fd",
+  "html_sha256": "273ed44ff9acb231a1f58dc958a6da118aa6f4769b4ff0d7482ff898d5cd1f35",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

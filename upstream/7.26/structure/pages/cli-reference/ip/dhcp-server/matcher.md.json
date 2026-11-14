@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/dhcp-server/matcher.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-server/matcher.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-server/matcher",
+  "md_sha256": "4914b1cc7f1e72823a849c290faa970fb41e077916bf6c66ad337b8c6d9ef1b4",
+  "html_sha256": "7515dfa6b7f2c55af741d92141390142e78e0233d94edff94d71d6578ad7c457",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

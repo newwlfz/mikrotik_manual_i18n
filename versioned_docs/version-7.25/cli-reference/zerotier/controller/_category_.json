@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Controller",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/zerotier/controller/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/zerotier/controller"
+}

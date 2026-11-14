@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/ssh/regenerate-host-key.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/ssh/regenerate-host-key.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/ssh/regenerate-host-key",
+  "md_sha256": "6706b9e74fa9a2bc26d642824b59c7cb394cc6d8552636f539c3cfa85d666999",
+  "html_sha256": "e220911d3b3037ca2b6ce1532c5cde19f468cc28f0162862582ee4536f8cdbb4",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

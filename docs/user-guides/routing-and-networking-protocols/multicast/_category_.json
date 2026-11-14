@@ -1,0 +1,11 @@
+{
+  "position": 5,
+  "label": "Multicast",
+  "key": "routing-and-networking-protocols/multicast",
+  "link": {
+    "type": "doc",
+    "id": "routing-and-networking-protocols/multicast/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

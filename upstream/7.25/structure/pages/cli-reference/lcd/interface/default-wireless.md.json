@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/lcd/interface/default-wireless.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/lcd/interface/default-wireless.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/lcd/interface/default-wireless",
+  "md_sha256": "c89523eefc346d2f8ebca3f206423269757cc86d98a133d20b3ea050fac5fbd5",
+  "html_sha256": "57e78b21537962e6584b15042b222db5fd60e2052742bd5d1c401566473608d6",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

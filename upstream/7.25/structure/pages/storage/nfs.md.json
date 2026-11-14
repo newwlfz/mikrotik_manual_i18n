@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "storage/nfs.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/storage/nfs.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/storage/nfs",
+  "md_sha256": "e0c12c44e17c320aaa9565fbb0eb01b307e03295527153318234ae33e39e78b1",
+  "html_sha256": "a3a88532423edb76d10fed77831a4a08003c15df5ef5683953704a7785d67b41",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

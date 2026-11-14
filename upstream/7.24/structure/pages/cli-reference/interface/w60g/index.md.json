@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/w60g/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/w60g.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/w60g/",
+  "md_sha256": "a468c40dbacd8138f4c0b01925411bc867ebfcdae341fad05193ce0eb176507d",
+  "html_sha256": "9e3e72c79d6dcc6f9277e98bfbdb99f842915d7942bd8e885dadcec16a92c8f3",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

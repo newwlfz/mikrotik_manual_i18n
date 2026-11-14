@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/tool/profile.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/tool/profile.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/tool/profile",
+  "md_sha256": "4e68d9b188977f06162d92e115c011f76d26f6c516dc3e99a5754728d2a62ff3",
+  "html_sha256": "5d092eb39ef8a86531e46743eadc25f47ce7ce5a375e9bcc19864d6a20d4048b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

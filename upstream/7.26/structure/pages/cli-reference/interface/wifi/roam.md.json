@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wifi/roam.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/roam.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/roam",
+  "md_sha256": "9ec12f1c123144b2a620f42892f364a661543af552e774df65c789f04a202ec6",
+  "html_sha256": "b46640a0303f7e441b80376cc55c0626504b75d1f502ab9cbe3f37ab9c0f26d3",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

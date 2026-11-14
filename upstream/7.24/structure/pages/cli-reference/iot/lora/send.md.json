@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/iot/lora/send.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/iot/lora/send.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/iot/lora/send",
+  "md_sha256": "0e30114b8fd1c4658e1657655f86a4bcc6fd98377d5b4567a66c0fa8167034eb",
+  "html_sha256": "e1dc3202089f1a54cfc50ccfda75ed5da6766097f4760dedbf38a8f0f3a443a5",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

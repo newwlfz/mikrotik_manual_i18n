@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "network-management/proxy/reverse-proxy.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/network-management/proxy/reverse-proxy.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/network-management/proxy/reverse-proxy",
+  "md_sha256": "375bde658d518853e3e31fbbc0b811b7289b57f31916ce32fb9111956fc34842",
+  "html_sha256": "34bc87b95987401fe8e85d4c8ef44d318686850307c43dd09fecf86596c95594",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 42,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

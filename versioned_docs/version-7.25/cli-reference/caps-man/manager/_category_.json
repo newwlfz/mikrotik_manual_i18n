@@ -1,0 +1,11 @@
+{
+  "position": 8,
+  "label": "Manager",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/caps-man/manager/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/caps-man/manager"
+}

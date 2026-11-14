@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/caps-man/security.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/caps-man/security.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/caps-man/security",
+  "md_sha256": "2dc515546da7e5e152e684256b7066f75e09a6d1c3c419e2d5efe9ec070abbc4",
+  "html_sha256": "61220e12893f93e4e8fdeacbc6c66d2a8921455df845b57e8961769ab6443dde",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

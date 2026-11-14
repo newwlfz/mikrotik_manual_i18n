@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/iot/wiliot/servers/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/iot/wiliot/servers.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/iot/wiliot/servers/",
+  "md_sha256": "f8b4a70426989f5ba59d8cac9670e688324ca563437e291c4e18c2aaf91e1cc7",
+  "html_sha256": "e0032fc7b43088bada357461a642bc2a3fba330e9bb867a48259b5e15513c45b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

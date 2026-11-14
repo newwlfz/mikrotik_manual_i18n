@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/certificate/acme-renew.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/acme-renew.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/acme-renew",
+  "md_sha256": "ee963340206752bda18af18a7473f898bfc495f54d295e20188edce7e647e9dc",
+  "html_sha256": "cf31cb094500ebc5b35d24e351226f95282b0e23c9b0dcd4b3615c23e91beaf3",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

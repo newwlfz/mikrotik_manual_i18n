@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/package/enable.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/package/enable.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/package/enable",
+  "md_sha256": "a4efeb9dcfe4c02afd8bd2fa35c8798ecc0d249c8ab18339f430a07be312de12",
+  "html_sha256": "1f117a50d2363c42db4fb587cb556e98462dfa0e655d994e3c7268ae9cdb83c2",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

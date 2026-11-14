@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/iot/wiliot/mqtt-traffic/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/wiliot/mqtt-traffic.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/wiliot/mqtt-traffic/",
+  "md_sha256": "39e71f4fe60b431c8b2eb075cf7e90d478f54e4209eab7775e749b9e40e26039",
+  "html_sha256": "82abdb04f69264e6b79371b0002bea53f9bf117f260e37500500b70d02423038",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

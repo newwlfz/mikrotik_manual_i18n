@@ -1,0 +1,11 @@
+{
+  "position": 42,
+  "label": "Wifi",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/wifi/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/wifi"
+}

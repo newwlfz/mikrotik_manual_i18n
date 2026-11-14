@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/openflow/port.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/openflow/port.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/openflow/port",
+  "md_sha256": "4d0e7b9b856d756017d76b885390ccc2441989d7494cae9c30dfd16ee7ab34b4",
+  "html_sha256": "4b92b1dc0420cc7e80a9d5c24795f08928e47926b1a467d6ba6050081af1061f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

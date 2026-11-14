@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/package/local-update/refresh.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/package/local-update/refresh.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/package/local-update/refresh",
+  "md_sha256": "7301b618335cb362f3e9569e30ed0b5eeb3218bcec4cc2460fd349ac29c016fd",
+  "html_sha256": "43e448cdbf1c53bb5ccce11fca2b5d6d93e6409a0010131fc76d9a6b7cc3ee94",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

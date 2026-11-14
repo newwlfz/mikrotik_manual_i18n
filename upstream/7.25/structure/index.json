@@ -1,0 +1,65 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "generated_at": "2026-11-08T18:56:57.233Z",
+  "source_manifest": "upstream/7.25/manifest.json",
+  "totals": {
+    "pages": 1,
+    "tables": 0,
+    "cells": 0,
+    "flagged": 0,
+    "failed": 0
+  },
+  "pages": [
+    {
+      "local_path": "high-availability-solutions/vrrp.md",
+      "md_sha256": "09099da6c16b5c92cba3ff8fb63d6c5f22e0aca2b0695e3c19f3e5606070fa4e",
+      "html_sha256": "88e9fcb88ba98a194bf5b32ba204b803217816f125fa5b28c93de034ca894bb2",
+      "body": {
+        "html": {
+          "lists": 8,
+          "listItems": 23,
+          "br": 0,
+          "details": 0,
+          "tables": 0,
+          "sup": 0,
+          "code": 10,
+          "wideTables": 0
+        },
+        "md": {
+          "lists": 23,
+          "listItems": 23,
+          "br": 0,
+          "details": 0,
+          "tables": 0,
+          "sup": 0,
+          "code": 0,
+          "wideTables": 0
+        },
+        "local": {
+          "lists": 23,
+          "listItems": 23,
+          "br": 0,
+          "details": 0,
+          "tables": 0,
+          "sup": 0,
+          "code": 0,
+          "wideTables": 0
+        },
+        "flags": {}
+      },
+      "tables": 0,
+      "mdTables": 0,
+      "htmlTables": 0,
+      "wide": {
+        "md": 0,
+        "html": 0,
+        "local": 0
+      },
+      "unaligned": 0,
+      "flags": {},
+      "cache": "upstream/7.25/structure/pages/high-availability-solutions/vrrp.md.json"
+    }
+  ],
+  "failures": []
+}

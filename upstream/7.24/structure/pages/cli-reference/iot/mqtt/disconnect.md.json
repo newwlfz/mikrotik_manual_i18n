@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/iot/mqtt/disconnect.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/iot/mqtt/disconnect.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/iot/mqtt/disconnect",
+  "md_sha256": "a1fc88bbfed8a179b2303e476979fe22bfe8572b96654de38d69db628c47f537",
+  "html_sha256": "912aac7468612ff0d223add193011c134cd3abae3286c5629474d176c6bc3ea1",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

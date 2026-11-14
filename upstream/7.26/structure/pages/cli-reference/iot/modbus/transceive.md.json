@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/iot/modbus/transceive.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/iot/modbus/transceive.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/iot/modbus/transceive",
+  "md_sha256": "840e20cdabcbee54ddf54c1c4dae419f5000830093156c42b08551968e21293e",
+  "html_sha256": "f244d99e2da54520fb9b0ea3d997e14c7fcf75e8472e074104dd2486a7e73843",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

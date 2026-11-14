@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Port",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/ethernet/switch/qos/port/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/ethernet/switch/qos/port"
+}

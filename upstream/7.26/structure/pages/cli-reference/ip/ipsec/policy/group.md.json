@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/ipsec/policy/group.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/policy/group.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/policy/group",
+  "md_sha256": "cbba72f41f8d81cdf1bd5ada221348513df4ba5126a69143a5c5988a892199cb",
+  "html_sha256": "b73c94cdee4b5f9b08d8fae8f94dd196be268ea9163a80e29f148b0bbbd2851b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/dhcp-server/lease/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-server/lease.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-server/lease/",
+  "md_sha256": "47b418485e90a024bc7d572b8b53cefca268ca18b25d601a6a5033ce17211b40",
+  "html_sha256": "254303a82c12f0997c699d3b8e76f57fc3ae1f30a1972f63103a184980f623ed",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

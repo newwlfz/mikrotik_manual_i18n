@@ -1,0 +1,11 @@
+{
+  "position": 10,
+  "label": "Nexthop",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/routing/nexthop/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/routing/nexthop"
+}

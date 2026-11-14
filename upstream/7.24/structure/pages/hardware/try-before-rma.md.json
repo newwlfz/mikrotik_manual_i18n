@@ -1,0 +1,78 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "hardware/try-before-rma.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/hardware/try-before-rma.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/hardware/try-before-rma",
+  "md_sha256": "db68f1f3e4824395a16fd18f9c3f16a478e3a7d0b645d374f1e454e151b2f13d",
+  "html_sha256": "affe26ee48c6c7230776a331fa7c30daeb4a1fbfb16ede79f58ae0f7d145ea25",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

@@ -1,0 +1,212 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "bridging-and-switching/l3-hardware-offloading.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/l3-hardware-offloading.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/l3-hardware-offloading",
+  "md_sha256": "9c64be88acbf3cf61994105343da14eb2fbc9880719e72a8bff254b260dc4e96",
+  "html_sha256": "434673cbb7135efc26cfed3b2c0d800e7d2ad4cc37d0ba30b38b08392490c65e",
+  "body": {
+    "html": {
+      "lists": 10,
+      "listItems": 34,
+      "br": 9,
+      "details": 0,
+      "tables": 9,
+      "sup": 13,
+      "code": 57,
+      "wideTables": 2
+    },
+    "md": {
+      "lists": 34,
+      "listItems": 34,
+      "br": 0,
+      "details": 0,
+      "tables": 9,
+      "sup": 13,
+      "code": 0,
+      "wideTables": 2
+    },
+    "local": {
+      "lists": 34,
+      "listItems": 34,
+      "br": 0,
+      "details": 0,
+      "tables": 9,
+      "sup": 13,
+      "code": 0,
+      "wideTables": 2
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "The switch driver stops route indexing when <strong>route-queue-size</strong> (see <a href=\"/docs/7.24/bridging-and-switching/l3-hardware-offloading#monitor\">#monitor</a> exceeds this value. Lowering this value leads to faster route processing but increases the lag between a route's appearance in RouterOS and hardware memory. <br/> Setting <strong>route-queue-limit-high=0</strong> disables route indexing when there are any routes in the processing queue - the most efficient CPU usage but the longest delay before hardware offloading. Useful when there are static routes only. Not recommended together with routing protocols (such as BGP or OSPF) when there are frequent routing table changes."
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Re-enable route indexing when <strong>route-queue-size</strong> drops down to this value. Must not exceed the high limit. <br/> Setting <strong>route-queue-limit-low=0</strong> tells the switch driver to process all pending routes before the next hw-offloading attempt. While this is the desired behavior, it may completely block the hw-offloading under a constant BGP feed."
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Reset the Shortest HW Prefix (see <strong>ipv4-shortest-hw-prefix</strong> / <strong>ipv6-shortest-hw-prefix</strong> in <a href=\"/docs/7.24/bridging-and-switching/l3-hardware-offloading#monitor\">#monitor</a> and try the full route table offloading after this number of changes in the routing table. At a partial offload, when the entire routing table does not fit into the hardware memory and shorter prefixes are redirected to the CPU, there is no need to try offloading route prefixes shorter than SHWP since those will get redirected to the CPU anyway, theoretically. However, significant changes to the routing table may lead to a different index layout and, therefore, a different number of routes that can be hw-offloaded. That's why it is recommended to do the full table re-indexing occasionally. <br/> Lowering this value may allow more routes to be hw-offloaded but increases CPU usage and vice-versa. Setting <strong>shwp-reset-counter=0</strong> always does full re-indexing after each routing table change. <br/> This setting is used only during Partial Offloading and has no effect when <strong>ipv4-shortest-hw-prefix=0</strong> (and ipv6, respectively)."
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "The minimum number of routes for incremental adding in Partial Offloading. Depending on the switch chip model, routes are offloaded either as-is (each routing entry in RouterOS corresponds to an entry in the hardware memory) or get indexed, and the index entries are the ones that are written into the hardware memory. This setting is used only for the latter during Partial Offloading. <br/> Depending on index fragmentation, a single IPv4 route addition can occupy from -3 to +6 LPM blocks of HW memory (some route additions may lower the amount of required HW memory thanks to index defragmentation). Hence, it is impossible to predict the exact number of routes that may fit in the hardware memory. The switch driver uses a binary split algorithm to find the maximum number of routes that fit in the hardware. <br/> Let's imagine 128k routes, all of them not fitting into the hardware memory. The algorithm halves the number and tries offloading 64k routes. Let's say offloading succeeded. In the next iteration, the algorithm picks 96k, let's say it fails; then 80k - fails again, 72k - succeeds, 76k, etc. until the difference between succeeded and failed numbers drops below the <strong>partial-offload-chunk</strong> value. <br/> Lowering the <strong>partial-offload-chunk</strong> value increases the number of hw-offloaded routes but also raises CPU usage and vice-versa."
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "The minimum delay between route processing and its offloading. The delay allows processing more routes together and offloading them at once, saving CPU usage. It also makes offloading the entire routing table faster by reducing the per-route processing work. On the other hand, it slows down the offloading of an individual route. <br/> If an additional route is received during the delay, the latter resets to the <strong>route-index-delay-min</strong> value. Adding more and more routes within the delay keeps resetting the timer until the <strong>route-index-delay-max</strong> is reached."
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Unfortunately, switch chips do not provide per-neighbor stats. Hence, the only way to check if the offloaded host is still active is by sending occasional ARP (IPv4) / Neighbor Discovery (IPv6) requests to the connected network. Increasing the value lowers the broadcast traffic but may leave inactive hosts in hardware memory for longer. <br/> Neighbor discovery is triggered within the neighbor keepalive work. Hence, the discovery time is rounded up to the next keepalive session. Choose a value for <strong>neigh-discovery-interval</strong> not divisible by <strong>neigh-keepalive-interval</strong> to send ARP/ND requests in various sessions, preventing broadcast bursts."
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 17,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 16,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 21,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 2,
+          "html": "<br/><code>/interface/ethernet/switch/l3hw-settings/set ipv6-hw=yes</code><br/>"
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "html": "<br/><code>/ip/route/add dst-address=10.0.99.0/24 blackhole</code><br/>"
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "html": "<br/><code>/ip/route/add dst-address=10.0.0.0/24 gateway=ether1</code><br/><br/> This works only for directly connected networks. Since HW does not know how to send ARP requests, CPU sends an ARP request and waits for a reply to find out the DST MAC address on the first received packet of the connection that matches a DST IP address. After DST MAC is determined, HW entry is added and all further packets will be processed by the switch chip."
+        },
+        {
+          "row": 9,
+          "col": 2,
+          "html": "Routing between VLAN interfaces that are created on hardware-offloaded bridge interface with <a href=\"/docs/7.24/bridging-and-switching/#bridge-vlan-filtering\">vlan-filtering</a>. <br/><br/><code>/interface/vlan</code><br/>"
+        },
+        {
+          "row": 10,
+          "col": 2,
+          "html": "Routing between bonding interfaces. <br/><br/><code>/interface/bonding</code><br/><br/> Only <code>802.3ad</code> and <code>balance-xor</code> bonding modes are hardware offloaded."
+        },
+        {
+          "row": 18,
+          "col": 2,
+          "html": "Support for hardware-offloaded <a href=\"/docs/7.24/bridging-and-switching/vxlan\">VXLAN</a> data plane, VXLAN encapsulation and decapsulation. This allows for static one-to-one VLAN-to-VXLAN mappings within a vlan-filtering bridge. At this point, some known features are not yet implemented. <br/><strong>Underlay (routing encapsulated VXLAN packets):</strong><br/> 1. VTEPs are not supported over ECMP <br/> 2. VTEPs are not supported over bond, bridge, VLAN interfaces (only stand-alone routed Ethernet interfaces are supported) <br/> 3. VTEPs are not supported over multicast <br/> 4. VXLAN hardware offloading is limited to the <code>main</code> routing table. VTEPs cannot operate within VRFs. <br/> 5. VTEPs are not supported with IPv6 <br/><strong>Overlay (forwarding between Ethernet and VXLAN):</strong><br/> 1. VLAN tagging over VXLAN is not supported <br/> 2. Routing between different VXLAN VNIs is not supported <br/> 3. VTEPs are isolated, and there is no mechanism to control \"horizon\" between them. <br/> 4. Bridged VXLAN interfaces do not support IGMP snooping. When snooping is enabled, MDB entries on VXLAN are not offloaded, and multicast traffic gets restricted between Ethernet and VXLAN. <br/> 5. Bridged VXLAN interfaces are not supported by MLAG. <br/><br/><code>/interface/vxlan</code><br/>"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "rows": 5,
+      "cols": 6,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "CRS305-1G-4S+IN <br/> CRS326-24G-2S+ (RM/IN) <br/> CRS328-24P-4S+RM <br/> CRS328-4C-20S-4S+RM"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "CRS305-1G-4S+OUT (FiberBox Plus) <br/> CRS310-1G-5S-4S+ (netFiber 9/IN) <br/> CRS310-8G+2S+IN <br/> CRS318-16P-2S+OUT (netPower 16P) <br/> CRS320-8P-8B-4S+RM <br/> CRS418-8P-8G-2S+RM <br/> CRS418-8P-8G-2S+5axQ2axQ-RM"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "rows": 10,
+      "cols": 10,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": [
+        {
+          "row": 4,
+          "col": 1,
+          "html": "CRS326-24S+2Q+RM <br/> CRS326-4C+20G+2Q+RM"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "CRS354-48G-4S+2Q+RM <br/> CRS354-48P-4S+2Q+RM"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "CRS504-4XQ (IN/OUT) <br/> CRS510-8XS-2XQ-IN <br/> RDS2216-2XG-4S+4XS-2XQ"
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "html": "CCR2216-1G-12XS-2XQ <br/> CRS518-16XS-2XQ-RM"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "rows": 3,
+      "cols": 11,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

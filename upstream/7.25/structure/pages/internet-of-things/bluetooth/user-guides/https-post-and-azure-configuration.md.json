@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "internet-of-things/bluetooth/user-guides/https-post-and-azure-configuration.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/internet-of-things/bluetooth/user-guides/https-post-and-azure-configuration.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/internet-of-things/bluetooth/user-guides/https-post-and-azure-configuration",
+  "md_sha256": "57c15564d72785e56755d32f6e70d1022a0e674b1a7edb140c3f3419b7a71e50",
+  "html_sha256": "7bedb15dbc5cd0783754fbd9e3ed5e67b3428e86246e66b9b22460d7535b1cdb",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

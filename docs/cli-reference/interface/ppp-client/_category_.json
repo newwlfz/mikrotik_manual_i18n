@@ -1,0 +1,11 @@
+{
+  "position": 26,
+  "label": "Ppp Client",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/ppp-client/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/ppp-client"
+}

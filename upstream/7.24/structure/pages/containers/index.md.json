@@ -1,0 +1,97 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "containers/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/containers.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/containers/",
+  "md_sha256": "b043d5d9eef5eb98cc273d4732c0808b9f5cd536eafba814fe0603e52836229a",
+  "html_sha256": "4ad4c5c6667fbac24fe65c7d74fd9937c1034d2901eb12117fb7649f8371f315",
+  "body": {
+    "html": {
+      "lists": 15,
+      "listItems": 65,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 34,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 65,
+      "listItems": 65,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 65,
+      "listItems": 65,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        0,
+        33
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 33,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 23,
+          "col": 1,
+          "html": "max RAM usage limit in bytes per container (The container process will be terminated if the memory-max value is smaller than the container memory-current)<br/> starting 7.23, this parameter cannot be set lower than 1MB, to avoid a situation where the container is terminated too early in the startup process"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

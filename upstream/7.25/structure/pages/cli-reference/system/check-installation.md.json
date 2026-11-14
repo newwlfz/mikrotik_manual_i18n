@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/check-installation.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/check-installation.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/check-installation",
+  "md_sha256": "001fc199fdc7422ffdf5cc147fae74b0841a74a8f442d13308b9a4a1a593efc5",
+  "html_sha256": "451e12d829b57bd75be13a5a5fb8f03a2d3318959dba9ae443c4ecb26a1736c7",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

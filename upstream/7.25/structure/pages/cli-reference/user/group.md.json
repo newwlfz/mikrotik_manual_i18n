@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/user/group.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/user/group.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/user/group",
+  "md_sha256": "004e15dd1acb3e7a8a74e1dd4f2c2614576adb7014576d5f75f450750e865815",
+  "html_sha256": "faa796d365afbfab53ce226921ca1a61b163d6e13eecd6ea675c1b49841ae209",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 17,
+      "listItems": 17,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 17,
+      "listItems": 17,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

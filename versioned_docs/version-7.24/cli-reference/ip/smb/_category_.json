@@ -1,0 +1,11 @@
+{
+  "position": 22,
+  "label": "Smb",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/smb/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/smb"
+}

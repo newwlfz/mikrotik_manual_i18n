@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "getting-started/routeros-licensing/chr/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/getting-started/routeros-licensing/chr.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/getting-started/routeros-licensing/chr/",
+  "md_sha256": "41fa68d9835c7cffa2dff4341a36cc48baffb99c1d2f240b28e7e7d72e28bbb1",
+  "html_sha256": "bda5bb36be56d9b74c2dd0916292e502a630cd653925842d7c5976d0844a5a39",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

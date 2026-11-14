@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "storage/raid/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/storage/raid.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/storage/raid/",
+  "md_sha256": "89092a5dabeb6d46c3fe0aa19418636d0c9ccec0dc10fcf26a5fa7a6130cf69c",
+  "html_sha256": "611de33d77852689b65fea198b22c8a5e766f932ae35c827a645b196be1d820f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

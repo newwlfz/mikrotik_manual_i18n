@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Async Data",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/iot/bluetooth/connections/async-data/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/iot/bluetooth/connections/async-data"
+}

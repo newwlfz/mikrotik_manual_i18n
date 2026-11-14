@@ -1,0 +1,142 @@
+# 已知译文（known translations）
+#
+# 这里放“翻译记忆里没有、模型也翻不动”的块，由
+# `tools/translate/apply-known-translations.mjs` 在 apply/derive 链尾强制替换。
+#
+# 为什么需要它：`translate apply` 与 `translate derive` 都用 TM 逐块重建正文，
+# 没有 TM 条目的块只能留在英文；`:::info` 这类容器一旦只翻了第一段，就会变成
+# “中文 + 英文”的混合块，`verify` 也看不出它整体是英文。
+# `config/translation-patches/<locale>/**` 里的 `replace` 只被 apply 读取，derive
+# 之后不会重新应用，所以把规则集中到这份文件，链尾再跑一次即可收敛。
+#
+# 顶层键就是语种（与 `docusaurus.config.ts` 的 `i18n.locales` 同名），脚本按
+# `--locale=` 取对应那一组；新增语种时加一组键即可，schema 不变。
+#
+#   schema: 1
+#   <locale>:                          # 例如 zh-Hans
+#     - paths: ["<overlay 相对路径>"]   # 可选；省略即全站
+#       from: "<英文原文，必须与 overlay 里的字节一致>"
+#       to: "<审核过的译文>"
+#
+# `from` 匹配不到任何页面时是空操作，所以同一条规则可以同时覆盖三个版本。
+schema: 1
+
+zh-Hans:
+  # 用户报告第 4 条：traffic-generator 的第二个 :::info 段落。
+  # 第一段（嗅探工具抓不到生成的数据包）早就有中文，第二段（设备模式默认禁用）
+  # 一直是英文，导致整个 info 容器中英混排。
+  #
+  # 两段 `from`：`normalize-links` 会把 `[Change device-mode]` 的链接文字换成目标
+  # 页的中文标题（`[设备模式]`），而它排在这一步之前，所以落到链尾的可能是两种
+  # 形态；第二条命中后第一条自然不再匹配，重复执行仍收敛。
+  - paths:
+      - diagnostics-monitoring-and-troubleshooting/traffic-generator.md
+    from: "Because this tool can be used maliciously, it is disabled by default in every [设备模式](../system-information-and-utilities/device-mode.md). While `traffic-gen` is disabled, `quick` fails with a `not allowed by device-mode` error. Run `/system/device-mode/print` to check the current value. To enable it, run `/system/device-mode/update traffic-gen=yes` and confirm the change within the activation timeout (5 minutes by default) with physical access to the device: press the reset or mode button, or unplug the power. The device reboots after the confirmation; a regular reboot cancels the change. See [设备模式](../system-information-and-utilities/device-mode.md#change-device-mode)."
+    to: "由于该工具可能被恶意使用，它在每种 [设备模式](../system-information-and-utilities/device-mode.md) 下默认处于禁用状态。当 `traffic-gen` 处于禁用状态时，`quick` 会以 `not allowed by device-mode` 错误失败。运行 `/system/device-mode/print` 可以查看当前值。若要启用，请运行 `/system/device-mode/update traffic-gen=yes`，并在激活超时时间（默认 5 分钟）内通过设备上的物理操作确认更改：按下复位按钮或 mode 按钮，或拔掉电源。确认后设备会重启；普通重启会取消该更改。参见 [更改 device-mode](../system-information-and-utilities/device-mode.md#change-device-mode)。"
+    note: "user report #4: traffic-generator :::info 第二段（设备模式），链接文字已本地化"
+  - paths:
+      - diagnostics-monitoring-and-troubleshooting/traffic-generator.md
+    from: "Because this tool can be used maliciously, it is disabled by default in every [设备模式](../system-information-and-utilities/device-mode.md). While `traffic-gen` is disabled, `quick` fails with a `not allowed by device-mode` error. Run `/system/device-mode/print` to check the current value. To enable it, run `/system/device-mode/update traffic-gen=yes` and confirm the change within the activation timeout (5 minutes by default) with physical access to the device: press the reset or mode button, or unplug the power. The device reboots after the confirmation; a regular reboot cancels the change. See [Change device-mode](../system-information-and-utilities/device-mode.md#change-device-mode)."
+    to: "由于该工具可能被恶意使用，它在每种 [设备模式](../system-information-and-utilities/device-mode.md) 下默认处于禁用状态。当 `traffic-gen` 处于禁用状态时，`quick` 会以 `not allowed by device-mode` 错误失败。运行 `/system/device-mode/print` 可以查看当前值。若要启用，请运行 `/system/device-mode/update traffic-gen=yes`，并在激活超时时间（默认 5 分钟）内通过设备上的物理操作确认更改：按下复位按钮或 mode 按钮，或拔掉电源。确认后设备会重启；普通重启会取消该更改。参见 [更改 device-mode](../system-information-and-utilities/device-mode.md#change-device-mode)。"
+    note: "user report #4: traffic-generator :::info 第二段（设备模式）"
+
+  # 用户报告里 7.24 残留的 3 条死链（`verify:links` 的 myDead）。
+  # 7.24 overlay 的这两行仍是旧格式，链接写成 `/docs/7.24/Multicast%20Routing%20
+  # Protocols/...` 与 `/docs/wired-connections/network-management/arp`，路由都不存在；
+  # 7.25/current 早已是相对路径，这里只修 7.24 的这三处。
+  - sections: ["docs-7.24"]
+    from: "[多播 | IGMP](/docs/7.24/Multicast%20Routing%20Protocols/igmp-proxy)"
+    to: "[IGMP 代理](../user-guides/routing-and-networking-protocols/multicast/igmp-proxy.md)"
+    note: "7.24 死链：Multicast Routing Protocols/igmp-proxy"
+  - sections: ["docs-7.24"]
+    from: "[多播 | PIM](/docs/7.24/Multicast%20Routing%20Protocols/pim-sm)"
+    to: "[PIM-SM](../user-guides/routing-and-networking-protocols/multicast/pim-sm.md)"
+    note: "7.24 死链：Multicast Routing Protocols/pim-sm"
+  - sections: ["docs-7.24"]
+    from: '<a href="/docs/wired-connections/network-management/arp" rel="nofollow">ARP</a>'
+    to: '<a href="/docs/7.24/network-management/arp" rel="nofollow">ARP</a>'
+    note: "7.24 死链：ethernet.md 的 ARP 绝对链接少了版本段"
+  # 中文 overlay 里的 HTML 绝对链接必须带 locale 前缀，否则 `verify:links` 记
+  # htmlNoLocale（相对第 3 条规则还要靠后执行，名称按列表顺序收敛）。
+  - sections: ["docs-7.24"]
+    from: '<a href="/docs/7.24/network-management/arp" rel="nofollow">ARP</a>'
+    to: '<a href="/zh-Hans/docs/7.24/network-management/arp" rel="nofollow">ARP</a>'
+    note: "7.24 死链修复后补 locale 前缀"
+
+  # 链接文字仍是英文逗号式散文：目标页是中文页，但标签不是页面标题，所以
+  # `normalize-links` 的相似度判定（`classifyLinkText`）不会替换它们（相似度低于
+  # `link_text_similarity`，或者目标页标题本身就是技术名）。这些是读者能直接看到
+  # 的英文，属于“漏译的链接文字”，只能在链尾兜底：`from` 带上链接语法（标签 + URL），
+  # 所以只改这一处链接，不会碰正文里同名的英文短语。
+  #
+  # 扫描口径见 commit 说明：missed = 英文散文标签、目标页已有译文、相似度不足；
+  # 术语名（`Silent boot` 这类带引号的 RouterBOOT 选项名）不计入，保留英文。
+  - paths:
+      - wireless/wifi/index.md
+    from: "[Centralized management with WiFi CAPsMAN](./capsman.md)"
+    to: "[使用 WiFi CAPsMAN 集中管理](./capsman.md)"
+    note: "wifi 快速开始列表：7.24/7.25 早已是中文，current 漏了这条（用户报告的“最后一条英文链接文字”）"
+  - paths:
+      - containers/user-guides/container-thingsboard-mqtt-http-server.md
+      - internet-of-things/lora/index.md
+    from: "[HTTP post](../../system-information-and-utilities/fetch.md)"
+    to: "[HTTP POST](../../system-information-and-utilities/fetch.md)"
+    note: "HTTP POST 方法名，保留 HTTP"
+  - paths:
+      - containers/user-guides/container-thingsboard-mqtt-http-server.md
+    from: "[SSH service](../../system-information-and-utilities/services.md)"
+    to: "[SSH 服务](../../system-information-and-utilities/services.md)"
+    note: "SSH 服务"
+  - paths:
+      - containers/index.md
+    from: "[Swap space](../hardware/disks/index.md)"
+    to: "[交换空间](../hardware/disks/index.md)"
+    note: "swap 空间"
+  - paths:
+      - system-information-and-utilities/e-mail.md
+    from: "[Configuration export](../getting-started/configuration-management/index.md#configuration-export)"
+    to: "[配置导出](../getting-started/configuration-management/index.md#configuration-export)"
+    note: "配置导出"
+  - paths:
+      - management-tools/tr-069.md
+    from: "- [Startup delay](../getting-started/configuration-management/index.md#startup-delay) for interfaces to show up."
+    to: "- [启动延迟](../getting-started/configuration-management/index.md#startup-delay)：接口出现所需的时间。"
+    note: "整条列表项都是英文（链接文字 + 后半句），只改标签会留下半句英文"
+  - paths:
+      - user-guides/routing-and-networking-protocols/multicast/pim-sm.md
+    from: "[IGMP snooping](../../../bridging-and-switching/user-guides/bridge-igmp-mld-snooping.md)"
+    to: "[IGMP 侦听](../../../bridging-and-switching/user-guides/bridge-igmp-mld-snooping.md)"
+    note: "IGMP 侦听"
+  - paths:
+      - bridging-and-switching/marvell-prestera-switch-chip-features.md
+    from: "[hardware-offloaded VRF](./l3-hardware-offloading.md#l3hw-feature-support)"
+    to: "[硬件卸载 VRF](./l3-hardware-offloading.md#l3hw-feature-support)"
+    note: "硬件卸载 VRF"
+  - paths:
+      - bridging-and-switching/switch-chip-features.md
+    from: "[bridge HW vlan-filtering](./index.md#bridge-vlan-filtering)"
+    to: "[网桥硬件 vlan-filtering](./index.md#bridge-vlan-filtering)"
+    note: "网桥硬件 vlan-filtering，保留设置名"
+  - sections: ["docs-7.24"]
+    paths:
+      - bridging-and-switching/index.md
+    from: "[Multiple VLAN Registration protocol](./index.md)"
+    to: "[多 VLAN 注册协议](./index.md)"
+    note: "7.24 网桥保留 MAC 地址列表里唯一的英文条目，同列表其余已是中文"
+  - paths:
+      - virtual-private-networks/wireguard.md
+    from: "[Site to Site](./wireguard.md#site-to-site-wireguard-tunnel)"
+    to: "[站点到站点](./wireguard.md#site-to-site-wireguard-tunnel)"
+    note: "WireGuard 拓扑名 Site to Site"
+  - paths:
+      - cli-reference/interface/eoip.md
+      - cli-reference/interface/eoipv6.md
+    from: "[Ethernet over IP (EoIP)](../../virtual-private-networks/eoip.md)"
+    to: "[IP 上的以太网（EoIP）](../../virtual-private-networks/eoip.md)"
+    note: "EoIP 全称展开"
+  - sections: ["docs-7.24"]
+    paths:
+      - virtual-private-networks/pppoe/ipv6-pd-over-ppp.md
+    from: "[DHCPv6-PD server](../../network-management/dhcp.md#dhcpv6-server)"
+    to: "[DHCPv6-PD 服务器](../../network-management/dhcp.md#dhcpv6-server)"
+    note: "DHCPv6-PD 服务器"

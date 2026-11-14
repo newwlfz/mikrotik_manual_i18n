@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/dude/vacuum-db.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/dude/vacuum-db.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/dude/vacuum-db",
+  "md_sha256": "ea30cac9417ca326a22e1f2d43478f311acb8c02b270ebb75d61dec85e552301",
+  "html_sha256": "4f7984ecddfed79591050f55809ec648d76fb75b3fa545c2b47f05dd9175273b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

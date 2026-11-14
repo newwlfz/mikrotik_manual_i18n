@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/partitions/restore-config-from.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/partitions/restore-config-from.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/partitions/restore-config-from",
+  "md_sha256": "ca4fa558c32215a76b6e14ad13bc709d45bd9d5881c5eb9dfb1d2430254123a4",
+  "html_sha256": "8854fc816a72115ddf20a93084fe7eec0b9f67e18c4db2eebf3c8c7964282cf8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

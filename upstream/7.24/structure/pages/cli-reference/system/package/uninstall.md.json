@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/package/uninstall.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/package/uninstall.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/package/uninstall",
+  "md_sha256": "19733e3db67c046173ca95b353a31cb1b937ec28484f34f16157f98b7a84762c",
+  "html_sha256": "922ed55380454bb3dd716ed30481b37fb15b980830344ec0d76b16e715ce2285",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

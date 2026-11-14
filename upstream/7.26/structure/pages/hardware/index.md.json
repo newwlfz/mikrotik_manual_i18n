@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "hardware/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/hardware.md",
+  "html_url": "https://manual.mikrotik.com/docs/hardware/",
+  "md_sha256": "34eba4a2ac60b73ea9b423658c784b1ae0623feffae2c07d001c8bd7c89fb697",
+  "html_sha256": "d8b5d4e73605186887215d651c872fcfd07cfb58065954c4af3263c5b5f7a12e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

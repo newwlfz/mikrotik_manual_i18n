@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/ipsec/installed-sa/flush.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/installed-sa/flush.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/installed-sa/flush",
+  "md_sha256": "877f91c196fb6c29ec6a9b87220d0d5d3cbf76d84935156cc9ecc3cea9a7b198",
+  "html_sha256": "d60e56b2c6a404d77d80ca0c562bdae467008546e8b877abca5dfb777213bce0",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

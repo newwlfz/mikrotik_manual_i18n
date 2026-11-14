@@ -1,0 +1,121 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "containers/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/containers.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/containers/",
+  "md_sha256": "608ab79e22e7b65700be0bec18c3a88e68e7e791bf9632c80454eab7a3a9d29f",
+  "html_sha256": "aef656edc86c9a43d03b88ba3cde3c9f5ac2d0498814570eff9e6ced393d0238",
+  "body": {
+    "html": {
+      "lists": 14,
+      "listItems": 64,
+      "br": 0,
+      "details": 0,
+      "tables": 6,
+      "sup": 0,
+      "code": 44,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 64,
+      "listItems": 64,
+      "br": 0,
+      "details": 0,
+      "tables": 6,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 64,
+      "listItems": 64,
+      "br": 0,
+      "details": 0,
+      "tables": 6,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        0,
+        33
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 34,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 22,
+          "col": 1,
+          "html": "\"Soft\" RAM usage limit in bytes for a specific container.<br/> If usage goes over the high boundary, the processes are throttled and put under reclaim pressure."
+        },
+        {
+          "row": 23,
+          "col": 1,
+          "html": "Max RAM usage limit in bytes per container (The container process will be terminated if the memory-max value is smaller than the container memory-current)<br/> starting 7.23, this parameter cannot be set lower than 1MB, to avoid a situation where the container is terminated too early in the startup process"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 4,
+          "col": 1,
+          "html": "Global \"soft\" RAM usage limit in bytes for a specific container.<br/> If usage goes over the high boundary, the processes are throttled and put under reclaim pressure."
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Global max RAM usage limit in bytes per container (The container process will be terminated if the memory-max value is smaller than the container memory-current)<br/> starting 7.23, this parameter cannot be set lower than 1MB, to avoid a situation where the container is terminated too early in the startup process"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

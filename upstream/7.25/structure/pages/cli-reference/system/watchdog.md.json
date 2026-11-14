@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/watchdog.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/watchdog.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/watchdog",
+  "md_sha256": "aca59d432df56f5206fa7797f26ee74bb505c318821d005262af7107495d1449",
+  "html_sha256": "dd495e64d14d7b94c3977ea9e7161bea093bf076abbde7b2d4f81e547e5f6b45",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

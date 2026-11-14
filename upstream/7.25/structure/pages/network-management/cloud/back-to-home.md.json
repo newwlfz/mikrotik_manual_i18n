@@ -1,0 +1,70 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "network-management/cloud/back-to-home.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/network-management/cloud/back-to-home.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/network-management/cloud/back-to-home",
+  "md_sha256": "b40ab9b303b6e70b73c05afb6f330065df07b482a362290df96b54ae528ba34b",
+  "html_sha256": "8ef16404a939521984d2a5a1e187d70d66a39b650cf519a8507e59271eb16581",
+  "body": {
+    "html": {
+      "lists": 5,
+      "listItems": 27,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 54,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 27,
+      "listItems": 27,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 27,
+      "listItems": 27,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 2,
+      "cols": 5,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 2,
+      "cols": 6,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 2,
+      "cols": 6,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

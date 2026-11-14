@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "bridging-and-switching/user-guides/layer2-misconfiguration.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/user-guides/layer2-misconfiguration.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/bridging-and-switching/user-guides/layer2-misconfiguration",
+  "md_sha256": "b67830c4052abaf8a9c55705a81fe8ed4803a1aec3de193fc06b70e391e39b11",
+  "html_sha256": "ff490e8485cf2aa93d92c88ef9f3a07c5c5a2e7b7753b3328157dc561a764ee8",
+  "body": {
+    "html": {
+      "lists": 19,
+      "listItems": 57,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 26,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 57,
+      "listItems": 57,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 57,
+      "listItems": 57,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "Scripting",
+  "key": "developer-guides/scripting",
+  "link": {
+    "type": "doc",
+    "id": "developer-guides/scripting/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

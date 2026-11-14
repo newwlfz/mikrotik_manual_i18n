@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/caps-man/interface/reselect-channel.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/interface/reselect-channel.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/interface/reselect-channel",
+  "md_sha256": "756f9451fd0afe9c132fe9d26495a260e9f8e888b361a7cf155096790ca6254d",
+  "html_sha256": "61b5d48180b1f7a4502590b32c794a77d9d28072bd52f34fbd1d5d78f4463099",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

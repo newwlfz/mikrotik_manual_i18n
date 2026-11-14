@@ -1,0 +1,86 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "user-guides/routing-and-networking-protocols/routing-decision.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/routing-decision.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/user-guides/routing-and-networking-protocols/routing-decision",
+  "md_sha256": "5dea4e70c308bd0dfeff0daaa5df8ea73abdbe4e6b9a7c1265019d56b8204a6f",
+  "html_sha256": "3e48f3bea99cb69449c7a367ceafad7e46edf5192779d9c6e6d5a62ee78a5693",
+  "body": {
+    "html": {
+      "lists": 13,
+      "listItems": 43,
+      "br": 5,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 38,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 43,
+      "listItems": 43,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 43,
+      "listItems": 43,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        5,
+        7
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 4,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "<ul><li>srcIPv4, dstIPv4 (if inner IPv4)</li><li>srcIPv6, dstIPv6, flow label, IP proto (if inner IPv6)</li><li>Same as L3 if inner is not present.</li></ul>"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "html": "<ul><li>srcIPv4, dstIPv4 (if inner IPv4)</li><li>srcIPv6, dstIPv6, flow label, IP proto (if inner IPv6)</li><li>Same as L3 if inner is not present.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 7,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 6,
+      "cols": 5,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

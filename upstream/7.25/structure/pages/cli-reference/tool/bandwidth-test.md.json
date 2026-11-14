@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/tool/bandwidth-test.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/bandwidth-test.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/bandwidth-test",
+  "md_sha256": "15a9ae8ed935991d9a9f2ee96afde8a0811691a93a339d7377d582dc05b0be28",
+  "html_sha256": "6e4e814489e6eb92945cf30bbd72840a5c6fe781c3b151e97bacffc24af66fa0",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 11,
+      "listItems": 11,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 11,
+      "listItems": 11,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

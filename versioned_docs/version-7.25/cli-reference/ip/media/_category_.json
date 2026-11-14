@@ -1,0 +1,11 @@
+{
+  "position": 12,
+  "label": "Media",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/media/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/media"
+}

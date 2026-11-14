@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/cmr/device/dashboard.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/device/dashboard.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/device/dashboard",
+  "md_sha256": "fb79528e04ecee3750041298abeb3aba0380b61317ced8bfd3bc1370aa5618c8",
+  "html_sha256": "e25d73f80d26af80a81244fdf45e80338c74b1afd59ae0696ed6527c885cf04a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

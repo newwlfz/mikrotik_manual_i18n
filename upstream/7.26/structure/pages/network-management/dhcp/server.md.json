@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "network-management/dhcp/server.md",
+  "source_url": "https://manual.mikrotik.com/docs/network-management/dhcp/server.md",
+  "html_url": "https://manual.mikrotik.com/docs/network-management/dhcp/server",
+  "md_sha256": "767248c398aa80e023eb3fb80c713ff20f37b7156b72972744149905c5c1826d",
+  "html_sha256": "91bd40e2d0ebf1180ade0289520b03fd0b451a99ba0cc30648c44fb4e851d8aa",
+  "body": {
+    "html": {
+      "lists": 7,
+      "listItems": 35,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 67,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 35,
+      "listItems": 35,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 35,
+      "listItems": 35,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

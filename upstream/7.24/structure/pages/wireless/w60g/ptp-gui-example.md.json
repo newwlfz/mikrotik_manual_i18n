@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "wireless/w60g/ptp-gui-example.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/wireless/w60g/ptp-gui-example.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/wireless/w60g/ptp-gui-example",
+  "md_sha256": "26667ccce7f6b6a3e34d2ec4fdc882ef712156266669f542679a569a7cd58d15",
+  "html_sha256": "6df159b594df2c68084676951104f72130790109d37c010e57732381d4839534",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 20,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 20,
+      "listItems": 20,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 20,
+      "listItems": 20,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

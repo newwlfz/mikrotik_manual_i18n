@@ -1,0 +1,246 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "bridging-and-switching/swos/css106.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/swos/css106.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/swos/css106",
+  "md_sha256": "229d761ffd597f5ac94f0a6ac59825921b9f4e5ac3ef13717a08ce9582f33c50",
+  "html_sha256": "e79a01f33b81ec87f2c083dd741859ae93ff4cbb9f64959e2d78f93ece55b878",
+  "body": {
+    "html": {
+      "lists": 11,
+      "listItems": 35,
+      "br": 0,
+      "details": 0,
+      "tables": 13,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 35,
+      "listItems": 35,
+      "br": 0,
+      "details": 0,
+      "tables": 13,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 35,
+      "listItems": 35,
+      "br": 0,
+      "details": 0,
+      "tables": 13,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Full non-blocking wirespeed switching<br/>Up to 2k MAC entries in the Host table<br/>Forwarding Database works based on SVL or IVL<br/>Port Isolation<br/>Port Lock<br/>Jumbo frame support - 9198 bytes"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Fully compatible with IEEE802.<br/><br/>Port-based VLAN<br/>VLAN filtering"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Ingress traffic limiting (by ACL)<br/>Egress traffic limiting"
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Ingress ACL tables<br/>Up to 32 ACL rules (limited by SwOS)<br/>Classification based on ports, L2, L3, L4 protocol header fields<br/>ACL actions include filtering, forwarding, and modifying the protocol header fields"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 18,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Specify which address acquisition method to use:<br/><code>DHCP with fallback</code> - switch is trying to request an IPv4 address from a DHCP server. If the requests are unsuccessful, then the switch can be accessed using a <strong>Static IP Address</strong> value<br/><code>static</code> - address is set as a <strong>Static IP Address</strong> value (IPv4 only)<br/><code>DHCP only</code> - switch uses DHCPv4 client to acquire address"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Sets PoE out mode of the port:<br/><code>off</code> - all detection and PoE out is turned off<br/><code>auto</code> - detection is done regarding resistance on the spare pairs to check if the port has PoE capability. For a port to be turned on measured value should be within a range from 3kΩ to 26.5kΩ<br/><code>on</code> - PoE out is enabled regardless of the resistance on the port. <em><strong>Use this with caution as that can damage connected equipment!</strong></em><br/><code>calibr</code> - manual port PoE out recalibration. It may be necessary if there are occasional problems with powering connected devices."
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Current PoE out status of the port:<br/><code>disabled</code> - PoE out is turned off<br/><code>waiting for load</code> - <code>auto</code> mode detects out of range resistance to turn on PoE out<br/><code>powered on</code> - PoE out is turned on<br/><code>short circuit</code> - if it is detected, PoE out is turned off to ensure that there is no additional damage on the powered device and no damage on powering device<br/><code>voltage too low</code> - not enough voltage supplied to turn on the device with PoE out<br/><code>current too low</code> - not enough current supplied to turn on the device with PoE out<br/><code>waiting for cable disconnect</code> - manual recalibration with <code>calibr</code> has detected connected device and waits for disconnection to complete the recalibration process"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "<code>Port Lock</code> - Enables or disables MAC address learning on this port. When the option is enabled, it will restrict MAC address learning and static MAC addresses should be configured<br/><code>Lock On First</code> - enable or disable MAC address learning on this port (MAC address from the first received packet will still be learned)"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "<code>Mirror Ingress</code> - whether traffic entering this port must be copied and forwarded to the mirroring target port<br/><code>Mirror Egress</code> - whether traffic leaving this port must be copied and forwarded to the mirroring target port<br/><code>Mirror To</code> - mirroring target port"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Shows STP/RSTP functionality mode on a specific port (read-only):<br/><code>RSTP</code><br/><code>STP</code>"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Shows specific port role (read-only):<br/><code>root</code> - port that is facing towards the root bridge and will be used to forward traffic from/to the root bridge<br/><code>alternate</code> - port that is facing towards root bridge, but is not going to forward traffic (a backup for root port)<br/><code>backup</code> - port that is facing away from the root bridge, but is not going to forward traffic (a backup for non-root port)<br/><code>designated</code> - port that is facing away from the root bridge and is going to forward traffic<br/><code>disabled</code> - port that is not strictly part of STP (RSTP functionality is disabled)"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "<code>edge</code> - ports that are not supposed to receive any BPDUs, should be connected to end station (read-only)<br/><code>point-to-point</code> - ports that operate in full-duplex links, can be part of STP and operate in forwarding state (read-only)"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Shows each port state (read-only):<br/><code>forwarding</code> - port participates in traffic forwarding and is learning MAC addresses, is receiving BPDUs<br/><code>discarding</code> - port does not participate in traffic forwarding and is not learning MAC addresses, is receiving BPDU<br/><code>learning</code> - port does not participate in traffic forwarding, but is learning MAC addresses"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "There are two methods for automatically detecting RSTP port cost depending on link speed.<br/><code>short</code>: 10G - 2; 1G - 4; 100M - 10; 10M - 100<br/><code>long</code>: 10G - 2000; 1G - 20000; 100M - 200000; 10M - 2000000"
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "html": "Whether to forward IEEE reserved multicast MAC address that are in the <strong>01:80:C2:00:00:0x</strong> range. Switches compliant with R/M/STP standards should refrain from forwarding these packets.<br/><br/>If you enable this setting, SwOS will forward reserved multicast MAC packets and disable RSTP:<br/>- the switch will not process incoming BPDUs (Bridge Protocol Data Units)<br/>- it will also not send its own BPDUs<br/>- Bridge Priority and per-port RSTP configuration settings will no longer have any effect.<br/><br/>Enabling forwarding of reserved MAC addresses may affect certain protocols relying on these addresses. It is advisable to enable forwarding only when absolutely necessary, such as in transparent bridging setups (e.g., extending long links, using bridge as media converters, or conducting network analysis).<br/><br/>Notable MAC addresses and protocol examples (used by RouterOS):<br/><code>01:80:C2:00:00:00</code> - Spanning Tree Protocol (STP)<br/><code>01:80:C2:00:00:01</code> - Ethernet Flow Control<br/><code>01:80:C2:00:00:02</code> - Link Aggregation Control Protocol (LACP)<br/><code>01:80:C2:00:00:03</code> - Dot1x client and server<br/><code>01:80:C2:00:00:08</code> - Spanning Tree Protocol (for 802.1ad bridges, using <code>ether-type=0x88a8</code>)<br/><code>01:80:C2:00:00:0D</code> - Multiple VLAN Registration Protocol (for 802.1ad bridges, using <code>ether-type=0x88a8</code>)<br/><code>01:80:C2:00:00:0E</code> - Link Layer Discovery Protocol, Multi-chassis Link Aggregation Group and Precision Time Protocol<br/><br/>The Flow Control MAC address <code>01:80:C2:00:00:01</code> is an exception — it does not get forwarded by SwOS."
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "VLAN mode for ingress port:<br/><code>disabled</code> - VLAN table is not used; switch ignores VLAN tag part of tagged packets<br/><code>optional</code> - Handle packets with VLAN tag ID that is not present in VLAN table just like packets without VLAN tag<br/><code>enabled</code> - Drop packets with VLAN tag ID that is not present in VLAN table. Packets without VLAN tag are treated as tagged packets with <code>Default VLAN ID</code><br/><code>strict</code> - Same as <code>enabled</code>, but also checks VLAN support for inbound interface (drop packets with VLAN tag ID and ingress port that are not present in VLAN table)"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Defines the type of allowed packets on ingress port:<br/><code>any</code> - allows tagged and untagged packets on a certain port<br/><code>only tagged</code> - allows only packets with a VLAN tag<br/><code>only untagged</code> - allows only packets without a VLAN tag"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "<code>leave as is</code> - if VLAN header is present it remains unchanged<br/><code>always strip</code> - if VLAN header is present it is removed from the packet<br/><code>add if missing</code> - if VLAN header is not present it is added to the packet (VLAN ID will be <code>Default VLAN ID</code> of ingress port)"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 8,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 9,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 10,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 11,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 12,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

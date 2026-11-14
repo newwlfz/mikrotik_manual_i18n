@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/vpls/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/vpls.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/vpls/",
+  "md_sha256": "c4fb8cd8a7839cc3b4d4c563176138a1930eb96fd2a7f6a848a40c154c91a670",
+  "html_sha256": "209cd77f7d3b5e038a13d20e3ab890d8a7cd26211598ce23ea241a0919bd1d78",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

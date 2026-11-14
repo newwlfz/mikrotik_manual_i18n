@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/lcd/take-screenshot.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/lcd/take-screenshot.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/lcd/take-screenshot",
+  "md_sha256": "7011f68c8911472b4bdf194e16e17d138b0a1306946af3082bcda8d62b8548d4",
+  "html_sha256": "134ed304732377efe3e24fe7f0c2b189bd433fa8825a250b226d2f7f1f40e6fa",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

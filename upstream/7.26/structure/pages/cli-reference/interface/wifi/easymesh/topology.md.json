@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wifi/easymesh/topology.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/easymesh/topology.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/easymesh/topology",
+  "md_sha256": "1e558b6bf1962b6ad7b51cc89fa9a1ce6fb79c153e35502b6a5a7479bf40bd4e",
+  "html_sha256": "52253ddaf99897d723d39e347ed63ca10b14b0782b06b75527fc992f91948ed2",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

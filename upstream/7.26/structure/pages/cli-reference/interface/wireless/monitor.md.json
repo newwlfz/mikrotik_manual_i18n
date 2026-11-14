@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wireless/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/monitor",
+  "md_sha256": "127811eb9876857d26380c3a06e765664dc5bc64a470a13c035c586cfdb13f56",
+  "html_sha256": "c5f74906eb14b338060d351b3ee7e620b4ffb146b44ec980c3432d7de0d37c86",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

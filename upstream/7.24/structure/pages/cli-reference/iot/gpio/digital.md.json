@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/iot/gpio/digital.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/iot/gpio/digital.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/iot/gpio/digital",
+  "md_sha256": "607b4cbd5d1c39587b11fa4138183cb5524826c0069733976102741f1002e936",
+  "html_sha256": "27ed8625d2141be31d8f17c88a3cb8b8b5d205a628997eb58420fc4b3f5c7862",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

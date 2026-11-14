@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/app/settings/remove-certificate.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/app/settings/remove-certificate.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/app/settings/remove-certificate",
+  "md_sha256": "4ece9df934bc8219ee499d6c495de226362f93124a55891b8593888b123bfd35",
+  "html_sha256": "f558b7f0372336caddf9a64bd582e3b0cd633bc6161c04723bbba63b0696f0bb",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

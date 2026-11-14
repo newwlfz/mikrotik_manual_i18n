@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "storage/tmpfs.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/storage/tmpfs.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/storage/tmpfs",
+  "md_sha256": "dbbb0ac6ace6ce96b5f6a1ee31f70936945d2a652be5bae4d6ea997886ea98a3",
+  "html_sha256": "5c1d677a42e42287d32ad5443b8d32fb21c991399d0ae172fafb1fdef714a315",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

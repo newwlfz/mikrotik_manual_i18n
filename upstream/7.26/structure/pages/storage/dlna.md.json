@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "storage/dlna.md",
+  "source_url": "https://manual.mikrotik.com/docs/storage/dlna.md",
+  "html_url": "https://manual.mikrotik.com/docs/storage/dlna",
+  "md_sha256": "b8049fa1142868caedbb9c4f823fedc98beff13f500ff38222468537eb595be0",
+  "html_sha256": "119c603cba786fc035af6f32c05e8eec5f3ad7875e4098769ff79552dceb0881",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 75,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

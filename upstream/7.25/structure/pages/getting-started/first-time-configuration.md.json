@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "getting-started/first-time-configuration.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/getting-started/first-time-configuration.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/getting-started/first-time-configuration",
+  "md_sha256": "8d2e867687662da708d9ccd9c11ea92d55abe967296332ecfea7f732801cf56f",
+  "html_sha256": "17b1c78cacafd15a1f1bb33b7b885e8ecea6410bbbba7570149731dd1674d8a3",
+  "body": {
+    "html": {
+      "lists": 22,
+      "listItems": 68,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 44,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 64,
+      "listItems": 64,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 64,
+      "listItems": 64,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "listItems": [
+        68,
+        64
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

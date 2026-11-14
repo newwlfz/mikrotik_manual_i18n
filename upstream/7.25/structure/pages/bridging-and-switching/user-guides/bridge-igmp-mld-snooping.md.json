@@ -1,0 +1,121 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "bridging-and-switching/user-guides/bridge-igmp-mld-snooping.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/user-guides/bridge-igmp-mld-snooping.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/bridging-and-switching/user-guides/bridge-igmp-mld-snooping",
+  "md_sha256": "a47cb5a17743fce54cd59597425c15d47bc896e0f51428b5da7af1f9780c21b9",
+  "html_sha256": "84a65365b2dc3b6c241fdcc3212bdf74464b2de30c1df3154633c17123e305d9",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 6,
+      "sup": 0,
+      "code": 20,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 6,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 6,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 15,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "When the last client on the bridge port unsubscribes from a multicast group and the bridge is acting as an active querier, the bridge will send a group-specific IGMP/MLD query, to make sure that no other client is still subscribed. The setting changes the response time for these queries. In case no membership reports are received in a certain time period (<code>last-member-interval</code> * <code>last-member-query-count</code>), the multicast group is removed from the multicast database (MDB). <br/> If the bridge port is configured with fast-leave, the multicast group is removed right away without sending any queries. <br/> This property only has an effect when <code>igmp-snooping</code> and <code>multicast-querier</code> are set to <code>yes</code>."
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Multicast querier generates periodic IGMP/MLD general membership queries to which all IGMP/MLD capable devices respond with an IGMP/MLD membership report, usually a PIM (multicast) router or IGMP proxy generates these queries. <br/> By using this property you can make an IGMP/MLD snooping enabled bridge generate IGMP/MLD general membership queries. This property should be used whenever there is no active querier (PIM router or IGMP proxy) in a Layer2 network. Without a multicast querier in a Layer2 network, the Multicast Database (MDB) is not being updated, the learned entries will timeout and IGMP/MLD snooping will not function properly. <br/> Only untagged IGMP/MLD general membership queries are generated, IGMP queries are sent with the bridge interface's own IPv4 address as the source address (see <code>querier-uses-bridge-address</code>), MLD queries are sent with IPv6 link-local address of the bridge interface. The bridge will not send queries if an external IGMP/MLD querier is detected (see the monitoring values <code>igmp-querier</code> and <code>mld-querier</code>). <br/> This property only has an effect when <code>igmp-snooping</code> is set to <code>yes</code>."
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "A multicast router port is a port where a multicast router or querier is connected. On this port, unregistered multicast streams and IGMP/MLD membership reports will be sent. This setting changes the state of the multicast router for a bridge interface itself. This property can be used to send IGMP/MLD membership reports and multicast traffic to the bridge interface for further multicast routing or proxying. This property only has an effect when <code>igmp-snooping</code> is set to <code>yes</code>.<ul><li><code>disabled</code> - disabled multicast router state on the bridge interface. Unregistered multicast streams and IGMP/MLD membership reports are not sent to the bridge interface regardless of what is configured on the bridge interface.</li><li><code>permanent</code> - enabled multicast router state on the bridge interface. Unregistered multicast streams and IGMP/MLD membership reports are sent to the bridge interface itself regardless of what is configured on the bridge interface.</li><li><code>temporary-query</code> - automatically detect multicast router state on the bridge interface using IGMP/MLD queries.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "A multicast router port is a port where a multicast router or querier is connected. On this port, unregistered multicast streams and IGMP/MLD membership reports will be sent. This setting changes the state of the multicast router for bridge ports. This property can be used to send IGMP/MLD membership reports and multicast streams to certain bridge ports for further multicast routing or proxying. This property only has an effect when <code>igmp-snooping</code> is set to <code>yes</code>.<ul><li><code>disabled</code> - disabled multicast router state on the bridge port. Unregistered multicast streams and IGMP/MLD membership reports are not sent to the bridge port regardless of what is connected to it.</li><li><code>permanent</code> - enabled multicast router state on the bridge port. Unregistered multicast and IGMP/MLD membership reports are sent to the bridge port regardless of what is connected to it.</li><li><code>temporary-query</code> - automatically detect multicast router state on the bridge port using IGMP/MLD queries.</li></ul>"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Changes the multicast flood option on the bridge port. It only controls the egress traffic. When enabled, the bridge allows flooding multicast packets to the specified bridge port, but when disabled, the bridge restricts multicast traffic from being flooded to the specified bridge port. The setting affects all multicast traffic. This includes non-IP, IPv4, IPv6, and the link-local multicast ranges (e.g. 224.0.0.0/24 and ff02::1). <br/> Note that when <code>igmp-snooping</code> is enabled and an IGMP/MLD querier is detected, the bridge will automatically restrict unknown IP multicast from being flooded, so the setting is not mandatory for IGMP/MLD snooping setups. <br/> When using this setting together with <code>igmp-snooping</code>, the only multicast traffic that is allowed on the bridge port is the known multicast from the MDB table."
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

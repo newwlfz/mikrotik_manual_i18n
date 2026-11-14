@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Irq",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/resource/irq/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/resource/irq"
+}

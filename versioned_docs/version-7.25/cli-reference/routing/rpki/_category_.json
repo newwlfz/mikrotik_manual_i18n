@@ -1,0 +1,11 @@
+{
+  "position": 15,
+  "label": "Rpki",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/routing/rpki/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/routing/rpki"
+}

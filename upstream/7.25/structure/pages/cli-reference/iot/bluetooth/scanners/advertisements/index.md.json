@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/iot/bluetooth/scanners/advertisements/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/bluetooth/scanners/advertisements.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/bluetooth/scanners/advertisements/",
+  "md_sha256": "868581687fb3be4bc7b4f969e9db3add96b1e25d04f47d9e4f437e101807e498",
+  "html_sha256": "ca94d9406785d5febf48c50c21cea24349612f2980d4f0dbd458c80b20452ccd",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,100 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "user-guides/routing-and-networking-protocols/vrf.md",
+  "source_url": "https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/vrf.md",
+  "html_url": "https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/vrf",
+  "md_sha256": "081c29bf6e2512593d7a2f587ab37c01c3534d07f9d7bb135d5146f377f5d744",
+  "html_sha256": "3f3a75fe147bd63e218874c33008b42f5075a29878389cbe7b489d37cde39286",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 13,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 25,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 2,
+          "html": "<code>/routing/bgp/template add name=bgp-template1 vrf=vrf1</code><br/><code>/routing/bgp/vpls add name=bgp-vpls1 site-id=10 vrf=vrf1</code><br/><code>/routing/bgp/vpn add label-allocation-policy=per-vrf vrf=vrf1</code>"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "html": "VRF is supported for <code>telnet</code>, <code>www</code>, <code>ssh</code>, <code>www-ssl</code>, <code>api</code>, <code>winbox</code>, <code>api-ssl</code> services. The <code>ftp</code> service does not support changing the VRF.<br/><code>/ip/service/set telnet vrf=vrf1</code>"
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "html": "<code>/system/ntp/client/set vrf=vrf1</code><br/><code>/system/ntp/server/set vrf=vrf1</code>"
+        },
+        {
+          "row": 10,
+          "col": 2,
+          "html": "<code>/radius/add address=192.168.88.1@vrf1</code><br/><code>/radius/incoming/set vrf=vrf1</code>"
+        },
+        {
+          "row": 22,
+          "col": 1,
+          "html": "+ <br/> Starting from RouterOS v7.21"
+        },
+        {
+          "row": 22,
+          "col": 2,
+          "html": "Specifies in which VRF the router will listen for DNS queries.<br/><code>/ip/dns/set vrf=vrf1</code><br/>Specifies which VRF is used to contact upstream servers.<br/><code>/ip/dns/set servers=8.8.8.8@vrf1</code>"
+        },
+        {
+          "row": 23,
+          "col": 1,
+          "html": "+ <br/> Starting from RouterOS v7.15"
+        },
+        {
+          "row": 23,
+          "col": 2,
+          "html": "<code>/ip/dhcp-relay/set dhcp-server-vrf=vrf1</code><br/><em>If the DHCP client is in the same VRF, a special parameter in the \"ip dhcp-relay\" configuration is not needed.</em>"
+        },
+        {
+          "row": 24,
+          "col": 1,
+          "html": "+ <br/> Starting from RouterOS v7.19"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

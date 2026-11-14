@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/routerboard/mode-button.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/routerboard/mode-button.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/routerboard/mode-button",
+  "md_sha256": "438a48211758e3d3c8fd8586c0091a3140e8f625ca5ef48b53fc3fdd0fc06e31",
+  "html_sha256": "772a9a874c5c0e9a1c76a2ae1ea8016523227b77d8f3c3196016629820bac7a5",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

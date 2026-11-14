@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/hotspot/walled-garden/reset-counters.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/walled-garden/reset-counters.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/walled-garden/reset-counters",
+  "md_sha256": "0b7ce14a62ebeb9741e9f4aa3a94eb51085cf1a37f00e09fe68ad572f8be8643",
+  "html_sha256": "6d182d76838341265c756a6ab7c35c87a10b81204ee859839c5752e1e8204007",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

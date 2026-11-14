@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/routing/bgp/session/dump-saved-advertisements.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/bgp/session/dump-saved-advertisements.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/bgp/session/dump-saved-advertisements",
+  "md_sha256": "46ffac45895688ab184d48c7a8c1431dc0304c1675ccf5f423bdf53e381812e4",
+  "html_sha256": "c472e735d18415ea49dda23d4e8f864636395df2a776a0347424335e421805c8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

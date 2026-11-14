@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "internet-of-things/bluetooth/user-guides/email-notification-mikrotik-ble-tag-s.md",
+  "source_url": "https://manual.mikrotik.com/docs/internet-of-things/bluetooth/user-guides/email-notification-mikrotik-ble-tag-s.md",
+  "html_url": "https://manual.mikrotik.com/docs/internet-of-things/bluetooth/user-guides/email-notification-mikrotik-ble-tag-s",
+  "md_sha256": "d86a645c78539954604cae65364164c5364723b65936b8c1c2ef583a41c9cd61",
+  "html_sha256": "df43176f359b9dd4b5a06d0a2c3d81f614526661be05aef006ee843b7713acd5",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "listItems": [
+        10,
+        7
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

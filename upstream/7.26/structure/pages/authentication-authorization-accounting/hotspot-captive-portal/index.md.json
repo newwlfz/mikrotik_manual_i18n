@@ -1,0 +1,211 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "authentication-authorization-accounting/hotspot-captive-portal/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/authentication-authorization-accounting/hotspot-captive-portal.md",
+  "html_url": "https://manual.mikrotik.com/docs/authentication-authorization-accounting/hotspot-captive-portal/",
+  "md_sha256": "4b8dc5ee1f883d8b425c707f91270a76f7610442a8ecf32ee09c75593af89b97",
+  "html_sha256": "4d379664fbdfd27e4215df0045884f794974d290a86d3e53839dbf30654dee59",
+  "body": {
+    "html": {
+      "lists": 6,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 15,
+      "sup": 0,
+      "code": 28,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 26,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 15,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 26,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 15,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 24,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 8,
+          "col": 1,
+          "html": "The HotSpot authentication method used<ul><li><strong>mac-cookie</strong> - enables login by mac cookie method</li><li><strong>cookie</strong> - may only be used with another HTTP authentication method. HTTP cookie is generated, when the user authenticates in HotSpot for the first time. User is not asked for the login/password and is authenticated automatically, until <em>cookie-lifetime</em> is active</li><li><strong>http-chap</strong> - login/password is required for the user to authenticate in HotSpot. CHAP challenge-response method with MD5 hashing algorithm is used for protecting passwords.</li><li><strong>http-pap</strong> - login/password is required for user to authenticate in HotSpot. Username and password are sent over network in plain text.</li><li><strong>https</strong> - login/password is required for user to authenticate in HotSpot. Client login/password exchange between client and server is encrypted with SSL tunnel. </li><li><strong>mac</strong> - client is authenticated without asking for a login form. Client MAC-address is added to <code>/ip/hotspot/user</code> database, client is authenticated as soon as connected to the HotSpot</li><li><strong>trial</strong> - client is allowed to use the internet without HotSpot login for the specified amount of time</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "rows": 24,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 14,
+          "col": 1,
+          "html": "Script name to be executed when the user logs in to the HotSpot from the particular profile. It is possible to get the username from internal <strong>user</strong> and <strong>interface</strong> variables. For example, <em>:log info \"User $user logged in!\"</em>. If the HotSpot is set on a bridge interface, then the <strong>interface</strong> variable will show the bridge as the actual interface unless <strong>use-ip-firewall</strong> is set in the bridge settings. List of available variables: <br/><ul><li>$user</li><li>$username (alternative var name for $user)</li><li>$address</li><li>$\"mac-address\"</li><li>$interface</li></ul>"
+        },
+        {
+          "row": 15,
+          "col": 1,
+          "html": "Script name to be executed when the user logs out from the HotSpot. It is possible to get the username from internal <strong>user</strong> and <strong>interface</strong> variables. For example, <em>:log info \"User $user logged in!\"</em> . If the HotSpot is set on a bridge interface, then the <strong>interface</strong> variable will show the bridge as the actual interface unless <strong>use-ip-firewall</strong> is set in the bridge settings. List of available variables: <br/><ul><li>$user</li><li>$username (alternative var name for $user)</li><li>$address</li><li>$\"mac-address\"</li><li>$interface</li><li>$cause</li></ul> Starting with v6.34rc11 some additional variables are available: <br/><ul><li>$uptime-secs - final session time in seconds</li><li>$bytes-in - bytes uploaded</li><li>$bytes-out - bytes downloaded</li><li>$bytes-total - bytes up + bytes down</li><li>$packets-in - packets uploaded</li><li>$packets-out - packets downloaded</li><li>$packets-total - packets up + packets down</li></ul>"
+        },
+        {
+          "row": 16,
+          "col": 1,
+          "html": "Option to show status page for a user authenticated with the mac login method. For example, to show advertisement on the status page (alogin.html)<ul><li><strong>http-login</strong> - open the status page only for HTTP login (includes cookie and HTTPS)</li><li><strong>always</strong> - open the HTTP status page in case of mac login as well</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "rows": 15,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 8,
+      "rows": 15,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 9,
+      "rows": 14,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 10,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Action to perform, when packet matches the rule<ul><li><strong>allow</strong> - allow access to the web-page without authorization</li><li><strong>deny</strong> - authorization is required to access the web-page</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 12,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Action to perform, when the packet matches the rule<ul><li><strong>allow</strong> - allow access to the opened service without authorization</li><li><strong>drop</strong> - the authorization is required to access the service</li><li><strong>reject</strong> - the authorization is required to access the service, when the service is accessed, an ICMP reject message host-unreachable will be generated</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Name of the HotSpot server.<ul><li><strong>all</strong> - will be applied to all HotSpot servers</li></ul>"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Type of the IP-binding action<ul><li><strong>regular</strong> - performs One-to-One NAT according to the rule, translates the <strong>address</strong> to <strong>to-address</strong></li><li><strong>bypassed</strong> - performs the translation, but excludes the client from login to the HotSpot</li><li><strong>blocked</strong> - translation is not performed and packets from a host are dropped</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

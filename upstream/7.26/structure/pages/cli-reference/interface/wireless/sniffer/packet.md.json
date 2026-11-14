@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wireless/sniffer/packet.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/sniffer/packet.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/sniffer/packet",
+  "md_sha256": "49be7a23e8bea0fa25e824a9680205b493363af2685b55a22d9f65288b29f236",
+  "html_sha256": "1c30ce7ddec1b712bb2d52fdc475ad75d838eb7f2a8fff38c45786e3747aa535",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

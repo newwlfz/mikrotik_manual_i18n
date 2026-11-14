@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/tool/romon/discover.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/tool/romon/discover.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/tool/romon/discover",
+  "md_sha256": "5f16cff7bf780df724eb88cb36bcdf49bf38e89df57eb0b2d8bd18bae19f8ca7",
+  "html_sha256": "23c68247925d57b6f244e9f562884c70ad51af045d02e5d831b0d2e72177a050",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

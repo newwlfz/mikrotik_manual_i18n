@@ -1,0 +1,60 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "getting-started/upgrading-to-v7.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/getting-started/upgrading-to-v7.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/getting-started/upgrading-to-v7",
+  "md_sha256": "5e0715e6b6af8d115f8de1d678179dda36fe07e30b87b9d6a404025a9645dbcb",
+  "html_sha256": "7b4b8f95822b973537f66abd350257c44d6bac81f3c1e8984ef5cd2c0bdc9732",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 21,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 24,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 21,
+      "listItems": 21,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 21,
+      "listItems": 21,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 19,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 7,
+          "col": 1,
+          "html": "OK, but attention is required <a href=\"#bgp\">*</a><br/>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

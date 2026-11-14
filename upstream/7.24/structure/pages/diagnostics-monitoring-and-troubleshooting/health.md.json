@@ -1,0 +1,78 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "diagnostics-monitoring-and-troubleshooting/health.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/health.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/health",
+  "md_sha256": "ce256db81fcfa1a3510bcaf929efdfb3e3371c4a493ad48021c0dc1549f16315",
+  "html_sha256": "029829afe11fe076bcdaa1ba22ce6bbf27c1d425b5ba40797e1ad6b59232b430",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Sets the temperature value upon which the fan speed will be increased to the maximum possible rpm. <br/> Reads temperature from CPU, PHY, SWITCH and SFP and adjusts fan speed based on the component with the highest temperature."
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "Sets the actual temperature data read interval to get temperature values from CPU, PHY, SWITCH and SFP. <br/><strong>*NOTE:</strong> THIS SETTING DIRECTLY AFFECTS CPU USAGE"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Enables/disables CPU overtemperature monitoring. <br/><em>(Available for ARM/ARM64 devices)</em>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

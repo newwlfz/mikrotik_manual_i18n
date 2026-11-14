@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/dns/forwarders.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/dns/forwarders.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/dns/forwarders",
+  "md_sha256": "023f7944a125bad0845ba5606ae8870335b548244c7ecd520412057662db0779",
+  "html_sha256": "bd5418b3b7fee670a48d2c5f10198d01092e7dd4d2abff198724a4a85711e175",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

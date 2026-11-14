@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/lte/scan.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/lte/scan.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/lte/scan",
+  "md_sha256": "d16adabfaa69c737b9b418257df0f69adc0ce1304baec472ce19d0abe8c0f202",
+  "html_sha256": "6eff44e311d2f3744ca6a866f29b8ee0bd05e171131fa040e500c86d396a401f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

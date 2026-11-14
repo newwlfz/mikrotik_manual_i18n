@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/cmr/device/reboot.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/device/reboot.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/device/reboot",
+  "md_sha256": "2a611f4413bc27f610483857ba7164445a818a6445cf2ca9ece932165319dba9",
+  "html_sha256": "dc525401e1fe1548349ceb7b4acae0b7895e51f69c3a57b789bd47eafb6c91eb",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

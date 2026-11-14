@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/ospf/lsa.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/ospf/lsa.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/ospf/lsa",
+  "md_sha256": "03443b5031fc556331d2375e6643e473d100ba53aca60322b2e888d31673810e",
+  "html_sha256": "42e881ee8efebae75bb3dfae234baa0f17d61087ef7cb25df619c0a44672ecc0",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

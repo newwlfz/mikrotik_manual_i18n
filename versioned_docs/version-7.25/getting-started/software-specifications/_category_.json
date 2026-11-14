@@ -1,0 +1,11 @@
+{
+  "position": 8,
+  "label": "Software Specifications",
+  "key": "getting-started/software-specifications",
+  "link": {
+    "type": "doc",
+    "id": "getting-started/software-specifications/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

@@ -1,0 +1,104 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "authentication-authorization-accounting/dot1x.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting/dot1x.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting/dot1x",
+  "md_sha256": "f2afa01e24c18708d9efa2322acd78c63484c472ab7e80cb162d91f714313c8e",
+  "html_sha256": "35aa68b742327908552d5a961c91d64522c493f95084ff822dd68edfd932cb43",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 29,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Possible statuses:<ul><li>authenticated - the client has successfully authenticated.</li><li>authenticating - the server is reached and the authentication process is ongoing.</li><li>disabled - the client is disabled.</li><li>error - an internal error has occurred.</li><li>interface is down - the parent interface is not running.</li><li>rejected - the server denied the authentication.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 15,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Authentication information: <br/><ul><li>dot1x</li><li>dot1x (guest vlan)</li><li>dot1x (reject vlan)</li><li>dot1x (server fail vlan)</li><li>mac-auth</li><li>mac-auth (reject vlan)</li><li>mac-auth (server fail vlan)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Possible interface statuses:<ul><li>authorized - access to the interface is granted;</li><li>iface-down - the interface is not running;</li><li>rejected-holding - access was rejected by the RADIUS server;</li><li>un-authorized - access to the interface is not granted.</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

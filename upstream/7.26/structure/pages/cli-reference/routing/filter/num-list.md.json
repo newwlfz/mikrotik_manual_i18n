@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/filter/num-list.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/filter/num-list.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/filter/num-list",
+  "md_sha256": "8c0d673ada2437ec26289be32cbe346b5b799239304ac7d1147028a2097dfc41",
+  "html_sha256": "816dfc78a92d6b1b11865475863a623e43d758c256667e4a3c6c3350068a18ac",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

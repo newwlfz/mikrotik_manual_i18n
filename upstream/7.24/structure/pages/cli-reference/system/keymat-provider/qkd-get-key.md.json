@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/keymat-provider/qkd-get-key.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/keymat-provider/qkd-get-key.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/keymat-provider/qkd-get-key",
+  "md_sha256": "03d0451accdbd2142856794a0d15430df4dfa4118a6d9e4e46d4b2ea5048df9c",
+  "html_sha256": "75046901f63f10de2fd5f2a2e735e52d7f8febda3f8c1e393e54bfa331c37a03",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

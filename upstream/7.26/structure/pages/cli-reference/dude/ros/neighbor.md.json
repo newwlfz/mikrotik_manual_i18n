@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/dude/ros/neighbor.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/dude/ros/neighbor.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/dude/ros/neighbor",
+  "md_sha256": "425ea1b929d780e17363c8191089e17079f4d583cb7ab2424d25072aa355fce3",
+  "html_sha256": "05b886bf9781a1e755bcf213a631a2aa31697965156d922f6498afda28b5425a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

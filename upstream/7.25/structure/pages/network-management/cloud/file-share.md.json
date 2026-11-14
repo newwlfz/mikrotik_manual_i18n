@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "network-management/cloud/file-share.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/network-management/cloud/file-share.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/network-management/cloud/file-share",
+  "md_sha256": "3582dd186069233077347e96310b6f4f5434fac2073e4033e27d692f1bba2856",
+  "html_sha256": "cb25f205592e26c1f65f3cf1b7262fc925e618c6771941b91abf1a07be2417d9",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 50,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

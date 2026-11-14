@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "internet-of-things/lora/user-guides/step-by-step-installation.md",
+  "source_url": "https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides/step-by-step-installation.md",
+  "html_url": "https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides/step-by-step-installation",
+  "md_sha256": "bdf48973948e96ed195bcd5dfea0de9d179f371854b925f0a146e91707060569",
+  "html_sha256": "47a357e523a0d24e4e99a7e09006b3311a105d487be6dbe631b924107912bfa8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

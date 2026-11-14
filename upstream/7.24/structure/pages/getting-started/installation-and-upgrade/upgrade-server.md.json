@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "getting-started/installation-and-upgrade/upgrade-server.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/upgrade-server.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/upgrade-server",
+  "md_sha256": "b282f5ea9edff8d1e26bfe61ec4a33cae5d4350800b3d6366144e9d2abd6641d",
+  "html_sha256": "8ae97f0e3f04555afcc707cf49a39a047e6b3c5df690d17d19687bae93c653cd",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

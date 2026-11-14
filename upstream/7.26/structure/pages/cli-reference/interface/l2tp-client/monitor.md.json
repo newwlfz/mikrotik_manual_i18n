@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/l2tp-client/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/l2tp-client/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/l2tp-client/monitor",
+  "md_sha256": "34226a4cb409d8c5f400e87fe94d270a1a58a019cf81843971897b6f87bad279",
+  "html_sha256": "97286430b4055bcd039bde512f0740b307a1746b8ca05fc111e88649898f168d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,213 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-tag-advertisement-formats.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-tag-advertisement-formats.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-tag-advertisement-formats",
+  "md_sha256": "ef39fcf808d48e93fb2d532c93803151fa8c4d1cfde8e68af87056614395aa4a",
+  "html_sha256": "7880f9506b4f71660df7703c7b16561a23a00dc6f0b788a777b6fa07b40c6a83",
+  "body": {
+    "html": {
+      "lists": 5,
+      "listItems": 23,
+      "br": 0,
+      "details": 0,
+      "tables": 12,
+      "sup": 5,
+      "code": 13,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 23,
+      "listItems": 23,
+      "br": 0,
+      "details": 0,
+      "tables": 12,
+      "sup": 5,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 23,
+      "listItems": 23,
+      "br": 0,
+      "details": 0,
+      "tables": 12,
+      "sup": 5,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "<ul><li>PDU Header = 2 octets </li><li>PDU Payload = AdvA (6 octets)+AdvData (0...31 octets)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 8,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 2,
+          "html": "3 octets (<code>020106</code>): <br/><ul><li> 1st octet - length </li><li> 2nd octet - type</li><li> 3d octet - data</li></ul>"
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "html": "<ul><li> secret: salt (for encryption) = 2 octets (uint) </li><li> secret: acceleration (acceleration in signed 8.8 fixed point format </li><li> acceleration of all 3 axis (0=x, 1=y, 2=z)) = 6 octets (uint) </li><li> secret: temperature (ambient temperature in Celsius in signed 8.8 fixed point format) = 2 octet (int) </li><li> secret: uptime (uptime in seconds) = 4 octets (uint) </li><li> secret: flags (bit-mask of flags) = 1 octet (uint) </li><li> secret: batteryPercentage (battery level in percent) = 1 octet (uint) </li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 26,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 1,
+      "cols": 1,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 7,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 2,
+          "html": "3 octets (<code>020106</code>): <br/><ul><li> 1st octet - length </li><li> 2nd octet - type </li><li> 3d octet - data </li></ul>"
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "html": "<ul><li> Proximity UUID (universally unique identifier) = 16 octets (uint) </li><li> Major Number (specific group identifier) = 2 octets (uint) </li><li> Minor Number (specific beacon identifier) = 2 octets (uint) </li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "rows": 31,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 4,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 2,
+          "html": "3 octets (<code>020106</code>): <br/><ul><li> 1st octet - length </li><li> 2nd octet - type </li><li> 3d octet - data </li></ul>"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "html": "<ul><li> CompleteUUID (universally unique identifier) = 4 octets (const) </li><li> ServiceData (<em>16 bit UUID</em> data type) = 4 octets (const) </li><li> FrameType (Value = <code>0x20</code>) = 1 octet (const) </li></ul>"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "html": "<ul><li> Version (TLM version) = 1 octet (const) </li><li> BatteryVoltageMv (Battery voltage, 1 mV/bit) = 2 octets (uint) </li><li> TemperatureC (Beacon temperature in Celsius) = 2 octets (int) </li><li> AdvertisementCount (Advertising PDU count) = 4 octets (uint) </li><li> UptimeCounter (Time since power-on or reboot) = 4 octets (uint) </li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "rows": 26,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 8,
+      "rows": 4,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 2,
+          "html": "3 octets (<code>020106</code>): <ul><li> 1st octet - length </li><li> 2nd octet - type </li><li> 3d octet - data </li></ul>"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "html": "<ul><li> CompleteUUID (universally unique identifier) = 4 octets (const) </li><li> ServiceData (<em>16 bit UUID</em> data type) = 4 octets (const) </li><li> FrameType (value = <code>0x00</code>) = 1 octet (const) </li></ul>"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "html": "<ul><li> Ranging Data (calibrated Tx power at 0 m) = 1 octet (int) </li><li> Nspace (unique self-assigned beacon ID namespace) = 10 octets (uint) </li><li> Instance (unique ID within the namespace) = 6 octets (uint) </li><li> RFU1 (reserved for future use, value=<code>0x00</code>) = 1 octet (const) </li><li> RFU2 (reserved for future use, value=<code>0x00</code>) = 1 octet (const) </li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "rows": 32,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 10,
+      "rows": 3,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 2,
+          "html": "3 octets (<code>020106</code>): <ul><li> 1st octet - length </li><li> 2nd octet - type </li><li> 3d octet - data </li></ul>"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "html": "<ul><li> Length = 1 octet </li><li> AD type = 1 octet </li><li> Name bytes = x octets. </li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "rows": 16,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

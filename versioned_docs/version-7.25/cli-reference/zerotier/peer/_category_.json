@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Peer",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/zerotier/peer/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/zerotier/peer"
+}

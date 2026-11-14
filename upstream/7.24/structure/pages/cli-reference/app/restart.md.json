@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/app/restart.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/app/restart.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/app/restart",
+  "md_sha256": "63ead6d846d1b060f22c8b86d394791dcc58db8226ca37c5f5f7889cee926341",
+  "html_sha256": "f1bea0cd0f7d2e23676b86343e2b0687eaf2ebb05a84be420f6fe5e258fd5713",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

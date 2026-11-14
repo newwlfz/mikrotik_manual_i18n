@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "virtual-private-networks/pppoe/mlppp-over-single-and-multiple-links.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/virtual-private-networks/pppoe/mlppp-over-single-and-multiple-links.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/virtual-private-networks/pppoe/mlppp-over-single-and-multiple-links",
+  "md_sha256": "0d7e1348b18bb227c3c1f32394b3ed6fe137b2a808333acf6673045fdac6b879",
+  "html_sha256": "6fb193e7c87eda5980bdb427e9c2aab5a510159c38f632decce655279105cee2",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

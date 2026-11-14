@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/iot/bluetooth/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/bluetooth.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/bluetooth/",
+  "md_sha256": "25e0b412b1d91f2b74462d521284ea9c4cce0ea25fe3f6643d7482bbb5e47959",
+  "html_sha256": "d48f68a2fd090357b1271d927dbc9cb0685e305fe65fe87f50d6142eea3b846a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

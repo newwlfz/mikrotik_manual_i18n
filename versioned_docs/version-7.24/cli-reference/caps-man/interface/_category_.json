@@ -1,0 +1,11 @@
+{
+  "position": 7,
+  "label": "Interface",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/caps-man/interface/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/caps-man/interface"
+}

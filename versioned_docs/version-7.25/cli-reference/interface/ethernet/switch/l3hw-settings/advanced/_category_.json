@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Advanced",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/ethernet/switch/l3hw-settings/advanced/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/ethernet/switch/l3hw-settings/advanced"
+}

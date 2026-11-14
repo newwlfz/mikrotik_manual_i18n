@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/tool/netwatch.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/netwatch.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/netwatch",
+  "md_sha256": "fe7e1b66cb1107085884a37b146dd116711f3b86c5888c0a47382e16c49165cc",
+  "html_sha256": "94f25d0dd5d4ad34977aec33c8c6ecc3f3c26d2e942900ec03b821a48f230a15",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

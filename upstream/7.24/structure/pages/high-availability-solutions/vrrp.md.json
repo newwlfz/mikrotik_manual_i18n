@@ -1,0 +1,93 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "high-availability-solutions/vrrp.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/high-availability-solutions/vrrp.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/high-availability-solutions/vrrp",
+  "md_sha256": "1c04e8aaa4be6b98e4bb18b0b80518357f94025e9e8a84e2580f65063393e77b",
+  "html_sha256": "29dd8db99e520c13dc1831e3a78ca105e7120847c64dbc55028e9e360e758760",
+  "body": {
+    "html": {
+      "lists": 8,
+      "listItems": 23,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 9,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 23,
+      "listItems": 23,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 23,
+      "listItems": 23,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 24,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Authentication method to use for VRRP advertisement packets.<br/>- <code>none</code> - Use only in low-security networks, for example, two VRRP nodes on a LAN.<br/>- <code>ah</code> - IP Authentication Header. This algorithm provides strong protection against configuration errors, replay attacks, and packet corruption or modification. You should use it when you have limited control over the administration of nodes on a LAN. HMAC-MD5 is used.<br/>- <code>simple</code> - Uses a clear-text password. Protects against accidental misconfiguration of routers on a local network."
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Specifies the mode for connection tracking synchronization. This setting is relevant only when <code>sync-connection-tracking=yes</code> is enabled.<br/>- <code>passive-active</code> - Use this mode for traditional VRRP setups, where one master and one or more backup routers are used. In this mode, only the master device performs connection tracking synchronization by sending updates to the backup devices. Backup devices do not send connection tracking data.<br/>- <code>active-active</code> - Use this mode for setups with multiple VRRP groups to achieve load balancing. Each VRRP group has its own master, and these masters can reside on different physical devices. With <code>active-active</code> mode, all active masters can synchronize connection tracking data with each other. Each VRRP group in active-active mode must use a <strong>unique</strong><code>connection-tracking-port</code> value. Reusing the same port across multiple groups can cause a non-synchronized connection tracking table.<br/><br/><strong>Important:</strong> Using multiple VRRP groups with <code>passive-active</code> mode can lead to unsynchronized connection tracking tables because only one master handles synchronization, and the others do not exchange tracking data.<br/><br/>Example configuration:<br/><pre><code>R1<br/><code>/interface/vrrp</code><br/>add connection-tracking-mode=active-active connection-tracking-port=8275 interface=ether1 name=vrrp30 priority=100 sync-connection-tracking=yes vrid=1<br/>add connection-tracking-mode=active-active connection-tracking-port=8276 interface=ether1 name=vrrp40 priority=100 sync-connection-tracking=yes vrid=2<br/><br/>R2<br/><code>/interface/vrrp</code><br/>add connection-tracking-mode=active-active connection-tracking-port=8275 interface=ether1 name=vrrp30 priority=55 sync-connection-tracking=yes vrid=1<br/>add connection-tracking-mode=active-active connection-tracking-port=8276 interface=ether1 name=vrrp40 priority=155 sync-connection-tracking=yes vrid=2</code></pre>"
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Allows multiple VRRP interfaces to be grouped so they share the same VRRP state. Within a group, a single group authority interface is selected. It controls the state of the other group members and is the only interface that sends VRRP advertisements. When the group-authority VRRP interface transitions to the backup state, all group members also transition to the backup state. If a failure is detected on any group member, for example due to a link-down on its parent interface, all group members transition to the failure state.<br/>- <code>none</code> - The VRRP interface is not grouped and operates independently, with its own VRRP state machine.<br/>- <code>self</code> - The VRRP interface acts as the group authority. It controls the state machines of other grouped VRRP interfaces and is responsible for sending and receiving VRRP advertisements.<br/>- <code>vrrp-interface</code> - The VRRP interface is a group member. Its state machine follows the state of the specified VRRP interface.<br/><br/>For example, VRRP instances run on LAN and WAN networks with NAT between them. If one VRRP instance is Master and the other is Backup on the same device, the entire network malfunctions due to NAT failure. Grouping LAN and WAN VRRP interfaces ensures that both are either VRRP Master or Backup. In a VRRP group, VRRP advertisements are sent only by the group authority. In a typical WAN+LAN setup, you should use the LAN network as the group authority to keep VRRP control traffic in the internal network.<br/><pre><code><code>/interface/vrrp</code><br/>add name=vrrp-wan interface=sfp-sfpplus1 vrid=1 priority=100<br/>add name=vrrp-lan interface=bridge1 vrid=2 priority=100<br/>set [find] group-authority=vrrp-lan</code></pre>"
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "html": "The VRRP interval defines how often the VRRP master router sends Advertisement packets to backup routers. This interval directly determines the frequency at which backups receive keepalive information confirming that the master is operational.<br/>A shorter interval increases the rate of Advertisement packets, allowing faster detection of master failure, but also increases sensitivity to packet loss, processing delays, and timer inaccuracies. Longer intervals reduce control traffic and improve stability, at the cost of slower failover detection. The Master Down interval is derived from the configured VRRP interval and the router's priority, and is calculated to allow multiple missed Advertisements before triggering failover.<br/><br/><strong>Warning:</strong> Configuring VRRP intervals below 1 second can lead to unpredictable behavior and unintended master role changes."
+        },
+        {
+          "row": 18,
+          "col": 1,
+          "html": "Specifies the remote address of the other VRRP router for connection tracking synchronization. If not set, the system autodetects the remote address through VRRP. The remote address is used only if <code>sync-connection-tracking=yes</code>. Explicitly setting a remote address has the following benefits:<br/>- Connection tracking synchronization starts faster because there is no need to wait for VRRP's initial message exchange to detect the remote address.<br/>- VRRP Master election is faster.<br/>- Connection tracking data can be sent through a different network interface, for example, a dedicated secure line between two routers.<br/>Sync connection tracking uses UDP port 8275."
+        },
+        {
+          "row": 19,
+          "col": 1,
+          "html": "Controls whether the VRRPv3 IPv4 checksum is calculated with or without the IPv4 pseudoheader.<br/>Different vendors interpret RFC 5798 section 5.2.8 differently regarding the pseudoheader in IPv4 checksum calculation. Linux-based implementations (including FRR) include the pseudoheader for both IPv4 and IPv6, while Cisco includes it only for IPv6.<br/>- <code>no</code> (default) - Include the IPv4 pseudoheader in the checksum calculation. Compatible with other Linux-based VRRPv3 implementations.<br/>- <code>yes</code> - Exclude the IPv4 pseudoheader from the checksum calculation. Use this setting for compatibility with Cisco and other vendors that do not include the pseudoheader for IPv4.<br/><br/>This setting applies only to VRRPv3 with IPv4. It has no effect on VRRPv3 IPv6 or VRRPv2.<br/><br/><strong>Important:</strong> All VRRP routers in the same Virtual Router must use the same value for this setting. Mismatched values will cause \"bad checksum\" errors and VRRP advertisement packets will be discarded."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

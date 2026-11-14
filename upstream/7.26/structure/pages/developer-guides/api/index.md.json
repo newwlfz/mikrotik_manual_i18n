@@ -1,0 +1,115 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "developer-guides/api/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/developer-guides/api.md",
+  "html_url": "https://manual.mikrotik.com/docs/developer-guides/api/",
+  "md_sha256": "b5d6022a7f30454a46a80883e2e65a48927e4aae0ecef5464992dfc90fdfa204",
+  "html_sha256": "10a4a4cbbd9b4e0ed0396c38c576065a380cd00bcaf1b4586a57bc594ec2b03b",
+  "body": {
+    "html": {
+      "lists": 21,
+      "listItems": 76,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 115,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 76,
+      "listItems": 76,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 76,
+      "listItems": 76,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "unaligned": {
+        "reason": "cell-count",
+        "row": 2,
+        "markdown": 4,
+        "html": 3
+      },
+      "rebuild": true,
+      "rebuild_header": [
+        "Value of length",
+        "# of bytes",
+        "Encoding"
+      ],
+      "rebuild_rows": [
+        [
+          "<code>0 &lt;= len &lt;= 0x7F</code>",
+          "1",
+          "len, lowest byte"
+        ],
+        [
+          "<code>0x80 &lt;= len &lt;= 0x3FFF</code>",
+          "2",
+          "len"
+        ],
+        [
+          "<code>0x4000 &lt;= len &lt;= 0x1FFFFF</code>",
+          "3",
+          "len"
+        ],
+        [
+          "<code>0x200000 &lt;= len &lt;= 0xFFFFFFF</code>",
+          "4",
+          "len"
+        ],
+        [
+          "<code>len &gt;= 0x10000000</code>",
+          "5",
+          "0xF0 and len as four bytes"
+        ]
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 6,
+          "col": 1,
+          "html": "applies operations to the values in the stack. <ul><li>operation string is evaluated from left to right.</li><li>the sequence of decimal digits followed by any other character or end of the word is interpreted as a stack index. top value has an index 0.</li><li>an index that is followed by a character pushes a copy of the value at that index.</li><li>an index that is followed by the end of the word replaces all values with the value at that index.</li><li><strong><code>!</code></strong>character replaces the top value with the opposite.</li><li><strong><code>&amp;</code></strong> pops two values and pushes the result of logical <code>and</code> operation.</li><li><strong><code>&#124;</code></strong> pops two values and pushes the result of logical <code>or</code> operation.</li><li><strong><code>.</code></strong> after an index does nothing.</li><li><strong><code>.</code></strong> after another character pushes a copy of the top value.</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": [
+    {
+      "table": 0,
+      "reason": "cell-count",
+      "row": 2,
+      "markdown": 4,
+      "html": 3
+    }
+  ]
+}

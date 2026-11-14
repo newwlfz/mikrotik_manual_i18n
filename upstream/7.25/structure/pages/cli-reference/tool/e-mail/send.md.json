@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/tool/e-mail/send.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/e-mail/send.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/e-mail/send",
+  "md_sha256": "e539b2f2b057ab6eca30050491af91247abb873461e2ae81902b01a12ef1f4df",
+  "html_sha256": "c5f47cdba5cc193c46edd28de34c3143c63ef63bee224b3c352ec5e4e8aae332",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

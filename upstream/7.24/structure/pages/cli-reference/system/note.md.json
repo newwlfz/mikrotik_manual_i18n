@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/note.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/note.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/note",
+  "md_sha256": "4313bec71adf5a8dc3cb491503431586dc2e78eccc79a6b737ec48bb82268a76",
+  "html_sha256": "826eda028ed3f175509765166ceb96407978a20fa6c35946631f9375b5616e3d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

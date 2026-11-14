@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/snmp/send-trap.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/snmp/send-trap.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/snmp/send-trap",
+  "md_sha256": "da56141af7205ce8d99692e4c4d7f703cc9c861afae451c85c10bcb6648f5c78",
+  "html_sha256": "7ffd428476ea467d37165e5b1d75b4c4fa059954f45e240b09959a1421408c69",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 6,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

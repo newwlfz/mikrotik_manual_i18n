@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/bridge/msti/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/bridge/msti.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/bridge/msti/",
+  "md_sha256": "587e6e6db134d783f91d3b823ff1589c269401f690308bbad6c58a6315b8ade6",
+  "html_sha256": "216dc146ebd7d9af08657c3d5ae7c8a3d915b31c0d5a8dd0b07be79f23fb4bf6",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

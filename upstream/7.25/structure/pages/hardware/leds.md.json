@@ -1,0 +1,84 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "hardware/leds.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/hardware/leds.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/hardware/leds",
+  "md_sha256": "af61b5b87a337e462524bffbfe8e2d4442f10b0575c49484a4695948960526be",
+  "html_sha256": "8c3ca31342efed8fb24499ab6a33ec95959ac81f144cdeb1b6181899c67f9bf9",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Type of the status:<ul><li>align-down - light the led if the w60g device needs to be aligned downwards for the best signal quality</li><li>align-left - light the led if the w60g device needs to be aligned to the left</li><li>align-right - light the led if the w60g device needs to be aligned to the right</li><li>align-up - light the led if the w60g device needs to be aligned upwards</li><li>ap-cap - blink on CAP initializing with CAPsMAN, steady on once connected</li><li>fan-fault - light the led when any of the device's controlled fans stop working</li><li>flash-access - blink the led on flash access</li><li>interface-activity - blink the led on interface (traffic) activity</li><li>interface-receive - blink the led on interface received traffic</li><li>interface-speed - light the led when interface works in 10Gbit rate</li><li>interface-speed-1G - light the led when interface works in 1Gbit rate</li><li>interface-speed-25G - light the led when interface works in 25Gbit rate</li><li>interface-speed-100G - light the led when interface works in 100Gbit rate</li><li>interface-status - light the led on interface status change</li><li>interface-transmit - blink the led on interface transmitted traffic</li><li>modem-signal - blink the led on 3G modem signal (either USB or miniPCIe)</li><li>modem-technology - turns on LEDs in order of modem technology generation: GSM; 3G; LTE; single led turns on only when LTE is active.</li><li>off - turn off the led</li><li>on - turn on the led</li><li>poe-fault - light the led when PoE out budget is close to the maximum supported limit</li><li>poe-out - light the led when interface PoE out turns on</li><li>wireless-signal-strength - light the leds displaying wireless signal (requires more than one led)</li><li>wireless-status - light the led on wireless status change.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 22,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 21,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

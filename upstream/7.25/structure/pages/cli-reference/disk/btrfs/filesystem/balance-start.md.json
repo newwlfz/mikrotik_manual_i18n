@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/disk/btrfs/filesystem/balance-start.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/disk/btrfs/filesystem/balance-start.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/disk/btrfs/filesystem/balance-start",
+  "md_sha256": "3ab2e4e5eff5550954a4b7c5f4a21dfdc8eff02f8b0168726f1248078bc08d80",
+  "html_sha256": "20547ed9b7f84b6a9f9e0ed2a7b57223ed6fc832176a233f9aaf80826d2e3502",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

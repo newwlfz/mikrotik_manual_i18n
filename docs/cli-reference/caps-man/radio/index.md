@@ -1,0 +1,25 @@
+---
+sidebar_key: "cli-reference/caps-man/radio"
+title: "radio"
+sidebar_label: 'radio'
+source: https://manual.mikrotik.com/docs/cli-reference/caps-man/radio
+captured_at: '2026-11-09T11:35:47.715Z'
+---
+
+-----------
+
+## caps-man/radio 
+**Package:** wireless-rep
+**Type:** Directory
+
+<ArgTable c1="Flag" c2="Name" c3="Description">
+<ArgTableRow arg="L" typ="local"></ArgTableRow>
+<ArgTableRow arg="P" typ="provisioned"></ArgTableRow>
+</ArgTable>
+
+<ArgTable c1="Read-only Argument" c2="Type" c3="Description">
+<ArgTableRow arg="radio-mac" typ="macAddr"></ArgTableRow>
+<ArgTableRow arg="remote-cap-name" typ="string"></ArgTableRow>
+<ArgTableRow arg="remote-cap-identity" typ="string"></ArgTableRow>
+<ArgTableRow arg="interface" typ="iface_enum"></ArgTableRow>
+</ArgTable>

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/iot/lora/radios.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/iot/lora/radios.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/iot/lora/radios",
+  "md_sha256": "b7c862f65899afcc11cd79752918ffb533677bbf3b66bfde05b612ccea75a535",
+  "html_sha256": "9571eed04d930265de8a22b154c2642d01bb09bcea41d57e07b0b5569eb3b0ca",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

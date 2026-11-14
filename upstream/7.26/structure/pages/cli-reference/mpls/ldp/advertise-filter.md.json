@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/mpls/ldp/advertise-filter.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/mpls/ldp/advertise-filter.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/mpls/ldp/advertise-filter",
+  "md_sha256": "0c9142df9f8703ca528973a2a0cf003991cf13b9e5e50cb70b2ab86e5f9773ca",
+  "html_sha256": "55b55926519cebbe84c3cf8e9e68f0b3636dbd7aede5576cb166cb8c982641c8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

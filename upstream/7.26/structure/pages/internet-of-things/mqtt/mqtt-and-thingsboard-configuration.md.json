@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "internet-of-things/mqtt/mqtt-and-thingsboard-configuration.md",
+  "source_url": "https://manual.mikrotik.com/docs/internet-of-things/mqtt/mqtt-and-thingsboard-configuration.md",
+  "html_url": "https://manual.mikrotik.com/docs/internet-of-things/mqtt/mqtt-and-thingsboard-configuration",
+  "md_sha256": "ab3598cf1094ce814b3c804b483fed2276435c1e8521eb3c7aa5fdd643405ac8",
+  "html_sha256": "7cfbee333df42f764ad50ca3718460cddb4fbfaa3e7e15423f03b9723528ecd6",
+  "body": {
+    "html": {
+      "lists": 6,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 24,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 18,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 18,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,92 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "hardware/disks/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/hardware/disks.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/hardware/disks/",
+  "md_sha256": "fdf50800cf31e4ee24f46b36d64a68da1296f9da229e4cf296028b4902776cb8",
+  "html_sha256": "48fec8ff51f28dddd5e69722e2c1873c9ad66619b10f166afd6f69c84802402b",
+  "body": {
+    "html": {
+      "lists": 7,
+      "listItems": 9,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 12,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Command to initiate the disk formatting process. Contains additional properties of its own. Such as \"file-system\" and \"label\".<ul><li>select the disk (slot) that should be formatted</li><li><em>file-system</em> ('exfat', 'ext4', 'fat32', 'xfs', 'btrfs', 'discard', 'discard-secure', 'wipe') - applies one of the available file system types; alternatively can be used to discard storage blocks (blkdiscard equivalent) or securely wipe (overwrite) data.</li><li>mbr-partition-table - make an mbr partition table</li></ul>"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Allows performing performance tests of the selected device (Available from RouterOS 7.16) <br/><ul><li><em>disk - </em>device or devices for test</li><li><em>direction </em>- ('read','write') </li><li>duration - (int) </li><li>pattern - ('random', 'sequential')</li><li>thread-count - (int)</li><li>block-size - size of block to be used for testing</li><li>type - ('device', 'filesystem')</li></ul>"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Sets the mounting point for the file system. It is possible to set the mount point as the following parameters based on the disk: <br/><ul><li>[slot] <em>(default)</em> - sets the mount point as the slot name.</li><li>[model] - sets the mount point as the device's model name.</li><li>[serial] - sets the mount point as the device serial</li><li>[fw-version] - sets the mount point as the device's firmware version.</li><li>[fs-label] - sets the mount point as the device's file system label.</li><li>[fs-uuid] - sets the mount point as the device's UUID</li><li>[fs] - sets the mount point as the device's file system</li></ul><code>/disk/set nvme1 mount-point-template=\"[model]\"</code> Additionally, it is possible to combine multiple variables to create a single mount point: <br/><code>/disk/set nvme1 mount-point-template=\"[model]-[fs]\"</code><br/>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 17,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "The \"B - BLOCK-DEVICE\" flag means that this device works using blocks for input/output operations. In the context of RouterOS, its distinction is crucial, as it helps determine whether a device is functioning as a data carrier or simply providing information about the disk layout structure. This difference becomes important when considering the extender with the device behind it. If a device is marked with the letter \"B\", this indicates its ability to be used as storage or memory. In contrast, devices that do not have a \"B\" mark are designed primarily to understand the structure of the disk. <br/> This allows you to quickly recognize the presence of a PCIe or SAS expander, as well as detect the presence of drives in the first expander. In addition, it allows you to estimate the speed of the connection to which each device is connected. <br/> However, the most notable benefit of the \"B\" flag is its ability to instantly indicate whether a device can be formatted or used for RAID purposes."
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

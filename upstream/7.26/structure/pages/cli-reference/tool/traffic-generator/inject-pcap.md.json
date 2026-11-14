@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/tool/traffic-generator/inject-pcap.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/inject-pcap.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/inject-pcap",
+  "md_sha256": "3b68a2baa56cf8214b7a0f3630b13664346167567441b250ec61b7bbce30f514",
+  "html_sha256": "7128ec489b7d5887efe3c674d6ac4266a876df45a700e5b6be3c3f4836a3f86e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

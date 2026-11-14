@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/app/remove.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/app/remove.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/app/remove",
+  "md_sha256": "1f3ed3284ead21d8dc33e5be4ab0b4cb605b50a854bc1eb9ca3f0b60d5e5d60f",
+  "html_sha256": "e47b60dd472a456c81753cda6ba74fb768bd6d57ba1bd9ba993ec53a69d245cd",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,94 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "firewall-and-quality-of-service/queues/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/queues.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/firewall-and-quality-of-service/queues/",
+  "md_sha256": "55c89bfe3160c06c5810b723e1ca7d90ef4a53aa581dc7764cc35541c50b54be",
+  "html_sha256": "6f17f841b902fe9d6fa61b8aebbb2ead2c1049a57a06f4297b651e55462d10e8",
+  "body": {
+    "html": {
+      "lists": 16,
+      "listItems": 75,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 17,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 75,
+      "listItems": 75,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 75,
+      "listItems": 75,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 15,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 5,
+          "col": 1,
+          "html": "CAKE can divide traffic into \"tins\" based on the Diffserv field: <br/><ul><li><strong>diffserv4</strong> Provides a general-purpose Diffserv implementation with four tins: Bulk (CS1), 6.25% threshold, generally low priority. Best Effort (general), 100% threshold. Video (AF4x, AF3x, CS3, AF2x, CS2, TOS4, TOS1), 50% threshold. Voice (CS7, CS6, EF, VA, CS5, CS4), 25% threshold.</li><li><strong>diffserv3 </strong>(default) Provides a simple, general-purpose Diffserv implementation with three tins: Bulk (CS1), 6.25% threshold, generally low priority. Best Effort (general), 100% threshold. Voice (CS7, CS6, EF, VA, TOS4), 25% threshold, reduced Codel interval.</li></ul>"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "<ul><li><strong>flowblind</strong> - Disables flow isolation; all traffic passes through a single queue for each tin.</li><li><strong>srchost</strong> - Flows are defined only by source address. </li><li><strong>dsthost</strong> Flows are defined only by destination address. </li><li><strong>hosts</strong> - Flows are defined by source-destination host pairs. This is host isolation, rather than flow isolation.</li><li><strong>flows</strong> - Flows are defined by the entire 5-tuple of source address, a destination address, transport protocol, source port, and destination port. This is the type of flow isolation performed by SFQ and fq_codel.</li><li><strong>dual-srchost</strong> Flows are defined by the 5-tuple, and fairness is applied first over source addresses, then over individual flows. Good for use on egress traffic from a LAN to the internet, where it'll prevent any LAN host from monopolizing the uplink, regardless of the number of flows they use.</li><li><strong>dual-dsthost</strong> Flows are defined by the 5-tuple, and fairness is applied first over destination addresses, then over individual flows. Good for use on ingress traffic to a LAN from the internet, where it'll prevent any LAN host from monopolizing the downlink, regardless of the number of flows they use.</li><li><strong>triple-isolate </strong>- Flows are defined by the 5-tuple, and fairness is applied over source <em>and</em> destination addresses intelligently (ie. not merely by host-pairs), and also over individual flows.</li><li><strong>nat</strong> Instructs Cake to perform a NAT lookup before applying flow-isolation rules, to determine the true addresses and port numbers of the packet, to improve fairness between hosts \"inside\" the NAT. This has no practical effect in \"flowblind\" or \"flows\" modes, or if NAT is performed on a different host.</li><li><strong>nonat </strong>(default) Cake will not perform a NAT lookup. Flow isolation will be performed using the addresses and port numbers directly visible to the interface Cake is attached to.</li></ul>"
+        },
+        {
+          "row": 13,
+          "col": 1,
+          "html": "<ul><li><strong>datacentre</strong> - For extremely high-performance 10GigE+ networks only. Equivalent to <strong>RTT 100us.</strong></li><li><strong>lan</strong> - For pure Ethernet (not Wi-Fi) networks, at home or in the office. Don't use this when shaping for an Internet access link. Equivalent to <strong>RTT 1ms.</strong></li><li><strong>metro</strong> - For traffic mostly within a single city. Equivalent to <strong>RTT</strong><strong>10ms.</strong><strong>regional</strong> For traffic mostly within a European-sized country. Equivalent to <strong>RTT 30ms.</strong></li><li><strong>internet </strong>(default) This is suitable for most Internet traffic. Equivalent to <strong>RTT 100ms.</strong></li><li><strong>oceanic</strong> - For Internet traffic with generally above-average latency, such as that suffered by Australasian residents. Equivalent to <strong>RTT 300ms.</strong></li><li><strong>satellite</strong> - For traffic via geostationary satellites. Equivalent to <strong>RTT</strong><strong>1000ms.</strong></li><li><strong>interplanetary</strong> - So named because Jupiter is about 1 light-hour from Earth. Use this to (almost) completely disable AQM actions. Equivalent to <strong>RTT 3600s.</strong></li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

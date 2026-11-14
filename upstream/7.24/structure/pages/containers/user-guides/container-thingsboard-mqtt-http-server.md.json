@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "containers/user-guides/container-thingsboard-mqtt-http-server.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/containers/user-guides/container-thingsboard-mqtt-http-server.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/containers/user-guides/container-thingsboard-mqtt-http-server",
+  "md_sha256": "9ea05d2f451e8daf5971bdd3083b00b3ed25a8ed90bb1acf4cdf7a18201091cb",
+  "html_sha256": "c50c4edc850c6df5f4c49c7dd5029f9ed3567832293647a4d67945695fe5496e",
+  "body": {
+    "html": {
+      "lists": 7,
+      "listItems": 23,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 38,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 23,
+      "listItems": 23,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 23,
+      "listItems": 23,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

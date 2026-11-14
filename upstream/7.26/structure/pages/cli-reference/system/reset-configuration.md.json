@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/reset-configuration.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/reset-configuration.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/reset-configuration",
+  "md_sha256": "f2fe075ef17b58eb16af48ad5ebc1f184ecfc199cab31a85bf2fc9f8ed377074",
+  "html_sha256": "52a1afba2486c0410cb1246c2cfb4379e3f0d65fd1c3a43feb0e483963a5e3af",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

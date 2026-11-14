@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "storage/encrypted-storage.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/storage/encrypted-storage.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/storage/encrypted-storage",
+  "md_sha256": "3d9a435ebc5814d00bbec0e9607dfba76837d2831d6a694f31333645b031a21e",
+  "html_sha256": "8556d902c63339e0f8eb1ef9c3bb22e8c84074b36dab2b59c28dad576f8cd521",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

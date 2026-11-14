@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/backup/cloud/download-file.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/backup/cloud/download-file.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/backup/cloud/download-file",
+  "md_sha256": "b2e3da704b1579dfbd9a1d1c23f8a63fff6c75015c3927cd54ee0e013e088957",
+  "html_sha256": "03f60e94a43310ea0365bdfbb6cdac2749709144152e098313a38e82cf99ce1f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,60 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "high-availability-solutions/load-balancing/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/high-availability-solutions/load-balancing.md",
+  "html_url": "https://manual.mikrotik.com/docs/high-availability-solutions/load-balancing/",
+  "md_sha256": "e4d342b5a4eebd58293ae6acf51ce9c8e1f275ee1af503760d28a9a42d019f5d",
+  "html_sha256": "787782b2aa85619519a397525ccc923b63d85e8daac1a83aa4d95041d4926323",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 0,
+          "html": "<br/> Firewall Mangle"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

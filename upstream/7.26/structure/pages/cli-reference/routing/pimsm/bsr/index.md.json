@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/pimsm/bsr/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/pimsm/bsr.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/pimsm/bsr/",
+  "md_sha256": "a19f8feb42ff9d462c935308399d917a816d3786f1555f42080e6dca9190bb31",
+  "html_sha256": "2fd9a5502b3f9e0b259b19295e9cdcea25e02080fe4230b04c6aa3b0b9c1ca2b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

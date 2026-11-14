@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wifi/radio/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/radio.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/radio/",
+  "md_sha256": "6e6533f6ae76ffa558ecf112914236c17cb5df4f3ef1e21ae47a72bac2f446e9",
+  "html_sha256": "9fe40dba4ad78870a35b592ab5120412d2ca39739e4b26bd581dc8df7ccb778e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

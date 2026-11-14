@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/resource/hardware/authorize.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/resource/hardware/authorize.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/resource/hardware/authorize",
+  "md_sha256": "d20b05349a10d5ae9dfeeabd47b8f52064fea6f398b731ee7ff60876d473dc41",
+  "html_sha256": "807f7be9febe406118f6b1ffeb412b59cfcb592d993c71042ba19af5bc823caa",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "Session",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/routing/bgp/session/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/routing/bgp/session"
+}

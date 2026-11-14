@@ -1,0 +1,83 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "wireless/w60g/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/wireless/w60g.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/wireless/w60g/",
+  "md_sha256": "c040307cca1baa3e326d0a32f32999f606eef13e1fcb026313b2a95ce652fc35",
+  "html_sha256": "fa5ac48c17f167cc13fe086110463eb43a3991f34912a2484a1f05df094aaa11",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 5,
+      "br": 1,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 13,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        1,
+        0
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 19,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 14,
+      "cols": 5,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 8,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

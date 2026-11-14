@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/user-manager/router/reset-counters.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/router/reset-counters.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/user-manager/router/reset-counters",
+  "md_sha256": "301646f62842d49018095f34c8222db3b4563d98bf054571ae83bbe4ba33db66",
+  "html_sha256": "e77a5bd317d24a9c543fc4d68eff2053b93370918a4dd6f9c15487bca795f515",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

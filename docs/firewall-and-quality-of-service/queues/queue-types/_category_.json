@@ -1,0 +1,11 @@
+{
+  "position": 7,
+  "label": "Queue Types",
+  "key": "firewall-and-quality-of-service/queues/queue-types",
+  "link": {
+    "type": "doc",
+    "id": "firewall-and-quality-of-service/queues/queue-types/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

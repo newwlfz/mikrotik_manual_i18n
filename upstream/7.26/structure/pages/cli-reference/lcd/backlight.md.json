@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/lcd/backlight.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/lcd/backlight.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/lcd/backlight",
+  "md_sha256": "277b42390929261b36938d1e2486655ab1636015b9ff5aea64dd58adb9204080",
+  "html_sha256": "535243372f925880fa21256960b40a27882eafbe0486838fb737c9ad559028ec",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

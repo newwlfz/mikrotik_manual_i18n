@@ -1,0 +1,32 @@
+---
+sidebar_key: "cli-reference/interface/lte/esim/provision"
+sidebar_position: 5
+title: "provision"
+sidebar_label: 'provision'
+source: https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim/provision
+captured_at: '2026-11-09T11:35:47.715Z'
+---
+
+-----------
+
+## interface/lte/esim/provision 
+**Conditions:** !smips
+**Type:** Command
+
+<ArgTable c1="Argument" c2="Type" c3="Description">
+<ArgTableRow arg="interface" typ="iface_enum"></ArgTableRow>
+<ArgTableRow arg="activation-code" typ="string">Profile activation code. Example: LPA:1$server.example.io$ABCD10EFGHI5KL6M</ArgTableRow>
+<ArgTableRow arg="activate" typ="bool">Activate newly created profile after it is provisioned (default: yes)</ArgTableRow>
+<ArgTableRow arg="sm-dp-plus" typ="string">SM-DP+ server hostname. Example: sm-dp-plus=server.example.io</ArgTableRow>
+<ArgTableRow arg="matching-id" typ="string">An activation code token. Example: matching-id=ABCD10EFGHI5KL6M</ArgTableRow>
+<ArgTableRow arg="confirmation-code" typ="string">An optional code supplied by the operator</ArgTableRow>
+<ArgTableRow arg="sm-dp-plus-oid" typ="string">An optional SM-DP+ supplied by the operator</ArgTableRow>
+<ArgTableRow arg="force-confirmation" typ="bool">Do not wait for user confirmation and automatically accept the profile provision (default: no)</ArgTableRow>
+</ArgTable>
+
+<ArgTable c1="Read-only Argument" c2="Type" c3="Description">
+<ArgTableRow arg="iccid" typ="string"></ArgTableRow>
+<ArgTableRow arg="spn" typ="string"></ArgTableRow>
+<ArgTableRow arg="name" typ="string"></ArgTableRow>
+<ArgTableRow arg="status" typ="string"></ArgTableRow>
+</ArgTable>

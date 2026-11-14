@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/iot/lora/traffic/clear.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/lora/traffic/clear.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/iot/lora/traffic/clear",
+  "md_sha256": "71f9d59d82f366da3e6ff42d11a34d4612351a84fcdec2aba888ecbe6e58f9af",
+  "html_sha256": "2ea0b20128f827f8e732a0381cecbfbc27d52736b048c31faa0781dc27a46aa5",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "getting-started/installation-and-upgrade/upgrade.md",
+  "source_url": "https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/upgrade.md",
+  "html_url": "https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/upgrade",
+  "md_sha256": "adb33a782430d4dc139fba141296e12613ea952d9d7d951e3a7ced1a69207ebb",
+  "html_sha256": "97cc67c1ca9f85c2057e68b15b10822c8d7ef43509ee27781d18a0ee58245c9f",
+  "body": {
+    "html": {
+      "lists": 15,
+      "listItems": 26,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 20,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 26,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 26,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

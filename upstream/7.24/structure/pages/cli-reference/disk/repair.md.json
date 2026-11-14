@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/disk/repair.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/disk/repair.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/disk/repair",
+  "md_sha256": "426c4679abf39d3c123f5c1b596f0676ae78c8aa29eedcede20831636389911d",
+  "html_sha256": "5ebf59cdf1ff7e46ad7303ebaab22a38e3078da26a092ed8fa454698667ee2b8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/snmp/community.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/snmp/community.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/snmp/community",
+  "md_sha256": "02d571ef78b5fe3139a73310f6b213abc8c46c872475a72ca4d900f2e9b151b6",
+  "html_sha256": "5a6f40275f521cacc7bf6c37ed68504e3b8b63031b9202ee3671962c67fbad2f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

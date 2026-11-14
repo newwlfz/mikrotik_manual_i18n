@@ -1,0 +1,291 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "authentication-authorization-accounting/radius.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting/radius.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting/radius",
+  "md_sha256": "878d9f7f582e1a5aeeebdd6b9f14a8afedfab3677921b48da8936af3aab442ab",
+  "html_sha256": "614a11a9ccac189b34515c4fc762c641bb4113c019efcfd926ac1dcbcec4360d",
+  "body": {
+    "html": {
+      "lists": 10,
+      "listItems": 96,
+      "br": 3,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 7,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 96,
+      "listItems": 96,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 96,
+      "listItems": 96,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        3,
+        1
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 18,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "IPv4 or IPv6 address of RADIUS server. <br/> The following formats are accepted: <br/> - <em>ipv4</em> - <em>ipv4</em><code>@</code><em>vrf</em> - <em>ipv6</em> - <em>ipv6</em><code>@</code><em>vrf</em>"
+        },
+        {
+          "row": 15,
+          "col": 1,
+          "html": "Router services that will use this RADIUS server:<ul><li>hotspot - HotSpot authentication service</li><li>login - router's local user authentication</li><li>ppp - Point-to-Point clients authentication</li><li>wireless - wireless client authentication</li><li>dhcp - DHCP protocol client authentication (client's MAC address is sent as User-Name)</li><li>ipsec - ipsec client authentication</li><li>dot1x - dot1x authentication</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 31,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [],
+      "unaligned": {
+        "reason": "cell-count",
+        "row": 30,
+        "markdown": 3,
+        "html": 4
+      },
+      "rebuild": true,
+      "rebuild_rows": [
+        [
+          "<strong>MIKROTIK_RECV_LIMIT</strong>",
+          "14988",
+          "1",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_XMIT_LIMIT</strong>",
+          "14988",
+          "2",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_GROUP</strong>",
+          "14988",
+          "3",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_WIRELESS_FORWARD</strong>",
+          "14988",
+          "4",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_WIRELESS_SKIPDOT1X</strong>",
+          "14988",
+          "5",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_WIRELESS_ENCALGO</strong>",
+          "14988",
+          "6",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_WIRELESS_ENCKEY</strong>",
+          "14988",
+          "7",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_RATE_LIMIT</strong>",
+          "14988",
+          "8",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_REALM</strong>",
+          "14988",
+          "9",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_HOST_IP</strong>",
+          "14988",
+          "10",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_MARK_ID</strong>",
+          "14988",
+          "11",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_ADVERTISE_URL</strong>",
+          "14988",
+          "12",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_ADVERTISE_INTERVAL</strong>",
+          "14988",
+          "13",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_RECV_LIMIT_GIGAWORDS</strong>",
+          "14988",
+          "14",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_XMIT_LIMIT_GIGAWORDS</strong>",
+          "14988",
+          "15",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_WIRELESS_PSK</strong>",
+          "14988",
+          "16",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_TOTAL_LIMIT</strong>",
+          "14988",
+          "17",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_TOTAL_LIMIT_GIGAWORDS</strong>",
+          "14988",
+          "18",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_ADDRESS_LIST</strong>",
+          "14988",
+          "19",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_WIRELESS_MPKEY</strong>",
+          "14988",
+          "20",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_WIRELESS_COMMENT</strong>",
+          "14988",
+          "21",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_DELEGATED_IPV6_POOL</strong>",
+          "14988",
+          "22",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_DHCP_OPTION_SET</strong>",
+          "14988",
+          "23",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_DHCP_OPTION_PARAM_STR1</strong>",
+          "14988",
+          "24",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_DHCP_OPTION_PARAM_STR2</strong>",
+          "14988",
+          "25",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_WIRELESS_VLANID</strong>",
+          "14988",
+          "26",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_WIRELESS_VLANIDTYPE</strong>",
+          "14988",
+          "27",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_WIRELESS_MINSIGNAL</strong>",
+          "14988",
+          "28",
+          ""
+        ],
+        [
+          "<strong>MIKROTIK_WIRELESS_MAXSIGNAL</strong>",
+          "14988",
+          "29",
+          ""
+        ],
+        [
+          "<strong>Mikrotik-Switching-Filter</strong>",
+          "14988",
+          "30",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 66,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": [
+    {
+      "table": 2,
+      "reason": "cell-count",
+      "row": 30,
+      "markdown": 3,
+      "html": 4
+    }
+  ]
+}

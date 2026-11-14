@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/certificate/card-reinstall.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/card-reinstall.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/card-reinstall",
+  "md_sha256": "ab69cda69dc5e798d1ac8d4f9259c7f721b198133e9d86849044cfffb7ad9d80",
+  "html_sha256": "73d24dcea1d710437f223cb644857aaf7f8787c5a84c6093b23e07a295014c55",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

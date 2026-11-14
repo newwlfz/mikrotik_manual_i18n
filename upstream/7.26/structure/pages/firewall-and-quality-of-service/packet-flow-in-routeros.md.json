@@ -1,0 +1,63 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "firewall-and-quality-of-service/packet-flow-in-routeros.md",
+  "source_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/packet-flow-in-routeros.md",
+  "html_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/packet-flow-in-routeros",
+  "md_sha256": "401967d54ac4eae13551d436904a6970f60373aed92fb1526dcaf38fed23114a",
+  "html_sha256": "0537e4814927d7e53d05a4e097a8f4a72737860267e683ea178a1412794e29ee",
+  "body": {
+    "html": {
+      "lists": 45,
+      "listItems": 172,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 31,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 158,
+      "listItems": 158,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 158,
+      "listItems": 158,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "listItems": [
+        172,
+        158
+      ],
+      "br": [
+        1,
+        3
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

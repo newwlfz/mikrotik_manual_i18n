@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/disk/btrfs/filesystem/replace-cancel.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/disk/btrfs/filesystem/replace-cancel.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/disk/btrfs/filesystem/replace-cancel",
+  "md_sha256": "c2219b71c57633a2d5f69f542061861b0dae37a5ad616c71af22f4a90979efd0",
+  "html_sha256": "198be824ddd855da7dbde7d3fd88fc8a532f6d0849feba68544f5cabb55fc2f0",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

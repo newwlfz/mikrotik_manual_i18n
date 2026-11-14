@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/dude/ros/address.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/dude/ros/address.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/dude/ros/address",
+  "md_sha256": "d27bf7e385da080dced9ffcbafa6af509ec31ca22f33d58dbdf4d47493df7f03",
+  "html_sha256": "dbb8da94380863c57a28623c5a03bac992a8ac5887170a28e881f5625c17370a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

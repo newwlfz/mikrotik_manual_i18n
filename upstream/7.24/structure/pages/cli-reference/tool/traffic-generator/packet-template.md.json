@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/tool/traffic-generator/packet-template.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/traffic-generator/packet-template.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/traffic-generator/packet-template",
+  "md_sha256": "d14f74a17e3c03d76d7018d50482463517d7221290ef5df6050297f25471ca09",
+  "html_sha256": "8d5e07c97c8308a52bad59c32301ce64921c35828e7747e7f28e2fc747b1e628",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

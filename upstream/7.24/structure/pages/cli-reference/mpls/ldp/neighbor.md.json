@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/mpls/ldp/neighbor.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/mpls/ldp/neighbor.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/mpls/ldp/neighbor",
+  "md_sha256": "d0e26212f6caa5478c5d638bb0cbfc4ad64b4720e4d18c72dbca5d9eb85736fc",
+  "html_sha256": "784c2eef2ec8bf2c05b0ffc2fd00c1cb2b3a14585d31a29c82b43440d625f447",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

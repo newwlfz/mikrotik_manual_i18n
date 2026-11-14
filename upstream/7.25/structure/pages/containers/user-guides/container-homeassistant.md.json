@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "containers/user-guides/container-homeassistant.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/containers/user-guides/container-homeassistant.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/containers/user-guides/container-homeassistant",
+  "md_sha256": "b076c600bfd57fbc9c5bdb43da45c430039998dc4434f8b551f88fbc54c653a3",
+  "html_sha256": "419e7b217271a4b20855740ca0a23f634e132b5e6ad70a77201f10cc11331e66",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 8,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

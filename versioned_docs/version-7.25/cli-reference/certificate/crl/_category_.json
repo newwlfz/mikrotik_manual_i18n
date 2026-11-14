@@ -1,0 +1,11 @@
+{
+  "position": 8,
+  "label": "Crl",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/certificate/crl/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/certificate/crl"
+}

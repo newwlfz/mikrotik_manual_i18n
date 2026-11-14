@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/cmr/device/run-script.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/device/run-script.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/device/run-script",
+  "md_sha256": "a977ae8818b41f8e0eba4209bafe246ca2d563acec48a9f59139cf78daff5ef6",
+  "html_sha256": "3f8688d0df65aac2d23481fc6c18203925492043a5246f1550484cf2e08dccb7",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

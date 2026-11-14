@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wifi/easymesh.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/easymesh.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/easymesh",
+  "md_sha256": "8391914194be877228ad159a7254aee30de32ac8ed0879dae4d760430b9a7ecc",
+  "html_sha256": "33321906bb8fb45c794dfb5c2c9238007842f02ba6ae07b36feca672acfcc41d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

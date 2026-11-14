@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/vrrp.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/vrrp.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/vrrp",
+  "md_sha256": "facf63c8243b525f98e96e57046e31a797ee03042b6792203ff2bf04f4b7411a",
+  "html_sha256": "cfd45370e018600676f8bdcb083ae88dd5e782ec94253c4aec4080b98a07e5de",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 13,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 13,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

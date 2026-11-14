@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "system-information-and-utilities/scheduler.md",
+  "source_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/scheduler.md",
+  "html_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/scheduler",
+  "md_sha256": "8df3b60126323da02d705e425c428ef2d3644bacd451a830725ae8fed37224cf",
+  "html_sha256": "8503552b04efac24b2df9dfaf61bbc6677dce100b137c0a068304804391d5b8f",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 68,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

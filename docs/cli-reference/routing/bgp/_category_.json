@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "Bgp",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/routing/bgp/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/routing/bgp"
+}

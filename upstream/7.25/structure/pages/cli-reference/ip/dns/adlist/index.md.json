@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/dns/adlist/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/dns/adlist.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/dns/adlist/",
+  "md_sha256": "203e64f73743f34210b7720f76d84f4786b1ac9fca06988290425c807795fef8",
+  "html_sha256": "ccf20d09c99ff9a70b2eb7476d2744e0c820fde4141cd30df96cf4c2038b41a7",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 9,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

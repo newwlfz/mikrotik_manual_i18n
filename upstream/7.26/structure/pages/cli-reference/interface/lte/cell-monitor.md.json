@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/lte/cell-monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/lte/cell-monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/lte/cell-monitor",
+  "md_sha256": "06e7459d0c79a6adae9f51bbd5c780436f222dc331979cdd37e56fe2d726790e",
+  "html_sha256": "3284757a03bd6ede2ff95f9b3a6b2d45d45e9dc4a625b16e3d523c27d926cd06",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

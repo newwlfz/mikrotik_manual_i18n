@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/identity.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/identity.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/identity",
+  "md_sha256": "e3451968a8132750ab7fd9a4204f7e21390a9d319eb78392cefc81bcec1a6017",
+  "html_sha256": "64055d3bb0be151c99bce1045110e8101697652f79e7ff5f157716ef4a2c1279",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

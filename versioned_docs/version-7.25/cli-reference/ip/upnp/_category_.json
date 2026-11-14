@@ -1,0 +1,11 @@
+{
+  "position": 28,
+  "label": "Upnp",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/upnp/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/upnp"
+}

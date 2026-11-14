@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/mpls/traffic-eng/flow.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/traffic-eng/flow.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/traffic-eng/flow",
+  "md_sha256": "05c5444bf4650d64e145776e3b3c5a915f66e6b4badcff64b085b1cf63a378df",
+  "html_sha256": "48a7cbdd1937bcf674c9967b41b857b5ca34410f1e925b8e861bb44bf89eab9b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

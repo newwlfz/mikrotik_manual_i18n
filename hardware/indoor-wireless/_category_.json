@@ -1,0 +1,9 @@
+{
+  "key": "indoor-wireless",
+  "label": "Indoor wireless",
+  "position": 7,
+  "link": {
+    "type": "doc",
+    "id": "indoor-wireless/audience"
+  }
+}

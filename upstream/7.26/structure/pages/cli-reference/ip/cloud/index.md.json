@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/cloud/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/cloud.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/cloud/",
+  "md_sha256": "69c24ad4e8ead29fdbfda46b6a75eac0d23eadabb8c3e67b9bdde1770b52ba4f",
+  "html_sha256": "09b7dc2b4e25346e60c66197557f44ce24aa43c43e86db409d7d2aef582d03dd",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

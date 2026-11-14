@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Psk",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/ipsec/key/psk/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/ipsec/key/psk"
+}

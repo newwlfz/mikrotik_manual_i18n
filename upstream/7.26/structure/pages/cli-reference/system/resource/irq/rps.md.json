@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/resource/irq/rps.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/resource/irq/rps.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/resource/irq/rps",
+  "md_sha256": "2a69dce77153d1f3590ebab1dd0bd7169d90705e59d0b002fcc5f716532a1f2d",
+  "html_sha256": "4bb03218844c42b625f9aa525cf13aa5dd8c2596636e8b13c04db956edca56fe",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

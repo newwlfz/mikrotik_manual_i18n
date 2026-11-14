@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "Station",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/w60g/station/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/w60g/station"
+}

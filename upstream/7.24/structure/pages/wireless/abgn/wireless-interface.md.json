@@ -1,0 +1,431 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "wireless/abgn/wireless-interface.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/wireless/abgn/wireless-interface.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/wireless/abgn/wireless-interface",
+  "md_sha256": "63be6398f89a925b519d8d871d060d3be1a5120e74be15bc8ee5b7aae4d992da",
+  "html_sha256": "cf70839f2b2d8e483b8c2d92a63ee249cd7b6727d3fea3e3cd6695bd025f31f8",
+  "body": {
+    "html": {
+      "lists": 36,
+      "listItems": 128,
+      "br": 2,
+      "details": 0,
+      "tables": 23,
+      "sup": 0,
+      "code": 61,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 128,
+      "listItems": 128,
+      "br": 0,
+      "details": 0,
+      "tables": 23,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 128,
+      "listItems": 128,
+      "br": 0,
+      "details": 0,
+      "tables": 23,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 93,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Select antenna to use for transmitting and for receiving<ul><li><em>ant-a</em> - use only 'a' antenna</li><li><em>ant-b</em> - use only 'b' antenna</li><li><em>txa-rxb</em> - use antenna 'a' for transmitting, antenna 'b' for receiving</li><li><em>rxa-txb</em> - use antenna 'b' for transmitting, antenna 'a' for receiving</li></ul>"
+        },
+        {
+          "row": 13,
+          "col": 1,
+          "html": "List of basic rates, used for 2.4ghz-b, 2.4ghz-b/g and 2.4ghz-onlyg bands. Client will connect to AP only if it supports all basic rates announced by the AP. AP will establish WDS link only if it supports all basic rates of the other AP. <br/>This property has effect only in AP modes, and when value of <strong>rate-set</strong> is configured."
+        },
+        {
+          "row": 27,
+          "col": 1,
+          "html": "How long to wait for confirmation of unicast frames (<strong>ACKs</strong>) before considering transmission unsuccessful, or in short <strong>ACK-Timeout</strong>. Distance value has these behaviors:<ul><li><em>Dynamic</em> - causes AP to detect and use the smallest timeout that works with all connected clients.</li><li><em>Indoor</em> - uses the default ACK timeout value that the hardware chip manufacturer has set.</li><li><em>Number</em> - uses the input value in formula: ACK-timeout = ((<strong>distance</strong> * 1000) + 299) / 300 us;</li></ul>Acknowledgments are not used in Nstreme/Nv2 protocols."
+        },
+        {
+          "row": 29,
+          "col": 1,
+          "html": "Channel frequency value in MHz on which AP will operate. Allowed values depend on the selected band, and are restricted by <strong>country</strong> setting and wireless card capabilities. This setting has <strong>no effect</strong> if interface is in any of <strong>station</strong> modes, or in <em>wds-slave</em> mode, or if DFS is active. <br/><em>Note</em>: If using mode \"superchannel\", any frequency supported by the card will be accepted, but on the RouterOS client, any non-standard frequency must be configured in the <a href=\"/docs/7.24/wireless/abgn/wireless-interface#scan-list\">scan-list</a>, otherwise it will not be scanning in non-standard range. In WinBox, scanlist frequencies are in <em>bold</em>, any other frequency means the clients will need scan-list configured."
+        },
+        {
+          "row": 30,
+          "col": 1,
+          "html": "Three frequency modes are available:<ul><li><em>regulatory-domain</em> - Limit available channels and maximum transmit power for each channel according to the value of <strong>country</strong></li><li><em>manual-txpower</em> - Same as above, but do not limit maximum transmit power.</li><li><em>superchannel</em> - Conformance Testing Mode. Allow all channels supported by the card.</li></ul>List of available channels for each band can be seen in <strong>/interface/wireless/info/allowed-channels</strong>. This mode allows you to test wireless channels outside the default scan-list and/or regulatory domain. This mode should only be used in controlled environments, or if you have special permission to use it in your region."
+        },
+        {
+          "row": 33,
+          "col": 1,
+          "html": "<ul><li><em>yes</em> - AP does not include SSID in the beacon frames, and does not reply to probe requests that have broadcast SSID.</li><li><em>no</em> - AP includes SSID in the beacon frames, and replies to probe requests that have broadcast SSID.</li></ul>This property has an effect only in AP mode. Setting it to <em>yes</em> can remove this network from the list of wireless networks that are shown by some client software. Changing this setting does not improve the security of the wireless network, because SSID is included in other frames sent by the AP."
+        },
+        {
+          "row": 47,
+          "col": 1,
+          "html": "Selection between different station and access point (AP) modes. <a href=\"/docs/7.24/wireless/user-guides/wireless-station-modes\">Station modes</a>: <br/><ul><li><em>station</em> - Basic station mode. Find and connect to acceptable AP.</li><li><em>station-wds</em> - Same as <em>station</em>, but create WDS link with AP, using proprietary extension. AP configuration has to allow WDS links with this device. Note that this mode does not use entries in wds.</li><li><em>station-pseudobridge</em> - Same as <em>station</em>, but additionally perform MAC address translation of all traffic. Allows interface to be bridged.</li><li><em>station-pseudobridge-clone</em> - Same as <em>station-pseudobridge</em>, but use <strong>station-bridge-clone-mac</strong> address to connect to AP.</li><li>station-bridge - Provides support for transparent protocol-independent L2 bridging on the station device. RouterOS AP accepts clients in station-bridge mode when enabled using bridge-mode parameter. In this mode, the AP maintains a forwarding table with information on which MAC addresses are reachable over which station device. Only works with RouterOS APs. With station-bridge mode, it is not possible to connect to CAPsMAN controlled CAP.</li></ul><br/>🛈 <strong>Important:</strong> The <code>wireless</code> station-bridge mode is incompatible with APs running the newer <code>wifi</code> package and vice versa. <br/><br/> AP modes: <br/><ul><li><em>ap-bridge</em> - Basic access point mode.</li><li><em>bridge</em> - Same as <em>ap-bridge</em>, but limited to one associated client.</li><li><em>wds-slave</em> - Same as <em>ap-bridge</em>, but scan for AP with the same <strong>ssid</strong> and establishes WDS link. If this link is lost or cannot be established, then continue scanning. If <strong>dfs-mode</strong> is <em>radar-detect</em>, then APs with enabled <strong>hide-ssid</strong> will not be found during scanning.</li></ul> Special modes: <br/><ul><li><em>alignment-only</em> - Put the interface in a continuous transmit mode that is used for aiming the remote antenna.</li><li><em>nstreme-dual-slave</em> - allow this interface to be used in nstreme-dual setup.</li></ul> MAC address translation in pseudobridge modes works by inspecting packets and building a table of corresponding IP and MAC addresses. All packets are sent to AP with the MAC address used by pseudobridge, and MAC addresses of received packets are restored from the address translation table. There is a single entry in the address translation table for all non-IP packets, hence more than one host in the bridged network cannot reliably use non-IP protocols. <strong>Note:</strong> IPv6 does not work over pseudobridge <br/>"
+        },
+        {
+          "row": 50,
+          "col": 1,
+          "html": "When set to <strong>full</strong>, multicast packets will be sent with a unicast destination MAC address, resolving multicast problems on the wireless link. This option should be enabled only on the access point, clients should be configured in <strong>station-bridge</strong> mode.<ul><li>disabled - disables the helper and sends multicast packets with multicast destination MAC addresses</li><li>dhcp - dhcp packet mac addresses are changed to unicast mac addresses prior to sending them out</li><li>full - all multicast packet mac address are changed to unicast mac addresses prior to sending them out</li><li>default - default choice that currently is set to <em>dhcp</em>. Value can be changed in future releases.</li></ul>"
+        },
+        {
+          "row": 53,
+          "col": 1,
+          "html": "Setting affects the size of contention time slot that AP allocates for clients to initiate connection and also size of time slots used for estimating distance to client. When setting is too small, clients that are farther away may have trouble connecting and/or disconnect with \"ranging timeout\" error. Although during normal operation the effect of this setting should be negligible, in order to maintain maximum performance, it is advised to not increase this setting if not necessary, so AP is not reserving time that is actually never used, but instead allocates it for actual data transfer.<ul><li>on AP: distance to farthest client in km</li><li>on station: no effect</li></ul>"
+        },
+        {
+          "row": 56,
+          "col": 1,
+          "html": "Sets the packet priority mechanism, firstly data from high priority queue is sent, then lower queue priority data until 0 queue priority is reached. When link is full with high priority queue data, lower priority data is not sent. Use it very carefully, setting works on AP<ul><li><strong>frame-priority</strong> - manual setting that can be tuned with Mangle rules.</li><li><strong>default</strong> - default setting where small packets receive priority for best latency</li></ul>"
+        },
+        {
+          "row": 62,
+          "col": 1,
+          "html": "Short preamble mode is an option of 802.11b standard that reduces per-frame overhead.<ul><li>On AP:<ul><li><em>long</em> - Do not use short preamble.</li><li><em>short</em> - Announce short preamble capability. Do not accept connections from clients that do not have this capability.</li><li><em>both</em> - Announce short preamble capability.</li></ul></li><li>On station:<ul><li><em>long</em> - do not use short preamble.</li><li><em>short</em> - do not connect to AP if it does not support short preamble.</li><li><em>both</em> - Use short preamble if AP supports it.</li></ul></li></ul>"
+        },
+        {
+          "row": 64,
+          "col": 1,
+          "html": "RouterOS includes proprietary information in an information element of management frames. This parameter controls how this information is included.<ul><li><em>pre-2.9.25</em> - This is older method. It can interoperate with newer versions of RouterOS. This method is incompatible with some clients, for example, Centrino based ones.</li><li><em>post-2.9.25</em> - This uses standardized way of including vendor specific information, that is compatible with newer wireless clients.</li></ul>"
+        },
+        {
+          "row": 67,
+          "col": 1,
+          "html": "Two options are available:<ul><li><em>default</em> - default basic and supported rate sets are used. Values from <strong>basic-rates</strong> and <strong>supported-rates</strong> parameters have no effect.</li><li><em>configured</em> - use values from <strong>basic-rates</strong>, <strong>supported-rates</strong>, <strong>basic-mcs</strong>, <strong>mcs</strong>. <a href=\"/docs/7.24/wireless/abgn/wireless-interface#basic-and-mcs-rate-table\">Basic and MCS rate table</a>.</li></ul>"
+        },
+        {
+          "row": 69,
+          "col": 0,
+          "html": "scan-list <br/>(<em>Comma separated list of frequencies and frequency ranges &#124; default. The type also supports the range:step option</em>; Default: <strong>default</strong>)"
+        },
+        {
+          "row": 69,
+          "col": 1,
+          "html": "The <em>default</em> value is all channels from selected band that are supported by card and allowed by the <strong>country</strong> and <strong>frequency-mode</strong> settings (this list can be seen in <a href=\"/docs/7.24/wireless/abgn/wireless-interface#info\">info</a>. For default scan list in <em>5ghz</em> band channels are taken with 20MHz step, in <em>5ghz-turbo</em> band - with 40MHz step, for all other bands - with 5MHz step. If <strong>scan-list</strong> is specified manually, then all matching channels are taken. (Example: <strong>scan-list</strong>=<em>default,5200-5245,2412-2427</em> - This will use the default value of scan list for current band, and add to it supported frequencies from 5200-5245 or 2412-2427 range.) In WinBox or Webfig, enter each frequency or range of frequencies as a separate scan-list entry; a comma-separated list is not supported there. <br/>The scan-list also supports a step, where you can manually specify the scan step. Example: <strong>scan-list</strong>=<em>5500-5600:20</em> will generate such scan-list values <em>5500,5520,5540,5560,5580,5600</em>"
+        },
+        {
+          "row": 74,
+          "col": 1,
+          "html": "This property has effect only in the <em>station-pseudobridge-clone</em> mode. Use this MAC address when connection to AP. If this value is <em>00:00:00:00:00:00</em>, station will initially use MAC address of the wireless interface. <br/>As soon as packet with MAC address of another device needs to be transmitted, station will reconnect to AP using that address."
+        },
+        {
+          "row": 81,
+          "col": 1,
+          "html": "sets up tx-power mode for wireless card<ul><li>default - use values stored in the card</li><li>all-rates-fixed - use same transmit power for all data rates. Can damage the card if transmit power is set above rated value of the card for used rate.</li><li>manual-table - define transmit power for each rate separately. Can damage the card if transmit power is set above rated value of the card for used rate.</li><li>card-rates - use transmit power calculated for each rate based on value of <strong>tx-power</strong> parameter. Legacy mode only compatible with currently discontinued products.</li></ul>"
+        },
+        {
+          "row": 82,
+          "col": 1,
+          "html": "How often to request update of signals strength and ccq values from clients. Access to <a href=\"/docs/7.24/wireless/abgn/wireless-interface#registration-table\">registration-table</a> also triggers update of these values. <br/>This is proprietary extension."
+        },
+        {
+          "row": 83,
+          "col": 1,
+          "html": "<a href=\"https://en.wikipedia.org/wiki/IEEE_802.11ac#Data_rates_and_speed\" target=\"_blank\" rel=\"noopener noreferrer\">Modulation and Coding Schemes</a> that every connecting client must support. Refer to 802.11ac for MCS specification. You can set MCS interval for each of Spatial Stream <br/><ul><li><em>none</em> - will not use selected Spatial Stream</li><li><em>MCS 0-7</em> - client must support MCS-0 to MCS-7</li><li><em>MCS 0-8</em> - client must support MCS-0 to MCS-8</li><li><em>MCS 0-9</em> - client must support MCS-0 to MCS-9</li></ul>"
+        },
+        {
+          "row": 84,
+          "col": 1,
+          "html": "<a href=\"https://en.wikipedia.org/wiki/IEEE_802.11ac#Data_rates_and_speed\" target=\"_blank\" rel=\"noopener noreferrer\">Modulation and Coding Schemes</a> that this device advertises as supported. Refer to 802.11ac for MCS specification. You can set MCS interval for each of Spatial Stream <br/><ul><li><em>none</em> - will not use selected Spatial Stream</li><li><em>MCS 0-7</em> - devices will advertise as supported MCS-0 to MCS-7</li><li><em>MCS 0-8</em> - devices will advertise as supported MCS-0 to MCS-8</li><li><em>MCS 0-9</em> - devices will advertise as supported MCS-0 to MCS-9</li></ul>"
+        },
+        {
+          "row": 85,
+          "col": 1,
+          "html": "Bridge port cost of WDS links are automatically adjusted, depending on measured link throughput. Port cost is recalculated and adjusted every 5 seconds if it has changed by more than 10%, or if more than 20 seconds have passed since the last adjustment. Setting this property to <em>0</em> disables automatic cost adjustment. <br/>Automatic adjustment does not work for WDS links that are manually configured as a bridge port."
+        },
+        {
+          "row": 89,
+          "col": 1,
+          "html": "Controls how WDS links with other devices (APs and clients in <em>station-wds</em> mode) are established.<ul><li><em>disabled</em> does not allow WDS links.</li><li><em>static</em> only allows WDS links that are manually configured in WDS</li><li><em>dynamic</em> also allows WDS links with devices that are not configured in WDS, by creating required entries dynamically. Such dynamic WDS entries are removed automatically after the connection with the other AP is lost.</li></ul> -mesh modes use different (better) method for establishing link between AP, that is not compatible with APs in non-mesh mode. This method avoids one-sided WDS links that are created only by one of the two APs. Such links cannot pass any data.When AP or station is establishing WDS connection with another AP, it uses connect-list to check whether this connection is allowed. If station in station-wds mode is establishing connection with AP, AP uses access-list to check whether this connection is allowed.If mode is station-wds, then this property has no effect."
+        },
+        {
+          "row": 90,
+          "col": 1,
+          "html": "Specifies protocol used on wireless interface;<ul><li><em>unspecified</em> - protocol mode used on previous RouterOS versions (v3.x, v4.x). Nstreme is enabled by old enable-nstreme setting, Nv2 configuration is not possible.</li><li><em>any</em> : on AP - regular 802.11 Access Point or Nstreme Access Point; on station - selects Access Point without specific sequence, it could be changed by connect-list rules.</li><li><em>nstreme</em> - enables Nstreme protocol (the same as old enable-nstreme setting).</li><li><em>nv2</em> - enables Nv2 protocol.</li><li><em>nv2 nstreme</em> : on AP - uses first wireless-protocol setting, always Nv2; on station - searches for Nv2 Access Point, then for Nstreme Access Point.</li><li><em>nv2 nstreme 802.11</em> - on AP - uses first wireless-protocol setting, always Nv2; on station - searches for Nv2 Access Point, then for Nstreme Access Point, then for regular 802.11 Access Point.</li></ul>⚠️ <strong>Warning:</strong> Nv2 doesn't have support for Virtual AP"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 8,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 13,
+      "cols": 7,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 15,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "<ul><li><em>no</em> - Client association will always fail.</li><li><em>yes</em> - Use authentication procedure that is specified in the <a href=\"/docs/7.24/wireless/abgn/wireless-interface#security-profiles\"><strong>security-profile</strong></a> of the interface.</li></ul>"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Ask client to limit rate of data transmission. Value <em>0</em> means no limit. This is a proprietary extension that is supported by RouterOS clients. <br/>Value is in bits per second."
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "<ul><li><em>no</em> - Client cannot send frames to other stations that are connected to the same access point.</li><li><em>yes</em> - Client can send frames to other stations on the same access point.</li></ul>"
+        },
+        {
+          "row": 14,
+          "col": 1,
+          "html": "Rule will match only during the specified time. Station will be disconnected after the specified time ends. Both start and end time are expressed as time since midnight, 00:00. <br/>Rule will match only during the specified days of the week."
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 4,
+          "col": 1,
+          "html": "Available options:<ul><li><em>yes</em> - Connect to an access point that matches this rule.</li><li><em>no</em> - Do not connect to any access point that matches this rule.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "rows": 23,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 9,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 0,
+          "html": "<strong>manual-tx-powers</strong> (<em>list of [Rate:TxPower];</em> Rate ::= 11Mbps &#124; 12Mbps &#124; 18Mbps &#124; 1Mbps &#124; 24Mbps &#124; ... <br/><em>TxPower ::= integer [-30..30]</em>; Default: )"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "rows": 77,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 11,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 6,
+          "col": 1,
+          "html": "The method for combining frames. A number of frames may be combined into a bigger one to reduce the amount of protocol overhead (and thus increase speed). The card is not waiting for frames, but in case a number of packets are queued for transmitting, they can be combined. There are several methods of framing:<ul><li><strong>none</strong> - do nothing special, do not combine packets (framing is disabled)</li><li><strong>best-fit</strong> - put as many packets as possible in one frame, until the framer-limit limit is met, but do not fragment packets</li><li><strong>exact-size</strong> - put as many packets as possible in one frame, until the framer-limit limit is met, even if fragmentation will be needed (best performance)</li><li><strong>dynamic-size</strong> - choose the best frame size dynamically</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "rows": 26,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 7,
+          "col": 1,
+          "html": "The method of combining frames. A number of frames may be combined into one bigger one to reduce the amount of protocol overhead (and thus increase speed). The card is not waiting for frames, but in case a number of packets are queued for transmitting, they can be combined. There are several methods of framing:<ul><li><strong>none</strong> - do nothing special, do not combine packets</li><li><strong>best-fit</strong> - put as many packets as possible in one frame, until the framer-limit limit is met, but do not fragment packets</li><li><strong>exact-size</strong> - put as many packets as possible in one frame, until the framer-limit limit is met, even if fragmentation will be needed (best performance)</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "rows": 63,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 14,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Encryption mode for the security profile.<ul><li>none - Encryption is not used. Encrypted frames are not accepted.</li><li>static-keys-required - WEP mode. Does not accept and does not send unencrypted frames. The station in <em>static-keys-required</em> mode will not connect to an Access Point in <em>static-keys-optional</em> mode.</li><li>static-keys-optional - WEP mode. Supports encryption and decryption, but also allows to receive and send unencrypted frames. The device will send unencrypted frames if the encryption algorithm is specified as <em>none</em>. The station in <em>static-keys-optional</em> mode will not connect to an Access Point in <em>static-keys-required</em> mode. See also: <a href=\"/docs/7.24/wireless/abgn/wireless-interface#properties\">static-sta-private-algo</a>, <a href=\"/docs/7.24/wireless/abgn/wireless-interface#properties\">static-transmit-key</a>.</li><li>dynamic-keys - WPA mode.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Whether to include PMKID into the EAPOL frame sent out by the Access Point. Disabling PMKID can cause compatibility issues with devices that use the PMKID to connect to an Access Point.<ul><li>yes - removes PMKID from EAPOL frames (improves security, reduces compatibility).</li><li>no - includes PMKID into EAPOL frames (reduces security, improves compatibility).</li></ul>This property only has effect on Access Points."
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "Access Point advertises one of these ciphers, multiple values can be selected. Access Point uses it to encrypt all broadcast and multicast frames. Client attempts connection only to Access Points that use one of the specified group ciphers.<ul><li>tkip - Temporal Key Integrity Protocol - encryption protocol, compatible with legacy WEP equipment, but enhanced to correct some of the WEP flaws.</li><li>aes-ccm - more secure WPA encryption protocol, based on the reliable AES (Advanced Encryption Standard). Networks free of WEP legacy should use only this cipher.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Allowed types of authentication methods, multiple values can be selected. This property only has effect on Access Points.<ul><li>eap-tls - Use built-in EAP TLS authentication. Both client and server certificates are supported. See description of <strong>tls-mode</strong> and <strong>tls-certificate</strong> properties.</li><li>eap-ttls-mschapv2 - Use EAP-TTLS with MS-CHAPv2 authentication.</li><li>passthrough - Access Point will relay the authentication process to the RADIUS server.</li><li>peap - Use Protected EAP authentication.</li></ul>"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "This property has effect only when <strong>eap-methods</strong> contains <em>eap-tls</em>.<ul><li>verify-certificate - Require the remote device to have a valid certificate. Check that it is signed by a known certificate authority. No additional identity verification is done. The certificate may include information about the time period during which it is valid. If the router has incorrect time and date, it may reject a valid certificate because the router's clock is outside that period. See also the <a href=\"/docs/7.24/authentication-authorization-accounting/certificates\">Certificates</a> configuration.</li><li>dont-verify-certificate - Do not check the certificate of the remote device. Access Point will not require client to provide certificate.</li><li>no-certificates - Do not use certificates. TLS session is established using 2048 bit anonymous Diffie-Hellman key exchange.</li><li>verify-certificate-with-crl - Same as <em>verify-certificate</em> but also checks if the certificate is valid by checking the Certificate Revocation List.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "This property affects the way the Access Point processes clients that are not found in the <a href=\"/docs/7.24/wireless/abgn/wireless-interface#access-list\">Access List</a>.<ul><li>no - allow or reject client authentication based on the value of <a href=\"/docs/7.24/wireless/abgn/wireless-interface#general-interface-properties\">default-authentication</a> property of the Wireless interface.</li><li>yes - Query the RADIUS server using the MAC address of the client as user name. With this setting the value of <a href=\"/docs/7.24/wireless/abgn/wireless-interface#general-interface-properties\">default-authentication</a> has no effect.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 19,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 20,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 21,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 22,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Three VLAN modes are available:<ul><li><em>no-tag</em> - AP doesn't use VLAN tagging</li><li><em>use-service-tag</em> - VLAN ID uses 802.1ad tag type</li><li><em>use-tag</em> - VLAN ID uses 802.1q tag type</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

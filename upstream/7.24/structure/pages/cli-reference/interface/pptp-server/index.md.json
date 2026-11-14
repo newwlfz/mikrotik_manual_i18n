@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/interface/pptp-server/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/pptp-server.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/interface/pptp-server/",
+  "md_sha256": "1b2ffee176d79e5f66e5456053c9a19eb2776162680f434f28f4e30e4065b997",
+  "html_sha256": "d7ac9fe53f0b8f9ccb3def71b538f71058aeee30d042666715b9a1a83d08f4d7",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

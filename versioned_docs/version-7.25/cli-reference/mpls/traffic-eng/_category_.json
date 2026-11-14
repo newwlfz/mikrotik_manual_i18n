@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "Traffic Eng",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/mpls/traffic-eng/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/mpls/traffic-eng"
+}

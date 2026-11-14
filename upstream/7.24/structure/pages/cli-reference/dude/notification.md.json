@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/dude/notification.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/dude/notification.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/dude/notification",
+  "md_sha256": "00eb3aa0081f2e4e7dc4f36646b497f2943caeed2e71f6effd2be6a4c3e5e593",
+  "html_sha256": "ba38855a1a1eb19f0709772c02dd3b2cf064d6e6b7071b37bca12e1cd03a068c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

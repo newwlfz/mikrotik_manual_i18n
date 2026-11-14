@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/ntp/client/servers.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/ntp/client/servers.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/ntp/client/servers",
+  "md_sha256": "3dd323755a1b34f0a56a21871d2efc6621f7ee25425141e84efcb6b486b63c89",
+  "html_sha256": "798c6c13aa7628997ecda6db3a9ccd0e234a183104267515c636c445a2bcd7ff",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

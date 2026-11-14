@@ -1,0 +1,11 @@
+{
+  "position": 23,
+  "label": "Wds",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/wireless/wds/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/wireless/wds"
+}

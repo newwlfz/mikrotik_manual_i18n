@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "developer-guides/scripting/scripting-examples.md",
+  "source_url": "https://manual.mikrotik.com/docs/developer-guides/scripting/scripting-examples.md",
+  "html_url": "https://manual.mikrotik.com/docs/developer-guides/scripting/scripting-examples",
+  "md_sha256": "ce1a70fadf95f2ebfd1abc170a4866022c2d5a4055749103e9b38cdce1e5cdff",
+  "html_sha256": "f44fd9248cc8e493f80154fb013b5af438c963634e82fc3e107eff6f47eb69b8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 14,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

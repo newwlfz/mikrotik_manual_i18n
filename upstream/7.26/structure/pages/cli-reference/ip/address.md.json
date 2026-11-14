@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/address.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/address.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/address",
+  "md_sha256": "53bf6328387f3c9bd4fcaa3ce03a8eab3254652deda1ee8d1a4913e6e0f990ba",
+  "html_sha256": "ebff8065c3e2b2c648c696b470f883d92c236e64c907531afd26dc2252495c1f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

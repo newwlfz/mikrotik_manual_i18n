@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/user-manager/profile.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/profile.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/profile",
+  "md_sha256": "98807d4e89401ac50cf625e65a4d683bf09e2ce9a413e6af115bec69f150d5b4",
+  "html_sha256": "13c90802f9ffa3986fad000e2d4f116214edc9bc18a20a04075b3f09f9373af1",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

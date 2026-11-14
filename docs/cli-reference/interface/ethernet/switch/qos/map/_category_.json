@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "Map",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/ethernet/switch/qos/map/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/ethernet/switch/qos/map"
+}

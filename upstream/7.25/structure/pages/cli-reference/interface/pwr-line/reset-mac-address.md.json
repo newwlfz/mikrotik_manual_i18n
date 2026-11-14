@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/pwr-line/reset-mac-address.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/pwr-line/reset-mac-address.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/pwr-line/reset-mac-address",
+  "md_sha256": "418909bf92271e414b584ea0565514ddbedae9f97b99c7be7dda3f853f968bb6",
+  "html_sha256": "bd1f939359fcc68fd34c57d46321cfdab2b4f34630badd22061a2d76d5668d9d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

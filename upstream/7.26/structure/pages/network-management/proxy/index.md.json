@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "network-management/proxy/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/network-management/proxy.md",
+  "html_url": "https://manual.mikrotik.com/docs/network-management/proxy/",
+  "md_sha256": "dd9fcdafc4161f6b827b6a55d07decb65546270f81c3264544ddbd5e8b960aa3",
+  "html_sha256": "02347d9c70cf09da2639b7abdd18ff21f365186e8b75849d6ea7e1c52b3f1a73",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 3,
+      "cols": 5,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

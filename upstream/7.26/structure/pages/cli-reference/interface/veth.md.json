@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/veth.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/veth.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/veth",
+  "md_sha256": "49270f0818e01e891631561ace7a6fcbc7fe0e8d04f7f1ddbdb8cb372ca309a7",
+  "html_sha256": "c4718c4b2704439105c7dcbcfd873965999670c6e1699f697e73485067196d20",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

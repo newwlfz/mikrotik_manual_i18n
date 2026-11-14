@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "system-information-and-utilities/fetch.md",
+  "source_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/fetch.md",
+  "html_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/fetch",
+  "md_sha256": "a5aac6726db5906e98531e091545019ce8b0fd6edd7c1f3e6ba810672f39ebc5",
+  "html_sha256": "6131e7de972daa2ab298eb6e5bbe9909b17478e9d57bea31c4e49e9190626904",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 98,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

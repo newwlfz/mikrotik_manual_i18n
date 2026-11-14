@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ipv6/nd/proxy.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ipv6/nd/proxy.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ipv6/nd/proxy",
+  "md_sha256": "4b579dd1ef4eb857c16459042e70e1a0f11f35ec3fe11612fb470b0e53323d9c",
+  "html_sha256": "bdcb69723c65ace9c63f0b9ab87d4c514ccb8b9d2db15a7951f216bf52683fa5",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

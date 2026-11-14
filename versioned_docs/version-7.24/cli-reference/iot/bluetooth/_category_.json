@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "iot",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/iot/bluetooth/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/iot/bluetooth"
+}

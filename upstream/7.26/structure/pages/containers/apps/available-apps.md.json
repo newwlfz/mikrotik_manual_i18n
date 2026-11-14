@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "containers/apps/available-apps.md",
+  "source_url": "https://manual.mikrotik.com/docs/containers/apps/available-apps.md",
+  "html_url": "https://manual.mikrotik.com/docs/containers/apps/available-apps",
+  "md_sha256": "8fca5362aed7e98e16ad66da668d898b2d73ab1fdcd8186dcb2cfdbfa72c166f",
+  "html_sha256": "1f8f182094f7a09e99b485395bd0a3f0a213b13cf1df955b43d27bd82d173cd3",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 105,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

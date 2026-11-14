@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "wireless/abgn/wireless-troubleshooting.md",
+  "source_url": "https://manual.mikrotik.com/docs/wireless/abgn/wireless-troubleshooting.md",
+  "html_url": "https://manual.mikrotik.com/docs/wireless/abgn/wireless-troubleshooting",
+  "md_sha256": "ea2ad0931bbee7935a7138b122981e667cf856e6d54ddd77ef3c22ff132b7580",
+  "html_sha256": "317f4ab3243edc837a731c3ec9d08df13f28f19888af8d26d04d1440f87637fa",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

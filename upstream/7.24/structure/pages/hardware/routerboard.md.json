@@ -1,0 +1,115 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "hardware/routerboard.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/hardware/routerboard.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/hardware/routerboard",
+  "md_sha256": "431e57eede175836154422c384ffa948e5650e15d0ff07447374b7fabd5f2fbb",
+  "html_sha256": "a65359a5570dd12775936a17a1e124afa0f1ef5cc5a441e1830e6461e98fa35a",
+  "body": {
+    "html": {
+      "lists": 9,
+      "listItems": 52,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 21,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 52,
+      "listItems": 52,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 52,
+      "listItems": 52,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 23,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 4,
+          "col": 1,
+          "html": "Choose the way RouterBOOT loads the operating system:<br/><br/>- <strong>ethernet</strong> — boot the device in Etherboot mode;<br/>- <strong>flash-boot</strong> — Flashfig mode on startup is enabled. This setting will revert to NAND after a successful configuration change OR once any user logs into the board;<br/>- <strong>flash-boot-once-then-nand</strong> — Flashfig mode on startup is enabled for a single boot only, resets to nand-if-fail-then-ethernet after that;<br/>- <strong>nand-if-fail-then-ethernet</strong> — boot RouterOS from the NAND, if RouterOS is not booting - it goes to Etherboot automatically. This is the default mode for devices straight out of the box;<br/>- <strong>nand-only</strong> — boot RouterOS from the NAND;<br/>- <strong>try-ethernet-once-then-nand</strong> — boot device in Etherboot mode once and if no server is available - it will boot directly from the NAND or of the storage type the device is using.<br/><br/><strong>Important:</strong> Note<br/>Etherboot mode is a special state for a MikroTik device that allows you to reinstall your device using Netinstall.<br/>There are several ways to put your device into Etherboot mode depending on the device you are using:<br/>1. Press the Reset button and power on your device (wait until \"USR\" led is blinking then stable \"On\" and when the \"USR\" led is \"Off\" - release the Reset button) - the device is booting in bootp mode to reinstall RouterOS using Netinstall.<br/>2. Using the serial console, when the device is booting up, keep pressing CTRL+E on your keyboard until the device shows that it is trying bootp protocol.<br/>3. Using the serial console, press any key while the device is booting and choose \"o\" then \"1\" and \"x\"."
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Boot protocol to use:<br/><br/>- <strong>bootp</strong> — the default option for booting RouterOS;<br/>- <strong>dhcp</strong> — used for OpenWRT and possibly other OS."
+        },
+        {
+          "row": 11,
+          "col": 1,
+          "html": "If to use the backup RouterBOOT. This is only useful if the main loader has become corrupted somehow and cannot be fixed. So that you don't have to boot the device with a pushed reset button (which loads the backup loader), you can use this setting to load it every time:<br/><br/>- <strong>yes</strong> — backup loader will be used always;<br/>- <strong>no</strong> — main booter will be used."
+        },
+        {
+          "row": 15,
+          "col": 1,
+          "html": "Enables preboot etherboot, which runs before the regular boot device. It works the same as boot-device=etherboot, but has an additional timeout value. If an IP address is not received from the Netinstall server before the timeout expires, the regular booting process will start.<br/><br/><strong>Important:</strong> Note<br/>The preboot-etherboot configuration is stored in the BIOS, downgrading RouterOS to older versions will not disable it. This feature can be disabled from the RouterOS menu or by resetting the BIOS.<br/>Since etherboot accepts IP addresses from any BOOTP/DHCP server, use preboot-etherboot-server to start etherboot only when address is received from specified Netinstall server."
+        },
+        {
+          "row": 18,
+          "col": 1,
+          "html": "This option disables beeping sounds during booting:<br/><br/>- <strong>yes</strong> — no booting beeps (does not disable the RouterOS: beep command);<br/>- <strong>no</strong> — regular booting sound."
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Disables access to RouterBOOT configuration over serial console and prevents the reset button from changing boot mode (Netinstall is disabled). Access to RouterOS is only possible with a known RouterOS user account with administrative privileges. This setting can only be disabled from within RouterOS. If the RouterOS password is lost, recovery requires a full device reformat using the reset button timing procedure.<br/><br/>- <strong>enabled</strong> — Secure mode. RouterOS is accessible only with a valid admin-level user. Serial input is ignored. Etherboot is disabled, and RouterBOOT settings cannot be changed.<br/>- <strong>disabled</strong> — Normal operation. RouterBOOT settings are accessible via serial console, and the reset button can be used to enter Netinstall mode."
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Defines the minimum time the reset button must be held at power-on to trigger a full device reformat. The hold time must be longer than this value but shorter than <code>reformat-hold-button-max</code>. When triggered, the device performs a complete reset operation:<br/><br/>- RouterOS, all files, and configuration are permanently erased (NAND reformat).<br/>- All RouterBOOT settings are reset to defaults.<br/>- The device reboots.<br/>- Since NAND boot fails, the device enters Etherboot automatically.<br/>- Netinstall is required to reinstall RouterOS.<br/><br/>⚠️ <strong>Warning:</strong> This is an extremely dangerous operation and should only be used when all other access methods are unavailable. On some RouterBOARD devices, the reformat process may take more than 5 minutes. The device becomes ready for Netinstall after completion."
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

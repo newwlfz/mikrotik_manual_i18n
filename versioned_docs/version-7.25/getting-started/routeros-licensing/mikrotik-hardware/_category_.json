@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "Mikrotik Hardware",
+  "key": "getting-started/routeros-licensing/mikrotik-hardware",
+  "link": {
+    "type": "doc",
+    "id": "getting-started/routeros-licensing/mikrotik-hardware/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

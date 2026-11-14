@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "Hardware",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/system/resource/hardware/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/system/resource/hardware"
+}

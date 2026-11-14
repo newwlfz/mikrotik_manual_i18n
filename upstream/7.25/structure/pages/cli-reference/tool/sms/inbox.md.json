@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/tool/sms/inbox.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/sms/inbox.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/tool/sms/inbox",
+  "md_sha256": "f35718e51ca8d60dff903b262824dbe5d2e3caa269806847626cb88f0a3a2b0c",
+  "html_sha256": "3a0a1aa7e2f9179de47055f9cf0c5f8c76090c241fb61e571c8c484fccab81cc",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ipv6/nd/prefix/default.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ipv6/nd/prefix/default.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ipv6/nd/prefix/default",
+  "md_sha256": "fd9f81783cc2ec6355b81f255b8b0918b0b9865b5d6c6c65339036faae0e7008",
+  "html_sha256": "ca9b55b4e7cc11580cded5b0b5cbbb58bfcf1b762792e4ca59e5113bfbbdaf6b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

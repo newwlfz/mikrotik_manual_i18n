@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/dude/settings.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/dude/settings.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/dude/settings",
+  "md_sha256": "01e2ec0a24f58ba73f7b96c26cde45ac18fd780e0ce8b12c051b0f09de0187be",
+  "html_sha256": "8d946b2964876cc73bf21dba67e7bf3c706d338222d88e781f9f96e9c7ef4baa",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

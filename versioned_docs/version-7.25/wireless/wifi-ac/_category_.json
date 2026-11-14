@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "Wi-Fi 5 (802.11ac)",
+  "key": "wireless/wifi-ac",
+  "link": {
+    "type": "doc",
+    "id": "wireless/wifi-ac/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

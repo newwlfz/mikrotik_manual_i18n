@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/filter/sync.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/filter/sync.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/filter/sync",
+  "md_sha256": "1fad97db119c3f7fa1df89011831746bcd2232cc6f9aea57e577b7157473923f",
+  "html_sha256": "becdc4050d93d07082c9e8867c59b5247697b1ba454da1f3f8d7ddd9a3e6b1b2",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

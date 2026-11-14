@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ipv6/firewall/filter/reset-counters.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/firewall/filter/reset-counters.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/firewall/filter/reset-counters",
+  "md_sha256": "e31b8a95e6e561b7205e01d7f5b6b39a7d08cab650558bdecffd7a5341e12e1a",
+  "html_sha256": "861548ee64bcb1fe5f64dc2fa366ba11965f60d08c0539fd48d3fa45cd023704",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

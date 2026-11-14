@@ -1,0 +1,117 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "management-tools/winbox.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/management-tools/winbox.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/management-tools/winbox",
+  "md_sha256": "7ed867e54149530debf8494c2bf21ef88f71b46ce8f5c3085cbccf47dcf704cd",
+  "html_sha256": "ea9a046f54d170bab86ce389887fa196d29a2f0fd40e365a4339f26a52cdacea",
+  "body": {
+    "html": {
+      "lists": 14,
+      "listItems": 54,
+      "br": 0,
+      "details": 0,
+      "tables": 6,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 54,
+      "listItems": 54,
+      "br": 0,
+      "details": 0,
+      "tables": 6,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 54,
+      "listItems": 54,
+      "br": 0,
+      "details": 0,
+      "tables": 6,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 6,
+          "col": 1,
+          "html": "<strong>Connect</strong> - connect button cluster: <br/> - <strong>Connect</strong> - initiates connection to the router <br/> - <strong>Connect to RoMON</strong> - initiates connection to the RoMON \"proxy\". For more information see <a href=\"/docs/7.25/management-tools/romon\">RoMON documentation</a>. <br/> - <strong>Open in new</strong> - when enabled, opens the router's configuration interface in a new window. (works only with the <strong>Connect</strong> button, not with <strong>Connect to RoMON</strong> button)"
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "<strong>Save to list</strong> - Allows to save router credentials to the Saved list. Additional parameters: <br/> - <strong>Group</strong> - the group the entry will belong to, which allows for easier sorting of saved entries <br/> - <strong>Comment</strong> - allows to add device description or other useful information <br/> - <strong>with password</strong> - when enabled, the password is saved along with other credentials. If disabled, the password must be entered manually each time a saved entry is used."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "<strong>Settings/App information</strong> - Located on the top right. Opens dropdown menu with the following elements: <br/> - <strong>Settings</strong> - <a href=\"#gui-settings-menu\">GUI Settings menu</a><br/> - <strong>Shortcuts</strong> - information about available shortcut combinations (<a href=\"#keyboard-shortcuts\">see Keyboard Shortcuts</a>) <br/> - <strong>About</strong> - application information such as version, useful links, licenses information <br/> - <strong>Quit</strong> - close WinBox application"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 9,
+          "col": 1,
+          "html": "<strong>GUI font</strong> - allows to select which font will be used all across the WinBox application. Additional parameters: <br/> - <strong>Regular</strong> - value from 300 to 600, allows to change thickness of regular text all across the WinBox application <br/> - <strong>Bold</strong> - value from -100 to 300, allows to change thickness of bold text all across the WinBox application <br/> - <strong>Spacing</strong> - value from -1 to 1, allows to change spacing between characters."
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "rows": 31,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 32,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

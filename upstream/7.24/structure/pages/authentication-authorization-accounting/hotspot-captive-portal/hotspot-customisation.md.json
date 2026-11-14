@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "authentication-authorization-accounting/hotspot-captive-portal/hotspot-customisation.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting/hotspot-captive-portal/hotspot-customisation.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/authentication-authorization-accounting/hotspot-captive-portal/hotspot-customisation",
+  "md_sha256": "c674fe0b57c6b1b43a6fdd361be3a675cb3a63fe03ce05943d9e69d9e5d83027",
+  "html_sha256": "97de4d5b1e13c180e181d913ec1d15b56b4d844bd143a4ae660fb92eeaa15d62",
+  "body": {
+    "html": {
+      "lists": 34,
+      "listItems": 125,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 10,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 123,
+      "listItems": 123,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 123,
+      "listItems": 123,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "listItems": [
+        125,
+        123
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

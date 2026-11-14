@@ -1,0 +1,132 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "diagnostics-monitoring-and-troubleshooting/traffic-generator.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/traffic-generator.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/diagnostics-monitoring-and-troubleshooting/traffic-generator",
+  "md_sha256": "f0bab71295de7406249cce7e69fe27620ddf57b63c70d691adebe8d3fdc56064",
+  "html_sha256": "082b93921e6948fdcbe12a22130a2c6bbce0e6085f3b5ae86eb3d2e1c99f8a79",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 8,
+      "sup": 0,
+      "code": 16,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 8,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 8,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "This command allows you to quickly start the packet generator and print the stats output to the terminal. The command also accepts several parameters that override settings in packet template and stream settings. Accepted parameters are <strong>duration, entries-to-show, freeze-frame-interval, id, interface, mbps, measure-out-of-order, packet-count, packet-size, port, pps, stream, test-id, tx-template</strong><ul><li>tx-template - packet templates to generate traffic (max 16 templates)</li><li>duration - how long to run the test</li><li>entries-to-show - how many status lines to print to the terminal</li><li>freeze-frame-interval - how often to update the status to the terminal</li></ul> The rest of the parameters are not command-specific and are described elsewhere. <br/>Parameters specified when running the quick command override configured values. If a parameter is specified only for one header then the value is multiplied for all the other headers (if required)."
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Inject raw data directly from a PCAP or PCAPNG file. <br/><br/><strong>Important:</strong> Starting with RouterOS 7.20, the <a href=\"/docs/7.24/diagnostics-monitoring-and-troubleshooting/packet-sniffer\">sniffer tool</a> saves captured packets in PCAPNG format. <br/> The traffic-generator inject-pcap feature supports PCAPNG format starting from RouterOS 7.21. <br/>"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 26,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Specifies how the packet payload will be filled:<ul><li><strong>uninitialized</strong> - packet data (after the header) is uninitialized, but not zero. Fastest.</li><li><strong>specific-byte</strong> - works together with setting data-byte</li><li><strong>incrementing</strong> - packet data filled with \"00 01 02 03\" and so on</li><li><strong>random</strong> - packet data filled with random bytes. Slowest.</li></ul>"
+        },
+        {
+          "row": 25,
+          "col": 1,
+          "html": "A sequence of headers that a generated packet should have. Currently supports: <br/><ul><li><strong>mac</strong> - Ethernet header (14 bytes)</li><li><strong>vlan</strong> - Ethernet VLAN tag (4 bytes)</li><li><strong>ip</strong> - IPv4 header (20 bytes)</li><li><strong>udp</strong> - UDP header (8 bytes)</li><li><strong>raw</strong> - arbitrary bytes specified as a hex string</li></ul> Most header types can be present in the header multiple times. There can be only 2 IP headers and 1 UDP header per packet. Some limitations are imposed on possible sequences of headers based on our practical experience with network protocols (for example, a VLAN header can follow only a mac header or another VLAN header). <br/>The traffic generator suggests the first header for a packet template (in the port menu). But it is not enforced."
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 6,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 7,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

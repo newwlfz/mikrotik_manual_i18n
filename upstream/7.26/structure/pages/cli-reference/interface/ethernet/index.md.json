@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/ethernet/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/",
+  "md_sha256": "07e18fed42042e80a339dbfeb9c89bc2501be0a7ddc6fd1201d0fed19c7e9401",
+  "html_sha256": "a4db844d28dd661a2fe89a38c6efb2f802b7c7431e4da9375208712076b940f9",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

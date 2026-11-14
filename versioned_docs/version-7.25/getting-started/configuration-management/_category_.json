@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "Configuration Management",
+  "key": "getting-started/configuration-management",
+  "link": {
+    "type": "doc",
+    "id": "getting-started/configuration-management/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

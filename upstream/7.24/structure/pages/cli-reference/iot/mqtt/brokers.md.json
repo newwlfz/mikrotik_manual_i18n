@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/iot/mqtt/brokers.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/iot/mqtt/brokers.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/iot/mqtt/brokers",
+  "md_sha256": "b00a9199b832fb6d8f5f11cc0860c83c76c7510e2a296d1963556fde5733e0c9",
+  "html_sha256": "0ed593585fbd84820c808995c82097498d55cf656b349352bd838fa2919023c0",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

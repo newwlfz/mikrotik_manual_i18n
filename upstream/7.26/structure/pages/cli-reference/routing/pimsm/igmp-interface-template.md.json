@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/pimsm/igmp-interface-template.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/pimsm/igmp-interface-template.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/pimsm/igmp-interface-template",
+  "md_sha256": "83a70049ec2099cc87b60cd5437497b598779148ccc0179d950ba225a83cd2fa",
+  "html_sha256": "4a6f8342916ccb77ff29c81141ff87f5dd0694b5b0ca8a0d0b865110c8d2d6b2",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

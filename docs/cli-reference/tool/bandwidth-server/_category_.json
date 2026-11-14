@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Bandwidth Server",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/tool/bandwidth-server/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/tool/bandwidth-server"
+}

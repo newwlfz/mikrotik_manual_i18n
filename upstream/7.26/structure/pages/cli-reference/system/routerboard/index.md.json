@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/routerboard/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/routerboard.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/routerboard/",
+  "md_sha256": "ac13d98fe2f87ed3752b97bd7d97e96359013e1da128e85b8ec61d8527eaf746",
+  "html_sha256": "113eac28eba8fdec42fd5c1755eeff7c8b05ec419776d57998ca33ec44e767bd",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

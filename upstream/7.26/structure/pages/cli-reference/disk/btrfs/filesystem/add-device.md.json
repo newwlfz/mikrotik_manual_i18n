@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/disk/btrfs/filesystem/add-device.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/disk/btrfs/filesystem/add-device.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/disk/btrfs/filesystem/add-device",
+  "md_sha256": "074215bb6c47524b42ab6d233ec2312fc2f6068640dcdb29822042158e199762",
+  "html_sha256": "4f2272a30fea6c6f67c65d567e607d9aca7b7f000df04d0c7e38108a5da6e576",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

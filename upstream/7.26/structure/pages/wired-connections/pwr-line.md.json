@@ -1,0 +1,87 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "wired-connections/pwr-line.md",
+  "source_url": "https://manual.mikrotik.com/docs/wired-connections/pwr-line.md",
+  "html_url": "https://manual.mikrotik.com/docs/wired-connections/pwr-line",
+  "md_sha256": "5507089e66f6b005f2598bf2212c84622882d22281aa07603794e6fc38bfb9c1",
+  "html_sha256": "7ecdbd416001532a8875c96984015ca32c3516aa05f8c0a19b0f8b46e783d429",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Address Resolution Protocol mode:<ul><li>disabled - the interface will not use ARP</li><li>enabled - the interface will use ARP</li><li>proxy-arp - the interface will use the ARP proxy feature</li><li>reply-only - the interface will only reply to requests originating from matching IP address/MAC address combinations which are entered as static entries in the <code>/ip/arp</code> table. No dynamic entries will be automatically stored in the ARP table. Therefore, for communications to be successful, a valid static entry must already exist.</li></ul>"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Defines the behavior for accepting gratuitous ARP (GARP) frames received from devices that are not already present in the ARP table:<ul><li>no - new entries are not created in the ARP table</li><li>yes - new entries are created in the ARP table</li></ul> The setting is available since RouterOS version 7.25.1."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 2,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Sets the PWR-Line device mode:<ul><li>auto - PWR-Line will automatically decide what role to take depending on the situation upon joining a PWR-Line network.</li><li>always - PWR-Line will always be forced to act as a \"central-coordinator\" or master device.</li><li>never - PWR-Line will always be forced to act as a slave device.</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

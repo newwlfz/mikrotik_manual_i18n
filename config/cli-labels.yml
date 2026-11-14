@@ -1,0 +1,48 @@
+# CLI label tables.
+#
+# Every label here is structure, not prose: it is replaced deterministically and
+# never sent to the model. Attribute names and order are preserved by the
+# rewriter; only the values below change.
+#
+# `headers` is the header row of `<ArgTable c1="..." c2="..." c3="...">`.
+schema: 1
+
+headers:
+  'Argument': '参数'
+  'Type': '类型'
+  'Description': '描述'
+  'Flag': '标志'
+  'Name': '名称'
+  'Read-only Argument': '只读参数'
+  'Read-only Flag': '只读标志'
+
+# The `/cli-reference/compare-versions` page.
+#
+# Two consumers read this table:
+#
+#   - `normalize-cli-headers.mjs` rewrites the labels that appear in the page's
+#     own Markdown (the "How the comparison works" list names **Parameters**,
+#     **Flags**, *New commands* and *Removed commands*);
+#   - `src/components/CliCompare` renders the interactive widget whose field
+#     labels (`From`, `To`, `Filter`) and diff legend (`parameters added`, ...)
+#     are read from `src/components/CliCompare/labels.ts`, a literal copy of this
+#     table (the widget runs in the browser, where this YAML is not importable).
+#     Change a value in both places, or the rendered page and its legend drift.
+#
+# Keys are matched case-insensitively against a whole bold/italic span, so
+# `**Parameters**` and `**parameters**` both hit `parameters`.
+compare_versions:
+  'FROM': '从'
+  'TO': '到'
+  'FILTER': '过滤'
+  'commands': '命令'
+  'parameters added': '新增参数'
+  'parameters removed': '删除参数'
+  'commands changed': '变更命令'
+  'new commands': '新增命令'
+  'commands removed': '删除命令'
+  'New commands': '新增命令'
+  'Removed commands': '删除命令'
+  'Parameter changes': '参数变化'
+  'parameters': '参数'
+  'Flags': '标志'

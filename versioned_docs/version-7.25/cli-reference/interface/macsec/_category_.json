@@ -1,0 +1,11 @@
+{
+  "position": 20,
+  "label": "Macsec",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/macsec/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/macsec"
+}

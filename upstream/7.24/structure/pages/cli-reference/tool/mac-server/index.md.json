@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/tool/mac-server/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/mac-server.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/mac-server/",
+  "md_sha256": "441cab464895b9398a5fcced882f82dc054ecb5bfb99063ee84ed7740fd0d583",
+  "html_sha256": "5d18d19955302e5a14ba7b266fca173715d82981b0b72ee1ba4b5534a3ba123e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

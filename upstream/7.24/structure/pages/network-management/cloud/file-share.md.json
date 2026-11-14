@@ -1,0 +1,60 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "network-management/cloud/file-share.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/network-management/cloud/file-share.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/network-management/cloud/file-share",
+  "md_sha256": "c31b0efc6d63608e9af2beeeb47a7ba4985a51827adc37175c9e09979f9da63f",
+  "html_sha256": "c2e4879cfdc74d75da088bd515c8d6ab2afbc46e251aabc99f6cab9844fc4d9f",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Sets the path for the file to be shared. <br/> Example: \"/ip/cloud/back-to-home-file/add path=mypath/myfile\""
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/dude/import-db.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/dude/import-db.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/dude/import-db",
+  "md_sha256": "782a5b1eba89505c4142e76e41a721e345ae55efa05548a3816bae2a01c6e674",
+  "html_sha256": "d6ca1b79234efd4cca14aeb2bcee770f43ace9f653857de42a752faef1949b2a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

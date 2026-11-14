@@ -1,0 +1,78 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "mobile-networking/bg77-modem-at-commands/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/mobile-networking/bg77-modem-at-commands.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/mobile-networking/bg77-modem-at-commands/",
+  "md_sha256": "36f47733f121855a636c23ac98c80f60ac1660a2e3c04a943d37c87d55f46e80",
+  "html_sha256": "b6623f39dd1c22ff6afc499254c6226c04be70820ad2c0ba2cabd28b8f1a4e54",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 20,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 19,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/logging/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/logging.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/logging/",
+  "md_sha256": "a054f1440b1a020008bfbe3dfb385d99f840e4be0d7b53b0817be827888067b0",
+  "html_sha256": "02ecc70d25db5b4b43c75a1964b161249341cbf0e4e243783597b4811305dbbb",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 8,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

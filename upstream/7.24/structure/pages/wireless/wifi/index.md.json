@@ -1,0 +1,551 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "wireless/wifi/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/wireless/wifi.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/wireless/wifi/",
+  "md_sha256": "d4dbb5b9c993e5701604072c54be1c30d464225e5ed16ce5ef6b170d6d50d9c0",
+  "html_sha256": "314ec00ab392921cbbbb95f2ca558fc432fc9d1b91eca81c11d7d71afcd6a81b",
+  "body": {
+    "html": {
+      "lists": 7,
+      "listItems": 34,
+      "br": 22,
+      "details": 0,
+      "tables": 24,
+      "sup": 1,
+      "code": 91,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 34,
+      "listItems": 34,
+      "br": 0,
+      "details": 0,
+      "tables": 24,
+      "sup": 1,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 34,
+      "listItems": 34,
+      "br": 0,
+      "details": 0,
+      "tables": 24,
+      "sup": 1,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        22,
+        15
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 5,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Format for the value to use in calculating the value of the User-Password attribute in AP's messages to RADIUS servers when performing MAC address authentication. <br/> Default value: \"\" (an empty string)."
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Frequency band and wireless standard that will be used by the AP. Defaults to newest supported standard. <strong>Note that band support is limited by radio capabilities.</strong><br/>"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Whether to assign lower priority to channels with a control frequency of 5720 or 5825-5885 MHz. These channels are unsupported by some client devices, making their automatic selection undesirable. Defaults to 'yes' in ETSI regulatory domains, elsewhere to 'no'. <br/>"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "For an interface in AP mode, specifies frequencies (in MHz) to consider when picking control channel center frequency. <br/> For an interface in station mode, specifies frequencies on which to scan for APs. <br/> Leave unset (default) to consider all frequencies supported by the radio and permitted by the applicable regulatory profile. <br/> The parameter can contain 1 or more comma-separated values of decimal numbers or, optionally, ranges of numbers denoted using the syntax RangeBeginning-RangeEnd:RangeStep <br/> Examples of valid channel.frequency values: <br/><ul><li>2412</li><li>2412,2432,2472</li><li>5180-5240:20,5500-5580:20</li></ul>"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "<br/> Enables puncturing support on this interface for DFS/radar (802.11be only). <br/> When set, the access point may disable (\"puncture\") only the affected 20 MHz part of a wide 80/160 MHz channel when radar signal presence is detected, instead of switching the whole channel. <br/> For 80 MHz channels a single 20 MHz sub-channel may be punctured. For 160 MHz channels either one 20 MHz sub-channel or one 40 MHz block may be punctured. <br/><br/> The current puncturing state can be observed in <code>/interface/wifi/monitor</code> output for this interface, where punctured sub-channels are marked with the letter <code>o</code>. <br/>"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Specifies the interval when the interface should run \"rescan channel availability\" and select the most appropriate one to use. Specifying the interval will allow the system to select this interval dynamically and randomly. This helps to avoid a situation when many APs at the same time scan the network, select the same channel, and prefer to use it at the same time. reselect-interval uses a background scan. <br/> The reselect process will choose the most suitable channel considering the number of networks in the channel, channel usage, and overlap with networks in adjacent channels. It can be used with a list of frequencies defined, or with <code>frequency</code> not set - using all supported frequencies. <br/> Example: <br/><ul><li>01:00..01:30 → Would set the rescan of channels to run every 1 hour + random time up to 30 minutes. The first time, it could run a rescan after \"1 hour and 15 minutes\", later, it could be \"1 hour and 1 second\", then, it could be \"1 hour, 29 minutes and 59 seconds\" ...at random, a rescan will happen between every 1 hour and 1 hour 30 minutes.</li></ul>"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Specifies the clock time when the interface should run \"rescan channel availability\" and select the most appropriate one to use. Specifying the clock time will allow the system to select this time dynamically and randomly. This helps to avoid a situation when many APs at the same time scan the network, select the same channel, and prefer to use it at the same time. reselect-time uses a background scan. <br/> The reselect process will choose the most suitable channel considering the number of networks in the channel, channel usage, and overlap with networks in adjacent channels. It can be used with a list of frequencies defined, or with <code>frequency</code> not set - using all supported frequencies. <br/> Example: <br/><ul><li>01:00..01:30 → Would set the rescan of channels to run every night, once, randomly, between 01:00 AM and 01:30 AM, system clock time.</li><li>14:00..14:30 → Would set the rescan of channels to run every day (after midday), once, randomly between 14:00:00 and 14:30:00 (or 2 PM to 2:30 PM), system clock time.</li></ul>"
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "For split 80+80MHz channels, specifies permitted center frequencies for the secondary 80MHz segment. <br/> For 320MHz channels, specifies permitted 320MHz channel centers. <br/> When unset (default), does not limit channel selection. <br/> E.g. <br/> 'width=20/40/80+80mhz frequency=5180' would allow combining channel 42 with any other supported 80MHz channel. 'width=20/40/80+80mhz frequency=5180 secondary-frequency=5530' would only allow combining channels 42 and 106. <br/> 'width=20/40/80/160/320mhz frequency=6115' would allow use of either channel 31 or 63. <br/> 'width=20/40/80/160/320mhz frequency=6115 secondary-frequency=6265' allows use of only channel 63. <br/> Refer here for lists of valid <a href=\"https://en.wikipedia.org/wiki/List_of_WLAN_channels#5_GHz_(802.11a/h/n/ac/ax/be)\" target=\"_blank\" rel=\"noopener noreferrer\">5GHz</a> and <a href=\"https://en.wikipedia.org/wiki/List_of_WLAN_channels#6_GHz_(802.11ax_and_802.11be)\" target=\"_blank\" rel=\"noopener noreferrer\">6GHz</a> channels."
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Whether to avoid using channels, on which channel availability check (listening for presence of radar signals) is required. <br/><ul><li><em>10min-cac</em> - interface will avoid using channels, on which 10 minute long CAC is required</li><li><em>all </em>- interface will avoid using all channels, on which CAC is required</li><li><em>disabled</em> - interface may select any supported channel, regardless of CAC requirements</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "rows": 19,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Overrides the default antenna gain. The <em>master</em> interface of each radio sets the antenna gain for every interface which uses the same radio. <br/> This setting cannot override the antenna gain to be lower than the minimum antenna gain of a radio. No default value. <br/>"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Interval between beacon frames of an AP. <br/><br/>🛈 <strong>Important:</strong> The 802.11 standard defines beacon interval in terms of <em>time units</em> (1 TU = 1.024 ms). The actual interval between beacons will be 1 TU for every 1 ms configured. <br/><br/>⚠️ <strong>Warning:</strong> Every AP running on the same radio (i.e. a master AP and all its 'virtual'/'slave' APs) must use the same beacon interval. <br/>"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "Determines which regulatory domain restrictions are applied to an interface. <br/><br/>⚠️ <strong>Warning:</strong> It is important to set this value correctly to comply with local regulations and ensure interoperability with other devices. <br/><br/>In a controlled environment or if you have a special permission to use it in your region, you can select <code>country=Superchannel</code> (with this country profile, router's Tx output power will not be restricted by the software, and the router will output as much power as its hardware chip allows, unless manual <code>tx-power</code> is configured to lower it). Does not work for <strong>wifi-qcom-ac</strong> drivers."
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Maximum link distance in kilometers, needs to be set for long-range outdoor links. The value should reflect the distance to the AP or station that is furthest from the device. Unconfigured value allows usage of 2 km links. <br/><br/>⚠️ <strong>Warning:</strong><code>distance</code> is not used by the wifi-qcom-ac package. Setting <code>distance</code> above the actual needed value can have detrimental effects on throughput and latency. <br/>"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "DTIM is a part of the beacon frame that informs power saving (sleeping) stations about incoming multicast and broadcast traffic. <br/> The setting configures a period at which to transmit multicast or broadcast traffic, when there are client devices in power save mode connected to the AP. Expressed as a multiple of the beacon interval (e.g. with default values <code>dtim-period=1</code> and <code>beacon-interval=100ms</code>, it is sent every 1 x 100 ms = 100 ms). <br/> Higher values enable client devices to save more energy, but increase network latency. Lower values enable clients to wake up more often, using more energy."
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "<ul><li><em>yes</em> - AP does not include its SSID in beacon frames, and does not reply to probe requests that have broadcast SSID.</li><li><em>no</em> - AP includes its SSID in the beacon frames, and replies to probe requests that have broadcast SSID.</li></ul>"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "To reduce frame collisions, you can use: <br/><ul><li><em>cts-to-self</em> - Interface sends CTS frame to own address before transmitting an MPDU (to notify nearby devices to hold off talking over each other);</li><li><em>none </em> - Interface does not use any hardware protection mechanism;</li><li><em>rts-cts -</em> Interface sends an RTS frame before each MPDU (RTS is followed by a CTS from a receiver and the communication happens after that - both RTS and CTS frames can hold off other devices);</li></ul> Default (unset): interface sends RTS frames before re-transmitted MPDUs."
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "html": "capsman - the interface will act as CAP only; this option should <strong>not</strong> be passed via provisioning rules to the CAP <br/> capsman-or-local - the interface will get configuration via CAPsMAN or use its own, if <code>/interface/wifi/cap</code> is not enabled. <br/> local - interface won't contact CAPsMAN in order to get configuration."
+        },
+        {
+          "row": 12,
+          "col": 1,
+          "html": "Interface operation mode <br/><ul><li><em>ap</em> (default) - interface operates as an access point</li><li><em>station</em> - interface acts as a client device, scanning for access points advertising the configured SSID</li><li>station-bridge - interface acts as a client device and enables support for a 4-address frame format, so that the interface can be used as a bridge port</li><li>station-pseudobridge - the interface keeps track of outgoing IP connections and performs MAC address translation similarly to how IP masquerading works</li></ul><br/>🛈 <strong>Important:</strong> The 'wifi' station-bridge mode is incompatible with APs running the older 'wireless' package and vice versa. <br/><br/>"
+        },
+        {
+          "row": 14,
+          "col": 1,
+          "html": "Specify which WMM ruleset to follow. APs and clients classify packets based on the priority assigned to them (as per WMM specification) → 1,2 - background; 0,3 - best effort; 4,5 - video; 6,7 - voice. \"Better\" access category has a higher probability of getting access to medium (e.g. voice frames will have a shorter \"back off\" time after medium becomes \"idle\", ensuring that they are more likely to be sent out sooner than \"worse\" category frames). <br/><ul><li>dscp-high-3-bits - interface will transmit data packets using a WMM priority equal to the value of the 3 most significant bits of the IP DSCP field</li><li>priority - interface will transmit data packets using a WMM priority equal to that set by IP firewall or bridge filter<br/></li></ul><br/>🛈 <strong>Important:</strong> 802.11ac wireless chipsets do not support the dscp-high-3-bits classifier mode. For 802.11ac interfaces, please see <a href=\"/docs/7.24/bridging-and-switching/user-guides/wmm-and-vlan-priority#set-vlan-or-wmm-priority-from-dscp\">DSCP from priority</a>. <br/><br/>"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 6,
+          "col": 1,
+          "html": "🛈 <strong>Important:</strong> This setting is only available starting with <strong>7.21beta2</strong> version. <br/><ul><li><code>on-cap</code>, will make it so that the CAP itself is responsible for handling all WiFi traffic (same as any standalone AP would);</li><li><code>on-capsman</code>, will make it so that the CAP's WiFi traffic is forwarded to a pseudo-tunnel to the CAPSMAN and the CAPsMAN becomes responsible for CAP's traffic handling;</li><li><code>on-capsman-secure</code>, will make it so that the CAP's WiFi traffic is forwarded to an encrypted pseudo-tunnel to the CAPSMAN and the CAPsMAN becomes responsible for CAP's traffic handling.</li></ul><br/> 🛈 <strong>Important:</strong> When using <code>traffic-processing=on-capsman</code> setting, be aware that since all the CAP's WiFi traffic now gets handled by the CAPsMAN (gets pushed into the CAPsMAN), it will increase CAPSMAN's resource consumption (CPU and RAM usage). <br/><br/>"
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Default VLAN ID to assign to client devices connecting to this interface (only relevant to interfaces in AP mode). When a client is assigned a VLAN ID, traffic coming from the client is automatically tagged with the ID and only packets tagged with this ID are forwarded to the client. <br/><br/> ⚠️ <strong>Warning:</strong> 802.11ac chipsets do not support this type of VLAN tagging, but they can be <a href=\"/docs/7.24/bridging-and-switching/#vlan-example-trunk-and-access-ports\">configured</a> as VLAN access ports in bridge settings. <br/>"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "rows": 33,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Authentication types to enable on the interface. <br/> The default value is an empty list (no authentication, an open network). <br/> Configuring a passphrase adds to the default list the <em>wpa2-psk</em> authentication method (if the interface is an AP) or both <em>wpa-psk</em> and <em>wpa2-psk</em> (if the interface is a station). <br/> Configuring an <em>eap-username</em> and an <em>eap-password</em> adds to the default list the <em>wpa-eap and wpa2-eap</em> authentication methods."
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Whether to enable beacon integrity protection. Support depends on 'beacon-protection' radio capability. <br/> Enabled by default for 802.11be interfaces."
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "APs within the same connect group do not allow more than 1 client device with the same MAC address. This is to prevent malicious authorized users from intercepting traffic intended for other users ('MacStealer' attack) or performing a denial of service attack by spoofing the MAC address of a victim. <br/> Handling of new connections with duplicate MAC addresses depends on the connect-priority of AP interfaces involved. <br/> By default, all APs are assigned the same connect-group."
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "These parameters determine how a connection is handled if the MAC address of the client device is the same as that of another active connection to another AP. <br/>If (accept-priority of AP2) &lt; (hold-priority of AP1), a connection to AP2 will cause the client to be dropped from AP1.<br/> If (accept-priority of AP2) = (hold-priority of AP1), a connection to AP2 will be allowed only if the MAC address can no longer be reached via AP1.<br/> If (accept-priority of AP2) &gt; (hold-priority of AP1), a connection to AP2 will not be accepted. <br/><br/> If omitted, hold-priority is the same as accept-priority. By default, APs, which perform user authentication, have higher priority (lower integer value), than open APs."
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "For interfaces in AP mode, disables inclusion of a PMKID in EAPOL frames. Disabling PMKID can cause compatibility issues with client devices that make use of it.<ul><li><em>yes</em> - Do not include PMKID in EAPOL frames.</li><li><em>no</em> - Include PMKID in EAPOL frames.</li></ul>"
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Send accounting information to RADIUS server for EAP-authenticated peers. <br/><br/>⚠️ <strong>Warning:</strong> Properties related to EAP are only relevant to interfaces in station mode. APs delegate (passthrough) EAP authentication to the RADIUS server. <br/>"
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "html": "Policy for handling the TLS certificate of the RADIUS server. <br/><ul><li>verify-certificate - require server to have a valid certificate. Check that it is signed by a trusted certificate authority.</li><li>dont-verify-certificate - Do not perform any checks on the certificate.</li><li>no-certificates - Attempt to establish the TLS tunnel by performing anonymous Diffie-Hellman key exchange. To be used if the RADIUS server has no certificate at all.</li><li>verify-certificate-with-crl - Same as <em>verify-certificate,</em> but also checks if the certificate is valid by checking the Certificate Revocation List.</li></ul>"
+        },
+        {
+          "row": 13,
+          "col": 1,
+          "html": "Username to use when the chosen EAP method requires one. <br/><br/>⚠️ <strong>Caution:</strong> Take care when configuring encryption ciphers. <br/> All client devices MUST support the group encryption cipher used by the AP to connect, and some client devices (notably, Intel® 8260) will also fail to connect if the list of unicast ciphers includes any they don't support. <br/>"
+        },
+        {
+          "row": 14,
+          "col": 1,
+          "html": "A list of ciphers to support for encrypting unicast traffic. <br/> Defaults to <em>ccmp</em>. <br/><br/>⚠️ <strong>Warning:</strong> For a client device to successfully roam between 2 APs, the APs need to be managed by the same instance of RouterOS. For information on how to centrally manage multiple APs, see <a href=\"/docs/7.24/wireless/wifi/capsman\">CAPsMAN</a><br/>"
+        },
+        {
+          "row": 19,
+          "col": 1,
+          "html": "<ul><li>no - when a client connects to this AP via 802.11r fast BSS transition, it is assigned a VLAN ID according to the access and/or interface settings</li><li>yes (default) - when a client connects to this AP via 802.11r fast BSS transition, it retains the VLAN ID, which it was assigned during initial authentication</li></ul> The default behavior is essential when relying on a RADIUS server to assign VLAN IDs to users, since a RADIUS server is only used for initial authentication."
+        },
+        {
+          "row": 25,
+          "col": 1,
+          "html": "Whether to use 802.11w management frame protection. <strong>Incompatible with management frame protection in standard wireless package</strong>. <br/> The default value depends on the value of the selected authentication type. WPA2 allows the use of management protection, WPA3 requires it."
+        },
+        {
+          "row": 27,
+          "col": 1,
+          "html": "Name of an interface whose MAC address and SSID to advertise as the matching AP when running in OWE transition mode. <br/> Setting the value to 'auto' will make RouterOS try to automatically match open and OWE APs on the same radio. <br/> Required for setting up open APs that offer OWE, but also work with older devices that don't support the standard. See <a href=\"#basic-configuration\">configuration example above</a>."
+        },
+        {
+          "row": 28,
+          "col": 1,
+          "html": "The passphrase to use for PSK authentication types. Defaults to an empty string - \"\". <br/> WPA-PSK and WPA2-PSK authentication requires a minimum of 8 chars, while WPA3-PSK does not have a minimum passphrase length."
+        },
+        {
+          "row": 29,
+          "col": 1,
+          "html": "Due to SAE (WPA3) associations being CPU resource intensive, overwhelming an AP with bogus authentication requests makes for a feasible denial-of-service attack. <br/> This parameter provides a way to mitigate such attacks by specifying a threshold of in-progress SAE authentications, at which the AP will start requesting that client devices include a cookie bound to their MAC address in their authentication requests. It will then only process authentication requests that contain valid cookies."
+        },
+        {
+          "row": 32,
+          "col": 1,
+          "html": "<ul><li><em>push-button</em> - AP will accept WPS authentication for 2 minutes after the 'wps-push-button' command is called. Physical WPS button functionality is not yet implemented.</li><li><em>disabled </em>- AP will not accept WPS authentication</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "The passphrase to use for PSK authentication types. Multiple users can use the same passphrase. <br/> Not compatible with WPA3-PSK."
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "vlan-id that will be assigned to clients using this passphrase <br/><br/> ⚠️ <strong>Caution:</strong> Only supported on wifi-qcom interfaces. If wifi-qcom-ac AP has a client that uses a passphrase with an associated vlan-id, the client will not be able to join."
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "If <br/><ol><li>This property is set to <em>yes </em>on a 2.4GHz AP and</li><li>said AP is in a steering neighbor group with at least one 5GHz AP then</li></ol> the 2.4GHz AP will forego responding to the first 3 probe requests from each client in a 60 second interval which have a signal-to-noise ratio of &gt; 35 dB. <br/>"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "When sending neighbor reports and BSS transition management requests, an AP will list all other APs within its neighbor group as potential roaming candidates. <br/> By default, a dynamic neighbor group is created for each set of APs with the same SSID and authentication settings. APs operating in the 5GHz band are indicated to be preferable to ones operating in the 2.4GHz band. <br/> A dynamic neighbor group will not be created if EAP is used; it needs to be defined manually. <br/><br/>"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Enables sending of 802.11k neighbor reports. <br/> The client may request the \"neighbor report\" from the AP, when the device wants to \"explore/map\" its surroundings (the client device can store the report, and it can use it to roam at once or later)."
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Defines an interval in seconds, using which, the AP will send unsolicited 802.11v BSS transition management requests to the client device, if it is a \"transition candidate\". <br/> E.g., using the default value (30s), a request will be sent to the client every 30 seconds for <code>transition-request-count</code> number of total requests."
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Defines how many unsolicited 802.11v BSS transition management requests should be sent out to the client marked as a \"transition candidate\". One request is sent out immediately after the client gets \"transition candidate\" status (\"-1\" count), and the remaining \"count\" will be sent every <code>transition-request-period</code>. <br/> E.g., using the default value (3), the 1st request gets sent when a client gets \"transition candidate\" status; the second request gets sent after <code>transition-request-period</code> seconds and the third (last one), after another <code>transition-request-period</code>. <br/> Set to <code>unlimited</code> if you want to send requests without a count limit."
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Defines the time, for how long the client device can be a \"transition candidate\" before it gets forcefully deauthenticated. It can be a <code>time interval</code> in seconds (to deauthenticate the client after the time, which starts running/counting as soon as the device becomes a \"transition candidate\", expires), it can be <code>immediate</code> (to instantly deauthenticate the client after it becomes a \"transition candidate\") or <code>unlimited</code> (to never force the client and to continue sending transition requests for the <code>transition-request-count</code> amount, every <code>transition-request-period</code> seconds). <br/><br/>🛈 <strong>Important:</strong> Note that with <code>transition-time=immediate</code>, <code>transition-request-period</code> and <code>transition-request-count</code> become useless, as the client will get deauthenticated instantly after <code>transition-threshold-time</code>. <br/><br/>"
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "html": "Enables sending of solicited 802.11v BSS transition management requests. <br/> A client may request a \"roaming suggestion\" packet that contains \"neighbor list\", to help the device switch APs. The client device may accept the suggestion and roam at once, or it can ignore the suggestion and keep its current connection."
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "Address Resolution Protocol mode:<ul><li><em>disabled</em> - the interface will not use ARP</li><li><em>enabled</em> - the interface will use ARP</li><li><em>local-proxy-arp</em> - the router performs proxy ARP on the interface and sends replies to the same interface</li><li><em>proxy-arp</em> - the router performs proxy ARP on the interface and sends replies to other interfaces</li><li><em>reply-only</em> - the interface will only reply to requests originated from matching IP address/MAC address combinations which are entered as static entries in the <a href=\"/docs/7.24/network-management/arp\"> ARP</a> table. No dynamic entries will be automatically stored in the ARP table. Therefore for communications to be successful, a valid static entry must already exist.</li></ul>"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "<ul><li><em>yes</em> - interface's <em>r</em><em>unning </em>property will be true whenever the interface is not disabled</li><li><em>no</em> - interface's <em>running</em> property will only be true when it has established a link to another device</li></ul>"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "MAC address (BSSID) to use for an interface. <br/> Hardware interfaces default to the MAC address of the associated radio interface. <br/> Default MAC addresses for virtual interfaces are generated by <br/><ol><li>Taking the MAC address of the associated master interface</li><li>Setting the second-least-significant bit of the first octet to 1, resulting in a <a href=\"https://en.wikipedia.org/wiki/MAC_address#Ranges_of_group_and_locally_administered_addresses\" rel=\"nofollow\">locally administered MAC address</a></li><li>If needed, incrementing the last octet of the address to ensure it doesn't overlap with the address of another interface on the device</li></ol>"
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "html": "Multiple interface configurations can be run simultaneously on every wireless radio. <br/> Only one of them determines the radio's state (whether it is enabled, what frequency it's using, etc). This 'master' interface is <em>bound</em> to a radio with the corresponding <em>radio-mac.</em><br/> To create additional ('virtual') interface configurations on a radio, they need to be <em>bound</em> to the corresponding master interface."
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "True for <em>master</em> interfaces that are currently available for WiFi manager. <br/> True for a virtual interface (configurations linked to a master interface) when both the interface itself and its master interface are not disabled and the <em>master</em> interface has a bound flag."
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "False for interfaces in AP mode when they've selected a channel for operation (i.e. configuration has been successfully applied). <br/> False for interfaces in station mode when they've connected to an AP (i.e. configuration has been successfully applied, and an AP with matching settings has been found). <br/> True otherwise."
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "True for physical interfaces on the router itself or detected CAP if running as CAPsMAN. <br/> False for virtual interfaces."
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "True, when an interface has established a link to another device. <br/> If <em>disable-running-check</em> is set to 'yes', true whenever the interface is not disabled."
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Modifies the <strong>mac-address</strong> parameter to match if it is equal to the result of performing a bit-wise AND operation on the client MAC address and the given address mask. <br/> Default: FF:FF:FF:FF:FF:FF (i.e. client's MAC address must match value of <strong>mac-address</strong> exactly)"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "The length of time which a connected peer's signal strength is allowed to be outside the range required by the <strong>signal-range</strong> parameter, before it is disconnected. <br/> If the value is set to 'always', peer signal strength is only checked during association."
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Whether to authorize a connection <br/><ul><li><em>accept</em> - connection is allowed</li><li><em>reject</em> - connection is not allowed</li><li><em>query-radius</em> - connection is allowed if MAC address authentication of the client's MAC address succeeds</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 17,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 18,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "bss - list of active APs and their parameters. <br/> frequency - list of station and AP count per scanned frequency <br/> stas - a detailed list of stations on each scanned frequency <br/> If filter-type is unspecified, all types will be returned."
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 20,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "A string that specifies a filter to apply to captured frames. Only frames matched by the filter expression will be displayed, saved or streamed. <br/> This works similarly to filter strings in libpcap, for example. <br/> The filter can match <br/><ul><li>Address fields (addr1, addr2, addr3)</li><li>Wireless frame type and subtype, including shortcuts such as 'beacon' (type == 0 &amp;&amp; subtype == 8)</li><li>Flags (to-ds, from-ds, retry, power, protected)</li></ul> A string can include the following operators: <br/><ul><li>== (exact match)</li><li>!= (does not equal)</li><li>&amp;&amp; (logical AND)</li><li> &#124;&#124; (logical OR)</li><li>() (for grouping filter expressions)</li></ul>"
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "html": "<strong>number</strong> (<em>interface</em>) <br/>"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 22,
+      "rows": 19,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 23,
+      "rows": 17,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

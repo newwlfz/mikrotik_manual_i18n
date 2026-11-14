@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/disk/btrfs/filesystem/scrub-start.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/disk/btrfs/filesystem/scrub-start.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/disk/btrfs/filesystem/scrub-start",
+  "md_sha256": "818e42fe0d8bcaae33dbd3bf1471cc09d25bf9e2848b3bc0c27a87d329c7269e",
+  "html_sha256": "dde105054f4b61a5c04b3cf2a46bc7d3efde776ed0145d1bcf9cea9833f967e8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

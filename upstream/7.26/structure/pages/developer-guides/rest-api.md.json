@@ -1,0 +1,62 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "developer-guides/rest-api.md",
+  "source_url": "https://manual.mikrotik.com/docs/developer-guides/rest-api.md",
+  "html_url": "https://manual.mikrotik.com/docs/developer-guides/rest-api",
+  "md_sha256": "8f73a96398aa7e160d54f10ffd4b19b152a20f36572e32058a8dcab58cbc1609",
+  "html_sha256": "f450ef9d8d4d5fac40aa4496641e315d87442496fc488305e9c244212c2598a3",
+  "body": {
+    "html": {
+      "lists": 9,
+      "listItems": 34,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 263,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 34,
+      "listItems": 34,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 34,
+      "listItems": 34,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 16,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

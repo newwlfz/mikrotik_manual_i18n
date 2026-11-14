@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/rip/keys.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/rip/keys.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/rip/keys",
+  "md_sha256": "acce54b154321c7a19936d32f987ad657948183ff4bb94daf72124acdb6e2fa3",
+  "html_sha256": "cb3532c5d6c54c22e85c046bcbf269431bcbe0cc568369f9ce6117af0c1f45c6",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

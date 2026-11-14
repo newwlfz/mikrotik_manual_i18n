@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/logging/action/clear.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/logging/action/clear.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/logging/action/clear",
+  "md_sha256": "d238b2efdf9add4e34e3d6e9b2634ce4260d709020b88d49f9ac76a822ebe59d",
+  "html_sha256": "bb6106a79ece580f5aa542e0c692efc958631d73461fa0415e0646106bc21ac3",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

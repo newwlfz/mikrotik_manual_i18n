@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wifi/steering/neighbor-group.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/steering/neighbor-group.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/steering/neighbor-group",
+  "md_sha256": "846267314d0c86f1529162b6ace2ff7e9e3874aaa9215be157a4f0babeb9c7b3",
+  "html_sha256": "f3ff458b9216fea4fb33db87164f04b8eeb38735709c9e1a9b3e2cc0cef70aee",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

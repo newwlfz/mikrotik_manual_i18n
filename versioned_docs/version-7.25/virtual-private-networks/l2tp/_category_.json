@@ -1,0 +1,11 @@
+{
+  "position": 6,
+  "label": "L2TP",
+  "key": "virtual-private-networks/l2tp",
+  "link": {
+    "type": "doc",
+    "id": "virtual-private-networks/l2tp/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

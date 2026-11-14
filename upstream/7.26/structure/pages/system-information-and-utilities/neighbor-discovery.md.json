@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "system-information-and-utilities/neighbor-discovery.md",
+  "source_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/neighbor-discovery.md",
+  "html_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/neighbor-discovery",
+  "md_sha256": "07e595fd96a556dd68bb622d3c605c7fefef2c87065571270d2369d2e7d94213",
+  "html_sha256": "6826d993446f743c0ee8a21ec52fc55161f3943c3207cdab5d3e7941c01ea7fd",
+  "body": {
+    "html": {
+      "lists": 5,
+      "listItems": 28,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 35,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 28,
+      "listItems": 28,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 28,
+      "listItems": 28,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

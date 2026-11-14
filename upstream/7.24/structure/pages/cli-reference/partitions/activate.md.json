@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/partitions/activate.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/partitions/activate.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/partitions/activate",
+  "md_sha256": "d4259e383ff40c38f239a30d1f322b3a3b449974e939dd2040cd7262ecfe8bfc",
+  "html_sha256": "e9ae4f9c9908ed84c9607289f649448aecbe396b70079c51cb311508c41c7072",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

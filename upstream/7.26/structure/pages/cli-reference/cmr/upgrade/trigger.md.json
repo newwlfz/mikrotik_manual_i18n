@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/cmr/upgrade/trigger.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/upgrade/trigger.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/upgrade/trigger",
+  "md_sha256": "a2c110639683e85f67754e2a05dc34fbca21be4e2156c23cd55afeba5ac95e14",
+  "html_sha256": "72f9416df20cc736889c10d751a406079c708c656e8a801020cf83b4fe351d24",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,76 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "system-information-and-utilities/partitions.md",
+  "source_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/partitions.md",
+  "html_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/partitions",
+  "md_sha256": "b184c8dede58c4bba71e6d0905e67d5c6f050e89a11ff425022aadedd0c02edd",
+  "html_sha256": "ae0871d9de4e0785aa2026149505918e21e2bcabbf63b91892b598d7b0bf8fb6",
+  "body": {
+    "html": {
+      "lists": 5,
+      "listItems": 11,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 11,
+      "listItems": 11,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 11,
+      "listItems": 11,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "What to do if an active partition fails to boot:<ul><li><strong>etherboot</strong> - switch to etherboot</li><li><strong>next</strong> - try next partition</li><li>fallback to the specified partition</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

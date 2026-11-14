@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/bfd/authentication.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/bfd/authentication.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/bfd/authentication",
+  "md_sha256": "1f1401a3db093f139a08fe92d42aed9834c482a50fc23ea20de26c8feadfdf06",
+  "html_sha256": "27aaa80909d7a752f40ccd89d6a2cad4710b8e9b27b128c60e85703c4891f0a7",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

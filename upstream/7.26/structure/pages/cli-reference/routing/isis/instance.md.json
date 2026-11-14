@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/isis/instance.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/isis/instance.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/isis/instance",
+  "md_sha256": "460ee20a0e0b5ddf9d37d409e7188bbe7e192c6f9714d16bf9a38005871d68fe",
+  "html_sha256": "3548c1640c0f92ac9aa357773b89b104403f8578ff630a3423439f80948cdd61",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ipv6/route.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/route.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/route",
+  "md_sha256": "d132841d3c19c4f052de1b4ef4723745a72883288b0663ec7694270b04f40ad3",
+  "html_sha256": "04249b0166253221e042113bbb88f8ce61c98fb524d16df24efad922532519ee",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

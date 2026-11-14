@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/package/apply-changes.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/package/apply-changes.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/package/apply-changes",
+  "md_sha256": "deb787a3fe0bf89e50366adbda363121256bb2ec5f982d511be6e98ae37fe13d",
+  "html_sha256": "cb878d7d4d38b443e2a7b3a367aaa21398769f3b9cf1239c020761e3f57a755f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "containers/user-guides/claire-homeassistant.md",
+  "source_url": "https://manual.mikrotik.com/docs/containers/user-guides/claire-homeassistant.md",
+  "html_url": "https://manual.mikrotik.com/docs/containers/user-guides/claire-homeassistant",
+  "md_sha256": "806a2cc5dbc76517a3e459b18e236b3e864208bdf3f8c7263512998eda5926ae",
+  "html_sha256": "045d86ec044c88d875eef7f0a33c0e9ba37cd8b16fbdfd422b938fefe7871eee",
+  "body": {
+    "html": {
+      "lists": 7,
+      "listItems": 33,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 7,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 33,
+      "listItems": 33,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 33,
+      "listItems": 33,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "60 GHz (W60G)",
+  "key": "wireless/w60g",
+  "link": {
+    "type": "doc",
+    "id": "wireless/w60g/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

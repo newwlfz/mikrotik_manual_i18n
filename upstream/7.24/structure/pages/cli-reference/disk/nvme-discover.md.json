@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/disk/nvme-discover.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/disk/nvme-discover.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/disk/nvme-discover",
+  "md_sha256": "3d6219486809e503d2e4ee2e2177e90a9befa31d7762521dd9aef735dddaa61a",
+  "html_sha256": "2b82854db0453cf0b0e8d72533d8bc47130fda4d59d2211f38b4717d46c5e13a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

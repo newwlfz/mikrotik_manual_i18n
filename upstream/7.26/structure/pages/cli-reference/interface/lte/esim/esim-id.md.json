@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/lte/esim/esim-id.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim/esim-id.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim/esim-id",
+  "md_sha256": "8a7c1a129c59c383867bd5a32994b8f45541863f1a30b010b11f260c88f23fdc",
+  "html_sha256": "155355c7a6ded3864405a9bb191cb992aa3570d25133848f1f4b668e259c4271",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

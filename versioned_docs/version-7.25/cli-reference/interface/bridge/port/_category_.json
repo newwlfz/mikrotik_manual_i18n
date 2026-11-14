@@ -1,0 +1,11 @@
+{
+  "position": 9,
+  "label": "Port",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/bridge/port/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/bridge/port"
+}

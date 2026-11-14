@@ -1,0 +1,11 @@
+{
+  "position": 14,
+  "label": "Neighbor",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/neighbor/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/neighbor"
+}

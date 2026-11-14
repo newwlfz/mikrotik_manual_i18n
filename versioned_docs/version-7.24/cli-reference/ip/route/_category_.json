@@ -1,0 +1,11 @@
+{
+  "position": 19,
+  "label": "Route",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/route/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/route"
+}

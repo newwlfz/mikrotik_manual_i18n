@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/certificate/builtin.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/certificate/builtin.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/certificate/builtin",
+  "md_sha256": "c30036eb0a0cfdf3c3070dd91dfd62233dd0b77c7f8dbf4f416a0410c6e13a7d",
+  "html_sha256": "fd295b70716ebada1f3b35ab77367778be9ac797db7411118b273872b20c700a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

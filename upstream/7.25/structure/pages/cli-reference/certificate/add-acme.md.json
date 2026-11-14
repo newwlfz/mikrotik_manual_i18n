@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/certificate/add-acme.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/add-acme.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/certificate/add-acme",
+  "md_sha256": "846e1c59713c78dc9dfc254a1318b9e7c5880c387b0c6e2ec15466765f6e5e36",
+  "html_sha256": "7c064d706895e0beeaef87a2a06999a72a4bc6e3d79a1585f9d830a140c0666c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

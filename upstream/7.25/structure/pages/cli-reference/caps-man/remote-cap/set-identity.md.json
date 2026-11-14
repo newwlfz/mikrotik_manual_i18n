@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/caps-man/remote-cap/set-identity.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/remote-cap/set-identity.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/caps-man/remote-cap/set-identity",
+  "md_sha256": "dd6ace240615099b77f39ff5807c974cc4ff933f2a55e4a76576d9df51dad602",
+  "html_sha256": "c1a1189b46f0eeb1ecb9b2ab81f84915650fd6edd90a434aefb49fd4a35bd17c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

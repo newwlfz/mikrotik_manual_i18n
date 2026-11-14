@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/disk/raid-scrub-cancel.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/disk/raid-scrub-cancel.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/disk/raid-scrub-cancel",
+  "md_sha256": "4a00f500cf65b1673218e1ec51c31b39e14020229daa1f879dec038db73543a0",
+  "html_sha256": "6b3f13b6a5c8f81b40a9b2c95ebd5e8c94b10d67a7849f5d09adb9d8fa6ba52e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

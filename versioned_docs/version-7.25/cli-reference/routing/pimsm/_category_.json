@@ -1,0 +1,11 @@
+{
+  "position": 12,
+  "label": "Pimsm",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/routing/pimsm/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/routing/pimsm"
+}

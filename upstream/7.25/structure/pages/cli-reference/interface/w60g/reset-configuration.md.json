@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/w60g/reset-configuration.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/w60g/reset-configuration.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/w60g/reset-configuration",
+  "md_sha256": "b6be3310178457379d4176b746f4b750cc3ff0fb7e643acabf3d6fa10a427070",
+  "html_sha256": "6c7299eca74d51f7250c66245c5431da2407c06df28ca2fa9267136e6602742a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

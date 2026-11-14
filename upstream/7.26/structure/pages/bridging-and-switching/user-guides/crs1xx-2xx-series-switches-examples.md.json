@@ -1,0 +1,103 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples.md",
+  "source_url": "https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples.md",
+  "html_url": "https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples",
+  "md_sha256": "60095115efba10cf2b50c79f108ef790271ebb9b75da011aa83da0c22a1935c9",
+  "html_sha256": "6b95cc1824c40850668ed7ec8d8bcaf69c75f622e8bcaf30d7a8a9be51925741",
+  "body": {
+    "html": {
+      "lists": 10,
+      "listItems": 25,
+      "br": 7,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 15,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 25,
+      "listItems": 25,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 25,
+      "listItems": 25,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "html": "<ul class=\"bullets\"><li>Configurable ports for switching or routing</li><li>Full non-blocking wire-speed switching</li><li>Up to 16k MAC entries in Unicast FDB for Layer 2 unicast forwarding</li><li>Up to 1k MAC entries in Multicast FDB for multicast forwarding</li><li>Up to 256 MAC entries in Reserved FDB for control and management purposes</li><li>All Forwarding Databases support IVL and SVL</li><li>Configurable Port-based MAC learning limit</li><li>Jumbo frame support (CRS1xx/2xx: 9204 Bytes; CRS125/CRS109: 4064 Bytes)</li><li>IGMP Snooping support</li></ul>"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "html": "<ul class=\"bullets\"><li>Various types of mirroring:<ul class=\"bullets\"><li>Port-based mirroring</li><li>VLAN-based mirroring</li><li>MAC-based mirroring</li></ul></li><li>2 independent mirroring analyzer ports</li></ul>"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "html": "<ul class=\"bullets\"><li>Fully compatible with IEEE802.1Q and IEEE802.1ad VLAN</li><li>4k active VLANs</li><li>Flexible VLAN assignment:<ul class=\"bullets\"><li>Port-based VLAN</li><li>Protocol-based VLAN</li><li>MAC-based VLAN</li></ul></li><li>From any to any VLAN translation and swapping</li><li>1:1 VLAN switching - VLAN to port mapping</li><li>VLAN filtering</li></ul>"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "<ul class=\"bullets\"><li>Applicable for Private VLAN implementation</li><li>3 port profile types: Promiscuous, Isolated, and Community</li><li>Up to 28 Community profiles</li><li>Leakage profiles allow bypassing egress VLAN filtering</li></ul>"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "<ul class=\"bullets\"><li>Supports static link aggregation groups</li><li>Up to 8 Port Trunk groups</li><li>Up to 8 member ports per Port Trunk group</li><li>Hardware automatic failover and load balancing</li></ul>"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "<ul class=\"bullets\"><li>Flexible QoS classification and assignment:<ul class=\"bullets\"><li>Port-based</li><li>MAC-based</li><li>VLAN-based</li><li>Protocol-based</li><li>PCP/DEI based</li><li>DSCP based</li><li>ACL based</li></ul></li><li>QoS remarking and remapping for QoS domain translation between a service provider and client networks</li><li>Overriding of each QoS assignment according to the configured priority</li></ul>"
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "<ul class=\"bullets\"><li>8 queues on each physical port</li><li>Shaping per port, per queue, per queue group</li></ul>"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "<ul class=\"bullets\"><li>Ingress and Egress ACL tables</li><li>Up to 128 ACL rules (limited by RouterOS)</li><li>Classification based on ports, L2, L3, L4 protocol header fields</li><li>ACL actions include filtering, forwarding, and modifying the protocol header fields</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 11,
+      "cols": 7,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

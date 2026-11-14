@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/ppp-client/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ppp-client.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ppp-client/",
+  "md_sha256": "c33e38465f00af6815c0652959235b37251b5452ba8b9d1eca64249934f892f2",
+  "html_sha256": "579cdd77ec0fce8d840526c9bfc47a6edd1a13e657f7059aa5189b2084782a78",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

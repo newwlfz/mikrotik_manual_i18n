@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/ipip.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ipip.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ipip",
+  "md_sha256": "2ebcd5d8b0e038f0f6c852c117d17920aa9b7f5a97cbc0c7cb05d1be2c13180d",
+  "html_sha256": "df5575d57835c2fb3ee0b8edf075b5fccd65721806bdad8f991a886a3a2dbc69",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

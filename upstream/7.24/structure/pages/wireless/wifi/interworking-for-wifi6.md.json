@@ -1,0 +1,161 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "wireless/wifi/interworking-for-wifi6.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/wireless/wifi/interworking-for-wifi6.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/wireless/wifi/interworking-for-wifi6",
+  "md_sha256": "a9f3d9f52b046f1e39c37f9153d82d52cfe13e924dcc9f8b369b6ef72f579d07",
+  "html_sha256": "1d1b4cc55a5c3883fbfeae4607157b45d811c3ab6abf99f9f90d6a505543d9c7",
+  "body": {
+    "html": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 4,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 11,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "listItems": [
+        5,
+        0
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 4,
+          "col": 1,
+          "html": "Information about network access type.<ul><li><code>emergency-only</code> - a network dedicated and limited to accessing emergency services;</li><li><code>personal-device</code> - a network of personal devices. An example of this type of network is a camera that is attached to a printer, thereby forming a network for the purpose of printing pictures;</li><li><code>private</code> - network for users with user accounts. Usually used in enterprises for employees, not guests;</li><li><code>private-with-guest</code> - same as private, but guest accounts are available;</li><li><code>public-chargeable</code> - a network that is available to anyone willing to pay. For example, a subscription to Hotspot 2.0 service or in-room internet access in a hotel;</li><li><code>public-free</code> - network is available to anyone without any fee. For example, municipal network in city or airport Hotspot;</li><li><code>test</code> - network used for testing and experimental uses. Not used in production;</li><li><code>wildcard</code> - is used on Wireless clients. Sending a probe request with a wildcard as the network type value will make all Interworking Access Points respond despite their actual network-type setting.</li></ul>A client sends a probe request frame with network-type set to the value it is interested in. It will receive replies only from access points with the same value (except the case of wildcard)."
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Unauthenticated emergency service accessible (UESA).<ul><li><code>no</code> - indicates that no unauthenticated emergency services are reachable through this Access Point;</li><li><code>yes</code> - indicates that higher layer unauthenticated emergency services are reachable through this Access Point.</li></ul>"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Specify the venue in which the Access Point is located. Choose the value from the available ones. Some examples:<br/><code>venue=business-bank</code><br/><code>venue=mercantile-shopping-mall</code><br/><code>venue=educational-university-or-college</code><br/><br/>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": 12,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "This property is only effective when asra is set to <code>yes</code>. Value of <code>url</code> is optional and not needed if <code>dns-redirection</code> or <code>online-enrollment</code> is selected. To set the value of <code>url</code> to empty string use double quotes. For example:<br/><code>authentication-types=online-enrollment:\"\"</code><br/>"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "This option allows providing information about the allowed IP protocols and ports. This information can be provided in ANQP response. The first number represents the IP protocol number, the second number represents a port number.<ul><li><code>closed</code> - set if protocol and port combination is not allowed;</li><li><code>open</code> - set if protocol and port combination is allowed;</li><li><code>unknown</code> - set if protocol and port combination is either open or closed.</li></ul> Example: <br/><code>connection-capabilities=6:80:open,17:5060:closed</code><br/><br/> Setting such a value on an Access Point informs the Wireless client, which is connecting to the Access Point, that HTTP (6 - TCP, 80 - HTTP) is allowed and VoIP (17 - UDP; 5060 - VoIP) is not allowed. <br/>This property does not restrict or allow usage of these protocols and ports, it only gives information to the station device which is connecting to the Access Point."
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Information about what IPv4 address and access are available.<ul><li><code>not-available</code> - Address type not available;</li><li><code>public</code> - public IPv4 address available;</li><li><code>port-restricted</code> - port-restricted IPv4 address available;</li><li><code>single-nated</code> - single NATed private IPv4 address available;</li><li><code>double-nated</code> - double NATed private IPv4 address available;</li><li><code>port-restricted-single-nated</code> -port-restricted IPv4 address and single NATed IPv4 address available;</li><li><code>port-restricted-double-nated</code> - port-restricted IPv4 address and double NATed IPv4 address available;</li><li><code>unknown</code> - availability of the address type is not known.</li></ul>"
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Information about what IPv6 address and access are available.<ul><li><code>not-available</code> - Address type not available;</li><li><code>available</code> - address type available;</li><li><code>unknown</code> - availability of the address type is not known.</li></ul>"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Information about supported realms and the corresponding EAP method.<br/><code>realms=example.com:eap-tls,foo.ba:not-specified</code><br/>"
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "html": "Organization identifier (OI) usually is a 24-bit unique identifier like organizationally unique identifier (OUI) or company identifier (CID). In some cases, OI is longer for example OUI-36. A subscription service provider (SSP) can be specified by its OI. roaming-ois property can contain zero or more SSP OIs whose networks are accessible via this AP. Multiple OI values can be specified as comma-separated hex strings. For example: <br/><code>roaming-ois=f4f5e8f5f4,baa2D00100,baa2d00000</code><br/>"
+        },
+        {
+          "row": 11,
+          "col": 1,
+          "html": "Venue name can be used to provide additional info on the venue. It can help the client to choose a proper Access Point. The Venue-names parameter consists of zero or more pairs that contain Venue Name and Language Code: <br/><code>venue-names=CoffeeShop:eng,TiendaDeCafe:es</code><br/><br/>The Language Code field value is a two or three-character language code selected from ISO-639."
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": 13,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "html": "Downstream Group-Addressed Forwarding (DGAF). Sets value of DGAF bit to indicate whether multicast and broadcast frames to clients are disabled or enabled.<ul><li><code>yes</code> - multicast and broadcast frames to clients are enabled;</li><li><code>no</code> - multicast and broadcast frames to clients are disabled.</li></ul>To disable multicast and broadcast frames set <code>multicast-helper=full</code>."
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "html": "Set operator name. Language must be specified for each operator name entry. Operator-names parameter consists of zero or more duple that contain Operator Name and Language Code: <br/><code>operator-names=BestOperator:eng,MejorOperador:es</code><br/><br/>The Language Code field value is a two or three-character language code selected from ISO-639."
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "The downlink load of the WAN connection measured over <code>wan-measurement-duration</code>. Values from 0 to 255.<ul><li><code>0</code> - unknown;</li><li><code>255</code> - 100%.</li></ul>"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "html": "Duration during which wan-downlink-load and <code>wan-uplink-load</code> are measured. Value is a numeric value from 0 to 65535 representing tenths of seconds.<ul><li><code>0</code> - not measured;</li><li><code>10</code> - 1 second;</li><li><code>65535</code> - 1 hour 49 minutes or more.</li></ul>"
+        },
+        {
+          "row": 12,
+          "col": 1,
+          "html": "The uplink load of the WAN connection measured over wan-measurement-duration. Values from 0 to 255.<ul><li><code>0</code> - unknown;</li><li><code>255</code> - 100%.</li></ul>"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

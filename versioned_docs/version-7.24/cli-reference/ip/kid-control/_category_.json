@@ -1,0 +1,11 @@
+{
+  "position": 11,
+  "label": "Kid Control",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/ip/kid-control/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/ip/kid-control"
+}

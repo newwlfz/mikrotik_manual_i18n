@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Bridge",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/bridge/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/bridge"
+}

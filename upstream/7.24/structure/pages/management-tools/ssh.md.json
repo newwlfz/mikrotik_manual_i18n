@@ -1,0 +1,70 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "management-tools/ssh.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/management-tools/ssh.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/management-tools/ssh",
+  "md_sha256": "f03b518df98a12cd2b3990503214ed27263a7d58c0667a5089c878d7903db07c",
+  "html_sha256": "70dc08d04aa441b3bcea1a4cf3452399b823d884f2c640ca84b51559527c585c",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 9,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 3,
+          "col": 1,
+          "html": "Allows control of which SSH forwarding method to allow:<ul><li>no - SSH forwarding is disabled;</li><li>local - Allows SSH clients to originate connections from the server(router), this setting controls also dynamic forwarding;</li><li>remote - Allows SSH clients to listen on the server(router) and forward incoming connections;</li><li>both - Allows both local and remote forwarding methods.</li></ul>"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "html": "Sets public key authentication options. <br/> The touch-required option causes public key authentication using a FIDO authenticator algorithm to always require the signature to attest that a physically present user explicitly confirmed the authentication (usually by touching the authenticator). <br/> The verify-required option requires a FIDO key signature to attest that the user was verified, e.g. via a PIN."
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "html": "Use stronger encryption, HMAC algorithms, use bigger DH primes and disallow weaker ones:<ul><li>use 256 and 192 bit encryption instead of 128 bits;</li><li>disable null encryption;</li><li>use sha256 for hashing instead of sha1;</li><li>disable md5;</li><li>use 2048bit prime for Diffie-Hellman exchange instead of 1024bit.</li></ul>"
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "Bonding",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/bonding/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/bonding"
+}

@@ -1,0 +1,78 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "virtual-private-networks/ipsec/qkd-integration-in-routeros-ipsec-ppk.md",
+  "source_url": "https://manual.mikrotik.com/docs/virtual-private-networks/ipsec/qkd-integration-in-routeros-ipsec-ppk.md",
+  "html_url": "https://manual.mikrotik.com/docs/virtual-private-networks/ipsec/qkd-integration-in-routeros-ipsec-ppk",
+  "md_sha256": "2fc2655c193bb2532f2ab2acb0ce82d51fa138df65119710fa00905267fc220e",
+  "html_sha256": "d769094ef58c4777bc871ccad5ac7bda66fc2a1607ebd0c2176bb02b2c19296c",
+  "body": {
+    "html": {
+      "lists": 14,
+      "listItems": 36,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 9,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 36,
+      "listItems": 36,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 36,
+      "listItems": 36,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 4,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 3,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

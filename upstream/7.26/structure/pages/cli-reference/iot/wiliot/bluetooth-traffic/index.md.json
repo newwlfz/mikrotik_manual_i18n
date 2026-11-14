@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/iot/wiliot/bluetooth-traffic/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/iot/wiliot/bluetooth-traffic.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/iot/wiliot/bluetooth-traffic/",
+  "md_sha256": "f75496cce5003d6b898b6261f2f09b903c96faee763102dd1f90eda0ef785e5c",
+  "html_sha256": "cecec51e04a97ad59769eb15fd88e10ed3127f29abf5d91e109e6f394f4a6874",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

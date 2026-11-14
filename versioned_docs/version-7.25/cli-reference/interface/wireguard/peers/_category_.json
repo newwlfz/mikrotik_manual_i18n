@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "Peers",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/interface/wireguard/peers/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/interface/wireguard/peers"
+}

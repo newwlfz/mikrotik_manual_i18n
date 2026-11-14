@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/kid-control/index.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/kid-control.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/kid-control/",
+  "md_sha256": "3b96d0cbdd3f5ce01875894044e5f244a7b3cd8436cf13e1bf48992aeb580273",
+  "html_sha256": "d03c9a169c4934b043ff7384c20603bb545adc192ffa9e0f6c7dfd0c1e391227",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

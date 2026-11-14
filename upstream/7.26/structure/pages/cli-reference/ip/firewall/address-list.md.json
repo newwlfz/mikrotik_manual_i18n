@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/firewall/address-list.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/firewall/address-list.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/firewall/address-list",
+  "md_sha256": "bf2b3d310f3407a980ae5b291fc2e506550190e77974cd11fc452964364fa101",
+  "html_sha256": "94399d7570871dddb2462a323a9fdea9d98100da195d338e5b4295ce52d6a9cf",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 5,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

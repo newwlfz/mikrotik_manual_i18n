@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "DHCP",
+  "key": "network-management/dhcp",
+  "link": {
+    "type": "doc",
+    "id": "network-management/dhcp/index"
+  },
+  "collapsible": true,
+  "collapsed": true
+}

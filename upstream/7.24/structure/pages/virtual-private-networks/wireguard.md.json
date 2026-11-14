@@ -1,0 +1,83 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "virtual-private-networks/wireguard.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/virtual-private-networks/wireguard.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/virtual-private-networks/wireguard",
+  "md_sha256": "e06bbd82212b3ae089718ae476f71bb7d9b7a572d1be479d67cad46103d2c623",
+  "html_sha256": "63078ee3a0ef189a304d6aac503301d9b6db703578d9580f9f46ab5473c48b5f",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 12,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 19,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        12,
+        15
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 21,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

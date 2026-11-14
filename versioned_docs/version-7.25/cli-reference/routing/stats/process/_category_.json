@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Process",
+  "link": {
+    "type": "doc",
+    "id": "cli-reference/routing/stats/process/index"
+  },
+  "collapsible": true,
+  "collapsed": true,
+  "key": "cli-reference/routing/stats/process"
+}
