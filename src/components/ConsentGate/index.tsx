@@ -1,5 +1,11 @@
 import React, {useEffect, useRef, useState, type ReactNode} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import {
+  LOCALE_REDIRECTING_EVENT,
+  LOCALE_SETTLED_EVENT,
+  isLocaleRedirecting,
+  isLocaleSettled,
+} from '../../lib/locale-signal';
 
 /**
  * One-time first-visit notice.
@@ -9,15 +15,31 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
  * either "continue" (remembered in localStorage *and* a cookie) or "go to the
  * official documentation".
  *
- * Nothing here runs during SSR: the saved decision lives in browser storage, so
- * the component renders nothing until after hydration (`mounted`). That keeps
- * the server HTML and the first client render identical.
+ * The gate also waits for the automatic locale decision (`src/lib/locale-signal.ts`):
+ * a Chinese browser on an English page is redirected before the notice can
+ * appear, so the visitor never gets "notice pops up → page jumps → notice pops
+ * up again". Only a settled locale (no redirect) shows it, and only once per
+ * page load.
+ *
+ * Nothing here runs during SSR: the saved decision and the locale signal live in
+ * browser storage/globals, so the component renders nothing until after
+ * hydration (`mounted`). That keeps the server HTML and the first client render
+ * identical.
  */
 
 const STORAGE_KEY = 'mikrotik-consent';
 const COOKIE_NAME = 'mikrotik_consent';
 const COOKIE_MAX_AGE = 31536000;
 const OFFICIAL_ORIGIN = 'https://manual.mikrotik.com';
+
+/**
+ * How long the gate waits for a locale decision before treating the page as
+ * settled. The `<head>` script writes the signal before the first paint, so
+ * this only matters when that script did not run (old build artefact, blocked
+ * inline script, embedded copy of the client module): the notice must not stay
+ * invisible forever.
+ */
+const LOCALE_SETTLE_TIMEOUT_MS = 1500;
 
 type Copy = {
   title: string;
@@ -128,7 +150,45 @@ export default function ConsentGate(): ReactNode {
 
   useEffect(() => {
     setMounted(true);
-    if (!hasConsented()) setOpen(true);
+    if (hasConsented()) return undefined;
+    // The locale decision can be final before this effect runs: the `<head>`
+    // script executes during parsing, long before hydration.
+    if (isLocaleRedirecting()) return undefined;
+
+    // `settled` is the "render at most once" latch: duplicate events, the
+    // fallback timer and the late redirect signal all funnel through one
+    // decision, so the gate can never be mounted twice or re-animate.
+    let settled = false;
+    let timer: number | undefined;
+
+    const finish = (redirecting: boolean) => {
+      if (settled) return;
+      settled = true;
+      if (timer !== undefined) window.clearTimeout(timer);
+      window.removeEventListener(LOCALE_SETTLED_EVENT, onSettled);
+      window.removeEventListener(LOCALE_REDIRECTING_EVENT, onRedirecting);
+      if (!redirecting) setOpen(true);
+    };
+    const onSettled = () => finish(isLocaleRedirecting());
+    // A redirect decided *after* the gate was shown (the landing page's own
+    // hop is one such case) must still withdraw it instead of letting the
+    // visitor click a notice that is about to disappear.
+    const onRedirecting = () => finish(true);
+
+    window.addEventListener(LOCALE_SETTLED_EVENT, onSettled);
+    window.addEventListener(LOCALE_REDIRECTING_EVENT, onRedirecting);
+    timer = window.setTimeout(() => finish(isLocaleRedirecting()), LOCALE_SETTLE_TIMEOUT_MS);
+
+    // Re-read the flags: the signal may have been emitted before this listener
+    // existed (the `<head>` script cannot wait for React).
+    if (isLocaleRedirecting()) finish(true);
+    else if (isLocaleSettled()) finish(false);
+
+    return () => {
+      if (timer !== undefined) window.clearTimeout(timer);
+      window.removeEventListener(LOCALE_SETTLED_EVENT, onSettled);
+      window.removeEventListener(LOCALE_REDIRECTING_EVENT, onRedirecting);
+    };
   }, []);
 
   // Focus management, focus trap, Escape suppression and the scroll lock live

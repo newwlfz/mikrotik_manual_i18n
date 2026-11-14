@@ -36,6 +36,45 @@ const AUTO_COOKIE_NAME = 'docusaurus_locale_auto';
 const COOKIE_MAX_AGE = 31536000;
 const CHINESE_PREFIX = '/zh-Hans';
 
+/**
+ * 「语种已定 / 正在跳转」信号，与 `src/lib/locale-signal.ts`、`docusaurus.config.ts`
+ * 里内联的 `<head>` 脚本共用同一套全局名与事件名。
+ *
+ * 本文件是纯 JS（`npm run test:locale` 用 node 直接导入），不能 import TS 模块，
+ * 所以这里是同一份约定的复制：改名字时三处必须一起改，`work/consent-locale.e2e.mjs`
+ * 会在浏览器里端到端兜底。
+ *
+ * 版权框（`ConsentGate`）只在这两个状态之一成立后才决定展示；`redirecting`
+ * 优先——已经在跳转的英文页不该再弹一次，否则就是「弹 → 跳 → 再弹」。
+ */
+const SETTLED_EVENT = 'locale-settled';
+const REDIRECTING_EVENT = 'locale-redirecting';
+
+/** 本次加载已确定不跳转：广播一次，版权框据此展示。幂等。 */
+function markSettled() {
+  if (typeof window === 'undefined') return;
+  if (window.__LOCALE_REDIRECTING__ === true) return;
+  if (window.__LOCALE_SETTLED__ === true) return;
+  window.__LOCALE_SETTLED__ = true;
+  try {
+    window.dispatchEvent(new Event(SETTLED_EVENT));
+  } catch {
+    // 事件只是加速手段：标记本身已经写好了，晚挂载的组件读标记即可。
+  }
+}
+
+/** 本次加载即将整页跳转：广播一次，版权框立刻让路。幂等。 */
+function markRedirecting() {
+  if (typeof window === 'undefined') return;
+  if (window.__LOCALE_REDIRECTING__ === true) return;
+  window.__LOCALE_REDIRECTING__ = true;
+  try {
+    window.dispatchEvent(new Event(REDIRECTING_EVENT));
+  } catch {
+    // 同 markSettled：标记才是事实来源。
+  }
+}
+
 // Module level: `onRouteDidUpdate` fires for every client-side navigation, but
 // a redirect must happen at most once per full page load.
 let redirected = false;
@@ -374,9 +413,13 @@ function run() {
   if (typeof window === 'undefined' || redirected) return;
 
   // 只有英文站才做「中文浏览器 → 中文站」的跳转。中文站（SITE_LOCALE 为
-  // zh-Hans）自己不做任何跨站跳转。
+  // zh-Hans）自己不做任何跨站跳转——但它必须宣布「语种已定」，否则中文站
+  // 的版权框会一直等到兜底超时。
   const siteLocale = detectSiteLocale();
-  if (siteLocale && siteLocale !== 'en') return;
+  if (siteLocale && siteLocale !== 'en') {
+    markSettled();
+    return;
+  }
 
   const {pathname, search, hash} = window.location;
   const baseUrl = detectBaseUrl();
@@ -387,27 +430,40 @@ function run() {
   // but never claim it was a user choice.
   if (alreadyChinese) {
     if (!explicitLocale() && !hasAutoMarker()) writeAutoMarker();
+    markSettled();
     return;
   }
 
   // A path outside baseUrl (a stale prefixed URL, another app on this host)
   // cannot be localized safely; leave it untouched instead of 404ing it.
-  if (outsideBase) return;
+  if (outsideBase) {
+    markSettled();
+    return;
+  }
 
   // A `404.html` has no translated counterpart; prefixing it would break it.
-  if (pathname === `${baseUrl}404.html`) return;
+  if (pathname === `${baseUrl}404.html`) {
+    markSettled();
+    return;
+  }
 
   // An explicit choice always wins, even when it is `en`; the dropdown
   // mirrored it to localStorage, so a cleared cookie does not lose it.
-  if (explicitLocale()) return;
+  if (explicitLocale()) {
+    markSettled();
+    return;
+  }
   // Automatic detection already sent this browser to Chinese once; a return to
   // an English page is deliberate, so do not bounce it again.
-  if (hasAutoMarker()) return;
-  if (!prefersChinese()) return;
+  if (hasAutoMarker()) {
+    markSettled();
+    return;
+  }
+  if (!prefersChinese()) {
+    markSettled();
+    return;
+  }
 
-  redirected = true;
-  // Write the marker first, then replace: the destination page sees it.
-  writeAutoMarker();
   // Cross-repo entry: keep the same path on the Chinese site (another Pages
   // deployment). Without a declared Chinese site there is nothing safe to jump
   // to, so the English page stays put instead of 404ing on `${baseUrl}zh-Hans/`.
@@ -415,9 +471,17 @@ function run() {
   const {relative} = relativeSitePath(pathname, baseUrl);
   const target = zhHome ? zhRedirectTarget(zhHome, relative) : null;
   if (!target) {
-    redirected = false;
+    markSettled();
     return;
   }
+
+  // Decided: this page will be replaced. Publish that *before* the navigation
+  // starts so the consent gate never mounts in the window between the decision
+  // and the unload.
+  redirected = true;
+  // Write the marker first, then replace: the destination page sees it.
+  writeAutoMarker();
+  markRedirecting();
   window.location.replace(`${target}${search}${hash}`);
 }
 

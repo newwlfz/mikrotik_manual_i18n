@@ -185,29 +185,51 @@ const LOCALE_COOKIE_MAX_AGE = 31536000;
  * 仓库/另一个 Pages 站点）上同一路径；本仓库只构建 `en`，产物里没有
  * `build/zh-Hans/`，所以不能再像双语同仓时那样拼 `base + zh-Hans`。
  *
+ * 两条结论都会在**首次绘制前**以全局标记 + 事件广播出去（与
+ * `src/lib/locale-signal.ts` 的约定一致）：
+ *   - 命中跳转 → `window.__LOCALE_REDIRECTING__ = true`，再 `location.replace`。
+ *     `ConsentGate` 挂载时看到它就不渲染，于是英文页不会先弹一次版权框；
+ *   - 任一条件不满足（不跳）→ `window.__LOCALE_SETTLED__ = true` 并派发
+ *     `locale-settled`，版权框据此正常展示。事件只是加速：脚本早于 React，
+ *     标记才是事实来源。
+ *
  * baseUrl 与中文站基址在构建期内联进字符串（JSON.stringify），运行时不再猜。
  * 脚本被禁用时 src/pages/index.tsx 的 useEffect 仍然兜底。
  */
 function localeRedirectScript(base: string, zh: string): string {
-  return `(function(){try{
+  return `(function(){
+var win=typeof window!=='undefined'?window:null;
+function settled(){
+  if(!win||win.__LOCALE_REDIRECTING__===true||win.__LOCALE_SETTLED__===true)return;
+  win.__LOCALE_SETTLED__=true;
+  try{win.dispatchEvent(new Event('locale-settled'))}catch(e){}
+}
+function redirecting(){
+  if(!win||win.__LOCALE_REDIRECTING__===true)return;
+  win.__LOCALE_REDIRECTING__=true;
+  try{win.dispatchEvent(new Event('locale-redirecting'))}catch(e){}
+}
+try{
 var base=${JSON.stringify(base)};
 var zh=${JSON.stringify(zh)};
 var EXPLICIT=${JSON.stringify(LOCALE_COOKIE)};
 var AUTO=${JSON.stringify(AUTO_LOCALE_COOKIE)};
 var m=document.cookie.match(/(?:^|;\\s*)${LOCALE_COOKIE}=([^;]*)/);
-if(m&&m[1])return;
-try{if(window.localStorage&&window.localStorage.getItem(EXPLICIT))return}catch(e){}
-if(document.cookie.match(/(?:^|;\\s*)${AUTO_LOCALE_COOKIE}=([^;]*)/))return;
-try{if(window.localStorage&&window.localStorage.getItem(AUTO))return}catch(e){}
+if(m&&m[1]){settled();return}
+try{if(window.localStorage&&window.localStorage.getItem(EXPLICIT)){settled();return}}catch(e){}
+if(document.cookie.match(/(?:^|;\\s*)${AUTO_LOCALE_COOKIE}=([^;]*)/)){settled();return}
+try{if(window.localStorage&&window.localStorage.getItem(AUTO)){settled();return}}catch(e){}
 var langs=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||''];
 var first=String(langs[0]||'').toLowerCase();
-if(first.indexOf('zh')!==0)return;
+if(first.indexOf('zh')!==0){settled();return}
 var p=location.pathname||'/';
-if(p.indexOf(base)!==0)return;
+if(p.indexOf(base)!==0){settled();return}
 var rest=p.slice(base.length-1);
-if(rest==='/404.html')return;
+if(rest==='/404.html'){settled();return}
+if(!zh){settled();return}
 try{if(window.localStorage)window.localStorage.setItem(AUTO,'zh-Hans')}catch(e){}
 document.cookie=AUTO+'=zh-Hans; Path=/; Max-Age=${LOCALE_COOKIE_MAX_AGE}; SameSite=Lax';
+redirecting();
 location.replace(zh+rest+location.search+location.hash);
 }catch(e){}})();`;
 }

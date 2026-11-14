@@ -2,6 +2,7 @@ import React, {useEffect, type ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import {markLocaleRedirecting, markLocaleSettled} from '../lib/locale-signal';
 
 /**
  * 站点根路径的落地页。
@@ -165,7 +166,13 @@ export default function Home(): ReactNode {
     const target = targetPath(currentLocale);
     const current = `${window.location.pathname}${window.location.search}${window.location.hash}`;
     // 已经在目标路径上就不要再 reload 一次（防循环）。
-    if (current === target) return;
+    if (current === target) {
+      markLocaleSettled();
+      return;
+    }
+    // 这次是整页 replace（可能跨站换语种），目标页会重新挂载版权框：先在本页
+    // 把版权框按住，读者只会看到一次，而不是「弹 → 跳 → 再弹」。
+    markLocaleRedirecting();
     // `replace` 不进历史栈：后退不会回到这个中转页。
     window.location.replace(target);
   }, [currentLocale]);
