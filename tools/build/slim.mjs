@@ -394,7 +394,29 @@ function main() {
     throw new Error(`refusing to prune build/img: the reference scan found ${referencedImages.size} name(s) in ${scannedRequestFiles} file(s)`);
   }
   const imgRoot = path.join(root, 'img');
+  const restoredImgFiles = [];
   if (fs.existsSync(imgRoot)) {
+    // `static/img` is the source of every `/img/<name>`; Docusaurus copies it
+    // wholesale, but a referenced picture can be absent from the output
+    // (observed on the zh-Hans hardware page: an `<Img>` URL the pages request
+    // never got a copy, so the deploy gate found a 404). A URL a page actually
+    // requests is part of the site, not a pruning decision: restore it from
+    // `static/img` before the prune below instead of shipping a broken image.
+    const staticImgRoot = path.join(REPO, 'static', 'img');
+    for (const name of referencedImages) {
+      const target = path.join(imgRoot, name);
+      if (fs.existsSync(target)) continue;
+      const source = path.join(staticImgRoot, name);
+      if (!fs.existsSync(source) || !fs.statSync(source).isFile()) continue;
+      fs.copyFileSync(source, target);
+      restoredImgFiles.push(name);
+    }
+    if (restoredImgFiles.length > 0) {
+      console.error(
+        `slim: restored ${restoredImgFiles.length} referenced img file(s) absent from the build: ` +
+          restoredImgFiles.join(', '),
+      );
+    }
     for (const entry of fs.readdirSync(imgRoot, {withFileTypes: true})) {
       if (!entry.isFile() || PROTECTED_IMG.has(entry.name) || referencedImages.has(entry.name)) continue;
       const file = path.join(imgRoot, entry.name);
@@ -434,6 +456,7 @@ function main() {
     rewrittenOccurrences,
     rewrittenBytesSaved,
     referencedImages: referencedImages.size,
+    restoredImgFiles,
     prunedImgFiles,
     prunedImgBytes,
     remainingFiles,
