@@ -31,9 +31,9 @@ env:
   LOCALE_ZH_BASE_URL: /mikrotik_manual_zh_hans/
   # 静态渲染是峰值；6 GiB 堆在 16 GiB 的 runner 上留足余量。
   BUILD_HEAP_MB: '6144'
-  # `.npmrc` 把缓存指到 ../work/npm-cache（本地便利），CI 里改用 runner 临时目录，
-  # 让 setup-node 的 cache: npm 与 npm ci 看到同一个路径。
-  NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
+  # 注：`${{ runner.temp }}` 只在 job/step 级 env 可用，workflow 级 env 用了会
+  # 让整个 workflow 变成 invalid（run 直接失败且没有 job）。npm 缓存目录在
+  # 下面三个 step 里各自注入 NPM_CONFIG_CACHE。
 
 jobs:
   build:
@@ -42,15 +42,23 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+      # `.npmrc` 把缓存指到 ../work/npm-cache（本地便利）；CI 改用 runner 临时
+      # 目录，并让 setup-node 的 cache: npm 与 npm ci 看到同一个路径。
       # setup-node 的 cache: npm 会先解析缓存目录；先建出来，避免空目录判断。
       - name: Prepare npm cache directory
+        env:
+          NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
         run: mkdir -p "$NPM_CONFIG_CACHE"
       - uses: actions/setup-node@v4
+        env:
+          NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
         with:
           node-version: '22'
           cache: npm
           cache-dependency-path: package-lock.json
       - run: npm ci
+        env:
+          NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
       # 单语种构建：CLI 数据 → Docusaurus（--locale en）→ Pagefind → llms.txt。
       - name: Build site
         run: npm run build
