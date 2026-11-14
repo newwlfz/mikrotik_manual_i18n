@@ -1,21 +1,33 @@
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 /**
- * 静态资源根：`customFields.assetBaseUrl`（不带 locale 的 baseUrl）。
+ * 静态资源根，两个层级：
  *
- * Docusaurus 3.10 给非默认语种把 `siteConfig.baseUrl` 改成
- * `/mikrotik_manual_i18n/zh-Hans/`（`@docusaurus/core/lib/server/site.js`），
- * 这个值被烘进 `build/zh-Hans/assets/js/main.*.js`。`useBaseUrl` 用它产出
+ *   - `useAssetBaseUrl()` → `customFields.assetBaseUrl`：对外可见的共享资源根。
+ *     设置了 `ASSET_ORIGIN` 时它是**英文站的绝对地址**（语种仓不再保存
+ *     `static/`，图片/PDF/视频都由英文站提供），否则是不带 locale 的本站
+ *     baseUrl。`<Img>`、导航 Logo 这类「站内资源」引用走它。
+ *   - `useLocalAssetBaseUrl()` → `customFields.localAssetBaseUrl`：**本产物自己
+ *     发布**的资源根，始终是站内路径。pagefind 索引（每次构建都在本站生成）
+ *     必须用它，否则中文站会去英文站搜索英文索引。
+ *
+ * 为什么不能用 `siteConfig.baseUrl`：Docusaurus 3.10 给非默认语种把
+ * `siteConfig.baseUrl` 改成 `/mikrotik_manual_i18n/zh-Hans/`
+ * （`@docusaurus/core/lib/server/site.js`），这个值被烘进
+ * `build/zh-Hans/assets/js/main.*.js`。`useBaseUrl` 用它产出
  * `/mikrotik_manual_i18n/zh-Hans/img/<hash>`，而 `tools/build/slim.mjs` 只保留
  * 根目录的那一份副本，所以中文页客户端新插入的 `<img>` 会 404。
  *
- * 路由仍用 `useBaseUrl`（页面 URL 必须带语种）；静态资源一律用这里的
- * `assetBaseUrl`，两者解耦。
+ * 路由仍用 `useBaseUrl`（页面 URL 必须带语种）；静态资源一律用这里的两个
+ * 资源根，两者解耦。
  */
 
-/** 规范化成前后都带 `/` 的资源根。 */
+/** 规范化成前后都带 `/` 的资源根（绝对地址只补尾斜杠）。 */
 export function normalizeAssetBase(value: string): string {
   const trimmed = (value || '').trim();
+  if (/^[a-z][a-z0-9+.-]*:\/\//i.test(trimmed)) {
+    return trimmed.endsWith('/') ? trimmed : `${trimmed}/`;
+  }
   const withLeading = trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
   return withLeading.endsWith('/') ? withLeading : `${withLeading}/`;
 }
@@ -48,7 +60,7 @@ export function assetUrlFromRoot(src: string, base: string): string {
 }
 
 /**
- * React hook：读取构建期注入的资源根。
+ * React hook：读取构建期注入的**共享**资源根（`ASSET_ORIGIN` 或本站 baseUrl）。
  *
  * 优先 `siteConfig.customFields.assetBaseUrl`；旧构建没有该字段时退回
  * 「siteConfig.baseUrl 去掉当前语种段」，行为与修复前一致而不是拼出
@@ -61,6 +73,22 @@ export function useAssetBaseUrl(): string {
     return normalizeAssetBase(configured);
   }
   return normalizeAssetBase(stripLocaleSuffix(siteConfig.baseUrl, i18n?.currentLocale));
+}
+
+/**
+ * React hook：读取**本产物自己发布**的资源根。
+ *
+ * 与 `useAssetBaseUrl()` 的区别只在 `ASSET_ORIGIN` 模式：共享资源在英文站，
+ * 而 pagefind 索引、`build/assets/**` 永远在本站。旧构建没有该字段时退回
+ * `siteConfig.baseUrl`（单语种构建里就是本站前缀）。
+ */
+export function useLocalAssetBaseUrl(): string {
+  const {siteConfig} = useDocusaurusContext();
+  const configured = siteConfig.customFields?.localAssetBaseUrl;
+  if (typeof configured === 'string' && configured.trim()) {
+    return normalizeAssetBase(configured);
+  }
+  return normalizeAssetBase(siteConfig.baseUrl);
 }
 
 export default useAssetBaseUrl;

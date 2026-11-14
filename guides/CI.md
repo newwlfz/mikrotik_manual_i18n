@@ -86,6 +86,86 @@ CI 里用这四条而不是 `npm run verify:deploy`，因为 `build:slim` 刚跑
 会用 `docusaurus.config.ts` 的默认前缀去校验另一套产物。`build:slim` 也吃 `BASE_URL`
 （它按这个前缀重写产物里的绝对 URL），所以这一步同样显式传入，不能只靠配置文件的默认值。
 
+## Shared assets (`ASSET_ORIGIN`)
+
+The English site is the **asset host**. A localized site no longer keeps
+`static/`: images, PDFs, videos, captured pages and the CLI data stay in the
+English repository, and the localized build rewrites its resource references to
+that origin.
+
+| `ASSET_ORIGIN` | Behaviour |
+| --- | --- |
+| unset (English site) | every root-absolute reference gets the local `baseUrl` — unchanged behaviour |
+| set (localized sites) | `/img/`, `/assets/`, `/videos/`, `/official/`, `/cli/` become `${ASSET_ORIGIN}/…`; page routes (`/docs/`, `/hardware/`, `/blog/`, `/changelog/`) stay local |
+
+The value is the English **site base address**, not a bare origin: include the
+base path and omit the trailing slash
+(`https://newwlfz.github.io/mikrotik_manual_i18n`). It is set in the Chinese
+repository's `pages.yml`; the English build does not set it.
+
+Where the rewrite happens (the code is byte-identical in both repositories):
+
+- `tools/build/remark-prefix-root-refs.mjs` — raw HTML/JSX attributes *and*
+  Markdown image/link destinations. It is also registered in
+  `beforeDefaultRemarkPlugins`, otherwise `transformImage` would `require()`
+  `![](/img/…)` as a local file and a localized build without `static/` would
+  fail.
+- `customFields.assetBaseUrl = ASSET_ORIGIN || baseUrl` — `<Img>`, the navbar
+  logo, the favicon and `og:image`.
+- `tools/build/llms.mjs` — `llms-full.txt` and the generated per-page `.md`
+  copies.
+- `staticDirectories: []` — a leftover `static/` is **ignored** (the build
+  prints a warning), never published.
+- `tools/cli/build-all.mjs` — the generated CLI data (~7 MiB) is written to
+  `work/cli/` instead of `static/cli/`, so a localized build never recreates
+  the tree. `cli-compare.json` is still published at the local site root: it is
+  read with `fetch()`, which needs CORS, and the asset host sends no
+  `Access-Control-Allow-Origin`.
+- `tools/verify/asset-refs.mjs` counts external references and skips local
+  existence checks for them; `tools/verify/orphan-assets.mjs` skips the orphan
+  scan when `static/img` is absent; `tools/build/slim.mjs` prints
+  `external assets: N refs` instead of pruning.
+
+Still deployed locally: the pagefind index (`customFields.localAssetBaseUrl`),
+Webpack chunks/fonts and the per-page `docs/**/img` images.
+
+### The hub must keep its full `/img` tree (`ASSET_HOST`)
+
+The English site is not only a reader-facing site, it is also the **host of the
+localized sites' assets**, so its deploy shape has one extra requirement:
+`ASSET_HOST=true` (set in this repository's `pages.yml`) makes `slim` keep the
+complete `build/img` tree (~99 MiB). Without it, `slim` prunes every `/img/<name>`
+that no *English* page requests — and English Markdown images are served from
+`assets/images`, so almost all of `/img` would be pruned while localized pages
+load exactly those `/img/<name>` URLs (404).
+
+The extra ~88 MiB is the price of sharing; the Pages site stays under the 1 GB
+budget today. A dedicated asset CDN later would keep the full `static/` tree and
+drop this constraint.
+
+**Failure risk.** `ASSET_ORIGIN` couples every localized site to the English
+site's URL. Renaming the repository, moving to another domain or changing its
+base path breaks images, PDFs and videos on *all* localized sites at once. Any
+such move must update `ASSET_ORIGIN` in every localized repository's `pages.yml`
+in the same change. A dedicated CDN later needs no code change: point
+`ASSET_ORIGIN` at it and copy the `static/` tree there.
+
+Local verification (English assets on port 3020 under
+`/mikrotik_manual_i18n/`, localized build on 3021):
+
+```bash
+# English repository: serve build/ so /mikrotik_manual_i18n/... resolves
+# (any static server rooted one level above build/ works)
+# Localized repository: build against it, then run the deploy gate
+ASSET_ORIGIN=http://127.0.0.1:3020/mikrotik_manual_i18n \
+SITE_URL=http://127.0.0.1:3021 BASE_URL=/mikrotik_manual_zh_hans/ \
+SITE_LOCALE=zh-Hans npm run build
+ASSET_ORIGIN=http://127.0.0.1:3020/mikrotik_manual_i18n npm run verify:deploy
+```
+
+`verify:deploy` must exit 0 with external references: they are counted, not
+checked against `build/`.
+
 ## 发布彩排（本地，不 push）
 
 `pages.yml` 只有 push 之后才会跑，但它的每一步都能在本地原样复现。

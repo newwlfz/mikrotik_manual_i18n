@@ -1,7 +1,7 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import {useAssetBaseUrl} from '@site/src/lib/asset-url';
+import {useLocalAssetBaseUrl} from '@site/src/lib/asset-url';
 import {compareLabel} from './labels';
 
 type DiffNames = {params: string[]; flags: string[]};
@@ -328,7 +328,13 @@ export default function CliCompare() {
   // prefix `useBaseUrl` would add on a zh-Hans page points at a copy that only
   // exists because `static/` is mirrored per locale, so it is resolved against
   // the locale-independent asset root instead.
-  const compareUrl = `${useAssetBaseUrl()}cli-compare.json`;
+  //
+  // It must stay **local** even when `ASSET_ORIGIN` points the other assets at
+  // the English site: this is a `fetch()`, so it needs CORS, and the hub origin
+  // (GitHub Pages) sends no `Access-Control-Allow-Origin`. `tools/build/index.mjs`
+  // publishes the file at the site root in that mode; pagefind has the same
+  // constraint and uses the same root.
+  const compareUrl = `${useLocalAssetBaseUrl()}cli-compare.json`;
   const [data, setData] = useState<CompareData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [fromVersion, setFromVersion] = useState('');

@@ -29,6 +29,11 @@ env:
   LOCALE_EN_BASE_URL: /mikrotik_manual_i18n/
   LOCALE_ZH_URL: https://newwlfz.github.io
   LOCALE_ZH_BASE_URL: /mikrotik_manual_zh_hans/
+  # 本仓是**资源宿主**：语种站通过 ASSET_ORIGIN 引用这里的 /img、/assets、/videos。
+  # `ASSET_HOST` 让 slim 保留完整的 build/img（约 99 MiB）——英文页面的 Markdown
+  # 图片走 assets/images，`/img` 本来可以剪掉，但中文站的 Markdown 图片指向
+  # `/img/<hash>`，剪掉就会 404。见 guides/CI.md「Shared assets」。
+  ASSET_HOST: 'true'
   # 静态渲染是峰值；6 GiB 堆在 16 GiB 的 runner 上留足余量。
   BUILD_HEAP_MB: '6144'
   # 注：`${{ runner.temp }}` 只在 job/step 级 env 可用，workflow 级 env 用了会
@@ -62,7 +67,7 @@ jobs:
       # 单语种构建：CLI 数据 → Docusaurus（--locale en）→ Pagefind → llms.txt。
       - name: Build site
         run: npm run build
-      # 部署前门禁：先 slim（删 build/img 里没被引用的副本），再跑
+      # 部署前门禁：先 slim（ASSET_HOST=true 时保留完整 build/img），再跑
       # asset-refs / base-url-refs / orphan-assets / llms-links 四条断言。
       # slim 会按 BASE_URL 重写绝对 URL，所以必须与 build 看到同一组环境变量。
       - name: Slim and verify deploy shape

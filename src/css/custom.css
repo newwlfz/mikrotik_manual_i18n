@@ -1,4 +1,14 @@
-@import url('/official/styles.b36e0801.css');
+/*
+ * Snapshot of the official site's stylesheet, vendored under `src/` on purpose.
+ *
+ * It used to be `@import url('/official/styles.b36e0801.css')`, resolved by
+ * Webpack against `static/` (via `resolve.roots`). That made the whole build
+ * depend on `static/`: a localized repository does not ship it (assets come
+ * from `ASSET_ORIGIN`, see `guides/CI.md`) and the client bundle failed with
+ * "Can't resolve '/official/…'". A relative import is resolved against this
+ * file, so the exact same rules are inlined without any `static/` tree.
+ */
+@import url('./official/styles.css');
 
 :root {
   --ifm-color-primary: #d6001c;

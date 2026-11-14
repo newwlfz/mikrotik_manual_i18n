@@ -124,16 +124,24 @@ function looksLikeImage(url) {
 function usage() {
   return [
     'usage: node tools/verify/orphan-assets.mjs [--strict] [--json[=<path>]]',
+    '                                         [--asset-origin=<url>]',
     '',
     '  --strict        孤儿文件非空时 exit 1（默认只报告）',
     '  --json          把清单打印到 stdout',
     '  --json=<path>   把清单写入文件（相对仓库根），同时打印摘要',
+    '  --asset-origin=<url>  共享资源源站（默认 $ASSET_ORIGIN）。设置且无',
+    '                  `static/img` 时跳过：语种仓不保存 static/，资源在英文站',
     '  --help          显示本帮助',
   ].join('\n');
 }
 
 function parseArgs(argv) {
-  const options = {strict: false, json: false, jsonPath: null};
+  const options = {
+    strict: false,
+    json: false,
+    jsonPath: null,
+    assetOrigin: String(process.env.ASSET_ORIGIN || '').trim().replace(/\/+$/, '') || null,
+  };
   for (const arg of argv) {
     if (arg === '--help' || arg === '-h') {
       console.log(usage());
@@ -144,6 +152,8 @@ function parseArgs(argv) {
     else if (arg.startsWith('--json=')) {
       options.jsonPath = arg.slice('--json='.length);
       if (!options.jsonPath) throw new Error('--json= needs a path');
+    } else if (arg.startsWith('--asset-origin=')) {
+      options.assetOrigin = arg.slice('--asset-origin='.length).trim().replace(/\/+$/, '') || null;
     } else throw new Error(`unknown argument: ${arg}`);
   }
   return options;
@@ -298,6 +308,23 @@ function siteNameOf(value) {
 function main() {
   const options = parseArgs(process.argv.slice(2));
   if (!fs.existsSync(IMG_DIR) || !fs.statSync(IMG_DIR).isDirectory()) {
+    if (options.assetOrigin) {
+      // Localized repository: `static/` is not content here. `asset-refs.mjs`
+      // checks the absolute shared-origin URLs instead; there is no local
+      // inventory to scan for orphans.
+      const report = {
+        schema: 'orphan-assets/1',
+        skipped: 'static/img absent; shared asset origin',
+        asset_origin: options.assetOrigin,
+        static_img: null,
+      };
+      if (options.json) console.log(JSON.stringify(report, null, 2));
+      console.log(
+        `orphan-assets: static/img not found and ASSET_ORIGIN=${options.assetOrigin} is set; ` +
+          'skipping the orphan scan (assets are served by the shared origin)',
+      );
+      process.exit(0);
+    }
     throw new Error(`static/img not found: ${IMG_DIR}`);
   }
 

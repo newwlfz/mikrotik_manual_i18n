@@ -27,6 +27,27 @@
  * corpus link. A versioned full text is only removed when no `llms.txt` links
  * to it (reported as `unreferenced`, never silent).
  *
+ * ## Shared asset origin
+ *
+ * `ASSET_ORIGIN` (see `guides/CI.md`) means this deployment does not publish
+ * `static/` at all: every `/img/…`, `/assets/…`, `/videos/…`, `/official/…`,
+ * `/cli/…` reference is an **absolute URL on the English site**, and `build/`
+ * has no `img/` (nor `assets/images` / `assets/files` from `static/`). In that
+ * mode there is nothing to prune: the step counts the external references it
+ * still sees and reports `external assets: N refs` instead of failing on an
+ * empty image scan. `ASSET_ORIGIN` can be passed as `--asset-origin=<url>`.
+ *
+ * ## Asset host
+ *
+ * `ASSET_HOST=true` marks this build as the **asset host** for localized
+ * sites. Those sites reference `static/` files through `ASSET_ORIGIN`
+ * (`/img/…`, `/assets/…`, …), including Markdown images — which this site
+ * serves from the Webpack-emitted `assets/images/` copy, not from `/img/`.
+ * Pruning `build/img` would therefore 404 every localized Markdown image, so
+ * the whole `static/img` tree is kept instead. It costs ~88 MiB in the deploy
+ * artifact and is opt-in (`ASSET_HOST`); without it the English site keeps the
+ * historical prune.
+ *
  * Finally it drops the `build/img` blobs no built file requests. `static/img`
  * is the content-addressed source of every picture, and Docusaurus copies the
  * whole directory into the output; but a Markdown image is *required* through
@@ -75,18 +96,51 @@ const RESERVED = new Set([
 function parseArgs(argv) {
   let build = 'build';
   let pruneUnreferencedLlmsFull = false;
+  let assetOrigin = String(process.env.ASSET_ORIGIN || '').trim().replace(/\/+$/, '') || null;
+  let assetHost = /^(?:1|true|yes)$/i.test(String(process.env.ASSET_HOST || '').trim());
   for (const arg of argv) {
     if (arg === '--help' || arg === '-h') {
       console.log(
-        'usage: node tools/build/slim.mjs [--build=<dir>] [--prune-unreferenced-llms-full]',
+        [
+          'usage: node tools/build/slim.mjs [--build=<dir>] [--asset-origin=<url>] [--asset-host]',
+          '                               [--prune-unreferenced-llms-full]',
+          '',
+          '  --asset-origin=<url>  shared asset host (default: $ASSET_ORIGIN). When set,',
+          '                        static/ assets are external: nothing is pruned and the',
+          '                        external reference count is reported.',
+          '  --asset-host          keep the whole build/img tree (default: $ASSET_HOST):',
+          '                        localized sites load /img/… Markdown images from here.',
+        ].join('\n'),
       );
       process.exit(0);
     }
     if (arg.startsWith('--build=')) build = arg.slice('--build='.length);
+    else if (arg.startsWith('--asset-origin=')) {
+      assetOrigin = arg.slice('--asset-origin='.length).trim().replace(/\/+$/, '') || null;
+    } else if (arg === '--asset-host') assetHost = true;
     else if (arg === '--prune-unreferenced-llms-full') pruneUnreferencedLlmsFull = true;
     else throw new Error(`unknown argument: ${arg}`);
   }
-  return {build: path.resolve(process.cwd(), build), pruneUnreferencedLlmsFull};
+  return {
+    build: path.resolve(process.cwd(), build),
+    pruneUnreferencedLlmsFull,
+    assetOrigin,
+    assetHost,
+  };
+}
+
+/** Count `${origin}/img|assets|videos|official|cli/…` occurrences in the output. */
+function countExternalAssetRefs(root, origin) {
+  const pattern = new RegExp(
+    `${escapeRegExp(origin)}/(?:img|assets|videos|official|cli)/[^\\s"'\`<>\\\\]+`,
+    'g',
+  );
+  let refs = 0;
+  walk(root, (file) => {
+    if (!TEXT_EXT.has(path.extname(file).toLowerCase())) return;
+    for (const _match of fs.readFileSync(file, 'utf8').matchAll(pattern)) refs += 1;
+  });
+  return refs;
 }
 
 /** Locale names and default locale from docusaurus.config.ts, when readable. */
@@ -265,13 +319,19 @@ function llmsInventory(root, basePath) {
 }
 
 function main() {
-  const {build, pruneUnreferencedLlmsFull} = parseArgs(process.argv.slice(2));
+  const {build, pruneUnreferencedLlmsFull, assetOrigin, assetHost} =
+    parseArgs(process.argv.slice(2));
   const root = path.resolve(build);
   const locales = detectLocales(root);
   if (locales.length === 0) {
     console.error(
       'slim: monolingual build (no locale subdirectories): ' +
-        'nothing to delete or rewrite under a locale tree; only build/img is pruned',
+        'nothing to delete or rewrite under a locale tree; ' +
+        (assetOrigin
+          ? 'assets are external (ASSET_ORIGIN)'
+          : assetHost
+            ? 'asset host: build/img is kept in full'
+            : 'only build/img is pruned'),
     );
   }
   const localePatterns = locales.map((locale) => ({
@@ -380,22 +440,57 @@ function main() {
   // is a second copy of a file the browser already downloaded. Drop exactly the
   // files no page, bundle or feed asks for; a referenced file is never touched,
   // and an empty scan is a failure, never "delete everything".
+  //
+  // Shared asset origin: the deployment publishes no `static/`, so `build/img`
+  // does not exist and every asset reference is an absolute URL on the hub
+  // site. There is nothing to prune or restore; count the external references
+  // so the deploy log still shows the assets are wired up.
   let prunedImgFiles = 0;
   let prunedImgBytes = 0;
   let scannedRequestFiles = 0;
-  const referencedImages = new Set();
-  walk(root, (file) => {
-    if (!REQUEST_EXT.has(path.extname(file).toLowerCase())) return;
-    scannedRequestFiles += 1;
-    const content = fs.readFileSync(file, 'utf8');
-    for (const match of content.matchAll(/\/img\/([A-Za-z0-9._%+-]+)/g)) referencedImages.add(match[1]);
-  });
-  if (scannedRequestFiles === 0 || referencedImages.size === 0) {
-    throw new Error(`refusing to prune build/img: the reference scan found ${referencedImages.size} name(s) in ${scannedRequestFiles} file(s)`);
-  }
-  const imgRoot = path.join(root, 'img');
+  let externalAssetRefs = 0;
+  let referencedImageCount = 0;
   const restoredImgFiles = [];
-  if (fs.existsSync(imgRoot)) {
+  const imgRoot = path.join(root, 'img');
+  if (assetOrigin) {
+    externalAssetRefs = countExternalAssetRefs(root, assetOrigin);
+    console.error(
+      `slim: external assets: ${externalAssetRefs} refs (ASSET_ORIGIN=${assetOrigin}); ` +
+        'build/img and static/ asset copies are not published by this deployment',
+    );
+    if (fs.existsSync(imgRoot)) {
+      console.error('slim: note: build/img exists although ASSET_ORIGIN is set; left untouched');
+    }
+  } else if (assetHost) {
+    // The hub site for localized deployments: it must keep every `/img/<name>`
+    // because localized pages load Markdown images from there (this site's own
+    // pages use the `assets/images` copies Webpack emits).
+    if (!fs.existsSync(imgRoot)) {
+      throw new Error('refusing to mark this build as asset host: build/img does not exist');
+    }
+    const kept = treeBytes(imgRoot);
+    referencedImageCount = kept.files;
+    console.error(
+      `slim: asset host: kept ${kept.files} build/img file(s) (${kept.bytes} bytes) ` +
+        'so localized sites can load /img/… (pruning disabled)',
+    );
+  } else {
+    if (!fs.existsSync(imgRoot)) {
+      throw new Error(
+        'refusing to prune build/img: the directory does not exist. ' +
+          'A localized build without static/ must set ASSET_ORIGIN (or --asset-origin).',
+      );
+    }
+    const referencedImages = new Set();
+    walk(root, (file) => {
+      if (!REQUEST_EXT.has(path.extname(file).toLowerCase())) return;
+      scannedRequestFiles += 1;
+      const content = fs.readFileSync(file, 'utf8');
+      for (const match of content.matchAll(/\/img\/([A-Za-z0-9._%+-]+)/g)) referencedImages.add(match[1]);
+    });
+    if (scannedRequestFiles === 0 || referencedImages.size === 0) {
+      throw new Error(`refusing to prune build/img: the reference scan found ${referencedImages.size} name(s) in ${scannedRequestFiles} file(s)`);
+    }
     // `static/img` is the source of every `/img/<name>`; Docusaurus copies it
     // wholesale, but a referenced picture can be absent from the output
     // (observed on the zh-Hans hardware page: an `<Img>` URL the pages request
@@ -425,6 +520,8 @@ function main() {
       fs.rmSync(file, {force: true});
       prunedImgFiles += 1;
     }
+    externalAssetRefs = 0;
+    referencedImageCount = referencedImages.size;
   }
 
   let remainingBytes = 0;
@@ -455,7 +552,10 @@ function main() {
     rewrittenFiles,
     rewrittenOccurrences,
     rewrittenBytesSaved,
-    referencedImages: referencedImages.size,
+    assetOrigin,
+    assetHost,
+    externalAssetRefs,
+    referencedImages: referencedImageCount,
     restoredImgFiles,
     prunedImgFiles,
     prunedImgBytes,

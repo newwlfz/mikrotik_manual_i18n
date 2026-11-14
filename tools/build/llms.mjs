@@ -23,6 +23,14 @@
  * 不要用路由前缀（`docs/`）去拼当前版本的全文链接。
  * 不再输出 `-----------` 之类的分隔线。
  *
+ * ## 共享资源（`ASSET_ORIGIN`）
+ *
+ * 语种仓不再保存 `static/`，但语料里的图片仍是 `/img/<hash>.webp` 这种站内
+ * 根路径——它在中文站上会 404。设置了 `ASSET_ORIGIN` 时，写完 llms.txt 之后
+ * 再把 `llms-full.txt` 与插件生成的每页 Markdown 副本里的资源链接改写到该
+ * 源站（与 `tools/build/remark-prefix-root-refs.mjs` 的 HTML 改写同一组前缀）。
+ * 未设置时行为不变。
+ *
  *   node tools/build/llms.mjs                 # 写 build/ 下的全部 llms.txt
  *   node tools/build/llms.mjs --out /tmp/x    # 写到别处（验证用）
  *   node tools/build/llms.mjs --json          # 输出统计
@@ -40,6 +48,53 @@ const args = process.argv.slice(2);
 const outArg = args.indexOf('--out');
 const OUT = outArg >= 0 && args[outArg + 1] ? path.resolve(args[outArg + 1]) : path.join(REPO, 'build');
 const asJson = args.includes('--json');
+
+/**
+ * 共享资源源站（`ASSET_ORIGIN`，不带尾斜杠）或 `null`。
+ *
+ * 语料里的资源链接是源码 `/img/…` 的原样拷贝，浏览器/LLM 客户端按中文站
+ * 域名解析会 404；这里与 remark 插件用同一组前缀改写到英文站。
+ */
+const SHARED_ASSET_ORIGIN = (process.env.ASSET_ORIGIN || '').trim().replace(/\/+$/, '');
+
+/** 文档链接目标或 HTML 属性里的站内资源路径（`/img/`、`/assets/`、…）。 */
+const SHARED_ASSET_LINK_RE =
+  /(\]\(\s*["']?|\b(?:src|href|poster)\s*=\s*["'])(\/(?:img|assets|videos|official|cli)\/)/g;
+
+function walkFiles(root, visit) {
+  if (!fs.existsSync(root)) return;
+  for (const entry of fs.readdirSync(root, {withFileTypes: true})) {
+    const full = path.join(root, entry.name);
+    if (entry.isDirectory()) walkFiles(full, visit);
+    else if (entry.isFile()) visit(full);
+  }
+}
+
+/**
+ * 把 llms 语料里的资源链接改写到 `ASSET_ORIGIN`。
+ *
+ * 覆盖插件生成的每页 `.md` 副本和每份 `llms-full.txt`（`llms.txt` 本身只有
+ * 页面链接，没有资源链接）。返回改写统计，供 `--json` 与日志使用。
+ */
+function rewriteSharedAssetLinks(root) {
+  const result = {origin: SHARED_ASSET_ORIGIN, files: 0, refs: 0};
+  if (!SHARED_ASSET_ORIGIN) return result;
+  walkFiles(root, (file) => {
+    const name = path.basename(file);
+    if (!name.endsWith('.md') && name !== 'llms-full.txt') return;
+    const before = fs.readFileSync(file, 'utf8');
+    let refs = 0;
+    const after = before.replace(SHARED_ASSET_LINK_RE, (whole, prefix, assetPath) => {
+      refs += 1;
+      return `${prefix}${SHARED_ASSET_ORIGIN}${assetPath}`;
+    });
+    if (after === before) return;
+    fs.writeFileSync(file, after);
+    result.files += 1;
+    result.refs += refs;
+  });
+  return result;
+}
 
 // 与 docusaurus.config.ts 同源（环境变量优先），不维护第二套 fallback。
 const SITE_URL = normalizeSiteUrl(resolveSiteUrl().value);
@@ -426,9 +481,18 @@ for (const target of targets) {
   });
 }
 
+// 语料是源码 Markdown 的拷贝，资源链接仍是 `/img/…`；共享资源模式下改写到
+// 英文站。放在写 llms.txt 之后，`llms.txt` 自身不含资源链接。
+const sharedAssets = rewriteSharedAssetLinks(OUT);
+
 if (asJson) {
-  console.log(JSON.stringify({written}, null, 2));
+  console.log(JSON.stringify({written, sharedAssets}, null, 2));
 } else {
+  if (SHARED_ASSET_ORIGIN) {
+    console.log(
+      `shared assets: ${sharedAssets.refs} refs in ${sharedAssets.files} file(s) -> ${SHARED_ASSET_ORIGIN}`,
+    );
+  }
   for (const item of written) {
     console.log(`${item.file}  (${item.locale} ${item.version}, ${item.pages} 页, ${item.groups} 个分类)`);
   }

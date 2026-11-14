@@ -12,6 +12,9 @@ import type * as Preset from '@docusaurus/preset-classic';
  *   SITE_URL / BASE_URL    本站的绝对域名与路径前缀
  *   LOCALE_EN_URL / _BASE_URL  英文站的绝对域名 / 前缀
  *   LOCALE_ZH_URL / _BASE_URL  中文站的绝对域名 / 前缀
+ *   ASSET_ORIGIN           共享资源源站（英文站基址，例
+ *                          `https://newwlfz.github.io/mikrotik_manual_i18n`）：
+ *                          站内资源引用改写到该源站，语种仓不再自带 `static/`
  *
  * 缺省值描述的是 GitHub Pages 上的**站点对**：当前构建的语种占用
  * `SITE_URL`/`BASE_URL`，另一个语种回落到它自己的规范前缀。显式的
@@ -61,12 +64,16 @@ const zhHome = `${zhSiteUrl}${zhBaseUrl}`.replace(/\/+$/, '');
 const enHome = `${enSiteUrl}${enBaseUrl}`.replace(/\/+$/, '');
 
 /**
- * 静态资源根：**不带 locale** 的 baseUrl，构建期写进
- * `customFields.assetBaseUrl`，供 `<Img>`、导航 Logo、favicon 与
- * `cli-compare.json`/pagefind 这类「资源不是路由」的引用使用。
+ * 本产物自己的资源根：**不带 locale** 的 baseUrl。
  *
- * 为什么需要它：Docusaurus 3.10 对非默认语种把 `siteConfig.baseUrl` 改成
- * `/mikrotik_manual_i18n/zh-Hans/`
+ * 两个用途，且都必须是**站内路径**，不能是别的域名：
+ *   1. Webpack 的 `publicPath`（`docusaurusAssetPublicPath` / mdx-loader 的
+ *      内联 loader query）。本仓渲染出来的 chunk、字体、以及每页 `img/` 目录
+ *      里的图片都发布在本站的 `assets/` 下，前缀只能指向本站。
+ *   2. pagefind 索引（`build/pagefind` 每次构建都在本站生成）。
+ *
+ * 为什么不能用 `siteConfig.baseUrl`：Docusaurus 3.10 对非默认语种把
+ * `siteConfig.baseUrl` 改成 `/mikrotik_manual_i18n/zh-Hans/`
  * （`@docusaurus/core/lib/server/site.js:64-67`），该值被烘进
  * `build/zh-Hans/assets/js/main.*.js`。于是 `useBaseUrl` 在中文页产出
  * `/mikrotik_manual_i18n/zh-Hans/img/<hash>`；而 `tools/build/slim.mjs` 删掉
@@ -82,6 +89,30 @@ const assetBaseUrl = (() => {
   const withLeading = value.startsWith('/') ? value : `/${value}`;
   return withLeading.endsWith('/') ? withLeading : `${withLeading}/`;
 })();
+
+/**
+ * 共享资源源站（`ASSET_ORIGIN`，不带尾斜杠；未设置时为 `null`）。
+ *
+ * 语种仓不再保存 `static/`：图片/PDF/视频等字节留在英文站（资源宿主），
+ * 语种仓构建时把 `/img/…`、`/assets/…`、`/videos/…`、`/official/…`、
+ * `/cli/…` 改写到这个源站（`tools/build/remark-prefix-root-refs.mjs`）。
+ *
+ * 失效风险：英文站改名、换域名或换路径前缀，会同时打断所有语种站的资源；
+ * 改完必须同步更新每个语种仓的 `ASSET_ORIGIN`。以后若把资源放到独立 CDN，
+ * 只需要把 `ASSET_ORIGIN` 指向 CDN。
+ */
+const assetOrigin = (process.env.ASSET_ORIGIN || '').trim().replace(/\/+$/, '');
+
+/**
+ * 对外可见的资源根，写进 `customFields.assetBaseUrl`，供 `<Img>`、导航 Logo、
+ * favicon、`og:image` 与 `cli-compare.json`（CLI 对比数据也属于共享资源）
+ * 使用：设置了 `ASSET_ORIGIN` 就是英文站的绝对地址，否则回落到本站的
+ * `assetBaseUrl`——未设置时行为与旧版完全一致。
+ *
+ * **不要**把它交给 Webpack 或 pagefind：那些资源由本仓发布，见上面
+ * `assetBaseUrl` 的说明（`customFields.localAssetBaseUrl`）。
+ */
+const sharedAssetBaseUrl = assetOrigin ? `${assetOrigin}/` : assetBaseUrl;
 /**
  * Markdown 图片/附件走的是 mdx-loader 生成的**内联 loader 字符串**
  * （`!url-loader?...&fallback=file-loader!`），不经过 `module.rules`，所以
@@ -374,7 +405,22 @@ const config: Config = {
   // 静态注入，SSR 与客户端一致。
   // Locale-independent asset root for client-side references; see the
   // `assetBaseUrl` comment at the top of this file.
-  customFields: {assetBaseUrl, siteLocale},
+  customFields: {
+    // 共享资源根（可能是英文站的绝对地址）；见 `sharedAssetBaseUrl`。
+    assetBaseUrl: sharedAssetBaseUrl,
+    // 本产物自己发布的资源根（Webpack publicPath、pagefind），始终是站内路径。
+    localAssetBaseUrl: assetBaseUrl,
+    siteLocale,
+  },
+
+  /**
+   * `static/` 是**英文站**（资源宿主）的资源树。语种仓在
+   * `ASSET_ORIGIN` 模式下既不下载也不发布它：把 `staticDirectories` 设为空，
+   * 遗留的 `static/`（例如旧的 content release 解压出来的）会被完全忽略，
+   * Docusaurus 不会把它复制进 `build/`（`StaticDirectoriesCopyPlugin` 对空
+   * 列表直接返回 `undefined`）。未设置时仍是默认的 `['static']`。
+   */
+  staticDirectories: assetOrigin ? [] : ['static'],
 
   // Three doc versions and two locales do not fit in Node's default heap, and
   // the static renderer is the peak. `ssgWorkerThreads` renders in worker
@@ -469,7 +515,7 @@ const config: Config = {
       attributes: {
         rel: 'icon',
         type: 'image/svg+xml',
-        href: `${assetBaseUrl}img/favicon.svg`,
+        href: `${sharedAssetBaseUrl}img/favicon.svg`,
       },
     },
     {
@@ -492,6 +538,10 @@ const config: Config = {
           // instead of the `<img>` JSX they are rewritten into.
           beforeDefaultRemarkPlugins: [
             require('./src/remark/normalize-compliance-marks.mjs').default,
+            // `ASSET_ORIGIN` 模式必须跑在 `transformImage` / `transformLinks`
+            // 之前：它们会把 `/img/…` 解析成本地文件并 `require()`，而语种仓
+            // 没有 `static/`。未设置 `ASSET_ORIGIN` 时这一步不动 Markdown 节点。
+            require('./tools/build/remark-prefix-root-refs.mjs').default,
           ],
           remarkPlugins: [
             require('./src/remark/fence-language.mjs').default,
@@ -523,6 +573,12 @@ const config: Config = {
           blogDescription: 'MikroTik product news',
           showReadingTime: true,
           onUntruncatedBlogPosts: 'ignore',
+          beforeDefaultRemarkPlugins: [
+            // `ASSET_ORIGIN` 模式必须跑在 `transformImage` / `transformLinks`
+            // 之前：它们会把 `/img/…` 解析成本地文件并 `require()`，而语种仓
+            // 没有 `static/`。未设置 `ASSET_ORIGIN` 时这一步不动 Markdown 节点。
+            require('./tools/build/remark-prefix-root-refs.mjs').default,
+          ],
           remarkPlugins: [
             require('./tools/build/remark-prefix-root-refs.mjs').default,
           ],
@@ -584,6 +640,10 @@ const config: Config = {
         sidebarPath: './sidebars-hardware.ts',
         beforeDefaultRemarkPlugins: [
           require('./src/remark/normalize-compliance-marks.mjs').default,
+          // `ASSET_ORIGIN` 模式必须跑在 `transformImage` / `transformLinks`
+          // 之前：它们会把 `/img/…` 解析成本地文件并 `require()`，而语种仓
+          // 没有 `static/`。未设置 `ASSET_ORIGIN` 时这一步不动 Markdown 节点。
+          require('./tools/build/remark-prefix-root-refs.mjs').default,
         ],
         remarkPlugins: [
           require('./src/remark/fence-language.mjs').default,
@@ -601,6 +661,12 @@ const config: Config = {
         blogDescription: 'Documentation updates',
         showReadingTime: false,
         onUntruncatedBlogPosts: 'ignore',
+        beforeDefaultRemarkPlugins: [
+          // `ASSET_ORIGIN` 模式必须跑在 `transformImage` / `transformLinks`
+          // 之前：它们会把 `/img/…` 解析成本地文件并 `require()`，而语种仓
+          // 没有 `static/`。未设置 `ASSET_ORIGIN` 时这一步不动 Markdown 节点。
+          require('./tools/build/remark-prefix-root-refs.mjs').default,
+        ],
         remarkPlugins: [
           require('./tools/build/remark-prefix-root-refs.mjs').default,
         ],
@@ -630,7 +696,11 @@ const config: Config = {
     // `/…/zh-Hans/img/logo.svg` (deleted by slim). An absolute URL is returned
     // untouched by `addBaseUrl`, so it keeps the locale-independent asset root;
     // it is built from `siteUrl` exactly like the canonical/og:url tags.
-    image: `${siteUrl.replace(/\/$/, '')}${assetBaseUrl}img/logo.svg`,
+    // `ASSET_ORIGIN` 模式下 `sharedAssetBaseUrl` 已经是绝对地址，不能再拼
+    // `siteUrl`（会得到 `https://sitehttps://origin/...`）。
+    image: assetOrigin
+      ? `${sharedAssetBaseUrl}img/logo.svg`
+      : `${siteUrl.replace(/\/$/, '')}${assetBaseUrl}img/logo.svg`,
     navbar: {
       title: 'MikroTik',
       logo: {

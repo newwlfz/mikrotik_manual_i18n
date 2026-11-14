@@ -2,7 +2,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const CLI_DIR = 'data/cli';
-const OUT = 'static/cli-compare.json';
+// `build-all.mjs` overrides this in `ASSET_ORIGIN` mode (localized sites do
+// not publish `static/`); the default keeps the English repository unchanged.
+const OUT = process.env.CLI_COMPARE_OUT || 'static/cli-compare.json';
 
 const versions = fs
   .readdirSync(CLI_DIR, {withFileTypes: true})

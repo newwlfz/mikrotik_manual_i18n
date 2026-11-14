@@ -41,11 +41,14 @@ Deployment knobs (all optional, each has a working default):
 | `LOCALE_EN_BASE_URL` | `BASE_URL` for the English build, else `/mikrotik_manual_i18n/` | English site path prefix |
 | `LOCALE_ZH_URL` | `SITE_URL` | Chinese site origin |
 | `LOCALE_ZH_BASE_URL` | `BASE_URL` for the Chinese build, else `/mikrotik_manual_zh_hans/` | Chinese site path prefix |
+| `ASSET_ORIGIN` | unset (local assets) | Shared asset origin for localized sites: the English site base address, with its path prefix and no trailing slash. The Chinese build sets `/img/`, `/assets/`, `/videos/`, `/official/` and `/cli/` references to it; this repository leaves it unset. See `guides/CI.md`. |
+| `ASSET_HOST` | unset | Asset-host build: `slim` keeps the full `build/img` tree (~99 MiB) so localized sites can load `/img/…`; set in `pages.yml` |
 | `BUILD_HEAP_MB` | `10240` | Node heap for the build (`npm run build:lowmem` uses 6144) |
 
 The Chinese mirror (`repo_zh_hans`) carries **the same `docusaurus.config.ts`
 file** and supplies the other side through these variables, so no site-specific
-literal lives in the config.
+literal lives in the config. It also does not ship `static/`: its assets come
+from this site through `ASSET_ORIGIN`.
 
 A local acceptance build:
 

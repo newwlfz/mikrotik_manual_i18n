@@ -22,11 +22,22 @@
  * could leave the same shape behind, so both a page reference and a stray
  * `static/` file are still failures.
  *
+ * ## Shared asset origin
+ *
+ * A localized repository does not ship `static/`; it publishes absolute URLs on
+ * the English site (`ASSET_ORIGIN`, see `guides/CI.md`). References under that
+ * origin are **external**: their existence is not checked against `build/`, but
+ * they are counted and reported so a build that silently lost its asset wiring
+ * is visible. Local references (including everything else in `build/`) are
+ * still checked as before. `--asset-origin=<url>` overrides `$ASSET_ORIGIN`.
+ * When `static/` is absent the source-PDF existence checks are skipped with a
+ * note (there is nothing local to check against).
+ *
  * Usage:
- *   node tools/verify/asset-refs.mjs [--build=build]
+ *   node tools/verify/asset-refs.mjs [--build=build] [--asset-origin=<url>]
  *
  * Exit code is 1 on a locale-prefixed reference, a double-hash PDF, or a
- * missing file.
+ * missing local file.
  */
 
 import fs from 'node:fs';
@@ -83,15 +94,28 @@ function stripBaseUrl(url, baseUrl) {
 
 function parseArgs(argv) {
   let build = 'build';
+  let assetOrigin = String(process.env.ASSET_ORIGIN || '').trim().replace(/\/+$/, '') || null;
   for (const arg of argv) {
     if (arg === '--help' || arg === '-h') {
-      console.log('usage: node tools/verify/asset-refs.mjs [--build=<dir>]');
+      console.log(
+        'usage: node tools/verify/asset-refs.mjs [--build=<dir>] [--asset-origin=<url>]',
+      );
       process.exit(0);
     }
     if (arg.startsWith('--build=')) build = arg.slice('--build='.length);
-    else throw new Error(`unknown argument: ${arg}`);
+    else if (arg.startsWith('--asset-origin=')) {
+      assetOrigin = arg.slice('--asset-origin='.length).trim().replace(/\/+$/, '') || null;
+    } else throw new Error(`unknown argument: ${arg}`);
   }
-  return {build: path.resolve(process.cwd(), build)};
+  return {build: path.resolve(process.cwd(), build), assetOrigin};
+}
+
+/** Matches one absolute shared-asset URL (`${origin}/img/…`, `/assets/…`, …). */
+function externalAssetPattern(origin) {
+  return new RegExp(
+    `${escapeRegExp(origin)}/(?:img|assets|videos|official|cli)/[^\\s"'\`<>\\\\]+`,
+    'g',
+  );
 }
 
 function readLocaleConfig() {
@@ -150,6 +174,9 @@ function scanSources() {
   const localePrefixed = [];
   const missing = [];
   let refs = 0;
+  // A localized checkout has no `static/`: the PDFs live on the shared asset
+  // origin, so only the link shape can be checked here, not the file.
+  const canCheckLocalFiles = fs.existsSync(STATIC_FILES);
   for (const file of mdFiles) {
     const content = fs.readFileSync(file, 'utf8');
     const rel = path.relative(REPO, file);
@@ -158,6 +185,7 @@ function scanSources() {
     }
     for (const match of content.matchAll(PDF_REF_RE)) {
       refs += 1;
+      if (!canCheckLocalFiles) continue;
       const name = decodePath(match[1]);
       if (!fs.existsSync(path.join(STATIC_FILES, name)) && !KNOWN_MISSING.has(`/assets/files/${name}`)) {
         missing.push(`${rel}:${lineOf(content, match.index)}: ${name}`);
@@ -168,7 +196,7 @@ function scanSources() {
       localePrefixed.push(`${rel}:${lineOf(content, index)}: /zh-Hans/assets/files/`);
     }
   }
-  return {mdFiles: mdFiles.length, refs, doubleHash, localePrefixed, missing};
+  return {mdFiles: mdFiles.length, refs, doubleHash, localePrefixed, missing, canCheckLocalFiles};
 }
 
 function staticAnomalies() {
@@ -177,7 +205,7 @@ function staticAnomalies() {
 }
 
 function main() {
-  const {build} = parseArgs(process.argv.slice(2));
+  const {build, assetOrigin} = parseArgs(process.argv.slice(2));
   const root = path.resolve(build);
   if (!fs.existsSync(root) || !fs.statSync(root).isDirectory()) {
     throw new Error(`build directory not found: ${root}`);
@@ -185,6 +213,7 @@ function main() {
 
   const baseUrl = normalizeBaseUrl(resolveBaseUrl().value);
   const assetUrlRe = assetUrlPattern(baseUrl);
+  const externalRe = assetOrigin ? externalAssetPattern(assetOrigin) : null;
 
   const config = readLocaleConfig();
   const nonDefaultLocales = config
@@ -205,13 +234,27 @@ function main() {
   const localeHits = [];
   const doubleHashHits = [];
   const refs = new Map(); // url path -> first source file
+  const externalRefs = new Map(); // absolute URL -> first source file
   let localeHitCount = 0;
   let doubleHashCount = 0;
   let refCount = 0;
+  let externalRefCount = 0;
 
   for (const file of files) {
-    const content = fs.readFileSync(file, 'utf8');
+    const source = fs.readFileSync(file, 'utf8');
     const rel = path.relative(root, file);
+
+    // External (shared-origin) references: count them, then remove them from
+    // the text the local checks see, so the `/img/…` inside an absolute URL is
+    // not mistaken for a local path.
+    let content = source;
+    if (externalRe) {
+      for (const match of source.matchAll(externalRe)) {
+        externalRefCount += 1;
+        if (!externalRefs.has(match[0])) externalRefs.set(match[0], rel);
+      }
+      content = source.replace(externalRe, '');
+    }
 
     for (const match of content.matchAll(localePrefixRe)) {
       localeHitCount += 1;
@@ -254,7 +297,16 @@ function main() {
   const sourceDoubleHash = [...doubleHashHits, ...sources.doubleHash];
 
   console.log(`asset-refs: scanned ${files.length} html/xml files, ${refCount} refs (${refs.size} unique)`);
-  console.log(`asset-refs: scanned ${sources.mdFiles} source .md files, ${sources.refs} pdf links`);
+  if (assetOrigin) {
+    console.log(
+      `asset-refs: shared asset origin = ${assetOrigin} ` +
+        `(external refs = ${externalRefCount}, ${externalRefs.size} unique; local existence not checked)`,
+    );
+  }
+  console.log(
+    `asset-refs: scanned ${sources.mdFiles} source .md files, ${sources.refs} pdf links` +
+      (sources.canCheckLocalFiles ? '' : ' (static/ absent: source file existence not checked)'),
+  );
   console.log(`asset-refs: locale-prefixed asset refs = ${localeHitCount + sources.localePrefixed.length} (build ${localeHitCount}, sources ${sources.localePrefixed.length})`);
   for (const hit of [...localeHits, ...sources.localePrefixed].slice(0, 10)) console.log(`  LOCALE ${hit}`);
   console.log(`asset-refs: double-hash pdf refs = ${sourceDoubleHash.length} (build ${doubleHashCount}, sources ${sources.doubleHash.length})`);

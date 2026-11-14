@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import {useAssetBaseUrl} from '@site/src/lib/asset-url';
+import {useLocalAssetBaseUrl} from '@site/src/lib/asset-url';
 
 type SubResult = {
   title: string;
@@ -38,10 +38,11 @@ function subResults(result: ResultData) {
 }
 
 export default function SearchBox() {
-  // Pagefind is built once at the site root and shared by every locale, so the
-  // index is a static asset: it uses the locale-independent asset root, not the
-  // localized `siteConfig.baseUrl` (`/…/zh-Hans/`).
-  const baseUrl = useAssetBaseUrl();
+  // Pagefind is built by *this* deployment (`build/pagefind`) and indexed in
+  // this site's language, so it must load from the local asset root. The shared
+  // root (`useAssetBaseUrl()`) can point at the English origin when
+  // `ASSET_ORIGIN` is set: using it here would search the English index.
+  const baseUrl = useLocalAssetBaseUrl();
   // The CLI section heading follows the UI locale. `locale` used to be a local
   // constant here; it was dropped with the baseUrl rewrite while the heading
   // still read it, so rendering a CLI result threw `locale is not defined`.
