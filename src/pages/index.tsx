@@ -134,8 +134,18 @@ function readZhHome(): string | null {
   return value.replace(/\/+$/, '');
 }
 
+function readSiteLocale(): string | null {
+  if (typeof document === 'undefined') return null;
+  const meta = document.querySelector('meta[name="docusaurus-site-locale"]');
+  return meta?.getAttribute('content')?.trim() || null;
+}
+
 function targetPath(currentLocale: string): string {
   const baseUrl = readBaseUrl();
+  // 中文站自己：落地页永远进本站文档，不做跨仓跳转。只有英文站才按浏览器
+  // 语言把读者送去中文站（与 locale-detect / <head> 脚本一致）。
+  const siteLocale = readSiteLocale();
+  if (siteLocale && siteLocale !== 'en') return `${baseUrl}${DOCS_ENTRY}`;
   if (targetIsChinese(currentLocale)) {
     const zhHome = readZhHome();
     // 跨仓入口：落到中文站自己的文档入口，而不是英文站里不存在的子目录。

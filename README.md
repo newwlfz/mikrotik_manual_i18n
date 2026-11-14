@@ -34,12 +34,18 @@ Deployment knobs (all optional, each has a working default):
 
 | Variable | Default | Meaning |
 | --- | --- | --- |
-| `SITE_URL` | `https://newwlfz.github.io` | English site origin (`canonical`, `hreflang`) |
-| `BASE_URL` | `/mikrotik_manual_i18n/` | English site path prefix |
-| `SITE_LOCALE` | `en` | The locale this build produces (`docusaurus build --locale`) |
+| `SITE_URL` | `https://newwlfz.github.io` | This site's origin (`canonical`, `hreflang`) |
+| `BASE_URL` | `/mikrotik_manual_i18n/` (or `/mikrotik_manual_zh_hans/` when `SITE_LOCALE=zh-Hans`) | This site's path prefix |
+| `SITE_LOCALE` | `en` | The single locale this build produces (`docusaurus build --locale`) |
+| `LOCALE_EN_URL` | `SITE_URL` | English site origin |
+| `LOCALE_EN_BASE_URL` | `BASE_URL` for the English build, else `/mikrotik_manual_i18n/` | English site path prefix |
 | `LOCALE_ZH_URL` | `SITE_URL` | Chinese site origin |
-| `LOCALE_ZH_BASE_URL` | `/mikrotik_manual_zh_hans/` | Chinese site path prefix |
+| `LOCALE_ZH_BASE_URL` | `BASE_URL` for the Chinese build, else `/mikrotik_manual_zh_hans/` | Chinese site path prefix |
 | `BUILD_HEAP_MB` | `10240` | Node heap for the build (`npm run build:lowmem` uses 6144) |
+
+The Chinese mirror (`repo_zh_hans`) carries **the same `docusaurus.config.ts`
+file** and supplies the other side through these variables, so no site-specific
+literal lives in the config.
 
 A local acceptance build:
 
@@ -53,17 +59,22 @@ npm run verify:deploy
 `docusaurus.config.ts` declares two locales but only builds one:
 
 - `en` — this site (`url = SITE_URL`, `baseUrl = BASE_URL`).
-- `zh-Hans` — `url = LOCALE_ZH_URL`, `baseUrl = LOCALE_ZH_BASE_URL`,
-  `translate: false`. No `i18n/zh-Hans/` overlays live here.
+- `zh-Hans` — `url = LOCALE_ZH_URL`, `baseUrl = LOCALE_ZH_BASE_URL`. No
+  `i18n/zh-Hans/` overlays live here, and `translate` is off in this build
+  (`siteLocale === 'zh-Hans'` is false). The Chinese repository uses the same
+  config file with `SITE_LOCALE=zh-Hans`, which turns content/theme
+  translation on for its own overlay tree.
 
 Because every `localeConfigs` entry carries its own `url`/`baseUrl`, Docusaurus
 generates the language dropdown, the per-page `hreflang` alternates and
 `og:locale:alternate` for the Chinese site without any Chinese page being
 built. `tools/build/index.mjs` builds with `--locale en` only, so
-`build/zh-Hans/` never exists; the same base URL is injected into
-`<meta name="docusaurus-zh-home">` so the head script,
-`src/clientModules/locale-detect.js` and `src/pages/index.tsx` send Chinese
-browsers to the other repository instead of a 404 inside this one.
+`build/zh-Hans/` never exists; the Chinese base URL is injected into
+`<meta name="docusaurus-zh-home">` and the build's own locale into
+`<meta name="docusaurus-site-locale">`. The head script,
+`src/clientModules/locale-detect.js` and `src/pages/index.tsx` only run the
+Chinese-browser redirect when that locale is `en` — the Chinese build of the
+same config therefore never redirects to itself.
 
 ## Route map
 

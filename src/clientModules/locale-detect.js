@@ -357,8 +357,26 @@ function detectZhHome() {
   return value.replace(/\/+$/, '');
 }
 
+/**
+ * 本次构建的语种（`<meta name="docusaurus-site-locale">`，构建期由
+ * `SITE_LOCALE` 注入）。中文站构建时这个值是 `zh-Hans`：它的页面已经是中文，
+ * 「把中文浏览器送到中文站」的自动跳转必须整个跳过，否则会自己跳自己。
+ * 旧产物没有这个 meta 时返回 `null`，行为与以前一致（只在英文站生效）。
+ */
+function detectSiteLocale() {
+  if (typeof document === 'undefined') return null;
+  const meta = document.querySelector('meta[name="docusaurus-site-locale"]');
+  const value = meta?.getAttribute('content')?.trim();
+  return value || null;
+}
+
 function run() {
   if (typeof window === 'undefined' || redirected) return;
+
+  // 只有英文站才做「中文浏览器 → 中文站」的跳转。中文站（SITE_LOCALE 为
+  // zh-Hans）自己不做任何跨站跳转。
+  const siteLocale = detectSiteLocale();
+  if (siteLocale && siteLocale !== 'en') return;
 
   const {pathname, search, hash} = window.location;
   const baseUrl = detectBaseUrl();

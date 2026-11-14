@@ -73,6 +73,7 @@ const versionedDocs = fs.existsSync(path.join(REPO, 'versioned_docs'))
 /** 分类标签：优先取 sidebars.ts 顶层的 label，取不到就用人读化的目录名。 */
 function topLevelLabels() {
   const labels = new Map();
+  let sidebarName = 'docs';
   const humanize = (segment) =>
     segment
       .split('-')
@@ -86,6 +87,7 @@ function topLevelLabels() {
     const eq = text.indexOf('= {');
     const end = text.lastIndexOf('};');
     const tree = JSON.parse(text.slice(eq + 2, end + 1));
+    sidebarName = Object.keys(tree)[0] || sidebarName;
     const walk = (items) => {
       for (const item of items || []) {
         if (item.type === 'category') {
@@ -96,11 +98,33 @@ function topLevelLabels() {
         }
       }
     };
-    walk(tree[Object.keys(tree)[0]]);
+    walk(tree[sidebarName]);
   } catch {
     // sidebars.ts 结构变了也不要让生成失败：下面按目录名兜底。
   }
-  return {labels, humanize};
+  return {labels, humanize, sidebarName};
+}
+
+/**
+ * 侧边栏分类标签的翻译覆盖。
+ *
+ * Docusaurus 构建时用 `i18n/<locale>/docusaurus-plugin-content-docs/<slot>.json`
+ * 里的 `sidebar.<sidebar>.<type>.<key>` 替换 `sidebars.ts` 的英文 label；
+ * `llms.txt` 的分类标题直接读 `sidebars.ts`，所以翻译语种必须优先查这份
+ * 映射，否则索引正文是中文、分类标题仍是英文。
+ */
+function sidebarTranslations(locale, slot) {
+  if (!locale) return {};
+  try {
+    return JSON.parse(
+      fs.readFileSync(
+        path.join(REPO, 'i18n', locale, 'docusaurus-plugin-content-docs', slot),
+        'utf8',
+      ),
+    );
+  } catch {
+    return {};
+  }
 }
 
 function firstDocId(items) {
@@ -114,7 +138,7 @@ function firstDocId(items) {
   return '';
 }
 
-const {labels, humanize} = topLevelLabels();
+const {labels, humanize, sidebarName} = topLevelLabels();
 
 function listMarkdown(dir) {
   if (!fs.existsSync(dir)) return [];
@@ -224,7 +248,18 @@ const INDEX_TEXT = {
   },
 };
 
-function buildLocale({locale, docsRoot, routePrefix, llmsFullPath, overlayRoot, versionLabel, defaultLocale}) {
+function buildLocale({
+  locale,
+  docsRoot,
+  routePrefix,
+  llmsFullPath,
+  overlayRoot,
+  versionLabel,
+  defaultLocale,
+  singleLocaleBuild,
+  sidebarName,
+  translationSlot,
+}) {
   const entries = listMarkdown(docsRoot).map((file) => pageInfo(file, docsRoot, overlayRoot));
   const sectionDirs = new Set(
     entries.filter((entry) => entry.relId.includes('/')).map((entry) => entry.relId.split('/')[0]),
@@ -246,17 +281,33 @@ function buildLocale({locale, docsRoot, routePrefix, llmsFullPath, overlayRoot, 
     return a.localeCompare(b);
   });
 
+  // 翻译语种优先用 sidebars 的翻译覆盖；取不到再退回 sidebars.ts 的英文
+  // label / 目录名，未翻译的分类不会因此消失。
+  const translations = sidebarTranslations(locale, translationSlot);
+  const localizedLabel = (key) => {
+    for (const type of ['category', 'doc']) {
+      const entry = translations[`sidebar.${sidebarName}.${type}.${key}`];
+      if (entry?.message) return entry.message;
+    }
+    return null;
+  };
+
   const text = INDEX_TEXT[locale] || INDEX_TEXT[defaultLocale] || INDEX_TEXT.en;
-  // Docusaurus serves the default locale from the site root and every other
-  // locale under `/<locale>/`, so the URL prefix follows the same rule.
-  const prefix = locale === defaultLocale ? '' : `${locale}/`;
+  // `docusaurus build --locale <X>` 把该语种写到 `build/` 根（`tools/build/
+  // index.mjs` 的单语种模式），没有 `/<locale>/` 路由前缀；只有同仓双语构建
+  // 才会把非默认语种放在 `/<locale>/` 下。跨仓镜像站（英文仓 / 中文仓各建
+  // 一个语种）属于前一种，URL 直接落在本站 baseUrl 下。
+  const prefix = singleLocaleBuild || locale === defaultLocale ? '' : `${locale}/`;
   // The corpus file is written by the plugin next to this llms.txt, not at a
   // route: current lives at the site/locale root, archives under docs/<v>/.
   const corpusUrl = abs(`${prefix}${llmsFullPath}`);
   const lines = [text.title, '', text.summary, '', text.note(versionLabel), '', `[${text.corpus}](${corpusUrl})`, ''];
 
   for (const key of keys) {
-    const heading = key === '__overview__' ? text.overview : labels.get(key) || humanize(key);
+    const heading =
+      key === '__overview__'
+        ? text.overview
+        : localizedLabel(key) || labels.get(key) || humanize(key);
     lines.push(`## ${heading}`, '');
     const sorted = groups.get(key).sort((a, b) => {
       // section 落地页（relId 与分类同名）排在最前，其余按路径。
@@ -316,6 +367,8 @@ const scopes = [
     // site-root one, not `docs/llms-full.txt`.
     llmsFullPath: 'llms-full.txt',
     versionLabel: currentVersion,
+    // 当前文档的侧边栏翻译槽位（Docusaurus 把 sidebars 标签抽出到这里）。
+    translationSlot: 'current.json',
     outRoot: OUT,
     versionOut: null,
   },
@@ -325,6 +378,7 @@ const scopes = [
     routePrefix: `docs/${version}/`,
     llmsFullPath: `docs/${version}/llms-full.txt`,
     versionLabel: version,
+    translationSlot: `version-${version}.json`,
     outRoot: path.join(OUT, 'docs', version),
     versionOut: version,
   })),
@@ -335,6 +389,10 @@ const scopes = [
 const targets = scopes.flatMap((scope) =>
   builtLocales.map((locale) => {
     const isDefault = locale === defaultLocale;
+    // 单语种构建（`SITE_LOCALE`/`--locale`）：产物就是 `build/` 本身，没有
+    // `build/<locale>/` 这一层；被构建的语种即使不是 `defaultLocale`，也写在
+    // 站点根。同仓双语构建仍按语种子目录写。
+    const atSiteRoot = Boolean(requestedLocale) || isDefault;
     return {
       locale,
       defaultLocale,
@@ -343,7 +401,10 @@ const targets = scopes.flatMap((scope) =>
       routePrefix: scope.routePrefix,
       llmsFullPath: scope.llmsFullPath,
       versionLabel: scope.versionLabel,
-      outDir: isDefault
+      singleLocaleBuild: Boolean(requestedLocale),
+      sidebarName,
+      translationSlot: scope.translationSlot,
+      outDir: atSiteRoot
         ? scope.outRoot
         : path.join(OUT, locale, scope.versionOut ? `docs/${scope.versionOut}` : ''),
     };
