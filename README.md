@@ -30,7 +30,7 @@ SITE_LOCALE=en npm run build   # cli data + docusaurus build (en) + pagefind + l
 npm run serve                  # or: npx docusaurus serve --port 3013 --no-open
 
 npm run locales:check          # validate locales.json (no network)
-npm run content:publish:dry    # print the docs/ + locales.json publish plan
+npm run content:publish:dry    # print the content-root + locales.json publish plan
 npm run content:publish        # push to the language repos (needs CROSS_REPO_TOKEN)
 ```
 
@@ -68,27 +68,38 @@ repository with its own translations, build and deployment.
 
 ```text
 hub  newwlfz/mikrotik_manual_i18n
-     docs/  static/  data/  locales.json
+     docs/  versioned_docs/  hardware/  blog/  changelog/  data/
+     sidebars.ts  sidebars-hardware.ts  versioned_sidebars/  versions.json
+     locales.json
+     static/  (assets, never published)
        |
        +-- build + deploy (pages.yml)
        |     -> https://newwlfz.github.io/mikrotik_manual_i18n/
        |
        +-- publish-content (pages.yml, CROSS_REPO_TOKEN)
-             |  docs/ + locales.json, one commit, only when something changed
+             |  every CONTENT_ROOTS root + locales.json,
+             |  one commit, only when something changed
              v
      language site  newwlfz/mikrotik_manual_zh_hans
-       i18n/zh-Hans/ (own overlays)   docs/ (synced)   locales.json (synced)
+       i18n/zh-Hans/ (own overlays)   content roots + locales.json (synced)
        |
        +-- translate + build + deploy (its own pages.yml)
              -> https://newwlfz.github.io/mikrotik_manual_zh_hans/
 ```
 
 **What the hub publishes.** For every non-default locale in `locales.json` the
-`publish-content` job clones that locale's repository, replaces its `docs/`
-tree with the hub's (pages deleted here disappear there), writes the hub's
-`locales.json`, and commits only if `git status --porcelain` is non-empty. The
-push triggers the language repository's `pages.yml` (translate → build →
-deploy). The destination's `i18n/`, `config/` and `work/` are never touched.
+`publish-content` job clones that locale's repository and copies every root in
+`CONTENT_ROOTS` (`tools/content/publish.mjs`): the directories `docs/`,
+`versioned_docs/`, `hardware/`, `blog/`, `changelog/`, `data/` and
+`versioned_sidebars/` replace the destination tree of the same name (pages
+deleted here disappear there), and the files `sidebars.ts`,
+`sidebars-hardware.ts` and `versions.json` are overwritten. It then writes the
+hub's `locales.json` and commits only if `git status --porcelain` is non-empty,
+so a run with no hub changes pushes nothing. The push triggers the language
+repository's `pages.yml` (translate → build → deploy). The destination's
+`i18n/`, `config/`, `work/`, `tools/`, `src/` and `.github/` are never touched.
+Before committing, the publisher asserts that the destination does not
+`.gitignore` any of those roots and fails with the exact rule if it does.
 Failure isolation, the full data flow and the security model are in
 [`guides/ARCHITECTURE-MULTISITE.md`](guides/ARCHITECTURE-MULTISITE.md); the
 accepted decisions and their trade-offs are in
@@ -130,7 +141,9 @@ silent skip. Locally: `export CROSS_REPO_TOKEN=…` then
 3. Run `npm run locales:check` and `npm run content:publish:dry` (no network).
 4. Run `npm run content:publish -- --only=<tag>` once locally, or let the next
    push to `main` do it, then confirm the language repository's workflow
-   started.
+   started. The repository must track every `CONTENT_ROOTS` root and
+   `locales.json`; the publisher aborts before the commit (naming the offending
+   `.gitignore` rule) if any of them is ignored.
 
 ### Cross-repository language entry
 

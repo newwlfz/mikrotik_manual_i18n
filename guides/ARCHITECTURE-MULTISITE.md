@@ -14,8 +14,8 @@ Related documents:
 
 | Component | Repository / location | Owns |
 | --- | --- | --- |
-| **Hub** | `newwlfz/mikrotik_manual_i18n` | Corrected English source (`docs/`), shared assets (`static/`), generated data (`data/`), version manifests, the locale registry (`locales.json`), the shared `docusaurus.config.ts`, and the publish job |
-| **Language site** | e.g. `newwlfz/mikrotik_manual_zh_hans` | Translation overlays (`i18n/<tag>/`), site-specific configuration (`config/`), local caches (`work/`), its own build/deploy workflow |
+| **Hub** | `newwlfz/mikrotik_manual_i18n` | Corrected English source (`docs/`, `versioned_docs/`, `hardware/`, `blog/`, `changelog/`), generated data (`data/`), navigation and version manifests (`sidebars.ts`, `sidebars-hardware.ts`, `versioned_sidebars/`, `versions.json`), shared assets (`static/`), the locale registry (`locales.json`), the shared `docusaurus.config.ts`, and the publish job |
+| **Language site** | e.g. `newwlfz/mikrotik_manual_zh_hans` | Translation overlays (`i18n/<tag>/`), site-specific configuration (`config/`), local caches (`work/`), tooling (`tools/`, `src/`), its own build/deploy workflow |
 | **GitHub Pages** | one project site per repository | The deployed site; each repository deploys only its own locale |
 | **Fine-grained PAT** | `CROSS_REPO_TOKEN` secret in the hub | `Contents: Read and write` on the language repositories; used only by the publish job |
 
@@ -34,7 +34,7 @@ The hub builds English only. A language repository builds exactly one locale
         └──────────────► one build per repo ◄───┘
                             │
                  tools/content/publish.mjs
-                            │  docs/ + locales.json
+                            │  every CONTENT_ROOTS root + locales.json
                             ▼
                  language repository (git commit + push)
                             │
@@ -47,9 +47,13 @@ The hub builds English only. A language repository builds exactly one locale
 hub (newwlfz/mikrotik_manual_i18n)
 ├── locales.json                    # the language registry (this design's core)
 ├── docusaurus.config.ts            # shared, byte-identical with every language repo
-├── docs/                           # corrected English documentation (published)
-├── static/                         # shared assets: /img, /assets, /videos, /official
-├── data/                           # CLI model, manifests, version routing
+├── docs/                           # corrected English documentation        (published)
+├── versioned_docs/                 # archived documentation versions        (published)
+├── hardware/  blog/  changelog/    # hardware guides, news, docs changes    (published)
+├── data/                           # CLI model, manifests, version routing  (published)
+├── sidebars.ts  sidebars-hardware.ts
+├── versioned_sidebars/  versions.json   # navigation + version manifests     (published)
+├── static/                         # shared assets: /img, /assets, /videos, /official (never published)
 ├── tools/content/
 │   ├── locales.js                  # read / validate / resolve the registry
 │   ├── check-locales.mjs           # npm run locales:check
@@ -59,15 +63,19 @@ hub (newwlfz/mikrotik_manual_i18n)
 language site (newwlfz/mikrotik_manual_zh_hans)
 ├── locales.json                    # synced from the hub
 ├── docusaurus.config.ts            # same file (tooling is updated deliberately)
-├── docs/                           # synced from the hub (must be tracked by git)
+├── docs/  versioned_docs/  hardware/  blog/  changelog/  data/
+├── sidebars.ts  sidebars-hardware.ts  versioned_sidebars/  versions.json
+│                                   # every content root above is synced and git-tracked
 ├── i18n/zh-Hans/                   # translation overlays — owned here, never published
 ├── config/                         # per-site configuration — owned here
 ├── work/                           # local caches — owned here
+├── tools/  src/                    # site tooling — owned here, never published
 └── .github/workflows/pages.yml     # translate + build + deploy
 ```
 
-`i18n/`, `config/` and `work/` are the language repository's own state. The
-publisher replaces `docs/` wholesale and writes `locales.json`; it does not
+`i18n/`, `config/`, `work/`, `tools/`, `src/` and `.github/` are the language
+repository's own state. The publisher replaces the content directories
+wholesale, overwrites the content files and writes `locales.json`; it does not
 delete or rewrite anything else.
 
 ## 3. The locale registry (`locales.json`)
@@ -156,9 +164,13 @@ publish_only**. The `publish_only` path skips the 13–14 minute build.
 ```
 for each locale in locales.json, except default:
   git clone --depth=1 https://x-access-token:$CROSS_REPO_TOKEN@github.com/<repo>.git <tmp>
-  assert <tmp> does not ignore docs/ or locales.json
-  replace <tmp>/docs/ with the hub's docs/   (destination-only files are deleted)
+  replace <tmp>/<dir> for every directory root:
+      docs/ versioned_docs/ hardware/ blog/ changelog/ data/ versioned_sidebars/
+      (destination-only files are deleted)
+  overwrite <tmp>/<file> for every file root:
+      sidebars.ts sidebars-hardware.ts versions.json
   write  <tmp>/locales.json
+  assert git ignores none of those roots (`git check-ignore -v`, every rule reported)
   git add -A
   if `git status --porcelain` is empty: skip this locale (idempotent)
   git -c user.name=… -c user.email=… commit -m "content: sync from hub <hub-sha>"
@@ -176,16 +188,26 @@ for each locale in locales.json, except default:
 - An unchanged locale produces no commit and no push — a nightly run with no
   content change is silent.
 - `node tools/content/publish.mjs --dry-run` prints the plan without cloning,
-  committing, pushing or using the network; it lists each target repository and
-  the number of `docs/` files that would be synced.
+  committing, pushing or using the network. It lists each target repository and,
+  for each of the ten content roots, whether it replaces a directory tree or
+  overwrites a file, with the file count and byte size; the last line totals
+  them.
+- The `.gitignore` assertion runs after the copies and **before** staging. Every
+  ignored root is reported with the matching rule (`git check-ignore -v`), so a
+  partially ignored destination fails instead of committing a silently partial
+  sync.
 - Exit codes: `0` all selected locales published or already up to date; `1`
   registry/argument/token errors or at least one locale failed.
 
-**What is published today:** `docs/` and `locales.json` only. `hardware/`,
-`blog/`, `changelog/` and `versioned_docs/` are still repository-local in the
-language site. Adding a root is a deliberate change to `CONTENT_ROOTS` in
-`tools/content/publish.mjs`, and only after that site's build tolerates the
-replaced tree.
+**What is published:** the ten entries in `CONTENT_ROOTS` — the directories
+`docs/`, `versioned_docs/`, `hardware/`, `blog/`, `changelog/`, `data/`,
+`versioned_sidebars/` and the files `sidebars.ts`, `sidebars-hardware.ts`,
+`versions.json` — plus `locales.json`. Adding or removing a root is a deliberate
+change to `CONTENT_ROOTS` in `tools/content/publish.mjs`, and only after the
+destination site's build tolerates the replaced tree. Both repositories must
+track every root: the publisher fails before the commit if the destination
+`.gitignore` covers one, and the language site's `pages.yml` asserts the same
+list before translating and before building.
 
 ## 6. Failure isolation
 
@@ -196,7 +218,7 @@ replaced tree.
 | `CROSS_REPO_TOKEN` missing | — | Job fails with an explicit `::error::` annotation and setup steps; never a silent skip | Nothing changes; the error is visible in Actions |
 | Token expired / lacks permission | — | Clone or push fails; output is redacted; other locales still run; job exits non-zero | That locale stays on its last content |
 | One locale fails | Other locales still publish (per-locale `try/catch`) | Summary lists `N published, M unchanged, K failed` | Only the failed site is stale |
-| Destination ignores `docs/` | — | Fails **before** commit with the exact `.gitignore` remediation | Prevents a false "success" with stale content |
+| Destination ignores a content root | — | Fails **before** commit, listing every ignored root with the matching `.gitignore` rule | Prevents a false "success" with stale or missing content |
 | Destination branch protection rejects push | — | Push fails, job exits non-zero | That locale stays on its last content |
 | Language-site build fails after a sync | Its deployment is skipped; GitHub Pages keeps the last successful deployment | Hub job already succeeded | The language site serves the previous build until fixed forward (or the sync commit is reverted) |
 | Concurrent runs | `concurrency.group: pages`, `cancel-in-progress: false` serialises the workflow | Same group | No interleaved deploys |
@@ -230,7 +252,7 @@ fixing the hub content; it is never a force-push.
 | Build output | `build/` + `build/<locale>/`; static assets duplicated per locale | One locale per repository, at the site root; no locale subdirectory |
 | Language switch | Relative path inside one site | Absolute URL to the other Pages site (`localeConfigs.url`) |
 | Translations | `i18n/<locale>/` next to the English source | Language repository owns its overlays; hub never sees them |
-| Content sync | Manual copies / release tarball | `publish-content` pushes `docs/` + `locales.json` and triggers the language workflow |
+| Content sync | Manual copies / release tarball | `publish-content` pushes every content root + `locales.json` and triggers the language workflow |
 | Assets | Copied into every locale tree | Hub is the asset host (`ASSET_HOST`); sites use `ASSET_ORIGIN` |
 | Deploy | One artifact for both languages | One artifact per site; a failure is contained to one site |
 | Secret | None needed | `CROSS_REPO_TOKEN` (fine-grained PAT) in the hub |
@@ -239,15 +261,18 @@ fixing the hub content; it is never a force-push.
 ## 9. Adopting an existing language repository
 
 The published content only takes effect when the language repository tracks it.
-`newwlfz/mikrotik_manual_zh_hans` currently **ignores `/docs/`** and downloads a
-content release at build time. Before the first successful sync:
+Before the first successful sync:
 
-1. Remove `/docs/` (and `/versioned_docs/`, `/hardware/`, `/blog/`,
-   `/changelog/` if they are to be published) from the language repository's
-   `.gitignore`. Keep `/work/` ignored.
+1. Remove every ignore rule that covers a content root from the language
+   repository's `.gitignore`: `/docs/`, `/versioned_docs/`, `/hardware/`,
+   `/blog/`, `/changelog/`, `/data/`, `/versioned_sidebars/`, `/sidebars.ts`,
+   `/sidebars-hardware.ts`, `/versions.json`, `/locales.json`. Keep `/work/`,
+   `/static/`, `/build/`, `/node_modules/` and the local caches ignored. Both
+   the publisher and the site's `pages.yml` assert this list; `git
+   check-ignore -v <root>` names the rule to delete.
 2. Remove the old "Fetch content release" step from its `pages.yml` (and its
-   `CONTENT_URL`), so the build uses the committed `docs/` tree. If the release
-   is kept for other sections, stop it from overwriting `docs/`.
+   `CONTENT_URL`), so the build uses the committed content roots. If the release
+   is kept for other sections, stop it from overwriting any published root.
 3. Apply the same `docusaurus.config.ts`, `tools/lib/site-config.mjs`,
    `tools/content/locales.js` and package scripts in one coordinated change, so
    the site reads the registry and resolves the same addresses as the hub.
@@ -256,9 +281,9 @@ content release at build time. Before the first successful sync:
 5. From then on, content changes flow from the hub only; edit overlays in the
    language repository and English content in the hub.
 
-Until step 1 is done, `node tools/content/publish.mjs` fails fast with the
-`.gitignore` remediation instead of reporting a successful sync that staged
-nothing.
+Until step 1 is done, `node tools/content/publish.mjs` fails before the commit
+with the offending `.gitignore` rules instead of reporting a successful sync
+that staged nothing.
 
 ## 10. Operations runbook
 
@@ -279,7 +304,8 @@ CROSS_REPO_TOKEN=… npm run content:publish -- --only=zh-Hans \
 
 - **Add a language**: create its repository, add a `locales.json` entry, run
   `npm run locales:check`, dry-run, then publish once (`--only=<tag>`). The
-  first publish needs the repository to track `docs/` and `locales.json`.
+  first publish needs the repository to track every content root and
+  `locales.json` (see §9).
 - **Change a site's address**: update that locale's `baseUrl`/`site`, then
   update the deployment variables in the affected repository (`SITE_URL`,
   `BASE_URL`, and every `ASSET_ORIGIN` that points at a moved asset host).

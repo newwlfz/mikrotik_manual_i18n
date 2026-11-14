@@ -4,7 +4,7 @@
 
 | 仓库 | 工作流 | 触发 | 作用 |
 |---|---|---|---|
-| 总管 `mikrotik_manual_i18n` | `pages.yml` | push `main` / 手动 | `build` 构建英文站；`deploy` 过部署门禁后发布；`publish-content` 把 `docs/` + `locales.json` 推到各语种仓 |
+| 总管 `mikrotik_manual_i18n` | `pages.yml` | push `main` / 手动 | `build` 构建英文站；`deploy` 过部署门禁后发布；`publish-content` 把 `CONTENT_ROOTS` 的十个内容根 + `locales.json` 推到各语种仓 |
 | 语种仓（如 `mikrotik_manual_zh_hans`） | `pages.yml` | push `main` / 手动 | `translate`（读取推过来的英文正文 + 本仓 `i18n/` 覆盖层）→ `build` → 门禁 → `deploy` |
 
 总管**不构建**任何其它语种，语种仓也**不构建**英文站；两个站点的语言下拉与
@@ -26,11 +26,16 @@ hreflang 通过 `locales.json` 里各自的绝对地址互相指向（见
 `publish_only`，`build`/`deploy` 会跳过，省掉 13–14 分钟构建。语种仓自己的
 `build` 是第二道门禁：内容有问题它就不会部署。
 
-每个非 default 语种：clone → 替换 `docs/` → 写 `locales.json` → 只有
-`git status --porcelain` 非空才 commit → push。push 触发语种仓的 `pages.yml`。
-令牌是 fine-grained PAT，存在**总管仓**的 Actions secret `CROSS_REPO_TOKEN`，
-不受本仓 `permissions: contents: read` 限制；缺失时 job 明确失败并给出配置步骤，
-不会静默跳过。
+每个非 default 语种：clone → 用总管的内容根整体替换目标树（目录）
+/ 覆盖写（`sidebars.ts`、`sidebars-hardware.ts`、`versions.json`）→ 写
+`locales.json` → 断言 `.gitignore` 没有忽略任一根（有则**提交前**失败并打印具体规则）
+→ 只有 `git status --porcelain` 非空才 commit → push。push 触发语种仓的
+`pages.yml`。内容根清单（`CONTENT_ROOTS`）：`docs/`、`versioned_docs/`、
+`hardware/`、`blog/`、`changelog/`、`data/`、`sidebars.ts`、
+`sidebars-hardware.ts`、`versioned_sidebars/`、`versions.json`；`static/` 不在其中
+（资源由英文站提供）。令牌是 fine-grained PAT，存在**总管仓**的 Actions secret
+`CROSS_REPO_TOKEN`，不受本仓 `permissions: contents: read` 限制；缺失时 job
+明确失败并给出配置步骤，不会静默跳过。
 
 ## 打开自动更新（GitHub 设置）
 
@@ -40,8 +45,11 @@ hreflang 通过 `locales.json` 里各自的绝对地址互相指向（见
      [ARCHITECTURE-MULTISITE.md](ARCHITECTURE-MULTISITE.md#7-security-model)。
 2. **Variables**（可选）：`SITE_URL` / `BASE_URL` 已写在 `pages.yml` 的 workflow
    env 里，`locales.json` 也有同样的默认值；只有 fork 或预览域名不同才需要改。
-3. **语种仓**：内容通过 git push 进入，所以它的 `docs/` 必须被 git 跟踪；
-   它自己的 `pages.yml` 负责 translate + build + deploy。迁移步骤见
+3. **语种仓**：内容通过 git push 进入，所以它的每一内容根都必须被 git 跟踪
+   （`.gitignore` 不能忽略 `docs/`、`versioned_docs/`、`hardware/`、`blog/`、
+   `changelog/`、`data/`、`sidebars*.ts`、`versioned_sidebars/`、`versions.json`、
+   `locales.json`）；它自己的 `pages.yml` 负责 translate + build + deploy。
+   迁移步骤见
    [ARCHITECTURE-MULTISITE.md](ARCHITECTURE-MULTISITE.md#9-adopting-an-existing-language-repository)。
 
 ## 首次启用建议顺序

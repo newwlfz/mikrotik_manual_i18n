@@ -3,10 +3,13 @@ name: Build and deploy site
 # 英文站（本仓库）是**总管**：
 #   1. build + deploy：把 docs/ 构建成英文站，部署到
 #      https://newwlfz.github.io/mikrotik_manual_i18n/ ；
-#   2. publish-content：把 docs/ 与 locales.json 推到各语种仓（当前是
-#      `mikrotik_manual_zh_hans`），由对方的工作流完成 translate + build +
-#      deploy。跨仓写入用 fine-grained PAT（secret `CROSS_REPO_TOKEN`），不受
-#      本仓 `permissions` 的限制；本仓权限仍是 `contents: read`。
+#   2. publish-content：把 `tools/content/publish.mjs` 的 CONTENT_ROOTS（docs/、
+#      versioned_docs/、hardware/、blog/、changelog/、data/、sidebars.ts、
+#      sidebars-hardware.ts、versioned_sidebars/、versions.json）与 locales.json
+#      推到各语种仓（当前是 `mikrotik_manual_zh_hans`），由对方的工作流完成
+#      translate + build + deploy。跨仓写入用 fine-grained PAT（secret
+#      `CROSS_REPO_TOKEN`），不受本仓 `permissions` 的限制；本仓权限仍是
+#      `contents: read`。
 #
 # 语种清单与各语种部署地址在仓库根的 `locales.json`，不要在这里再加一份。
 # 架构与失败隔离见 guides/ARCHITECTURE-MULTISITE.md。
@@ -16,7 +19,7 @@ on:
   workflow_dispatch:
     inputs:
       publish_only:
-        description: '只推送 docs/ + locales.json 到语种仓（跳过本仓 build/deploy）'
+        description: '只推送内容根 + locales.json 到语种仓（跳过本仓 build/deploy）'
         type: boolean
         default: false
 
@@ -107,7 +110,7 @@ jobs:
 
   publish-content:
     # 内容同步与本仓构建**解耦**：
-    #   - push 到 main：即使 build 失败也执行（docs/ 与 locales.json 是语种仓的
+    #   - push 到 main：即使 build 失败也执行（内容根与 locales.json 是语种仓的
     #     输入，本仓构建失败可能只是资源/页面问题；语种仓自己的 build 是第二道
     #     门禁，失败时它不会部署）；
     #   - workflow_dispatch + publish_only：build 被跳过，这里仍可用（修 secret、
