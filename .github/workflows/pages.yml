@@ -1,0 +1,77 @@
+name: Build and deploy site
+
+# 英文站（本仓库）单独构建成 `SITE_LOCALE=en` 的产物，部署到
+# https://newwlfz.github.io/mikrotik_manual_i18n/ 。
+# 中文站由 `mikrotik_manual_zh_hans` 用同一份 docusaurus.config.ts 构建，
+# 两个站点的语言下拉与 hreflang 互相指向对方的 Pages 地址。
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 官方模板用 false：true 会在新 push 时取消正在进行的部署，
+# 留下「artifact 已上传但 deploy 被砍」的中间态。
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+# 站点身份全部走环境变量：仓库里的 docusaurus.config.ts 与中文站逐字节相同。
+env:
+  SITE_LOCALE: en
+  SITE_URL: https://newwlfz.github.io
+  BASE_URL: /mikrotik_manual_i18n/
+  LOCALE_EN_URL: https://newwlfz.github.io
+  LOCALE_EN_BASE_URL: /mikrotik_manual_i18n/
+  LOCALE_ZH_URL: https://newwlfz.github.io
+  LOCALE_ZH_BASE_URL: /mikrotik_manual_zh_hans/
+  # 静态渲染是峰值；6 GiB 堆在 16 GiB 的 runner 上留足余量。
+  BUILD_HEAP_MB: '6144'
+  # `.npmrc` 把缓存指到 ../work/npm-cache（本地便利），CI 里改用 runner 临时目录，
+  # 让 setup-node 的 cache: npm 与 npm ci 看到同一个路径。
+  NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # 构建约 13–14 分钟（6 GiB 堆）；默认 360 分钟过于宽松，卡住时要等 6 小时。
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      # setup-node 的 cache: npm 会先解析缓存目录；先建出来，避免空目录判断。
+      - name: Prepare npm cache directory
+        run: mkdir -p "$NPM_CONFIG_CACHE"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+      # 单语种构建：CLI 数据 → Docusaurus（--locale en）→ Pagefind → llms.txt。
+      - name: Build site
+        run: npm run build
+      # 部署前门禁：先 slim（删 build/img 里没被引用的副本），再跑
+      # asset-refs / base-url-refs / orphan-assets / llms-links 四条断言。
+      # slim 会按 BASE_URL 重写绝对 URL，所以必须与 build 看到同一组环境变量。
+      - name: Slim and verify deploy shape
+        run: npm run verify:deploy
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+      - name: Report artifact size
+        run: du -sh build && find build -type f | wc -l
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
