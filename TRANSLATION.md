@@ -1,5 +1,16 @@
 # Translation pipeline
 
+> **Status — the toolchain lives in the locale repositories.** The hub
+> (`repo_en`) publishes English only. `tools/translate/` here keeps just the
+> shared Markdown libraries that the hub's own `sync/`, `verify/` and `build/`
+> tools import (see `tools/README.md`, "Translation toolchain"); the translation
+> commands named below (`translate:apply`, `translate:derive`, `translate:harvest`,
+> `translate:selftest`, `translate:verify`, `translate:tm`, …) run in
+> `repo_zh_hans` / `repo_zh_hant`, whose toolchain is the canonical
+> `templates/locale-repo/tools/` (see `templates/README.md`). The rules below —
+> overlays are generated, never hand-edited; the ledger, glossary data and patch
+> files are the only editable state — apply unchanged there.
+
 This document explains how content is mirrored and translated, where a
 translation defect belongs, and how a fix is persisted so the next version and
 the next language get it right without rediscovering it.

@@ -187,14 +187,18 @@ Rules:
 
 ### 4.1 Translation pipeline
 
-`tools/translate/` is offline by default:
+The translation commands are **not in this repository**: the hub publishes
+English only and keeps `tools/translate/` as a library for its own `sync/`,
+`verify/` and `build/` tools. The commands below run in the locale repositories
+(`repo_zh_hans`, `repo_zh_hant`), whose toolchain is the canonical
+`templates/locale-repo/tools/` (see `templates/README.md`):
 
 | Step | Command | Network |
 | --- | --- | --- |
-| Import the legacy translation memory (historical: the corpus is gone) | `translate:legacy` | no |
 | Build overlays and sidebar catalogues | `translate:apply` | no |
+| Derive an archive overlay from the previous version | `translate:derive` | no |
 | Structural verification | `translate:verify` | no |
-| Translate the remaining English blocks | `translate --limit=N` | yes |
+| Translate the remaining English blocks | `translate:batch` | yes |
 
 - The legacy corpus has been removed. `translate:harvest` recycles the existing
   overlays into the block memory before `apply`, and that overlay is the only
@@ -243,8 +247,8 @@ adding a language is in `guides/PIPELINE.md`.
 `config/translation.yml` controls the translation policy: glossary, batch size,
 temperature, the structures that must be preserved and the provenance label
 written to overlay front matter. The endpoint, model, API key, timeout and retry
-budget come from `LLM_*` (`tools/translate/lib/llm-config.mjs`; see
-`guides/LLM.md`) and are never committed.
+budget come from `LLM_*` (`tools/translate/lib/llm-config.mjs` in the locale
+repositories; see `guides/LLM.md`) and are never committed.
 
 ## 6. Workflow design
 
@@ -270,7 +274,8 @@ When enabled:
    (`tools/sync/fetch-assets.mjs`);
 3. prune pages the official inventory no longer lists (`tools/sync/prune-orphans.mjs`,
    with `sync.preserve_pages` protecting mirror-generated pages);
-4. translate the changed units (`tools/translate`);
+4. translate the changed units in the locale repositories (their own
+   `tools/translate/`, a copy of `templates/locale-repo/tools/`);
 5. build;
 6. commit content + state if anything changed;
 7. the push triggers `pages.yml`.

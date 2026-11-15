@@ -10,11 +10,12 @@ npm run sync -- --check          # detect remote changes, no writes
 npm run sync -- --update         # fetch normalise and write content
 npm run sync -- --repair         # restore missing or changed local files
 npm run sync -- --only=docs,hardware,blog,changelog
-# Phase 2 only:
-# npm run translate -- --changed
-# npm run translate -- --locale=zh-Hans --force
 npm run verify                   # link, asset and inventory checks
 ```
+
+Translation is not part of this repository any more: it is a locale-repository
+job, and the toolchain for it lives in `templates/locale-repo/tools/`
+(see "Translation toolchain" below).
 
 Version pipeline (one command, this is the supported path):
 
@@ -26,7 +27,6 @@ npm run sync -- --update
 npm run sync -- --update --to=7.26
 npm run sync -- --update --dry-run          # preflight + fetch + route report
 npm run sync -- --update --from=crawl-nav   # skip the stages already done
-npm run sync -- --update --with-translation # derive the new overlay (no API)
 ```
 
 Order is fixed: fetch -> report -> snapshot -> install -> crawl -> metadata ->
@@ -48,38 +48,65 @@ node tools/sync/snapshot-version.mjs --version 7.25
 node tools/sync/install-version.mjs --version 7.26 --source upstream/7.26/docs
 node tools/sync/crawl-nav.mjs --version=7.26
 node tools/sync/build-sidebars.mjs --version 7.25 --docs versioned_docs/version-7.25
-node tools/translate/rebase-overlay.mjs --section=docs-7.25 --write
-```
-
 # Re-fetch pages that a strict build reported as broken-link sources.
 node tools/sync/repair-doc-links.mjs --version 7.25 --docs docs --log <build.log>
 ```
 
-## Legacy corpus (removed)
+## Translation toolchain
 
-The read-only legacy corpus (`<workspace>/mikrotik_manual_i18n/repo/content`, set by
-`DEFAULT_LEGACY_ROOT` in `tools/translate/lib/paths.mjs`) has been deleted from this
-workspace, while `work/translate/legacy-index.json` still records its absolute paths.
-The two artefacts are loaded independently: the block memory
-(`work/translate/translation-memory.json`, ~33k entries) still loads and feeds the
-global TM, while the path index is filtered to the entries whose files still exist
-(`legacy: memory N entries loaded; index 0/M usable`). Exact whole-page reuse therefore
-never matches, and `apply` reports it as `legacySkipped` instead of failing. A page
-whose rebuild produces nothing keeps its existing Chinese overlay and is counted as
-`preserved` (never deleted). Do **not** run `translate:legacy` (`import-legacy`): it now
-refuses to write when the corpus is absent, and on an older revision it would have
-replaced the translation memory with an empty one.
+This repository publishes **English only**. The translation toolchain — overlay
+generation, the offline batch commands, the LLM provider, the translation
+memory, the selftest and the overlay verify — belongs to the locale
+repositories and its **single authoritative copy is
+`templates/locale-repo/tools/`** (see `templates/README.md`).
+
+What `tools/translate/` still holds here is the subset the hub's own
+build/sync/verify tools import as libraries:
+
+| Kept | Used by |
+| --- | --- |
+| `lib/paths.mjs`, `lib/frontmatter.mjs` | almost every `sync/`, `verify/` and `build/` tool |
+| `lib/blocks.mjs`, `lib/prose.mjs`, `lib/admonitions.mjs` | block splitting and fence masking behind those libraries |
+| `lib/links.mjs`, `lib/tm.mjs`, `lib/code-comments.mjs`, `lib/model-memory.mjs` | `verify/links.mjs` (link rules plus the glossary terms read from the translation memory) |
+| `lib/html-links.mjs`, `lib/pdf-links.mjs` | `lib/links.mjs` and `sync/sync-pdfs.mjs` (PDF attachment form) |
+| `lib/anchors.mjs` | `verify/anchors.mjs` |
+| `lib/arg-tables.mjs` | `verify/cli-tables.mjs`, `verify/table-coverage.mjs` |
+| `normalize-cli-headers.mjs`, `normalize-titles.mjs`, `normalize-hardware-titles.mjs`, `normalize-newsletter.mjs` | `verify/labels.mjs` (the title and label policy both sides apply) |
+
+Everything else (`index.mjs`, `harvest.mjs`, `derive*.mjs`, `apply-known-translations.mjs`,
+`normalize-links.mjs`, `selftest.mjs`, `verify-llm.mjs`, `tables.mjs`, `review.mjs`,
+`lib/provider.mjs`, `lib/prompts.mjs`, `lib/llm-config.mjs`, `lib/legacy.mjs`, …) was
+removed from this tree. `tools/pipeline/translate.mjs` and its stage list went with
+it, and `npm run sync -- --update --with-translation` now fails with a message
+that names the locale repository instead of silently skipping the step.
+
+Before editing a kept file, remember it is a copy: a change that is meant for the
+whole family belongs in `templates/locale-repo/tools/` first, and
+`npm run check:tools-template` reports the drift (whitelisted, per-file
+divergences only — see the command's `--help` comment). The hub/template split is
+otherwise one-way: edit the template, scaffold new repositories with
+`npm run locale:add`, and copy the file into an existing repository by hand.
+
+The legacy corpus (`<workspace>/mikrotik_manual_i18n/repo/content`) was deleted
+and the commands that imported it (`translate:legacy`, `translate:harvest`,
+`translate:apply`) no longer exist here; `work/translate/legacy-index.json` is the
+stale record of that corpus, kept for history.
 
 Directories:
 
 - `sync/` — inventory, HTTP fetch, Playwright render, transform, state,
   version cut, sidebar generation and metadata extraction.
 - `cli/` — per-version CLI model and the multi-version comparison index.
-- `translate/` — phase 2 only; config-driven Markdown translation. Not
-  implemented or invoked in phase 1. Commands accept `--locale=<tag>` (default
-  `zh-Hans`); enabled locales come from `docusaurus.config.ts` and the per-locale
-  resource names are documented in `guides/PIPELINE.md#语种locale`.
-- `verify/` — link/asset/state checks used by CI.
+- `translate/` — the shared Markdown libraries the other tools import (see
+  "Translation toolchain" above). No translation command lives here; the
+  authoritative copy of the whole toolchain is
+  `templates/locale-repo/tools/translate/`.
+- `verify/` — link/asset/state checks used by CI, plus
+  `tools-template.mjs` (`npm run check:tools-template`).
+- `pipeline/` — `sync`, `build`, `verify`, `report` wrappers over the stage
+  lists. The `translate` wrapper belongs to the locale repositories.
+- `content/` — the locale registry helpers: `locale:add`, `locales:check` and
+  `content:publish` (hub-only; they write into the locale repositories).
 
 Implementation rules:
 
@@ -109,7 +136,7 @@ Pages 工作流在构建之后、上传 artifact 之前调用它。`npm run veri
 
 ## 验收基线
 
-除 `translate:verify`、`verify:sidebar`、`browser-check` 外，表格覆盖率是独立指标：
+除 `verify:sidebar`、`browser-check` 外，表格覆盖率是独立指标：
 
 ```bash
 npm run verify:tables         # rows / english / prose / headers / pages
@@ -119,9 +146,6 @@ npm run verify:tables:check   # CI：headers 必须为 0，prose 不超过预算
 `prose` 只统计「单元格里有小写英文短语」的行（品牌、型号、数值、CLI 占位符不算）；
 `headers` 统计首行是表头（下一行是分隔行、含表头词、不含 `<...>`）且仍是英文的表。
 
-改完 overlay 生成逻辑（apply/derive/inline-colors）后必须跑完整的派生链：
-
-```bash
-npm run translate:apply
-npm run translate:derive   # 7.24 → 7.25 → 7.26，不要再单独调 derive.mjs
-```
+overlay 的派生链（`translate:apply` / `translate:derive` / `generate-ui`）不在
+本仓：它们随翻译工具链一起移到了语种仓，权威副本在
+`templates/locale-repo/tools/`，改完翻译逻辑要在那边跑完整派生链。

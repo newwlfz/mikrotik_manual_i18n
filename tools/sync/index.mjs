@@ -16,7 +16,11 @@
  *   --update --dry-run       preflight + fetch + route report, no mutation
  *   --update --allow-dirty   skip the clean-worktree guard
  *   --update --current-only  materialise only the current version
- *   --update --with-translation  derive the new version's overlay (no API calls)
+ *
+ * `--with-translation` used to derive the zh-Hans overlay from the previous
+ * version. That job belongs to the locale repositories now (they own the
+ * overlays and the translation toolchain, see `templates/README.md`), so the
+ * flag is rejected instead of being silently ignored.
  *
  * `--probe` is the cheap gate the scheduled workflow uses: one conditional GET
  * on the official whole-corpus file (`llms-full.txt`) plus one inventory read to
@@ -119,6 +123,18 @@ if (has('probe')) {
 if (has('update')) {
   const dryRun = has('dry-run');
 
+  // The overlay is not derived here any more: this repository publishes English
+  // only and the translation toolchain lives in `templates/locale-repo/tools/`.
+  // Rejecting the old flag is deliberate — an update that reports success while
+  // silently skipping the derive step is worse than a failure that names it.
+  if (has('with-translation')) {
+    fail(
+      '--with-translation is no longer supported: this repository publishes English only. ' +
+        'Derive the overlay in the locale repository (npm run translate:derive there).',
+    );
+  }
+
+
   // Preflight: a dirty tree destroys the only cheap rollback we have.
   const dirty = gitStatus();
   if (dirty.length && !has('allow-dirty')) {
@@ -201,22 +217,10 @@ if (has('update')) {
     process.exit(1);
   }
 
-  if (has('with-translation')) {
-    console.log('\n[update] deriving the new version from the previous one (no API calls)');
-    const {spawnSync} = await import('node:child_process');
-    const derive = spawnSync(process.execPath, ['tools/translate/derive.mjs', '--apply'], {stdio: 'inherit'});
-    if (derive.status !== 0) fail('translate:derive failed', 1);
-    // The sidebar catalogue is derived from the overlay titles, so it must run
-    // after the overlay exists.
-    const ui = spawnSync(process.execPath, ['tools/translate/generate-ui.mjs'], {stdio: 'inherit'});
-    if (ui.status !== 0) fail('generate-ui failed', 1);
-  }
-
   console.log(`\n[update] ${mode} ${installed} -> ${target} finished`);
   console.log('next:');
-  console.log('  npm run translate:derive   # reuse reviewed wording, translate only what changed');
-  console.log('  npm run translate:verify');
   console.log('  npm run build && npm run verify:ui');
+  console.log('  push the content; the locale repositories rebuild their overlays from it');
   process.exit(0);
 }
 
