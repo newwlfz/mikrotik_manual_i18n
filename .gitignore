@@ -40,6 +40,12 @@ data/nav/
 # Local scratch (crawl/debug artefacts).
 work/
 
+# The language-repository template ships a `work/translate/` skeleton; the
+# rule above matches at any depth and would swallow it, and `npm run locale:add`
+# copies that tree into the new repository.
+!templates/locale-repo/work/
+!templates/locale-repo/work/**
+
 # Per-run journal of `npm run sync -- --update`; regenerated on every run.
 state/update-run.json
 

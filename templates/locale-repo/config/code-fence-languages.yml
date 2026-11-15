@@ -1,0 +1,94 @@
+# 代码块 fenced info string 归一表。
+#
+# 用途有两个，读同一份文件：
+#   1. `tools/build/normalize-fences.mjs` 按 `aliases` 把 docs / versioned_docs 里
+#      的 info string 归一，只改语言标识，不动代码内容；`auto_detect` 给「没有
+#      语言标识」、但首行明显是 RouterOS CLI / shell 会话的块补一个语言。
+#   2. `docusaurus.config.ts` 的 `prism.additionalLanguages` 直接取
+#      `prism_languages`，保证「归一后的语言」都在 Prism 里注册过。
+#
+# `text` / `plaintext` 不是语言，而是「不着色」的标记：官方页面大量用它包住
+# RouterOS 命令，渲染出来是黑字。渲染侧（`src/remark/fence-language.mjs`）与
+# 检查侧（`tools/build/normalize-fences.mjs`）都把它们当作**未标注**，继续走
+# `path_rules` / `auto_detect`；`plaintext` 只在所有规则都不命中时兜底。
+# Markdown 本身不必改写：同一个 `resolveFenceLanguage()` 在编译每个语言、每个
+# 版本时生效，`npm run verify:fences` 报告覆盖率。
+#
+# `ros` / `mikrotik` 由 `src/clientModules/ros-prism.js` 自定义注册（官方站点的
+# RouterOS 语法高亮），**不能**出现在 `prism_languages` 里：Docusaurus 会去
+# prismjs 的 components 目录找 `prism-ros`，找不到就整页报错。
+
+aliases:
+  # RouterOS 自定义语法（客户端模块注册）。
+  routeros: ros
+  mikrotik: ros
+  ros-cli: ros
+  # 会话粘贴块统一用 bash 高亮（官方站点的 console 块也是这条路）。
+  console: bash
+  shell: bash
+  sh: bash
+  zsh: bash
+  # 纯文本 / 无高亮。保留这些别名是为了让历史 info string 归一；`text` 现在
+  # 先按「未标注」参与识别，规则不命中才落到 `plaintext`。
+  text: plaintext
+  txt: plaintext
+  none: plaintext
+  plain: plaintext
+  # 常见简写。
+  py: python
+  js: javascript
+  cfg: ini
+  conf: ini
+  actionscript3: actionscript
+
+# 需要额外加载的 Prism 组件（不含默认已打包的 markup/css/clike/javascript）。
+prism_languages:
+  - bash
+  - powershell
+  - json
+  - yaml
+  - python
+  - sql
+  - ini
+  - actionscript
+
+# 没有 info string（或只写了 text/plaintext）的块：首行命中即补语言。
+#
+# `path_rules` 先于 `auto_detect` 生效，且只在文档路径命中 `paths` 前缀时
+# 参与。mobile-networking 下的示例几乎都是 RouterOS 脚本（`:global`、
+# `{`、`/interface`、`/system`、`/tool`、`[admin@` / `[novlan]` 提示符），
+# 但同一批页面里还有 AT 命令、`print` 输出和表格片段，所以仍然要求内容
+# 特征命中，不做“整页一律 ros”。
+path_rules:
+  - paths:
+      - mobile-networking/
+    pattern: '^\s*(?:\[(?:admin|novlan)[@\]]|/(?:interface|ip|ipv6|system|tool|iot|ppp|ping|log|queue|routing|mpls|snmp|user|file|export|import|console|terminal|port|radius|caps-man)\b|:(?:global|local|if|while|foreach|set|put|log|do|delay|on-error)\b|\{)'
+    language: ros
+    reason: 'mobile-networking-routeros'
+
+# 内容识别，按下面的顺序匹配，第一条命中即生效（所以把更具体的放在前面）。
+#
+# 只在大写开头的 shell 提示符、明确的 RouterOS 菜单路径、`:script` 关键字和
+# CLI 动词上匹配；宁可漏掉几个块，也不要把普通 shell / 配置文件误染成 ros。
+# 典型的误判边界：
+#   - `/usr/bin/env …`、`/etc/nginx/…`：菜单名单里没有 `usr` / `etc`，不命中；
+#   - `print` 输出（`print` 单独一行）会被当成 ros，这是 RouterOS 控制台最常见的
+#     一种输出，可接受；普通 Python 的 `print` 语句（无参数、无括号）极少见。
+#   - `add …` / `set …` 只有带 `name=value` 形式才命中，shell 里 `set -e` 不命中。
+auto_detect:
+  # RouterOS 提示符：`[admin@MikroTik] > /ip …`、`[novlan] /interface …`。
+  - pattern: '^\s*\[[A-Za-z0-9_.@-]+@[^\]]*\]'
+    language: ros
+    reason: 'routeros-prompt'
+  # RouterOS 菜单路径：`/ip/address/add …`、`/interface/bridge/port`。
+  - pattern: '^/(?:ip|interface|system|tool|routing|disk|queue|user|log|snmp|ppp|ipv6|mpls|caps-man|container|iot|file|radius|certificate|wireless|bridge|port)\b'
+    language: ros
+    reason: 'routeros-menu-path'
+  # RouterOS 脚本关键字：`:local`、`:foreach`、`:if`、`:on-error`。
+  - pattern: '^:(?:local|global|if|else|set|put|log|foreach|while|do|onerror|on-error)\b'
+    language: ros
+    reason: 'routeros-script'
+  # 菜单缩进后的命令：`add chain=forward …`、`set name=…`、单独一行 `print`。
+  - pattern: '^(?:add\s+[a-z-]+=|set\s+[a-z-]+=|print\s*$)'
+    language: ros
+    reason: 'routeros-command'

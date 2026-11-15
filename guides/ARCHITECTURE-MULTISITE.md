@@ -291,6 +291,9 @@ that staged nothing.
 # Validate the registry (no network)
 npm run locales:check
 
+# Scaffold a language repository + registry entry (dry run first)
+npm run locale:add -- --code ru-RU --label Русский --dry-run
+
 # Show what a publish would do (no network, token not needed)
 npm run content:publish:dry
 
@@ -302,10 +305,18 @@ CROSS_REPO_TOKEN=… npm run content:publish -- --only=zh-Hans \
   --message="content: sync RouterOS 7.26 corrections"
 ```
 
-- **Add a language**: create its repository, add a `locales.json` entry, run
-  `npm run locales:check`, dry-run, then publish once (`--only=<tag>`). The
-  first publish needs the repository to track every content root and
-  `locales.json` (see §9).
+- **Add a language**: scaffold and register it with one command —
+  `npm run locale:add -- --code <tag> --label <label>` (add `--dry-run` first:
+  it prints the file count and the `locales.json` change and writes nothing).
+  The command copies [`templates/locale-repo/`](../templates/locale-repo),
+  fills in the locale's addresses, runs `git init -b main` in the new directory
+  (**no commit, no push**) and appends the registry entry, which
+  `npm run locales:check` validates; if the check fails it restores the
+  previous `locales.json`. It deliberately creates no GitHub repository and
+  sets no secret — the five manual steps are printed at the end and repeated
+  in [`README.md`](../README.md#adding-a-locale). Publish once afterwards
+  (`--only=<tag>`); the first publish needs the repository to track every
+  content root and `locales.json` (see §9).
 - **Change a site's address**: update that locale's `baseUrl`/`site`, then
   update the deployment variables in the affected repository (`SITE_URL`,
   `BASE_URL`, and every `ASSET_ORIGIN` that points at a moved asset host).

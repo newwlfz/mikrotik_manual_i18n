@@ -30,6 +30,7 @@ SITE_LOCALE=en npm run build   # cli data + docusaurus build (en) + pagefind + l
 npm run serve                  # or: npx docusaurus serve --port 3013 --no-open
 
 npm run locales:check          # validate locales.json (no network)
+npm run locale:add -- --code ru-RU --label Русский   # scaffold a language repo
 npm run content:publish:dry    # print the content-root + locales.json publish plan
 npm run content:publish        # push to the language repos (needs CROSS_REPO_TOKEN)
 ```
@@ -136,19 +137,52 @@ permissions. A missing secret fails the job with an explicit error, never a
 silent skip. Locally: `export CROSS_REPO_TOKEN=…` then
 `npm run content:publish`; the dry run does not need it.
 
-**Adding a language.**
+### Adding a locale
 
-1. Create the repository with the same `docusaurus.config.ts` and tooling, and
-   its own `pages.yml` (translate + build + deploy).
-2. Add an entry to `locales.json` — key = BCP 47 tag, plus `label`, `repo`,
-   `baseUrl`, `site`. Locale-specific environment overrides, if needed, are
-   `LOCALE_<PRIMARY_SUBTAG>_URL` / `_BASE_URL` (`zh-Hans` → `ZH`).
-3. Run `npm run locales:check` and `npm run content:publish:dry` (no network).
-4. Run `npm run content:publish -- --only=<tag>` once locally, or let the next
-   push to `main` do it, then confirm the language repository's workflow
-   started. The repository must track every `CONTENT_ROOTS` root and
-   `locales.json`; the publisher aborts before the commit (naming the offending
-   `.gitignore` rule) if any of them is ignored.
+`npm run locale:add` scaffolds a new language repository from
+[`templates/locale-repo/`](templates/locale-repo) and registers it. It copies
+the code skeleton (tooling, `src/`, site config, `pages.yml`, `README.md`,
+`TRANSLATION.md`), replaces the locale placeholders, runs `git init -b main`
+there, then appends one `locales.json` entry — which `npm run locales:check`
+validates before the command exits. It never commits, pushes, creates a GitHub
+repository or writes a secret.
+
+```bash
+# preview: file count, target directory and the locales.json change; writes nothing
+npm run locale:add -- --code ru-RU --label Русский --dry-run
+
+# scaffold ../repo_ru_ru and register ru-RU
+npm run locale:add -- --code ru-RU --label Русский
+```
+
+Defaults derive from the hub's `en` entry: repository
+`<owner>/mikrotik_manual_<slug>`, `baseUrl` `/<repository-name>/`, site
+`https://<pages host><baseUrl>`, target directory `../repo_<slug>`. Override
+with `--repo`, `--base-url`, `--site`, `--dir`, `--site-title` and `--tagline`;
+`--help` lists every option. A failing `locales:check` restores the previous
+`locales.json` and leaves the scaffold in place for inspection.
+
+Five manual steps remain — creating the repository, extending the token and
+setting the LLM variables are production side effects this command must not
+perform (see [`guides/DECISIONS.md`](guides/DECISIONS.md) D7):
+
+1. Create the repository `<repo>` on GitHub (public).
+2. Add it to the repository list of the `CROSS_REPO_TOKEN` fine-grained PAT
+   (`Contents: Read and write`), so the hub can push content into it.
+3. In the new repository — *Settings → Secrets and variables → Actions* — add
+   the variables `LLM_BASE_URL` and `LLM_MODEL`, and the secret `LLM_API_KEY`.
+4. `cd <dir>`, commit the scaffold (`git add -A && git commit -m "init"`), then
+   `git remote add origin https://github.com/<repo>.git` and
+   `git push -u origin main`.
+5. Back in the hub: `npm run content:publish -- --only=<tag>` (or wait for the
+   scheduled publish) to ship the content and start the first translate batch.
+
+Until step 5 runs, the new repository has no `docs/` and its first `pages.yml`
+run stops at the content-root assertion — expected, and harmless: nothing is
+deployed. The repository must track every `CONTENT_ROOTS` root and
+`locales.json`, or the publisher aborts before the commit and names the
+offending `.gitignore` rule (see
+[`guides/ARCHITECTURE-MULTISITE.md`](guides/ARCHITECTURE-MULTISITE.md) §9).
 
 ### Cross-repository language entry
 
