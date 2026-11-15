@@ -791,17 +791,17 @@
       "section": "changelog",
       "local_path": "changelog/changelog-2026-10-12.md",
       "source_url": "https://manual.mikrotik.com/changelog/changelog-2026-10-12",
-      "sha256": "148a6e020ce2c48361f72bda86ab5ce92a142e955ec55409fee3e0339d4cef46",
-      "bytes": 1019,
-      "synced_at": "2026-11-09T13:58:25.457Z"
+      "sha256": "9c14a4f5f304dc1be38b5904edb3b6ffda7c52efbd3ea6a6de416faa26974832",
+      "bytes": 957,
+      "synced_at": "2026-11-15T04:16:12.293Z"
     },
     "changelog:changelog-2026-10-13.md": {
       "section": "changelog",
       "local_path": "changelog/changelog-2026-10-13.md",
       "source_url": "https://manual.mikrotik.com/changelog/changelog-2026-10-13",
-      "sha256": "ede77183dbdd31b8b3bd0000e863788025e7ddfdcc3619b3334833c4b35e673a",
-      "bytes": 2824,
-      "synced_at": "2026-11-09T13:58:25.457Z"
+      "sha256": "4673e947caf19d5fe9bb49f1df797883028e312ed5c32efd82d7c596ef24a3b0",
+      "bytes": 2620,
+      "synced_at": "2026-11-15T04:16:12.293Z"
     },
     "changelog:changelog-2026-10-14.md": {
       "section": "changelog",
@@ -831,9 +831,9 @@
       "section": "changelog",
       "local_path": "changelog/changelog-2026-10-19.md",
       "source_url": "https://manual.mikrotik.com/changelog/changelog-2026-10-19",
-      "sha256": "c5a689fc3d57ec57e5d6853e036ccad87d784d6f1122721526dee7aa6136c158",
-      "bytes": 2252,
-      "synced_at": "2026-11-09T13:58:25.458Z"
+      "sha256": "0e138e30c18a7507d9e83e4961e1db25158ea2d3f6ed9eeeea069032958546d7",
+      "bytes": 2158,
+      "synced_at": "2026-11-15T04:16:12.293Z"
     },
     "changelog:changelog-2026-10-20.md": {
       "section": "changelog",
@@ -855,65 +855,65 @@
       "section": "changelog",
       "local_path": "changelog/changelog-2026-10-22.md",
       "source_url": "https://manual.mikrotik.com/changelog/changelog-2026-10-22",
-      "sha256": "800efd2c14e24891d325dcc541d64a2bed4fe51ed1cd3ca778dc6055d8c837ed",
-      "bytes": 2726,
-      "synced_at": "2026-11-09T13:58:25.458Z"
+      "sha256": "1bcf43fb43e758a0f4f68aeeef79d457964d7d9aaa16b313bb595c1e1c663745",
+      "bytes": 2457,
+      "synced_at": "2026-11-15T04:16:12.293Z"
     },
     "changelog:changelog-2026-10-23.md": {
       "section": "changelog",
       "local_path": "changelog/changelog-2026-10-23.md",
       "source_url": "https://manual.mikrotik.com/changelog/changelog-2026-10-23",
-      "sha256": "1891780204b3e82713c3615e9a484669ee5177f7ddbca6b77760e337e4a146ff",
-      "bytes": 1311,
-      "synced_at": "2026-11-09T13:58:25.458Z"
+      "sha256": "5cd7f0930fea557022adc9cdb701606c1a66d10a504654f0c8517cf58542245d",
+      "bytes": 1188,
+      "synced_at": "2026-11-15T04:16:12.293Z"
     },
     "changelog:changelog-2026-10-27.md": {
       "section": "changelog",
       "local_path": "changelog/changelog-2026-10-27.md",
       "source_url": "https://manual.mikrotik.com/changelog/changelog-2026-10-27",
-      "sha256": "c66fd746e162f80530acda06ab47aded231361d441ca6dc674c966c0bb1aef85",
-      "bytes": 4223,
-      "synced_at": "2026-11-09T13:58:25.458Z"
+      "sha256": "048b8153f7891a752a6943c894294c8d86b73f5f1893364d7931446a38f311a6",
+      "bytes": 4016,
+      "synced_at": "2026-11-15T04:16:12.293Z"
     },
     "changelog:changelog-2026-10-28.md": {
       "section": "changelog",
       "local_path": "changelog/changelog-2026-10-28.md",
       "source_url": "https://manual.mikrotik.com/changelog/changelog-2026-10-28",
-      "sha256": "03868f1caa583bcd865ede4cccdaec4949f390daeeb07b5530103e736420cbbc",
-      "bytes": 1033,
-      "synced_at": "2026-11-09T13:58:25.458Z"
+      "sha256": "f63ca6476bc7d297092a987f34d8b5363b0d0c97c6a86d5b45d7814c8be7b79a",
+      "bytes": 991,
+      "synced_at": "2026-11-15T04:16:12.293Z"
     },
     "changelog:changelog-2026-10-29.md": {
       "section": "changelog",
       "local_path": "changelog/changelog-2026-10-29.md",
       "source_url": "https://manual.mikrotik.com/changelog/changelog-2026-10-29",
-      "sha256": "2e25b9de6c2b855985042f38131d7f94f10bb13dccc4290737fcb339dbeffbb9",
-      "bytes": 1343,
-      "synced_at": "2026-11-09T13:58:25.458Z"
+      "sha256": "a677531193ba830f6741f6ae6c44ddeefc8a01bbf5aa7f5c27ddec85752e63d1",
+      "bytes": 1198,
+      "synced_at": "2026-11-15T04:16:12.293Z"
     },
     "changelog:changelog-2026-10-30.md": {
       "section": "changelog",
       "local_path": "changelog/changelog-2026-10-30.md",
       "source_url": "https://manual.mikrotik.com/changelog/changelog-2026-10-30",
-      "sha256": "a629431e459a661c7c2a74e8c7ffc493cec2e2b34b6b7788a53fbdc21af14d31",
-      "bytes": 6541,
-      "synced_at": "2026-11-09T13:58:25.458Z"
+      "sha256": "f9944071205a777e75be11893123020bddc17ca26737f2fdc0b05113eb937991",
+      "bytes": 6119,
+      "synced_at": "2026-11-15T04:16:12.293Z"
     },
     "changelog:changelog-2026-11-02.md": {
       "section": "changelog",
       "local_path": "changelog/changelog-2026-11-02.md",
       "source_url": "https://manual.mikrotik.com/changelog/changelog-2026-11-02",
-      "sha256": "cbd8d310aae7a33d7cd5e1bd70609aaf30b3fdb80df0d5b5fb213b5bee6c6761",
-      "bytes": 2196,
-      "synced_at": "2026-11-09T13:58:25.458Z"
+      "sha256": "cce19d5f3f852c90812eaca17f86a6e1ebb04eee891d4ddabbf862a502894b82",
+      "bytes": 2080,
+      "synced_at": "2026-11-15T04:16:12.293Z"
     },
     "changelog:changelog-2026-11-03.md": {
       "section": "changelog",
       "local_path": "changelog/changelog-2026-11-03.md",
       "source_url": "https://manual.mikrotik.com/changelog/changelog-2026-11-03",
-      "sha256": "79a6d88b2cebfb56cc9e5ee84e1456402a24f487a0f14b5c9e43ca9e3e74fd42",
-      "bytes": 1989,
-      "synced_at": "2026-11-09T13:58:25.459Z"
+      "sha256": "b866f4c0650087e5e3ae735f7cbf6fff2008f5de83978bd50210c3ae013aa100",
+      "bytes": 1836,
+      "synced_at": "2026-11-15T04:16:12.293Z"
     },
     "docs-7.24:authentication-authorization-accounting/certificates.md": {
       "section": "docs-7.24",

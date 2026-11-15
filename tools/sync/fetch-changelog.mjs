@@ -29,6 +29,19 @@ const turndown = new TurndownService({
   bulletListMarker: '-',
 });
 turndown.use(gfm);
+// Drop the heading self-links the exporter wraps around its zero-width space
+// (`<a class="hash-link" href="#slug">​</a>`). Without this rule turndown
+// keeps them as an empty `[​](#slug "Direct link to …")` link, so an invisible
+// U+200B ends up in every heading and is copied into each translation. The
+// heading text already produces the same slug, so the node carries no meaning.
+turndown.addRule('dropHeadingAnchor', {
+  filter: (node) =>
+    node.nodeName === 'A' &&
+    (node.classList?.contains('hash-link') ||
+      (node.getAttribute?.('href')?.startsWith('#') &&
+        node.textContent.replace(/\u200b/g, '').trim() === '')),
+  replacement: () => '',
+});
 turndown.addRule('keepDetails', {
   filter: ['details'],
   replacement: (content, node) => `\n${node.outerHTML}\n`,
