@@ -106,6 +106,35 @@ async function fetchWithRetry(url, attempts = retryLimit()) {
   throw last;
 }
 
+/** The `source:` line of a page's frontmatter, as an absolute URL. */
+function declaredSource(text) {
+  const front = /^---\r?\n([\s\S]*?)\r?\n---/.exec(text);
+  if (!front) return null;
+  const line = /^source:[ \t]*(\S+)[ \t]*$/m.exec(front[1]);
+  return line ? normaliseSourceUrl(line[1]) : null;
+}
+
+/**
+ * Does the official site still serve this page? Only asked for a page the
+ * inventory no longer lists, and only to tell two very different cases apart:
+ * the mirror's own page (adopt it) and a page the release dropped (leave it out
+ * of the manifest so `prune-orphans` deletes it instead of the fetch
+ * resurrecting it every day). 404/410 is the only answer that means "gone"; a
+ * network error keeps the page, because deleting on a timeout is worse.
+ */
+async function stillServed(url) {
+  try {
+    const response = await fetch(url, {
+      headers: {'user-agent': config.fetch?.user_agent || 'mikrotik-manual-mirror/1.0'},
+      signal: AbortSignal.timeout((config.fetch?.timeout_seconds || 60) * 1000),
+    });
+    await response.body?.cancel();
+    return response.status !== 404 && response.status !== 410;
+  } catch {
+    return true;
+  }
+}
+
 function pickLocalPath(candidates) {
   if (!candidates?.length) return null;
   if (candidates.length === 1) return candidates[0];
@@ -154,7 +183,7 @@ async function processVersion(version) {
         };
         // A skipped run is a no-op on disk: the previous manifest stays accurate.
         console.log(
-          `[${version}] done official=${stats.official} local=${stats.local} written=0 unchanged=0 skipped=${stats.skipped} failed=0`,
+          `[${version}] done official=${stats.official} local=${stats.local} deleted=0 written=0 unchanged=0 skipped=${stats.skipped} failed=0`,
         );
         return {version, manifest: docsManifest, stats, failures: [], skipped: true};
       }
@@ -213,7 +242,7 @@ async function processVersion(version) {
   const plannedPaths = new Set(planned.map((item) => item.localPath).filter(Boolean));
   const pages = [];
   const failures = [];
-  const stats = {official: 0, local: 0, written: 0, unchanged: 0, failed: 0, skipped: 0};
+  const stats = {official: 0, local: 0, written: 0, unchanged: 0, failed: 0, skipped: 0, deleted: 0};
   let cursor = 0;
 
   async function worker() {
@@ -269,14 +298,29 @@ async function processVersion(version) {
   await Promise.all(Array.from({length: Math.max(1, CONCURRENCY || config.fetch?.concurrency || 6)}, worker));
 
   // Anything in the current English tree that the official inventory does not
-  // list is a mirror-owned local page. Copy its source into corrections/.
+  // list is either a mirror-owned local page (recorded under
+  // corrections/local-pages: copy its source there) or a page the official site
+  // has dropped. A dropped page must stay out of the manifest: `prune-orphans`
+  // deletes it from `docs/` anyway, and adopting it here would make the next
+  // fetch resurrect it, forever.
   const localOnly = sourceMap.files.filter((rel) => !plannedPaths.has(rel)).sort();
+  const deleted = [];
   for (const rel of localOnly) {
     const source = path.join(docsRoot, rel);
     const localSource = path.join('corrections/local-pages', plan.docsDir, rel);
     const target = path.join(REPO, localSource);
     const raw = fs.readFileSync(source);
     const hash = sha256(raw);
+    const frontmatter = pageFrontmatter(version, rel, {prospective: plan.prospective});
+    if (!fs.existsSync(target)) {
+      const sourceUrl = declaredSource(raw.toString('utf8'));
+      if (sourceUrl && !(await stillServed(sourceUrl))) {
+        deleted.push(rel);
+        stats.deleted++;
+        console.log(`[${version}] dropped ${rel}: the official site no longer serves ${sourceUrl}`);
+        continue;
+      }
+    }
     if (fs.existsSync(target)) {
       const existingHash = sha256(fs.readFileSync(target));
       if (existingHash !== hash) {
@@ -299,7 +343,7 @@ async function processVersion(version) {
       source_url: null,
       sha256: hash,
       bytes: raw.length,
-      frontmatter: pageFrontmatter(version, rel, {prospective: plan.prospective}),
+      frontmatter,
     });
     stats.local++;
   }
@@ -325,14 +369,18 @@ async function processVersion(version) {
       unchanged: stats.unchanged,
       failed: stats.failed,
       skipped: stats.skipped,
+      // Pages the official site stopped serving. They stay out of `pages` so
+      // `prune-orphans` removes them; kept here as the fetch's own record.
+      deleted: stats.deleted,
     },
     pages: sortedPages(pages),
+    deleted: deleted.sort(),
     failures,
   };
   if (!CHECK) writeJson(manifestFile, manifest);
 
   console.log(
-    `[${version}] done official=${stats.official} local=${stats.local} written=${stats.written} unchanged=${stats.unchanged} skipped=${stats.skipped} failed=${stats.failed}`,
+    `[${version}] done official=${stats.official} local=${stats.local} deleted=${stats.deleted} written=${stats.written} unchanged=${stats.unchanged} skipped=${stats.skipped} failed=${stats.failed}`,
   );
   return {version, manifest, stats, failures};
 }

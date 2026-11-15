@@ -54,6 +54,20 @@ hreflang 通过 `locales.json` 里各自的绝对地址互相指向（见
 **探测失败不等于官方没变**：工作流把它当「需要同步」处理（fail-open），让完整
 流水线自己的预检和 stage 门禁去报真正的错误。
 
+### 官方加页面 / 删页面
+
+同一次刷新里官方可能既加页又删页（7.26 就加了 `wireless/wifi/configuring-meshpoint`
+和 `firewall-and-quality-of-service/firewall/raw`、删了 `tg-lr-setup-guide`）。两件事
+都必须由流水线自己处理，否则每天都会卡在同一处：
+
+- **加页面**：`fetch-upstream` 给官方新增、本地还没有的路由分配 `<route>.md`
+  （不再以「no local path mapping」硬失败）；`cache-structure` 在 `docs/` 还没有该
+  文件时用上游 Markdown 当本地文本——`materialize` 要到下一阶段才写这个文件。
+- **删页面**：官方已经不返回（页面的 `source` 给出 404/410）的页面**不再**被当成
+  「镜像自有页面」而收进清单；它不进清单，`prune-orphans` 随后删掉 `docs/` 里的
+  副本。本仓自己写的页面靠 `corrections/local-pages/<docs_dir>/<route>.md` 记录
+  保住——那是唯一的「这一页是本仓的」信号，不要手工删掉那些文件。
+
 ### 为什么是 dispatch 而不是等 push 触发
 
 用默认 `GITHUB_TOKEN` 做的 push **不会**再触发其它工作流（GitHub 的递归规则；

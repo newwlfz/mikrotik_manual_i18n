@@ -279,12 +279,11 @@ async function processVersion(version) {
       const localFile = path.join(docsRoot, page.local_path);
       const mdText = fs.readFileSync(path.join(upstreamDir(version), 'docs', page.local_path), 'utf8');
       const mdHash = sha256(mdText);
-      if (!fs.existsSync(localFile)) {
-        failures.push({local_path: page.local_path, error: 'local page missing'});
-        stats.failed++;
-        continue;
-      }
-      const localText = fs.readFileSync(localFile, 'utf8');
+      // `materialize` runs *after* this stage, so a page the official site just
+      // added has no `docs/` file yet. Its local text is the upstream text — the
+      // same thing materialize will write — and failing here would abort the
+      // whole run on the first release that gains a page.
+      const localText = fs.existsSync(localFile) ? fs.readFileSync(localFile, 'utf8') : mdText;
       const existing = fs.existsSync(cacheFile) ? JSON.parse(fs.readFileSync(cacheFile, 'utf8')) : null;
       if (!REFRESH && existing?.schema === CACHE_SCHEMA && existing.md_sha256 === mdHash) {
         entries.push(existing);
