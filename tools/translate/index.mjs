@@ -81,7 +81,7 @@ import {commentRules, descriptionPrompt, paragraphRetryPrompt, titlePrompt} from
 import {guardScript} from './lib/script-guard.mjs';
 import {feedbackFor, issueSummary, scriptIssues} from './lib/script-check.mjs';
 import {loadPatch, applyReplacements} from './lib/patches.mjs';
-import {loadModelMemory, saveModelMemory} from './lib/model-memory.mjs';
+import {loadModelMemory, readModelMemory, saveModelMemory} from './lib/model-memory.mjs';
 import {loadCommentMemory, saveCommentMemory} from './lib/comment-memory.mjs';
 import {buildGlobalTm, createGlobalTm, lookupBlock, lookupTitle, serializeTm, saveTm} from './lib/tm.mjs';
 import {isLegal} from './lib/legal.mjs';
@@ -1190,7 +1190,7 @@ async function main() {
     }
     if (!args['dry-run']) {
       writeState(state);
-      saveModelMemory(modelMemory);
+      saveModelMemory(modelMemory, {locale});
       client.log(USAGE_FILE);
     }
     process.stdout.write(
@@ -1629,7 +1629,7 @@ async function translateComments(
         }
       };
       await Promise.all(Array.from({length: Number(args.concurrency || 4)}, worker));
-      saveModelMemory(modelMemory);
+      saveModelMemory(modelMemory, {locale});
       client.log(USAGE_FILE);
       process.stdout.write(
         `translated ${done} description(s), tokens(prompt/completion)=${client.usage.prompt}/${client.usage.completion}\n`,
@@ -1662,9 +1662,8 @@ async function translateComments(
     const legacy = JSON.parse(
       fs.readFileSync(path.join(WORK_DIR, 'translation-memory.json'), 'utf8'),
     );
-    const modelRaw = JSON.parse(
-      fs.readFileSync(path.join(WORK_DIR, 'model-memory.json'), 'utf8'),
-    );
+    // The big file is optional in CI; shards carry the committed translations.
+    const modelRaw = Object.fromEntries(readModelMemory({workDir: WORK_DIR}));
     const commentPath = path.join(WORK_DIR, 'comment-memory.json');
     const commentRaw = fs.existsSync(commentPath)
       ? JSON.parse(fs.readFileSync(commentPath, 'utf8'))

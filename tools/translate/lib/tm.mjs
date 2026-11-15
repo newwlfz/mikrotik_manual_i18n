@@ -29,6 +29,7 @@ import {
 } from './paths.mjs';
 import {normalize, fenceMask} from './blocks.mjs';
 import {commentKey} from './code-comments.mjs';
+import {readModelMemory} from './model-memory.mjs';
 
 /**
  * `work/translate/tm-global.<locale>.json`.
@@ -199,7 +200,10 @@ export function createGlobalTm({workDir = WORK_DIR, locale = DEFAULT_TARGET_LOCA
   };
   const legacy = readJson('translation-memory.json', null);
   if (!legacy) throw new Error('translation memory missing: run `import-legacy` first');
-  const model = readJson('model-memory.json', {});
+  // Big file first, then every incremental shard (later shards win). A CI
+  // checkout has no `model-memory.json`, so the shards are the only memory it
+  // has for the translations the previous batches committed.
+  const model = Object.fromEntries(readModelMemory({workDir}));
   const comment = readJson('comment-memory.json', {entries: {}});
   const built = buildGlobalTm({legacy, model, comment});
   built.locale = locale;

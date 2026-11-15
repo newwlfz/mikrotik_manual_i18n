@@ -37,7 +37,14 @@ import {
 import {compareFence, untranslatedBlocks} from './lib/verify.mjs';
 import {spawnSync} from 'node:child_process';
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
+import {
+  loadModelMemory,
+  readModelMemory,
+  saveModelMemory,
+  shardFiles,
+} from './lib/model-memory.mjs';
 import {Client, loadPromptConfig} from './lib/provider.mjs';
 import {profileFor} from './lib/locale-profile.mjs';
 import {checkScript, feedbackFor} from './lib/script-check.mjs';
@@ -797,6 +804,63 @@ const rejected = await guardScript({
 });
 check('guard-rejects-unusable-retry', rejected.text, '这个软件');
 check('guard-records-rejected-retry', rejectedWarnings.length, 1);
+
+// ---------------------------------------------------------------------------
+// memory shards: only new/changed keys reach git, and loading merges them
+// ---------------------------------------------------------------------------
+// `model-memory.json` is 26 MB and gitignored, so a CI batch used to lose what
+// it translated. Each save also writes a small shard with just the changed
+// keys; these assertions pin that contract.
+const shardWork = fs.mkdtempSync(path.join(os.tmpdir(), 'translate-shards-'));
+try {
+  const at = (minute) => new Date(Date.UTC(2026, 0, 2, 3, 4, minute));
+  const first = saveModelMemory(new Map([['block\u0000Hello', '你好']]), {
+    workDir: shardWork,
+    locale: 'zh-Hans',
+    now: at(5),
+  });
+  check('shard-written', shardFiles(shardWork).length, 1);
+  check('shard-filename', path.basename(first.file), '20260102-030405-zh-Hans.json');
+  const payload = JSON.parse(fs.readFileSync(first.file, 'utf8'));
+  check('shard-schema', payload.schema, 1);
+  check('shard-locale', payload.locale, 'zh-Hans');
+  check('shard-only-changed-key', Object.keys(payload.entries), ['block\u0000Hello']);
+  check('shard-reload', loadModelMemory({workDir: shardWork}).get('block\u0000Hello'), '你好');
+
+  // Saving the same memory again must not create a second shard: otherwise a
+  // fresh CI checkout (no model-memory.json) would re-commit every entry.
+  saveModelMemory(new Map([['block\u0000Hello', '你好']]), {
+    workDir: shardWork,
+    locale: 'zh-Hans',
+    now: at(6),
+  });
+  check('shard-noop-writes-nothing', shardFiles(shardWork).length, 1);
+
+  // One unchanged + one new key: the new shard holds only the new key.
+  saveModelMemory(
+    new Map([
+      ['block\u0000Hello', '你好'],
+      ['block\u0000Bye', '再见'],
+    ]),
+    {workDir: shardWork, locale: 'zh-Hans', now: at(7)},
+  );
+  check('shard-incremental-count', shardFiles(shardWork).length, 2);
+  check(
+    'shard-incremental-keys',
+    Object.keys(JSON.parse(fs.readFileSync(shardFiles(shardWork)[1], 'utf8')).entries),
+    ['block\u0000Bye'],
+  );
+
+  // A shard outranks the big file it was split out of.
+  fs.writeFileSync(
+    path.join(shardWork, 'model-memory.json'),
+    JSON.stringify({'block\u0000Hello': '旧译文'}),
+  );
+  check('shard-overrides-model-memory', loadModelMemory({workDir: shardWork}).get('block\u0000Hello'), '你好');
+  check('shard-merge-order', readModelMemory({workDir: shardWork}).get('block\u0000Bye'), '再见');
+} finally {
+  fs.rmSync(shardWork, {recursive: true, force: true});
+}
 
 process.stdout.write(failed === 0 ? 'selftest: all rules pass\n' : `selftest: ${failed} failure(s)\n`);
 process.exitCode = failed === 0 ? 0 : 1;
