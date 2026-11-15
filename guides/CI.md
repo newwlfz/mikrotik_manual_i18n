@@ -1,10 +1,11 @@
 # CI 与自动更新
 
-多仓模型下只有两类工作流，职责不重叠：
+多仓模型下只有三类工作流，职责不重叠：
 
 | 仓库 | 工作流 | 触发 | 作用 |
 |---|---|---|---|
-| 总管 `mikrotik_manual_i18n` | `pages.yml` | push `main` / 手动 | `build` 构建英文站；`deploy` 过部署门禁后发布；`publish-content` 把 `CONTENT_ROOTS` 的十个内容根 + `locales.json` 推到各语种仓 |
+| 总管 `mikrotik_manual_i18n` | `sync.yml` | 每天 03:00 UTC / 手动 | ETag 探测官方站 → 变了才 `sync --update` → 提交并推送 → dispatch `pages.yml`（见下文「定时同步」） |
+| 总管 `mikrotik_manual_i18n` | `pages.yml` | push `main` / 手动 / `sync.yml` 的 dispatch | `build` 构建英文站；`deploy` 过部署门禁后发布；`publish-content` 把 `CONTENT_ROOTS` 的十个内容根 + `locales.json` 推到各语种仓 |
 | 语种仓（如 `mikrotik_manual_zh_hans`） | `pages.yml` | push `main` / 手动 | `translate`（读取推过来的英文正文 + 本仓 `i18n/` 覆盖层）→ `build` → 门禁 → `deploy` |
 
 总管**不构建**任何其它语种，语种仓也**不构建**英文站；两个站点的语言下拉与
@@ -36,6 +37,71 @@ hreflang 通过 `locales.json` 里各自的绝对地址互相指向（见
 （资源由英文站提供）。令牌是 fine-grained PAT，存在**总管仓**的 Actions secret
 `CROSS_REPO_TOKEN`，不受本仓 `permissions: contents: read` 限制；缺失时 job
 明确失败并给出配置步骤，不会静默跳过。
+
+## 定时同步（`sync.yml`）
+
+总管仓每天 03:00 UTC（11:00 Asia/Shanghai）自己去看官方站有没有更新，**有才抓**：
+
+| 步骤 | 做什么 | 说明 |
+|---|---|---|
+| probe | `node tools/sync/index.mjs --probe` | 读 `/llms.txt` 拿官方当前 release，再对 `/llms-full.txt` 发一次带 `If-None-Match` 的条件 GET（ETag 记在 `upstream/<version>/manifest.json` 的 `corpus_etag`） |
+| 命中 | 退出码 `0` | 官方语料与清单一致：不发页面请求、不写文件、不提交，整次运行 1–2 分钟（大头是 `npm ci`） |
+| 未命中 | `--update` | 版本变了或 ETag 变了，走完整流水线（fetch → snapshot → install → crawl → materialise → assets → sidebars → prune → verify） |
+| 提交 | `sync: upstream update <yyyy-mm-dd>` | 只有 `git status --porcelain` 非空才提交；`reports/` 的版本-路由差异作为同步证据一起提交 |
+| 构建 | dispatch `pages.yml` | 见下面的递归规则 |
+
+退出码约定：`--probe` 的 `0` = 未变、`10` = 需要同步、`2` = 探测失败。
+**探测失败不等于官方没变**：工作流把它当「需要同步」处理（fail-open），让完整
+流水线自己的预检和 stage 门禁去报真正的错误。
+
+### 为什么是 dispatch 而不是等 push 触发
+
+用默认 `GITHUB_TOKEN` 做的 push **不会**再触发其它工作流（GitHub 的递归规则；
+`workflow_dispatch` / `repository_dispatch` 是例外）。所以同步 job 推完提交后显式
+`createWorkflowDispatch('pages.yml')`，作用在该分支的最新提交上——效果与 push 触发
+相同，且只构建一次。若以后改用带 hub 写权限的 PAT 做 checkout/push，请**删掉**这个
+dispatch step，否则 `pages.yml` 会跑两遍（第二次被 `pages` 并发组排队，白等 14 分钟）。
+
+### 手动触发与排查
+
+1. Actions → **Sync upstream documentation** → *Run workflow*；
+2. 想无视 ETag 强制重抓，勾 `force`（跳过探测，直接 `--update`）；
+3. 本地等价命令：
+
+```bash
+node tools/sync/index.mjs --probe     # 0=未变 10=需要同步 2=探测失败
+node tools/sync/index.mjs --check     # 只读；既有 3,511 条漂移是已知状态
+node tools/sync/index.mjs --update    # 需要干净工作树（--allow-dirty 可跳过该守卫）
+git status --porcelain                # 非空 = 这次同步真的改了东西
+```
+
+4. 失败时工作流会开一个 issue，标题 `sync failed: <run url>`，正文是失败 run 的链接
+   和 `sync.log` 最后 40 行；镜像不会半更新——失败的运行**不提交**，站点保持上一版。
+   修好后重跑同一个 workflow 即可，下一次 cron 也会自动重试。
+
+### 权限与并发
+
+- `permissions`：`contents: write`（提交）、`issues: write`（失败建 issue）、
+  `actions: write`（dispatch `pages.yml`）。不需要 `CROSS_REPO_TOKEN`：语种仓由
+  `pages.yml` 的 `publish-content` 负责。
+- `concurrency: sync-upstream`（`cancel-in-progress: false`）：两次同步不重叠，
+  否则会同时写同一棵树，后一次的 push 在 rebase 之前就被拒。
+- `timeout-minutes: 120`：首次同步要抓整份语料（约 1.5k 页 + 渲染页 + 资源）；
+  命中 ETag 时只有两次 HTTP 请求。
+
+### 已知风险
+
+- **官方改版**：`/llms.txt` 的版本行和 `/llms-full.txt` 的 ETag 是硬依赖。前者读不到
+  会让 `--probe` 退出 2（fail-open → 完整流程再失败一次并开 issue）；后者消失时
+  `--update` 退回逐页抓取，只是慢，不会错。
+- **首次运行不是 304**：`upstream/<version>/manifest.json` 里没有 `corpus_etag` 时
+  必然走完整抓取，抓完才写入 ETag；从第二次起才有「几秒结束」的效果。
+- **超过 120 分钟**：流水线「首个失败即中止」，超时等价于失败——没有提交、开 issue。
+  重跑会用同样的工作量再来一次，所以真遇到慢，先手动勾 `force` 跑一次把 ETag 落地。
+- **不需要 Playwright**：`--update` 的 stage 全是 HTTP + cheerio（`playwright-core`
+  只被 `crawl-sidebar.mjs` / `fetch-changelog.mjs` 使用，两者不在 stage 列表里），
+  所以工作流不装 Chromium，省 1–2 分钟，也少一个上游依赖。若把渲染型 stage 加进
+  `buildStages()`，要补 `npx playwright install --with-deps chromium`。
 
 ## 打开自动更新（GitHub 设置）
 

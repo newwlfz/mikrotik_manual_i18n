@@ -17,13 +17,22 @@
  *   --update --allow-dirty   skip the clean-worktree guard
  *   --update --current-only  materialise only the current version
  *   --update --with-translation  derive the new version's overlay (no API calls)
+ *
+ * `--probe` is the cheap gate the scheduled workflow uses: one conditional GET
+ * on the official whole-corpus file (`llms-full.txt`) plus one inventory read to
+ * learn which release the site currently serves. Exit codes: 0 the corpus is
+ * unchanged, 10 something changed (a new release, new bytes, a missing local
+ * page or a recorded failure) so `--update` is needed, 2 the probe itself failed
+ * (the caller should then fall back to `--update` rather than skip). It writes
+ * nothing: no download, no journal, no docs.
  */
 
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import YAML from 'yaml';
-import {archivedVersions, currentVersion} from './lib/versions.mjs';
+import {REPO, archivedVersions, currentVersion, versionPlan} from './lib/versions.mjs';
+import {docsDir, missingCorpusFiles, probeCorpus, readJson, storedCorpusEtag} from './lib/upstream.mjs';
 import {
   buildStages,
   discoverOfficialVersion,
@@ -50,6 +59,58 @@ function hash(file) {
 function fail(message, code = 2) {
   console.error(message);
   process.exit(code);
+}
+
+// ---------------------------------------------------------------------------
+// --probe: has the official site changed? (read-only)
+// ---------------------------------------------------------------------------
+if (has('probe')) {
+  const installed = currentVersion();
+  let official;
+  try {
+    official = await discoverOfficialVersion();
+  } catch (error) {
+    fail(`probe: cannot discover the official release: ${error.message}`);
+  }
+
+  const plan = versionPlan(installed);
+  const manifest = readJson(path.join(REPO, plan.manifest));
+  const previousEtag = storedCorpusEtag(manifest, installed, plan.llmsUrl);
+  const probe = await probeCorpus(plan.llmsFullUrl, previousEtag);
+  const context =
+    `installed=${installed} official=${official} probe=${probe.status} etag=${probe.etag || '(none)'}`;
+
+  // A new release always needs the pipeline: nothing about the installed tree
+  // describes the release the site started serving.
+  if (official !== installed) {
+    console.log(`probe: ${context} status=changed reason=release-change`);
+    process.exit(10);
+  }
+
+  if (probe.status === 'unchanged') {
+    const missing = missingCorpusFiles(
+      manifest,
+      path.join(REPO, plan.upstreamDir),
+      path.join(REPO, docsDir(installed)),
+    );
+    const failures = (manifest?.failures || []).length;
+    if (!missing.length && !failures) {
+      console.log(`probe: ${context} status=unchanged`);
+      process.exit(0);
+    }
+    // The official corpus did not change, but the local tree is incomplete: the
+    // full fetch is the only stage that can repair it.
+    const reason = missing.length
+      ? `${missing.length} local file(s) missing (${missing[0]})`
+      : `${failures} recorded failure(s)`;
+    console.log(`probe: ${context} status=changed reason=incomplete (${reason})`);
+    process.exit(10);
+  }
+
+  console.log(
+    `probe: ${context} status=changed reason=${probe.status}${probe.detail ? ` (${probe.detail})` : ''}`,
+  );
+  process.exit(10);
 }
 
 // ---------------------------------------------------------------------------
@@ -303,4 +364,4 @@ if (has('repair')) {
   process.exit(failed.length ? 1 : 0);
 }
 
-fail('usage: node tools/sync/index.mjs --bootstrap|--check|--repair|--update [options]');
+fail('usage: node tools/sync/index.mjs --probe|--bootstrap|--check|--repair|--update [options]');

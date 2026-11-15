@@ -73,6 +73,11 @@ hub  newwlfz/mikrotik_manual_i18n
      locales.json
      static/  (assets, never published)
        |
+       +-- scheduled sync (sync.yml, daily 03:00 UTC)
+       |     ETag probe on the official llms-full.txt
+       |       -> only when changed: tools/sync --update
+       |       -> commit + push -> dispatch pages.yml
+       |
        +-- build + deploy (pages.yml)
        |     -> https://newwlfz.github.io/mikrotik_manual_i18n/
        |
@@ -179,6 +184,11 @@ same config therefore never redirects to itself.
 
 ## Automation
 
+- `.github/workflows/sync.yml` — daily 03:00 UTC: ETag probe → `tools/sync --update`
+  only when the official corpus changed → commit `sync: upstream update <date>` →
+  dispatch `pages.yml`. A run with no official change ends in 1–2 minutes without
+  a commit; a failed run commits nothing and opens a
+  `sync failed: <run url>` issue (see [`guides/CI.md`](guides/CI.md)).
 - `config/mirror.yml` — source, versions, sections, locale switches.
 - `state/sync_state.json` — committed source sync state. (Translation state
   lives in the Chinese repository.)

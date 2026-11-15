@@ -1,0 +1,216 @@
+name: Sync upstream documentation
+
+# 定时发现并拉取官方更新（总管仓）。
+#
+# 流程：ETag 探测（一次条件 GET）→ 只有官方真的变了才跑 `sync --update`
+# → `git status` 判断有没有落地改动 → 有则 commit + push → 触发 pages.yml。
+#
+# 为什么最后是 `workflow_dispatch` 而不是等 push 触发：用默认 `GITHUB_TOKEN`
+# 做的 push **不会**再触发别的工作流（GitHub 的递归规则，`workflow_dispatch`
+# 和 `repository_dispatch` 是例外）。所以 push 之后显式 dispatch `pages.yml`，
+# 效果与 push 触发相同，且只构建一次。详见 guides/CI.md「定时同步」。
+on:
+  schedule:
+    # 03:00 UTC = 11:00 Asia/Shanghai。官方站此时流量最低，失败也还有整个白天
+    # 可以手动重跑。
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: '跳过 ETag 探测，直接跑完整同步'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write # commit + push 同步结果
+  issues: write # 失败时建 issue
+  actions: write # push 之后 dispatch pages.yml
+
+# 两次同步不重叠：都会写同一棵树，后一次的 push 会在中途被拒。排队执行，不取消。
+concurrency:
+  group: sync-upstream
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    # 首次同步要抓整份语料（约 1.5k 页 + 渲染页 + 资源），之后命中 ETag 时
+    # 几秒结束。
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 与 pages.yml 相同：`.npmrc` 把 cache 指到 ../work/npm-cache（本地便利），
+      # CI 改用 runner 临时目录，并让 setup-node 的 cache: npm 与 npm ci 看到
+      # 同一个路径。先建目录，避免 setup-node 解析空目录时误判。
+      - name: Prepare npm cache directory
+        env:
+          NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
+        run: mkdir -p "$NPM_CONFIG_CACHE"
+
+      - uses: actions/setup-node@v4
+        env:
+          NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        env:
+          NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
+
+      # 不需要浏览器：`--update` 的每个 stage（fetch-upstream / crawl-nav /
+      # cache-structure / capture-* / fetch-assets）都是纯 HTTP + cheerio。
+      # playwright-core 只被 `crawl-sidebar.mjs` 和 `fetch-changelog.mjs` 使用，
+      # 这两个不在 stage 列表里，所以不装 Chromium（省 1–2 分钟，也少一个
+      # 上游依赖）。若以后把渲染型 stage 加进 `buildStages()`，再补
+      # `npx playwright install --with-deps chromium`。
+
+      - name: Probe the official corpus (ETag)
+        id: probe
+        if: ${{ inputs.force != true }}
+        run: |
+          set -eu -o pipefail
+          set +e
+          node tools/sync/index.mjs --probe 2>&1 | tee "$RUNNER_TEMP/probe.log"
+          code=${PIPESTATUS[0]}
+          set -e
+          case "$code" in
+            0)
+              # 304：官方语料与本地清单记录的一致，不需要抓取。
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+              echo "[sync] upstream unchanged (ETag hit) — skipping the pipeline"
+              echo "- probe: unchanged (ETag hit)" >> "$GITHUB_STEP_SUMMARY"
+              ;;
+            10)
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              echo "[sync] upstream changed — running the pipeline"
+              echo "- probe: changed (pipeline needed)" >> "$GITHUB_STEP_SUMMARY"
+              ;;
+            *)
+              # 探测本身失败（DNS/超时/官方改版）不该让同步停摆：退回完整流程，
+              # 由 `--update` 的预检和 stage 门禁去报真正的错误。方向是 fail-open。
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              echo "::warning::ETag probe failed (exit $code); falling back to the full pipeline"
+              echo "- probe: failed (exit $code) — falling back to the full pipeline" >> "$GITHUB_STEP_SUMMARY"
+              ;;
+          esac
+
+      - name: Synchronise upstream
+        if: ${{ inputs.force == true || steps.probe.outputs.changed == 'true' }}
+        run: |
+          set -eu -o pipefail
+          node tools/sync/index.mjs --update 2>&1 | tee "$RUNNER_TEMP/sync.log"
+
+      - name: Commit and push
+        id: commit
+        if: ${{ success() && (inputs.force == true || steps.probe.outputs.changed == 'true') }}
+        run: |
+          set -eu
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "[sync] upstream unchanged: the pipeline ran and produced no diff"
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            echo "- commit: none (no diff)" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          echo "[sync] changed paths (first 40):"
+          git status --porcelain | head -40
+          echo "[sync] diff size:"
+          git diff --stat | tail -1
+
+          # `git add -A` 遵守 .gitignore：build/、node_modules/、.work/、
+          # work/、data/nav/、state/update-run.json 都不会进提交。reports/ 不在
+          # .gitignore 里，路由差异报告作为同步证据一起提交。
+          git add -A
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          date=$(date -u +%F)
+          version=$(node -p "require('./data/manifests/current-version.json').version")
+          git commit -q -m "sync: upstream update ${date}" \
+            -m "RouterOS ${version}, produced by .github/workflows/sync.yml: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+
+          sha=$(git rev-parse --short HEAD)
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+          echo "sha=${sha}" >> "$GITHUB_OUTPUT"
+          echo "- commit: \`${sha}\` (RouterOS ${version})" >> "$GITHUB_STEP_SUMMARY"
+
+          # 运行期间有人 push 过就会非快进：rebase 到最新 main 再推一次。
+          if ! git push origin "HEAD:${GITHUB_REF_NAME}"; then
+            echo "[sync] push rejected; rebasing on origin/${GITHUB_REF_NAME}"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+          echo "[sync] pushed ${sha} to ${GITHUB_REF_NAME}"
+
+      - name: Dispatch build and publish
+        if: ${{ success() && steps.commit.outputs.committed == 'true' }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // 默认 GITHUB_TOKEN 的 push 不会触发别的 workflow（递归规则），
+            // 所以显式 dispatch pages.yml，作用在刚推上去的提交上。
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'pages.yml',
+              ref: process.env.GITHUB_REF_NAME,
+            });
+            core.info(`dispatched pages.yml on ${process.env.GITHUB_REF_NAME}`);
+            core.summary.addRaw('- pages.yml: dispatched').write();
+
+      - name: Write the run summary
+        if: always()
+        run: |
+          {
+            echo ""
+            echo "Trigger: \`${{ github.event_name }}\` — run [\`${{ github.run_id }}\`](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+            echo ""
+            echo "> A failed run commits nothing: the mirror stays on the previous release."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # 失败靠 issue（本仓没有别的通知渠道）。标题带 run 链接，便于从 run 反查；
+      # 运行日志尾部附在正文里，配置的人不用点进 Actions 就能看到断在哪个 stage。
+      - name: Open an issue when the sync fails
+        if: failure()
+        uses: actions/github-script@v7
+        env:
+          RUN_TEMP: ${{ runner.temp }}
+        with:
+          script: |
+            const fs = require('fs');
+            const runUrl = `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`;
+            const title = `sync failed: ${runUrl}`;
+            let tail = '';
+            for (const name of ['sync.log', 'probe.log']) {
+              try {
+                const text = fs.readFileSync(`${process.env.RUN_TEMP}/${name}`, 'utf8').trim();
+                if (text) {
+                  tail += `\n### ${name} (last 40 lines)\n\n\`\`\`text\n${text.split('\n').slice(-40).join('\n')}\n\`\`\`\n`;
+                }
+              } catch {
+                // 失败发生在这一步之前时日志还不存在。
+              }
+            }
+            const body = [
+              `Scheduled upstream sync failed on \`${process.env.GITHUB_REF_NAME}\` (${new Date().toISOString()}).`,
+              '',
+              `- run: ${runUrl}`,
+              `- commit: \`${process.env.GITHUB_SHA}\``,
+              tail || '\n_No log tail was captured; open the run to see the failing step._',
+              '',
+              'The mirror is unchanged: a failed run commits nothing. Fix the cause and re-run the workflow; the next scheduled run retries at 03:00 UTC.',
+            ].join('\n');
+            const issue = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+            });
+            core.info(`opened issue #${issue.data.number}`);

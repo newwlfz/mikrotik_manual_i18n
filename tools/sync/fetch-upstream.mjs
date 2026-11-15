@@ -28,13 +28,16 @@ import {
   loadConfig,
   localPathForRoute,
   manifestPath,
+  missingCorpusFiles,
   normaliseSourceUrl,
   pageFrontmatter,
+  probeCorpus,
   readJson,
   routeFromOfficialUrl,
   sha256,
   sortedPages,
   buildSourceMap,
+  storedCorpusEtag,
   writeBuffer,
   writeJson,
 } from './lib/upstream.mjs';
@@ -101,83 +104,6 @@ async function fetchWithRetry(url, attempts = retryLimit()) {
     }
   }
   throw last;
-}
-
-/** Drop a probe response body: only its status and ETag are needed. */
-async function discardBody(response) {
-  try {
-    await response.body?.cancel();
-  } catch {
-    // A body that is already gone (304 has none) is not an error.
-  }
-}
-
-/**
- * One conditional request for `llms-full.txt`.
- *
- *   unchanged  304, the stored ETag still describes the official corpus
- *   changed    200 with an ETag (new corpus, or this version had no stored tag)
- *   no-etag    200 without an ETag: unusable as a probe
- *   missing    404/410: this release publishes no whole-corpus file
- *   error      network or protocol failure
- */
-async function probeCorpus(url, etag) {
-  const headers = {'user-agent': config.fetch?.user_agent || 'mikrotik-manual-mirror/1.0'};
-  if (etag) headers['if-none-match'] = etag;
-  try {
-    const response = await fetch(url, {
-      headers,
-      signal: AbortSignal.timeout((config.fetch?.timeout_seconds || 60) * 1000),
-    });
-    if (response.status === 304) {
-      await discardBody(response);
-      return {status: 'unchanged', etag: response.headers.get('etag') || etag};
-    }
-    if (response.status === 404 || response.status === 410) {
-      await discardBody(response);
-      return {status: 'missing', etag: null, detail: `HTTP ${response.status}`};
-    }
-    if (!response.ok) {
-      await discardBody(response);
-      return {status: 'error', etag: null, detail: `HTTP ${response.status}`};
-    }
-    const next = response.headers.get('etag') || null;
-    await discardBody(response);
-    return next ? {status: 'changed', etag: next} : {status: 'no-etag', etag: null};
-  } catch (error) {
-    return {status: 'error', etag: null, detail: error.message};
-  }
-}
-
-/**
- * The ETag is only comparable with the same manifest and inventory URL; a
- * changed `source` (route override) or a missing field means "full fetch".
- */
-function storedCorpusEtag(manifest, version, llmsUrl) {
-  if (!manifest || manifest.version !== version) return '';
-  if (manifest.source && manifest.source !== llmsUrl) return '';
-  return typeof manifest.corpus_etag === 'string' ? manifest.corpus_etag : '';
-}
-
-/**
- * Every file the previous manifest records must still be on disk before a 304
- * may skip the download. A single missing page forces a full fetch.
- */
-function missingCorpusFiles(manifest, base, docsRoot) {
-  if (!manifest?.pages?.length) return ['(manifest has no pages)'];
-  const missing = [];
-  for (const page of manifest.pages) {
-    if (page.origin === 'official') {
-      if (!page.local_path || !fs.existsSync(path.join(base, 'docs', page.local_path))) {
-        missing.push(page.local_path || '(official page without local_path)');
-      }
-    } else if (page.origin === 'local') {
-      if (!docsRoot || !page.local_path || !fs.existsSync(path.join(docsRoot, page.local_path))) {
-        missing.push(page.local_path || '(local page without local_path)');
-      }
-    }
-  }
-  return missing;
 }
 
 function pickLocalPath(candidates) {

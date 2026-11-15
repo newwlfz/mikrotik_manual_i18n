@@ -15,6 +15,7 @@
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
     "sync": "node tools/sync/index.mjs",
+    "sync:probe": "node tools/sync/index.mjs --probe",
     "translate": "node tools/translate/index.mjs",
     "verify": "node tools/pipeline/verify.mjs",
     "cli:build": "node tools/cli/build-all.mjs",
