@@ -197,11 +197,16 @@ async function processVersion(version) {
       localPath = localPathForRoute(version, item.route, {prospective: plan.prospective});
       mapping = localPath ? 'route-heuristic' : '';
     }
-    if (!localPath && plan.prospective) {
-      // A page that does not exist yet: the official export addresses it as
-      // `<route>.md`, and a flat file serves the same route.
+    if (!localPath) {
+      // A page the mirror has never seen: the official export addresses it as
+      // `<route>.md`, and a flat file serves the same route. This is not only a
+      // version-bump case — the official site also *adds* pages to a release it
+      // already publishes (7.26 gained `wireless/wifi/configuring-meshpoint`
+      // and `firewall-and-quality-of-service/firewall/raw`), and a refresh must
+      // materialise them instead of failing the whole run.
       localPath = `${item.route}.md`;
       mapping = 'route-new';
+      console.log(`[${version}] new page ${item.route} -> ${localPath}`);
     }
     return {...item, localPath, mapping};
   });
@@ -219,6 +224,7 @@ async function processVersion(version) {
       if (!item.localPath) {
         failures.push({route: item.route, url: item.url, error: 'no local path mapping'});
         stats.failed++;
+        console.error(`[${version}] FAIL ${item.route}: no local path mapping`);
         continue;
       }
       const localPath = item.localPath;
