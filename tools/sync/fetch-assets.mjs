@@ -10,6 +10,27 @@
  *
  * The local legacy backup is only a bootstrap and is never used here.
  *
+ * Some images are no longer served at any URL at all: the official site inlines
+ * them below Webpack's size limit, so the rendered page carries
+ * `src="data:image/webp;base64,…"` while the `.md` export still points at
+ * `./img/packages1.png`. The bytes are on the rendered page, only the file is
+ * gone (7.26's `getting-started/installation-and-upgrade/packages.md` is the
+ * reference case). Those references are recovered:
+ *
+ *   - the Markdown image references are aligned with the article's `<img>`
+ *     elements, by alt text when it identifies one unambiguously and otherwise
+ *     by position (only when both lists have the same length);
+ *   - a matching `data:` URI is decoded, its MIME (webp/png/jpeg/gif/svg) and
+ *     its signature are checked, and the bytes are written under the **name the
+ *     Markdown uses** (`img/packages1.png`), so the reference resolves;
+ *   - `recovered N image(s) from rendered data URIs` lists what was written.
+ *     A reference that neither the asset index nor a data URI explains still
+ *     fails loudly; nothing is skipped silently.
+ *
+ * A thumbnail link (`[![](img/a.png)](img/a.png)`) is downloaded too: the href
+ * names the same bytes, and `address-images` refuses to rewrite anything while
+ * it points at a file that does not exist.
+ *
  * A handful of pages instead carry a **root-absolute** asset URL copied from
  * the official site (`/assets/images/<name>.webp`, `/videos/<name>.mp4`). The
  * official site is served from the origin root, so `/assets/...` resolves; the
@@ -36,7 +57,6 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import * as cheerio from 'cheerio';
 import {
   walkMarkdown,
   SECTIONS,
@@ -45,45 +65,21 @@ import {
   REPO,
 } from '../translate/lib/paths.mjs';
 import {splitFrontMatter, readField} from '../translate/lib/frontmatter.mjs';
+import {
+  MIME_EXTENSION,
+  alignRenderedImage,
+  decodeInlineImage,
+  imageFileName,
+  imageLinksOf,
+  imageReferencesOf,
+  renderedImages,
+} from './lib/rendered-images.mjs';
 
 const DRY_RUN = process.argv.includes('--dry-run');
 const APPLY = process.argv.includes('--apply') && !DRY_RUN;
 const REFRESH = process.argv.includes('--refresh');
 const PRUNE = process.argv.includes('--prune');
 const LIMIT = Number((process.argv.find((a) => a.startsWith('--limit=')) || '').split('=')[1] || 0);
-
-const IMAGE = /!\[[^\]]*\]\(([^)\s]+)\)|<img[^>]*\ssrc=["']([^"']+)["']/g;
-
-function imagesOf(body) {
-  const pattern = new RegExp(IMAGE.source, 'g');
-  const out = [];
-  let match;
-  while ((match = pattern.exec(body)) !== null) out.push(match[1] || match[2]);
-  return out;
-}
-
-/**
- * Ordered `<img>` list of the rendered article, so a page whose images the
- * official site inlines as `data:image/...;base64` still yields bytes.
- */
-function pageImages(html, origin) {
-  const $ = cheerio.load(html);
-  const marked = $('.theme-doc-markdown').first();
-  const root = marked.length ? marked : $('article').first();
-  const out = [];
-  root.find('img').each((_, element) => {
-    const src = $(element).attr('src');
-    if (!src) return;
-    out.push({src, url: src.startsWith('data:') ? null : new URL(src, origin).href});
-  });
-  return out;
-}
-
-function decodeDataUri(uri) {
-  const match = /^data:([^;,]+)?(;base64)?,(.*)$/s.exec(uri);
-  if (!match) throw new Error('unsupported data URI');
-  return match[2] ? Buffer.from(match[3], 'base64') : Buffer.from(decodeURIComponent(match[3]), 'binary');
-}
 
 /** hashed asset name -> public URL, from one rendered page */
 function assetIndex(html, origin) {
@@ -110,6 +106,7 @@ async function image(url) {
   if (!type.startsWith('image/')) {
     throw new Error(`not an image (${type || 'unknown'})`);
   }
+  if (!bytes.length) throw new Error('empty image');
   return bytes;
 }
 
@@ -160,7 +157,19 @@ function relativeReference(fromFile, target) {
   return rel.startsWith('.') ? rel : `./${rel}`;
 }
 
-const stats = {pages: 0, refs: 0, missing: 0, downloaded: 0, refreshed: 0, failed: 0, external: 0};
+const stats = {
+  pages: 0,
+  refs: 0,
+  links: 0,
+  missing: 0,
+  downloaded: 0,
+  refreshed: 0,
+  recovered: 0,
+  failed: 0,
+  external: 0,
+};
+/** Images written from a rendered `data:` URI: `{file, mime, bytes}`. */
+const recovered = [];
 const referenced = new Set();
 // Pruning is destructive, so it also keeps a file whose *name* appears in any
 // page: an image can be referenced site-absolutely (`/hardware/x/img/y.png`)
@@ -174,12 +183,27 @@ for (const section of SECTIONS) {
     const text_ = fs.readFileSync(file, 'utf8');
     const {frontMatter, body} = splitFrontMatter(text_);
     const source = readField(frontMatter, 'source');
-    const images = imagesOf(body);
+    const images = imageReferencesOf(body);
     if (!images.length) continue;
+
+    // An image reference keeps its position in the page's image list: that is
+    // what a rendered `<img>` with no alt text is aligned against. A thumbnail
+    // link (`[![](img/a.png)](img/a.png)`) names the same bytes but has no
+    // position of its own; it is only downloaded, never used for alignment.
+    const refs = images.map((image, position) => ({...image, imagePosition: position}));
+    const seen = new Set(images.map((image) => image.url.split('#')[0].split('?')[0]));
+    for (const link of imageLinksOf(body)) {
+      const bare = link.url.split('#')[0].split('?')[0];
+      if (seen.has(bare)) continue;
+      seen.add(bare);
+      refs.push({...link, imagePosition: -1});
+      stats.links++;
+    }
     stats.pages++;
 
     const targets = [];
-    for (const url of images) {
+    for (const ref of refs) {
+      const {url} = ref;
       stats.refs++;
       const bare = url.split('#')[0].split('?')[0];
       if (bare) referencedNames.add(path.basename(bare));
@@ -202,7 +226,7 @@ for (const section of SECTIONS) {
         continue;
       }
       referenced.add(target);
-      if (!fs.existsSync(target) || REFRESH) targets.push({url, target, position: images.indexOf(url)});
+      if (!fs.existsSync(target) || REFRESH) targets.push({...ref, target});
     }
     if (!targets.length) continue;
     stats.missing += targets.filter(({target}) => !fs.existsSync(target)).length;
@@ -228,33 +252,95 @@ for (const section of SECTIONS) {
       const html = await text(pageUrl);
       origin = new URL(pageUrl).origin;
       index = assetIndex(html, origin);
-      ordered = pageImages(html, origin);
+      ordered = renderedImages(html, origin);
     } catch (error) {
       console.log('PAGE-FAILED', source, error.message);
     }
 
-    for (const {url, target, position} of targets) {
-      const name = path.basename(url);
+    for (const {url, target, imagePosition, alt} of targets) {
+      const name = imageFileName(url);
       const asset = index.get(name);
-      const inline = ordered.length === images.length ? ordered[position] : null;
+      const inline = imagePosition >= 0
+        ? alignRenderedImage(ordered, {alt, index: imagePosition, count: images.length})
+        : null;
       const existed = fs.existsSync(target);
+      const attempts = [];
       try {
-        const bytes = inline?.url === null && inline.src.startsWith('data:')
-          ? decodeDataUri(inline.src)
-          : asset
-            ? await image(asset)
-            : await image(inline?.url || new URL(url, `${source}/`).href);
+        let bytes = null;
+        let via = null;
+        let mime = null;
+
+        // Order: the content-hashed asset the page's own index names, then the
+        // rendered element (a `data:` URI, or the URL it carries), then the
+        // reference resolved against the page URL — which is exactly the path
+        // the official site no longer serves, so it is tried last.
+        if (asset) {
+          try {
+            bytes = await image(asset);
+            via = 'asset';
+          } catch (error) {
+            attempts.push(`asset ${error.message}`);
+          }
+        }
+        if (!bytes && inline?.src?.startsWith('data:')) {
+          try {
+            const decoded = decodeInlineImage(inline.src);
+            bytes = decoded.bytes;
+            mime = decoded.mime;
+            via = 'data';
+          } catch (error) {
+            attempts.push(`data URI ${error.message}`);
+          }
+        }
+        if (!bytes && inline?.url) {
+          try {
+            bytes = await image(inline.url);
+            via = 'rendered';
+          } catch (error) {
+            attempts.push(`rendered ${error.message}`);
+          }
+        }
+        if (!bytes) {
+          try {
+            bytes = await image(new URL(url, `${source}/`).href);
+            via = 'direct';
+          } catch (error) {
+            attempts.push(`source ${error.message}`);
+          }
+        }
+        if (!bytes) throw new Error(attempts.join('; ') || 'no source could be resolved');
+        if (!bytes.length) throw new Error('empty image');
+
         fs.mkdirSync(path.dirname(target), {recursive: true});
         fs.writeFileSync(target, bytes);
         if (existed) stats.refreshed++;
         else stats.downloaded++;
-        console.log(asset ? 'DOWNLOADED' : 'DOWNLOADED-DIRECT', path.relative(REPO, target));
+
+        const relative = path.relative(REPO, target);
+        if (via === 'data') {
+          stats.recovered++;
+          recovered.push({file: relative, mime, bytes: bytes.length});
+          const expected = path.extname(name).toLowerCase();
+          if (expected && expected !== MIME_EXTENSION[mime]) {
+            // The Markdown name wins: rewriting it would leave the reference
+            // that needed rescuing broken. Flag the disagreement instead.
+            console.log('MIME-MISMATCH', relative, `${mime} kept as ${name}`);
+          }
+          console.log('RECOVERED', relative, `${bytes.length} bytes`, mime, 'from rendered data URI');
+        } else {
+          console.log(via === 'asset' ? 'DOWNLOADED' : 'DOWNLOADED-DIRECT', relative);
+        }
       } catch (error) {
         stats.failed++;
         console.log('FAILED', path.relative(REPO, target), error.message);
       }
     }
   }
+}
+
+if (recovered.length) {
+  console.log(`recovered ${recovered.length} image(s) from rendered data URIs`);
+  for (const entry of recovered) console.log(`  ${entry.file} (${entry.bytes} bytes, ${entry.mime})`);
 }
 
 // ---------------------------------------------------------------------------
@@ -436,6 +522,7 @@ if (APPLY && PRUNE) {
 console.log(
   JSON.stringify({
     ...stats,
+    recoveredImages: recovered,
     pruned,
     root: rootStats,
     apply: APPLY,

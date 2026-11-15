@@ -42,3 +42,6 @@ work/
 
 # Per-run journal of `npm run sync -- --update`; regenerated on every run.
 state/update-run.json
+
+# Sync/materialize diagnostics (regenerated per run), not site content.
+/reports/

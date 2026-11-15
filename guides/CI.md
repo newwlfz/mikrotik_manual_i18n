@@ -112,13 +112,19 @@ git status --porcelain                # 非空 = 这次同步真的改了东西
   必然走完整抓取，抓完才写入 ETag；从第二次起才有「几秒结束」的效果。
 - **超过 120 分钟**：流水线「首个失败即中止」，超时等价于失败——没有提交、开 issue。
   重跑会用同样的工作量再来一次，所以真遇到慢，先手动勾 `force` 跑一次把 ETag 落地。
-- **官方把图片内联成 `data:` URI 时，`.md` 导出里的相对图片链接是死的**：7.26 的
+- **官方把图片内联成 `data:` URI 时已自动回收**：7.26 的
   `getting-started/installation-and-upgrade/packages.md` 引用 `img/packages1.png`～
   `packages4.png`，而官方站已不再按这些路径提供文件（渲染页把它们内联成
-  `data:image/webp;base64,…`）。`assets` 下不到、`address-images` 因此
-  `refusing to change anything`，整次同步失败。这是上游内容问题，不是工作流问题：
-  要么等官方改回来，要么给 `fetch-assets` 加一条「从渲染页的 `data:` URI 回收图片」
-  的路（和 `capture-pdf-links` 回收 PDF 真实链接同一思路）。
+  `data:image/webp;base64,…`）。`fetch-assets` 现在会抓一次渲染页，把 `.md` 的图片
+  引用按出现顺序与 `<img>` 对齐（alt 能唯一确定时优先按 alt），把 `data:` URI 解码、
+  校验后**按 `.md` 里的原文件名**写回该页的 `img/`，日志
+  `recovered N image(s) from rendered data URIs` 会列出文件名；缩略图链接
+  （`[![](img/a.png)](img/a.png)` 的 href）也会一并下载，所以 `address-images`
+  不再因悬空 href 而 `refusing to change anything`。限制：**只有渲染页确实给出
+  `data:` URI 时才能回收**；MIME 仅接受 webp/png/jpeg/gif/svg 且要过文件头校验，
+  空字节或签名不符按失败处理；对齐依赖「图片数量一致」或「alt 唯一」，两者都不满足
+  时退回按 URL 下载（仍 404 就照旧报错，不会静默跳过）。单测：
+  `npm run test:sync-assets`。
 - **不需要 Playwright**：`--update` 的 stage 全是 HTTP + cheerio（`playwright-core`
   只被 `crawl-sidebar.mjs` / `fetch-changelog.mjs` 使用，两者不在 stage 列表里），
   所以工作流不装 Chromium，省 1–2 分钟，也少一个上游依赖。若把渲染型 stage 加进
