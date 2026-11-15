@@ -8,7 +8,6 @@ tags:
   - 'netflow'
   - 'ipfix'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/traffic-flow
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 MikroTik Traffic-Flow provides statistical information about packets that pass through the router. Besides network monitoring and accounting, system administrators can identify various problems that occur in the network, and analyze and optimize overall network performance. Traffic-Flow is compatible with Cisco NetFlow, so utilities designed for NetFlow work with it.

@@ -9,7 +9,6 @@ tags:
   - 'diffserv'
   - 'flow-isolation'
 source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/queue-types/cake
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 CAKE (Common Applications Kept Enhanced) is a shaping-capable queue discipline that combines COBALT active queue management, a deficit-mode shaper, DRR++ flow isolation, simplified DiffServ handling, and link-layer overhead compensation.

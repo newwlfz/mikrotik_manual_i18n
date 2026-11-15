@@ -4,8 +4,8 @@
   "local_path": "cli-reference/ipv6/firewall/raw/index.md",
   "source_url": "https://manual.mikrotik.com/docs/cli-reference/ipv6/firewall/raw.md",
   "html_url": "https://manual.mikrotik.com/docs/cli-reference/ipv6/firewall/raw/",
-  "md_sha256": "a8c6c38b821c0b9d8c21e20f11637fe20ba19777931e927f4badf57593a5a33e",
-  "html_sha256": "cb38ec65f62f30a82618a38f280922cf03802ea83cd46cb53e1aa13516318d42",
+  "md_sha256": "f7e2e061f2379ddbae2286e3d880cc26b1fadaeee8df884318da079721234492",
+  "html_sha256": "7320f27fdf781ced98b3f893d223c57cb6cfdea3b3d955cbf605d7dfea864d2e",
   "body": {
     "html": {
       "lists": 0,
@@ -18,8 +18,8 @@
       "wideTables": 0
     },
     "md": {
-      "lists": 15,
-      "listItems": 15,
+      "lists": 24,
+      "listItems": 24,
       "br": 0,
       "details": 0,
       "tables": 0,

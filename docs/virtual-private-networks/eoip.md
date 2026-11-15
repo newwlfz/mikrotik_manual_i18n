@@ -8,7 +8,6 @@ tags:
   - 'eoip'
   - 'bridging'
 source: https://manual.mikrotik.com/docs/virtual-private-networks/eoip
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Ethernet over IP (EoIP) is a MikroTik RouterOS protocol that creates an Ethernet tunnel between two routers over an IP network. It is based on GRE encapsulation (RFC 1701 and RFC 1702) and transports full Ethernet frames across routed IP infrastructure, effectively extending one Layer 2 network between remote sites. EoIP uses its own GRE protocol type, so an EoIP tunnel does not interconnect with generic GRE or Ethernet-over-GRE tunnels. EoIP is a MikroTik protocol without a published specification. Some other systems include their own, unofficial implementation of it, for example the `eoip` interface in OpenBSD; MikroTik does not maintain these implementations and does not guarantee compatibility with them.

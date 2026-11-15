@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "quick"
 sidebar_label: 'quick'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/quick
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "upload-file"
 sidebar_label: 'upload-file'
 source: https://manual.mikrotik.com/docs/cli-reference/system/backup/cloud/upload-file
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

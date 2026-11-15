@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "range"
 sidebar_label: 'range'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/ospf/area/range
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

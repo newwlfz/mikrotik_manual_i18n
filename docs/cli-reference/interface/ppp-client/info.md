@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "info"
 sidebar_label: 'info'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ppp-client/info
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

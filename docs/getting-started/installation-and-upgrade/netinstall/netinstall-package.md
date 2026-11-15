@@ -7,7 +7,6 @@ description: 'This page documents the RouterOS Netinstall package, which allows 
 tags:
   - 'netinstall'
 source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/netinstall/netinstall-package
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The **Netinstall package** is an extra package, available for all devices running RouterOS starting from version 7.24beta1 and is available for all of the architectures excluding SMIPS.

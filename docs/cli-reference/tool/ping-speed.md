@@ -4,7 +4,6 @@ sidebar_position: 15
 title: "ping-speed"
 sidebar_label: 'ping-speed'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/ping-speed
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

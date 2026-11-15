@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "queue"
 sidebar_label: 'queue'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/graphing/queue
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

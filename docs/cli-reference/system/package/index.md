@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/package"
 title: "package"
 sidebar_label: 'package'
 source: https://manual.mikrotik.com/docs/cli-reference/system/package
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

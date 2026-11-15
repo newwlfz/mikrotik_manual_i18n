@@ -4,7 +4,6 @@ sidebar_position: 9
 title: "route"
 sidebar_label: 'route'
 source: https://manual.mikrotik.com/docs/cli-reference/ipv6/route
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

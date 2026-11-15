@@ -4,8 +4,8 @@
   "local_path": "bridging-and-switching/marvell-prestera-switch-chip-features.md",
   "source_url": "https://manual.mikrotik.com/docs/bridging-and-switching/marvell-prestera-switch-chip-features.md",
   "html_url": "https://manual.mikrotik.com/docs/bridging-and-switching/marvell-prestera-switch-chip-features",
-  "md_sha256": "602daaa8e3550f7cb3cb97b98c5cbce7c1cdd038c7d5a2c3e411476871aad39c",
-  "html_sha256": "ac03600f97148d5b4a03a8e58838c9273195b13575eea44c0e2a28bc84355da6",
+  "md_sha256": "d76c97ea913936448eb063d36b99b2a5273c6ab04692f63c48e3588c92cf7f92",
+  "html_sha256": "ed51f3bb6568b8da9d543d1a9a8ba7f06bef0b33429e51f2a84f32b22e206e05",
   "body": {
     "html": {
       "lists": 13,
@@ -286,13 +286,13 @@
     },
     {
       "index": 7,
-      "rows": 28,
+      "rows": 30,
       "cols": 2,
       "official_wide": false,
       "md_wide": false,
       "cells": [
         {
-          "row": 11,
+          "row": 12,
           "col": 1,
           "html": "Changes the destination port to the specified value: <br/><ul><li>If the setting is left empty (e.g. <code>new-dst-ports=\"\"</code>), the packet will be dropped;</li><li>If a port or <a href=\"/docs/bridging-and-switching/marvell-prestera-switch-chip-features/marvell-prestera-switch-chip-features\" rel=\"nofollow\"> hardware-offloaded bonding </a>interface is specified, the packet will be redirected to that port. Only a single port or bond interface is supported;</li><li>if you use the <code>all</code> argument, packet will be allowed to pass through to the egress processing without being dropped;</li><li>If this parameter is not used, the packet will be accepted as is.</li></ul>"
         }

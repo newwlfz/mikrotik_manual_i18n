@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "run-script"
 sidebar_label: 'run-script'
 source: https://manual.mikrotik.com/docs/cli-reference/cmr/device/run-script
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

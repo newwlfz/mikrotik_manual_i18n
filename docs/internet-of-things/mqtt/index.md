@@ -8,7 +8,6 @@ tags:
   - 'iot'
   - 'publish-subscribe'
 source: https://manual.mikrotik.com/docs/internet-of-things/mqtt
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This section covers MQTT integration examples. Use it to connect RouterOS MQTT publishing and subscription workflows to IoT platforms such as Kaa IoT and ThingsBoard.

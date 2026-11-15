@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "release"
 sidebar_label: 'release'
 source: https://manual.mikrotik.com/docs/cli-reference/ipv6/dhcp-client/release
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

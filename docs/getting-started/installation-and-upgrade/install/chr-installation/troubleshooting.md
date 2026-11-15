@@ -9,7 +9,6 @@ tags:
   - 'igmp'
   - 'security-settings'
 source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation/troubleshooting
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ### Using Bridge on Linux

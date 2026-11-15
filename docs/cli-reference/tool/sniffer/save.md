@@ -4,7 +4,6 @@ sidebar_position: 6
 title: "save"
 sidebar_label: 'save'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/sniffer/save
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

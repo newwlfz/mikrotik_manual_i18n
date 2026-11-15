@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "peripheral-devices"
 sidebar_label: 'peripheral-devices'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/peripheral-devices
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -9,7 +9,6 @@ tags:
   - 'mld'
   - 'multicast'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/multicast/group-management-protocol
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The Group Management Protocol allows any of the interfaces to become a receiver for the multicast stream. It allows testing the multicast routing and switching setups without using dedicated IGMP or MLD clients. The option has been available since RouterOS v7.4 and it supports IGMP v1, v2, v3 and MLD v1, v2 protocols.

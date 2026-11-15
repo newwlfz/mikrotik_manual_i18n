@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "tracking"
 sidebar_label: 'tracking'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/firewall/connection/tracking
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

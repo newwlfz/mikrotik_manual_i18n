@@ -7,7 +7,6 @@ description: 'Bidirectional Forwarding Detection (BFD) is a low-latency protocol
 tags:
   - 'routing'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/bfd
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 **Bidirectional Forwarding Detection** (**BFD**) is a low‑overhead, short‑duration protocol that detects faults in the bidirectional path between two forwarding engines. This includes physical interfaces, sub‑interfaces, data links, and — as far as possible — the forwarding engines themselves, all with very low latency. It operates independently of media, data protocols, and routing protocols.

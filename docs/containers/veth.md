@@ -8,7 +8,6 @@ tags:
   - 'veth'
   - 'ipv6'
 source: https://manual.mikrotik.com/docs/containers/veth
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 A veth (virtual Ethernet) is a pair of connected Ethernet ends. One end is a RouterOS interface in `/interface/veth`; the other end is the network interface of a container. Inside the container, that interface has the veth's name and the `container-mac-address`. The address, gateway and DHCP settings of the veth are applied inside the container, not on the router.

@@ -4,7 +4,6 @@ sidebar_position: 21
 title: "snmp-get"
 sidebar_label: 'snmp-get'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/snmp-get
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/routerboard"
 title: "routerboard"
 sidebar_label: 'routerboard'
 source: https://manual.mikrotik.com/docs/cli-reference/system/routerboard
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "add-devices"
 sidebar_label: 'add-devices'
 source: https://manual.mikrotik.com/docs/cli-reference/cmr/layout/add-devices
-captured_at: '2026-11-09T11:35:47.715Z'
 pagination_prev: "cli-reference/cmr/layout"
 ---
 

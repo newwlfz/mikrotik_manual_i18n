@@ -4,7 +4,6 @@ sidebar_position: 19
 title: "table"
 sidebar_label: 'table'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/table
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

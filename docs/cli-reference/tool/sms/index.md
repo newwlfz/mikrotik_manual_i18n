@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/tool/sms"
 title: "sms"
 sidebar_label: 'sms'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/sms
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

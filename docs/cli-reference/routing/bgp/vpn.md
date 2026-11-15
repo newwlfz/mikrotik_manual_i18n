@@ -4,7 +4,6 @@ sidebar_position: 8
 title: "vpn"
 sidebar_label: 'vpn'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/bgp/vpn
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

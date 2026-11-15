@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "default"
 sidebar_label: 'default'
 source: https://manual.mikrotik.com/docs/cli-reference/ipv6/nd/prefix/default
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

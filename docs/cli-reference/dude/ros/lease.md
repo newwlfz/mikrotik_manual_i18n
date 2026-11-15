@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "lease"
 sidebar_label: 'lease'
 source: https://manual.mikrotik.com/docs/cli-reference/dude/ros/lease
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

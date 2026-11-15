@@ -8,7 +8,6 @@ tags:
   - 'lora'
   - 'iot'
 source: https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides/chirpstack
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 [ChirpStack](https://www.chirpstack.io/) is an open-source LoRaWAN server, which you can install locally.
@@ -103,14 +102,14 @@ Add a new ["Device Profile"](https://www.chirpstack.io/docs/chirpstack/use/devic
 Configure "*Region*", "*MAC version*", "*Regional parameters revision*", "*ADR algorithm*" and other settings, depending on what your node/sensor supports.
 Optionally, you can enable different classes (like Class B).
 
-MikroTik **TG-LR** tag's information can be found [here](/docs/internet-of-things/lora/user-guides/tg-lr-setup-guide).
+MikroTik **TG-LR** tag's information can be found [here](/hardware/tg-lr-setup-guide).
 
 Add "Payload codec":
 
 ![](/img/eaa77004ac43d16e.png)
 
 - Select "JavaScript functions";
-- Copy/Paste the content of the [provided script **tg-lrx2-2.0-ul-dec.js**](/docs/internet-of-things/lora/user-guides/tg-lr-setup-guide#quickstart-guide) into the "Codec functions" field and "Submit".
+- Copy/Paste the content of the [provided script **tg-lrx2-2.0-ul-dec.js**](/hardware/tg-lr-setup-guide#quickstart-guide) into the "Codec functions" field and "Submit".
 
 ### Create application
 
@@ -136,11 +135,11 @@ Input "**Application key**" and "Submit".
 
 ### Power on the tag
 
-Please check our full guide on the [TG-LR options](/docs/internet-of-things/lora/user-guides/tg-lr-setup-guide).
+Please check our full guide on the [TG-LR options](/hardware/tg-lr-setup-guide).
 
 From the get-go, the tag will be in the "Shutdown" mode (sleeping).
 
-To activate it, check our [Quickstart Guide](/docs/internet-of-things/lora/user-guides/tg-lr-setup-guide#quickstart-guide), and simply hold the magnet against the reed switch for about ~1.5 seconds until you see x2 LED blinks (after which remove the magnet).
+To activate it, check our [Quickstart Guide](/hardware/tg-lr-setup-guide#quickstart-guide), and simply hold the magnet against the reed switch for about ~1.5 seconds until you see x2 LED blinks (after which remove the magnet).
 
 :::info
 When using another vendor sensor, find out how to activate it.

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/ovpn-server"
 title: "ovpn-server"
 sidebar_label: 'ovpn-server'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ovpn-server
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

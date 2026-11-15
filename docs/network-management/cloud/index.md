@@ -8,7 +8,6 @@ tags:
   - 'ddns'
   - 'ntp'
 source: https://manual.mikrotik.com/docs/network-management/cloud
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 MikroTik runs free cloud services for RouterOS devices. They give the router a DNS name, set its clock and time zone, store a backup, and let you reach your home network or share files from the router, even when the router has no public IP address. The router always opens the connection to the MikroTik servers, so none of the services needs port forwarding on another device.

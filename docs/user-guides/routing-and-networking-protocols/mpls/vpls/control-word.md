@@ -10,7 +10,6 @@ tags:
   - 'control-word'
   - 'fragmentation'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/mpls/vpls/control-word
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 VPLS allows remote sites to share an Ethernet broadcast domain by connecting sites through **pseudo-wires (PW)** tunnels over a packet switching network (PSN). Since VPLS encapsulation adds additional overhead, each interface in the LSP should be able to transmit a large enough packet.

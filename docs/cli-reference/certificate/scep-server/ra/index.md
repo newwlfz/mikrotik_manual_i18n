@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/certificate/scep-server/ra"
 title: "ra"
 sidebar_label: 'ra'
 source: https://manual.mikrotik.com/docs/cli-reference/certificate/scep-server/ra
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

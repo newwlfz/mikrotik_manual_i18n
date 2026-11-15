@@ -9,7 +9,6 @@ tags:
   - 'route-selection'
   - 'bgp'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/route-selection-and-filtering
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Route Filtering

@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "monitor"
 sidebar_label: 'monitor'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/traffic-flow/monitor
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

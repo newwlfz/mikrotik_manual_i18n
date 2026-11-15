@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "node"
 sidebar_label: 'node'
 source: https://manual.mikrotik.com/docs/cli-reference/cmr/layout/node
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

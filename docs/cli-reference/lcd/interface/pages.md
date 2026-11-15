@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "pages"
 sidebar_label: 'pages'
 source: https://manual.mikrotik.com/docs/cli-reference/lcd/interface/pages
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

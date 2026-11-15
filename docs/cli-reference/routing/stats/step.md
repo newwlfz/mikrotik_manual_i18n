@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "step"
 sidebar_label: 'step'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/stats/step
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

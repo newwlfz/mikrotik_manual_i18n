@@ -9,7 +9,6 @@ tags:
   - 'container'
   - 'freeradius'
 source: https://manual.mikrotik.com/docs/containers/user-guides/container-freeradius-server
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Introduction

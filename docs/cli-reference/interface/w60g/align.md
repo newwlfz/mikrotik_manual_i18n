@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "align"
 sidebar_label: 'align'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/w60g/align
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

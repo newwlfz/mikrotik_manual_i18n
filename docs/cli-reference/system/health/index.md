@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/health"
 title: "health"
 sidebar_label: 'health'
 source: https://manual.mikrotik.com/docs/cli-reference/system/health
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

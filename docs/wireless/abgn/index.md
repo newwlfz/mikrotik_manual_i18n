@@ -8,7 +8,6 @@ tags:
   - '802-11abgn'
   - 'nstreme'
 source: https://manual.mikrotik.com/docs/wireless/abgn
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This section covers MikroTik **802.11 a/b/g/n** devices (and any 802.11ac device running the `wireless` package), configured through the **`/interface/wireless`** menu (the **`wireless`** driver package) — the only option on MIPS-based devices.

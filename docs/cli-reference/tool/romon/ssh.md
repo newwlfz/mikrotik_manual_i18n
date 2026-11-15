@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "ssh"
 sidebar_label: 'ssh'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/romon/ssh
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

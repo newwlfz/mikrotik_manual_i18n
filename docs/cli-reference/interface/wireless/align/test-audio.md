@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "test-audio"
 sidebar_label: 'test-audio'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/align/test-audio
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

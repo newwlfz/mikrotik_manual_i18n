@@ -4,7 +4,6 @@ sidebar_position: 12
 title: "one2one-vlan-switching"
 sidebar_label: 'one2one-vlan-switching'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/one2one-vlan-switching
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

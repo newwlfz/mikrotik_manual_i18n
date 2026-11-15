@@ -9,7 +9,6 @@ tags:
   - 'smart'
   - 'cli'
 source: https://manual.mikrotik.com/docs/hardware/disks/smart
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 [*S.M.A.R.T. info CLI Reference*](/docs/cli-reference/disk/smart-info)

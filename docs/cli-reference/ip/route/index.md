@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/route"
 title: "route"
 sidebar_label: 'route'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/route
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "ip-binding"
 sidebar_label: 'ip-binding'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/ip-binding
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

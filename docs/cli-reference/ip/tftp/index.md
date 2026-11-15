@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/tftp"
 title: "tftp"
 sidebar_label: 'tftp'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/tftp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

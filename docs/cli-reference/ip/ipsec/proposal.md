@@ -4,7 +4,6 @@ sidebar_position: 9
 title: "proposal"
 sidebar_label: 'proposal'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/proposal
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

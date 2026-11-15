@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/clock"
 title: "clock"
 sidebar_label: 'clock'
 source: https://manual.mikrotik.com/docs/cli-reference/system/clock
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

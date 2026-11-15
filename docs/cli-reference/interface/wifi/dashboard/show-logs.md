@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "show-logs"
 sidebar_label: 'show-logs'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/dashboard/show-logs
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "port"
 sidebar_label: 'port'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/stats/port
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

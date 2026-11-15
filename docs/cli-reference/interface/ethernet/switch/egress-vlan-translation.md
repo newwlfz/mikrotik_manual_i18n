@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "egress-vlan-translation"
 sidebar_label: 'egress-vlan-translation'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/egress-vlan-translation
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

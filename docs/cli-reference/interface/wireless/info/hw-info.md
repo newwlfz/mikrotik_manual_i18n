@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "hw-info"
 sidebar_label: 'hw-info'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/info/hw-info
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

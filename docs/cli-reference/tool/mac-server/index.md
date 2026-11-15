@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/tool/mac-server"
 title: "mac-server"
 sidebar_label: 'mac-server'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/mac-server
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

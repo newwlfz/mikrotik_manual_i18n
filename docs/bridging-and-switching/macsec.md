@@ -7,7 +7,6 @@ description: 'MACsec is a security protocol for Ethernet networks providing conf
 tags:
   - 'macsec'
 source: https://manual.mikrotik.com/docs/bridging-and-switching/macsec
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The MACsec (Media Access Control Security) protocol is a standard security technology employed in Ethernet networks to ensure the confidentiality, integrity, and authenticity of data transmitted over the physical medium. MACsec is defined by IEEE standard 802.1AE.

@@ -4,7 +4,6 @@ sidebar_position: 6
 title: "num-list"
 sidebar_label: 'num-list'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/filter/num-list
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

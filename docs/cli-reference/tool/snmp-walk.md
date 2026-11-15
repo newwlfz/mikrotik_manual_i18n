@@ -4,7 +4,6 @@ sidebar_position: 22
 title: "snmp-walk"
 sidebar_label: 'snmp-walk'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/snmp-walk
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -7,7 +7,6 @@ tags:
   - 'firewall'
   - 'vpn'
 source: https://manual.mikrotik.com/docs/getting-started/software-specifications
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Hardware Support

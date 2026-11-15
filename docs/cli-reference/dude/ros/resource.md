@@ -4,7 +4,6 @@ sidebar_position: 9
 title: "resource"
 sidebar_label: 'resource'
 source: https://manual.mikrotik.com/docs/cli-reference/dude/ros/resource
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

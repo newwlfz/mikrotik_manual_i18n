@@ -4,7 +4,6 @@ sidebar_position: 7
 title: "ingress-port-policer"
 sidebar_label: 'ingress-port-policer'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/ingress-port-policer
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 17
 title: "note"
 sidebar_label: 'note'
 source: https://manual.mikrotik.com/docs/cli-reference/system/note
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

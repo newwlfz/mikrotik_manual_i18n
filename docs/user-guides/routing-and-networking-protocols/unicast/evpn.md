@@ -10,7 +10,6 @@ tags:
   - 'vxlan'
   - 'ospf'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/evpn
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Ethernet Virtual Private Network (EVPN) is a technology that extends Layer 2 and Layer 3 connectivity between different network segments. MPLS or VXLAN encapsulations transfer Ethernet frames over MPLS or IP‑based networks.

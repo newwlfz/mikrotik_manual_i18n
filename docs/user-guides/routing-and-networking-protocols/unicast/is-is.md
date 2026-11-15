@@ -9,7 +9,6 @@ tags:
   - 'routing'
   - 'ospf'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/is-is
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The IS-IS (Intermediate System - Intermediate System) protocol is an Interior Gateway Protocol (IGP) used to distribute IP routing information throughout a single Autonomous System.

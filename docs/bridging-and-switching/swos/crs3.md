@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "CRS3xx and CSS3xx Series Manual"
 sidebar_label: 'CRS3xx and CSS3xx Series Manual'
 source: https://manual.mikrotik.com/docs/bridging-and-switching/swos/crs3
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Summary

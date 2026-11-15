@@ -4,8 +4,8 @@
   "local_path": "cli-reference/ip/ssh/known-hosts.md",
   "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/ssh/known-hosts.md",
   "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/ssh/known-hosts",
-  "md_sha256": "68b8ba50c62b4285784b52cf026ca0545b1116f946099d6ee0e7e82b7c55956a",
-  "html_sha256": "8b8f8f97be9c8f3366694678c8ef27c0886157ee5bc3daa56d90fdff2583b578",
+  "md_sha256": "8e215ccc2b2941769152a34887530da74aca18334a322028859ca47a2a89782e",
+  "html_sha256": "753dc66304e1ca2dd5e90fee618d452af1896ff5db5591e7ef935e92bbd37284",
   "body": {
     "html": {
       "lists": 0,
@@ -14,7 +14,7 @@
       "details": 0,
       "tables": 2,
       "sup": 0,
-      "code": 4,
+      "code": 5,
       "wideTables": 0
     },
     "md": {

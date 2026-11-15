@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "igmp-interface-template"
 sidebar_label: 'igmp-interface-template'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/pimsm/igmp-interface-template
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

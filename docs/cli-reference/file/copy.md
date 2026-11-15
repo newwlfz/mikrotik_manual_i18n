@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "copy"
 sidebar_label: 'copy'
 source: https://manual.mikrotik.com/docs/cli-reference/file/copy
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

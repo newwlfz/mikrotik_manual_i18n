@@ -8,7 +8,6 @@ tags:
   - 'backup'
   - 'cloud'
 source: https://manual.mikrotik.com/docs/network-management/cloud/cloud-backup
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Cloud backup stores an encrypted [backup](/docs/getting-started/configuration-management/backup) of the router's configuration on the MikroTik cloud server. You can download it later to the same router, or with its secret download key to another router, for example a replacement device. Each device has one backup slot.

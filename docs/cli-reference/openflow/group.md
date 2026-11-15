@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "group"
 sidebar_label: 'group'
 source: https://manual.mikrotik.com/docs/cli-reference/openflow/group
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

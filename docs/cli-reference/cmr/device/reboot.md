@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "reboot"
 sidebar_label: 'reboot'
 source: https://manual.mikrotik.com/docs/cli-reference/cmr/device/reboot
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

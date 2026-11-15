@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/lte"
 title: "lte"
 sidebar_label: 'lte'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/lte
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "kill"
 sidebar_label: 'kill'
 source: https://manual.mikrotik.com/docs/cli-reference/container/kill
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

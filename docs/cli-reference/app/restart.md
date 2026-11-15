@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "restart"
 sidebar_label: 'restart'
 source: https://manual.mikrotik.com/docs/cli-reference/app/restart
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

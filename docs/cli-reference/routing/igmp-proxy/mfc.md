@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "mfc"
 sidebar_label: 'mfc'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/igmp-proxy/mfc
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

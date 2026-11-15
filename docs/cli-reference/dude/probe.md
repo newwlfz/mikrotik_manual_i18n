@@ -4,7 +4,6 @@ sidebar_position: 7
 title: "probe"
 sidebar_label: 'probe'
 source: https://manual.mikrotik.com/docs/cli-reference/dude/probe
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

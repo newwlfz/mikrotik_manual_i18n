@@ -8,7 +8,6 @@ tags:
   - 'traffic-monitoring'
   - 'ipv6'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/torch
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Torch shows the traffic that passes one interface right now. It groups the packets into flows, one row for each combination of addresses, protocol, ports and DSCP value, and shows the rate of each flow in both directions. Use it to find out who uses a link, which protocols run over it, or whether the packets of a connection arrive at all.

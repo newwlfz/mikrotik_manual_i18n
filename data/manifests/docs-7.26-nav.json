@@ -4791,6 +4791,10 @@
     },
     "firewall-and-quality-of-service/firewall/nat": {
       "previous": "firewall-and-quality-of-service/firewall/mangle",
+      "next": "firewall-and-quality-of-service/firewall/raw"
+    },
+    "firewall-and-quality-of-service/firewall/raw": {
+      "previous": "firewall-and-quality-of-service/firewall/nat",
       "next": "firewall-and-quality-of-service/packet-flow-in-routeros"
     },
     "firewall-and-quality-of-service": {
@@ -4806,7 +4810,7 @@
       "next": "firewall-and-quality-of-service/upnp"
     },
     "firewall-and-quality-of-service/packet-flow-in-routeros": {
-      "previous": "firewall-and-quality-of-service/firewall/nat",
+      "previous": "firewall-and-quality-of-service/firewall/raw",
       "next": "firewall-and-quality-of-service/connection-tracking"
     },
     "firewall-and-quality-of-service/queues/htb-hierarchical-token-bucket": {
@@ -5211,14 +5215,10 @@
     },
     "internet-of-things/lora/user-guides/step-by-step-installation": {
       "previous": "internet-of-things/lora/user-guides/chirpstack",
-      "next": "internet-of-things/lora/user-guides/tg-lr-setup-guide"
-    },
-    "internet-of-things/lora/user-guides/tg-lr-setup-guide": {
-      "previous": "internet-of-things/lora/user-guides/step-by-step-installation",
       "next": "internet-of-things/lora/user-guides/the-things-stack"
     },
     "internet-of-things/lora/user-guides/the-things-stack": {
-      "previous": "internet-of-things/lora/user-guides/tg-lr-setup-guide",
+      "previous": "internet-of-things/lora/user-guides/step-by-step-installation",
       "next": "internet-of-things/modbus"
     },
     "internet-of-things/modbus": {
@@ -5907,10 +5907,14 @@
     },
     "wireless/wifi/configuring-easymesh": {
       "previous": "wireless/wifi/capsman",
+      "next": "wireless/wifi/configuring-meshpoint"
+    },
+    "wireless/wifi/configuring-meshpoint": {
+      "previous": "wireless/wifi/configuring-easymesh",
       "next": "wireless/wifi/configuring-outdoor-cpe-to-ap-links"
     },
     "wireless/wifi/configuring-outdoor-cpe-to-ap-links": {
-      "previous": "wireless/wifi/configuring-easymesh",
+      "previous": "wireless/wifi/configuring-meshpoint",
       "next": "wireless/wifi/configuring-repeater"
     },
     "wireless/wifi/configuring-repeater": {
@@ -7154,6 +7158,7 @@
     "firewall-and-quality-of-service/firewall/layer7": "Layer7",
     "firewall-and-quality-of-service/firewall/mangle": "Mangle",
     "firewall-and-quality-of-service/firewall/nat": "NAT",
+    "firewall-and-quality-of-service/firewall/raw": "RAW",
     "firewall-and-quality-of-service/queues/htb-hierarchical-token-bucket": "HTB (Hierarchical Token Bucket)",
     "firewall-and-quality-of-service/queues/pcq-example": "PCQ example",
     "firewall-and-quality-of-service/queues/queue-burst": "Queue Burst",
@@ -7251,7 +7256,6 @@
     "internet-of-things/lora/user-guides/aws-lorawan-configuration": "AWS LoRaWAN configuration",
     "internet-of-things/lora/user-guides/chirpstack": "ChirpStack",
     "internet-of-things/lora/user-guides/step-by-step-installation": "Step by step installation",
-    "internet-of-things/lora/user-guides/tg-lr-setup-guide": "TG-LR Setup",
     "internet-of-things/lora/user-guides/the-things-stack": "The Things Stack",
     "internet-of-things/mqtt/kaa-iot-setup": "Kaa IoT setup",
     "internet-of-things/mqtt/mqtt-and-thingsboard-configuration": "MQTT and ThingsBoard configuration",
@@ -7414,15 +7418,16 @@
     "wireless/w60g/ptp-gui-example": "PtP GUI example",
     "wireless/wifi/capsman": "WiFi CAPsMAN",
     "wireless/wifi/configuring-easymesh": "Configuring EasyMesh",
+    "wireless/wifi/configuring-meshpoint": "Configuring MeshPoint",
     "wireless/wifi/configuring-outdoor-cpe-to-ap-links": "Configuring outdoor CPE to AP links",
     "wireless/wifi/configuring-repeater": "Configuring a wireless repeater",
     "wireless/wifi/configuring-standalone-access-point": "Configuring standalone access point",
     "wireless/wifi/interworking-for-wifi6": "Interworking for WiFi6"
   },
   "totals": {
-    "pages": 1484,
+    "pages": 1485,
     "fetched": 0,
-    "cached": 1484,
+    "cached": 1485,
     "failed": 0
   }
 }

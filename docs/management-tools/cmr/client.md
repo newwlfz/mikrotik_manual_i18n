@@ -8,7 +8,6 @@ tags:
   - 'cmr'
   - 'management'
 source: https://manual.mikrotik.com/docs/management-tools/cmr/client
-captured_at: '2026-11-09T11:35:47.715Z'
 pagination_prev: "management-tools/cmr"
 ---
 

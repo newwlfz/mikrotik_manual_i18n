@@ -4,7 +4,6 @@ sidebar_position: 15
 title: "smart-info"
 sidebar_label: 'smart-info'
 source: https://manual.mikrotik.com/docs/cli-reference/disk/smart-info
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

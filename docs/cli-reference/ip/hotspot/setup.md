@@ -4,7 +4,6 @@ sidebar_position: 8
 title: "setup"
 sidebar_label: 'setup'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/setup
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

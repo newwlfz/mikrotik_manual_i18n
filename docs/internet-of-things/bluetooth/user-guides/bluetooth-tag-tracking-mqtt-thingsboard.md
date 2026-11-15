@@ -9,7 +9,6 @@ tags:
   - 'mqtt'
   - 'thingsboard'
 source: https://manual.mikrotik.com/docs/internet-of-things/bluetooth/user-guides/bluetooth-tag-tracking-mqtt-thingsboard
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Bluetooth interface implementation in RouterOS allows the device to capture Bluetooth advertising packets that are broadcasted over 37, 38, and 39 advertising channels. More information can be found in the [guide here](/docs/internet-of-things/bluetooth/).

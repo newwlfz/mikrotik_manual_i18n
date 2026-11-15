@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/proxy/direct"
 title: "direct"
 sidebar_label: 'direct'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/proxy/direct
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "check-installation"
 sidebar_label: 'check-installation'
 source: https://manual.mikrotik.com/docs/cli-reference/system/check-installation
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

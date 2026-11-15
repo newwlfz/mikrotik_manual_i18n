@@ -7,7 +7,6 @@ description: 'This page provides scripting tips for MikroTik RouterOS, emphasizi
 tags:
   - 'scripting'
 source: https://manual.mikrotik.com/docs/developer-guides/scripting/scripting-tips-and-tricks
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Let's start with the basics. When you work from the terminal, you are used to the following syntax for accessing parameters:

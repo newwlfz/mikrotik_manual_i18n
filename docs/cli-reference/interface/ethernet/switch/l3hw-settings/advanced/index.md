@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/ethernet/switch/l3hw-settings/advanced"
 title: "advanced"
 sidebar_label: 'advanced'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/l3hw-settings/advanced
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

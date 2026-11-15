@@ -9,7 +9,6 @@ tags:
   - 'wireless'
   - 'monitoring'
 source: https://manual.mikrotik.com/docs/wireless/abgn/spectral-scan
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The spectral scan can scan all frequencies supported by your wireless card, and plot them directly in the console. The exact frequency span depends on the card. Allowed ranges on r52n: [4790; 6085], [2182; 2549].

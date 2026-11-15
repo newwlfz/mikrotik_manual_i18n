@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/routing/nexthop"
 title: "nexthop"
 sidebar_label: 'nexthop'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/nexthop
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

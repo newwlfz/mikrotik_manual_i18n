@@ -8,7 +8,6 @@ tags:
   - 'apps'
   - 'security'
 source: https://manual.mikrotik.com/docs/containers/apps
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The Apps menu provides a catalog of applications you can run on RouterOS. An app can contain one or more containers, and RouterOS creates the required container configuration, VETH interface, bridge port, firewall rules, and reverse proxy entry. The catalog is maintained by MikroTik and sources images from Docker Hub, GCR, Quay, and other registries. You can edit an app's configuration before you enable it and view its YAML at any time.

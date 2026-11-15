@@ -9,7 +9,6 @@ tags:
   - 'servlet-pages'
   - 'radius'
 source: https://manual.mikrotik.com/docs/authentication-authorization-accounting/hotspot-captive-portal/hotspot-customisation
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 #### Introduction

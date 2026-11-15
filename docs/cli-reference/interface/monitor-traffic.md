@@ -4,7 +4,6 @@ sidebar_position: 22
 title: "monitor-traffic"
 sidebar_label: 'monitor-traffic'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/monitor-traffic
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

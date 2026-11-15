@@ -4,7 +4,6 @@ sidebar_position: 6
 title: "frequency-monitor"
 sidebar_label: 'frequency-monitor'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/frequency-monitor
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

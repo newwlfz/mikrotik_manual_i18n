@@ -9,7 +9,6 @@ tags:
   - 'ppp'
   - 'lcp'
 source: https://manual.mikrotik.com/docs/virtual-private-networks/pppoe/mlppp-over-single-and-multiple-links
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 **Standards:** `RFC 1990`

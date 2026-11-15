@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "renew"
 sidebar_label: 'renew'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-client/renew
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

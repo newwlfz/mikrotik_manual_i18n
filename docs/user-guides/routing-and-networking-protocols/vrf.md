@@ -8,7 +8,6 @@ tags:
   - 'routing'
   - 'vrf'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/vrf
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Description

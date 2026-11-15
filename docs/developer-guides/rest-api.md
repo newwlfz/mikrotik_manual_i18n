@@ -9,7 +9,6 @@ tags:
   - 'management'
   - 'rest-api'
 source: https://manual.mikrotik.com/docs/developer-guides/rest-api
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The REST API gives HTTP access to the RouterOS command line. Every menu is a URL under `/rest`: the `/ip/address` menu is `https://192.168.88.1/rest/ip/address`. JSON requests read, create, change and delete configuration and run any console command. Scripts, monitoring systems, automation tools and web dashboards use it to manage routers without WinBox or SSH.

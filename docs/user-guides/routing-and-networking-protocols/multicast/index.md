@@ -8,7 +8,6 @@ tags:
   - 'igmp'
   - 'pim'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/multicast
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This section covers RouterOS multicast routing protocols and related group-management features. Use it to configure IGMP Proxy, PIM-SM, and multicast group behavior.

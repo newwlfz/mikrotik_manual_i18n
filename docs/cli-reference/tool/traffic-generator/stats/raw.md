@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "raw"
 sidebar_label: 'raw'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/stats/raw
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

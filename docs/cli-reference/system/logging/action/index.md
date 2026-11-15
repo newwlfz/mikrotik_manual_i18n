@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/logging/action"
 title: "action"
 sidebar_label: 'action'
 source: https://manual.mikrotik.com/docs/cli-reference/system/logging/action
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

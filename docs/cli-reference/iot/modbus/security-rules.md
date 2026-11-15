@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "security-rules"
 sidebar_label: 'security-rules'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/modbus/security-rules
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

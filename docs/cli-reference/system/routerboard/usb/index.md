@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/routerboard/usb"
 title: "usb"
 sidebar_label: 'usb'
 source: https://manual.mikrotik.com/docs/cli-reference/system/routerboard/usb
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

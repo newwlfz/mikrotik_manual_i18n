@@ -8,7 +8,6 @@ tags:
   - 'ppp'
   - 'ipsec'
 source: https://manual.mikrotik.com/docs/virtual-private-networks/l2tp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This section covers L2TP examples. Use it to configure LAC and LNS scenarios and related L2TP interoperability cases.

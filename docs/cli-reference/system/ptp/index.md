@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/ptp"
 title: "ptp"
 sidebar_label: 'ptp'
 source: https://manual.mikrotik.com/docs/cli-reference/system/ptp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

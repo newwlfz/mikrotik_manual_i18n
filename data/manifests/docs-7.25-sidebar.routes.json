@@ -6310,11 +6310,6 @@
     "id": "internet-of-things/lora/user-guides/step-by-step-installation"
   },
   {
-    "href": "/docs/7.25/internet-of-things/lora/user-guides/tg-lr-setup-guide",
-    "label": "TG-LR setup guide",
-    "id": "internet-of-things/lora/user-guides/tg-lr-setup-guide"
-  },
-  {
     "href": "/docs/7.25/internet-of-things/lora/user-guides/the-things-stack",
     "label": "The Things Stack",
     "id": "internet-of-things/lora/user-guides/the-things-stack"

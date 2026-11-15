@@ -8,7 +8,6 @@ tags:
   - 'zerotier'
   - 'ipv6'
 source: https://manual.mikrotik.com/docs/virtual-private-networks/zerotier
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The [ZeroTier](https://docs.zerotier.com/) network hypervisor is a self-contained network virtualization engine that implements an Ethernet virtualization layer similar to VXLAN built atop a cryptographically secure global peer-to-peer network. It provides advanced network virtualization and management capabilities on par with an enterprise SDN switch, but across both local and wide area networks and connecting almost any kind of app or device.

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/lcd/interface"
 title: "interface"
 sidebar_label: 'interface'
 source: https://manual.mikrotik.com/docs/cli-reference/lcd/interface
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

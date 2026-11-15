@@ -8,7 +8,6 @@ tags:
   - 'bgp'
   - 'ospf'
 source: https://manual.mikrotik.com/docs/getting-started/upgrading-to-v7
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Introduction

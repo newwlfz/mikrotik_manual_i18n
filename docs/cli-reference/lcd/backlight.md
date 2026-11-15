@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "backlight"
 sidebar_label: 'backlight'
 source: https://manual.mikrotik.com/docs/cli-reference/lcd/backlight
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

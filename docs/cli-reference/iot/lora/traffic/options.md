@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "options"
 sidebar_label: 'options'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/lora/traffic/options
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

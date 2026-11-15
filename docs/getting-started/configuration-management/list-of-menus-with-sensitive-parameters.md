@@ -9,7 +9,6 @@ tags:
   - 'passwords'
   - 'secrets'
 source: https://manual.mikrotik.com/docs/getting-started/configuration-management/list-of-menus-with-sensitive-parameters
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Sensitive parameters — passwords, keys and secrets — are left out of `export` and `print` output unless you use the [`show-sensitive`](/docs/getting-started/configuration-management/#configuration-export) flag. WinBox hides them when the "Hide password" option is enabled. The one exception is `user` passwords: they are stored hashed and are never exported, not even with `show-sensitive`.

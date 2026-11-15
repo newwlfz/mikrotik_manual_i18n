@@ -8,7 +8,6 @@ tags:
   - 'syslog'
   - 'system-management'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/log
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 RouterOS writes events to the system log: logins and login failures, configuration changes and who made them, interfaces going up and down, DHCP leases, protocol state changes and errors. Each entry has a time, one or more topics that say where it comes from and how important it is (for example `dhcp,info` or `system,error,critical`), and a message.

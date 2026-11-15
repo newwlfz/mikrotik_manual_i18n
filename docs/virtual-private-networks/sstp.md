@@ -9,7 +9,6 @@ tags:
   - 'vpn'
   - 'tls'
 source: https://manual.mikrotik.com/docs/virtual-private-networks/sstp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Secure Socket Tunneling Protocol (SSTP) encapsulates Point-to-Point Protocol (PPP) traffic within a Transport Layer Security (TLS) session to provide secure remote access over the internet. SSTP uses HTTPS over TCP port 443, allowing VPN traffic to pass through most firewalls, network address translation (NAT) devices, and proxy servers that typically permit standard web traffic.

@@ -4,7 +4,6 @@ sidebar_position: 19
 title: "qos-group"
 sidebar_label: 'qos-group'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/qos-group
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

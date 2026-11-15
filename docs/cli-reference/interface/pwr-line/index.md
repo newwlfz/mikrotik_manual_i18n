@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/pwr-line"
 title: "pwr-line"
 sidebar_label: 'pwr-line'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/pwr-line
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "export-client-configuration"
 sidebar_label: 'export-client-configuration'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ovpn-server/server/export-client-configuration
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

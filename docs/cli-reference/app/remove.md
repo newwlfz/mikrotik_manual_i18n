@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "remove"
 sidebar_label: 'remove'
 source: https://manual.mikrotik.com/docs/cli-reference/app/remove
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

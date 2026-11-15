@@ -730,6 +730,11 @@
             },
             {
               "type": "doc",
+              "id": "wireless/wifi/configuring-meshpoint",
+              "label": "Configuring MeshPoint"
+            },
+            {
+              "type": "doc",
               "id": "wireless/wifi/configuring-outdoor-cpe-to-ap-links",
               "label": "Configuring outdoor CPE to AP links"
             },
@@ -1478,6 +1483,11 @@
               "type": "doc",
               "id": "firewall-and-quality-of-service/firewall/nat",
               "label": "NAT"
+            },
+            {
+              "type": "doc",
+              "id": "firewall-and-quality-of-service/firewall/raw",
+              "label": "RAW"
             }
           ]
         },
@@ -1958,11 +1968,6 @@
                   "type": "doc",
                   "id": "internet-of-things/lora/user-guides/step-by-step-installation",
                   "label": "Step by step installation"
-                },
-                {
-                  "type": "doc",
-                  "id": "internet-of-things/lora/user-guides/tg-lr-setup-guide",
-                  "label": "TG-LR Setup"
                 },
                 {
                   "type": "doc",

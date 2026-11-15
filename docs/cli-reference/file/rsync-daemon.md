@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "rsync-daemon"
 sidebar_label: 'rsync-daemon'
 source: https://manual.mikrotik.com/docs/cli-reference/file/rsync-daemon
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

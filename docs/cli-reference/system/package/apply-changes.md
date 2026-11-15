@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "apply-changes"
 sidebar_label: 'apply-changes'
 source: https://manual.mikrotik.com/docs/cli-reference/system/package/apply-changes
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

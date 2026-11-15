@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "interfaces"
 sidebar_label: 'interfaces'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/upnp/interfaces
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

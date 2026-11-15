@@ -9,7 +9,6 @@ tags:
   - 'ip-addresses'
   - 'settings'
 source: https://manual.mikrotik.com/docs/system-information-and-utilities/tftp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 RouterOS includes a TFTP server. Trivial File Transfer Protocol (TFTP) is a simple file transfer protocol over UDP, without authentication, that network devices use at startup: IP phones and access points fetch their configuration or firmware with it, network-booting computers load a boot loader, and switches upload configuration backups. The server serves files from the router's storage and accepts uploads when a rule allows them.

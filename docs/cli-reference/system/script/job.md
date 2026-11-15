@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "job"
 sidebar_label: 'job'
 source: https://manual.mikrotik.com/docs/cli-reference/system/script/job
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

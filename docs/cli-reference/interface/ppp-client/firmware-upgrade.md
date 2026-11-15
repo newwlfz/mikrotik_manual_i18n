@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "firmware-upgrade"
 sidebar_label: 'firmware-upgrade'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ppp-client/firmware-upgrade
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

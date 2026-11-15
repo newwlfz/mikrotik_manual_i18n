@@ -4,7 +4,6 @@ sidebar_position: 16
 title: "test"
 sidebar_label: 'test'
 source: https://manual.mikrotik.com/docs/cli-reference/disk/test
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

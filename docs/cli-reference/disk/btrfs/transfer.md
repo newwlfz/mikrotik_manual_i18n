@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "transfer"
 sidebar_label: 'transfer'
 source: https://manual.mikrotik.com/docs/cli-reference/disk/btrfs/transfer
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/pool"
 title: "pool"
 sidebar_label: 'pool'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/pool
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

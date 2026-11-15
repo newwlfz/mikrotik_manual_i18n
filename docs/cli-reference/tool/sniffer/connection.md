@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "connection"
 sidebar_label: 'connection'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/sniffer/connection
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

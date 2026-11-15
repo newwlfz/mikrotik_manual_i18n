@@ -8,7 +8,6 @@ tags:
   - 'firewall'
   - 'dhcp'
 source: https://manual.mikrotik.com/docs/authentication-authorization-accounting/hotspot-captive-portal
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The MikroTik HotSpot Gateway provides authentication for clients before access to public networks.

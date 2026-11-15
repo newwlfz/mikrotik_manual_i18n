@@ -4,7 +4,6 @@ sidebar_position: 28
 title: "wol"
 sidebar_label: 'wol'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/wol
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

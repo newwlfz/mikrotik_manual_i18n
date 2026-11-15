@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "netid"
 sidebar_label: 'netid'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/lora/netid
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

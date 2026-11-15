@@ -10,7 +10,6 @@ tags:
   - 'rip'
   - 'routing'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/moving-from-rosv6-to-rosv7
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 By default, all routes are added to the "main" routing table as it was before. From a configuration point of view, the biggest differences are routing table limit increase, routing table monitoring differences, and how routes are added to specific routing tables (see next example).

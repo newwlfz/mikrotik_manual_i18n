@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/ethernet/switch/l3hw-settings"
 title: "l3hw-settings"
 sidebar_label: 'l3hw-settings'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/l3hw-settings
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

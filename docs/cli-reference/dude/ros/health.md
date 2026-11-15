@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "health"
 sidebar_label: 'health'
 source: https://manual.mikrotik.com/docs/cli-reference/dude/ros/health
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

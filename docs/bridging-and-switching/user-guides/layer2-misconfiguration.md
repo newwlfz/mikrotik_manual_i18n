@@ -9,7 +9,6 @@ tags:
   - 'hardware-offloading'
   - 'mac-learning'
 source: https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/layer2-misconfiguration
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ---

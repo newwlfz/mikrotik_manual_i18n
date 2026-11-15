@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "client"
 sidebar_label: 'client'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/dot1x/client
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

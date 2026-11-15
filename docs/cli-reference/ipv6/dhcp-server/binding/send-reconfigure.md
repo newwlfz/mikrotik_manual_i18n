@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "send-reconfigure"
 sidebar_label: 'send-reconfigure'
 source: https://manual.mikrotik.com/docs/cli-reference/ipv6/dhcp-server/binding/send-reconfigure
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

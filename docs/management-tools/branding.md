@@ -9,7 +9,6 @@ tags:
   - 'webfig'
   - 'customization'
 source: https://manual.mikrotik.com/docs/management-tools/branding
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 RouterOS allows slight system customization with the help of a branding package (modify default configuration, LCD logo, WebFig homepage, etc.).

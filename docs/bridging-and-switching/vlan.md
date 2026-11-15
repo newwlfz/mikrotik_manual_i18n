@@ -9,7 +9,6 @@ tags:
   - 'ieee-802-1q'
   - 'arp'
 source: https://manual.mikrotik.com/docs/bridging-and-switching/vlan
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 **Sub-menu:** `/interface/vlan`

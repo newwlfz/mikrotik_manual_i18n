@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/cloud/back-to-home-file/settings"
 title: "settings"
 sidebar_label: 'settings'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/cloud/back-to-home-file/settings
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

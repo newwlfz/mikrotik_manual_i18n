@@ -8,7 +8,6 @@ tags:
   - 'pptp'
   - 'vpn'
 source: https://manual.mikrotik.com/docs/virtual-private-networks/pptp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Point-to-Point Tunneling Protocol (PPTP) is a legacy VPN protocol designed to encapsulate PPP traffic for remote access connections. PPTP is widely supported by many operating systems and network devices, making it simple to deploy and configure in environments where compatibility is a priority.

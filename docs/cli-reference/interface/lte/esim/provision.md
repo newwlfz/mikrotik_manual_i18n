@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "provision"
 sidebar_label: 'provision'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim/provision
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

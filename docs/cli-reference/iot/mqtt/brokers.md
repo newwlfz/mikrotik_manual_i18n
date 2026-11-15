@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "brokers"
 sidebar_label: 'brokers'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/mqtt/brokers
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -855,6 +855,12 @@ const sidebars: SidebarsConfig = {
             },
             {
               "type": "doc",
+              "id": "wireless/wifi/configuring-meshpoint",
+              "label": "Configuring MeshPoint",
+              "key": "wireless/wifi/configuring-meshpoint"
+            },
+            {
+              "type": "doc",
               "id": "wireless/wifi/configuring-outdoor-cpe-to-ap-links",
               "label": "Configuring outdoor CPE to AP links",
               "key": "wireless/wifi/configuring-outdoor-cpe-to-ap-links"
@@ -1729,6 +1735,12 @@ const sidebars: SidebarsConfig = {
               "id": "firewall-and-quality-of-service/firewall/nat",
               "label": "NAT",
               "key": "firewall-and-quality-of-service/firewall/nat"
+            },
+            {
+              "type": "doc",
+              "id": "firewall-and-quality-of-service/firewall/raw",
+              "label": "RAW",
+              "key": "firewall-and-quality-of-service/firewall/raw"
             }
           ],
           "key": "firewall-and-quality-of-service/firewall"
@@ -2287,12 +2299,6 @@ const sidebars: SidebarsConfig = {
                   "id": "internet-of-things/lora/user-guides/step-by-step-installation",
                   "label": "Step by step installation",
                   "key": "internet-of-things/lora/user-guides/step-by-step-installation"
-                },
-                {
-                  "type": "doc",
-                  "id": "internet-of-things/lora/user-guides/tg-lr-setup-guide",
-                  "label": "TG-LR Setup",
-                  "key": "internet-of-things/lora/user-guides/tg-lr-setup-guide"
                 },
                 {
                   "type": "doc",

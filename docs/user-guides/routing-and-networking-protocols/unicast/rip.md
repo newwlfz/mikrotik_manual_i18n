@@ -8,7 +8,6 @@ tags:
   - 'routing'
   - 'rip'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/rip
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 MikroTik RouterOS implements RIP version 2 (RFC 2453). Version 1 (RFC 1058) is not supported.

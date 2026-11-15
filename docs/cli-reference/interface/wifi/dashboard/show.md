@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "show"
 sidebar_label: 'show'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/dashboard/show
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

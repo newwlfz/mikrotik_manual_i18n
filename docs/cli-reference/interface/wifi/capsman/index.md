@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/wifi/capsman"
 title: "capsman"
 sidebar_label: 'capsman'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/capsman
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

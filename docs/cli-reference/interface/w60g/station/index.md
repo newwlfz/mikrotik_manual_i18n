@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/w60g/station"
 title: "station"
 sidebar_label: 'station'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/w60g/station
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

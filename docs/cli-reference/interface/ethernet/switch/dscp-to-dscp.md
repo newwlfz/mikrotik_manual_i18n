@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "dscp-to-dscp"
 sidebar_label: 'dscp-to-dscp'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/dscp-to-dscp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/tool/sniffer"
 title: "sniffer"
 sidebar_label: 'sniffer'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/sniffer
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

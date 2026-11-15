@@ -9,7 +9,6 @@ tags:
   - 'wireless'
   - '802-11ac'
 source: https://manual.mikrotik.com/docs/wireless/wifi-ac
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This section covers MikroTik **802.11ac (Wi-Fi 5)** ARM-based devices. These products are special: the **same hardware can be configured through either of two RouterOS menus**, depending on which driver package is installed. Pick the one that matches the features you need.

@@ -9,7 +9,6 @@ tags:
   - 'monitoring'
   - 'resource-usage'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/graphing
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Graphing records how the router is used over time and draws graphs of it:

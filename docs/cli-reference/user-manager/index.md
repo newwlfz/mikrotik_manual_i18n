@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/user-manager"
 title: "user-manager"
 sidebar_label: 'user-manager'
 source: https://manual.mikrotik.com/docs/cli-reference/user-manager
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

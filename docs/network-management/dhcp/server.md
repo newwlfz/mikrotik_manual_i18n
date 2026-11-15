@@ -7,7 +7,6 @@ description: 'The RouterOS DHCP server assigns IPv4 addresses and network settin
 tags:
   - 'dhcp'
 source: https://manual.mikrotik.com/docs/network-management/dhcp/server
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 **Sub-menu:** `/ip/dhcp-server`

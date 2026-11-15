@@ -8,7 +8,6 @@ tags:
   - 'layer7'
   - 'firewall'
 source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/firewall/layer7
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Layer7-protocol is a method of searching for patterns in ICMP/TCP/UDP streams.

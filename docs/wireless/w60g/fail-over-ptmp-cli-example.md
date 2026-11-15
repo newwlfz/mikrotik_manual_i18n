@@ -8,7 +8,6 @@ tags:
   - 'bridging'
   - 'bonding'
 source: https://manual.mikrotik.com/docs/wireless/w60g/fail-over-ptmp-cli-example
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ### Summary

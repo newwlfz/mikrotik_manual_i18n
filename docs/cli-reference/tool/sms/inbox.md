@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "inbox"
 sidebar_label: 'inbox'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/sms/inbox
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

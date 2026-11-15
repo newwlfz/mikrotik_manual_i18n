@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "monitor-peers"
 sidebar_label: 'monitor-peers'
 source: https://manual.mikrotik.com/docs/cli-reference/system/ntp/monitor-peers
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

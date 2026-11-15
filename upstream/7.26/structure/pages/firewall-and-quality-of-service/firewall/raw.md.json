@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "firewall-and-quality-of-service/firewall/raw.md",
+  "source_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/firewall/raw.md",
+  "html_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/firewall/raw",
+  "md_sha256": "101af12c9c09f0176fdb55e562d3a2211ddf24c26bb3073adee6243d5dc5ef59",
+  "html_sha256": "399213fe2f87b8701ce6737d501ea02e346887aaba00540690ffc3db1310aff1",
+  "body": {
+    "html": {
+      "lists": 7,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 63,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 18,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 18,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 5,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

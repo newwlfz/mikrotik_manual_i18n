@@ -7,7 +7,6 @@ description: 'This page provides scripting examples for MikroTik RouterOS, demon
 tags:
   - 'scripting'
 source: https://manual.mikrotik.com/docs/developer-guides/scripting/scripting-examples
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 It is not possible to create a file directly; however, you can use the following workaround:

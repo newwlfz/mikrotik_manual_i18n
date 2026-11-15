@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "network"
 sidebar_label: 'network'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-server/network
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

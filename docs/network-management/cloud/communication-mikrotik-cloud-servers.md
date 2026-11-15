@@ -8,7 +8,6 @@ tags:
   - 'cloud'
   - 'backup'
 source: https://manual.mikrotik.com/docs/network-management/cloud/communication-mikrotik-cloud-servers
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 RouterOS connects to MikroTik servers only for the services in the following table. By default, the router asks the cloud server for the time and time zone when it starts, and a Cloud Hosted Router (CHR) checks its license. Everything else runs only after you enable it or run the command.

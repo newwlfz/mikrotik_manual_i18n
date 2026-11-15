@@ -9,7 +9,6 @@ tags:
   - 'mac-telnet'
   - 'mac-winbox'
 source: https://manual.mikrotik.com/docs/management-tools/mac-server
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The MAC server lets you reach a router by its MAC address from a device on the same layer-2 segment, without any IP configuration on either side. It serves three things:

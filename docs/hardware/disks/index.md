@@ -8,7 +8,6 @@ tags:
   - 'storage'
   - 'filesystem'
 source: https://manual.mikrotik.com/docs/hardware/disks
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 [*Disks CLI Reference*](/docs/cli-reference/disk/)

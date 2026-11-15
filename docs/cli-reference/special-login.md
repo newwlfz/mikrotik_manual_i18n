@@ -4,7 +4,6 @@ sidebar_position: 35
 title: "special-login"
 sidebar_label: 'special-login'
 source: https://manual.mikrotik.com/docs/cli-reference/special-login
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -7,7 +7,6 @@ description: 'FlashFig is a Windows utility for rapid, high-volume configuration
 tags:
   - 'flashfig'
 source: https://manual.mikrotik.com/docs/management-tools/flashfig
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ### Description

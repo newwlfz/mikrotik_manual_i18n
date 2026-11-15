@@ -5,7 +5,6 @@ title: "GPEN21 series Manual"
 sidebar_label: 'GPEN21 series Manual'
 description: 'SwOS Lite manual for the MikroTik GPEN21 smart PoE power injector and repeater: features, port settings, VLANs, and switch management.'
 source: https://manual.mikrotik.com/docs/bridging-and-switching/swos/gpen21
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Summary

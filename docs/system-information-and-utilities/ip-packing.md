@@ -8,7 +8,6 @@ tags:
   - 'ip-packing'
   - 'packet-aggregation'
 source: https://manual.mikrotik.com/docs/system-information-and-utilities/ip-packing
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 IP Packing collects the outgoing packets of an interface into larger packets (aggregation) and can also compress them. The router at the other end of the link unpacks them again. Both routers run RouterOS; packing is part of the system package. Use it on links where many small packets cost more than a few large ones.

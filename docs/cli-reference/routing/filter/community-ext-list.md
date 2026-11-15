@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "community-ext-list"
 sidebar_label: 'community-ext-list'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/filter/community-ext-list
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

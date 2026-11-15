@@ -4,7 +4,6 @@ sidebar_position: 6
 title: "uninstall"
 sidebar_label: 'uninstall'
 source: https://manual.mikrotik.com/docs/cli-reference/system/package/uninstall
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

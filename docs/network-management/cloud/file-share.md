@@ -9,7 +9,6 @@ tags:
   - 'https'
   - 'cloud'
 source: https://manual.mikrotik.com/docs/network-management/cloud/file-share
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 File Share makes a directory or a single file on the router's storage, for example a USB drive, available on the internet through a link. The router serves each share over HTTPS at `https://<serial>.routingthecloud.net/s/<key>`, where `<serial>` is the router's serial number and `<key>` is the random key of the share. The router gets a Let's Encrypt certificate for the name by itself. When the router cannot be reached from the internet directly, the connection goes through a MikroTik relay server (see [How the router reaches the cloud](/docs/network-management/cloud/#how-the-router-reaches-the-cloud)). Visitors need only the link, and you can let them upload files as well.

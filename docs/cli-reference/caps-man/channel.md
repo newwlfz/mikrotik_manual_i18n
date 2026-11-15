@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "channel"
 sidebar_label: 'channel'
 source: https://manual.mikrotik.com/docs/cli-reference/caps-man/channel
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "radios"
 sidebar_label: 'radios'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/lora/radios
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

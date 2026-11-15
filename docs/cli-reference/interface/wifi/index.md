@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/wifi"
 title: "wifi"
 sidebar_label: 'wifi'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

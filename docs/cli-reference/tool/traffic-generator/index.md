@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/tool/traffic-generator"
 title: "traffic-generator"
 sidebar_label: 'traffic-generator'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

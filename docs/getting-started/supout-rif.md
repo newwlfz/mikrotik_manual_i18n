@@ -8,7 +8,6 @@ tags:
   - 'supout-rif'
   - 'debugging'
 source: https://manual.mikrotik.com/docs/getting-started/supout-rif
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 A support output file (`supout.rif`) is a diagnostic snapshot of the router for MikroTik support. It holds the router's configuration, its logs, the state of its processes, the output of monitor commands such as the status of the interfaces and, when RouterOS has crashed, the crash data. Create it while the problem is present, so that it shows the router in that state, and send it with your request through the [MikroTik support](https://mikrotik.com/support) page.

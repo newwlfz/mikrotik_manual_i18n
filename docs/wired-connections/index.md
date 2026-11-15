@@ -8,7 +8,6 @@ tags:
   - 'wired-connections'
   - 'interface'
 source: https://manual.mikrotik.com/docs/wired-connections
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Wired connection documentation covers Ethernet, PWR-Line, and MikroTik wired interface compatibility. Use this section to configure and troubleshoot physical wired connectivity.

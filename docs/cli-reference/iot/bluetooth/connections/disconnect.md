@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "disconnect"
 sidebar_label: 'disconnect'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/connections/disconnect
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

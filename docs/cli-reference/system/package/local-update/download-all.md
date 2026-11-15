@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "download-all"
 sidebar_label: 'download-all'
 source: https://manual.mikrotik.com/docs/cli-reference/system/package/local-update/download-all
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

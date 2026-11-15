@@ -4,7 +4,6 @@ sidebar_position: 22
 title: "scan"
 sidebar_label: 'scan'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/scan
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

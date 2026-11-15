@@ -4,22 +4,22 @@
   "local_path": "firewall-and-quality-of-service/packet-flow-in-routeros.md",
   "source_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/packet-flow-in-routeros.md",
   "html_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/packet-flow-in-routeros",
-  "md_sha256": "401967d54ac4eae13551d436904a6970f60373aed92fb1526dcaf38fed23114a",
-  "html_sha256": "0537e4814927d7e53d05a4e097a8f4a72737860267e683ea178a1412794e29ee",
+  "md_sha256": "1c5293648e24fe128a6bf3c272da2dd0a2adb0816f064355284698cf87731280",
+  "html_sha256": "1166be9c8e84eac2735d3f5e8e97c89ee2df3f02dd0e7c2fdf0e4e73b6275b5e",
   "body": {
     "html": {
-      "lists": 45,
-      "listItems": 172,
-      "br": 1,
+      "lists": 36,
+      "listItems": 170,
+      "br": 0,
       "details": 0,
       "tables": 1,
       "sup": 0,
-      "code": 31,
+      "code": 55,
       "wideTables": 0
     },
     "md": {
-      "lists": 158,
-      "listItems": 158,
+      "lists": 170,
+      "listItems": 170,
       "br": 0,
       "details": 0,
       "tables": 1,
@@ -39,11 +39,11 @@
     },
     "flags": {
       "listItems": [
-        172,
+        170,
         158
       ],
       "br": [
-        1,
+        0,
         3
       ]
     }

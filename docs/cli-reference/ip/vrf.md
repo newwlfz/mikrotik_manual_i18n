@@ -4,7 +4,6 @@ sidebar_position: 29
 title: "vrf"
 sidebar_label: 'vrf'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/vrf
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

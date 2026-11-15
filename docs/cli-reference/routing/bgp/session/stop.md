@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "stop"
 sidebar_label: 'stop'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/bgp/session/stop
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

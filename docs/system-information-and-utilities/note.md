@@ -8,7 +8,6 @@ tags:
   - 'system-note'
   - 'cli'
 source: https://manual.mikrotik.com/docs/system-information-and-utilities/note
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The system note is a text that RouterOS shows to every administrator who logs in: in the command line right after the banner, and in WinBox in a window after login. Use it to say what the router does, whom to contact, or what not to do, for example during a maintenance window. The note is empty by default.

@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "version-check"
 sidebar_label: 'version-check'
 source: https://manual.mikrotik.com/docs/cli-reference/cmr/upgrade/version-check
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

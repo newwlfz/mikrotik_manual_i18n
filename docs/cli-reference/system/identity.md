@@ -4,7 +4,6 @@ sidebar_position: 12
 title: "identity"
 sidebar_label: 'identity'
 source: https://manual.mikrotik.com/docs/cli-reference/system/identity
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

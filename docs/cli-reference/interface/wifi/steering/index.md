@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/wifi/steering"
 title: "steering"
 sidebar_label: 'steering'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/steering
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

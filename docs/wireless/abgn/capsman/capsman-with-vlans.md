@@ -9,7 +9,6 @@ tags:
   - 'vlan'
   - 'bridging'
 source: https://manual.mikrotik.com/docs/wireless/abgn/capsman/capsman-with-vlans
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Summary

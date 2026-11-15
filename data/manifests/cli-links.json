@@ -8926,6 +8926,16 @@
         "command": "/ip/firewall/nat"
       }
     ],
+    "firewall-and-quality-of-service/firewall/raw": [
+      {
+        "href": "/docs/cli-reference/ip/firewall/raw/",
+        "command": "/ip/firewall/raw"
+      },
+      {
+        "href": "/docs/cli-reference/ipv6/firewall/raw/",
+        "command": "/ipv6/firewall/raw"
+      }
+    ],
     "firewall-and-quality-of-service/kid-control": [
       {
         "href": "/docs/cli-reference/ip/kid-control/",
@@ -11692,6 +11702,32 @@
       {
         "href": "/docs/cli-reference/interface/bridge/",
         "command": "/interface/bridge"
+      },
+      {
+        "href": "/docs/cli-reference/ip/dhcp-client/",
+        "command": "/ip/dhcp-client"
+      }
+    ],
+    "wireless/wifi/configuring-meshpoint": [
+      {
+        "href": "/docs/cli-reference/interface/wifi/",
+        "command": "/interface/wifi"
+      },
+      {
+        "href": "/docs/cli-reference/interface/wifi/scan",
+        "command": "/interface/wifi/scan"
+      },
+      {
+        "href": "/docs/cli-reference/interface/wifi/registration-table",
+        "command": "/interface/wifi/registration-table"
+      },
+      {
+        "href": "/docs/cli-reference/interface/bridge/",
+        "command": "/interface/bridge"
+      },
+      {
+        "href": "/docs/cli-reference/interface/bridge/port/",
+        "command": "/interface/bridge/port"
       },
       {
         "href": "/docs/cli-reference/ip/dhcp-client/",

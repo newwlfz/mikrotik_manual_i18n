@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "limitation"
 sidebar_label: 'limitation'
 source: https://manual.mikrotik.com/docs/cli-reference/user-manager/limitation
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

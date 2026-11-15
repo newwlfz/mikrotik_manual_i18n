@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "users"
 sidebar_label: 'users'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/socks/users
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

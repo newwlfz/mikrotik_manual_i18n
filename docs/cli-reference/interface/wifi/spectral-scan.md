@@ -4,7 +4,6 @@ sidebar_position: 25
 title: "spectral-scan"
 sidebar_label: 'spectral-scan'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/spectral-scan
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

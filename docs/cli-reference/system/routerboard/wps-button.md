@@ -4,7 +4,6 @@ sidebar_position: 6
 title: "wps-button"
 sidebar_label: 'wps-button'
 source: https://manual.mikrotik.com/docs/cli-reference/system/routerboard/wps-button
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/dhcp-server/alert"
 title: "alert"
 sidebar_label: 'alert'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-server/alert
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

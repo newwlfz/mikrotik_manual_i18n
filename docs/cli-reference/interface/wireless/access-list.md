@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "access-list"
 sidebar_label: 'access-list'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/access-list
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

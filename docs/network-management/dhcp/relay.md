@@ -8,7 +8,6 @@ tags:
   - 'dhcp'
   - 'dhcpv6'
 source: https://manual.mikrotik.com/docs/network-management/dhcp/relay
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 A DHCP relay forwards requests from DHCP clients on one network to a DHCP server on another network, and delivers the replies back to the clients. Use it when one central DHCP server serves several networks it is not directly connected to. For how a relay and the DHCP server work together, see [DHCP concepts](/docs/network-management/dhcp/).

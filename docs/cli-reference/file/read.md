@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "read"
 sidebar_label: 'read'
 source: https://manual.mikrotik.com/docs/cli-reference/file/read
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

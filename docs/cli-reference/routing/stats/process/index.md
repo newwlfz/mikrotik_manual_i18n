@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/routing/stats/process"
 title: "process"
 sidebar_label: 'process'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/stats/process
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 11
 title: "flat-snoop"
 sidebar_label: 'flat-snoop'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/flat-snoop
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

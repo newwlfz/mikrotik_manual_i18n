@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "subscribe"
 sidebar_label: 'subscribe'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/mqtt/subscribe
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

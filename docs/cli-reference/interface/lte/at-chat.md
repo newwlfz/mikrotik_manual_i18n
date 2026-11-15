@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "at-chat"
 sidebar_label: 'at-chat'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/lte/at-chat
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 16
 title: "port-leakage"
 sidebar_label: 'port-leakage'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/port-leakage
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

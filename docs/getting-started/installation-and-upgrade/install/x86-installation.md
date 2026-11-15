@@ -9,7 +9,6 @@ tags:
   - 'installation'
   - 'boot-priority'
 source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/x86-installation
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## USB

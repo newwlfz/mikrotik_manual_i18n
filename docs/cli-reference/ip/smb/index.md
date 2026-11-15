@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/smb"
 title: "smb"
 sidebar_label: 'smb'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/smb
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

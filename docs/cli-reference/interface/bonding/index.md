@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/bonding"
 title: "bonding"
 sidebar_label: 'bonding'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/bonding
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -10,7 +10,6 @@ tags:
   - 'tcp'
   - 'udp'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/bandwidth-test
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The bandwidth test measures the throughput between two MikroTik routers. The client (`/tool/bandwidth-test`) on one router connects to the bandwidth test server (`/tool/bandwidth-server`) of the other router, sends or receives TCP or UDP traffic, and shows the rate every second. Use it to check a wireless or WAN link, or to find the bottleneck on a path.

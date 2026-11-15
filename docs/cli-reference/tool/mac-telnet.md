@@ -4,7 +4,6 @@ sidebar_position: 13
 title: "mac-telnet"
 sidebar_label: 'mac-telnet'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/mac-telnet
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

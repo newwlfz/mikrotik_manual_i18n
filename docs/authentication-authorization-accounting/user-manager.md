@@ -9,7 +9,6 @@ tags:
   - 'authentication'
   - 'authorization'
 source: https://manual.mikrotik.com/docs/authentication-authorization-accounting/user-manager
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Overview

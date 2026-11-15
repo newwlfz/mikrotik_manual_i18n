@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "community-list"
 sidebar_label: 'community-list'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/filter/community-list
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

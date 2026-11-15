@@ -4,7 +4,6 @@ sidebar_position: 13
 title: "policer-qos-map"
 sidebar_label: 'policer-qos-map'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/policer-qos-map
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

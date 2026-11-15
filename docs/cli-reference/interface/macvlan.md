@@ -4,7 +4,6 @@ sidebar_position: 20
 title: "macvlan"
 sidebar_label: 'macvlan'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/macvlan
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

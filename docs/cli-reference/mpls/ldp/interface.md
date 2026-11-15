@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "interface"
 sidebar_label: 'interface'
 source: https://manual.mikrotik.com/docs/cli-reference/mpls/ldp/interface
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

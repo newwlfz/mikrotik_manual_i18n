@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "expire-password"
 sidebar_label: 'expire-password'
 source: https://manual.mikrotik.com/docs/cli-reference/user/expire-password
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

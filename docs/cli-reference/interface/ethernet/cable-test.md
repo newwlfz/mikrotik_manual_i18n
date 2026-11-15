@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "cable-test"
 sidebar_label: 'cable-test'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/cable-test
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

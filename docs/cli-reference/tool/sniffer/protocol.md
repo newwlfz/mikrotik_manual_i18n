@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "protocol"
 sidebar_label: 'protocol'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/sniffer/protocol
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -8,7 +8,6 @@ tags:
   - 'icmp'
   - 'ipv6'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/flood-ping
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Flood ping sends a series of ICMP echo requests to one host and, instead of a line for every reply as [ping](/docs/diagnostics-monitoring-and-troubleshooting/ping) prints, shows only the totals: how many requests it sent, how many replies came back, and the shortest, average and longest round-trip time. Use it to check a link for packet loss with many requests, for example a wireless link or a VPN tunnel. It works with IPv4 and IPv6 addresses and is not available on devices with the SMIPS architecture.

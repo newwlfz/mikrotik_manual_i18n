@@ -7,7 +7,6 @@ description: 'Watchdog reboots the router when the system stops responding or wh
 tags:
   - 'watchdog'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/watchdog
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The watchdog reboots the router by itself in two cases, each with its own settings in `/system/watchdog`:

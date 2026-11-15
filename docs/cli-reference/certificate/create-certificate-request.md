@@ -4,7 +4,6 @@ sidebar_position: 7
 title: "create-certificate-request"
 sidebar_label: 'create-certificate-request'
 source: https://manual.mikrotik.com/docs/cli-reference/certificate/create-certificate-request
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

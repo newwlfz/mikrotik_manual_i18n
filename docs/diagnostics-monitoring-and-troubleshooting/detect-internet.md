@@ -8,7 +8,6 @@ tags:
   - 'detnet'
   - 'detect-internet'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/detect-internet
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Detect Internet watches the interfaces in `detect-interface-list` and gives each one a state: whether it has a link, whether the router's route to the internet goes through it, and whether MikroTik's cloud server answers through it. It adds each interface to the LAN, WAN or internet interface list you name, so settings and scripts that use those lists follow the current state of the interfaces.

@@ -8,7 +8,6 @@ tags:
   - 'chr'
   - 'aws'
 source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation/aws
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Amazon Web Services (AWS) does not offer MikroTik CHR directly in the Marketplace. To deploy CHR on AWS, you import the raw disk image as an Amazon Machine Image (AMI) and then launch an EC2 instance from it.

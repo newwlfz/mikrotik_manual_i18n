@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "generate-voucher"
 sidebar_label: 'generate-voucher'
 source: https://manual.mikrotik.com/docs/cli-reference/user-manager/user/generate-voucher
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

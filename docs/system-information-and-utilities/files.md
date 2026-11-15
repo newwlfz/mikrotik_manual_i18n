@@ -9,7 +9,6 @@ tags:
   - 'routeros-features'
   - 'storage'
 source: https://manual.mikrotik.com/docs/system-information-and-utilities/files
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The `/file` menu shows all user files on the router's storage, for example uploaded packages, backups, scripts and exports. You can create files and directories, edit file contents, and copy or delete entries. For an uploaded RouterOS `.npk` package, the menu also shows package-specific information, such as the architecture, version and build time:

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/dns"
 title: "dns"
 sidebar_label: 'dns'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/dns
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

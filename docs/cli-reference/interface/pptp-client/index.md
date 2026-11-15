@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/pptp-client"
 title: "pptp-client"
 sidebar_label: 'pptp-client'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/pptp-client
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

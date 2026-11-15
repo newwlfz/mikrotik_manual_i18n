@@ -4,7 +4,6 @@ sidebar_position: 15
 title: "port-isolation"
 sidebar_label: 'port-isolation'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/port-isolation
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

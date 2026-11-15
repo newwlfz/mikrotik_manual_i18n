@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "multi-passphrase"
 sidebar_label: 'multi-passphrase'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/security/multi-passphrase
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

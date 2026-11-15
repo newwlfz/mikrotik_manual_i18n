@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/macsec"
 title: "macsec"
 sidebar_label: 'macsec'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/macsec
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

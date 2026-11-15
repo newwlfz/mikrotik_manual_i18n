@@ -8,7 +8,6 @@ tags:
   - 'speed-test'
   - 'bandwidth'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/speed-test
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Speed test measures the link between this router and another MikroTik router in one command: latency and jitter with pings, then TCP and UDP throughput in both directions. It connects to the bandwidth test server of the other router and shows the CPU load of the routers next to the throughput results. Use it to check what a link between two sites, a wireless backhaul or a VPN tunnel delivers. To test one protocol or one direction, or to set packet sizes and speed limits, use [Bandwidth test](/docs/diagnostics-monitoring-and-troubleshooting/bandwidth-test) instead.

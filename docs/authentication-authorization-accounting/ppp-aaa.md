@@ -9,7 +9,6 @@ tags:
   - 'aaa'
   - 'radius'
 source: https://manual.mikrotik.com/docs/authentication-authorization-accounting/ppp-aaa
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Summary

@@ -4,7 +4,6 @@ sidebar_position: 8
 title: "uib-g"
 sidebar_label: 'uib-g'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/pimsm/uib-g
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

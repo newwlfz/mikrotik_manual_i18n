@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/file/sync"
 title: "sync"
 sidebar_label: 'sync'
 source: https://manual.mikrotik.com/docs/cli-reference/file/sync
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

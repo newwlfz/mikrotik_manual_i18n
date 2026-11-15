@@ -8,7 +8,6 @@ tags:
   - 'api'
   - 'management'
 source: https://manual.mikrotik.com/docs/developer-guides/api/python3-example
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 A simple Python3 API client.

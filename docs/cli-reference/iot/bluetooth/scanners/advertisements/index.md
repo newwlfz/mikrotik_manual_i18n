@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/iot/bluetooth/scanners/advertisements"
 title: "advertisements"
 sidebar_label: 'advertisements'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/scanners/advertisements
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

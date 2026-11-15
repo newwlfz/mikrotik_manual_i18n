@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/firewall/calea"
 title: "calea"
 sidebar_label: 'calea'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/firewall/calea
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

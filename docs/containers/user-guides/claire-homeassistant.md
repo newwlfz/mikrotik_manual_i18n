@@ -10,7 +10,6 @@ tags:
   - 'matter'
   - 'thread'
 source: https://manual.mikrotik.com/docs/containers/user-guides/claire-homeassistant
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Pair your Claire or Claire Lite air quality sensor with Home Assistant on **hAP be³ Media** to view sensor readings on your phone or in a web browser, and use them in automations and alerts.

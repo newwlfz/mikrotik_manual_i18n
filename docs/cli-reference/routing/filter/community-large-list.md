@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "community-large-list"
 sidebar_label: 'community-large-list'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/filter/community-large-list
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

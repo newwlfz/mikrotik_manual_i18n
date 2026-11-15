@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "pcap"
 sidebar_label: 'pcap'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/stats/pcap
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

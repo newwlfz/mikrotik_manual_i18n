@@ -4,7 +4,6 @@ sidebar_position: 6
 title: "gmp"
 sidebar_label: 'gmp'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/gmp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

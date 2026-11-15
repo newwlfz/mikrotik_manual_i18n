@@ -4,7 +4,6 @@ sidebar_position: 8
 title: "ingress-vlan-translation"
 sidebar_label: 'ingress-vlan-translation'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/ingress-vlan-translation
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

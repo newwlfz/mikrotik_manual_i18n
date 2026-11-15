@@ -9,7 +9,6 @@ tags:
   - 'smtp'
   - 'tls'
 source: https://manual.mikrotik.com/docs/system-information-and-utilities/e-mail
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The router sends email through an SMTP server: the server of your email provider or your own mail server. Scripts and the [scheduler](/docs/system-information-and-utilities/scheduler) use it to send alerts, backups and configuration exports, and the [watchdog](/docs/diagnostics-monitoring-and-troubleshooting/watchdog) uses it to send support output files.

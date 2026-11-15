@@ -4,7 +4,6 @@ sidebar_position: 8
 title: "flood-ping"
 sidebar_label: 'flood-ping'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/flood-ping
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

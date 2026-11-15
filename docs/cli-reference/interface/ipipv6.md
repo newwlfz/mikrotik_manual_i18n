@@ -4,7 +4,6 @@ sidebar_position: 13
 title: "ipipv6"
 sidebar_label: 'ipipv6'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ipipv6
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

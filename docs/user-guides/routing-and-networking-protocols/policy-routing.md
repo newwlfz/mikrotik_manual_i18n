@@ -8,7 +8,6 @@ tags:
   - 'routing'
   - 'policy-routing'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/policy-routing
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Policy routing steers traffic that matches criteria to a specific gateway. Use it to force selected customers or protocols, such as HTTP traffic, to always use a particular gateway. It can also route local and overseas traffic through different gateways.

@@ -8,7 +8,6 @@ tags:
   - 'routing'
   - 'bgp'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/bgp/understanding-bgp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The **Border Gateway Protocol** (**BGP**) is an exterior gateway protocol (**EGP**). It lets you set up an inter-domain dynamic routing system. The system automatically updates routing tables on BGP routers when network topology changes.

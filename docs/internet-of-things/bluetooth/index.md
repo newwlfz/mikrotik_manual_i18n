@@ -8,7 +8,6 @@ tags:
   - 'iot'
   - 'packet-structure'
 source: https://manual.mikrotik.com/docs/internet-of-things/bluetooth
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This section covers Bluetooth-based IoT examples. Use it to configure Bluetooth tag tracking and integrate collected data with MQTT and ThingsBoard.

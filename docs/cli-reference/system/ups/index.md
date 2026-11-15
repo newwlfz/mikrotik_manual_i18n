@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/ups"
 title: "ups"
 sidebar_label: 'ups'
 source: https://manual.mikrotik.com/docs/cli-reference/system/ups
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

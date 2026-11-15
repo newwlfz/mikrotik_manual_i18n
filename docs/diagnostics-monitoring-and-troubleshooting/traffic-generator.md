@@ -8,7 +8,6 @@ tags:
   - 'traffic-generator'
   - 'packet-generation'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/traffic-generator
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Traffic Generator is a tool that allows evaluating the performance of a DUT (Device Under Test) or SUT (System Under Test).

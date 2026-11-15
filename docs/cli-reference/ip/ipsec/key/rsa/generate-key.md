@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "generate-key"
 sidebar_label: 'generate-key'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/key/rsa/generate-key
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

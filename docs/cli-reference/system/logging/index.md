@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/logging"
 title: "logging"
 sidebar_label: 'logging'
 source: https://manual.mikrotik.com/docs/cli-reference/system/logging
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

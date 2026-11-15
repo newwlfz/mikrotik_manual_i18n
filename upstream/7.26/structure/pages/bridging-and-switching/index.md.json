@@ -4,8 +4,8 @@
   "local_path": "bridging-and-switching/index.md",
   "source_url": "https://manual.mikrotik.com/docs/bridging-and-switching.md",
   "html_url": "https://manual.mikrotik.com/docs/bridging-and-switching/",
-  "md_sha256": "93e021800f8a499fa008b83b56d77fd022ad91d9c046d51d4043c06ce5cde98e",
-  "html_sha256": "5006774c64639fa3607edce20c597374b282ed9420f2802b8a884542f7929389",
+  "md_sha256": "390271d5ef8f09231aa8f2060ac463799f9ecd3e0b065a9078ce823093e78426",
+  "html_sha256": "1586611e76194a244550893b3afae93c001ac4ed354d5d7c94c0b347e63bdc5a",
   "body": {
     "html": {
       "lists": 16,
@@ -158,7 +158,7 @@
         {
           "row": 1,
           "col": 1,
-          "html": "Direct bridged traffic to <a href=\"/docs/firewall-and-quality-of-service/firewall/\">IP/IPv6 firewall</a> (prerouting, forward, and postrouting sections of IP/IPv6 routing, see more details on <a href=\"/docs/firewall-and-quality-of-service/packet-flow-in-routeros#flow-of-bridged-packet\">Packet Flow</a> article). Bridged traffic bypasses the IP/IPv6 firewall unless this setting is enabled. Enable it to use IP/IPv6 firewall rules, <a href=\"/docs/firewall-and-quality-of-service/queues/#simple-queue\">Simple Queues</a> or a global <a href=\"/docs/firewall-and-quality-of-service/queues/#queue-tree\">Queue Tree</a> on traffic flowing through bridged ports. <br/><br/><strong>Caution:</strong> Enabling the <code>use-ip-firewall</code> feature will turn off bridge <a href=\"/docs/firewall-and-quality-of-service/packet-flow-in-routeros#fast-path\">Fast Path</a>, which in turn affects the ability to <a href=\"/docs/firewall-and-quality-of-service/packet-flow-in-routeros#fasttrack\">fasttrack</a> connections going over that bridge. And because this setting introduces additional processing steps (prerouting, forward and postrouting chains), it will increase CPU usage even more when forwarding packets. <br/><strong>Routed traffic</strong>, including traffic from VLAN interfaces (e.g., <code>/interface/vlan</code> created on the bridge), <strong>is already processed by the IP firewall</strong>. In such cases, enabling this setting has no additional effect. <br/>"
+          "html": "Direct bridged traffic to <a href=\"/docs/firewall-and-quality-of-service/firewall/\">IP/IPv6 firewall</a> (prerouting, forward, and postrouting sections of IP/IPv6 routing, see more details on <a href=\"/docs/firewall-and-quality-of-service/packet-flow-in-routeros#flow-of-a-bridged-packet\">Packet Flow</a> article). Bridged traffic bypasses the IP/IPv6 firewall unless this setting is enabled. Enable it to use IP/IPv6 firewall rules, <a href=\"/docs/firewall-and-quality-of-service/queues/#simple-queue\">Simple Queues</a> or a global <a href=\"/docs/firewall-and-quality-of-service/queues/#queue-tree\">Queue Tree</a> on traffic flowing through bridged ports. <br/><br/><strong>Caution:</strong> Enabling the <code>use-ip-firewall</code> feature will turn off bridge <a href=\"/docs/firewall-and-quality-of-service/packet-flow-in-routeros#fast-path\">Fast Path</a>, which in turn affects the ability to <a href=\"/docs/firewall-and-quality-of-service/packet-flow-in-routeros#fasttrack\">fasttrack</a> connections going over that bridge. And because this setting introduces additional processing steps (prerouting, forward and postrouting chains), it will increase CPU usage even more when forwarding packets. <br/><strong>Routed traffic</strong>, including traffic from VLAN interfaces (e.g., <code>/interface/vlan</code> created on the bridge), <strong>is already processed by the IP firewall</strong>. In such cases, enabling this setting has no additional effect. <br/>"
         },
         {
           "row": 3,

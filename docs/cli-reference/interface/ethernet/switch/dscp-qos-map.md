@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "dscp-qos-map"
 sidebar_label: 'dscp-qos-map'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/dscp-qos-map
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

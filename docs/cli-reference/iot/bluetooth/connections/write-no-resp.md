@@ -4,7 +4,6 @@ sidebar_position: 8
 title: "write-no-resp"
 sidebar_label: 'write-no-resp'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/connections/write-no-resp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

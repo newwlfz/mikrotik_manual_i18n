@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "mode-config"
 sidebar_label: 'mode-config'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/mode-config
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

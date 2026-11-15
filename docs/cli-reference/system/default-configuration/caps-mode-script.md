@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "caps-mode-script"
 sidebar_label: 'caps-mode-script'
 source: https://manual.mikrotik.com/docs/cli-reference/system/default-configuration/caps-mode-script
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 23
 title: "wps-client"
 sidebar_label: 'wps-client'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/wps-client
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

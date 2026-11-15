@@ -9,7 +9,6 @@ tags:
   - 'raid'
   - 'maintenance'
 source: https://manual.mikrotik.com/docs/storage/btrfs/maintenance
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Similar to other feature-rich filesystems, Btrfs needs periodic maintenance. This page covers the routine tasks relevant to Btrfs.

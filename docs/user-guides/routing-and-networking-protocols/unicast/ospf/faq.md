@@ -8,7 +8,6 @@ tags:
   - 'routing'
   - 'ospf'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/ospf/faq
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Neighbors Stuck in Init State or Frequently Flapping

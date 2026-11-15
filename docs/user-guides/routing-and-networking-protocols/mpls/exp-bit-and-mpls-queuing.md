@@ -7,7 +7,6 @@ description: 'This page explains the EXP bit in MPLS packets and how RouterOS ha
 tags:
   - 'mpls'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/mpls/exp-bit-and-mpls-queuing
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 When the MPLS label is attached to the packet, it increases the packet length by 32 bits (4 bytes). These 32 bits are broken down as follows:

@@ -8,7 +8,6 @@ tags:
   - 'user-management'
   - 'radius'
 source: https://manual.mikrotik.com/docs/authentication-authorization-accounting
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This section covers RouterOS authentication, authorization, accounting, and user-management features, including local users, certificates, RADIUS, 802.1X, PPP AAA, User Manager, and HotSpot captive portal access. Use these pages to configure identity, access control, and centralized accounting services.

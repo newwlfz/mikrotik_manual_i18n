@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "vlan"
 sidebar_label: 'vlan'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/qos/map/vlan
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "lldp"
 sidebar_label: 'lldp'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/neighbor/lldp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "member"
 sidebar_label: 'member'
 source: https://manual.mikrotik.com/docs/cli-reference/zerotier/controller/member
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

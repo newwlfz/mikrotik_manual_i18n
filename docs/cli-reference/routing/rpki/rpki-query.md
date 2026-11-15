@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "rpki-query"
 sidebar_label: 'rpki-query'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/rpki/rpki-query
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

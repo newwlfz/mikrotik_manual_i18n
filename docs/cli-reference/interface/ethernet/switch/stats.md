@@ -4,7 +4,6 @@ sidebar_position: 24
 title: "stats"
 sidebar_label: 'stats'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/stats
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

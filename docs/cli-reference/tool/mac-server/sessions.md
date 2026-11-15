@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "sessions"
 sidebar_label: 'sessions'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/mac-server/sessions
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

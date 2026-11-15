@@ -6,7 +6,6 @@ description: 'This page introduces Netinstall, the MikroTik utility for installi
 tags:
   - 'netinstall'
 source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/netinstall
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Netinstall is a utility for installing and reinstalling RouterOS on MikroTik devices. It can be used to recover inaccessible devices, perform clean installations, or reinstall RouterOS when the system is corrupted or misconfigured.

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/zerotier/peer"
 title: "peer"
 sidebar_label: 'peer'
 source: https://manual.mikrotik.com/docs/cli-reference/zerotier/peer
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

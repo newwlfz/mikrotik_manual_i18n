@@ -7,7 +7,6 @@ tags:
   - 'gpio'
   - 'iot'
 source: https://manual.mikrotik.com/docs/internet-of-things/gpio
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ***note**: In order to access GPIO settings, make sure that the **iot** [package](/docs/getting-started/installation-and-upgrade/packages) is installed beforehand.*

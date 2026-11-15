@@ -6,7 +6,6 @@ description: 'User guides offer detailed RouterOS configuration and design guida
 tags:
   - 'routing'
 source: https://manual.mikrotik.com/docs/7.24/user-guides
-captured_at: '2026-11-07T17:11:03.548Z'
 ---
 
 User guides provide deeper RouterOS configuration and design guidance. These guides now live in the relevant top-level documentation sections.

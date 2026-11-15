@@ -4,7 +4,6 @@ sidebar_position: 31
 title: "ssh-exec"
 sidebar_label: 'ssh-exec'
 source: https://manual.mikrotik.com/docs/cli-reference/system/ssh-exec
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

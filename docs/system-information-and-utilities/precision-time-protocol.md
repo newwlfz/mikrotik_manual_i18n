@@ -9,7 +9,6 @@ tags:
   - 'precision-time-protocol'
   - 'ieee-1588'
 source: https://manual.mikrotik.com/docs/system-information-and-utilities/precision-time-protocol
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The Precision Time Protocol (PTP, IEEE 1588-2008, also known as PTPv2) synchronizes clocks across a local network, which matters in telecommunications, broadcast, audio production and industrial automation. MikroTik's implementation features:

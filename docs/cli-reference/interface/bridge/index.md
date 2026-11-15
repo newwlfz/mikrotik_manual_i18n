@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/bridge"
 title: "bridge"
 sidebar_label: 'bridge'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/bridge
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

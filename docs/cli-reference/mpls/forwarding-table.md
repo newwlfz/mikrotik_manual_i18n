@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "forwarding-table"
 sidebar_label: 'forwarding-table'
 source: https://manual.mikrotik.com/docs/cli-reference/mpls/forwarding-table
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

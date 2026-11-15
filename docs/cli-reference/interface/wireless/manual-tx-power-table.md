@@ -4,7 +4,6 @@ sidebar_position: 9
 title: "manual-tx-power-table"
 sidebar_label: 'manual-tx-power-table'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/manual-tx-power-table
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

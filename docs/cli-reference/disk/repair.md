@@ -4,7 +4,6 @@ sidebar_position: 11
 title: "repair"
 sidebar_label: 'repair'
 source: https://manual.mikrotik.com/docs/cli-reference/disk/repair
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

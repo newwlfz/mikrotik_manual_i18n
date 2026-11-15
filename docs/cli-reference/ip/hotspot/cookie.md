@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "cookie"
 sidebar_label: 'cookie'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/cookie
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

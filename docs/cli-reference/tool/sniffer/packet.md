@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "packet"
 sidebar_label: 'packet'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/sniffer/packet
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

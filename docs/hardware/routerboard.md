@@ -9,7 +9,6 @@ tags:
   - 'firmware-upgrades'
   - 'settings'
 source: https://manual.mikrotik.com/docs/hardware/routerboard
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 On RouterBOARD devices, you can view basic hardware and firmware information from the `/system/routerboard` menu.

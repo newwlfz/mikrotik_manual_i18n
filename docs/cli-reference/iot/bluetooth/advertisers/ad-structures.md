@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "ad-structures"
 sidebar_label: 'ad-structures'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/advertisers/ad-structures
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

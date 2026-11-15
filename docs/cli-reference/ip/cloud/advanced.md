@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "advanced"
 sidebar_label: 'advanced'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/cloud/advanced
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

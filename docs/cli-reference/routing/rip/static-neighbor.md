@@ -4,7 +4,6 @@ sidebar_position: 6
 title: "static-neighbor"
 sidebar_label: 'static-neighbor'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/rip/static-neighbor
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/routing/pimsm/bsr"
 title: "bsr"
 sidebar_label: 'bsr'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/pimsm/bsr
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

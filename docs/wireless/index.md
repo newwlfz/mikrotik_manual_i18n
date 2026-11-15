@@ -6,7 +6,6 @@ description: 'This section introduces MikroTik RouterOS wireless configuration, 
 tags:
   - 'wireless'
 source: https://manual.mikrotik.com/docs/wireless
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This section will describe the configuration of 802.11 wireless protocols and best use examples.

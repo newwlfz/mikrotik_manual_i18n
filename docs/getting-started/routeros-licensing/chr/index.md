@@ -6,7 +6,6 @@ description: 'Cloud Hosted Router (CHR) is a virtualized RouterOS edition for x8
 tags:
   - 'licensing'
 source: https://manual.mikrotik.com/docs/getting-started/routeros-licensing/chr
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Cloud Hosted Router (CHR) is a virtualized edition of RouterOS designed to run on x86_64 virtual environments. It provides the same core routing, firewall, VPN, and management features available on MikroTik hardware devices.

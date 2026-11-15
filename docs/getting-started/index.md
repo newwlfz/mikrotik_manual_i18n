@@ -6,7 +6,6 @@ description: 'Getting Started provides essential instructions for initial Router
 tags:
   - 'first-time-configuration'
 source: https://manual.mikrotik.com/docs/getting-started
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Getting Started covers initial RouterOS setup, configuration management, installation, licensing, upgrades, backups, and first-time security tasks. Use this section to bring a router into service and maintain the base system.

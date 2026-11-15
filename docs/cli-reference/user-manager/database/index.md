@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/user-manager/database"
 title: "database"
 sidebar_label: 'database'
 source: https://manual.mikrotik.com/docs/cli-reference/user-manager/database
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

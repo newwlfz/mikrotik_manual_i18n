@@ -9,7 +9,6 @@ tags:
   - 'media-server'
   - 'upnp'
 source: https://manual.mikrotik.com/docs/storage/dlna
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 DLNA (Digital Living Network Alliance) is a set of network protocols that devices use to share digital media such as videos, photos and music. DLNA is built on UPnP (Universal Plug and Play), which gives devices discovery and control: devices find each other with SSDP (Simple Service Discovery Protocol), exchange control messages with SOAP (Simple Object Access Protocol), and describe themselves and their services in XML.

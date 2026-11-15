@@ -8,7 +8,6 @@ tags:
   - 'partitions'
   - 'storage'
 source: https://manual.mikrotik.com/docs/system-information-and-utilities/partitions
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Partitioning is supported on ARM, ARM64, MIPS, TILE, and PowerPC RouterBOARD devices that use NAND flash.

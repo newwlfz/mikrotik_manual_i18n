@@ -7,7 +7,6 @@ description: 'Address lists group IP addresses, prefixes, ranges and DNS names u
 tags:
   - 'address-lists'
 source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/firewall/address-lists
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 An address list is a named set of IP addresses, prefixes and, for IPv4, address ranges. Filter, NAT, mangle and raw rules match it with `src-address-list` and `dst-address-list`, and `!` in front of the name matches every address that is not in the list. One rule then covers many addresses, and you change who it applies to by changing the list, not the rule.

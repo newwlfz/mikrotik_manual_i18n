@@ -9,7 +9,6 @@ tags:
   - 'dynamic-ip'
   - 'hmac-md5'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/dynamic-dns
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The `/tool/dns-update` command sends one dynamic update (RFC 2136) to the authoritative DNS server of a zone and points a name in that zone at an IPv4 address. The update is signed with a TSIG key (RFC 8945), so the server can check that it comes from you, as in a secure dynamic update (RFC 3007). Use it for a zone that you run yourself, for example on a BIND server.

@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "discover"
 sidebar_label: 'discover'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/romon/discover
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

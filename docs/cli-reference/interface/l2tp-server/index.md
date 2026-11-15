@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/l2tp-server"
 title: "l2tp-server"
 sidebar_label: 'l2tp-server'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/l2tp-server
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

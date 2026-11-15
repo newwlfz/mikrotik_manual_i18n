@@ -8,7 +8,6 @@ tags:
   - 'firewall'
   - 'traffic-management'
 source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/user-guides/connection-rate
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Connection Rate is a firewall matcher that allows capturing traffic based on the present speed of the connection.

@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "all"
 sidebar_label: 'all'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/dns/cache/all
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

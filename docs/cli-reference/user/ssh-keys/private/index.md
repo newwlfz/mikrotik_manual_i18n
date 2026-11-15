@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/user/ssh-keys/private"
 title: "private"
 sidebar_label: 'private'
 source: https://manual.mikrotik.com/docs/cli-reference/user/ssh-keys/private
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "manual"
 sidebar_label: 'manual'
 source: https://manual.mikrotik.com/docs/cli-reference/system/clock/manual
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

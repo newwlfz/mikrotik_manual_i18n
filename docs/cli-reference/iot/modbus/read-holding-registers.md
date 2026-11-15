@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "read-holding-registers"
 sidebar_label: 'read-holding-registers'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/modbus/read-holding-registers
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

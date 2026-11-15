@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "categories"
 sidebar_label: 'categories'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/apptraffic/stats/categories
-captured_at: '2026-11-09T11:35:47.715Z'
 pagination_prev: "cli-reference/tool/apptraffic/stats"
 ---
 

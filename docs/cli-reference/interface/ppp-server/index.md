@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/ppp-server"
 title: "ppp-server"
 sidebar_label: 'ppp-server'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ppp-server
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

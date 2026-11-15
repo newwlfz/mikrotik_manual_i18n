@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "allowed-channels"
 sidebar_label: 'allowed-channels'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/info/allowed-channels
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

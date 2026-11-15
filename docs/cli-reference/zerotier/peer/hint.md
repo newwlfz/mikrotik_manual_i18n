@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "hint"
 sidebar_label: 'hint'
 source: https://manual.mikrotik.com/docs/cli-reference/zerotier/peer/hint
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "rps"
 sidebar_label: 'rps'
 source: https://manual.mikrotik.com/docs/cli-reference/system/resource/irq/rps
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

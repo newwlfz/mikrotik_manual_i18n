@@ -4,7 +4,6 @@ sidebar_position: 10
 title: "ip-scan"
 sidebar_label: 'ip-scan'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/ip-scan
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

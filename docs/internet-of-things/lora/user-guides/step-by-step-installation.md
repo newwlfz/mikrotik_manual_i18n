@@ -8,7 +8,6 @@ tags:
   - 'lora'
   - 'winbox'
 source: https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides/step-by-step-installation
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ### LoRa card installation

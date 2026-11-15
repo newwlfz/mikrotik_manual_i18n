@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "qkd-get-status"
 sidebar_label: 'qkd-get-status'
 source: https://manual.mikrotik.com/docs/cli-reference/system/keymat-provider/qkd-get-status
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

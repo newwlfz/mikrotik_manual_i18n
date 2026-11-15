@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "qkd-get-key-with-ids"
 sidebar_label: 'qkd-get-key-with-ids'
 source: https://manual.mikrotik.com/docs/cli-reference/system/keymat-provider/qkd-get-key-with-ids
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

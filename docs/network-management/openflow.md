@@ -8,7 +8,6 @@ tags:
   - 'openflow'
   - 'sdn'
 source: https://manual.mikrotik.com/docs/network-management/openflow
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 RouterOS supports OpenFlow [1.0](https://opennetworking.org/wp-content/uploads/2013/04/openflow-spec-v1.0.0.pdf) and [1.3](https://opennetworking.org/wp-content/uploads/2014/10/openflow-spec-v1.3.0.pdf), which allow communication between the OpenFlow controller and the OpenFlow agent.

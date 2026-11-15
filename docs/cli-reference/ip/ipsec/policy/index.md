@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/ipsec/policy"
 title: "policy"
 sidebar_label: 'policy'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/policy
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

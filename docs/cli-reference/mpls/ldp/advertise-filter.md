@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "advertise-filter"
 sidebar_label: 'advertise-filter'
 source: https://manual.mikrotik.com/docs/cli-reference/mpls/ldp/advertise-filter
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

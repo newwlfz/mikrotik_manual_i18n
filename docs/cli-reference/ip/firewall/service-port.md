@@ -4,7 +4,6 @@ sidebar_position: 9
 title: "service-port"
 sidebar_label: 'service-port'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/firewall/service-port
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -7,7 +7,6 @@ description: 'This page documents MikroTik RouterOS''s VXLAN implementation, cov
 tags:
   - 'vxlan'
 source: https://manual.mikrotik.com/docs/bridging-and-switching/vxlan
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ---

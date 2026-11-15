@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/mesh"
 title: "mesh"
 sidebar_label: 'mesh'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/mesh
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

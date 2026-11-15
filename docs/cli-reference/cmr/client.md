@@ -2,7 +2,6 @@
 sidebar_key: "cli-reference/cmr/client"
 title: "client"
 source: https://manual.mikrotik.com/docs/cli-reference/cmr/client
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 11
 title: "rates"
 sidebar_label: 'rates'
 source: https://manual.mikrotik.com/docs/cli-reference/caps-man/rates
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

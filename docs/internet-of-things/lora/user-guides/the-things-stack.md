@@ -1,6 +1,6 @@
 ---
 sidebar_key: "internet-of-things/lora/user-guides/the-things-stack"
-sidebar_position: 5
+sidebar_position: 4
 title: "The Things Stack"
 sidebar_label: 'The Things Stack'
 description: 'This page guides MikroTik RouterOS users through registering LoRaWAN gateways with The Things Stack, covering UDP and LNS/CUPS protocols. It explains how to find Gateway EUI values, configure server settings, generate authentication keys, and import root certificates for secure communication with TTN servers.'
@@ -8,7 +8,6 @@ tags:
   - 'lora'
   - 'iot'
 source: https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides/the-things-stack
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 [The Things Stack](https://console.cloud.thethings.network/) is a new version of The Things network.
@@ -178,15 +177,15 @@ You can input decoder script in the "[Payload formatters](https://www.thethingsi
 ![](/img/6e8e3cfbb626c1fd.png)
 
 - Select "Custom Javascript formatter";
-- Copy/Paste the content of the [provided script **tg-lrx2-2.0-ul-dec.js**](/docs/internet-of-things/lora/user-guides/tg-lr-setup-guide#quickstart-guide) into the "Formatter code" field and "Save changes".
+- Copy/Paste the content of the [provided script **tg-lrx2-2.0-ul-dec.js**](/hardware/tg-lr-setup-guide#quickstart-guide) into the "Formatter code" field and "Save changes".
 
 ### Power on the tag
 
-Please check our full guide on the [TG-LR options](/docs/internet-of-things/lora/user-guides/tg-lr-setup-guide).
+Please check our full guide on the [TG-LR options](/hardware/tg-lr-setup-guide).
 
 From the get-go, the tag will be in the "Shutdown" mode (sleeping).
 
-To activate it, check our [Quickstart Guide](/docs/internet-of-things/lora/user-guides/tg-lr-setup-guide#quickstart-guide), and simply hold the magnet against the reed switch for about ~1.5 seconds until you see x2 LED blinks (after which remove the magnet).
+To activate it, check our [Quickstart Guide](/hardware/tg-lr-setup-guide#quickstart-guide), and simply hold the magnet against the reed switch for about ~1.5 seconds until you see x2 LED blinks (after which remove the magnet).
 
 ### Node registration verification
 

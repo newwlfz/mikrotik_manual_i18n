@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/socks"
 title: "socks"
 sidebar_label: 'socks'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/socks
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

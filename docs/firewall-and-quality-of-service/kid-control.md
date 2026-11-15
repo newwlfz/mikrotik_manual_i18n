@@ -7,7 +7,6 @@ description: 'Kid Control is a RouterOS feature allowing parental control over L
 tags:
   - 'kid-control'
 source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/kid-control
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 **Sub-menu:** `/ip/kid-control`

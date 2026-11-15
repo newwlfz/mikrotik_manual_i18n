@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "copy-to"
 sidebar_label: 'copy-to'
 source: https://manual.mikrotik.com/docs/cli-reference/partitions/copy-to
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

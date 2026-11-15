@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "packet-template"
 sidebar_label: 'packet-template'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/packet-template
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "usb-power-reset"
 sidebar_label: 'usb-power-reset'
 source: https://manual.mikrotik.com/docs/cli-reference/system/resource/hardware/usb-power-reset
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "authorize"
 sidebar_label: 'authorize'
 source: https://manual.mikrotik.com/docs/cli-reference/system/resource/hardware/authorize
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

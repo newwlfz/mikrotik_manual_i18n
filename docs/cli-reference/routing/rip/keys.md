@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "keys"
 sidebar_label: 'keys'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/rip/keys
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -9,7 +9,6 @@ tags:
   - 'firewall'
   - 'nat'
 source: https://manual.mikrotik.com/docs/network-management/socks/socksify
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Socksify forwards traffic selected by firewall rules through an upstream SOCKS5 server, for applications that do not support SOCKS themselves. A destination NAT rule with `action=socksify` redirects the matching connections to the service, and the service asks the SOCKS server to connect to the connection's original destination.

@@ -4,7 +4,6 @@ sidebar_position: 35
 title: "veth"
 sidebar_label: 'veth'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/veth
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

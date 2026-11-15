@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/media"
 title: "media"
 sidebar_label: 'media'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/media
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

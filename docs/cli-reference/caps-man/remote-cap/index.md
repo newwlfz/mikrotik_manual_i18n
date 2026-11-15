@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/caps-man/remote-cap"
 title: "remote-cap"
 sidebar_label: 'remote-cap'
 source: https://manual.mikrotik.com/docs/cli-reference/caps-man/remote-cap
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

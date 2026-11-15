@@ -9,7 +9,6 @@ tags:
   - 'radius'
   - 'authentication'
 source: https://manual.mikrotik.com/docs/authentication-authorization-accounting/dot1x
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Dot1X is an implementation of the IEEE 802.1X standard in RouterOS. The main purpose is to provide port-based network access control using EAP over LAN also known as EAPOL. 802.1X consists of a supplicant (client), an authenticator (server) and an authentication server (RADIUS server). Both authenticator and supplicant sides are supported in RouterOS, as well as the authentication server when [User Manager](/docs/authentication-authorization-accounting/user-manager) package is installed. Supported EAP methods for the supplicant are EAP-TLS, EAP-TTLS, EAP-MSCHAPv2 and PEAPv0/EAP-MSCHAPv2.

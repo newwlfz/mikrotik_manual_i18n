@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "environment"
 sidebar_label: 'environment'
 source: https://manual.mikrotik.com/docs/cli-reference/system/script/environment
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

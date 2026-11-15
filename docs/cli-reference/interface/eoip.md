@@ -4,7 +4,6 @@ sidebar_position: 7
 title: "eoip"
 sidebar_label: 'eoip'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/eoip
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

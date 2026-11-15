@@ -9,7 +9,6 @@ tags:
   - 'mips'
   - 'x86'
 source: https://manual.mikrotik.com/docs/getting-started/software-specifications/feature-support-based-on-architecture
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Feature Support by Architecture

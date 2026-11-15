@@ -7,7 +7,6 @@ tags:
   - 'routing'
   - 'bgp'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/bgp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 <DocCardList />

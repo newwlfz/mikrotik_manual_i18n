@@ -7,7 +7,6 @@ tags:
   - 'container'
   - 'security'
 source: https://manual.mikrotik.com/docs/containers
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This section covers RouterOS container support, including container configuration, virtual Ethernet interfaces, storage, and application examples. Use it to run supported containerized services on RouterOS devices.

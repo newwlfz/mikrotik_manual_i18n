@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "meter"
 sidebar_label: 'meter'
 source: https://manual.mikrotik.com/docs/cli-reference/openflow/meter
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -9,7 +9,6 @@ tags:
   - 'container'
   - 'https'
 source: https://manual.mikrotik.com/docs/containers/user-guides/container-haproxy
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 HAProxy is a high-performance reverse proxy and load balancer as a Container.

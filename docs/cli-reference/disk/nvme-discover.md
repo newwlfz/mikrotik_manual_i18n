@@ -4,7 +4,6 @@ sidebar_position: 8
 title: "nvme-discover"
 sidebar_label: 'nvme-discover'
 source: https://manual.mikrotik.com/docs/cli-reference/disk/nvme-discover
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

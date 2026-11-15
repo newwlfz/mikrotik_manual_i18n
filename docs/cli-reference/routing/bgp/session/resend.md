@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "resend"
 sidebar_label: 'resend'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/bgp/session/resend
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

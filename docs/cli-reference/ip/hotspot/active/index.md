@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/hotspot/active"
 title: "active"
 sidebar_label: 'active'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/active
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

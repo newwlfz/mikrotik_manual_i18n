@@ -8,7 +8,6 @@ tags:
   - 'bonding'
   - 'vrrp'
 source: https://manual.mikrotik.com/docs/high-availability-solutions
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 High availability documentation covers redundancy and load-sharing designs such as bonding, VRRP, multi-chassis link aggregation, and WAN load balancing. Use this section to improve service continuity and link resilience.

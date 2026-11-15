@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "stream"
 sidebar_label: 'stream'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/stats/stream
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

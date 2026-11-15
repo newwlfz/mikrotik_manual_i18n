@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/mpls/ldp"
 title: "ldp"
 sidebar_label: 'ldp'
 source: https://manual.mikrotik.com/docs/cli-reference/mpls/ldp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

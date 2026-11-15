@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "script"
 sidebar_label: 'script'
 source: https://manual.mikrotik.com/docs/cli-reference/system/default-configuration/script
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -2,7 +2,6 @@
 sidebar_key: "cli-reference/cmr/device"
 title: "device"
 source: https://manual.mikrotik.com/docs/cli-reference/cmr/device
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

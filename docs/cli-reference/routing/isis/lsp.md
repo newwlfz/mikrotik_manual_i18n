@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "lsp"
 sidebar_label: 'lsp'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/isis/lsp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

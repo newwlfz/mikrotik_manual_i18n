@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "reg-info"
 sidebar_label: 'reg-info'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/radio/reg-info
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

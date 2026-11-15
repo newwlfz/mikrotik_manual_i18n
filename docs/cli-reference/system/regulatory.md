@@ -4,7 +4,6 @@ sidebar_position: 22
 title: "regulatory"
 sidebar_label: 'regulatory'
 source: https://manual.mikrotik.com/docs/cli-reference/system/regulatory
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

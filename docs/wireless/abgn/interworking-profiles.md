@@ -9,7 +9,6 @@ tags:
   - 'hotspot-20'
   - 'anqp'
 source: https://manual.mikrotik.com/docs/wireless/abgn/interworking-profiles
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Interworking

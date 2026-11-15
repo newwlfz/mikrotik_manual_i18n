@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/w60g"
 title: "w60g"
 sidebar_label: 'w60g'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/w60g
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

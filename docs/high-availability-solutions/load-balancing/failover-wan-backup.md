@@ -7,7 +7,6 @@ description: 'This page explains how to configure failover for WAN connections u
 tags:
   - 'failover'
 source: https://manual.mikrotik.com/docs/high-availability-solutions/load-balancing/failover-wan-backup
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Introduction

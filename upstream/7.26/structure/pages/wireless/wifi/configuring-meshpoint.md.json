@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "wireless/wifi/configuring-meshpoint.md",
+  "source_url": "https://manual.mikrotik.com/docs/wireless/wifi/configuring-meshpoint.md",
+  "html_url": "https://manual.mikrotik.com/docs/wireless/wifi/configuring-meshpoint",
+  "md_sha256": "4ce997061e29c6061d372bd7f3825b2be17f2274dc163e9a5c8a930f4b55724d",
+  "html_sha256": "462db0f3bb3028cd584bc8dec1ae08bae82b86df83490911c91ecd4b3cbf8672",
+  "body": {
+    "html": {
+      "lists": 7,
+      "listItems": 30,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 37,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 30,
+      "listItems": 30,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 30,
+      "listItems": 30,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

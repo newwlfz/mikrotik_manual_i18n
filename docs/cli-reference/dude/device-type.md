@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "device-type"
 sidebar_label: 'device-type'
 source: https://manual.mikrotik.com/docs/cli-reference/dude/device-type
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

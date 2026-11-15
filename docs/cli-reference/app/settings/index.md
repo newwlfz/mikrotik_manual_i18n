@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/app/settings"
 title: "settings"
 sidebar_label: 'settings'
 source: https://manual.mikrotik.com/docs/cli-reference/app/settings
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

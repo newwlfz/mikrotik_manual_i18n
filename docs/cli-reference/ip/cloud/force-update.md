@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "force-update"
 sidebar_label: 'force-update'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/cloud/force-update
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

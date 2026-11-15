@@ -9,7 +9,6 @@ tags:
   - 'thingsboard'
   - 'gps'
 source: https://manual.mikrotik.com/docs/mobile-networking/gps/gps-tracking-using-mqtt-and-thingsboard
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Many RouterOS devices have [GPS](/docs/mobile-networking/gps/) support. It allows RouterOS to determine the precise location of its GPS receiver. GPS coordinates will indicate the latitude and the longitude values (among other parameters) of the current position.

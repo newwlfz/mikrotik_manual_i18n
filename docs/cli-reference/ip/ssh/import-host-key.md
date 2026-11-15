@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "import-host-key"
 sidebar_label: 'import-host-key'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/ssh/import-host-key
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

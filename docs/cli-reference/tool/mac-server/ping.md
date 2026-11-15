@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "ping"
 sidebar_label: 'ping'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/mac-server/ping
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

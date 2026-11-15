@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ipv6/nd"
 title: "nd"
 sidebar_label: 'nd'
 source: https://manual.mikrotik.com/docs/cli-reference/ipv6/nd
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

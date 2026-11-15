@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "load-config"
 sidebar_label: 'load-config'
 source: https://manual.mikrotik.com/docs/cli-reference/system/swos/load-config
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

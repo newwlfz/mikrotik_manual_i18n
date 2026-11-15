@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "inject-pcap"
 sidebar_label: 'inject-pcap'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/inject-pcap
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

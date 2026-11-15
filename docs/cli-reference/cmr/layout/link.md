@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "link"
 sidebar_label: 'link'
 source: https://manual.mikrotik.com/docs/cli-reference/cmr/layout/link
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

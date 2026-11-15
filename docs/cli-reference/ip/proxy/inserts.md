@@ -4,7 +4,6 @@ sidebar_position: 7
 title: "inserts"
 sidebar_label: 'inserts'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/proxy/inserts
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

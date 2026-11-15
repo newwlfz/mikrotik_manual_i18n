@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "subvolume"
 sidebar_label: 'subvolume'
 source: https://manual.mikrotik.com/docs/cli-reference/disk/btrfs/subvolume
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

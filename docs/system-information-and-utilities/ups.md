@@ -7,7 +7,6 @@ description: 'UPS monitor feature for APC UPS units supports serial/USB connecti
 tags:
   - 'ups'
 source: https://manual.mikrotik.com/docs/system-information-and-utilities/ups
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ### Summary

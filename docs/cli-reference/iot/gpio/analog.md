@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "analog"
 sidebar_label: 'analog'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/gpio/analog
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

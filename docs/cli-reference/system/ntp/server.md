@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "server"
 sidebar_label: 'server'
 source: https://manual.mikrotik.com/docs/cli-reference/system/ntp/server
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

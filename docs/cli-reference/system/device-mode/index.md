@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/device-mode"
 title: "device-mode"
 sidebar_label: 'device-mode'
 source: https://manual.mikrotik.com/docs/cli-reference/system/device-mode
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

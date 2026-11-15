@@ -5,7 +5,6 @@ title: "Moving your RAID array to a different device"
 sidebar_label: 'Moving your RAID array to a different device'
 description: 'This page explains how to move a RAID 5 array from an old device to a new one by creating the RAID on the new device, ejecting disks from the old device, and transferring them to the new device where RouterOS automatically recognises and mounts the array.'
 source: https://manual.mikrotik.com/docs/storage/raid/moving-array
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 It is possible to move your RAID array from one device to another.

@@ -8,7 +8,6 @@ tags:
   - 'openvpn'
   - 'tls'
 source: https://manual.mikrotik.com/docs/virtual-private-networks/openvpn
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 OpenVPN is a VPN protocol based on the SSL/TLS security model, widely used to provide secure remote access and site-to-site connectivity over untrusted networks. It supports both Layer 2 and Layer 3 tunneling modes, enabling the transport of Ethernet frames or routed IP traffic depending on deployment requirements.

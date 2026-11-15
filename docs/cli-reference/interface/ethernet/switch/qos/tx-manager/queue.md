@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "queue"
 sidebar_label: 'queue'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/qos/tx-manager/queue
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

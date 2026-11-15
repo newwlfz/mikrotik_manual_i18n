@@ -9,7 +9,6 @@ tags:
   - 'configuration-management'
   - 'firmware-upgrade'
 source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/routerboot
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 RouterBOOT is responsible for starting RouterOS in MikroTik hardware devices, such as Access Points, routers, and other models. Since many new hardware families have been made by MikroTik, here and elsewhere, when the term RouterBOARD is used, it applies to all the other hardware families that run RouterOS as well.

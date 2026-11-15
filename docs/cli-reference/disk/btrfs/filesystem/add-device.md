@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "add-device"
 sidebar_label: 'add-device'
 source: https://manual.mikrotik.com/docs/cli-reference/disk/btrfs/filesystem/add-device
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

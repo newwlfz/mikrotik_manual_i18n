@@ -5,7 +5,6 @@ title: "MQTT and Azure configuration"
 sidebar_label: 'MQTT and Azure configuration'
 description: 'Publish MikroTik MQTT data to Microsoft Azure IoT, covering Azure account setup, device credentials, and MQTT broker configuration.'
 source: https://manual.mikrotik.com/docs/internet-of-things/bluetooth/user-guides/mqtt-and-azure-configuration
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ### Introduction

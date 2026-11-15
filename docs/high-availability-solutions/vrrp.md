@@ -8,7 +8,6 @@ tags:
   - 'vrrp'
   - 'routing-redundancy'
 source: https://manual.mikrotik.com/docs/high-availability-solutions/vrrp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Summary

@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "esim-id"
 sidebar_label: 'esim-id'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim/esim-id
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

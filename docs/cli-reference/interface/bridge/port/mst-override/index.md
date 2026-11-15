@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/bridge/port/mst-override"
 title: "mst-override"
 sidebar_label: 'mst-override'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/bridge/port/mst-override
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

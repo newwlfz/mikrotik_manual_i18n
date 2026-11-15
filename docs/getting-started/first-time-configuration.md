@@ -8,7 +8,6 @@ tags:
   - 'dhcp'
   - 'firewall'
 source: https://manual.mikrotik.com/docs/getting-started/first-time-configuration
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Before You Begin

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/iot/wiliot"
 title: "wiliot"
 sidebar_label: 'wiliot'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/wiliot
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

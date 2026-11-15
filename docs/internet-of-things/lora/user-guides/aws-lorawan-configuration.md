@@ -9,7 +9,6 @@ tags:
   - 'iot'
   - 'lora'
 source: https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides/aws-lorawan-configuration
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 :::info

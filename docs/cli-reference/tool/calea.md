@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "calea"
 sidebar_label: 'calea'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/calea
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

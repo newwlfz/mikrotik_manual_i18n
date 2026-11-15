@@ -8,7 +8,6 @@ tags:
   - 'bonding'
   - 'eoip'
 source: https://manual.mikrotik.com/docs/high-availability-solutions/user-guides/bonding-examples
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Bonding EoIP tunnels over two wireless links

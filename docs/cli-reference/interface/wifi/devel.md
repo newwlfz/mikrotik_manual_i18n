@@ -4,7 +4,6 @@ sidebar_position: 9
 title: "devel"
 sidebar_label: 'devel'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/devel
-captured_at: '2026-11-09T11:35:47.715Z'
 pagination_next: "cli-reference/interface/wifi/easymesh"
 ---
 

@@ -9,7 +9,6 @@ tags:
   - 'ip'
   - 'ipv6'
 source: https://manual.mikrotik.com/docs/getting-started/networking-fundamentals/ipv6-addresses
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Internet Protocol version 6 (IPv6) is the newer version of the Internet Protocol (IP). It was initially expected to replace IPv4 in a short enough time, but for now, it seems that these two versions coexist on the Internet in the foreseeable future. Nevertheless, IPv6 becomes more important, as the date of the unallocated IPv4 address pool's exhaustion approaches.

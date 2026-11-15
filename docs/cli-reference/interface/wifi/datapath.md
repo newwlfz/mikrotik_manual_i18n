@@ -4,7 +4,6 @@ sidebar_position: 8
 title: "datapath"
 sidebar_label: 'datapath'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/datapath
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

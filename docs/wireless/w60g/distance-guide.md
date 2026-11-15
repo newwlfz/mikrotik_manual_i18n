@@ -9,7 +9,6 @@ tags:
   - 'ap'
   - 'licensing'
 source: https://manual.mikrotik.com/docs/wireless/w60g/distance-guide
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ![](/img/83498e51a1577268.webp)

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/kid-control/device"
 title: "device"
 sidebar_label: 'device'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/kid-control/device
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

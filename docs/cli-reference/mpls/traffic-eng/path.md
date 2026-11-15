@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "path"
 sidebar_label: 'path'
 source: https://manual.mikrotik.com/docs/cli-reference/mpls/traffic-eng/path
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

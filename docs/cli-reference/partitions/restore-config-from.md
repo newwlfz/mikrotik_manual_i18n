@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "restore-config-from"
 sidebar_label: 'restore-config-from'
 source: https://manual.mikrotik.com/docs/cli-reference/partitions/restore-config-from
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

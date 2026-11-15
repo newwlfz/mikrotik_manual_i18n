@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/firewall/connection"
 title: "connection"
 sidebar_label: 'connection'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/firewall/connection
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

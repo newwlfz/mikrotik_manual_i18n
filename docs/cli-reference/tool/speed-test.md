@@ -4,7 +4,6 @@ sidebar_position: 23
 title: "speed-test"
 sidebar_label: 'speed-test'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/speed-test
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -6,7 +6,6 @@ tags:
   - 'cmr'
   - 'management'
 source: https://manual.mikrotik.com/docs/management-tools/cmr
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 CMR is a centralized monitoring platform for fleets of RouterOS devices, allowing updates, monitoring, and alert management across the whole fleet.

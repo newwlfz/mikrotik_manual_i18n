@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "export-host-key"
 sidebar_label: 'export-host-key'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/ssh/export-host-key
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

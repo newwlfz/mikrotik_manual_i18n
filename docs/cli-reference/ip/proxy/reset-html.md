@@ -4,7 +4,6 @@ sidebar_position: 11
 title: "reset-html"
 sidebar_label: 'reset-html'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/proxy/reset-html
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

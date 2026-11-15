@@ -4,7 +4,6 @@ sidebar_position: 10
 title: "show-capabilities"
 sidebar_label: 'show-capabilities'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/lte/show-capabilities
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

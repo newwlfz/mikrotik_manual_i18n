@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "generate-new-id"
 sidebar_label: 'generate-new-id'
 source: https://manual.mikrotik.com/docs/cli-reference/system/license/generate-new-id
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "migrate-legacy-db"
 sidebar_label: 'migrate-legacy-db'
 source: https://manual.mikrotik.com/docs/cli-reference/user-manager/database/migrate-legacy-db
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

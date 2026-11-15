@@ -7,7 +7,6 @@ tags:
   - 'dhcp'
   - 'dhcpv6'
 source: https://manual.mikrotik.com/docs/network-management/dhcp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Dynamic Host Configuration Protocol (DHCP) assigns IP addresses and other network settings to hosts automatically, so they do not need to be configured by hand. A DHCP server manages a range of addresses and leases them to clients for a limited time, together with settings such as the subnet mask, default gateway and DNS servers.

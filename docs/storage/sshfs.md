@@ -9,7 +9,6 @@ tags:
   - 'storage'
   - 'sshfs'
 source: https://manual.mikrotik.com/docs/storage/sshfs
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 SSHFS (SSH Filesystem) mounts a remote folder over SSH as a local disk on the router. It is configured with `/disk/add type=sshfs`, and the remote directory then appears under `/file` like other mounted storage, so files can be browsed and copied locally.

@@ -4,22 +4,22 @@
   "local_path": "wireless/wifi/index.md",
   "source_url": "https://manual.mikrotik.com/docs/wireless/wifi.md",
   "html_url": "https://manual.mikrotik.com/docs/wireless/wifi/",
-  "md_sha256": "49d11f6c2119be7c240c52fb521244944c2775777946151bf9e402f3ba4205f0",
-  "html_sha256": "b5d6f2e5adfc02041493f34bb88783532c82918183c10532c4241245de7b5ef8",
+  "md_sha256": "3858a704548cfebd0ec2c00342d4aeb7e0cad487352f81145226ddb2f076840b",
+  "html_sha256": "48af1257e4677249aee70a371a9237f6d87cc986bb1560d73e7432fe83637b6a",
   "body": {
     "html": {
       "lists": 8,
-      "listItems": 39,
+      "listItems": 40,
       "br": 21,
       "details": 0,
       "tables": 25,
       "sup": 1,
-      "code": 94,
+      "code": 98,
       "wideTables": 0
     },
     "md": {
-      "lists": 35,
-      "listItems": 35,
+      "lists": 36,
+      "listItems": 36,
       "br": 0,
       "details": 0,
       "tables": 25,
@@ -39,7 +39,7 @@
     },
     "flags": {
       "listItems": [
-        39,
+        40,
         35
       ],
       "br": [
@@ -209,7 +209,7 @@
         {
           "row": 12,
           "col": 1,
-          "html": "Interface operation mode <br/><ul><li><em>ap</em> (default) - interface operates as an access point</li><li><em>station</em> - interface acts as a client device, scanning for access points advertising the configured SSID</li><li>station-bridge - interface acts as a client device and enables support for a 4-address frame format, so that the interface can be used as a bridge port</li><li>station-pseudobridge - the interface keeps track of outgoing IP connections and performs MAC address translation similarly to how IP masquerading works</li></ul><br/>🛈 <strong>Important:</strong> The 'wifi' station-bridge mode is incompatible with APs running the older 'wireless' package and vice versa. <br/><br/>"
+          "html": "Interface operation mode <br/><ul><li><em>ap</em> (default) - interface operates as an access point</li><li><em>station</em> - interface acts as a client device, scanning for access points advertising the configured SSID</li><li>station-bridge - interface acts as a client device and enables support for a 4-address frame format, so that the interface can be used as a bridge port</li><li>station-pseudobridge - the interface keeps track of outgoing IP connections and performs MAC address translation similarly to how IP masquerading works</li><li><em>meshpoint</em> - interface operates as an IEEE 802.11s mesh point and connects to other mesh nodes with the same Mesh ID. Works on <code>wifi-qcom-be</code> and <code>wifi-mediatek</code> only.</li></ul><br/>🛈 <strong>Important:</strong> The 'wifi' station-bridge mode is incompatible with APs running the older 'wireless' package and vice versa. <br/><br/>"
         },
         {
           "row": 14,

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/pppoe-client"
 title: "pppoe-client"
 sidebar_label: 'pppoe-client'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/pppoe-client
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

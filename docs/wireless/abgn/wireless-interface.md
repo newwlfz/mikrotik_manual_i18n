@@ -9,7 +9,6 @@ tags:
   - 'arp'
   - 'channel-width'
 source: https://manual.mikrotik.com/docs/wireless/abgn/wireless-interface
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ---

@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "sets"
 sidebar_label: 'sets'
 source: https://manual.mikrotik.com/docs/cli-reference/ipv6/dhcp-server/option/sets
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

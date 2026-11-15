@@ -6095,6 +6095,11 @@
     "id": "firewall-and-quality-of-service/firewall/nat"
   },
   {
+    "href": "/docs/firewall-and-quality-of-service/firewall/raw",
+    "label": "RAW",
+    "id": "firewall-and-quality-of-service/firewall/raw"
+  },
+  {
     "href": "/docs/firewall-and-quality-of-service/queues/htb-hierarchical-token-bucket",
     "label": "HTB (Hierarchical Token Bucket)",
     "id": "firewall-and-quality-of-service/queues/htb-hierarchical-token-bucket"
@@ -6578,11 +6583,6 @@
     "href": "/docs/internet-of-things/lora/user-guides/step-by-step-installation",
     "label": "Step by step installation",
     "id": "internet-of-things/lora/user-guides/step-by-step-installation"
-  },
-  {
-    "href": "/docs/internet-of-things/lora/user-guides/tg-lr-setup-guide",
-    "label": "TG-LR Setup",
-    "id": "internet-of-things/lora/user-guides/tg-lr-setup-guide"
   },
   {
     "href": "/docs/internet-of-things/lora/user-guides/the-things-stack",
@@ -7393,6 +7393,11 @@
     "href": "/docs/wireless/wifi/configuring-easymesh",
     "label": "Configuring EasyMesh",
     "id": "wireless/wifi/configuring-easymesh"
+  },
+  {
+    "href": "/docs/wireless/wifi/configuring-meshpoint",
+    "label": "Configuring MeshPoint",
+    "id": "wireless/wifi/configuring-meshpoint"
   },
   {
     "href": "/docs/wireless/wifi/configuring-outdoor-cpe-to-ap-links",

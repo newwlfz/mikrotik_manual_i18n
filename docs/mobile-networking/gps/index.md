@@ -6,7 +6,6 @@ description: 'This page documents GPS configuration and monitoring in MikroTik R
 tags:
   - 'gps'
 source: https://manual.mikrotik.com/docs/mobile-networking/gps
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This section covers GPS tracking examples. Use it to send RouterOS GPS data to HTTP endpoints, MQTT brokers, and IoT platforms.

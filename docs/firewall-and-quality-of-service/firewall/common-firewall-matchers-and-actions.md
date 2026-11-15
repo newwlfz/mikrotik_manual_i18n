@@ -8,7 +8,6 @@ tags:
   - 'firewall'
   - 'ipv6'
 source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/firewall/common-firewall-matchers-and-actions
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Stats

@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "vteps"
 sidebar_label: 'vteps'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/vxlan/vteps
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

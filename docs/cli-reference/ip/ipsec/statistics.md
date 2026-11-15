@@ -4,7 +4,6 @@ sidebar_position: 11
 title: "statistics"
 sidebar_label: 'statistics'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/statistics
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

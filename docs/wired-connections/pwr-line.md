@@ -9,7 +9,6 @@ tags:
   - 'arp'
   - 'mac-address'
 source: https://manual.mikrotik.com/docs/wired-connections/pwr-line
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The PWR-Line series devices allow Ethernet-like connectivity between supported devices over regular power lines. When plugged into the same electrical circuit, the PWR-Line devices will establish connectivity by using the HomePlug AV standard.

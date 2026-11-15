@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "send-trap"
 sidebar_label: 'send-trap'
 source: https://manual.mikrotik.com/docs/cli-reference/snmp/send-trap
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

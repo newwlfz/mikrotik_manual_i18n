@@ -9,7 +9,6 @@ tags:
   - 'product-naming'
   - 'board-features'
 source: https://manual.mikrotik.com/docs/hardware/product-naming
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Introduction

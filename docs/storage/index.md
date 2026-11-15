@@ -8,7 +8,6 @@ tags:
   - 'filesystems'
   - 'smb'
 source: https://manual.mikrotik.com/docs/storage
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This section covers RouterOS storage features: disk-level options (encryption, RAID, filesystems such as Btrfs), network storage protocols (iSCSI, NFS, SMB, NVMe over TCP), media sharing (DLNA), and file synchronization (rsync).

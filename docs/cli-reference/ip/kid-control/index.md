@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/kid-control"
 title: "kid-control"
 sidebar_label: 'kid-control'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/kid-control
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

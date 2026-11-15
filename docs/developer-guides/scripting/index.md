@@ -7,7 +7,6 @@ tags:
   - 'scripting'
   - 'management'
 source: https://manual.mikrotik.com/docs/developer-guides/scripting
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 RouterOS includes a powerful scripting language for automating maintenance tasks. You create user-defined scripts and bind them to events.

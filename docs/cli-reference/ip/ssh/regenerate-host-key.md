@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "regenerate-host-key"
 sidebar_label: 'regenerate-host-key'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/ssh/regenerate-host-key
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

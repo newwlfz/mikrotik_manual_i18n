@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/dhcp-server/lease"
 title: "lease"
 sidebar_label: 'lease'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-server/lease
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

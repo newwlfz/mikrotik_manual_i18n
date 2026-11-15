@@ -9,7 +9,6 @@ tags:
   - 'ap-router'
   - 'ltcpe'
 source: https://manual.mikrotik.com/docs/getting-started/configuration-management/default-configurations
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 All MikroTik devices come with some kind of default configuration. There are several different configurations depending on the board type:

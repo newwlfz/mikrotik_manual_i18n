@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "host"
 sidebar_label: 'host'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/sniffer/host
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

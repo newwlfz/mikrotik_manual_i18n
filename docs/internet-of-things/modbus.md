@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "Modbus"
 sidebar_label: 'Modbus'
 source: https://manual.mikrotik.com/docs/internet-of-things/modbus
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ### Introduction

@@ -7,7 +7,6 @@ description: 'Routing decision in MikroTik RouterOS involves selecting paths for
 tags:
   - 'routing'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/routing-decision
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Routing is the process of selecting paths across networks to move packets from one host to another. The path selection, also called the routing decision, relies on a routing information table. That table contains route entries, each of which specifies a destination and the next hop used to reach it. A *hop* occurs when a packet passes from one network segment to another.

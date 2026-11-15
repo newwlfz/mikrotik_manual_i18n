@@ -9,7 +9,6 @@ tags:
   - 'qkd'
   - 'ppk'
 source: https://manual.mikrotik.com/docs/virtual-private-networks/ipsec/qkd-integration-in-routeros-ipsec-ppk
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ### 1. Introduction

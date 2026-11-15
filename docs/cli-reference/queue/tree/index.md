@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/queue/tree"
 title: "tree"
 sidebar_label: 'tree'
 source: https://manual.mikrotik.com/docs/cli-reference/queue/tree
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

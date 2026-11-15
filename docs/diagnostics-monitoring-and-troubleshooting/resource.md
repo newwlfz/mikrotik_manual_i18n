@@ -9,7 +9,6 @@ tags:
   - 'cpu'
   - 'hardware'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/resource
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The [`/system/resource`](/docs/cli-reference/system/resource/) menu shows the overall resource usage and identity of the router: uptime, version, memory, disk, CPU model, architecture and the bad-block percentage of the NAND. All values are read-only.

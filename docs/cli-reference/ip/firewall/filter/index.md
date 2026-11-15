@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/firewall/filter"
 title: "filter"
 sidebar_label: 'filter'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/firewall/filter
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

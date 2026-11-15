@@ -4,7 +4,6 @@ sidebar_position: 9
 title: "write"
 sidebar_label: 'write'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/connections/write
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

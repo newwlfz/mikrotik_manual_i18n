@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "install"
 sidebar_label: 'install'
 source: https://manual.mikrotik.com/docs/cli-reference/system/package/update/install
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

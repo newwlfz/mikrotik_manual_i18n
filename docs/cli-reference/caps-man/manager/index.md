@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/caps-man/manager"
 title: "manager"
 sidebar_label: 'manager'
 source: https://manual.mikrotik.com/docs/cli-reference/caps-man/manager
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 14
 title: "netwatch"
 sidebar_label: 'netwatch'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/netwatch
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

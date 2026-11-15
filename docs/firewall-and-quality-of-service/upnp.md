@@ -8,7 +8,6 @@ tags:
   - 'upnp'
   - 'nat'
 source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/upnp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Universal Plug and Play (UPnP) lets applications on the local network request port mappings from the router. When a client requests a mapping, RouterOS creates a dynamic destination NAT rule that forwards the requested external port to the client. Applications that accept incoming connections, for example games, peer-to-peer clients and voice or video calls, can then work behind NAT without manual port forwarding.

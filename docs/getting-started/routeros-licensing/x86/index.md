@@ -8,7 +8,6 @@ tags:
   - 'licensing'
   - 'software-id'
 source: https://manual.mikrotik.com/docs/getting-started/routeros-licensing/x86
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Licensing Basics

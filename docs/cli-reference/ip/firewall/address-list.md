@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "address-list"
 sidebar_label: 'address-list'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/firewall/address-list
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

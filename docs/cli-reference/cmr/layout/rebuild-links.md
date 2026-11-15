@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "rebuild-links"
 sidebar_label: 'rebuild-links'
 source: https://manual.mikrotik.com/docs/cli-reference/cmr/layout/rebuild-links
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

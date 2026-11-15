@@ -8,7 +8,6 @@ tags:
   - 'esim'
   - 'connectivity'
 source: https://manual.mikrotik.com/docs/mobile-networking/mikrotik-connectivity
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ### Summary

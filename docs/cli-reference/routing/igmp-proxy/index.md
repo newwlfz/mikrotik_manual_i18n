@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/routing/igmp-proxy"
 title: "igmp-proxy"
 sidebar_label: 'igmp-proxy'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/igmp-proxy
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

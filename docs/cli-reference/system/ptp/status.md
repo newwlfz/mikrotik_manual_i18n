@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "status"
 sidebar_label: 'status'
 source: https://manual.mikrotik.com/docs/cli-reference/system/ptp/status
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

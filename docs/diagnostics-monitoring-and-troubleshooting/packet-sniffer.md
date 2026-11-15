@@ -8,7 +8,6 @@ tags:
   - 'packet-sniffer'
   - 'filtering'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/packet-sniffer
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The packet sniffer captures packets that the router receives, sends and forwards. Use it to diagnose network problems: whether a device sends a request and gets an answer, which packets arrive on an interface, or what a protocol exchange looks like. You can watch the packets live in the console, save them to a file for [Wireshark](https://www.wireshark.org/), or stream them to a PC while they are captured.

@@ -8,7 +8,6 @@ tags:
   - 'mesh'
   - 'hwmpplus'
 source: https://manual.mikrotik.com/docs/wireless/abgn/hwmpplus-mesh
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 **Sub-menu:** `/interface/mesh`

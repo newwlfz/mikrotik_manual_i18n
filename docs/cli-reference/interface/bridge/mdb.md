@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "mdb"
 sidebar_label: 'mdb'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/bridge/mdb
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

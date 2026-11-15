@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "connect-list"
 sidebar_label: 'connect-list'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/connect-list
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

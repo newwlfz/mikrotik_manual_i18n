@@ -8,7 +8,6 @@ tags:
   - 'chr'
   - 'vultr'
 source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation/vultr
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Vultr has more than [two dozen data center locations](https://www.vultr.com/features/datacenter-locations/) where you can choose to deploy MikroTik CHR for the best [throughput and latency](https://nj-us-ping.vultr.com/).  

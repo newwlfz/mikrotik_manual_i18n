@@ -9,7 +9,6 @@ tags:
   - 'system-configuration'
   - 'encryption'
 source: https://manual.mikrotik.com/docs/getting-started/configuration-management/backup
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The system backup saves the whole router configuration to a single binary file. Save a backup before a risky change, for example before an upgrade or a batch of firewall edits, and restore it when the configuration breaks. For a change that can cut your connection, or one you plan to undo, [safe mode](/docs/getting-started/configuration-management/#safe-mode) and [undo/redo](/docs/getting-started/configuration-management/#configuration-undo-and-redo) are lighter alternatives.

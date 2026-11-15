@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "instance"
 sidebar_label: 'instance'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/isis/instance
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

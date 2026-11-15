@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/resource"
 title: "resource"
 sidebar_label: 'resource'
 source: https://manual.mikrotik.com/docs/cli-reference/system/resource
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

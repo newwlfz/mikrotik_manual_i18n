@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "disable"
 sidebar_label: 'disable'
 source: https://manual.mikrotik.com/docs/cli-reference/system/package/disable
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

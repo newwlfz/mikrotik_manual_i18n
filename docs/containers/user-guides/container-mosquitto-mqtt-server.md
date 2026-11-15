@@ -8,7 +8,6 @@ tags:
   - 'mqtt'
   - 'container'
 source: https://manual.mikrotik.com/docs/containers/user-guides/container-mosquitto-mqtt-server
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Introduction

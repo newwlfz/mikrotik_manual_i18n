@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "option"
 sidebar_label: 'option'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-client/option
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

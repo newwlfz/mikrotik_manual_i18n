@@ -4,7 +4,6 @@ sidebar_position: 11
 title: "mac-scan"
 sidebar_label: 'mac-scan'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/mac-scan
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

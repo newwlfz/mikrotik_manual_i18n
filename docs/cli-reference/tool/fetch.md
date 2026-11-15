@@ -4,7 +4,6 @@ sidebar_position: 7
 title: "fetch"
 sidebar_label: 'fetch'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/fetch
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/zerotier/controller"
 title: "controller"
 sidebar_label: 'controller'
 source: https://manual.mikrotik.com/docs/cli-reference/zerotier/controller
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

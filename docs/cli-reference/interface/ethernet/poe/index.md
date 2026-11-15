@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/ethernet/poe"
 title: "poe"
 sidebar_label: 'poe'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/poe
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

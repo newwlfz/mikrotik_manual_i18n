@@ -8,7 +8,6 @@ tags:
   - 'reverse-proxy'
   - 'certificates'
 source: https://manual.mikrotik.com/docs/network-management/proxy/reverse-proxy
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 **Sub-menu:** `/ip/reverse-proxy`

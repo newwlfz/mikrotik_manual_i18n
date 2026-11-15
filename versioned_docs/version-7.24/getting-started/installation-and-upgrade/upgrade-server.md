@@ -5,7 +5,6 @@ title: "Upgrade Server"
 sidebar_label: 'Upgrade Server'
 description: 'Learn how RouterOS connects to the MikroTik upgrade server to check for and download new versions, and how to troubleshoot connectivity issues.'
 source: https://manual.mikrotik.com/docs/7.24/getting-started/installation-and-upgrade/upgrade-server
-captured_at: '2026-11-07T17:11:03.548Z'
 ---
 
 When you check for updates, RouterOS contacts `upgrade.mikrotik.com` to determine the latest available version for your device and license tier. If the server cannot be reached or the DNS name does not resolve, the upgrade check fails or returns outdated information.

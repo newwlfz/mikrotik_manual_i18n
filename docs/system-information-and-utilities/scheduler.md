@@ -9,7 +9,6 @@ tags:
   - 'script-execution'
   - 'time-interval'
 source: https://manual.mikrotik.com/docs/system-information-and-utilities/scheduler
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The scheduler runs RouterOS commands, or a script from `/system/script`, at a set time, repeatedly at an interval, every time the router starts, or on selected weekdays. Use it for tasks such as nightly backups, switching interfaces or bandwidth limits by time of day, and notifications. Each entry in `/system/scheduler` holds the schedule and the commands to run in `on-event`.

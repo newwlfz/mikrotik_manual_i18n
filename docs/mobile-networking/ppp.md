@@ -7,7 +7,6 @@ description: 'PPP in RouterOS enables point-to-point protocol communication for 
 tags:
   - 'ppp'
 source: https://manual.mikrotik.com/docs/mobile-networking/ppp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Overview

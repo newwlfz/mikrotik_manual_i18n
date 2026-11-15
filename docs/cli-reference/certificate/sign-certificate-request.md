@@ -4,7 +4,6 @@ sidebar_position: 16
 title: "sign-certificate-request"
 sidebar_label: 'sign-certificate-request'
 source: https://manual.mikrotik.com/docs/cli-reference/certificate/sign-certificate-request
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

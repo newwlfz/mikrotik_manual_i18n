@@ -2,7 +2,6 @@
 sidebar_key: "cli-reference/tool/apptraffic/stats"
 title: "stats"
 source: https://manual.mikrotik.com/docs/cli-reference/tool/apptraffic/stats
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

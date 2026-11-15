@@ -9,7 +9,6 @@ tags:
   - 'ip-broadcast'
   - 'mac'
 source: https://manual.mikrotik.com/docs/system-information-and-utilities/wake-on-lan
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Wake on LAN (WoL) turns on a computer that is switched off or asleep by sending it a magic packet: data that holds six `FF` bytes followed by the computer's MAC address 16 times. The router is always on and connected to the LAN, so it can wake a computer when you are away, or at a set time.

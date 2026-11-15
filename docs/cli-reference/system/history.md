@@ -4,7 +4,6 @@ sidebar_position: 11
 title: "history"
 sidebar_label: 'history'
 source: https://manual.mikrotik.com/docs/cli-reference/system/history
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -9,7 +9,6 @@ tags:
   - 'firewall'
   - 'caching'
 source: https://manual.mikrotik.com/docs/network-management/proxy/web-proxy
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 **Sub-menu:** `/ip/proxy`

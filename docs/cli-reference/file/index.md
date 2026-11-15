@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/file"
 title: "file"
 sidebar_label: 'file'
 source: https://manual.mikrotik.com/docs/cli-reference/file
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

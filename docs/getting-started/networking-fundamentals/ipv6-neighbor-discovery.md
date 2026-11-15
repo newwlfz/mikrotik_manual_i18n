@@ -9,7 +9,6 @@ tags:
   - 'neighbor-discovery'
   - 'radvd'
 source: https://manual.mikrotik.com/docs/getting-started/networking-fundamentals/ipv6-neighbor-discovery
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 RouterOS supports IPv6 Neighbor Discovery and stateless address autoconfiguration by using Router Advertisement Daemon (RADVD).

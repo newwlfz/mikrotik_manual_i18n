@@ -9,7 +9,6 @@ tags:
   - 'routing'
   - 'vrf'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/route-distinguisher-and-route-target
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Route Distinguisher

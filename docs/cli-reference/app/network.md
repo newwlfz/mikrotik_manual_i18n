@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "network"
 sidebar_label: 'network'
 source: https://manual.mikrotik.com/docs/cli-reference/app/network
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

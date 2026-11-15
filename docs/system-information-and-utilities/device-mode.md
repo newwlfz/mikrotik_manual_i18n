@@ -7,7 +7,6 @@ description: 'Device-mode restricts RouterOS features to protect the router from
 tags:
   - 'device-mode'
 source: https://manual.mikrotik.com/docs/system-information-and-utilities/device-mode
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The **device-mode** limits access to specific configuration options. It protects the router and the network from attackers who gain unauthorized access and use the device as a gateway to attack other networks.

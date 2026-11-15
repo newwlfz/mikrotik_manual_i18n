@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "reset-freq-drift"
 sidebar_label: 'reset-freq-drift'
 source: https://manual.mikrotik.com/docs/cli-reference/system/ntp/client/reset-freq-drift
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

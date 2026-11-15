@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "neighbor-group"
 sidebar_label: 'neighbor-group'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/steering/neighbor-group
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

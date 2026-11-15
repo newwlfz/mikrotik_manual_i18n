@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/disk/btrfs/filesystem"
 title: "filesystem"
 sidebar_label: 'filesystem'
 source: https://manual.mikrotik.com/docs/cli-reference/disk/btrfs/filesystem
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -8,7 +8,6 @@ tags:
   - 's-rj10'
   - 'transceiver-cooling'
 source: https://manual.mikrotik.com/docs/hardware/s-plus-rj10-general-guidance
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ### Summary

@@ -4,7 +4,6 @@ sidebar_position: 12
 title: "ipip"
 sidebar_label: 'ipip'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ipip
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

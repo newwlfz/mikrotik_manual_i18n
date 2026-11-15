@@ -7,7 +7,6 @@ description: 'NAT-PMP lets LAN clients learn the router''s external IPv4 address
 tags:
   - 'nat-pmp'
 source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/nat-pmp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 NAT Port Mapping Protocol (NAT-PMP, [RFC 6886](https://www.rfc-editor.org/rfc/rfc6886)) lets applications on the local network learn the router's external IPv4 address and request port mappings, so applications that accept incoming connections, for example games, peer-to-peer clients and voice or video calls, can work behind NAT without manual port forwarding. NAT-PMP is common on Apple devices. RouterOS also supports [UPnP](/docs/firewall-and-quality-of-service/upnp), an alternative protocol with the same purpose.

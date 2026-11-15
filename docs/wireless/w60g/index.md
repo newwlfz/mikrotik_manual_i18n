@@ -8,7 +8,6 @@ tags:
   - 'wireless'
   - 'arp'
 source: https://manual.mikrotik.com/docs/wireless/w60g
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This section covers 60 GHz wireless examples and guidance. Use it to configure W60G point-to-point and point-to-multipoint links, failover, and distance-related settings.

@@ -9,7 +9,6 @@ tags:
   - 'vpn'
   - 'security'
 source: https://manual.mikrotik.com/docs/getting-started/securing-your-router
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The following steps are recommendations on how to additionally protect your device with already configured [strong firewall rules](/docs/firewall-and-quality-of-service/firewall/filter).

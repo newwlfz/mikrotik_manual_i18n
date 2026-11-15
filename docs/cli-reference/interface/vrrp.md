@@ -4,7 +4,6 @@ sidebar_position: 38
 title: "vrrp"
 sidebar_label: 'vrrp'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/vrrp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

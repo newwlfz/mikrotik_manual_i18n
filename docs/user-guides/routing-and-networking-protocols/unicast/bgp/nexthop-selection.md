@@ -8,7 +8,6 @@ tags:
   - 'routing'
   - 'bgp'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/bgp/nexthop-selection
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 RouterOS does not perform strict nexthop checks on BGP input; instead, it relies on [filter rules](/docs/cli-reference/routing/filter/rule) created by the user.

@@ -4,7 +4,6 @@ sidebar_position: 8
 title: "interworking-profiles"
 sidebar_label: 'interworking-profiles'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/interworking-profiles
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

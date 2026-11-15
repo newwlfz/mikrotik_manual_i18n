@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "Email notification on the MikroTik BLE tag's accelerometer triggers"
 sidebar_label: 'Email notification on the MikroTik BLE tag''s accelerometer triggers'
 source: https://manual.mikrotik.com/docs/internet-of-things/bluetooth/user-guides/email-notification-mikrotik-ble-tag-s
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ### Introduction

@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "mac-winbox"
 sidebar_label: 'mac-winbox'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/mac-server/mac-winbox
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

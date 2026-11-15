@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "push-button"
 sidebar_label: 'push-button'
 source: https://manual.mikrotik.com/docs/cli-reference/cmr/client/push-button
-captured_at: '2026-11-09T11:35:47.715Z'
 pagination_next: "cli-reference/cmr/device"
 ---
 

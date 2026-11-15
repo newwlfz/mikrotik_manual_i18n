@@ -10,7 +10,6 @@ tags:
   - 'ip'
   - 'ipv4'
 source: https://manual.mikrotik.com/docs/getting-started/networking-fundamentals
-captured_at: '2026-11-09T11:35:47.715Z'
 pagination_prev: null
 ---
 

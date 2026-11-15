@@ -9,7 +9,6 @@ tags:
   - 'null-modem-cables'
   - 'rs232'
 source: https://manual.mikrotik.com/docs/management-tools/serial-console
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The Serial Console and Serial Terminal are tools used to communicate with devices and other systems that are interconnected through the serial port. The serial terminal is used to monitor and configure many devices - including modems, network devices (including MikroTik routers), and any device that can be connected to a serial (asynchronous) port.

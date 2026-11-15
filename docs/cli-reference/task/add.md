@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "add"
 sidebar_label: 'add'
 source: https://manual.mikrotik.com/docs/cli-reference/task/add
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

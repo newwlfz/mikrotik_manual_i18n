@@ -9,7 +9,6 @@ tags:
   - 'qos'
   - 'switching'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/crs1xx-and-2xx-series-switches
-captured_at: '2026-11-07T17:11:03.548Z'
 ---
 
 ---

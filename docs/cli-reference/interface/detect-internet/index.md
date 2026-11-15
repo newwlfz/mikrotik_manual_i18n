@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/detect-internet"
 title: "detect-internet"
 sidebar_label: 'detect-internet'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/detect-internet
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

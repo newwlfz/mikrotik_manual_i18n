@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "head"
 sidebar_label: 'head'
 source: https://manual.mikrotik.com/docs/cli-reference/file/head
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

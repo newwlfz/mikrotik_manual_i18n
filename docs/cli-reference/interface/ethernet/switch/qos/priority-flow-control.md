@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "priority-flow-control"
 sidebar_label: 'priority-flow-control'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/qos/priority-flow-control
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

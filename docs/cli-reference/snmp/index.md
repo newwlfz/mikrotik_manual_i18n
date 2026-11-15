@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/snmp"
 title: "snmp"
 sidebar_label: 'snmp'
 source: https://manual.mikrotik.com/docs/cli-reference/snmp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

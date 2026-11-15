@@ -7,7 +7,6 @@ description: 'Grounding requirements for MikroTik RouterOS devices emphasize pro
 tags:
   - 'grounding'
 source: https://manual.mikrotik.com/docs/hardware/grounding
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Introduction

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/l2tp-ether"
 title: "l2tp-ether"
 sidebar_label: 'l2tp-ether'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/l2tp-ether
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

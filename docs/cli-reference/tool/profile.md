@@ -4,7 +4,6 @@ sidebar_position: 17
 title: "profile"
 sidebar_label: 'profile'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/profile
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

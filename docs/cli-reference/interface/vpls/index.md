@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/vpls"
 title: "vpls"
 sidebar_label: 'vpls'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/vpls
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

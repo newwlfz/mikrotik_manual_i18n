@@ -1,6 +1,6 @@
 ---
 sidebar_key: "wireless/wifi/configuring-repeater"
-sidebar_position: 4
+sidebar_position: 5
 title: "Configuring a wireless repeater"
 sidebar_label: 'Configuring a wireless repeater'
 description: 'This guide explains how to configure a wireless repeater using MikroTik RouterOS''s wifi-qcom package, detailing setup steps for dual-band interfaces (2.4 GHz and 5 GHz), SSID management, security settings, and troubleshooting considerations like roaming behavior and distance limitations.'
@@ -9,7 +9,6 @@ tags:
   - 'repeater'
   - 'station-mode'
 source: https://manual.mikrotik.com/docs/wireless/wifi/configuring-repeater
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 **Package:** `wifi-qcom`

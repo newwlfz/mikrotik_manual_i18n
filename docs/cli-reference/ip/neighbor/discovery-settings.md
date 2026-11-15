@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "discovery-settings"
 sidebar_label: 'discovery-settings'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/neighbor/discovery-settings
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

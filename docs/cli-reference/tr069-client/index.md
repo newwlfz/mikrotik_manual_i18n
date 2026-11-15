@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/tr069-client"
 title: "tr069-client"
 sidebar_label: 'tr069-client'
 source: https://manual.mikrotik.com/docs/cli-reference/tr069-client
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

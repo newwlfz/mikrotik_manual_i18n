@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "pin"
 sidebar_label: 'pin'
 source: https://manual.mikrotik.com/docs/cli-reference/lcd/pin
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

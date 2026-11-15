@@ -8,7 +8,6 @@ tags:
   - 'mtu'
   - 'l2mtu'
 source: https://manual.mikrotik.com/docs/hardware/mtu-in-routeros
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Introduction

@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "import-db"
 sidebar_label: 'import-db'
 source: https://manual.mikrotik.com/docs/cli-reference/dude/import-db
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

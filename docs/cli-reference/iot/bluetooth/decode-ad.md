@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "decode-ad"
 sidebar_label: 'decode-ad'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/decode-ad
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

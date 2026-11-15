@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "refresh"
 sidebar_label: 'refresh'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/bgp/session/refresh
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

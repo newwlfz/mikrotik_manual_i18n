@@ -9,7 +9,6 @@ tags:
   - 'dhcpv6'
   - 'ppp'
 source: https://manual.mikrotik.com/docs/virtual-private-networks/pppoe/ipv6-pd-over-ppp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This example demonstrates how to set up PPPoE server and client to use IPv6 Prefix Delegation.

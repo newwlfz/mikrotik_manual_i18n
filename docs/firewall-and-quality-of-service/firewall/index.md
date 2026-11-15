@@ -7,7 +7,6 @@ tags:
   - 'firewall'
   - 'packet-flow'
 source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/firewall
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ![Firewall fundamentals](/img/f4625aee0e2b1d17.webp)
@@ -40,7 +39,7 @@ and much more!
 
 Firewall is split into three major modules:
 
-- **filter/raw** - Used to deny traffic based on configured policies. Filtering in RAW tables allows saving resources if connection tracking is not required.
+- **filter/raw** - Used to deny traffic based on configured policies. Filtering in the [RAW](/docs/firewall-and-quality-of-service/firewall/raw) table saves resources if connection tracking is not required.
 - **mangle** - Used to mark certain connections, packets, streams, set priorities and do other tasks.
 - **nat** - Used to set up address translation rules, redirects and port forwarding.
 

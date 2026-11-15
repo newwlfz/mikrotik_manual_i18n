@@ -4,7 +4,6 @@ sidebar_position: 6
 title: "scan-list"
 sidebar_label: 'scan-list'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/info/scan-list
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

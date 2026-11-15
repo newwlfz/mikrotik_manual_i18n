@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "key"
 sidebar_label: 'key'
 source: https://manual.mikrotik.com/docs/cli-reference/system/ntp/key
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -7,7 +7,6 @@ description: 'This page documents netinstall-cli, the Linux command-line version
 tags:
   - 'netinstall'
 source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/netinstall/netinstall-linux
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The Linux version of Netinstall, `netinstall-cli`, is a command-line tool that provides nearly the same functionality as the Windows version.

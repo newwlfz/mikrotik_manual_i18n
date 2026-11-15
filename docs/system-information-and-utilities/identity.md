@@ -9,7 +9,6 @@ tags:
   - 'snmp'
   - 'configuration'
 source: https://manual.mikrotik.com/docs/system-information-and-utilities/identity
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The system identity is the name of the router. The default is `MikroTik`. Give each router its own name so that you can tell them apart. The identity appears in several places, including:

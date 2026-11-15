@@ -9,7 +9,6 @@ tags:
   - 'queue-tree'
   - 'simple-queues'
 source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/pcq-example
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Per Connection Queue (PCQ) gives every device on a network its own speed limit with one queue, instead of one queue for each device. PCQ sorts the traffic into sub-streams with its classifier, for example one sub-stream for each destination address, and limits each sub-stream to `pcq-rate`.

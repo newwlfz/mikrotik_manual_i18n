@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "local-mapping"
 sidebar_label: 'local-mapping'
 source: https://manual.mikrotik.com/docs/cli-reference/mpls/ldp/local-mapping
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "digital"
 sidebar_label: 'digital'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/gpio/digital
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

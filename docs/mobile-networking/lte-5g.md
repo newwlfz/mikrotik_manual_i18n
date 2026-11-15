@@ -9,7 +9,6 @@ tags:
   - '5g'
   - 'apn'
 source: https://manual.mikrotik.com/docs/mobile-networking/lte-5g
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ```ros

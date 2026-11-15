@@ -4,7 +4,6 @@ sidebar_position: 11
 title: "vacuum-db"
 sidebar_label: 'vacuum-db'
 source: https://manual.mikrotik.com/docs/cli-reference/dude/vacuum-db
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

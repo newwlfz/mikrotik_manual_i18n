@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "inject"
 sidebar_label: 'inject'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/inject
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

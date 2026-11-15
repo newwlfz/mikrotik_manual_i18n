@@ -7,7 +7,6 @@ description: 'Fetch transfers files over HTTP, HTTPS, FTP, TFTP and SFTP and mak
 tags:
   - 'fetch'
 source: https://manual.mikrotik.com/docs/system-information-and-utilities/fetch
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Fetch downloads and uploads files over HTTP, HTTPS, FTP, TFTP and SFTP, and makes HTTP requests (GET, POST, PUT and others) to remote servers. It runs in the console and in scripts, prints a live status and either saves the result to a file or returns it to a script variable.

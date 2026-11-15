@@ -4,7 +4,6 @@ sidebar_position: 11
 title: "import"
 sidebar_label: 'import'
 source: https://manual.mikrotik.com/docs/cli-reference/certificate/import
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

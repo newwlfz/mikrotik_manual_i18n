@@ -4,7 +4,6 @@ sidebar_position: 33
 title: "sup-output"
 sidebar_label: 'sup-output'
 source: https://manual.mikrotik.com/docs/cli-reference/system/sup-output
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

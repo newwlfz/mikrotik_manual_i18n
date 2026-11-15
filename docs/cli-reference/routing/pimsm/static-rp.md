@@ -4,7 +4,6 @@ sidebar_position: 7
 title: "static-rp"
 sidebar_label: 'static-rp'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/pimsm/static-rp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

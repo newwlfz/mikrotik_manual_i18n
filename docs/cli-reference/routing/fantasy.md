@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "fantasy"
 sidebar_label: 'fantasy'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/fantasy
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

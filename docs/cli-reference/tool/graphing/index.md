@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/tool/graphing"
 title: "graphing"
 sidebar_label: 'graphing'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/graphing
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

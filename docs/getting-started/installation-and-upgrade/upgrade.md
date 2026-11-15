@@ -8,7 +8,6 @@ tags:
   - 'upgrade'
   - 'release-chains'
 source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/upgrade
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 MikroTik devices are preinstalled with RouterOS, so installation is usually not needed, except in the case of installing RouterOS on a bare metal x86 PC or a virtual machine with CHR images. The upgrade procedure on already installed devices is straightforward.

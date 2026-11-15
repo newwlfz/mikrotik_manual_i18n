@@ -4,7 +4,6 @@ sidebar_position: 6
 title: "neighbor"
 sidebar_label: 'neighbor'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/pimsm/neighbor
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

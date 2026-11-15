@@ -8,7 +8,6 @@ tags:
   - 'mpls'
   - 'ldp'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/mpls/ldp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 MikroTik RouterOS implements Label Distribution Protocol (RFC 3036, RFC 5036, and RFC 7552) for IPv4 and IPv6 address families. LDP is a protocol that performs the set of procedures and exchanges messages by which Label Switched Routers (LSRs) establish Label Switched Paths (LSPs) through a network by mapping network-layer routing information directly to data-link layer switched paths.

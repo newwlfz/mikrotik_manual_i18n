@@ -9,7 +9,6 @@ tags:
   - 'mqtt'
   - 'bluetooth'
 source: https://manual.mikrotik.com/docs/internet-of-things/wiliot
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 **[Wiliot](https://www.wiliot.com/company)** is an **Internet of Things** company that is known for their [IoT Pixels](https://www.wiliot.com/product/iot-pixels) (labels) amongst other solutions. The great benefit of the pixel is that it is a battery free and label-size (compact) Bluetooth "tag" (that broadcasts Bluetooth beacons with telemetry data).

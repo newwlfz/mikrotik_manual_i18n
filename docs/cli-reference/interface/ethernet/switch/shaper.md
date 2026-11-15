@@ -4,7 +4,6 @@ sidebar_position: 23
 title: "shaper"
 sidebar_label: 'shaper'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/shaper
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

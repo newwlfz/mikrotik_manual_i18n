@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/tool/romon"
 title: "romon"
 sidebar_label: 'romon'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/romon
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

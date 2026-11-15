@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/default-configuration"
 title: "default-configuration"
 sidebar_label: 'default-configuration'
 source: https://manual.mikrotik.com/docs/cli-reference/system/default-configuration
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

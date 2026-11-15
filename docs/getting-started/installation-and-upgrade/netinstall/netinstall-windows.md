@@ -7,7 +7,6 @@ description: 'This page explains how to install or reinstall RouterOS on MikroTi
 tags:
   - 'netinstall'
 source: https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/netinstall/netinstall-windows
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This guide explains how to install RouterOS on your MikroTik device using the Netinstall utility on a Windows computer.

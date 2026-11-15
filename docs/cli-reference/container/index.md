@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/container"
 title: "container"
 sidebar_label: 'container'
 source: https://manual.mikrotik.com/docs/cli-reference/container
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

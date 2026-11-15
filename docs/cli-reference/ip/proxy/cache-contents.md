@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "cache-contents"
 sidebar_label: 'cache-contents'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/proxy/cache-contents
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 6
 title: "remote-mapping"
 sidebar_label: 'remote-mapping'
 source: https://manual.mikrotik.com/docs/cli-reference/mpls/ldp/remote-mapping
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

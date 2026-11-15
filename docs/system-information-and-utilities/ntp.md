@@ -8,7 +8,6 @@ tags:
   - 'ntp'
   - 'time-synchronization'
 source: https://manual.mikrotik.com/docs/system-information-and-utilities/ntp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 RouterOS includes a Network Time Protocol (NTP, [RFC 5905](https://www.rfc-editor.org/rfc/rfc5905.html)) client and server in the main RouterOS package. The client synchronizes the router's clock with NTP servers, and the server distributes the router's time to other devices on the network. Both are disabled by default. NTP exchanges Universal Coordinated Time (UTC); the time zone and daylight saving rules for the displayed time are configured in [`/system/clock`](/docs/system-information-and-utilities/clock).

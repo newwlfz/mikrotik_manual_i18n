@@ -9,7 +9,6 @@ tags:
   - 'packet-scheduling'
   - 'traffic-shaping'
 source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/queue-size
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The maximum permissible queue size could be specified as a maximum memory limit, but a lot of algorithms simplify it to a maximum number of packets, so the actual memory used varies depending on the size of the packets.

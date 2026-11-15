@@ -4,7 +4,6 @@ sidebar_position: 7
 title: "unsubscribe"
 sidebar_label: 'unsubscribe'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/mqtt/unsubscribe
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

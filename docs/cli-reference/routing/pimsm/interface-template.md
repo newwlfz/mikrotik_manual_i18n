@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "interface-template"
 sidebar_label: 'interface-template'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/pimsm/interface-template
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

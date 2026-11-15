@@ -9,7 +9,6 @@ tags:
   - 'multicast'
   - 'routing'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/multicast/igmp-proxy
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The Internet Group Management Protocol (IGMP) proxy can implement multicast routing. It is forwarding IGMP frames and is commonly used when there is no need for a more advanced protocol like PIM.

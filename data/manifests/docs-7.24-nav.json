@@ -4991,14 +4991,10 @@
     },
     "internet-of-things/lora/user-guides/step-by-step-installation": {
       "previous": "internet-of-things/lora/user-guides/chirpstack",
-      "next": "internet-of-things/lora/user-guides/tg-lr-setup-guide"
-    },
-    "internet-of-things/lora/user-guides/tg-lr-setup-guide": {
-      "previous": "internet-of-things/lora/user-guides/step-by-step-installation",
       "next": "internet-of-things/lora/user-guides/the-things-stack"
     },
     "internet-of-things/lora/user-guides/the-things-stack": {
-      "previous": "internet-of-things/lora/user-guides/tg-lr-setup-guide",
+      "previous": "internet-of-things/lora/user-guides/step-by-step-installation",
       "next": "internet-of-things/modbus"
     },
     "internet-of-things/modbus": {
@@ -6932,7 +6928,6 @@
     "internet-of-things/lora/user-guides/aws-lorawan-configuration": "AWS LoRaWAN configuration",
     "internet-of-things/lora/user-guides/chirpstack": "ChirpStack",
     "internet-of-things/lora/user-guides/step-by-step-installation": "Step by step installation",
-    "internet-of-things/lora/user-guides/tg-lr-setup-guide": "TG-LR setup guide",
     "internet-of-things/lora/user-guides/the-things-stack": "The Things Stack",
     "internet-of-things/mqtt/kaa-iot-setup": "Kaa IoT setup",
     "internet-of-things/mqtt/mqtt-and-thingsboard-configuration": "MQTT and ThingsBoard configuration",
@@ -7090,9 +7085,9 @@
     "wireless/wifi/interworking-for-wifi6": "Interworking for WiFi6"
   },
   "totals": {
-    "pages": 1420,
+    "pages": 1417,
     "fetched": 0,
-    "cached": 1420,
+    "cached": 1417,
     "failed": 0
   }
 }

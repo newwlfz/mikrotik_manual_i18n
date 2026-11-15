@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/dhcp-server"
 title: "dhcp-server"
 sidebar_label: 'dhcp-server'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-server
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

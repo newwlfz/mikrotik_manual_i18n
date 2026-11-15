@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "save"
 sidebar_label: 'save'
 source: https://manual.mikrotik.com/docs/cli-reference/system/backup/save
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

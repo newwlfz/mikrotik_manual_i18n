@@ -11,7 +11,6 @@ tags:
   - 'controller'
   - 'agent'
 source: https://manual.mikrotik.com/docs/wireless/wifi/configuring-easymesh
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 **Package:** `wifi-qcom`, `wifi-qcom-ac`

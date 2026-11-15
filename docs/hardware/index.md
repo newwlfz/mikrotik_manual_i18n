@@ -8,7 +8,6 @@ tags:
   - 'routerboard'
   - 'poe-out'
 source: https://manual.mikrotik.com/docs/hardware
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Hardware documentation covers RouterBOARD devices, ports, disks, LEDs, PoE-out, grounding, USB features, product naming, and related platform details. Use this section when planning, installing, or troubleshooting MikroTik hardware.

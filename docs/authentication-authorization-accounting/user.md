@@ -9,7 +9,6 @@ tags:
   - 'radius'
   - 'user-groups'
 source: https://manual.mikrotik.com/docs/authentication-authorization-accounting/user
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The router user facility in `/user` manages the accounts that access the router with management tools: WinBox, WebFig, the console over SSH or Telnet, the API and the REST API. RouterOS authenticates users against the local user database or a RADIUS server. Each user belongs to exactly one user group, and the group's policies define what the user can do on the router. For hardening recommendations (per-administrator accounts, key login, service restrictions), see [Securing your router](/docs/getting-started/securing-your-router).

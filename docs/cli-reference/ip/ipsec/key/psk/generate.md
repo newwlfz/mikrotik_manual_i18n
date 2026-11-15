@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "generate"
 sidebar_label: 'generate'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/key/psk/generate
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

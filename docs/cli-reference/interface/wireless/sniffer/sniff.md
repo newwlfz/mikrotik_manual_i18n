@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "sniff"
 sidebar_label: 'sniff'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/sniffer/sniff
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

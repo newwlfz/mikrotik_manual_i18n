@@ -4,7 +4,6 @@ sidebar_position: 20
 title: "reserved-fdb"
 sidebar_label: 'reserved-fdb'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/reserved-fdb
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

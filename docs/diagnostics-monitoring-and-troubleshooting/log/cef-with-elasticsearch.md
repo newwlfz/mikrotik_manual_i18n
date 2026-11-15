@@ -9,7 +9,6 @@ tags:
   - 'cef-logging'
   - 'kibana'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/log/cef-with-elasticsearch
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Introduction

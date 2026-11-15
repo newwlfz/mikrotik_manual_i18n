@@ -9,7 +9,6 @@ tags:
   - 'monitoring'
   - 'security'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/snmp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Simple Network Management Protocol (SNMP) is an Internet-standard protocol used to monitor and manage devices on IP networks. RouterOS runs an SNMP agent that answers queries about the router and its interfaces. Tools such as [The Dude](https://mikrotik.com/product/the-dude), LibreNMS, Zabbix, Cacti, or MRTG use those answers to collect, visualize, and graph system data.

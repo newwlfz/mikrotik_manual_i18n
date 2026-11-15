@@ -4,7 +4,6 @@ sidebar_position: 7
 title: "rule"
 sidebar_label: 'rule'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/filter/rule
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/bridge/filter"
 title: "filter"
 sidebar_label: 'filter'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/bridge/filter
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

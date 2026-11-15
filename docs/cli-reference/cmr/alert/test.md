@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "test"
 sidebar_label: 'test'
 source: https://manual.mikrotik.com/docs/cli-reference/cmr/alert/test
-captured_at: '2026-11-09T11:35:47.715Z'
 pagination_next: "cli-reference/cmr/client"
 ---
 

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/wireless/nstreme-dual"
 title: "nstreme-dual"
 sidebar_label: 'nstreme-dual'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/nstreme-dual
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

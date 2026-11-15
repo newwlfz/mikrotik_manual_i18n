@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "webserver"
 sidebar_label: 'webserver'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/service/webserver
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

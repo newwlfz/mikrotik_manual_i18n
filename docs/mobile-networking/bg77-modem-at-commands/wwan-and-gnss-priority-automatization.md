@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "WWAN and GNSS priority automatization"
 sidebar_label: 'WWAN and GNSS priority automatization'
 source: https://manual.mikrotik.com/docs/mobile-networking/bg77-modem-at-commands/wwan-and-gnss-priority-automatization
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 # Overview

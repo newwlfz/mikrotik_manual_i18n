@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/task"
 title: "task"
 sidebar_label: 'task'
 source: https://manual.mikrotik.com/docs/cli-reference/task
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

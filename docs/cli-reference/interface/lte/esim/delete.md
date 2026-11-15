@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "delete"
 sidebar_label: 'delete'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim/delete
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

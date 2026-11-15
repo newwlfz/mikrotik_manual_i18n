@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "add-batch-users"
 sidebar_label: 'add-batch-users'
 source: https://manual.mikrotik.com/docs/cli-reference/user-manager/user/add-batch-users
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

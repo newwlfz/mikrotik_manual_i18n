@@ -7,7 +7,6 @@ tags:
   - 'proxy'
   - 'reverse-proxy'
 source: https://manual.mikrotik.com/docs/network-management/proxy
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 A proxy accepts a request from a client and connects to the server on the client's behalf. RouterOS has two proxies for web traffic, and they work in opposite directions:

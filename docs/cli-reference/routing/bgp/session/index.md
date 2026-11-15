@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/routing/bgp/session"
 title: "session"
 sidebar_label: 'session'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/bgp/session
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

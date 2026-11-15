@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "remove-certificate"
 sidebar_label: 'remove-certificate'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/cloud/back-to-home-file/settings/remove-certificate
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

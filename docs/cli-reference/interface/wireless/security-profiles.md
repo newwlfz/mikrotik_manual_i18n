@@ -4,7 +4,6 @@ sidebar_position: 17
 title: "security-profiles"
 sidebar_label: 'security-profiles'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/security-profiles
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

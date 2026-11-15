@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/port"
 title: "port"
 sidebar_label: 'port'
 source: https://manual.mikrotik.com/docs/cli-reference/port
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

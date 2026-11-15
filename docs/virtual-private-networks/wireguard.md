@@ -8,7 +8,6 @@ tags:
   - 'wireguard'
   - 'vpn'
 source: https://manual.mikrotik.com/docs/virtual-private-networks/wireguard
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 WireGuard is a simple, fast, and modern VPN that uses state-of-the-art cryptography. It aims to be faster, simpler, and leaner than IPsec, and considerably more performant than OpenVPN. WireGuard is a general-purpose VPN designed for embedded interfaces and supercomputers alike, fit for many different circumstances. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable.

@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "download-file"
 sidebar_label: 'download-file'
 source: https://manual.mikrotik.com/docs/cli-reference/system/backup/cloud/download-file
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "CLI Reference Version Comparison"
 description: 'Compare parameters between two RouterOS CLI reference versions.'
 source: https://manual.mikrotik.com/docs/cli-reference/compare-versions
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Every RouterOS release brings a new CLI reference: commands and parameters are

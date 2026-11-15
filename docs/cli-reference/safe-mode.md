@@ -4,7 +4,6 @@ sidebar_position: 33
 title: "safe-mode"
 sidebar_label: 'safe-mode'
 source: https://manual.mikrotik.com/docs/cli-reference/safe-mode
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

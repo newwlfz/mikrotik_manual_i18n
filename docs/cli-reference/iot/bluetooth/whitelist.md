@@ -4,7 +4,6 @@ sidebar_position: 7
 title: "whitelist"
 sidebar_label: 'whitelist'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/whitelist
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

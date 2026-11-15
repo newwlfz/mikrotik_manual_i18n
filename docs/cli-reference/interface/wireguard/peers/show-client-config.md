@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "show-client-config"
 sidebar_label: 'show-client-config'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireguard/peers/show-client-config
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

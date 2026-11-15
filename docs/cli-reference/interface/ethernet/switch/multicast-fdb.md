@@ -4,7 +4,6 @@ sidebar_position: 11
 title: "multicast-fdb"
 sidebar_label: 'multicast-fdb'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/multicast-fdb
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "candidate"
 sidebar_label: 'candidate'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/pimsm/bsr/candidate
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

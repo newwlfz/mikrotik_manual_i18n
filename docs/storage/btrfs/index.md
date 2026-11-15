@@ -8,7 +8,6 @@ tags:
   - 'storage'
   - 'file-system'
 source: https://manual.mikrotik.com/docs/storage/btrfs
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 :::info

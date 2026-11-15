@@ -9,7 +9,6 @@ tags:
   - 'storage'
   - 'backup'
 source: https://manual.mikrotik.com/docs/storage/raid/hot-spare
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 It's possible to assign a hot spare disk for your RAID array. In case of a disk failure - the rebuild immediately begins on the assigned spare disk. The spare is a member of the array configured with `raid-role=spare` on it.

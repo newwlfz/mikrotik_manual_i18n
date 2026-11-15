@@ -7,7 +7,6 @@ description: 'This page documents the ARP (Address Resolution Protocol) function
 tags:
   - 'arp'
 source: https://manual.mikrotik.com/docs/7.24/network-management/arp
-captured_at: '2026-11-07T17:11:03.548Z'
 ---
 
 **Sub-menu:** `/ip/arp`

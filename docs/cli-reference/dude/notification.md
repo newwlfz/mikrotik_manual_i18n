@@ -4,7 +4,6 @@ sidebar_position: 6
 title: "notification"
 sidebar_label: 'notification'
 source: https://manual.mikrotik.com/docs/cli-reference/dude/notification
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

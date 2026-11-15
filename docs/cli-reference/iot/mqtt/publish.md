@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "publish"
 sidebar_label: 'publish'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/mqtt/publish
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

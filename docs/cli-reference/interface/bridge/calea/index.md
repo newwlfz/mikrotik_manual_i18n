@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/bridge/calea"
 title: "calea"
 sidebar_label: 'calea'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/bridge/calea
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

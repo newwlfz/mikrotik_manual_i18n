@@ -9,7 +9,6 @@ tags:
   - 'iot-package'
   - 'sub-menu'
 source: https://manual.mikrotik.com/docs/internet-of-things/lora/general-properties
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Every RouterBOARD with a miniPCI-e slot which supports LTE modems can also be used as a LoRaWAN gateway by installing an **R11e-LR8** or **R11e-LR9** card. Both UDP and LNS (starting with **v7.12rc1** testing version) protocols are supported.

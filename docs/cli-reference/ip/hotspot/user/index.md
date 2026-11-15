@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/hotspot/user"
 title: "user"
 sidebar_label: 'user'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/user
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

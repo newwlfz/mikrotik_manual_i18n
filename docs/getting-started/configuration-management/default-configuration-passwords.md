@@ -5,7 +5,6 @@ title: "Default Configuration Passwords"
 sidebar_label: 'Default Configuration Passwords'
 description: 'Find the default login credentials for MikroTik RouterOS devices fresh from the factory or after a full reset.'
 source: https://manual.mikrotik.com/docs/getting-started/configuration-management/default-configuration-passwords
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 MikroTik devices ship from the factory with a default configuration that includes a preset password. The same password is re-applied whenever you perform a standard system reset. Knowing how to locate this password is essential for initial device access.

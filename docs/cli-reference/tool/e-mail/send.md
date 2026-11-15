@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "send"
 sidebar_label: 'send'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/e-mail/send
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

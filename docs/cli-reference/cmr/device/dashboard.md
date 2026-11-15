@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "dashboard"
 sidebar_label: 'dashboard'
 source: https://manual.mikrotik.com/docs/cli-reference/cmr/device/dashboard
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

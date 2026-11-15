@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "egress-vlan-tag"
 sidebar_label: 'egress-vlan-tag'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/egress-vlan-tag
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

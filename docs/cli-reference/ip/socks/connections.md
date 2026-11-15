@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "connections"
 sidebar_label: 'connections'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/socks/connections
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

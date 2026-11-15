@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "Cannot upgrade SwOS"
 sidebar_label: 'Cannot upgrade SwOS'
 source: https://manual.mikrotik.com/docs/bridging-and-switching/swos/troubleshooting
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ---

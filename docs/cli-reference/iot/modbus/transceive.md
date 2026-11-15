@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "transceive"
 sidebar_label: 'transceive'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/modbus/transceive
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 8
 title: "lookups"
 sidebar_label: 'lookups'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/proxy/lookups
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

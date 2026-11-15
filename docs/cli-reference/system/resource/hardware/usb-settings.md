@@ -4,7 +4,6 @@ sidebar_position: 6
 title: "usb-settings"
 sidebar_label: 'usb-settings'
 source: https://manual.mikrotik.com/docs/cli-reference/system/resource/hardware/usb-settings
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

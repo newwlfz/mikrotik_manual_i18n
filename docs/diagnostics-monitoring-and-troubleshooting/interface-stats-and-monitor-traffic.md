@@ -9,7 +9,6 @@ tags:
   - 'monitor-traffic'
   - 'interface'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/interface-stats-and-monitor-traffic
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Every RouterOS interface contains various counters, for example the number of received and transmitted packets, [Fast Path](/docs/firewall-and-quality-of-service/packet-flow-in-routeros#fast-path) bytes, the number of link downs on the physical side, and packets dropped by the interface queue. These statistics give real-time visibility into network utilization and hardware performance; the `monitor-traffic` command shows a live per-second rate view for verifying throughput and troubleshooting bottlenecks.

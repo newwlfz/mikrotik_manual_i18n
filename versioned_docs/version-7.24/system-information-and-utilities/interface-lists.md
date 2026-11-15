@@ -9,7 +9,6 @@ tags:
   - 'firewall'
   - 'bridging'
 source: https://manual.mikrotik.com/docs/7.24/system-information-and-utilities/interface-lists
-captured_at: '2026-11-07T17:11:03.548Z'
 ---
 
 Allows defining a set of interfaces for easier interface management in the different interface-based configuration sections such as Neighbor Discovery, Firewall, Bridge, and Internet Detect.

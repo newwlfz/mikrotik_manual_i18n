@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "monitor-slaves"
 sidebar_label: 'monitor-slaves'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/bonding/monitor-slaves
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

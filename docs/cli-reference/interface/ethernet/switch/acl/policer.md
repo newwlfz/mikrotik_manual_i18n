@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "policer"
 sidebar_label: 'policer'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/acl/policer
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

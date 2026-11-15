@@ -5,7 +5,6 @@ title: "List of available Apps"
 sidebar_label: 'List of available Apps'
 description: 'Reference list of container apps that run on RouterOS, with a short description of each and the MikroTik hardware it suits.'
 source: https://manual.mikrotik.com/docs/containers/apps/available-apps
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 | App                   | Description                                                                                                                                                                                                                                                                                                                                                       |

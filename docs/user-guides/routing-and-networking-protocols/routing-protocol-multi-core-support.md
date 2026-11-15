@@ -7,7 +7,6 @@ description: 'RouterOS v7 enables multi-core routing by distributing tasks like 
 tags:
   - 'routing'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/routing-protocol-multi-core-support
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 RouterOS v7 can split tasks between multiple processes.

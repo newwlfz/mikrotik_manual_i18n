@@ -4,7 +4,6 @@ sidebar_position: 29
 title: "serial-terminal"
 sidebar_label: 'serial-terminal'
 source: https://manual.mikrotik.com/docs/cli-reference/system/serial-terminal
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

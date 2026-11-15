@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "lsa"
 sidebar_label: 'lsa'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/ospf/lsa
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

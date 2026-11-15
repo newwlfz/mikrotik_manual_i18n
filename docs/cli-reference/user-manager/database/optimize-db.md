@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "optimize-db"
 sidebar_label: 'optimize-db'
 source: https://manual.mikrotik.com/docs/cli-reference/user-manager/database/optimize-db
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

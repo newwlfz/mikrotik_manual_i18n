@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/cloud/back-to-home-user"
 title: "back-to-home-user"
 sidebar_label: 'back-to-home-user'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/cloud/back-to-home-user
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -7,7 +7,6 @@ description: 'MikroTik hardware routers running RouterOS come with pre-installed
 tags:
   - 'licensing'
 source: https://manual.mikrotik.com/docs/getting-started/routeros-licensing/mikrotik-hardware
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Licensing Basics

@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "make-binding"
 sidebar_label: 'make-binding'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/host/make-binding
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

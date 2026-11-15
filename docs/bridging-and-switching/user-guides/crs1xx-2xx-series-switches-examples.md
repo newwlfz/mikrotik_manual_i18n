@@ -9,7 +9,6 @@ tags:
   - 'bridge-hardware-offloading'
   - 'management-access'
 source: https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/crs1xx-2xx-series-switches-examples
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The Cloud Router Switch series is highly integrated switches with a high-performance MIPS CPU and feature-rich packet processors. The CRS switches can be designed into various Ethernet applications including unmanaged switch, Layer 2 managed switch, carrier switch, and wireless/wired unified packet processing.

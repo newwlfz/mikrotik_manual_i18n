@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ipv6/dhcp-relay"
 title: "dhcp-relay"
 sidebar_label: 'dhcp-relay'
 source: https://manual.mikrotik.com/docs/cli-reference/ipv6/dhcp-relay
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 35
 title: "telnet"
 sidebar_label: 'telnet'
 source: https://manual.mikrotik.com/docs/cli-reference/system/telnet
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

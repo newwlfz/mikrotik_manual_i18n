@@ -4,7 +4,6 @@ sidebar_position: 15
 title: "packing"
 sidebar_label: 'packing'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/packing
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

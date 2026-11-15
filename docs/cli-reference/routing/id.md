@@ -4,7 +4,6 @@ sidebar_position: 7
 title: "id"
 sidebar_label: 'id'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/id
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "power-cycle"
 sidebar_label: 'power-cycle'
 source: https://manual.mikrotik.com/docs/cli-reference/system/resource/hardware/power-cycle
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

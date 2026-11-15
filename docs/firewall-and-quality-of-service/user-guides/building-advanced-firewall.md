@@ -7,7 +7,6 @@ description: 'This page guides building an advanced firewall on MikroTik RouterO
 tags:
   - 'firewall'
 source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/user-guides/building-advanced-firewall
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Building on everything we have covered so far, let's now construct an advanced firewall. In this example, we will implement as many firewall features as possible to demonstrate how they work and when they should be used correctly.

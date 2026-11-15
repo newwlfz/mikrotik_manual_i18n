@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/ethernet/pon"
 title: "pon"
 sidebar_label: 'pon'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/pon
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

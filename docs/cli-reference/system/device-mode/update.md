@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "update"
 sidebar_label: 'update'
 source: https://manual.mikrotik.com/docs/cli-reference/system/device-mode/update
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -9,7 +9,6 @@ tags:
   - 'scripting'
   - 'sqlite3'
 source: https://manual.mikrotik.com/docs/mobile-networking/gps/gps-tracking-using-http-post
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The following article explains how to create a simple vehicle tracking system using the RouterOS GPS function and scripting.

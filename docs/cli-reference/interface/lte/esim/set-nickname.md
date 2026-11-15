@@ -4,7 +4,6 @@ sidebar_position: 8
 title: "set-nickname"
 sidebar_label: 'set-nickname'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim/set-nickname
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -8,7 +8,6 @@ tags:
   - 'leds'
   - 'system-configuration'
 source: https://manual.mikrotik.com/docs/hardware/leds
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Summary

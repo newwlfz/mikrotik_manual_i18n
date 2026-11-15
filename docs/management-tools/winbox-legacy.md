@@ -11,7 +11,6 @@ tags:
   - 'management'
   - 'ipv6'
 source: https://manual.mikrotik.com/docs/management-tools/winbox-legacy
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 :::warning

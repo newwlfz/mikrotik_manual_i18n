@@ -7,7 +7,6 @@ description: 'The MikroTik RouterOS documentation page describes the DHCP client
 tags:
   - 'dhcp'
 source: https://manual.mikrotik.com/docs/7.24/network-management/dhcp
-captured_at: '2026-11-07T17:11:03.548Z'
 ---
 
 ## DHCP Client

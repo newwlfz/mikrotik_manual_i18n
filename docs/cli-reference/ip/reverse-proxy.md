@@ -4,7 +4,6 @@ sidebar_position: 18
 title: "reverse-proxy"
 sidebar_label: 'reverse-proxy'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/reverse-proxy
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

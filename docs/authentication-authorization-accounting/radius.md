@@ -9,7 +9,6 @@ tags:
   - 'authentication'
   - 'vpn'
 source: https://manual.mikrotik.com/docs/authentication-authorization-accounting/radius
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 RADIUS, short for Remote Authentication Dial-In User Service, is a remote server that provides authentication and accounting facilities to various network appliances. RADIUS authentication and accounting allows the ISP or network administrator to manage PPP user access and accounting from one server throughout a large network. The MikroTik RouterOS has a RADIUS client that can authenticate [router's local](/docs/authentication-authorization-accounting/user) [users](/docs/authentication-authorization-accounting/user), [HotSpot](/docs/authentication-authorization-accounting/hotspot-captive-portal/), [PPP](/docs/mobile-networking/ppp) and ISDN connections. The attributes received from the RADIUS server override the ones set in the default profile, but if some parameters are not received they are taken from the respective default profile.

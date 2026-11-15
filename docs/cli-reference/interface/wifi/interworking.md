@@ -4,7 +4,6 @@ sidebar_position: 13
 title: "interworking"
 sidebar_label: 'interworking'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/interworking
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

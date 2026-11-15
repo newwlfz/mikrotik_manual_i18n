@@ -9,7 +9,6 @@ tags:
   - 'debug-logs'
   - 'station-mode'
 source: https://manual.mikrotik.com/docs/wireless/abgn/wireless-troubleshooting
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Wireless Debug Logs

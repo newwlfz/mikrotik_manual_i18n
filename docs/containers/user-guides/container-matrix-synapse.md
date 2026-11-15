@@ -9,7 +9,6 @@ tags:
   - 'synapse'
   - 'matrix'
 source: https://manual.mikrotik.com/docs/containers/user-guides/container-matrix-synapse
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Matrix is a decentralized communication protocol. Each Matrix server operates independently, maintaining its own set of users and defining its own rules and policies.

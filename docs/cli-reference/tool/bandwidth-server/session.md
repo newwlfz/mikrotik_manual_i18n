@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "session"
 sidebar_label: 'session'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/bandwidth-server/session
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

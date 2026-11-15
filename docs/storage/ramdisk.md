@@ -8,7 +8,6 @@ tags:
   - 'storage'
   - 'ramdisk'
 source: https://manual.mikrotik.com/docs/storage/ramdisk
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 A ramdisk is a block device in RAM. Like a disk, it needs a file system before it can hold files, and it can be a member of a RAID or be used anywhere else a device is needed. A [tmpfs](/docs/storage/tmpfs) is a folder in RAM instead: it holds files without formatting, but it is not a device and cannot be formatted or be a RAID member.

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ipv6/dhcp-client"
 title: "dhcp-client"
 sidebar_label: 'dhcp-client'
 source: https://manual.mikrotik.com/docs/cli-reference/ipv6/dhcp-client
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

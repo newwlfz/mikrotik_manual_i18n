@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "characteristics"
 sidebar_label: 'characteristics'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/connections/characteristics
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

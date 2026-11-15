@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/wireguard/peers"
 title: "peers"
 sidebar_label: 'peers'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireguard/peers
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

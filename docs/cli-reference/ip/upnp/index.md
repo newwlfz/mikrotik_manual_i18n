@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/upnp"
 title: "upnp"
 sidebar_label: 'upnp'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/upnp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

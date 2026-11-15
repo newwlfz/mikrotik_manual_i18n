@@ -8,7 +8,6 @@ tags:
   - 'ike'
   - 'diffie-hellman'
 source: https://manual.mikrotik.com/docs/virtual-private-networks/ipsec
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This section covers IPsec examples and integrations. Use it to configure IKEv2, pre-shared-key and post-quantum key workflows, and third-party VPN connectivity.

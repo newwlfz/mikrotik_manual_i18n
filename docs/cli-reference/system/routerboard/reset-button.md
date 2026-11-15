@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "reset-button"
 sidebar_label: 'reset-button'
 source: https://manual.mikrotik.com/docs/cli-reference/system/routerboard/reset-button
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

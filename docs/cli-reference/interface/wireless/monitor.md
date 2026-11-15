@@ -4,7 +4,6 @@ sidebar_position: 10
 title: "monitor"
 sidebar_label: 'monitor'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/monitor
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

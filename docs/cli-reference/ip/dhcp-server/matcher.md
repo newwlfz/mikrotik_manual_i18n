@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "matcher"
 sidebar_label: 'matcher'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-server/matcher
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

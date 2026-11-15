@@ -8,7 +8,6 @@ tags:
   - 'firewall'
   - 'filtering'
 source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/firewall/filter
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Firewall filters are used to allow or block specific packets forwarded to your local network, originating from your router, or destined for the router.
@@ -230,27 +229,9 @@ Removing a TCP connection without the drop rule in first place does not stop it:
 
 ## RAW Filtering
 
-The firewall RAW table allows selectively bypassing or dropping packets before connection tracking, that way significantly reducing the load on the CPU. The tool is very useful for DoS/DDoS attack mitigation.
+The firewall RAW table selectively bypasses or drops packets before connection tracking, which significantly reduces the load on the CPU. It is well suited for DoS/DDoS attack mitigation.
 
-RAW filter configuration is accessible from the `/ip/firewall/raw` menu for IPv4 and the `/ipv6/firewall/raw` menu for IPv6.
-
-The RAW table does not have matchers that depend on connection tracking (like connection-state, layer7, etc.).
-If a packet is marked to bypass the connection tracking, packet de-fragmentation will not occur.
-
-Also the RAW firewall can have rules only in two chains:
-
-- **prerouting** - used to process any packet entering the router.
-- **output** - used to process packets originating from the router and leaving it through one of the interfaces. Packets passing through the router are not processed against the rules of the output chain.
-
-### Basic RAW Example
-
-Let's assume that we have OSPF configuration, but due to connection tracking OSPF has adjacency problems. We can use RAW rules to fix this, by not sending OSPF packets to connection tracking.
-
-```ros
-/ip/firewall/raw
-add chain=prerouting protocol=ospf action=notrack
-add chain=output protocol=ospf action=notrack
-```
+The RAW table has its own chains (prerouting and output) and does not have matchers that depend on connection tracking. Chains, properties and examples are described on the [RAW](/docs/firewall-and-quality-of-service/firewall/raw) page.
 
 ## Read More
 

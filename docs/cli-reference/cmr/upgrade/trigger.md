@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "trigger"
 sidebar_label: 'trigger'
 source: https://manual.mikrotik.com/docs/cli-reference/cmr/upgrade/trigger
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

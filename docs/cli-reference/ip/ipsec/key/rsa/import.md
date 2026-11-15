@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "import"
 sidebar_label: 'import'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/key/rsa/import
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

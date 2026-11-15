@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/openflow"
 title: "openflow"
 sidebar_label: 'openflow'
 source: https://manual.mikrotik.com/docs/cli-reference/openflow
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

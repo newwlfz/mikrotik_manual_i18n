@@ -7,7 +7,6 @@ description: 'How to manually set up a MikroTik router that has no default confi
 tags:
   - 'dhcp'
 source: https://manual.mikrotik.com/docs/getting-started/manual-network-setup
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Most MikroTik routers ship with a [default configuration](/docs/getting-started/configuration-management/default-configurations) that already provides a bridge, a LAN IP address, a DHCP server, and a basic firewall. If you keep the default configuration, you can skip this page.

@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "bss"
 sidebar_label: 'bss'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/easymesh/bss
-captured_at: '2026-11-09T11:35:47.715Z'
 pagination_prev: "cli-reference/interface/wifi/easymesh"
 ---
 

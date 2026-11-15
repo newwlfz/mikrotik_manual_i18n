@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "neighbor"
 sidebar_label: 'neighbor'
 source: https://manual.mikrotik.com/docs/cli-reference/mpls/ldp/neighbor
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

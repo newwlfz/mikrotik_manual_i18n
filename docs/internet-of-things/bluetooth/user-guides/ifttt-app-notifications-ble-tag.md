@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "IFTTT app notifications on BLE tag appearance in KNOT's range"
 sidebar_label: 'IFTTT app notifications on BLE tag appearance in KNOT''s range'
 source: https://manual.mikrotik.com/docs/internet-of-things/bluetooth/user-guides/ifttt-app-notifications-ble-tag
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ### Introduction

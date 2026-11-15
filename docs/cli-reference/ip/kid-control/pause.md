@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "pause"
 sidebar_label: 'pause'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/kid-control/pause
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

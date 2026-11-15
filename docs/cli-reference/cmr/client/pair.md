@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "pair"
 sidebar_label: 'pair'
 source: https://manual.mikrotik.com/docs/cli-reference/cmr/client/pair
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

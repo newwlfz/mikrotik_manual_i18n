@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "save-config-to"
 sidebar_label: 'save-config-to'
 source: https://manual.mikrotik.com/docs/cli-reference/partitions/save-config-to
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

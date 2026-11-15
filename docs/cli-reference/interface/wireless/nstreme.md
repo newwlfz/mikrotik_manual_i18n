@@ -4,7 +4,6 @@ sidebar_position: 12
 title: "nstreme"
 sidebar_label: 'nstreme'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/nstreme
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

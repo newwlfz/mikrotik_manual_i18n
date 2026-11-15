@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/queue/simple"
 title: "simple"
 sidebar_label: 'simple'
 source: https://manual.mikrotik.com/docs/cli-reference/queue/simple
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

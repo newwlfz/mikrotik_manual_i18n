@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/script"
 title: "script"
 sidebar_label: 'script'
 source: https://manual.mikrotik.com/docs/cli-reference/system/script
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -9,7 +9,6 @@ tags:
   - 'bridge-configuration'
   - 'stp'
 source: https://manual.mikrotik.com/docs/high-availability-solutions/multi-chassis-link-aggregation-group
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Introduction

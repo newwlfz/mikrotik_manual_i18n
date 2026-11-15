@@ -4,7 +4,6 @@ sidebar_position: 6
 title: "settings"
 sidebar_label: 'settings'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/qos/settings
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

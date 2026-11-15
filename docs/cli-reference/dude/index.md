@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/dude"
 title: "dude"
 sidebar_label: 'dude'
 source: https://manual.mikrotik.com/docs/cli-reference/dude
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

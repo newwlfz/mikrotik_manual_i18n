@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/bridge/nat"
 title: "nat"
 sidebar_label: 'nat'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/bridge/nat
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/iot/wiliot/mqtt-traffic"
 title: "mqtt-traffic"
 sidebar_label: 'mqtt-traffic'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/wiliot/mqtt-traffic
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

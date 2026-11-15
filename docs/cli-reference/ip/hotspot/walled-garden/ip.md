@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "ip"
 sidebar_label: 'ip'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/walled-garden/ip
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

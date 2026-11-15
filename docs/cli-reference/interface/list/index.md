@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/list"
 title: "list"
 sidebar_label: 'list'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/list
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

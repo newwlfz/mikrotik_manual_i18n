@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "check-for-updates"
 sidebar_label: 'check-for-updates'
 source: https://manual.mikrotik.com/docs/cli-reference/system/package/update/check-for-updates
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

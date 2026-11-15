@@ -9,7 +9,6 @@ tags:
   - 'stp'
   - 'rstp'
 source: https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/spanning-tree-protocol
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ---

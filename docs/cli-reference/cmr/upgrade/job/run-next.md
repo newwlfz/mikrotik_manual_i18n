@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "run-next"
 sidebar_label: 'run-next'
 source: https://manual.mikrotik.com/docs/cli-reference/cmr/upgrade/job/run-next
-captured_at: '2026-11-09T11:35:47.715Z'
 pagination_prev: "cli-reference/cmr/upgrade/job"
 ---
 

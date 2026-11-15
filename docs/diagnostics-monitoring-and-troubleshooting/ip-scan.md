@@ -9,7 +9,6 @@ tags:
   - 'arp'
   - 'scanning'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/ip-scan
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 IP scan finds the devices on a network. It works in two ways:

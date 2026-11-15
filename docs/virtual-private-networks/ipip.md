@@ -8,7 +8,6 @@ tags:
   - 'ip'
   - 'tunnel'
 source: https://manual.mikrotik.com/docs/virtual-private-networks/ipip
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 IPIP (IP-in-IP) is a simple tunneling protocol defined in RFC 2003 that encapsulates IP packets within another IP header to transport traffic between two endpoints. In RouterOS, IPIP can be used to create point-to-point tunnels between routers across intermediate IP networks.

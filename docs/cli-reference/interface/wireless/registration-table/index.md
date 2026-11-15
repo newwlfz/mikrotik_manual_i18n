@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/wireless/registration-table"
 title: "registration-table"
 sidebar_label: 'registration-table'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/registration-table
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

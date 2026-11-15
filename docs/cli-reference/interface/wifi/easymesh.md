@@ -2,7 +2,6 @@
 sidebar_key: "cli-reference/interface/wifi/easymesh"
 title: "easymesh"
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/easymesh
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

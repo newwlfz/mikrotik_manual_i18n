@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/certificate/scep-server"
 title: "scep-server"
 sidebar_label: 'scep-server'
 source: https://manual.mikrotik.com/docs/cli-reference/certificate/scep-server
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

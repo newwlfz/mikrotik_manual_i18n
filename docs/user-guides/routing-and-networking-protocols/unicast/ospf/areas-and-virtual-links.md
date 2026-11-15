@@ -8,7 +8,6 @@ tags:
   - 'routing'
   - 'ospf'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/ospf/areas-and-virtual-links
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 A distinctive feature of OSPF is the possibility to divide an AS into multiple routing areas, each with its own set of neighbors. Imagine a large network with 300+ routers and multiple links between them. Whenever a link flaps or some other topology change happens in the network, this change is flooded to all OSPF devices in the network. This results in a heavy load on the network and even downtime because [network convergence](/docs/user-guides/routing-and-networking-protocols/routing-decision) can take some time for such a large network.

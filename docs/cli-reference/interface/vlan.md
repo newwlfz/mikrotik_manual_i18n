@@ -4,7 +4,6 @@ sidebar_position: 36
 title: "vlan"
 sidebar_label: 'vlan'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/vlan
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

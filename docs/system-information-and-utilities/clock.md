@@ -9,7 +9,6 @@ tags:
   - 'clock'
   - 'ntp'
 source: https://manual.mikrotik.com/docs/system-information-and-utilities/clock
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The RouterOS system clock provides the local date and time for log entries, the [scheduler](/docs/system-information-and-utilities/scheduler), file creation times, certificate validity checks and other time-dependent functions. RouterOS keeps the time in UTC and applies the configured GMT offset, including daylight saving time (DST), when the time is displayed.

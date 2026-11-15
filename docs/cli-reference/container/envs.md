@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "envs"
 sidebar_label: 'envs'
 source: https://manual.mikrotik.com/docs/cli-reference/container/envs
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

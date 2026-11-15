@@ -8,7 +8,6 @@ tags:
   - 'access-control'
   - 'proxy'
 source: https://manual.mikrotik.com/docs/network-management/socks
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 SOCKS is a proxy protocol for TCP connections. A SOCKS-aware application connects to the proxy, names the destination it wants, and the proxy opens the connection and relays the data. Because the proxy makes the connection, applications that can reach the proxy can use destinations that firewall rules would otherwise block, and you control in one place which clients and destinations are allowed. SOCKS works with any TCP-based protocol, for example HTTP, FTP or SSH.

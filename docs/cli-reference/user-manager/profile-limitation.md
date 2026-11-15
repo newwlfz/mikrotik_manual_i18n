@@ -4,7 +4,6 @@ sidebar_position: 8
 title: "profile-limitation"
 sidebar_label: 'profile-limitation'
 source: https://manual.mikrotik.com/docs/cli-reference/user-manager/profile-limitation
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

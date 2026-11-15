@@ -9,7 +9,6 @@ tags:
   - 'troubleshooting'
   - 'rma'
 source: https://manual.mikrotik.com/docs/hardware/try-before-rma
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Before submitting a device for warranty repair (RMA), work through the checks below. Many apparent hardware issues are caused by power supplies, cables, software versions, or configuration — and can be resolved without sending the device back.

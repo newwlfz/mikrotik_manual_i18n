@@ -7,7 +7,6 @@ description: 'RouterOS includes a built-in SMB server for file sharing over SMB/
 tags:
   - 'smb'
 source: https://manual.mikrotik.com/docs/storage/smb
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 RouterOS includes a built-in **SMB server** for sharing folders of the router with network clients. In addition, the [Storage package](/docs/storage/) adds an **SMB client** that lets RouterOS mount remote SMB shares as disks.

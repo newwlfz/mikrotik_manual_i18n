@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "accept-filter"
 sidebar_label: 'accept-filter'
 source: https://manual.mikrotik.com/docs/cli-reference/mpls/ldp/accept-filter
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

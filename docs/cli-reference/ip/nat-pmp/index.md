@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/nat-pmp"
 title: "nat-pmp"
 sidebar_label: 'nat-pmp'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/nat-pmp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

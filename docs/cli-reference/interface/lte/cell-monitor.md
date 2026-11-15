@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "cell-monitor"
 sidebar_label: 'cell-monitor'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/lte/cell-monitor
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

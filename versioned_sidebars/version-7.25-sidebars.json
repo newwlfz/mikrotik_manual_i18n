@@ -2265,12 +2265,6 @@
                 },
                 {
                   "type": "doc",
-                  "id": "internet-of-things/lora/user-guides/tg-lr-setup-guide",
-                  "label": "TG-LR setup guide",
-                  "key": "internet-of-things/lora/user-guides/tg-lr-setup-guide"
-                },
-                {
-                  "type": "doc",
                   "id": "internet-of-things/lora/user-guides/the-things-stack",
                   "label": "The Things Stack",
                   "key": "internet-of-things/lora/user-guides/the-things-stack"

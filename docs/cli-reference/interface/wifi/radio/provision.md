@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "provision"
 sidebar_label: 'provision'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/radio/provision
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

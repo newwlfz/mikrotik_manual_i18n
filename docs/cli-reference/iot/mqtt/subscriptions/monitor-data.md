@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "monitor-data"
 sidebar_label: 'monitor-data'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/mqtt/subscriptions/monitor-data
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

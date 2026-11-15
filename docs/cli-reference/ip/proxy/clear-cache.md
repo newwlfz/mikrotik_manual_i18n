@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "clear-cache"
 sidebar_label: 'clear-cache'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/proxy/clear-cache
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

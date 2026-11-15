@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "chain"
 sidebar_label: 'chain'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/filter/chain
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

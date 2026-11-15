@@ -10,7 +10,6 @@ tags:
   - 'adlist'
   - 'mdns'
 source: https://manual.mikrotik.com/docs/network-management/dns
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 RouterOS has a caching DNS resolver. The router uses it for its own lookups, and it can be the DNS server for the devices in your network: it asks upstream DNS servers, for example those of your ISP, and keeps their answers in its cache.

@@ -4,7 +4,6 @@ sidebar_position: 17
 title: "sign"
 sidebar_label: 'sign'
 source: https://manual.mikrotik.com/docs/cli-reference/certificate/sign
-captured_at: '2026-11-09T11:35:47.715Z'
 pagination_next: "cli-reference/cmr"
 ---
 

@@ -9,7 +9,6 @@ tags:
   - 'port-knocking'
   - 'security'
 source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/user-guides/port-knocking
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Every public IP address is scanned constantly, by bots and by services such as Shodan, and anyone can use the results to try brute-force attacks or known exploits against the open ports. Port knocking keeps the ports closed instead: the router only watches for connection attempts to a secret sequence of ports. A client that knocks on the right ports in the right order is added to the `secured` address list, and the firewall accepts its connections.

@@ -9,7 +9,6 @@ tags:
   - 'back-to-home'
   - 'vpn'
 source: https://manual.mikrotik.com/docs/network-management/cloud/back-to-home
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 :::info
@@ -38,6 +37,12 @@ The tunnel is ready. Disconnect from the router's Wi-Fi, and select **Connect** 
 | ![Back To Home app start screen with the Create new button](/img/6264d45373704811.webp) | ![Create tunnel screen with the router address, user name and password fields](/img/006392895dc00a62.webp) | ![App connected to the router and asking for a tunnel name](/img/f410b5c8e4fbc964.webp) | ![Phone asking for permission to add the VPN configuration](/img/aa81c2e520c6ef66.webp) | ![Error message saying Back To Home is not supported on this device](/img/8e9ea14b99f4ed8b.webp) |
 | :-- | :-- | :-- | :-- | :-- |
 | Select **Create new** | Enter the router address and credentials | Name the tunnel | Allow the VPN configuration | Error on a device without Back To Home support |
+
+### Disable VPN when home
+
+The app decides that the phone is home by looking for the router on the local network. When a tunnel is created with **Create new**, the app reads the router's unique RouterOS identifier and saves it in the tunnel profile. Each time the phone connects to a Wi-Fi network, the app runs MikroTik discovery, the same discovery WinBox uses. If it finds a router with the saved identifier, it considers the phone home and pauses the tunnel.
+
+The option does not work for tunnels imported from a QR code or a share link, because those profiles do not contain the router's identifier. The check only runs when the phone connects to Wi-Fi, so the option does not pause the tunnel on mobile data. The router must also be visible to MikroTik discovery on that network.
 
 ## Share the tunnel with other people
 

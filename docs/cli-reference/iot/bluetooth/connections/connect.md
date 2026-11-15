@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "connect"
 sidebar_label: 'connect'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/bluetooth/connections/connect
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

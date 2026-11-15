@@ -8,7 +8,6 @@ tags:
   - 'licensing'
   - 'chr'
 source: https://manual.mikrotik.com/docs/getting-started/routeros-licensing/chr/chr-licensing
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Overview

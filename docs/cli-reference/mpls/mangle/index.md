@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/mpls/mangle"
 title: "mangle"
 sidebar_label: 'mangle'
 source: https://manual.mikrotik.com/docs/cli-reference/mpls/mangle
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

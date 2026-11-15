@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ipv6/nd/prefix"
 title: "prefix"
 sidebar_label: 'prefix'
 source: https://manual.mikrotik.com/docs/cli-reference/ipv6/nd/prefix
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

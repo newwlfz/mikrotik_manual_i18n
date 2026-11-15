@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/rtrace"
 title: "rtrace"
 sidebar_label: 'rtrace'
 source: https://manual.mikrotik.com/docs/cli-reference/system/rtrace
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

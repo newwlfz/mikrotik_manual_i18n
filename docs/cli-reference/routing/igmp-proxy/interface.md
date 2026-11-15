@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "interface"
 sidebar_label: 'interface'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/igmp-proxy/interface
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 14
 title: "security"
 sidebar_label: 'security'
 source: https://manual.mikrotik.com/docs/cli-reference/caps-man/security
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

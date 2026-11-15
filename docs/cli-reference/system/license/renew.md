@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "renew"
 sidebar_label: 'renew'
 source: https://manual.mikrotik.com/docs/cli-reference/system/license/renew
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

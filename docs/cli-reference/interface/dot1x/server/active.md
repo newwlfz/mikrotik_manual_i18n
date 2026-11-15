@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "active"
 sidebar_label: 'active'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/dot1x/server/active
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

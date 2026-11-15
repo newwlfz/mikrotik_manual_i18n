@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "default-wireless"
 sidebar_label: 'default-wireless'
 source: https://manual.mikrotik.com/docs/cli-reference/lcd/interface/default-wireless
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

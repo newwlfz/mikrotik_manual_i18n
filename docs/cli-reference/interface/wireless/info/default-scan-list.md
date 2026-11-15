@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "default-scan-list"
 sidebar_label: 'default-scan-list'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/info/default-scan-list
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

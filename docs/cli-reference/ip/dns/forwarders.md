@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "forwarders"
 sidebar_label: 'forwarders'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/dns/forwarders
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

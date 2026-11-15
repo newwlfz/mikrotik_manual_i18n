@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "set-identity"
 sidebar_label: 'set-identity'
 source: https://manual.mikrotik.com/docs/cli-reference/caps-man/remote-cap/set-identity
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

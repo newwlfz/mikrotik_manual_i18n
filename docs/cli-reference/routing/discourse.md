@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "discourse"
 sidebar_label: 'discourse'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/discourse
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

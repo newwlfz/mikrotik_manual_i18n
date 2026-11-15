@@ -8,7 +8,6 @@ tags:
   - 'container'
   - 'homeassistant'
 source: https://manual.mikrotik.com/docs/containers/user-guides/container-homeassistant
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The introduction of the **container** feature in RouterOS made it possible to run a wide variety of servers directly on the router. This is especially valuable for users who want to minimize the number of devices in their network. Instead of deploying a server on a separate machine, you can now host it inside the router itself.

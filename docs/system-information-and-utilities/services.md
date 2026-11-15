@@ -8,7 +8,6 @@ tags:
   - 'ip-services'
   - 'firewall'
 source: https://manual.mikrotik.com/docs/system-information-and-utilities/services
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 The `/ip/service` menu lists the services the router offers for management and access: WinBox, SSH, Telnet, FTP, the web server, the API and the reverse proxy. Each service has a port, the addresses and the VRF it accepts clients from, and, for the TLS services, a certificate. You cannot add services, only change, disable and enable the existing ones.

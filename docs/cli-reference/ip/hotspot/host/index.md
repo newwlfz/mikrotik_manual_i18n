@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/hotspot/host"
 title: "host"
 sidebar_label: 'host'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/host
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

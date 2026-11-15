@@ -4,7 +4,6 @@ sidebar_position: 17
 title: "provisioning"
 sidebar_label: 'provisioning'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/provisioning
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/hotspot/walled-garden"
 title: "walled-garden"
 sidebar_label: 'walled-garden'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/walled-garden
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

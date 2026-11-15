@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ipv6/dhcp-server/option"
 title: "option"
 sidebar_label: 'option'
 source: https://manual.mikrotik.com/docs/cli-reference/ipv6/dhcp-server/option
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

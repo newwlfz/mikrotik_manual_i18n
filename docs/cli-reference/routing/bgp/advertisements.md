@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "advertisements"
 sidebar_label: 'advertisements'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/bgp/advertisements
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

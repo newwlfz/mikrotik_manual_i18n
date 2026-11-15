@@ -7,7 +7,6 @@ description: 'The RouterOS traceroute tool: list the routers on the path to a ho
 tags:
   - 'traceroute'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/traceroute
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Traceroute lists the routers that packets pass on their way to a remote host, and shows for each of them how many probes it answered and how long the answers took. Use it to find where a connection fails or slows down: in your own network, at the ISP gateway or further away. To test only whether one host answers, use [ping](/docs/diagnostics-monitoring-and-troubleshooting/ping).

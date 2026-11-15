@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/ethernet/switch/qos/tx-manager"
 title: "tx-manager"
 sidebar_label: 'tx-manager'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/qos/tx-manager
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

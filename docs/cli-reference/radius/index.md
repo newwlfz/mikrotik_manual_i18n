@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/radius"
 title: "radius"
 sidebar_label: 'radius'
 source: https://manual.mikrotik.com/docs/cli-reference/radius
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

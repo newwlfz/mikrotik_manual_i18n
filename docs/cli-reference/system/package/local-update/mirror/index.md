@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/package/local-update/mirror"
 title: "mirror"
 sidebar_label: 'mirror'
 source: https://manual.mikrotik.com/docs/cli-reference/system/package/local-update/mirror
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

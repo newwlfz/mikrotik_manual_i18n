@@ -8,7 +8,6 @@ tags:
   - 'htb'
   - 'qos'
 source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This section covers RouterOS queueing and bandwidth management. Use it to configure HTB, PCQ, burst behavior, queue sizes, and queue types for traffic shaping.

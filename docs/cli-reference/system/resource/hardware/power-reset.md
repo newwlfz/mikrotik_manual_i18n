@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "power-reset"
 sidebar_label: 'power-reset'
 source: https://manual.mikrotik.com/docs/cli-reference/system/resource/hardware/power-reset
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

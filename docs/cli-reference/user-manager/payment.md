@@ -4,7 +4,6 @@ sidebar_position: 7
 title: "payment"
 sidebar_label: 'payment'
 source: https://manual.mikrotik.com/docs/cli-reference/user-manager/payment
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

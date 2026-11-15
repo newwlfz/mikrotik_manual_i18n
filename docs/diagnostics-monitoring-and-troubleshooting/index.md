@@ -8,7 +8,6 @@ tags:
   - 'monitoring'
   - 'logging'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This section covers RouterOS diagnostic and monitoring tools. Use it to inspect traffic, test connectivity, collect logs, monitor resources, analyze flow data, and investigate network or device issues.

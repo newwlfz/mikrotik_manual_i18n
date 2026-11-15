@@ -8,7 +8,6 @@ tags:
   - 'reset-configuration'
   - 'led'
 source: https://manual.mikrotik.com/docs/getting-started/configuration-management/routeros-configuration-reset
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## How to Reset Configuration

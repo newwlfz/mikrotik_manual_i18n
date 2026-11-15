@@ -8,7 +8,6 @@ tags:
   - 'configuration-profiles'
   - 'access-lists'
 source: https://manual.mikrotik.com/docs/wireless/wifi
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This section covers management of **Wi-Fi 6 and later** (802.11ax/be) interfaces as well as **Wi-Fi HaLow** (802.11ah) interfaces and Wi-Fi 5 (802.11ac) devices running the *wifi-qcom-ac* driver package.
@@ -46,6 +45,7 @@ New to one of these devices? Start with a task-oriented guide, then use the prop
 - [Interworking (802.11u / Hotspot 2.0) for WiFi6](/docs/wireless/wifi/interworking-for-wifi6)
 - [Centralized management with WiFi CAPsMAN](/docs/wireless/wifi/capsman)
 - [Configuring EasyMesh](/docs/wireless/wifi/configuring-easymesh)
+- [Configuring MeshPoint](/docs/wireless/wifi/configuring-meshpoint)
 
 ## WiFi Terminology
 
@@ -314,7 +314,7 @@ The sniffer will operate on whichever channel is configured for the chosen inter
 The spectral scan can scan frequencies supported by your wifi interface, and plot them directly in the console.
 
 :::info
-Spectral scan is supported only by the wifi-qcom driver; it is not supported by the wifi-qcom-ac driver.
+Spectral scan is supported only by the wifi-qcom driver; it is not supported by the wifi-qcom-ac, wifi-mediatek or wifi-qcom-be driver.
 :::
 
 ```ros
@@ -439,6 +439,10 @@ CAPsMAN (Controlled Access Point system Manager) for the new WiFi menu lets you 
 
 EasyMesh is a Wi-Fi Alliance standard for multi-AP Wi-Fi networks, where a central controller manages one or more agents, including certified devices from different vendors. See the dedicated page: [Configuring EasyMesh](/docs/wireless/wifi/configuring-easymesh).
 
+## WiFi MeshPoint
+
+MeshPoint is an IEEE 802.11s Layer 2 mesh. It works on `wifi-qcom-be` and `wifi-mediatek`, and does not work on `wifi-qcom` or `wifi-qcom-ac`. See the dedicated page: [Configuring MeshPoint](/docs/wireless/wifi/configuring-meshpoint).
+
 ## Advanced examples
 
 [Enterprise wireless security with User Manager v5](/docs/wireless/user-guides/enterprise-wireless-security-user)
@@ -547,7 +551,7 @@ This section includes properties relating to the operation of the interface and 
 | **installation** (*indoor*\|*outdoor*; *default*: **indoor**) | Devices installed outdoors will avoid use of indoor-only radio channels. |
 | **manager** (*capsman* \|*capsman-or-local* \| *easymesh* \| *local*; default: **local**) | capsman - the interface will act as CAP only; this option should <strong>not</strong> be passed via provisioning rules to the CAP <br/> capsman-or-local - the interface will get configuration via CAPsMAN or use its own, if <code>/interface/wifi/cap</code> is not enabled. <br/> easymesh - the interface is managed by EasyMesh. <br/> local - interface won't contact CAPsMAN in order to get configuration. |
 | **max-clients** (*integer 1..1000; default: **1000**)* | Maximum number of associated clients. |
-| **mode** (*ap* \| *station*) | Interface operation mode <br/><ul><li><em>ap</em> (default) - interface operates as an access point</li><li><em>station</em> - interface acts as a client device, scanning for access points advertising the configured SSID</li><li>station-bridge - interface acts as a client device and enables support for a 4-address frame format, so that the interface can be used as a bridge port</li><li>station-pseudobridge - the interface keeps track of outgoing IP connections and performs MAC address translation similarly to how IP masquerading works</li></ul><br/>🛈 <strong>Important:</strong> The 'wifi' station-bridge mode is incompatible with APs running the older 'wireless' package and vice versa. <br/><br/> |
+| **mode** (*ap* \| *station* \| *station-bridge* \| *station-pseudobridge* \| *meshpoint*; default: **ap**) | Interface operation mode <br/><ul><li><em>ap</em> (default) - interface operates as an access point</li><li><em>station</em> - interface acts as a client device, scanning for access points advertising the configured SSID</li><li>station-bridge - interface acts as a client device and enables support for a 4-address frame format, so that the interface can be used as a bridge port</li><li>station-pseudobridge - the interface keeps track of outgoing IP connections and performs MAC address translation similarly to how IP masquerading works</li><li><em>meshpoint</em> - interface operates as an IEEE 802.11s mesh point and connects to other mesh nodes with the same Mesh ID. Works on <code>wifi-qcom-be</code> and <code>wifi-mediatek</code> only.</li></ul><br/>🛈 <strong>Important:</strong> The 'wifi' station-bridge mode is incompatible with APs running the older 'wireless' package and vice versa. <br/><br/> |
 | **multicast-enhance** (*enabled*\| *disabled*; default: **disabled**) | With the multicast-enhance feature enabled, an AP will convert every multicast-addressed IP or IPv6 packet into multiple unicast-addressed frames for each connected station. This may improve link throughput and reliability since, unlike multicast frames, unicasts are acknowledged by stations and transmitted using a higher data rate. |
 | **qos-classifier** (*dscp-high-3-bits*\| *priority*; default: **priority**) | Specify which WMM ruleset to follow. APs and clients classify packets based on the priority assigned to them (as per WMM specification) → 1,2 - background; 0,3 - best effort; 4,5 - video; 6,7 - voice. "Better" access category has a higher probability of getting access to medium (e.g. voice frames will have a shorter "back off" time after medium becomes "idle", ensuring that they are more likely to be sent out sooner than "worse" category frames). <br/><ul><li>dscp-high-3-bits - interface will transmit data packets using a WMM priority equal to the value of the 3 most significant bits of the IP DSCP field</li><li>priority - interface will transmit data packets using a WMM priority equal to that set by IP firewall or bridge filter<br/></li></ul><br/>🛈 <strong>Important:</strong> 802.11ac wireless chipsets do not support the dscp-high-3-bits classifier mode. For 802.11ac interfaces, please see <a href="/docs/bridging-and-switching/user-guides/wmm-and-vlan-priority#set-vlan-or-wmm-priority-from-dscp">DSCP from priority</a>. <br/><br/> |
 | **ssid** (*string*; default: **no**) | The name of the wireless network, aka the (E)SSID. |

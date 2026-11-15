@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 845 1760 630" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e6e6e6"/></marker><marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9aa2aa"/></marker><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#25252c"/><stop offset="1" stop-color="#202026"/></linearGradient></defs>
+<rect x="20" y="845" width="1760" height="630" fill="#1b1b1d"/>
+<rect x="40" y="860" width="620" height="600" fill="none" stroke="#9aa2aa" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="350" y="884.0" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">BRIDGING</text>
+<circle cx="150" cy="920" r="13" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="150" y="921.0" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">A</text>
+<circle cx="510" cy="920" r="13" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="510" y="921.0" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">B</text>
+<circle cx="150" cy="1430" r="13" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="150" y="1431.0" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">D</text>
+<circle cx="510" cy="1430" r="13" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="510" y="1431.0" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">C</text>
+<rect x="80.0" y="1087.0" width="140" height="46" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="150" y="1102.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">BRIDGE</text>
+<text x="150" y="1117.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">DST-NAT</text>
+<polygon points="255.0,1110 330,1083.0 405.0,1110 330,1137.0" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="330" y="1104.0" font-size="10" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">USE-IP-</text>
+<text x="330" y="1116.0" font-size="10" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">FIREWALL?</text>
+<rect x="255.0" y="989.0" width="150" height="42" fill="#3b3b40" stroke="#e6e6e6" stroke-width="2.5"/>
+<line x1="267.0" y1="989.0" x2="267.0" y2="1031.0" stroke="#e6e6e6" stroke-width="2.5"/>
+<line x1="393.0" y1="989.0" x2="393.0" y2="1031.0" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="330" y="1010.0" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">PREROUTING</text>
+<polygon points="444.0,1083.0 590.0,1083.0 576.0,1137.0 430.0,1137.0" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="510" y="1102.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">BRIDGING</text>
+<text x="510" y="1117.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">DECISION</text>
+<rect x="435.0" y="978.0" width="150" height="44" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="510" y="992.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">BRIDGE</text>
+<text x="510" y="1007.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">INPUT</text>
+<rect x="435.0" y="1188.0" width="150" height="44" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="510" y="1202.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">BRIDGE</text>
+<text x="510" y="1217.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">FORWARD</text>
+<polygon points="255.0,1210 330,1183.0 405.0,1210 330,1237.0" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="330" y="1204.0" font-size="10" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">USE-IP-</text>
+<text x="330" y="1216.0" font-size="10" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">FIREWALL?</text>
+<rect x="435.0" y="1279.0" width="150" height="42" fill="#3b3b40" stroke="#e6e6e6" stroke-width="2.5"/>
+<line x1="447.0" y1="1279.0" x2="447.0" y2="1321.0" stroke="#e6e6e6" stroke-width="2.5"/>
+<line x1="573.0" y1="1279.0" x2="573.0" y2="1321.0" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="510" y="1300.0" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">FORWARD</text>
+<rect x="260.0" y="1277.0" width="140" height="46" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="330" y="1292.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">BRIDGE</text>
+<text x="330" y="1307.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">SRC-NAT</text>
+<polygon points="75.0,1300 150,1273.0 225.0,1300 150,1327.0" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="150" y="1294.0" font-size="10" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">BRIDGED, USE-</text>
+<text x="150" y="1306.0" font-size="10" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">IP-FIREWALL?</text>
+<rect x="75.0" y="1345.0" width="150" height="40" fill="#3b3b40" stroke="#e6e6e6" stroke-width="2.5"/>
+<line x1="87.0" y1="1345.0" x2="87.0" y2="1385.0" stroke="#e6e6e6" stroke-width="2.5"/>
+<line x1="213.0" y1="1345.0" x2="213.0" y2="1385.0" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="150" y="1365.0" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">POSTROUTING</text>
+<rect x="260.0" y="1358.0" width="140" height="44" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="330" y="1372.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">BRIDGE</text>
+<text x="330" y="1387.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">OUTPUT</text>
+<polygon points="449.0,1345.0 585.0,1345.0 571.0,1395.0 435.0,1395.0" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="510" y="1362.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">BRIDGING</text>
+<text x="510" y="1377.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">DECISION</text>
+<polyline points="150,934 150,1086" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="220,1110 254,1110" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="330,1082 330,1032" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<text x="345" y="1060.0" font-size="11" font-weight="normal" text-anchor="start" dominant-baseline="central" fill="#e6e6e6">YES</text>
+<polyline points="406,1010 450,1085" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="406,1110 428,1110" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<text x="416" y="1096.0" font-size="11" font-weight="normal" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">NO</text>
+<polyline points="510,1082 510,1023" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="510,978 510,934" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="510,1138 510,1187" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="434,1210 406,1210" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="370,1232 440,1282" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<text x="415" y="1245.0" font-size="11" font-weight="normal" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">YES</text>
+<polyline points="330,1238 330,1276" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<text x="340" y="1258.0" font-size="11" font-weight="normal" text-anchor="start" dominant-baseline="central" fill="#e6e6e6">NO</text>
+<polyline points="434,1300 401,1300" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="259,1300 226,1300" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="150,1328 150,1344" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<text x="162" y="1334.0" font-size="11" font-weight="normal" text-anchor="start" dominant-baseline="central" fill="#e6e6e6">YES</text>
+<polyline points="150,1386 150,1415" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="75,1300 58,1300 58,1430 135,1430" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<text x="65" y="1285.0" font-size="11" font-weight="normal" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">NO</text>
+<polyline points="510,1415 510,1396" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="434,1375 401,1378" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="330,1358 330,1324" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="690" y="860" width="620" height="600" fill="none" stroke="#9aa2aa" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="1000" y="884.0" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">ROUTING</text>
+<circle cx="780" cy="920" r="13" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="780" y="921.0" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">I</text>
+<circle cx="1230" cy="920" r="13" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="1230" y="921.0" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">J</text>
+<circle cx="780" cy="1430" r="13" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="780" y="1431.0" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">L</text>
+<circle cx="1230" cy="1430" r="13" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="1230" y="1431.0" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">K</text>
+<rect x="705.0" y="989.0" width="150" height="42" fill="#3b3b40" stroke="#e6e6e6" stroke-width="2.5"/>
+<line x1="717.0" y1="989.0" x2="717.0" y2="1031.0" stroke="#e6e6e6" stroke-width="2.5"/>
+<line x1="843.0" y1="989.0" x2="843.0" y2="1031.0" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="780" y="1010.0" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">PREROUTING</text>
+<rect x="945.0" y="988.0" width="150" height="44" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="1020" y="1002.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">IPSEC</text>
+<text x="1020" y="1017.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">DECRYPTION</text>
+<polygon points="1160.0,1010 1230,983.0 1300.0,1010 1230,1037.0" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="1230" y="1004.0" font-size="10" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">IPSEC</text>
+<text x="1230" y="1016.0" font-size="10" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">POLICY?</text>
+<polygon points="914.0,1077.0 1080.0,1077.0 1066.0,1133.0 900.0,1133.0" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="990" y="1097.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">ROUTING</text>
+<text x="990" y="1112.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">DECISION</text>
+<rect x="705.0" y="1084.0" width="150" height="42" fill="#3b3b40" stroke="#e6e6e6" stroke-width="2.5"/>
+<line x1="717.0" y1="1084.0" x2="717.0" y2="1126.0" stroke="#e6e6e6" stroke-width="2.5"/>
+<line x1="843.0" y1="1084.0" x2="843.0" y2="1126.0" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="780" y="1105.0" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">FORWARD</text>
+<rect x="1155.0" y="1084.0" width="150" height="42" fill="#3b3b40" stroke="#e6e6e6" stroke-width="2.5"/>
+<line x1="1167.0" y1="1084.0" x2="1167.0" y2="1126.0" stroke="#e6e6e6" stroke-width="2.5"/>
+<line x1="1293.0" y1="1084.0" x2="1293.0" y2="1126.0" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="1230" y="1105.0" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">INPUT</text>
+<rect x="705.0" y="1189.0" width="150" height="42" fill="#3b3b40" stroke="#e6e6e6" stroke-width="2.5"/>
+<line x1="717.0" y1="1189.0" x2="717.0" y2="1231.0" stroke="#e6e6e6" stroke-width="2.5"/>
+<line x1="843.0" y1="1189.0" x2="843.0" y2="1231.0" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="780" y="1210.0" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">POSTROUTING</text>
+<rect x="1155.0" y="1189.0" width="150" height="42" fill="#3b3b40" stroke="#e6e6e6" stroke-width="2.5"/>
+<line x1="1167.0" y1="1189.0" x2="1167.0" y2="1231.0" stroke="#e6e6e6" stroke-width="2.5"/>
+<line x1="1293.0" y1="1189.0" x2="1293.0" y2="1231.0" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="1230" y="1210.0" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">OUTPUT</text>
+<polygon points="710.0,1305 780,1278.0 850.0,1305 780,1332.0" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="780" y="1299.0" font-size="10" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">IPSEC</text>
+<text x="780" y="1311.0" font-size="10" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">POLICY?</text>
+<rect x="915.0" y="1283.0" width="150" height="44" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="990" y="1297.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">IPSEC</text>
+<text x="990" y="1312.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">ENCRYPTION</text>
+<polygon points="1159.0,1288.0 1315.0,1288.0 1301.0,1342.0 1145.0,1342.0" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="1230" y="1307.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">ROUTING</text>
+<text x="1230" y="1322.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">DECISION</text>
+<polyline points="780,934 780,988" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="793,926 895,965 952,1076" fill="none" stroke="#9aa2aa" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ahg)"/>
+<text x="912" y="946.0" font-size="10" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="#9aa2aa">USE-IP-FIREWALL: PREROUTING</text>
+<text x="912" y="958.0" font-size="10" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="#9aa2aa">ALREADY DONE IN BRIDGE</text>
+<polyline points="820,1031 930,1082" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="900,1105 856,1105" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="1080,1105 1154,1105" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="1230,1083 1230,1038" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="1230,982 1230,934" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<text x="1245" y="960.0" font-size="11" font-weight="normal" text-anchor="start" dominant-baseline="central" fill="#e6e6e6">NO</text>
+<polyline points="1160,1010 1096,1010" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<text x="1130" y="996.0" font-size="11" font-weight="normal" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">YES</text>
+<polyline points="944,1010 856,1010" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="780,1127 780,1188" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="1154,1210 856,1210" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="780,1232 780,1278" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="850,1305 914,1305" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<text x="882" y="1291.0" font-size="11" font-weight="normal" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">YES</text>
+<polyline points="1066,1305 1152,1310" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="780,1332 780,1415" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<text x="792" y="1375.0" font-size="11" font-weight="normal" text-anchor="start" dominant-baseline="central" fill="#e6e6e6">NO</text>
+<polyline points="1230,1415 1230,1343" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="1230,1288 1230,1232" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1340" y="860" width="420" height="600" fill="none" stroke="#9aa2aa" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="1550" y="884.0" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">MPLS</text>
+<circle cx="1375" cy="960" r="13" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="1375" y="961.0" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">E</text>
+<circle cx="1735" cy="1060" r="13" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="1735" y="1061.0" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">F</text>
+<circle cx="1735" cy="1220" r="13" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="1735" y="1221.0" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">G</text>
+<circle cx="1490" cy="1360" r="13" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2.5"/>
+<text x="1490" y="1361.0" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">H</text>
+<polygon points="1434.0,935.0 1560.0,935.0 1546.0,985.0 1420.0,985.0" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="1490" y="953.4" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">MPLS</text>
+<text x="1490" y="966.6" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">DECISION</text>
+<rect x="1580.0" y="938.0" width="140" height="44" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="1650" y="953.4" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">POP LABEL</text>
+<text x="1650" y="966.6" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">(MPLS INPUT)</text>
+<polygon points="1570.0,1060 1640,1032.0 1710.0,1060 1640,1088.0" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="1640" y="1054.0" font-size="10" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">VPLS OR TE</text>
+<text x="1640" y="1066.0" font-size="10" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">TUNNEL?</text>
+<rect x="1420.0" y="1038.0" width="140" height="44" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="1490" y="1053.4" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">SWITCH LABEL</text>
+<text x="1490" y="1066.6" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">(MPLS FORWARD)</text>
+<polygon points="1564.0,1195.0 1690.0,1195.0 1676.0,1245.0 1550.0,1245.0" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="1620" y="1213.4" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">MPLS</text>
+<text x="1620" y="1226.6" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">DECISION</text>
+<rect x="1550.0" y="1278.0" width="140" height="44" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="2"/>
+<text x="1620" y="1293.4" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">PUSH LABEL</text>
+<text x="1620" y="1306.6" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">(MPLS OUTPUT)</text>
+<rect x="1565.0" y="1123.0" width="150" height="34" rx="17.0" fill="#1b1b1d" stroke="#e6e6e6" stroke-width="3"/>
+<text x="1640" y="1140.0" font-size="10" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">TO DECAPSULATE</text>
+<polyline points="1389,960 1418,960" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="1562,960 1578,960" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="1650,982 1645,1030" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="1710,1060 1720,1060" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<text x="1712" y="1042.0" font-size="11" font-weight="normal" text-anchor="middle" dominant-baseline="central" fill="#e6e6e6">NO</text>
+<polyline points="1640,1088 1640,1121" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<text x="1650" y="1104.0" font-size="11" font-weight="normal" text-anchor="start" dominant-baseline="central" fill="#e6e6e6">YES</text>
+<polyline points="1490,985 1490,1036" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="1490,1082 1490,1345" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="1721,1220 1692,1220" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="1620,1245 1620,1276" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="1550,1310 1504,1352" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#ah)"/>
+</svg>

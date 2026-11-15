@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "inspect"
 sidebar_label: 'inspect'
 source: https://manual.mikrotik.com/docs/cli-reference/console/inspect
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

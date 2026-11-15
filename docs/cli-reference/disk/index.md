@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/disk"
 title: "disk"
 sidebar_label: 'disk'
 source: https://manual.mikrotik.com/docs/cli-reference/disk
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

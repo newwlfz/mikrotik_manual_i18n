@@ -4,7 +4,6 @@ sidebar_position: 8
 title: "upgrade-firmware"
 sidebar_label: 'upgrade-firmware'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/pwr-line/upgrade-firmware
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

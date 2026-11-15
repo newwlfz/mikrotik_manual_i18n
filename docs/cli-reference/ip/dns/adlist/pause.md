@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "pause"
 sidebar_label: 'pause'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/dns/adlist/pause
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "MikroTik Tag advertisement formats"
 sidebar_label: 'MikroTik Tag advertisement formats'
 source: https://manual.mikrotik.com/docs/internet-of-things/bluetooth/mikrotik-beacon-manager/mikrotik-tag-advertisement-formats
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ##

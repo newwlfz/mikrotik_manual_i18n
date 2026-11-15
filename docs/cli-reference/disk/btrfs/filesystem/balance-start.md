@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "balance-start"
 sidebar_label: 'balance-start'
 source: https://manual.mikrotik.com/docs/cli-reference/disk/btrfs/filesystem/balance-start
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

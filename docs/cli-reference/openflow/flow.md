@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "flow"
 sidebar_label: 'flow'
 source: https://manual.mikrotik.com/docs/cli-reference/openflow/flow
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

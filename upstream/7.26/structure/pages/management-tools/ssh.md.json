@@ -4,8 +4,8 @@
   "local_path": "management-tools/ssh.md",
   "source_url": "https://manual.mikrotik.com/docs/management-tools/ssh.md",
   "html_url": "https://manual.mikrotik.com/docs/management-tools/ssh",
-  "md_sha256": "fc5bd669a9668b7269361fd581cac511940c5885a012b9e177c01ef001dd6539",
-  "html_sha256": "bb65bdef0851adfbe12396a7c31669b106dc8e6aaad559b4b27a503352c453b3",
+  "md_sha256": "d2986e792f0501bb025652dd63a2b05a0c8f987643bddfbb9f465a5698cdaae3",
+  "html_sha256": "d759a5329b6a019ee92b84f328f239ccf2d0946d6abbd614f203f0169e2e3dea",
   "body": {
     "html": {
       "lists": 1,
@@ -14,7 +14,7 @@
       "details": 0,
       "tables": 0,
       "sup": 0,
-      "code": 54,
+      "code": 60,
       "wideTables": 0
     },
     "md": {

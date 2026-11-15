@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/lte/esim"
 title: "esim"
 sidebar_label: 'esim'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

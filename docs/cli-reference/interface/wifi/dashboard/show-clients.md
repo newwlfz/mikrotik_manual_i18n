@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "show-clients"
 sidebar_label: 'show-clients'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wifi/dashboard/show-clients
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

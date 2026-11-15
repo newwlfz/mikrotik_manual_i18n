@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "remove-file"
 sidebar_label: 'remove-file'
 source: https://manual.mikrotik.com/docs/cli-reference/system/backup/cloud/remove-file
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

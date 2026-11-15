@@ -9,7 +9,6 @@ tags:
   - 'port-extender'
   - 'vlan'
 source: https://manual.mikrotik.com/docs/7.24/bridging-and-switching/user-guides/controller-bridge-and-port-extender
-captured_at: '2026-11-07T17:11:03.548Z'
 ---
 
 :::danger
@@ -134,7 +133,7 @@ To better understand the underlying principles of Controlling Bridge and Port Ex
 
 |  |  |
 | :-- | :-- |
-| ![CB Unicast 3](/img/0b036b8c3624374c.webp)<br/> |  |
+| <img decoding="async" loading="lazy" alt="CB Unicast 3" src="/img/0b036b8c3624374c.webp" width="822" height="613"/><br/> |  |
 
 ![CB Broadcast 2](/img/c463f4757394bb7b.webp) 
 

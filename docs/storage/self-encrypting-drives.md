@@ -5,7 +5,6 @@ title: "Self-encrypting drives (SED)"
 sidebar_label: 'Self-encrypting drives (SED)'
 description: 'RouterOS supports Self-Encrypting Drives (SED) using the TCG-Opal standard, requiring the Storage package. Supported drives show o (inactive) / O (active) flags in /disk/print, and encryption can be enabled with self-encryption-password.'
 source: https://manual.mikrotik.com/docs/storage/self-encrypting-drives
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 :::info

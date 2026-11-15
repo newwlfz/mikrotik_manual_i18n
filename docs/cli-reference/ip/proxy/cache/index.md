@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/proxy/cache"
 title: "cache"
 sidebar_label: 'cache'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/proxy/cache
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

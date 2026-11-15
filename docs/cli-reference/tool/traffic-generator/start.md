@@ -4,7 +4,6 @@ sidebar_position: 7
 title: "start"
 sidebar_label: 'start'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/start
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

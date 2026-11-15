@@ -4,7 +4,6 @@ sidebar_position: 44
 title: "xfrm"
 sidebar_label: 'xfrm'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/xfrm
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

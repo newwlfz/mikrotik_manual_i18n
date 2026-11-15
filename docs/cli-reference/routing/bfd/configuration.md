@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "configuration"
 sidebar_label: 'configuration'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/bfd/configuration
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "update-package-source"
 sidebar_label: 'update-package-source'
 source: https://manual.mikrotik.com/docs/cli-reference/system/package/local-update/update-package-source
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "authentication"
 sidebar_label: 'authentication'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/bfd/authentication
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

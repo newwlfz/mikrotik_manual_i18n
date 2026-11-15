@@ -10,7 +10,6 @@ tags:
   - 'security'
   - 'firewall'
 source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/user-guides/bruteforce-prevention
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Every public IP address receives a steady stream of automated login attempts. RouterOS delays its answer to each failed login, which slows guessing down, but it does not block the source address. If SSH on your router is reachable from the internet, a bot can keep guessing passwords for as long as it likes.

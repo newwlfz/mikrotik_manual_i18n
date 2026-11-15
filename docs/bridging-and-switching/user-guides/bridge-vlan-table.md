@@ -8,7 +8,6 @@ tags:
   - 'bridge-vlan-filtering'
   - 'vlan'
 source: https://manual.mikrotik.com/docs/bridging-and-switching/user-guides/bridge-vlan-table
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ---

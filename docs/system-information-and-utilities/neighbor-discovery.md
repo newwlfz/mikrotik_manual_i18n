@@ -8,7 +8,6 @@ tags:
   - 'neighbor-discovery'
   - 'lldp'
 source: https://manual.mikrotik.com/docs/system-information-and-utilities/neighbor-discovery
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Neighbor Discovery protocols allow you to find devices compatible with MNDP (MikroTik Neighbor Discovery Protocol), CDP (Cisco Discovery Protocol), or LLDP (Link Layer Discovery Protocol) in the Layer 2 broadcast domain. They can be used to map out your network.

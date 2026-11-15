@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "HTTPS post and Azure configuration"
 sidebar_label: 'HTTPS post and Azure configuration'
 source: https://manual.mikrotik.com/docs/internet-of-things/bluetooth/user-guides/https-post-and-azure-configuration
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ### Introduction

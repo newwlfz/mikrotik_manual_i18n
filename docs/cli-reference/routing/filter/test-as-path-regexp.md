@@ -4,7 +4,6 @@ sidebar_position: 10
 title: "test-as-path-regexp"
 sidebar_label: 'test-as-path-regexp'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/filter/test-as-path-regexp
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

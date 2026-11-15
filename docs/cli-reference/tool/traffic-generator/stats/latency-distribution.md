@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "latency-distribution"
 sidebar_label: 'latency-distribution'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/traffic-generator/stats/latency-distribution
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

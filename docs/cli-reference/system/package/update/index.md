@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/package/update"
 title: "update"
 sidebar_label: 'update'
 source: https://manual.mikrotik.com/docs/cli-reference/system/package/update
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

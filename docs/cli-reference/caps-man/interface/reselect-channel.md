@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "reselect-channel"
 sidebar_label: 'reselect-channel'
 source: https://manual.mikrotik.com/docs/cli-reference/caps-man/interface/reselect-channel
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

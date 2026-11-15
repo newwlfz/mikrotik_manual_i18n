@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "qkd-get-key"
 sidebar_label: 'qkd-get-key'
 source: https://manual.mikrotik.com/docs/cli-reference/system/keymat-provider/qkd-get-key
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

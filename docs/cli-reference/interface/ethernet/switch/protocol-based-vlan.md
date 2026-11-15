@@ -4,7 +4,6 @@ sidebar_position: 17
 title: "protocol-based-vlan"
 sidebar_label: 'protocol-based-vlan'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/protocol-based-vlan
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

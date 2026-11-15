@@ -4,7 +4,6 @@ sidebar_position: 10
 title: "refreshes"
 sidebar_label: 'refreshes'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/proxy/refreshes
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

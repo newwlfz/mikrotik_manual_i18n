@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "l2tp-secret"
 sidebar_label: 'l2tp-secret'
 source: https://manual.mikrotik.com/docs/cli-reference/ppp/l2tp-secret
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

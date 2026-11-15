@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "filter-wizard"
 sidebar_label: 'filter-wizard'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/filter/filter-wizard
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

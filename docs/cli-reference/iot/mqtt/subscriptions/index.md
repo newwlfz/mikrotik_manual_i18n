@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/iot/mqtt/subscriptions"
 title: "subscriptions"
 sidebar_label: 'subscriptions'
 source: https://manual.mikrotik.com/docs/cli-reference/iot/mqtt/subscriptions
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

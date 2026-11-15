@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ipv6/firewall/mangle"
 title: "mangle"
 sidebar_label: 'mangle'
 source: https://manual.mikrotik.com/docs/cli-reference/ipv6/firewall/mangle
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

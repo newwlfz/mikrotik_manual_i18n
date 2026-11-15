@@ -9,7 +9,6 @@ tags:
   - 'icmp'
   - 'scripting'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/netwatch
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Netwatch monitors the state of hosts on the network and runs scripts when a host's state changes. Each probe monitors one host and has a state (`unknown` until the first test completes, then `up` or `down`), test statistics and its own interval and timeout.

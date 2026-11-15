@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "add-acme"
 sidebar_label: 'add-acme'
 source: https://manual.mikrotik.com/docs/cli-reference/certificate/add-acme
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

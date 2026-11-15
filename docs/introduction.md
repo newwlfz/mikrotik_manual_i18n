@@ -7,7 +7,6 @@ description: 'MikroTik RouterOS is a powerful network operating system for Mikro
 tags:
   - 'cli-reference'
 source: https://manual.mikrotik.com/docs/introduction
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 MikroTik RouterOS is the network operating system that powers MikroTik routers, switches, and wireless devices. It brings together routing, firewalling, VPN, wireless management, quality of service, automation, and monitoring tools in a single platform for building and operating networks of all sizes.

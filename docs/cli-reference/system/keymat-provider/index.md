@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/keymat-provider"
 title: "keymat-provider"
 sidebar_label: 'keymat-provider'
 source: https://manual.mikrotik.com/docs/cli-reference/system/keymat-provider
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

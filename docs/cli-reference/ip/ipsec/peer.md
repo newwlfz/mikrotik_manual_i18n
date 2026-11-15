@@ -4,7 +4,6 @@ sidebar_position: 6
 title: "peer"
 sidebar_label: 'peer'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/peer
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

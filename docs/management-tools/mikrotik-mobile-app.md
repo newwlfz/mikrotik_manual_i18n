@@ -7,7 +7,6 @@ description: 'The MikroTik mobile app provides both basic and advanced configura
 tags:
   - 'management'
 source: https://manual.mikrotik.com/docs/management-tools/mikrotik-mobile-app
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Summary

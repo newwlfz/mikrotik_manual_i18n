@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "show-devices"
 sidebar_label: 'show-devices'
 source: https://manual.mikrotik.com/docs/cli-reference/cmr/upgrade/show-devices
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

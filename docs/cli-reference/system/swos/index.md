@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/swos"
 title: "swos"
 sidebar_label: 'swos'
 source: https://manual.mikrotik.com/docs/cli-reference/system/swos
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

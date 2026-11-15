@@ -9,7 +9,6 @@ tags:
   - 'docker'
   - 'container'
 source: https://manual.mikrotik.com/docs/containers/user-guides/container-postgres
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 PostgreSQL is a powerful, widely-used SQL database engine that serves as the backbone for numerous applications, ranging from small web projects to enterprise-level systems. This guide will walk you through the essential steps required to get PostgreSQL up and running on RouterOS. Additionally, this guide will provide you with the necessary instructions to set up pgAdmin—a feature-rich, web-based interface that allows you to easily manage your PostgreSQL database.

@@ -4,7 +4,6 @@ sidebar_position: 25
 title: "trunk"
 sidebar_label: 'trunk'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/trunk
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

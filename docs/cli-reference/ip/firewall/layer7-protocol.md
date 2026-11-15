@@ -4,7 +4,6 @@ sidebar_position: 5
 title: "layer7-protocol"
 sidebar_label: 'layer7-protocol'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/firewall/layer7-protocol
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

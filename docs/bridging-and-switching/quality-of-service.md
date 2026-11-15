@@ -9,7 +9,6 @@ tags:
   - 'marvell-prestera'
   - 'active-queue-management'
 source: https://manual.mikrotik.com/docs/bridging-and-switching/quality-of-service
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This document describes **Quality of Service (QoS)** implementation in RouterOS for devices equipped with **[Marvell Prestera switch chips](/docs/bridging-and-switching/marvell-prestera-switch-chip-features)**.
@@ -412,6 +411,79 @@ RouterOS enables enabling or disabling the shared pool for each queue individual
 :::info
 The default best-effort traffic class (PCP=0, DSCP=0) is traffic class 1, while the lowest priority traffic (PCP=1) uses traffic class 0.
 :::
+
+### To CPU QoS
+
+Prestera switch chips use a separate set of transmit queues for frames destined to the CPU (the control plane). This is independent of the port QoS queues used for forwarded traffic. The switch assigns every trapped packet a CPU code and maps high-priority codes to `queue1`. Every CPU lane has one `queue0` and one `queue1`, and each packet leaves through one of them:
+
+- `queue0` carries regular data traffic sent to the CPU.
+- `queue1` is the high-priority queue and is served first.
+
+The separation keeps the control plane responsive when data traffic saturates the CPU. A data packet storm toward the CPU fills `queue0` and can be dropped there, while control traffic in `queue1` continues to be delivered. On boards with several CPU lanes, for example CCR2116 and CRS520, each lane has its own queue pair and RouterOS distributes traffic between the lanes. The TO_CPU counters on these boards report one value per lane.
+
+:::note
+TO_CPU traffic uses only two priorities. `queue1` is the highest, unlike the eight port queues where `queue7` is the highest. The port QoS profile, DSCP, and PCP marking of an ingress packet do not affect which TO_CPU queue the packet uses.
+:::
+
+#### Default High-Priority Traffic
+
+The switch assigns the high-priority CPU queue to control traffic trapped by these CPU codes:
+
+- Spanning tree BPDUs and other reserved multicast control frames in the `01:80:C2:00:00:0x` range, including LACP, 802.1X, MVRP, LLDP, and MLAG.
+- IPv6 ICMP and neighbor discovery.
+- ARP broadcast and ARP replies addressed to the router.
+- Traffic matched by a switch rule with `cpu-high-priority=yes`.
+
+:::note
+Reserved multicast frames are sent to the CPU and prioritized only when the bridge setting `forward-reserved-addresses` is `no`, which is the default. With `forward-reserved-addresses=yes` the bridge forwards these frames instead, so they do not use the high-priority CPU queue. For the full list of reserved addresses and the protocols that use them, see [bridge settings](/docs/bridging-and-switching/#bridge-settings).
+:::
+
+RouterOS also creates dynamic ACL rules with `cpu-high-priority=yes` for features that inspect packets in the control plane:
+
+- [IGMP and MLD snooping](/docs/bridging-and-switching/user-guides/bridge-igmp-mld-snooping).
+- [DHCP and DHCPv6 snooping](/docs/bridging-and-switching/#dhcp-snooping-and-dhcp-option-82).
+- [ARP inspection](/docs/bridging-and-switching/#arp-inspection-and-ip-source-guard).
+- [RA guard](/docs/bridging-and-switching/#ra-guard).
+- [Loop protect](/docs/bridging-and-switching/user-guides/loop-protect).
+- [RoMON](/docs/management-tools/romon).
+- [PTP](/docs/system-information-and-utilities/precision-time-protocol).
+
+All other packets sent to the CPU use `queue0`.
+
+#### Viewing TO_CPU Counters
+
+The `switch-cpu` port reports per-queue counters in the [QoS port statistics](/docs/cli-reference/interface/ethernet/switch/qos/port/):
+
+```ros
+/interface/ethernet/switch/qos/port/print stats where name=switch1-cpu
+```
+
+The fields to monitor are:
+
+- `tx-queue0-packet` and `tx-queue0-byte` - regular traffic delivered to the CPU.
+- `tx-queue1-packet` and `tx-queue1-byte` - high-priority traffic delivered to the CPU.
+- `tx-drop-queue0-packet` and `tx-drop-queue1-packet` - packets dropped in the corresponding queue.
+
+Queue0 counters growing while queue1 counters stay flat mean that data traffic is reaching the CPU without high-priority traffic. Queue0 drops under load are expected because the CPU cannot process every packet. Queue1 should keep delivering control traffic.
+
+On boards with several CPU lanes, the same field prints one value per lane. To monitor the changes live, use:
+
+```ros
+/interface/ethernet/switch/qos/port/print stats proplist=name,tx-queue0-packet,tx-queue1-packet interval=1s where name~"cpu"
+```
+
+#### Prioritizing Management Access with ACL Rules
+
+A Layer 2 loop or a broadcast storm can saturate the CPU with data traffic and make the switch unreachable. Prioritize the management traffic so you can still log in, find the cause, and stop the loop. The following rules put SSH and WinBox traffic received on `ether1` into the high-priority CPU queue:
+
+```ros
+/interface/ethernet/switch/rule/add switch=switch1 ports=ether1 protocol=tcp dst-port=22 redirect-to-cpu=yes cpu-high-priority=yes
+/interface/ethernet/switch/rule/add switch=switch1 ports=ether1 protocol=tcp dst-port=8291 redirect-to-cpu=yes cpu-high-priority=yes
+```
+
+Replace `ether1` with the port where management traffic enters the switch. Use `copy-to-cpu=yes` instead of `redirect-to-cpu=yes` when the packet must also be forwarded to its destination.
+
+You can use the same rule structure to prioritize dynamic routing protocol traffic, such as OSPF or BGP. `cpu-high-priority=yes` has no effect without `redirect-to-cpu=yes` or `copy-to-cpu=yes`.
 
 ## Hardware Resources
 

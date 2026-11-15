@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/resource/hardware"
 title: "hardware"
 sidebar_label: 'hardware'
 source: https://manual.mikrotik.com/docs/cli-reference/system/resource/hardware
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

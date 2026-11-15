@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "export-pub-key"
 sidebar_label: 'export-pub-key'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/ipsec/key/rsa/export-pub-key
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

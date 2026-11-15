@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "country-info"
 sidebar_label: 'country-info'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/info/country-info
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

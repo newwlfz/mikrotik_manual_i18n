@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "export-db"
 sidebar_label: 'export-db'
 source: https://manual.mikrotik.com/docs/cli-reference/dude/export-db
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

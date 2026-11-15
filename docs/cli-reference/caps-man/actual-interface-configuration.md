@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "actual-interface-configuration"
 sidebar_label: 'actual-interface-configuration'
 source: https://manual.mikrotik.com/docs/cli-reference/caps-man/actual-interface-configuration
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

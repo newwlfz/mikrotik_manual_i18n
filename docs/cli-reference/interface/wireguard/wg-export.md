@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "wg-export"
 sidebar_label: 'wg-export'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireguard/wg-export
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

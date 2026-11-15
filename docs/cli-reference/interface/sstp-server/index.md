@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/sstp-server"
 title: "sstp-server"
 sidebar_label: 'sstp-server'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/sstp-server
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

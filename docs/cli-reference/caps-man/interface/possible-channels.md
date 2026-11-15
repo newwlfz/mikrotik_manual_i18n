@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "possible-channels"
 sidebar_label: 'possible-channels'
 source: https://manual.mikrotik.com/docs/cli-reference/caps-man/interface/possible-channels
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -8,7 +8,6 @@ tags:
   - 'discovery-phase'
   - 'mtu'
 source: https://manual.mikrotik.com/docs/virtual-private-networks/pppoe
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 This section covers PPPoE examples. Use it to configure IPv6 prefix delegation over PPP and MLPPP over one or more links.

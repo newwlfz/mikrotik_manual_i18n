@@ -9,7 +9,6 @@ tags:
   - 'ip-header-modification'
   - 'packet-marking'
 source: https://manual.mikrotik.com/docs/firewall-and-quality-of-service/firewall/mangle
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Mangle is a kind of 'marker' that marks packets for future processing with special marks. Many other facilities in RouterOS make use of these marks, e.g. queue trees, NAT, routing. They identify a packet based on its mark and process it accordingly. The mangle marks exist only within the router, and they are not transmitted across the network.

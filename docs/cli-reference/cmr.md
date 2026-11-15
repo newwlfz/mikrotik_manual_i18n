@@ -2,7 +2,6 @@
 sidebar_key: "cli-reference/cmr"
 title: "cmr"
 source: https://manual.mikrotik.com/docs/cli-reference/cmr
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

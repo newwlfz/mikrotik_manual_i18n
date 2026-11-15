@@ -8,7 +8,6 @@ tags:
   - 'switching'
   - 'vlan'
 source: https://manual.mikrotik.com/docs/bridging-and-switching/user-guides
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 These case studies show common RouterOS bridging and switching designs, including VLAN switching, IGMP and MLD snooping, spanning tree, loop protection, and switch-chip behavior. Use them as practical examples for Layer 2 deployments and troubleshooting.

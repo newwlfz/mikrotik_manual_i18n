@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "save"
 sidebar_label: 'save'
 source: https://manual.mikrotik.com/docs/cli-reference/user-manager/database/save
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/ethernet"
 title: "ethernet"
 sidebar_label: 'ethernet'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

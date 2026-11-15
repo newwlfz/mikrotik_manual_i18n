@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "save"
 sidebar_label: 'save'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/sniffer/save
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

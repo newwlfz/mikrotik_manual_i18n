@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/routing/rpki"
 title: "rpki"
 sidebar_label: 'rpki'
 source: https://manual.mikrotik.com/docs/cli-reference/routing/rpki
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

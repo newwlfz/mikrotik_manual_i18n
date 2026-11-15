@@ -4,7 +4,6 @@ sidebar_position: 10
 title: "export-certificate"
 sidebar_label: 'export-certificate'
 source: https://manual.mikrotik.com/docs/cli-reference/certificate/export-certificate
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

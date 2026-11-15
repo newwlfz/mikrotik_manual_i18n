@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/interface/ethernet/switch/acl"
 title: "acl"
 sidebar_label: 'acl'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch/acl
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

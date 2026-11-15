@@ -9,7 +9,6 @@ tags:
   - 'fan-control'
   - 'temperature'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/health
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Hardware that supports monitoring displays information about hardware status, such as temperature, voltage, current, fan speed, power supply state and power consumption. The same readings are also available in Winbox, on the **System → Health** tab. Devices without hardware sensors print nothing: this includes CHR and virtual machines, and boards that simply have no sensors (for example the hAP ax²).

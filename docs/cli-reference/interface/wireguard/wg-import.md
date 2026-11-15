@@ -4,7 +4,6 @@ sidebar_position: 3
 title: "wg-import"
 sidebar_label: 'wg-import'
 source: https://manual.mikrotik.com/docs/cli-reference/interface/wireguard/wg-import
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

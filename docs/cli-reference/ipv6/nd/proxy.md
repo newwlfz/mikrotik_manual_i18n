@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "proxy"
 sidebar_label: 'proxy'
 source: https://manual.mikrotik.com/docs/cli-reference/ipv6/nd/proxy
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "make-static"
 sidebar_label: 'make-static'
 source: https://manual.mikrotik.com/docs/cli-reference/ipv6/dhcp-server/binding/make-static
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

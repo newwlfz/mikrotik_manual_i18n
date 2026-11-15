@@ -8,7 +8,6 @@ tags:
   - 'icmp'
   - 'ping'
 source: https://manual.mikrotik.com/docs/diagnostics-monitoring-and-troubleshooting/ping
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 Ping checks whether a host answers and how long the answer takes. The router sends Internet Control Message Protocol (ICMP) echo requests (type 8) to the host, and the host answers each one with an echo reply (type 0). The time between a request and its reply is the round-trip time. A request whose reply does not arrive within `interval`, 1 second by default, is reported as a timeout.

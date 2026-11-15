@@ -7,7 +7,6 @@ description: 'This page provides basic VRRP configuration examples for MikroTik 
 tags:
   - 'vrrp'
 source: https://manual.mikrotik.com/docs/high-availability-solutions/user-guides/vrrp-configuration-examples
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Basic Setup

@@ -9,7 +9,6 @@ tags:
   - 'mac-layer'
   - 'management'
 source: https://manual.mikrotik.com/docs/management-tools/romon
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 RoMON (Router Management Overlay Network) builds an independent MAC-layer peer discovery and data forwarding network between routers. RoMON packets use EtherType 0x88bf and destination multicast MAC 01:80:c2:00:88:bf and are handled independently of L2 or L3 configuration: a router stays reachable through RoMON even when its IP configuration, routing or firewall is broken. That makes RoMON a recovery path into misconfigured routers, one overlay hop at a time.

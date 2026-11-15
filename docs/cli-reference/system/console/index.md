@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/console"
 title: "console"
 sidebar_label: 'console'
 source: https://manual.mikrotik.com/docs/cli-reference/system/console
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

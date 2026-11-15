@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "used"
 sidebar_label: 'used'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/pool/used
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -1,6 +1,6 @@
 ---
 sidebar_key: "wireless/wifi/interworking-for-wifi6"
-sidebar_position: 6
+sidebar_position: 7
 title: "Interworking for WiFi6"
 sidebar_label: 'Interworking for WiFi6'
 description: 'This page documents MikroTik RouterOS''s Interworking for WiFi6, enabling secure network discovery and access point selection via IEEE 802.11u/Hotspot 2.0 standards. It explains configuration methods, interworking profile settings, and ANQP elements for enhanced client device communication with access points.'
@@ -9,7 +9,6 @@ tags:
   - 'interworking'
   - 'hotspot-20'
 source: https://manual.mikrotik.com/docs/wireless/wifi/interworking-for-wifi6
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 ## Interworking

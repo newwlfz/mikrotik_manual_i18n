@@ -9,7 +9,6 @@ tags:
   - 'bgp'
   - 'rfc-9234'
 source: https://manual.mikrotik.com/docs/user-guides/routing-and-networking-protocols/unicast/bgp/route-leak-prevention
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 A route leak occurs when a BGP speaker announces routes to a peer that, according to the configured business relationship, should not receive them. For example, a transit customer that re-announces routes learned from one provider to another provider can cause traffic to be routed through the customer's network, potentially bypassing the intended path and creating routing loops or traffic interception.

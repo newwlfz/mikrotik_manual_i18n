@@ -7,7 +7,6 @@ description: 'Dude is a legacy network management tool discontinued by MikroTik,
 tags:
   - 'dude'
 source: https://manual.mikrotik.com/docs/management-tools/dude
-captured_at: '2026-11-09T11:35:47.715Z'
 pagination_next: "management-tools/cmr"
 ---
 

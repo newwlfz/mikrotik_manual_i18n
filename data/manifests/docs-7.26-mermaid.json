@@ -1,6 +1,6 @@
 {
  "version": "7.26",
- "generated": "2026-11-09T11:44:29.277Z",
+ "generated": "2026-11-15T08:29:02.898Z",
  "pages": {
   "getting-started/networking-fundamentals/index": [
    "flowchart LR\n  H1 --- H2\n\n  H1[\"**Host 1**<br />____________________<br /> **Address**: 192.168.0.1/32<br />**Network**: 192.168.0.2\"]\n  H2[\"**Host 2**<br />____________________<br /> **Address**: 192.168.0.2/32<br />**Network**: 192.168.0.1\"]\n\n  style H1 text-align:left\n  style H2 text-align:left",
@@ -35,6 +35,9 @@
   "user-guides/routing-and-networking-protocols/vrf": [
    "graph LR\n    client1[\"<b>client1</b>\nip (*.2)\"] -->|10.11.0.0/24| vrf1[\"<b>vrf1</b>\nip (*.1)\"]\n    vrf2[\"<b>vrf2</b>\nip (*.1)\"] -->|10.12.0.0/24| client2[\"<b>client2</b>\nip (*.2)\"]\n    subgraph Router[\"<b>Router</b>\"]\n        direction LR\n        vrf1 ~~~ vrf2\n    end",
    "graph LR\n    CUST_A1[\"<b>client1</b>\"] ---|10.12.0.0/24| cust_a1_vrf[\"<b>cust_a</b><br />vrf\"] ---|BGP VPN| cust_a2_vrf[\"<b>cust_a</b><br />vrf\"] ---|10.12.0.0/24| CUST_A2[\"<b>client2</b>\"]\n    subgraph PE1[\"<b>PE1</b>\"]\n        direction LR\n        cust_a1_vrf\n    end\n    subgraph PE2[\"<b>PE2</b>\"]\n        direction LR\n        cust_a2_vrf\n    end\n    PE1 --- PE2"
+  ],
+  "wireless/wifi/configuring-meshpoint": [
+   "flowchart LR\n  R[Router] ---|Ethernet| G[Mesh gate]\n  G -.->|802.11s| B[Mesh point]\n  G -.->|802.11s| C[Mesh point]\n  C -.->|802.11s| D[Mesh point]\n  B --- BC[Client devices]\n  C --- CC[Client devices]\n  D --- DC[Client devices]"
   ]
  }
 }

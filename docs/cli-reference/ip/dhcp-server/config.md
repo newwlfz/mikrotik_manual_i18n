@@ -4,7 +4,6 @@ sidebar_position: 2
 title: "config"
 sidebar_label: 'config'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-server/config
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

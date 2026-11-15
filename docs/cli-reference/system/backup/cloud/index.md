@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/system/backup/cloud"
 title: "cloud"
 sidebar_label: 'cloud'
 source: https://manual.mikrotik.com/docs/cli-reference/system/backup/cloud
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

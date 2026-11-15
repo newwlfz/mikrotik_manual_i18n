@@ -4,7 +4,6 @@ sidebar_position: 1
 title: "remote-access"
 sidebar_label: 'remote-access'
 source: https://manual.mikrotik.com/docs/cli-reference/port/remote-access
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

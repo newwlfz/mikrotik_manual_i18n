@@ -8,7 +8,6 @@ tags:
   - 'storage'
   - 'tmpfs'
 source: https://manual.mikrotik.com/docs/storage/tmpfs
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 A tmpfs is a folder in RAM. RouterOS shows it as a disk, for example `tmp1`, and files go into it like into any other disk. Use it for files that are needed only for a while and should not wear out or fill the flash: packet captures, files that a script downloads and imports, and other temporary files. Tmpfs is part of the base RouterOS package and works on every device that has the `/disk` menu, which SMIPS devices do not have.

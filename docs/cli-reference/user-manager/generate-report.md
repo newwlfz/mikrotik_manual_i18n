@@ -4,7 +4,6 @@ sidebar_position: 4
 title: "generate-report"
 sidebar_label: 'generate-report'
 source: https://manual.mikrotik.com/docs/cli-reference/user-manager/generate-report
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

@@ -4,7 +4,6 @@ sidebar_position: 25
 title: "traceroute"
 sidebar_label: 'traceroute'
 source: https://manual.mikrotik.com/docs/cli-reference/tool/traceroute
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------

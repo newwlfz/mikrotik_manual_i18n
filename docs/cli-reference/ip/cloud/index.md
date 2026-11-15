@@ -3,7 +3,6 @@ sidebar_key: "cli-reference/ip/cloud"
 title: "cloud"
 sidebar_label: 'cloud'
 source: https://manual.mikrotik.com/docs/cli-reference/ip/cloud
-captured_at: '2026-11-09T11:35:47.715Z'
 ---
 
 -----------
