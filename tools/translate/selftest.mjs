@@ -22,7 +22,7 @@ import {
 import {renderAdmonition, splitAdmonitions} from './lib/admonitions.mjs';
 import {loadFenceConfig, resolveFenceLanguage} from '../../src/lib/fence-rules.mjs';
 import {pairBlocks} from './lib/legacy.mjs';
-import {alignImages, rebaseImages, rebuildFromPairs} from './lib/apply.mjs';
+import {alignImages, imageAlignment, rebaseImages, rebuildFromPairs} from './lib/apply.mjs';
 import {cjkCount, cjkRegression} from './lib/cjk.mjs';
 import {containLinkText} from './lib/links.mjs';
 import {applyReplacements} from './lib/patches.mjs';
@@ -243,6 +243,44 @@ check(
   alignImages('no images', '![](./img/gone.webp)'),
   '',
 );
+
+// image-align-adds-missing: the source grew a third picture; the overlay keeps
+// its translated prose and gets the new reference after the one it followed.
+const imageAddSource =
+  'Intro\n\n![one](/img/a.webp)\n\nMiddle\n\n![two](/img/b.webp)\n\nTail\n\n![three](/img/c.webp)';
+const imageAddOverlay = '介绍\n\n![one](/img/a.webp)\n\n中间\n\n![two](/img/b.webp)';
+const imageAdd = imageAlignment(imageAddSource, imageAddOverlay);
+check('image-align-adds-missing-count', (imageAdd.body.match(/!\[[^\]]*\]\([^)]*\)/g) || []).length, 3);
+check('image-align-adds-missing-url', imageAdd.body.includes('![three](/img/c.webp)'), true);
+check('image-align-adds-missing-keeps-prose', /介绍[\s\S]*中间/.test(imageAdd.body), true);
+check('image-align-adds-missing-added', imageAdd.added, 1);
+
+// image-align-removes-extra: an image the source dropped disappears, the text
+// around it stays untouched.
+const imageDrop = imageAlignment(
+  'Intro\n\n![one](/img/a.webp)\n\nTail',
+  '介绍\n\n![one](/img/a.webp)\n\n中间\n\n![old](/img/old.webp)\n\n尾巴',
+);
+check('image-align-removes-extra-count', (imageDrop.body.match(/!\[[^\]]*\]\([^)]*\)/g) || []).length, 1);
+check('image-align-removes-extra-url', imageDrop.body.includes('/img/old.webp'), false);
+check('image-align-removes-extra-keeps-prose', /介绍[\s\S]*中间[\s\S]*尾巴/.test(imageDrop.body), true);
+
+// image-align-html-source: an `<img src>` the overlay renders as Markdown is
+// kept and reported, because deleting it would remove the picture.
+const imageHtml = imageAlignment(
+  '<img alt="x" src="/img/x.webp"/>',
+  '![x](/img/x.webp)',
+);
+check('image-align-html-kept', imageHtml.body.includes('/img/x.webp'), true);
+check('image-align-html-warning', imageHtml.warnings[0]?.reason, 'html-image-in-source');
+
+// image-align-fence: image syntax inside a fence is example text, not a page
+// image, and must stay byte-identical.
+const imageFence = imageAlignment(
+  '![one](/img/a.webp)\n\n```\n![example](/img/example.webp)\n```',
+  '![one](/img/a.webp)\n\n```\n![example](/img/example.webp)\n```',
+);
+check('image-align-fence-untouched', imageFence.body.includes('![example](/img/example.webp)'), true);
 
 // structure-preserved: horizontal rules come from English, code stays English
 const english = 'Intro\n\n-----------\n\n```ros\n/ip/route\n```\n\nOutro';

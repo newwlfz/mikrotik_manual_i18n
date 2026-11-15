@@ -53,9 +53,10 @@ import {
   walkMarkdown,
   relative,
   ensureDir,
+  writeFileAtomic,
 } from './lib/paths.mjs';
 import {buildLegacy, buildTitleIndex, CJK} from './lib/legacy.mjs';
-import {applySection, cleanupOverlay, alignImages, rewriteLinks, rebaseImages} from './lib/apply.mjs';
+import {applySection, cleanupOverlay, alignImages, imageAlignment, images, isPreservedOverlay, rewriteLinks, rebaseImages} from './lib/apply.mjs';
 import {resourceLocales, verify} from './lib/verify.mjs';
 import {
   normalize,
@@ -161,6 +162,7 @@ const LOCALE_COMMANDS = new Set([
   'import-legacy',
   'apply',
   'translate',
+  'align',
   'descriptions',
   'comments',
   'admonitions',
@@ -175,8 +177,94 @@ class UsageError extends Error {
   }
 }
 
+/**
+ * Align every overlay's image references with its English source.
+ *
+ * Mirrors the Simplified/Traditional checkouts: only image Markdown is touched,
+ * and an overlay whose source page was deleted is removed (the English site no
+ * longer has that route). `--dry-run` reports without writing.
+ */
+function alignOverlayImages(sections, {dryRun = false, only = null, files = null, progress = process.stdout} = {}) {
+  const summary = {pages: 0, changed: 0, added: 0, removed: 0, replaced: 0, warnings: 0, orphans: 0, orphansRemoved: 0};
+  for (const section of sections) {
+    const sourceBase = path.join(REPO, section.source);
+    const overlayBase = path.join(REPO, section.overlay);
+    const sourceRels = new Set(walkMarkdown(sourceBase).map((file) => relative(sourceBase, file)));
+    for (const rel of sourceRels) {
+      if (only && rel !== only) continue;
+      if (files && files.size && !files.has(rel)) continue;
+      const overlayPath = path.join(overlayBase, rel);
+      if (!fs.existsSync(overlayPath)) continue;
+      if (isPreservedOverlay(rel, section.name)) continue;
+      summary.pages += 1;
+      const {body: sourceBody} = splitFrontMatter(fs.readFileSync(path.join(sourceBase, rel), 'utf8'));
+      const target = fs.readFileSync(overlayPath, 'utf8');
+      const {frontMatter, body} = splitFrontMatter(target);
+      const aligned = imageAlignment(sourceBody, body, {
+        sourceDir: path.posix.dirname(`${section.source}/${rel}`),
+        overlayDir: `${section.overlay}/${rel}`,
+      });
+      summary.warnings += aligned.warnings.length;
+      if (aligned.body !== body) {
+        summary.changed += 1;
+        summary.added += aligned.added;
+        summary.removed += aligned.removed;
+        summary.replaced += aligned.replaced;
+        if (!dryRun) writeFileAtomic(overlayPath, renderDocument(frontMatter, aligned.body));
+        if (dryRun) {
+          progress.write(
+            `${section.name}/${rel}: images ${images(sourceBody).length} -> ${images(body).length} ` +
+              `(+${aligned.added} -${aligned.removed} ~${aligned.replaced})\n`,
+          );
+        }
+      }
+    }
+    if (!only && !(files && files.size) && fs.existsSync(overlayBase)) {
+      for (const overlayFile of walkMarkdown(overlayBase)) {
+        const rel = relative(overlayBase, overlayFile);
+        if (sourceRels.has(rel)) continue;
+        summary.orphans += 1;
+        if (!dryRun) {
+          fs.rmSync(overlayFile);
+          summary.orphansRemoved += 1;
+        }
+      }
+    }
+  }
+  return summary;
+}
+
+/** Write comment translations already in the memory into the overlays. */
+function applyCommentTranslations(sections, {dryRun = false, only = null, files = null} = {}) {
+  const memory = loadCommentMemory();
+  const summary = {pages: 0, changed: 0, hits: 0, misses: 0};
+  for (const section of sections) {
+    const sourceBase = path.join(REPO, section.source);
+    const overlayBase = path.join(REPO, section.overlay);
+    for (const sourcePath of walkMarkdown(sourceBase)) {
+      const rel = relative(sourceBase, sourcePath);
+      if (only && rel !== only) continue;
+      if (files && files.size && !files.has(rel)) continue;
+      const overlayPath = path.join(overlayBase, rel);
+      if (!fs.existsSync(overlayPath)) continue;
+      if (isPreservedOverlay(rel, section.name)) continue;
+      summary.pages += 1;
+      const target = fs.readFileSync(overlayPath, 'utf8');
+      const {frontMatter, body} = splitFrontMatter(target);
+      const applied = translateCodeComments(body, (key) => memory.get(key) ?? null);
+      summary.hits += applied.hits;
+      summary.misses += applied.misses.length;
+      if (applied.body !== body) {
+        summary.changed += 1;
+        if (!dryRun) writeFileAtomic(overlayPath, renderDocument(frontMatter, applied.body));
+      }
+    }
+  }
+  return summary;
+}
+
 const USAGE =
-  'usage: node tools/translate/index.mjs <import-legacy|apply|verify|translate|descriptions|comments|tm|admonitions|status> [options]\n' +
+  'usage: node tools/translate/index.mjs <import-legacy|apply|verify|translate|align|descriptions|comments|tm|admonitions|status> [options]\n' +
   '       [--section=NAME] [--locale=NAME] [--all-locales] [--dry-run] [--adopt] [--allow-cjk-loss] [--limit=N] ...\n' +
   'note: an option value must be attached with "=" (--section=hardware); a space is not accepted.\n' +
   'note: --locale defaults to zh-Hans and must not be the source locale (en).\n' +
@@ -1124,6 +1212,26 @@ async function main() {
     return;
   }
 
+  if (command === 'align') {
+    // Image references are structure, not prose: make every overlay carry the
+    // source's set (and drop overlays whose source page is gone). Read-only
+    // under `--dry-run`, which prints the per-page deltas.
+    const summary = alignOverlayImages(selected, {
+      dryRun: Boolean(args['dry-run']),
+      only: args.file,
+      files: args.files
+        ? new Set(String(args.files).split(',').map((value) => value.trim()).filter(Boolean))
+        : null,
+      progress: process.stdout,
+    });
+    process.stdout.write(
+      `align pages=${summary.pages} changed=${summary.changed} +${summary.added} ` +
+        `-${summary.removed} ~${summary.replaced} warnings=${summary.warnings} ` +
+        `orphans=${summary.orphans} orphansRemoved=${summary.orphansRemoved}\n`,
+    );
+    return;
+  }
+
   if (command === 'verify') {
     // `--all-locales` checks every configured target that has resources; an
     // explicit `--locale` checks one. Neither changes the no-argument output.
@@ -1649,9 +1757,14 @@ async function translateComments(
       locale,
     });
     if (!args['dry-run']) {
+      // The memory alone is not the deliverable: apply it to the overlays so a
+      // comment batch is visible on the page, not only in `comment-memory.json`.
+      const applied = applyCommentTranslations(selected, {only: args.file});
       client.log(USAGE_FILE);
       const mem = loadCommentMemory();
-      process.stdout.write(`comment-memory=${mem.size}\n`);
+      process.stdout.write(
+        `comment-memory=${mem.size} pages=${applied.changed} hits=${applied.hits} misses=${applied.misses}\n`,
+      );
       reportScriptWarnings();
     }
     void summary;

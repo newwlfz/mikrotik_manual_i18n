@@ -284,3 +284,16 @@ export function relative(base, file) {
 export function ensureDir(dir) {
   fs.mkdirSync(dir, {recursive: true});
 }
+
+/**
+ * Write a file so that a reader never sees half of it.
+ *
+ * The temporary file sits next to the destination, so the rename stays inside
+ * one filesystem and replaces the target atomically.
+ */
+export function writeFileAtomic(file, data) {
+  ensureDir(path.dirname(file));
+  const tmp = `${file}.tmp-${process.pid}-${Date.now().toString(36)}`;
+  fs.writeFileSync(tmp, data);
+  fs.renameSync(tmp, file);
+}

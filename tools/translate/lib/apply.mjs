@@ -14,7 +14,7 @@ import path from 'node:path';
 import {SECTIONS, DEFAULT_TARGET_LOCALE, REPO, ensureDir, relative, walkMarkdown} from './paths.mjs';
 import {splitFrontMatter, readField, withFields, copyKeys, renderDocument} from './frontmatter.mjs';
 import {translationProvenance} from './provenance.mjs';
-import {translateBlocks, normalize, splitBlocks, splitBlockSpans, isHorizontalRule, segmentSpans, fenceMask, alignBlocks, sameBlockShape, isImageBlock, isStructuralBlock, isTagOnlyBlock, componentTagCount, imageTagCount, retargetLinks} from './blocks.mjs';
+import {translateBlocks, normalize, splitBlocks, splitBlockSpans, isHorizontalRule, segmentSpans, fenceMask, alignBlocks, blockSignature, sameBlockShape, isImageBlock, isStructuralBlock, isTagOnlyBlock, componentTagCount, imageTagCount, retargetLinks} from './blocks.mjs';
 import {splitAdmonitions, bodyParagraphs} from './admonitions.mjs';
 import {annotateDocumentTerms} from './term-annotate.mjs';
 import {digest, CJK} from './legacy.mjs';
@@ -61,24 +61,378 @@ function outsideFences(body, transform) {
   return out.join('');
 }
 
+/** `<img src="…">` images the source embeds as HTML instead of Markdown. */
+const HTML_IMAGE = /<img\b[^>]*?\bsrc\s*=\s*["']([^"']+)["'][^>]*>/gi;
+
+/** Every Markdown image occurrence in one block, with its byte range. */
+function imageRefs(block) {
+  return [...String(block).matchAll(IMAGE)].map((match) => ({
+    alt: match[1],
+    url: match[2],
+    start: match.index,
+    end: match.index + match[0].length,
+  }));
+}
+
+/** Resolve a page-relative image URL against the page's repository directory. */
+function resolvedImageUrl(url, baseDir) {
+  if (!baseDir || /^(?:[a-z]+:|\/|#)/i.test(url)) return url;
+  return path.posix.normalize(path.posix.join(baseDir, url.replace(/^\.\//, '')));
+}
+
 /**
- * Give the translation the source's image paths in the source's order. The
- * model (or an older capture) may carry stale asset names; paths are not prose
- * and must always point at the English source's assets.
+ * Render an image reference, pointing a relative source URL at the overlay's
+ * location when the caller supplied both directories (the standalone `align`
+ * pass does; `translate` rebases the whole page afterwards instead).
  */
-export function alignImages(sourceBody, targetBody) {
-  const wanted = images(sourceBody);
-  let index = 0;
-  const transform = (text) =>
-    text.replace(IMAGE, (whole, alt) => {
-      if (index >= wanted.length) {
-        // The source no longer carries this image (an old capture did), so
-        // keeping it would ship a broken link.
-        return '';
+function imageUrlAt(ref, context = {}) {
+  if (!/^(?:[a-z]+:|\/|#)/i.test(ref.url)) {
+    if (context.sourceDir && context.overlayDir) {
+      const resolved = resolvedImageUrl(ref.url, context.sourceDir);
+      const depth = context.overlayDir.split('/').length - 1;
+      return `${'../'.repeat(depth)}${resolved}`;
+    }
+    // Whole-page callers call `rebaseImages` right after; keep the source form.
+    return ref.url;
+  }
+  return ref.url;
+}
+
+function renderImage(ref, context = {}, alt = ref.alt) {
+  return `![${alt}](${imageUrlAt(ref, context)})`;
+}
+
+/** Equal URLs in order (LCS): `[sourceIndex, targetIndex]` pairs. */
+function matchImageUrls(source, target) {
+  const n = source.length;
+  const m = target.length;
+  if (n === 0 || m === 0) return [];
+  const width = m + 1;
+  // `length[i * width + j]` is the LCS length of `source[i..]` / `target[j..]`.
+  const length = new Int32Array((n + 1) * width);
+  for (let i = n - 1; i >= 0; i--) {
+    for (let j = m - 1; j >= 0; j--) {
+      length[i * width + j] =
+        source[i] === target[j]
+          ? length[(i + 1) * width + j + 1] + 1
+          : Math.max(length[(i + 1) * width + j], length[i * width + j + 1]);
+    }
+  }
+  const pairs = [];
+  let i = 0;
+  let j = 0;
+  while (i < n && j < m) {
+    if (source[i] === target[j]) {
+      pairs.push([i, j]);
+      i++;
+      j++;
+    } else if (length[(i + 1) * width + j] >= length[i * width + j + 1]) {
+      i++;
+    } else {
+      j++;
+    }
+  }
+  return pairs;
+}
+
+/**
+ * Reconcile the images of one target block with one source block.
+ *
+ * Only image Markdown is touched; every other byte of the translated block
+ * (prose, table cells, inline code) is preserved. Matched URLs keep their
+ * position, new source images are inserted next to the image they followed in
+ * the source, and target images the source no longer has are removed. When the
+ * two sides share no URL at all (a renamed/light-dark pair such as the packet
+ * flow diagrams) the images are paired by ordinal instead, which is the only
+ * stable relationship left.
+ */
+function alignBlockImageRefs(sourceRefs, targetRefs, base, sourceHtml, warn, context = {}) {
+  const edits = [];
+  let added = 0;
+  let removed = 0;
+  let replaced = 0;
+  const resolve = (ref) => resolvedImageUrl(ref.url, context.sourceDir);
+  const pairs = matchImageUrls(
+    sourceRefs.map(resolve),
+    targetRefs.map((ref) => resolvedImageUrl(ref.url, context.overlayDir)),
+  );
+  const insert = (at, refs) => {
+    if (refs.length === 0) return;
+    edits.push({start: base + at, end: base + at, text: refs.map((ref) => renderImage(ref, context)).join('')});
+    added += refs.length;
+  };
+  const drop = (ref) => {
+    if (sourceHtml.has(ref.url)) {
+      // The source still shows this picture, only as `<img src>`; deleting the
+      // Markdown would remove it from the page. Keep it and report the mismatch
+      // instead of silently dropping content.
+      warn({reason: 'html-image-in-source', url: ref.url});
+      return false;
+    }
+    edits.push({start: base + ref.start, end: base + ref.end, text: ''});
+    removed += 1;
+    return true;
+  };
+
+  if (pairs.length === 0) {
+    const common = Math.min(sourceRefs.length, targetRefs.length);
+    for (let k = 0; k < common; k++) {
+      const source = sourceRefs[k];
+      const target = targetRefs[k];
+      const same =
+        resolve(source) === resolvedImageUrl(target.url, context.overlayDir);
+      if (!same) {
+        // Keep the overlay's alt text: it may already be translated prose.
+        edits.push({
+          start: base + target.start,
+          end: base + target.end,
+          text: renderImage(source, context, target.alt),
+        });
+        replaced += 1;
       }
-      return `![${alt}](${wanted[index++]})`;
-    });
-  return outsideFences(targetBody, transform).replace(/\n{3,}/g, '\n\n');
+    }
+    if (sourceRefs.length > targetRefs.length) {
+      const at = targetRefs.length ? targetRefs[targetRefs.length - 1].end : 0;
+      insert(at, sourceRefs.slice(common));
+    } else {
+      for (const ref of targetRefs.slice(common)) drop(ref);
+    }
+    return {edits, added, removed, replaced};
+  }
+
+  let si = 0;
+  let ti = 0;
+  const bounds = [...pairs, [sourceRefs.length, targetRefs.length]];
+  for (const [pi, pj] of bounds) {
+    if (pi > si) {
+      // Source images before the next common URL: put them where they were in
+      // the source, immediately before the next target image (or after the last
+      // one when this is the tail).
+      const at = pj > 0 ? targetRefs[pj - 1].end : targetRefs.length ? targetRefs[0].start : 0;
+      insert(at, sourceRefs.slice(si, pi));
+    }
+    for (let k = ti; k < pj; k++) drop(targetRefs[k]);
+    // A matched pair already resolves to the same asset; its alt text is left
+    // alone so an already-translated description is not overwritten.
+    si = pi + 1;
+    ti = pj + 1;
+  }
+  return {edits, added, removed, replaced};
+}
+
+/**
+ * Pair blocks for image alignment, preferring the earliest possible pair.
+ *
+ * `alignBlocks` minimises an edit cost and, when a page repeats the same block
+ * shapes (prose/image/prose/image), several optimal alignments exist; its
+ * backward walk then pairs the *tails* and leaves the head unpaired. Image
+ * alignment needs the opposite: an image that stayed at the top of the page must
+ * stay paired with the top of the translation, so this LCS over block shapes
+ * walks forward and takes the first match.
+ */
+function alignImageBlocks(english, chinese) {
+  const source = english.map(blockSignature);
+  const target = chinese.map(blockSignature);
+  const n = source.length;
+  const m = target.length;
+  if (n === 0 || m === 0) return new Map();
+  const width = m + 1;
+  const length = new Int32Array((n + 1) * width);
+  for (let i = n - 1; i >= 0; i--) {
+    for (let j = m - 1; j >= 0; j--) {
+      length[i * width + j] =
+        source[i] === target[j]
+          ? length[(i + 1) * width + j + 1] + 1
+          : Math.max(length[(i + 1) * width + j], length[i * width + j + 1]);
+    }
+  }
+  const pairs = new Map();
+  let i = 0;
+  let j = 0;
+  while (i < n && j < m) {
+    if (source[i] === target[j]) {
+      pairs.set(i, j);
+      i++;
+      j++;
+    } else if (length[(i + 1) * width + j] >= length[i * width + j + 1]) {
+      i++;
+    } else {
+      j++;
+    }
+  }
+  return pairs;
+}
+
+/**
+ * Would this block be empty once its images are gone?
+ *
+ * A heading whose visible text is a picture (`#### ![](icon) {#id}`) becomes an
+ * empty heading if only the image is removed; the whole block has to go. Plain
+ * prose keeps its text, so only whitespace, tags and the heading id may remain.
+ */
+function emptyAfterImages(block) {
+  const stripped = String(block)
+    .replace(IMAGE, '')
+    .replace(/<\/?[A-Za-z][^<>]*?>/g, '')
+    .replace(/[*_`\s]/g, '');
+  return stripped === '' || /^#{1,6}\{#[^}]*\}$/.test(stripped);
+}
+
+/** Range that removes a block together with one separating blank line. */
+function blockRemovalRange(text, start, end) {
+  if (text.slice(Math.max(0, start - 2), start) === '\n\n') return {start: start - 2, end};
+  if (text.slice(end, end + 2) === '\n\n') return {start, end: end + 2};
+  return {start, end};
+}
+
+function applyEdits(text, edits) {
+  // Edits never overlap; apply from the end so earlier offsets stay valid.
+  const ordered = [...edits].sort((a, b) => b.start - a.start || b.end - a.end);
+  let out = text;
+  for (const edit of ordered) out = out.slice(0, edit.start) + edit.text + out.slice(edit.end);
+  return out;
+}
+
+/**
+ * Rebuild a body so its image references match the source, block by block.
+ *
+ * This is the structural half of a page refresh: the translated prose is not
+ * re-translated and fenced code is never touched, but every image the source
+ * added is inserted in the paragraph it belongs to, every image the source
+ * dropped is removed, and an image whose asset was renamed keeps its place.
+ *
+ * Returns `{body, added, removed, replaced, warnings}`; `warnings` names the
+ * cases that could not be aligned safely (for example a source `<img>` tag
+ * where the overlay uses Markdown) so a caller can report them instead of
+ * pretending the page is aligned.
+ */
+export function imageAlignment(sourceBody, targetBody, {sourceDir = null, overlayDir = null} = {}) {
+  const context = {sourceDir, overlayDir};
+  const source = String(sourceBody ?? '');
+  const target = String(targetBody ?? '');
+  const result = {body: target, added: 0, removed: 0, replaced: 0, warnings: []};
+  const hasImage = /!\[[^\]]*\]\([^)]*\)/;
+  if (!hasImage.test(source) && !hasImage.test(target)) return result;
+
+  const sourceSpans = splitBlockSpans(source);
+  const targetSpans = splitBlockSpans(target);
+  const sourceBlocks = sourceSpans.map((span) => span.text);
+  const targetBlocks = targetSpans.map((span) => span.text);
+  const pairs = alignImageBlocks(sourceBlocks, targetBlocks);
+  const targetToSource = new Map([...pairs].map(([sourceIndex, targetIndex]) => [targetIndex, sourceIndex]));
+  const sourceHtml = new Set([...source.matchAll(HTML_IMAGE)].map((match) => match[1]));
+  const warn = (warning) => result.warnings.push(warning);
+  const edits = [];
+  const unplaced = [];
+
+  for (let sourceIndex = 0; sourceIndex < sourceBlocks.length; sourceIndex++) {
+    const sourceRefs = imageRefs(sourceBlocks[sourceIndex]);
+    if (sourceRefs.length === 0) continue;
+    const targetIndex = pairs.get(sourceIndex);
+    if (targetIndex === undefined) {
+      unplaced.push({sourceIndex, refs: sourceRefs});
+      continue;
+    }
+    const aligned = alignBlockImageRefs(
+      sourceRefs,
+      imageRefs(targetBlocks[targetIndex]),
+      targetSpans[targetIndex].start,
+      sourceHtml,
+      warn,
+      context,
+    );
+    edits.push(...aligned.edits);
+    result.added += aligned.added;
+    result.removed += aligned.removed;
+    result.replaced += aligned.replaced;
+  }
+
+  // Target images with no source counterpart: the source deleted them, so the
+  // overlay must not keep a link to an asset the page no longer shows.
+  for (let targetIndex = 0; targetIndex < targetBlocks.length; targetIndex++) {
+    const targetRefs = imageRefs(targetBlocks[targetIndex]);
+    if (targetRefs.length === 0) continue;
+    const sourceIndex = targetToSource.get(targetIndex);
+    if (sourceIndex !== undefined && imageRefs(sourceBlocks[sourceIndex]).length) continue;
+    if (isImageBlock(targetBlocks[targetIndex]) || emptyAfterImages(targetBlocks[targetIndex])) {
+      const kept = targetRefs.filter((ref) => sourceHtml.has(ref.url));
+      if (kept.length === 0) {
+        const range = blockRemovalRange(target, targetSpans[targetIndex].start, targetSpans[targetIndex].end);
+        edits.push({...range, text: ''});
+        result.removed += targetRefs.length;
+        continue;
+      }
+      warn({reason: 'html-image-in-source', url: kept[0].url});
+      for (const ref of targetRefs) {
+        if (sourceHtml.has(ref.url)) continue;
+        edits.push({start: targetSpans[targetIndex].start + ref.start, end: targetSpans[targetIndex].start + ref.end, text: ''});
+        result.removed += 1;
+      }
+      continue;
+    }
+    for (const ref of targetRefs) {
+      if (sourceHtml.has(ref.url)) {
+        warn({reason: 'html-image-in-source', url: ref.url});
+        continue;
+      }
+      edits.push({start: targetSpans[targetIndex].start + ref.start, end: targetSpans[targetIndex].start + ref.end, text: ''});
+      result.removed += 1;
+    }
+  }
+
+  // A source image block with no aligned target block: insert it next to the
+  // nearest block that did align. Anchoring on a paired block (rather than a
+  // line number) keeps the picture in its own section.
+  for (const {sourceIndex, refs} of unplaced) {
+    let previous = null;
+    for (let i = sourceIndex - 1; i >= 0; i--) {
+      if (pairs.has(i)) {
+        previous = pairs.get(i);
+        break;
+      }
+    }
+    let next = null;
+    for (let i = sourceIndex + 1; i < sourceBlocks.length && next === null; i++) {
+      if (pairs.has(i)) next = pairs.get(i);
+    }
+    const text = isImageBlock(sourceBlocks[sourceIndex])
+      ? sourceBlocks[sourceIndex]
+      : refs.map((ref) => renderImage(ref, context)).join('');
+    if (previous !== null) {
+      edits.push({start: targetSpans[previous].end, end: targetSpans[previous].end, text: `\n\n${text}`});
+      result.added += refs.length;
+    } else if (next !== null) {
+      edits.push({start: targetSpans[next].start, end: targetSpans[next].start, text: `${text}\n\n`});
+      result.added += refs.length;
+    } else {
+      warn({reason: 'unplaced-source-image', url: refs[0].url});
+    }
+  }
+
+  if (edits.length === 0) return result;
+  result.body = applyEdits(target, edits)
+    // Removing an image can leave a run of blank lines; collapse it outside
+    // fences so code samples stay byte-identical.
+    .replace(/(?:\n[ \t]*){3,}/g, '\n\n');
+  return result;
+}
+
+/**
+ * Give the translation the source's image references in the source's order.
+ *
+ * The model (or an older capture) may carry stale assets or miss images the
+ * source added; paths are not prose and must always match the English page.
+ * Returns the aligned body; warnings are reported through `onWarning`.
+ */
+export function alignImages(sourceBody, targetBody, {onWarning} = {}) {
+  const aligned = imageAlignment(sourceBody, targetBody);
+  if (onWarning) for (const warning of aligned.warnings) onWarning(warning);
+  return aligned.body;
+}
+
+/** Is this overlay explicitly preserved from regeneration? */
+export function isPreservedOverlay(rel, sectionName) {
+  return preservedOverlays().has(rel) || preservedOverlays().has(`${sectionName}/${rel}`);
 }
 
 /**
