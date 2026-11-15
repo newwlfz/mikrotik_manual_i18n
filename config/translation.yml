@@ -16,6 +16,12 @@ provider: opencode-go
 model: deepseek-v4.1-flash
 
 glossary: config/glossary/zh-Hans.yml
+
+# How many glossary terms one request may quote. The prompt carries only the
+# terms that occur in the text being sent — the whole glossary is never pasted
+# in, because a 20-term slice is what the model actually uses and a long list
+# dilutes the locale profile next to it.
+glossary_limit: 20
 temperature: 0
 
 # How one translation request is cut. `max_blocks` is the number of blocks the

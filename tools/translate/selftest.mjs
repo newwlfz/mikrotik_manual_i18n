@@ -36,6 +36,13 @@ import {
 } from './lib/code-comments.mjs';
 import {compareFence, untranslatedBlocks} from './lib/verify.mjs';
 import {spawnSync} from 'node:child_process';
+import fs from 'node:fs';
+import path from 'node:path';
+import {Client, loadPromptConfig} from './lib/provider.mjs';
+import {profileFor} from './lib/locale-profile.mjs';
+import {checkScript, feedbackFor} from './lib/script-check.mjs';
+import {commentRules, descriptionPrompt, titlePrompt} from './lib/prompts.mjs';
+import {guardScript} from './lib/script-guard.mjs';
 import {
   REPO,
   localeHasResources,
@@ -590,7 +597,13 @@ check('verify-ru-no-resources-zero-overlays', /docs: \{"sources":0,"overlays":0,
 // that is only a name so far is not reported as a failing tree.
 const resourceLocales = translatableLocales().filter((locale) => localeHasResources(locale));
 const verifyAll = runNode('tools/translate/index.mjs', ['verify', '--all-locales', '--no-compile']);
-check('verify-all-locales-exit', verifyAll.status, 0);
+// The hub checkout has no overlay tree at all; there, "every page is missing"
+// is the correct result, and checking it for exit 0 would assert the wrong
+// thing. A language checkout has at least one tree and must pass.
+const overlayTrees = resourceLocales.filter((locale) =>
+  fs.existsSync(path.join(REPO, 'i18n', locale)),
+);
+check('verify-all-locales-exit', verifyAll.status, overlayTrees.length ? 0 : 1);
 check(
   'verify-all-locales-visits-resource-locales',
   [...verifyAll.stdout.matchAll(/^=== locale (\S+)$/gm)].map((match) => match[1]),
@@ -606,6 +619,184 @@ check('verify-en-source-locale-message', /is the source locale/.test(verifyEn.st
 const deriveEn = runNode('tools/translate/derive-all.mjs', ['--dry-run', '--locale=en']);
 check('derive-en-is-rejected', deriveEn.status, 1);
 check('derive-en-source-locale-message', /is the source locale/.test(deriveEn.stderr), true);
+
+// ---------------------------------------------------------------------------
+// locale profiles and the prompt actually sent to the provider
+// ---------------------------------------------------------------------------
+
+// Every locale profile must declare the writing system and at least one
+// preferred term; without those the prompt has nothing locale-specific to say.
+for (const locale of ['zh-Hans', 'zh-Hant', 'en']) {
+  const profile = profileFor(locale);
+  check(`profile-${locale}-exists`, profile.exists, true);
+  check(`profile-${locale}-script`, profile.script, locale === 'en' ? 'Latn' : locale === 'zh-Hant' ? 'Hant' : 'Hans');
+  check(`profile-${locale}-has-terms`, profile.preferredTerms.length > 0, true);
+  check(`profile-${locale}-has-examples`, profile.examples.length > 0, true);
+}
+
+/**
+ * The system prompt of one request, captured from the request body a mocked
+ * `fetch` receives. This is the same code path a real batch uses, so an
+ * assertion here is an assertion about what the model is sent — not about a
+ * prompt string reassembled in the test.
+ */
+async function captureSystem(locale, text) {
+  const config = {
+    ...loadPromptConfig(locale),
+    provider: 'mock',
+    model: 'mock',
+    baseUrl: 'http://mock.invalid/v1',
+    apiKey: 'test',
+    maxRetries: 0,
+    timeoutMs: 5000,
+    extraHeaders: {},
+    batchSize: 8,
+    maxChars: 8000,
+  };
+  const client = new Client(config);
+  const originalFetch = globalThis.fetch;
+  let captured = null;
+  globalThis.fetch = async (url, init) => {
+    captured = JSON.parse(init.body);
+    return new Response(
+      JSON.stringify({
+        choices: [{message: {content: '譯文'}, finish_reason: 'stop'}],
+        usage: {prompt_tokens: 1, completion_tokens: 1},
+      }),
+      {status: 200, headers: {'content-type': 'application/json'}},
+    );
+  };
+  try {
+    await client.chat(text);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+  return captured?.messages?.[0]?.content ?? '';
+}
+
+const sample = 'Configure the interface queue and the firewall on this router.';
+const hansSystem = await captureSystem('zh-Hans', sample);
+check('prompt-hans-target', /简体/.test(hansSystem), true);
+check('prompt-hans-profile-terms', /接口/.test(hansSystem) && /队列/.test(hansSystem), true);
+check('prompt-hans-localisation-rule', /localization|locale's documentation conventions/i.test(hansSystem), true);
+check('prompt-hans-no-hardcoded-target', /Simplified Chinese\./.test(hansSystem), false);
+check('prompt-hans-output-contract', /Return ONLY the translation/.test(hansSystem), true);
+
+const hantSystem = await captureSystem('zh-Hant', sample);
+check('prompt-hant-target', /臺灣正體/.test(hantSystem) && /繁體/.test(hantSystem), true);
+check('prompt-hant-profile-terms', /軟體/.test(hantSystem) && /網路/.test(hantSystem), true);
+check('prompt-hant-guard', /Never output Simplified/.test(hantSystem), true);
+check('prompt-hant-no-simplified-target', /Simplified Chinese\./.test(hantSystem), false);
+
+const enSystem = await captureSystem('en', sample);
+check('prompt-en-target', /into English/.test(enSystem), true);
+check('prompt-en-no-chinese-instruction', /[\u4e00-\u9fff]/.test(enSystem), false);
+check('prompt-en-no-simplified-target', /Simplified Chinese/.test(enSystem), false);
+
+// The per-request glossary slice is capped and relevance-filtered, not the
+// whole file: only terms that occur in the text, and never more than the limit.
+const promptConfig = loadPromptConfig('zh-Hans');
+const limitedClient = new Client({
+  ...promptConfig,
+  model: 'mock',
+  baseUrl: 'http://mock.invalid/v1',
+  apiKey: 'test',
+  timeoutMs: 1000,
+  extraHeaders: {},
+  glossaryLimit: 2,
+});
+const limitedSystem = limitedClient.system('RouterOS Newsletter MikroTik WinBox');
+const terminology = limitedSystem.split('Terminology for this passage')[1] || '';
+const quotedTerms = terminology.split('\n').filter((line) => line.startsWith('- ')).length;
+check('prompt-glossary-slice-capped', promptConfig.glossary.length > 2 ? quotedTerms <= 2 : true, true);
+check('prompt-glossary-slice-present', promptConfig.glossary.length > 0 ? quotedTerms > 0 : true, true);
+check(
+  'prompt-glossary-only-relevant',
+  limitedClient.system('A sentence without any glossary term at all').includes('Terminology for this passage'),
+  false,
+);
+
+// The four prompt builders outside the block contract read the profile too.
+check('title-prompt-hant', /繁體/.test(titlePrompt('zh-Hant', 'Routing Decision')), true);
+check('title-prompt-hant-no-simplified', /Simplified Chinese/.test(titlePrompt('zh-Hant', 'Routing Decision')), false);
+check('description-prompt-hans', /简体/.test(descriptionPrompt('zh-Hans', 'A page about queues')), true);
+check('comment-rules-hant', /繁體/.test(commentRules('zh-Hant')), true);
+check('comment-rules-hant-json', /JSON array/.test(commentRules('zh-Hant')), true);
+
+// ---------------------------------------------------------------------------
+// script-check: Simplified characters/words in a zh-Hant answer
+// ---------------------------------------------------------------------------
+
+check('script-hant-simplified-warns', checkScript('软件', 'zh-Hant').ok, false);
+check('script-hant-traditional-passes', checkScript('軟體', 'zh-Hant').ok, true);
+check(
+  'script-hant-model-word',
+  checkScript('这个用户需要修改服务器的数据包队列', 'zh-Hant').issues.map((issue) => issue.form).includes('用户'),
+  true,
+);
+check('script-hant-word-suggestion', checkScript('软件', 'zh-Hant').issues[0].suggestion, '軟體');
+check('script-hant-code-ignored', checkScript('`软件` ```\n软件\n```', 'zh-Hant').ok, true);
+check('script-hant-feedback', /必須使用繁體用詞/.test(feedbackFor('zh-Hant', checkScript('软件', 'zh-Hant').issues)), true);
+check('script-hant-document-file-allowed', checkScript('請參閱 RouterOS 文件', 'zh-Hant').ok, true);
+check('script-hans-reverse-warns', checkScript('軟體', 'zh-Hans').ok, false);
+check('script-hans-correct-passes', checkScript('软件', 'zh-Hans').ok, true);
+check('script-en-not-checked', checkScript('software', 'en').ok, true);
+
+// ---------------------------------------------------------------------------
+// script-guard: one feedback retry, then keep and report
+// ---------------------------------------------------------------------------
+
+// The guard asks once with the offending forms quoted; a correct second answer
+// is written with no warning.
+const guardCalls = [];
+const recoveredWarnings = [];
+const recovered = await guardScript({
+  client: {
+    chat: async (prompt) => {
+      guardCalls.push(prompt);
+      return '此軟體可以設定佇列';
+    },
+  },
+  text: '这个软件可以设置队列',
+  locale: 'zh-Hant',
+  file: 'docs/example',
+  record: (warning) => recoveredWarnings.push(warning),
+});
+check('guard-retries-once', guardCalls.length, 1);
+check('guard-quotes-wrong-forms', /软件→軟體/.test(guardCalls[0]), true);
+check('guard-uses-corrected-answer', recovered.text, '此軟體可以設定佇列');
+check('guard-clean-after-retry', recoveredWarnings.length, 0);
+
+// A retry that is still in the wrong script is kept (never replaced by
+// English) and recorded, so the report cannot silently pass it.
+let stubbornWarnings = [];
+const stubborn = await guardScript({
+  client: {chat: async () => '这个软件'},
+  text: '这个软件',
+  locale: 'zh-Hant',
+  file: 'docs/example',
+  record: (warning) => stubbornWarnings.push(warning),
+});
+check('guard-keeps-stubborn-answer', stubborn.text, '这个软件');
+check('guard-records-script-warning', stubbornWarnings.length, 1);
+check(
+  'guard-warning-names-form',
+  stubbornWarnings[0].issues.some((issue) => issue.form === '软件'),
+  true,
+);
+
+// A retry the caller cannot use (here: the structure check rejects it) falls
+// back to the first answer and still records the warning.
+let rejectedWarnings = [];
+const rejected = await guardScript({
+  client: {chat: async () => '```\n这个软件\n```'},
+  text: '这个软件',
+  locale: 'zh-Hant',
+  rewrite: () => null,
+  record: (warning) => rejectedWarnings.push(warning),
+});
+check('guard-rejects-unusable-retry', rejected.text, '这个软件');
+check('guard-records-rejected-retry', rejectedWarnings.length, 1);
 
 process.stdout.write(failed === 0 ? 'selftest: all rules pass\n' : `selftest: ${failed} failure(s)\n`);
 process.exitCode = failed === 0 ? 0 : 1;

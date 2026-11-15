@@ -272,16 +272,20 @@ Current artefacts:
 
 1. Add the locale to `docusaurus.config.ts` and `config/mirror.yml`.
 2. Add `config/glossary/<locale>.yml` and `config/translation-patches/<locale>/`.
-3. The pipeline paths are already locale-shaped:
+3. Add `config/locale-profiles/<locale>.md` — writing system, register,
+   punctuation, preferred wording and bad/good examples (see section 8). Without
+   it the generic template is used and the prompt has no locale-specific
+   terminology.
+4. The pipeline paths are already locale-shaped:
    `i18n/<locale>/docusaurus-plugin-content-docs/...`.
-4. Run `import-legacy` (if a previous translation exists for that locale) or go
+5. Run `import-legacy` (if a previous translation exists for that locale) or go
    straight to `translate`.
-5. `write-translations --locale <locale>` for the theme and sidebar catalogues.
-6. `verify` and `build`.
+6. `write-translations --locale <locale>` for the theme and sidebar catalogues.
+7. `verify` and `build`.
 
 Rules do not need to be rewritten per language: they describe structure and
-preservation, which are language-independent. Only the glossary and the patch
-layer are per locale.
+preservation, which are language-independent. Only the glossary, the profile
+and the patch layer are per locale.
 
 ## 7. Commands
 
@@ -297,3 +301,64 @@ npm run translate:audit-comments   # classify `#` lines in code fences
 npm run translate:comments -- --dry-run --limit=40
 npm run build                      # CLI model + Docusaurus + Pagefind
 ```
+
+## 8. Locale profiles and prompts
+
+A profile is the locale's brief to the model: which writing system, which
+register, which punctuation, what stays verbatim, and which wording the locale
+uses. Before it existed every request was told "Simplified Chinese" and a new
+language could only be produced by converting an existing tree — which is how
+`zh-Hant` started, as an OpenCC `s2twp` derivation. The profile is what makes a
+language a first-class target instead of a derivative.
+
+### Where it lives
+
+`config/locale-profiles/<locale>.md`, one file per locale, the same shape
+everywhere:
+
+````md
+# <language name>
+- script: Hans|Hant|Latn
+- register: technical documentation, concise, second person
+- punctuation: full-width (Chinese) / ASCII (English)
+- keep-verbatim: code, commands, paths, anchors, product names
+- preferred terms: term→wording；term→wording
+- examples:
+  - bad: ...
+    good: ...
+````
+
+`en.md` is the source-language reference; it is not a translation target.
+
+### How it reaches the prompt
+
+- `tools/translate/lib/locale-profile.mjs` reads the file (`profileFor(locale)`)
+  and caches it. A missing file warns once and falls back to the generic
+  template instead of refusing to translate.
+- `tools/translate/lib/provider.mjs` assembles the system prompt as
+  *generic contract + locale profile + writing-system reminder + the glossary
+  terms that occur in the text being sent* (at most `glossary_limit`, default
+  20). `Client.system(text)` is the only place that decides this, so a block, a
+  title, a description and a comment batch all get the same brief.
+- `tools/translate/lib/prompts.mjs` builds the title, description, paragraph
+  retry and comment prompts from the same profile; no call site names a
+  language any more.
+- `tools/translate/lib/script-check.mjs` validates the answer: `zh-Hant` must not
+  contain Simplified-only characters or mainland terms, `zh-Hans` the reverse.
+  A hit gets one feedback retry with the offending forms quoted back
+  (`lib/script-guard.mjs`); an answer that is still wrong is kept and reported as
+  `script_warning` — in `run.json`, the `--json` summary and the CI job summary.
+
+### Adding a new locale
+
+1. Add `config/locale-profiles/<locale>.md`: copy a sibling and rewrite every
+   field, keeping the `examples` concrete (one pair per mistake seen in review).
+2. Add `config/glossary/<locale>.yml` (the terminology the profile cannot cover)
+   and `config/translation-patches/<locale>/`.
+3. Add the locale to `docusaurus.config.ts` / `config/mirror.yml`.
+4. `translate --locale=<locale> --dry-run` to confirm the plan, then
+   `translate --locale=<locale>`.
+5. `verify --locale=<locale>` and `npm run translate:selftest` must pass. The
+   selftest captures the real system prompt with a mock provider, so a profile
+   that loses its `script` or `preferred terms` fails there before a batch is
+   paid for.

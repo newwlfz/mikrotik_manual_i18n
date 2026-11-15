@@ -262,3 +262,22 @@ Markdown 链接会被 `mdx-loader` 的 `transformLinks` 改写成 `require()`，
 `href` 的 `baseUrl` 由 `tools/build/remark-prefix-root-refs.mjs` 补；转换由
 `tools/sync/sync-pdfs.mjs` 与 `tools/translate/fix-asset-links.mjs` 调用
 `tools/translate/lib/pdf-links.mjs` 完成，两者都是幂等的。
+
+## `script_warning` in a language repo's job summary
+
+The language repositories check every translation against the target locale's
+writing system before it is written (`tools/translate/lib/script-check.mjs`):
+`zh-Hant` must not contain Simplified-only characters or mainland terms,
+`zh-Hans` is checked in the opposite direction. A hit gets one feedback retry
+with the offending forms quoted back; an answer that still fails is kept and
+recorded as `script_warning`.
+
+The warning never gates the build — the page is written, committed and deployed
+as usual — but it is not silent either:
+
+- the `--json` batch summary carries `script_warning` (count) and
+  `script_warnings` (per item `file` / `kind` / `forms` / `sample`);
+- `work/translate/run.json` keeps the same records, so the next batch can see
+  what the previous one left behind;
+- `tools/ci/read-translate-summary.mjs` writes `script_warning=<count>` as a step
+  output and lists one row per warning under the batch table in the job summary.

@@ -218,7 +218,9 @@ function validateText(sourceText, targetText) {
   return null;
 }
 
-const ROW_SYSTEM = `You translate the argument descriptions of the MikroTik RouterOS CLI Reference from English to Simplified Chinese.
+// The locale profile and the relevant glossary terms come from
+// `client.system(input)`; this block only describes the row shape.
+const ROW_RULES = `Argument descriptions of the MikroTik RouterOS CLI Reference.
 
 The input is one <ArgTableRow> element per line group; an element may span several lines. Return exactly the same number of lines, in the same order, with no preface, no explanation and no code fence.
 
@@ -230,9 +232,9 @@ Rules, in order of importance:
 4. Never translate identifiers: CLI commands and menu paths, argument and parameter names, type names,
    enum values (yes, no, auto, none, disabled, ...), default values, numbers, RouterOS/MikroTik
    product and protocol names, anything in backticks or written in kebab-case, snake_case or camelCase.
-5. \`Default:\` becomes \`默认值：\`; the value after it stays exactly as written
-   (\`Default: yes.\` -> \`默认值：yes.\`).
-6. Keep the exact line breaks of the element: the number of lines of the Chinese description must
+5. \`Default:\` becomes \`默认值：\` for Simplified Chinese (\`預設值：\` for Traditional Chinese); the
+   value after it stays exactly as written (\`Default: yes.\` -> \`默认值：yes.\`).
+6. Keep the exact line breaks of the element: the number of lines of the translation must
    equal the number of lines of the English description. Do not add or remove blank lines.`;
 
 /** One model round trip: input = raw rows, output = the same number of lines. */
@@ -242,7 +244,7 @@ async function translateBatch(items, strict) {
   const prompt = strict
     ? `${input}\n\nThe answer must contain exactly ${totalLines} lines, one per input line, including empty lines.`
     : input;
-  const answer = await client.chat(prompt, {system: ROW_SYSTEM});
+  const answer = await client.chat(prompt, {system: `${client.system(input)}\n\n${ROW_RULES}`});
   const lines = answer.replace(/\r\n?/g, '\n').split('\n');
   if (lines.length !== totalLines) {
     return {accepted: [], rejected: items.map((item) => ({item, reason: `line count ${lines.length} != ${totalLines}`}))};

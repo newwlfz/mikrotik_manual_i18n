@@ -327,7 +327,10 @@ for (const item of queueLimit) {
   byFile.get(item.file).push(item);
 }
 
-const ROW_SYSTEM = `You translate the table rows of the MikroTik RouterOS documentation from English to Simplified Chinese.
+// The target language, style and terminology are not repeated here: they come
+// from the locale profile and the relevant glossary terms in
+// `client.system(input)`. Only the table shape is local to this tool.
+const ROW_RULES = `Table rows of the MikroTik RouterOS documentation.
 
 The input is one table row per line, each starting and ending with a pipe character.
 Return exactly the same number of lines, in the same order, with no preface, no explanation and no code fence.
@@ -343,11 +346,12 @@ Rules, in order of importance:
 
 async function translateBatch(items) {
   const input = items.map((item) => item.english.trim()).join('\n');
-  let answer = await client.chat(input, {system: ROW_SYSTEM});
+  const system = `${client.system(input)}\n\n${ROW_RULES}`;
+  let answer = await client.chat(input, {system});
   let lines = answer.split('\n').map((line) => line.trim()).filter((line) => line.startsWith('|'));
   if (lines.length !== items.length) {
     answer = await client.chat(`${input}\n\nReturn exactly ${items.length} lines, one per input row.`, {
-      system: ROW_SYSTEM,
+      system,
     });
     lines = answer.split('\n').map((line) => line.trim()).filter((line) => line.startsWith('|'));
   }
