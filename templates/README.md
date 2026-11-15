@@ -44,9 +44,11 @@ listed in `repo_en/tools/README.md` ("Translation toolchain").
 
 `npm run check:tools-template` (in the hub) reports how `repo_en/tools` differs
 from this template, file by file. Differences that are expected — the hub-only
-publishing tools, the hub's `--with-translation` rejection, the translation-memory
-location, and hub fixes not yet backported here — are whitelisted with a reason in
-`repo_en/tools/verify/tools-template.mjs`; everything else is a failure.
+publishing tools, the hub's `--with-translation` rejection, and hub sync/build
+fixes not yet backported here — are whitelisted with a reason in
+`repo_en/tools/verify/tools-template.mjs`; everything else is a failure. The
+`tools/translate/` libraries the hub keeps are byte-identical to this template,
+which is the point: there is one copy of that code.
 
 ## What the template does not own
 

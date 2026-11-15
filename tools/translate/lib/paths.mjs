@@ -165,8 +165,19 @@ export const DEFAULT_LEGACY_ROOT = path.join(
   'mikrotik_manual_i18n/repo/content',
 );
 
-/** Translation memory and derived indexes are local build artefacts. */
-export const WORK_DIR = path.join(WORKSPACE, 'work/translate');
+/**
+ * Translation memory and derived indexes.
+ *
+ * In the mono-workspace (`repo_en/` and `repo_zh_hans/` side by side, as this
+ * checkout is) the translation memory lives one level above the repository and
+ * is shared by both checkouts. A standalone checkout — CI clones *this*
+ * repository only — keeps `work/translate/` inside the repository, because a
+ * batch run resumes from what the previous job committed. Prefer the in-repo
+ * directory when it exists, the same way `state/` is already in-repo.
+ */
+export const WORK_DIR = fs.existsSync(path.join(REPO, 'work/translate'))
+  ? path.join(REPO, 'work/translate')
+  : path.join(WORKSPACE, 'work/translate');
 
 /** `work/translate/tm-global.<locale>.json`. */
 export function tmFile(locale = DEFAULT_TARGET_LOCALE) {
@@ -287,6 +298,13 @@ export function ensureDir(dir) {
 
 /**
  * Write a file so that a reader never sees half of it.
+ *
+ * Every file a batch run updates goes through here: the overlay being
+ * translated, `state/translation-state.json`, the keep-English locks, the run
+ * journal and the translation memories. A runner killed mid-write (the
+ * 120-minute job timeout, a cancelled job) leaves the previous complete copy
+ * behind, which is what makes "continue from where the last batch stopped" true
+ * instead of hopeful.
  *
  * The temporary file sits next to the destination, so the rename stays inside
  * one filesystem and replaces the target atomically.

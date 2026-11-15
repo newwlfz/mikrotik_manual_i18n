@@ -138,8 +138,15 @@ export function writeMemoryShard(
  * Persist the model memory and, when something changed, one incremental shard.
  *
  * The baseline is the *merged* memory (big file + existing shards), not the big
- * file alone: a fresh CI checkout has no `model-memory.json` and must not
+ * file alone: a CI checkout may have no `model-memory.json` at all and must not
  * re-write every already-committed entry into a new shard on every run.
+ *
+ * `model-memory.json` is a **committed baseline snapshot** since the refresh
+ * work (see `work/translate/README.md`): the 26 MB file must not be rewritten by
+ * a batch, because that would put a new copy of it into every batch commit. A
+ * batch passes `{writeBaseline: false}` and appends a small `shards/*.json`
+ * instead. Offline maintenance commands (`harvest`, the table pass, the title
+ * normalisers) keep the default and rewrite the baseline deliberately.
  */
 export function saveModelMemory(
   memory,
@@ -148,15 +155,16 @@ export function saveModelMemory(
     locale = DEFAULT_TARGET_LOCALE,
     now = new Date(),
     shard = true,
+    writeBaseline = true,
     warn,
   } = {},
 ) {
   const previous = readModelMemory({workDir});
   ensureDir(workDir);
-  fs.writeFileSync(
-    path.join(workDir, 'model-memory.json'),
-    JSON.stringify(Object.fromEntries(memory)),
-  );
+  const baselineFile = path.join(workDir, 'model-memory.json');
+  if (writeBaseline) {
+    fs.writeFileSync(baselineFile, JSON.stringify(Object.fromEntries(memory)));
+  }
   if (!shard) return null;
   const changed = new Map();
   for (const [key, value] of memory) {

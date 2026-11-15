@@ -103,14 +103,6 @@ const WHITELIST = [
     path: 'tools/pipeline/verify.mjs',
     reason: 'hub has no translate:selftest / translate:verify steps',
   },
-  {
-    path: 'tools/translate/lib/paths.mjs',
-    reason: 'translation memory location: hub keeps <workspace>/work/translate, the template prefers an in-repo work/translate/',
-  },
-  {
-    path: 'tools/translate/lib/model-memory.mjs',
-    reason: 'hub copy predates the write-baseline / shard split of the translation memory',
-  },
 ];
 
 const matches = (rel, entry) =>
