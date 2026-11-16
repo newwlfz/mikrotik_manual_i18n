@@ -36,11 +36,26 @@ listed in `repo_en/tools/README.md` ("Translation toolchain").
    fork and the next scaffold will not have it.
 2. **New repositories get it for free** — `npm run locale:add` copies the whole
    template, substitutes the `{{PLACEHOLDER}}` values and `git init`s the result.
-3. **Existing repositories copy it by hand.** There is no sync command yet: copy
-   the changed file(s) from `templates/locale-repo/tools/` into
-   `repo_zh_hans/tools/` and `repo_zh_hant/tools/`, commit each repository
-   separately, and note the template revision in the commit message. A
-   `sync:tools` command that walks this list is the obvious follow-up.
+3. **Existing repositories get it through `npm run sync:tools`.** The command
+   copies `templates/locale-repo/tools/` into a locale checkout:
+
+   ```bash
+   npm run sync:tools -- --to ../repo_zh_hans --dry-run   # plan, write nothing
+   npm run sync:tools -- --to ../repo_zh_hans             # copy the missing files
+   npm run sync:tools -- --all                            # every ../repo_* with a pages.yml
+   ```
+
+   It reports `copied` / `updated` / `unchanged` / `conflicts` / `protected`. A
+   file that is missing in the target is copied; an identical file is skipped; a
+   file that **differs is not touched** — it is reported as a conflict with the
+   first differing line, because a locale repository may carry a local fix, and
+   only `--force` overwrites one. The exit code is `1` while conflicts remain, so
+   a wrapper or a human has to confirm them. `protected` paths are never
+   written at all: `tools/translate/lib/paths.mjs` (each repository has its own
+   `DEFAULT_TARGET_LOCALE`), `tools/bootstrap/**`,
+   `tools/translate/localize-zh-hant.mjs`, and `tools/content/**` / `tools/ci/**`
+   (content acquisition and CI helpers follow each repository's own workflow).
+   Review the diff and commit in the target repository afterwards.
 
 `npm run check:tools-template` (in the hub) reports how `repo_en/tools` differs
 from this template, file by file. Differences that are expected — the hub-only

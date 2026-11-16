@@ -1,7 +1,18 @@
 # LLM configuration (translation)
 
-`tools/translate` sends the blocks that are still English to an
-OpenAI-compatible chat-completions endpoint. The endpoint, model and key are
+> **Status — the translation toolchain moved to the locale repositories.** The
+> hub (`repo_en`) publishes English only and carries no LLM client:
+> `translate:*` and `verify:llm` were removed from `package.json`, and
+> `tools/translate/` here keeps only the shared Markdown libraries its own
+> `sync/`, `verify/` and `build/` tools import. The provider that reads the
+> variables below runs in the locale repositories (`repo_zh_hans`,
+> `repo_zh_hant`), whose canonical toolchain is
+> `templates/locale-repo/tools/`. This file is kept as the historical
+> configuration reference: run every command below in the locale repository
+> (`npm run verify:llm` there), never in the hub.
+
+A locale repository's `tools/translate/` sends the blocks that are still English
+to an OpenAI-compatible chat-completions endpoint. The endpoint, model and key are
 connection settings, not repository content: they are never committed and
 `config/translation.yml` no longer stores them.
 
@@ -32,8 +43,8 @@ OpenCode serves the same models through two endpoints with different rules:
 | **Go** | `https://opencode.ai/inference/go/v1` | Every request must carry `x-opencode-session`; without it the endpoint answers `400 MissingSessionID`. |
 | **zen** | `https://opencode.ai/zen/v1` | Pay-as-you-go: no session header, but a zero account balance answers `402 payment_required`. |
 
-`tools/translate` adds the session header automatically whenever the base URL
-path contains `/inference/go`:
+The provider adds the session header automatically whenever the base URL path
+contains `/inference/go`:
 
 1. an explicit `x-opencode-session` in `LLM_EXTRA_HEADERS` wins, whatever the
    channel;
@@ -42,9 +53,9 @@ path contains `/inference/go`:
    request (a batch shares one session).
 
 Endpoints that are not the Go channel (`zen`, a plain provider URL) get no such
-header. `verify:llm` prints the decision as `session header : auto` (or the
-configured value, or `(not needed)`), so a `400 MissingSessionID` can be told
-apart from a wrong key.
+header. The locale repository's `verify:llm` prints the decision as
+`session header : auto` (or the configured value, or `(not needed)`), so a
+`400 MissingSessionID` can be told apart from a wrong key.
 
 ## Where the values come from
 
@@ -84,12 +95,14 @@ env:
 ```
 
 If a variable is empty, the tool does not fall back to a default endpoint or
-model: `verify:llm --dry-run` and the translation run fail with the missing
-name.
+model: the locale repository's `verify:llm --dry-run` and the translation run
+fail with the missing name.
 
 ## Local use
 
 ```bash
+# run inside a locale repository (repo_zh_hans / repo_zh_hant); the hub has no
+# tools/translate/verify-llm.mjs
 cp .env.local.example .env.local
 # fill in LLM_BASE_URL, LLM_MODEL and LLM_API_KEY
 node tools/translate/verify-llm.mjs --dry-run
@@ -102,11 +115,12 @@ and `process.env` wins over both.
 
 ## Checking the connection
 
-`npm run verify:llm -- --dry-run` validates the variables, the URL shape and the
-numeric limits, prints the configuration with the key masked, and exits `0`
-(or `1` with the missing names and the files it searched).
+In a locale repository, `npm run verify:llm -- --dry-run` validates the
+variables, the URL shape and the numeric limits, prints the configuration with
+the key masked, and exits `0` (or `1` with the missing names and the files it
+searched). The hub has no such script.
 
-`npm run verify:llm` sends one minimal request (`把 hello 翻译成中文`,
+The same command sends one minimal request (`把 hello 翻译成中文`,
 `max_tokens: 256`), prints the masked base URL, the model, the session-header
 decision, the HTTP status, the elapsed time and the returned text. The answer
 must contain Chinese text such as `你好`.
@@ -131,6 +145,7 @@ reporting a generic "no content".
 
 ## Repositories that need no LLM configuration
 
-Only the repository that runs `tools/translate` needs `LLM_*`. The hub/content
-repository and the English site build do not call the LLM, so they need no
-variables or secrets; keep the key in the translation repository only.
+Only a repository that runs the translation toolchain needs `LLM_*`: that is
+each locale repository, not the hub. The hub/content repository and the English
+site build do not call the LLM, so they need no variables or secrets; keep the
+key in the locale repositories only.

@@ -51,7 +51,11 @@ const WHITELIST = [
   // repository. Their `tools/README.md` and content-registry helpers therefore
   // legitimately document / provide different things.
   {path: 'tools/README.md', reason: 'hub README documents the split; the template README documents a locale repo'},
-  {path: 'tools/content/', reason: 'hub-only: publish content into the locale repos (the template fetches it instead)'},
+  {
+    path: 'tools/content/',
+    reason:
+      'hub-only: locale scaffolding and publishing (locale:add, locales:check, content:publish) plus the template sync (sync:tools); the template only fetches content',
+  },
   {path: 'tools/verify/tools-template.mjs', reason: 'hub-only: this check compares the hub against the template'},
 
   // Hub-side fixes that have not been backported to the template yet. Keeping
@@ -102,6 +106,11 @@ const WHITELIST = [
   {
     path: 'tools/pipeline/verify.mjs',
     reason: 'hub has no translate:selftest / translate:verify steps',
+  },
+  {
+    path: 'tools/verify/browser-check.mjs',
+    reason:
+      'the hub no longer ships the one-shot provenance backfill script, so its footer check no longer names it; the template and the locale repositories still carry the script and keep the pointer',
   },
 ];
 

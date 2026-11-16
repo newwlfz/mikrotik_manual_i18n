@@ -1,5 +1,15 @@
 # 交接文档（HANDOFF）
 
+> **Status — the translation toolchain moved to the locale repositories.** This
+> hub (`repo_en`) publishes English only: `translate:*`, `verify:llm` and
+> `pipeline:translate` are gone from `package.json`, and the hub's `harvest` /
+> `derive` / `apply-known-translations` usage no longer exists. The authoritative
+> copy of the toolchain is `templates/locale-repo/tools/`, and it runs in the
+> locale repositories (`repo_zh_hans`, `repo_zh_hant`). This file is kept as a
+> historical hand-over snapshot: where a command below is no longer in
+> `package.json`, run it in the locale repository, and treat `package.json` as
+> the source of truth for the current command surface.
+
 > **本仓已拆分为英文站仓库（2026-11-14）。** 下文是从「中英双语同仓」时期冻结
 > 基线的交接快照，只保留作历史参考：其中的 `i18n/`、`build/zh-Hans/`、
 > 双语构建耗时、`state/translation-state.json` 等都不属于本仓。当前口径以
@@ -87,19 +97,19 @@
 
 ## 4. 管线
 
-六个入口（`guides/PIPELINE.md` 有完整契约）：
+入口（`guides/PIPELINE.md` 有完整契约；其中 `translate` 已迁到语种仓，本仓只有前四个加部署门禁）：
 
 | 命令 | 作用 |
 |---|---|
 | `node tools/pipeline/sync.mjs --update` | 跟随官方：抓取 → 归档/安装 → 爬导航 → 元数据 → CLI 互链 → 结构缓存 → mermaid/颜色 → 物料化 → 资产 → PDF → 剪枝 → 侧边栏 → 校验 |
-| `node tools/pipeline/translate.mjs [--mode=apply\|derive\|both] [--plan] [--from=ID] [--only=ID,…] [--locale=TAG]` | 重建中文 overlay 与收尾 pass |
+| ~~`node tools/pipeline/translate.mjs …`~~ | **本仓已无此入口**：重建某语种 overlay 与收尾 pass 的命令只在语种仓（`npm run pipeline:translate`，stage 清单来自 `templates/locale-repo/tools/pipeline/`） |
 | `node tools/pipeline/build.mjs` | `cli:build` → Docusaurus → Pagefind → `llms.mjs`，自设堆 |
 | `node tools/pipeline/verify.mjs [--browser]` | 全部断言；`--browser` 追加浏览器检查（需 `build/` + 本地 Chrome） |
 | `node tools/pipeline/report.mjs` | 生成 `reports/` 下的差异与覆盖率 |
 | `npm run verify:deploy` | 部署门禁，顺序固定：`build:slim` → `verify:assets` → `verify:base-url` → `verify:orphan-assets` → `verify:llms` |
 
-**stage 模型**：每个 stage 是 `{id, title, run: [脚本, argv]}`（`tools/pipeline/translate-stages.mjs`、
-`tools/sync/lib/update.mjs`）。`translate` 的三条入口是同一份 `PASSES` 的三次选择：
+**stage 模型**：每个 stage 是 `{id, title, run: [脚本, argv]}`（同步侧 `tools/sync/lib/update.mjs`；译文侧
+translate-stages.mjs 只存在于语种仓，本仓没有）。语种仓里 `translate` 的三条入口是同一份 `PASSES` 的三次选择：
 
 - `--mode=apply` → **13** 个 stage（`canonical-apply` + 12 个收尾 pass，含只有 apply 有的 `backfill-captured-at`）；
 - `--mode=derive` → **12** 个 stage（`canonical-derive` + 11 个收尾 pass）；
@@ -115,10 +125,10 @@
 1. `materialize` 之后必须跑 `node tools/sync/address-images.mjs --write`。物料化会把图片写成页面相对的
    `./img/x.webp`，地址化把它们收敛成 `/img/<hash>`（§5.2）。**已接入两条链**：`update.mjs` 的顺序是
    `materialize` → `assets` → `pdf-links` → `pdfs` → `prune-orphans` → `address-images` → `sidebars`
-   （`tools/sync/lib/update.mjs:119`）；`translate` 的 `both` 在 `sync-pdfs` 之后跑同一条
-   （`tools/pipeline/translate-stages.mjs:98`）；`sync.yml` 在 `prune-orphans` 步骤之后也有一行。脚本幂等，
+   （`tools/sync/lib/update.mjs:119`）；语种仓的 `translate` `both` 链在 `sync-pdfs` 之后跑同一条
+   （那边 `tools/pipeline/translate-stages.mjs:98`，本仓没有该文件）；`sync.yml` 在 `prune-orphans` 步骤之后也有一行。脚本幂等，
    当前产物重复跑是 `moved=0 deleted=0 changed=0 refs=9304`。
-2. `translate` 之后的收尾 pass 顺序（`PASSES` 里写死，别手调）：
+2. 语种仓 `translate` 之后的收尾 pass 顺序（`PASSES` 里写死，别手调；本仓没有这条链）：
    `generate-ui` → `normalize-links` → `fix-back-to-home` → `fix-asset-links` → `fix-fence-language`
    → `apply-known-translations`。`both` 模式再加 `normalize-hardware-titles` → `sync-pdfs` →
    `address-images` → `verify-labels` → `verify-cli`。
@@ -175,23 +185,23 @@
 legacy 语料（早期的 `content/` 中文项目）**已从本工作区删除**，`i18n/zh-Hans/` 里现有的 overlay
 就是唯一中文底稿。因此：
 
-- `npm run translate:harvest` 在 `apply` 之前把「英文块 → overlay 中文块」按结构指纹回收进
-  `../work/translate/model-memory.json`（已有键不覆盖，冲突单独计数）。它打印
+- 语种仓的 `npm run translate:harvest`（本仓没有该脚本）在 `apply` 之前把「英文块 → overlay 中文块」按
+  结构指纹回收进该仓的 `work/translate/model-memory.json`（已有键不覆盖，冲突单独计数）。它打印
   `harvest coverage: hardware pendingBlocks before=… after=…`，覆盖率只增不减；若回退则报错。
   **harvest 必须先于 apply**，否则没有记忆的页面会被重建成英文。
-- `translate:legacy`（`import-legacy`）是历史命令：`buildLegacy()` 在语料目录不存在时**直接抛错**，
-  拒绝把 `translation-memory.json` 覆盖成空文件；`apply` 读的是既有记忆，不是它。
+- `translate:legacy`（`import-legacy`）是历史命令（只在语种仓）：`buildLegacy()` 在语料目录不存在时
+  **直接抛错**，拒绝把 `translation-memory.json` 覆盖成空文件；`apply` 读的是既有记忆，不是它。
 - **中文保留率护栏**：`apply` 重写一页后如果中文数掉到原来的 95% 以下
   （`tools/translate/lib/cjk.mjs` 的 `CJK_REGRESSION_RATIO = 0.95`），就判为回退：保留原 overlay 并计入
   `preserved` / `preservedCjk`，除非显式 `--allow-cjk-loss`。这是为了「改一句措辞」不被误判成丢失。
-- `--locale=<tag>` 已参数化到所有 translate 命令（默认 `zh-Hans`）；资源路径只由
-  `tools/translate/lib/paths.mjs` 解析（overlay 根、术语表、页面补丁、TM 文件）。`--locale=en` 直接报错
+- `--locale=<tag>` 已参数化到所有 translate 命令（默认取该仓 `paths.mjs` 的 `DEFAULT_TARGET_LOCALE`）；
+  资源路径只由语种仓的 `tools/translate/lib/paths.mjs` 解析（overlay 根、术语表、页面补丁、TM 文件）。`--locale=en` 直接报错
   （它是 source locale）；格式合法但没写进配置的 tag 只允许 `--dry-run`/`--check`。
 - **新增语种五步**（`guides/PIPELINE.md#语种locale`）：① `docusaurus.config.ts` 的 `i18n.locales` +
   `localeConfigs`；② `config/glossary/<locale>.yml`；③ 需要时建
   `config/translation-patches/<locale>/`；④ 依次 `harvest` → `index.mjs apply --adopt --locale=<tag>` →
   `index.mjs translate --locale=<tag>` →（需要时）`derive-all.mjs --apply --locale=<tag>` →
-  `index.mjs verify --locale=<tag>`（或 `npm run translate:verify:all`）；⑤ 自带 UI 文案（`generate-ui.mjs`
+  `index.mjs verify --locale=<tag>`（或语种仓的 `npm run translate:verify:all`）；⑤ 自带 UI 文案（`generate-ui.mjs`
   的 `MANUAL` 表、`llms.mjs` 的 `INDEX_TEXT`）。`derive` 链与 `verify` 都接受 `--locale`：链顺序由
   `derivedFrom` 决定，overlay 路径由 `sectionsFor(locale)` 决定。
 
@@ -199,8 +209,8 @@ legacy 语料（早期的 `content/` 中文项目）**已从本工作区删除**
 
 | 命令 | 通过判定 | 本次实测 |
 |---|---|---|
-| `npm run translate:verify` | 六棵树全 0 | docs 1484/1484、7.25 1427/1427、7.24 1420/1420、hardware 250、blog 6、changelog 108；`fenceDiff`/`commentDiff`/`commentUntranslated`/`imageDiff`/`frontMatterDiff`/`emptyOverlays`/`untranslatedBlocks`=0；`mdxErrors=0 fences=9668`；`intentionalEnglish=10`（三棵 docs 树各 10） |
-| `npm run translate:verify:all` | 只遍历有资源的 locale，全过 | 当前只有 `zh-Hans`：`=== locale zh-Hans` + 上面同一份 0；`all-locales: checked 1 (zh-Hans); failed=0`；无资源的 `ru-RU` 不出现 |
+| 语种仓 `npm run translate:verify`（本仓无此脚本） | 六棵树全 0 | docs 1484/1484、7.25 1427/1427、7.24 1420/1420、hardware 250、blog 6、changelog 108；`fenceDiff`/`commentDiff`/`commentUntranslated`/`imageDiff`/`frontMatterDiff`/`emptyOverlays`/`untranslatedBlocks`=0；`mdxErrors=0 fences=9668`；`intentionalEnglish=10`（三棵 docs 树各 10） |
+| 语种仓 `npm run translate:verify:all` | 只遍历有资源的 locale，全过 | 当前只有 `zh-Hans`：`=== locale zh-Hans` + 上面同一份 0；`all-locales: checked 1 (zh-Hans); failed=0`；无资源的 `ru-RU` 不出现 |
 | `npm run verify:tables` | `headers=0` | docs `rows=7201 english=995 prose=14 headers=0 pages=7`；7.25 `7382/1022/21/0/7`；7.24 `9243/1015/17/0/7` |
 | `npm run verify:cli` | `english=0 attrMismatch=0` | rows 12285 / 11801 / 11748，`unpaired=0/0`，`compareVersions=1` |
 | `npm run verify:labels` | `missing=0` | docs `checked=1470 missing=0`；hardware `categories=12 untranslated=0 overlays=250`；`pdfs missing=0`；`english files=4331 cjk=0` |
@@ -276,8 +286,10 @@ npm run build:lowmem                                    # 本机构建：CLI →
 npm run build                                           # 同上，但用默认 10 GiB 堆（CI 用；本机会 OOM，见 §8）
 npm run serve                                           # 本地起静态服务（构建后）
 npm run verify:deploy                                   # 部署门禁：slim → assets → base-url → orphan-assets → llms（推荐）
-npm run translate:verify                                # 译文结构断言（含 MDX 编译，默认 zh-Hans）
-npm run translate:verify:all                            # 同一套断言跑所有有资源的 locale 并汇总
+# 译文命令已迁出本仓：translate:verify / translate:verify:all / translate:harvest /
+# translate:plan / translate:apply / translate:derive / pipeline:translate /
+# translate:selftest 都在语种仓（repo_zh_hans、repo_zh_hant）执行，权威副本
+# templates/locale-repo/tools/；命令清单见语种仓的 package.json 与 templates/README.md。
 npm run verify:tables                                   # 表格：表头 0 残留、英文散文在预算内
 npm run verify:cli                                      # CLI 表：英文 0 行、arg/typ 不漂移
 npm run verify:labels                                   # 标签：中文页不沿用英文侧边栏、PDF 本地存在
@@ -288,12 +300,6 @@ npm run verify:links                                    # 链接：defects=0（�
 npm run verify:orphan-assets                            # static/img 引用完整 + 孤儿报告
 npm run test:locale                                     # locale 路径逻辑单测（9 项）
 npm run verify:base-url                                 # 产物资源型根绝对引用都在 baseUrl 下
-npm run translate:harvest                               # 先把现有 overlay 回收进块记忆（apply 之前必跑）
-npm run translate:plan                                  # 只打印 stage 清单
-npm run translate:apply                                 # 13 个 stage：重建 zh-Hans overlay + 收尾
-npm run translate:derive                                # 12 个 stage：7.24 → 7.25 → 7.26 派生
-npm run pipeline:translate                              # 31 个 stage：harvest + apply + derive + 尾部断言
-npm run translate:selftest                              # 译文规则自检（不写盘）
 npm run sync -- --check                                 # 只检测官方是否变化
 npm run sync -- --update                                # 跟随官方（stage 列表见 tools/sync/lib/update.mjs）
 npm run sync -- --update --dry-run                      # 预演全流程
@@ -306,7 +312,7 @@ node tools/sync/sync-pdfs.mjs --apply                   # 重写 overlay 的 PDF
 
 ## 10. 相关文档
 
-- `guides/PIPELINE.md` —— 管线契约（六个入口、stage 清单、语种、数据契约、有意偏离官方的地方），最该先读。
+- `guides/PIPELINE.md` —— 管线契约（入口、stage 清单、语种、数据契约、有意偏离官方的地方；`translate` 入口已迁到语种仓），最该先读。
 - `guides/CI.md` —— 四个 workflow、部署门禁、开启自动更新的两步。
 - `ARCHITECTURE.md` —— 站点结构、插件路由、构建与产物。
 - `TRANSLATION.md` —— 翻译阶段划分、规则台账、修复该落在哪一层。

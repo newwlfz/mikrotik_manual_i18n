@@ -88,6 +88,11 @@ jobs:
       # 单语种构建：CLI 数据 → Docusaurus（--locale en）→ Pagefind → llms.txt。
       - name: Build site
         run: npm run build
+      # 工具链漂移门禁：`tools/` 与 `templates/locale-repo/tools/` 的差异必须只剩
+      # tools/verify/tools-template.mjs 白名单里的条目（每条都带理由）。放在
+      # verify:deploy 之前：漂移是仓库结构问题，没理由让它拖到部署门禁才暴露。
+      - name: Check the shared toolchain against the locale template
+        run: npm run check:tools-template
       # 部署前门禁：先 slim（ASSET_HOST=true 时保留完整 build/img），再跑
       # asset-refs / base-url-refs / orphan-assets / llms-links 四条断言。
       # slim 会按 BASE_URL 重写绝对 URL，所以必须与 build 看到同一组环境变量。

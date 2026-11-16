@@ -55,6 +55,7 @@
     "locale:add": "node tools/content/add-locale.mjs",
     "content:publish": "node tools/content/publish.mjs",
     "content:publish:dry": "node tools/content/publish.mjs --dry-run",
+    "sync:tools": "node tools/content/sync-tools.mjs",
     "verify:ui": "node tools/verify/browser-check.mjs",
     "test:locale": "node tools/verify/locale-path.test.mjs",
     "test:redirect": "node --test tools/verify/zh-redirect.test.mjs",

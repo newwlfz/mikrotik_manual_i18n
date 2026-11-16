@@ -193,7 +193,7 @@ English only and keeps `tools/translate/` as a library for its own `sync/`,
 (`repo_zh_hans`, `repo_zh_hant`), whose toolchain is the canonical
 `templates/locale-repo/tools/` (see `templates/README.md`):
 
-| Step | Command | Network |
+| Step (in a locale repository) | Command | Network |
 | --- | --- | --- |
 | Build overlays and sidebar catalogues | `translate:apply` | no |
 | Derive an archive overlay from the previous version | `translate:derive` | no |

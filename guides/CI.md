@@ -1,5 +1,16 @@
 # CI 与自动更新
 
+> **Status — the translation toolchain moved to the locale repositories.** This
+> hub (`repo_en`) no longer carries a translation command: `translate:*`,
+> `verify:llm` and `pipeline:translate` were removed from `package.json`, and the
+> hub's `harvest` / `derive` / `apply-known-translations` entry points are gone.
+> The authoritative copy of the toolchain is `templates/locale-repo/tools/`, and
+> the `translate` job described below runs inside each locale repository
+> (`repo_zh_hans`, `repo_zh_hant`), so every `tools/translate/...` path in this
+> file refers to the locale repository's copy of that tree. This file is kept as
+> the historical CI description; the hub's own gate list is defined by
+> `package.json` and `pages.yml`.
+
 多仓模型下只有三类工作流，职责不重叠：
 
 | 仓库 | 工作流 | 触发 | 作用 |
@@ -353,13 +364,15 @@ Markdown 链接会被 `mdx-loader` 的 `transformLinks` 改写成 `require()`，
 `otherAssets` 加载器给已经带内容哈希的文件名**再加一个哈希**
 （`<stem>-<sha>-<sha>.pdf`），产物因此翻倍（约 60 MB）。锚点不经过 `transformLinks`，
 `href` 的 `baseUrl` 由 `tools/build/remark-prefix-root-refs.mjs` 补；转换由
-`tools/sync/sync-pdfs.mjs` 与 `tools/translate/fix-asset-links.mjs` 调用
-`tools/translate/lib/pdf-links.mjs` 完成，两者都是幂等的。
+本仓的 `tools/sync/sync-pdfs.mjs` 与语种仓的 `tools/translate/fix-asset-links.mjs`
+调用 `tools/translate/lib/pdf-links.mjs` 完成，两者都是幂等的（`pdf-links.mjs`
+是本仓保留的共享库，`fix-asset-links.mjs` 只在语种仓）。
 
 ## `script_warning` in a language repo's job summary
 
 The language repositories check every translation against the target locale's
-writing system before it is written (`tools/translate/lib/script-check.mjs`):
+writing system before it is written (their own
+`tools/translate/lib/script-check.mjs`, from `templates/locale-repo/tools/`):
 `zh-Hant` must not contain Simplified-only characters or mainland terms,
 `zh-Hans` is checked in the opposite direction. A hit gets one feedback retry
 with the offending forms quoted back; an answer that still fails is kept and
@@ -372,5 +385,6 @@ as usual — but it is not silent either:
   `script_warnings` (per item `file` / `kind` / `forms` / `sample`);
 - `work/translate/run.json` keeps the same records, so the next batch can see
   what the previous one left behind;
-- `tools/ci/read-translate-summary.mjs` writes `script_warning=<count>` as a step
-  output and lists one row per warning under the batch table in the job summary.
+- the language repository's `tools/ci/read-translate-summary.mjs` writes
+  `script_warning=<count>` as a step output and lists one row per warning under
+  the batch table in the job summary.

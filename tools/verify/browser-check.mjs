@@ -638,9 +638,10 @@ check(
 //     translation time and "provider · model".
 //
 //     `translated_at` / `translation_provider` / `translation_model` are
-//     appended to every overlay's front matter by
-//     `tools/translate/backfill-provenance.mjs` (and by translate apply/derive
-//     from now on). REQUIRED_BACKFILL is true: a Chinese page must show all
+//     appended to every overlay's front matter by the translation toolchain's
+//     provenance pass in the locale repository (the one-shot backfill helper it
+//     started life in no longer exists here; translate apply/derive write the
+//     keys directly). REQUIRED_BACKFILL is true: a Chinese page must show all
 //     three fields, and `backfillPending` stays in the details so a regression
 //     reports which half is missing.
 {

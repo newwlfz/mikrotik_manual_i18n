@@ -85,7 +85,10 @@ whole family belongs in `templates/locale-repo/tools/` first, and
 `npm run check:tools-template` reports the drift (whitelisted, per-file
 divergences only — see the command's `--help` comment). The hub/template split is
 otherwise one-way: edit the template, scaffold new repositories with
-`npm run locale:add`, and copy the file into an existing repository by hand.
+`npm run locale:add`, and push the change into an existing repository with
+`npm run sync:tools -- --to ../repo_zh_hans` (it skips identical files, reports
+a conflict instead of overwriting a local change, and never touches the
+protected paths listed in `templates/README.md`).
 
 The legacy corpus (`<workspace>/mikrotik_manual_i18n/repo/content`) was deleted
 and the commands that imported it (`translate:legacy`, `translate:harvest`,
@@ -105,8 +108,9 @@ Directories:
   `tools-template.mjs` (`npm run check:tools-template`).
 - `pipeline/` — `sync`, `build`, `verify`, `report` wrappers over the stage
   lists. The `translate` wrapper belongs to the locale repositories.
-- `content/` — the locale registry helpers: `locale:add`, `locales:check` and
-  `content:publish` (hub-only; they write into the locale repositories).
+- `content/` — the locale registry helpers: `locale:add`, `locales:check`,
+  `content:publish` and `sync:tools` (hub-only; they write into the locale
+  repositories).
 
 Implementation rules:
 

@@ -264,8 +264,8 @@ Current artefacts:
 3. Add the rule to `config/translation-rules.yml`.
 4. Implement it, or record where it is already implemented.
 5. Add a case to `tools/translate/selftest.mjs`.
-6. Run `npm run translate:selftest`, `npm run translate:verify`, then
-   `npm run translate:apply` and `npm run build`.
+6. In the locale repository, run `npm run translate:selftest`,
+   `npm run translate:verify`, then `npm run translate:apply` and `npm run build`.
 7. Commit the rule, the code, the test and the regenerated overlays together.
 
 ## 5. A new RouterOS version
@@ -274,7 +274,8 @@ Current artefacts:
 2. Crawl its sidebar and fetch its pages (stage 1–2).
 3. `snapshot-version` the outgoing current version, `install-version` the new one.
 4. Run `npm run sync -- --check` and review the changed-page list.
-5. `npm run translate:apply` — unchanged pages are reused from the memory.
+5. `npm run translate:apply` (locale repository) — unchanged pages are reused
+   from the memory.
 6. `npm run translate -- --limit=50` for the misses; `npm run translate:review`
    for the list of pages whose English moved.
 7. `npm run build`; commit content, overlays and state together.
@@ -299,6 +300,9 @@ preservation, which are language-independent. Only the glossary, the profile
 and the patch layer are per locale.
 
 ## 7. Commands
+
+These commands run **in a locale repository** (`repo_zh_hans`, `repo_zh_hant`);
+the hub has no `translate:*` script and this block is not runnable here.
 
 ```bash
 npm run translate:selftest         # offline rule regression tests
@@ -369,7 +373,8 @@ everywhere:
 3. Add the locale to `docusaurus.config.ts` / `config/mirror.yml`.
 4. `translate --locale=<locale> --dry-run` to confirm the plan, then
    `translate --locale=<locale>`.
-5. `verify --locale=<locale>` and `npm run translate:selftest` must pass. The
+5. In the locale repository, `verify --locale=<locale>` and
+   `npm run translate:selftest` must pass. The
    selftest captures the real system prompt with a mock provider, so a profile
    that loses its `script` or `preferred terms` fails there before a batch is
    paid for.
