@@ -202,7 +202,7 @@ const USAGE =
   '       translate: [--refresh-changed] [--no-refresh-changed]  (rebuild pages whose English source changed)\n' +
   '       align: [--dry-run] [--section=NAME] [--file=REL]  (image references + orphan overlays)\n' +
   'note: an option value must be attached with "=" (--section=hardware); a space is not accepted.\n' +
-  'note: --locale defaults to zh-Hans and must not be the source locale (en).\n' +
+  `note: --locale defaults to ${DEFAULT_TARGET_LOCALE} and must not be the source locale (en).\n` +
   'note: verify --all-locales and verify --locale are mutually exclusive.\n' +
   'note: `translate --json` writes progress to stderr so stdout carries exactly one JSON summary.\n' +
   'note: --refresh-changed is on in `npm run translate:batch`; config/translation.yml#refresh_changed\n' +

@@ -16,12 +16,18 @@ export const WORKSPACE = WORKSPACE_ROOT;
 /**
  * Translation target used when the caller does not ask for one.
  *
- * `zh-Hans` is the only translated locale today. Every tool accepts
- * `--locale=<tag>`; the tag must be enabled in `docusaurus.config.ts`
- * (`resolveLocales()`) before a write, while read-only runs may probe a locale
- * that is not enabled yet (see `assertTranslationLocale`).
+ * The default below is a scaffold placeholder: `npm run locale:add` writes the
+ * repository's `--code` there, so a zh-Hans checkout gets `'zh-Hans'` and a
+ * zh-Hant checkout gets `'zh-Hant'`. Never edit the rendered value back into
+ * this template — every locale repository specializes it, and `sync:tools`
+ * protects the file for the same reason.
+ *
+ * Every tool accepts `--locale=<tag>`; the tag must be enabled in
+ * `docusaurus.config.ts` (`resolveLocales()`) before a write, while read-only
+ * runs may probe a locale that is not enabled yet (see
+ * `assertTranslationLocale`).
  */
-export const DEFAULT_TARGET_LOCALE = 'zh-Hans';
+export const DEFAULT_TARGET_LOCALE = '{{LOCALE}}';
 
 /**
  * Legacy corpus areas keyed by the RouterOS version they were captured from.

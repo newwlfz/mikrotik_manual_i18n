@@ -57,6 +57,11 @@ const WHITELIST = [
       'hub-only: locale scaffolding and publishing (locale:add, locales:check, content:publish) plus the template sync (sync:tools); the template only fetches content',
   },
   {path: 'tools/verify/tools-template.mjs', reason: 'hub-only: this check compares the hub against the template'},
+  {
+    path: 'tools/translate/lib/paths.mjs',
+    reason:
+      'the template keeps the {{LOCALE}} scaffold placeholder; each locale repository substitutes its own DEFAULT_TARGET_LOCALE (sync:tools protects the file for that reason)',
+  },
 
   // Hub-side fixes that have not been backported to the template yet. Keeping
   // them visible here is deliberate: the entry disappears when the fix lands in

@@ -159,8 +159,11 @@ Defaults derive from the hub's `en` entry: repository
 `<owner>/mikrotik_manual_<slug>`, `baseUrl` `/<repository-name>/`, site
 `https://<pages host><baseUrl>`, target directory `../repo_<slug>`. Override
 with `--repo`, `--base-url`, `--site`, `--dir`, `--site-title` and `--tagline`;
-`--help` lists every option. A failing `locales:check` restores the previous
-`locales.json` and leaves the scaffold in place for inspection.
+`--help` lists every option. **A non-English locale should pass `--site-title`
+and `--tagline` explicitly** — their defaults are the hub's English values, and
+they become the site title, the homepage heading and the `llms.txt` title and
+summary. A failing `locales:check` restores the previous `locales.json` and
+leaves the scaffold in place for inspection.
 
 Five manual steps remain — creating the repository, extending the token and
 setting the LLM variables are production side effects this command must not

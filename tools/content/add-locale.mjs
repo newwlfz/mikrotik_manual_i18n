@@ -37,6 +37,11 @@
  *                      slash (derived; sites do not ship `static/`)
  *   {{LOCALE_ENV}}     environment-variable prefix, e.g. `RU` (derived)
  *
+ * `siteTitle` and `tagline` are registry values, not placeholders: they drive
+ * the browser title, the homepage heading and the `llms.txt` title and summary.
+ * Their defaults are the hub's English values, so a non-English locale should
+ * pass `--site-title` and `--tagline` explicitly.
+ *
  * Usage:
  *   npm run locale:add -- --code ru-RU --label Русский
  *   npm run locale:add -- --code ru-RU --label Русский --dry-run
@@ -94,7 +99,9 @@ Optional
   --dir <path>        target directory, relative to the hub checkout
                       (default: ../repo_<slug>); must not exist or be empty
   --site-title <text> site title written to locales.json (default: the hub's)
+                      pass it explicitly for a non-English locale
   --tagline <text>    tagline written to locales.json (default: the hub's)
+                      pass it explicitly for a non-English locale
   --dry-run           print the plan and the locales.json change; write nothing
   -h, --help          print this help
 `;

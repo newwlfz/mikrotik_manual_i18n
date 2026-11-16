@@ -40,6 +40,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
+import localeRegistry from '../content/locales.js';
 import {normalizeBaseUrl, normalizeSiteUrl, resolveBaseUrl, resolveLocales, resolveSiteUrl} from '../lib/site-config.mjs';
 import {overlayRootFor} from '../translate/lib/paths.mjs';
 
@@ -280,8 +281,18 @@ function sectionFor(relId, sectionDirs) {
 }
 
 /**
- * 每种语种的 llms.txt 文案。新增语种没写条目时退回英文文案（URL 前缀仍按语种），
- * 这样少了翻译不会让 `llms:build` 失败。
+ * llms.txt 索引文案。
+ *
+ * 标题与摘要优先取自 `locales.json` 的 `siteTitle` / `tagline`（站点 `<title>`
+ * 与首页副标题也读同一份数据），所以新增语种只需要登记 `locales.json`，不必
+ * 改这个文件。`INDEX_TEXT` 只保留 en 与 zh-Hans 作为兜底：
+ *
+ *   - 某个语种没有条目，或登记表缺 `siteTitle` / `tagline` 时，标题和摘要
+ *     分别回落到 `INDEX_TEXT` 中该语种的标题/摘要；
+ *   - 未知语种的说明段、`corpus` 与 `overview` 标签一律用通用英文
+ *     （`INDEX_TEXT.en`），标题仍是该语种的 `siteTitle`，摘要优先 `tagline`、
+ *     缺省时用通用英文摘要。这样缺一份翻译不会让 `llms:build` 失败，URL
+ *     前缀仍按语种。
  */
 const INDEX_TEXT = {
   en: {
@@ -302,6 +313,25 @@ const INDEX_TEXT = {
     overview: '概览',
   },
 };
+
+/**
+ * 一个语种的索引文案：`locales.json` 的站点身份优先，`INDEX_TEXT` 兜底。
+ *
+ * 标题统一写成 Markdown 一级标题，摘要统一写成引用行，所以 `siteTitle`
+ * 与 `tagline` 不需要自带前缀。`locales.json` 由 hub 推送到每个语种仓，
+ * 独立构建的语种仓读到的就是自己那份登记表。
+ */
+function indexTextFor(locale, defaultLocale) {
+  const localized = INDEX_TEXT[locale] || INDEX_TEXT[defaultLocale] || INDEX_TEXT.en;
+  const entry = localeRegistry.readRegistry().locales[locale] || {};
+  const siteTitle = typeof entry.siteTitle === 'string' ? entry.siteTitle.trim() : '';
+  const tagline = typeof entry.tagline === 'string' ? entry.tagline.trim() : '';
+  return {
+    ...localized,
+    title: siteTitle ? `# ${siteTitle}` : localized.title,
+    summary: tagline ? `> ${tagline}` : localized.summary,
+  };
+}
 
 function buildLocale({
   locale,
@@ -347,7 +377,7 @@ function buildLocale({
     return null;
   };
 
-  const text = INDEX_TEXT[locale] || INDEX_TEXT[defaultLocale] || INDEX_TEXT.en;
+  const text = indexTextFor(locale, defaultLocale);
   // `docusaurus build --locale <X>` 把该语种写到 `build/` 根（`tools/build/
   // index.mjs` 的单语种模式），没有 `/<locale>/` 路由前缀；只有同仓双语构建
   // 才会把非默认语种放在 `/<locale>/` 下。跨仓镜像站（英文仓 / 中文仓各建
