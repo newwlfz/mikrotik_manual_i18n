@@ -1,0 +1,53 @@
+# Mirror source, versions and locale policy.
+# This file is the single switchboard for the automated workflow.
+schema: 1
+
+source:
+  base_url: https://manual.mikrotik.com
+  # Versions are NOT listed here: `data/manifests/current-version.json` is the
+  # installed release and `versions.json` lists the archives. The orchestrator
+  # (`npm run sync -- --update`) keeps both in sync.
+  sections:
+    - docs
+    - hardware
+    - blog
+    - changelog
+
+sync:
+  state_file: state/sync_state.json
+  manifest_dir: data/manifests
+  work_dir: .work
+  concurrency: 4
+  request_timeout_seconds: 60
+  retry_limit: 3
+  user_agent: mikrotik-manual-mirror/1.0 (+https://github.com/)
+  # Pages the mirror generates itself: never pruned when the official inventory
+  # does not list them. Empty since the official site publishes
+  # `cli-reference/compare-versions` itself (since 7.26).
+  preserve_pages: []
+  # Pages that only the current release publishes. A version snapshot drops
+  # them: the archive links to the current page instead, exactly like the
+  # official site's "Version comparison" sidebar entry.
+  current_only_pages:
+    - cli-reference/compare-versions
+
+assets:
+  root: static
+  download_external: true
+  hash_algorithm: sha256
+
+site:
+  # Production values can be overridden by SITE_URL / BASE_URL in CI.
+  url: https://example.github.io
+  base_url: /
+  organization: example
+  project: mikrotik-manual-mirror
+
+# Enabled locales and the source locale are NOT configured here: the single
+# source of truth is `i18n` in `docusaurus.config.ts` (`locales` /
+# `defaultLocale`), read by `tools/lib/site-config.mjs#resolveLocales()`.
+# Per-locale translation resources follow the naming convention documented in
+# `guides/PIPELINE.md` (`config/glossary/<locale>.yml`, ...).
+translation:
+  file: config/translation.yml
+  enabled: false

@@ -1,0 +1,153 @@
+# Translation policy.
+#
+# The endpoint, model, API key, timeout and retry budget are connection
+# settings, not repository policy: they come from LLM_* (see
+# `tools/translate/lib/llm-config.mjs`, `guides/LLM.md` and
+# `.env.local.example`). They are never stored in this file.
+schema: 1
+
+# Rebuild a page from its new English source before a batch translates it.
+#
+# `translate --refresh-changed` (what `npm run translate:batch` runs) compares
+# every source page with the fingerprints in `state/translation-state.json`,
+# rebuilds the pages that changed from the translation memory, keeps the wording
+# of the blocks that did not, and leaves only the changed/new blocks for the
+# model. Set this to `false`, or run with `TRANSLATE_REFRESH_CHANGED=0`, to turn
+# the refresh off without editing the workflow; `--no-refresh-changed` does it
+# for one run. See `tools/translate/lib/refresh.mjs`.
+refresh_changed: true
+
+# OFFLINE FALLBACK for an overlay's `translation_provider` front matter.
+# The wire protocol is always OpenAI chat-completions; this only names who
+# produced the wording. A configured LLM_BASE_URL derivation wins; this value
+# is used only when no endpoint is configured (offline apply/derive/backfill).
+# `translationProvenance({source: 'llm'})` refreshes the overlay field from the
+# live endpoint, so this label does NOT describe a page rewritten this round.
+provider: opencode-go
+
+# OFFLINE FALLBACK for `translation_model` when an offline `apply`/`derive` runs
+# with no LLM_MODEL configured. A configured LLM_MODEL always wins, and
+# `translationProvenance({source: 'llm'})` writes that live model into an
+# overlay even when this file still names an older one. A `tm`/`memory` source
+# keeps the historical model and records `translation_source` instead.
+model: deepseek-v4.1-flash
+
+glossary: config/glossary/{{LOCALE}}.yml
+
+# How many glossary terms one request may quote. The prompt carries only the
+# terms that occur in the text being sent — the whole glossary is never pasted
+# in, because a 20-term slice is what the model actually uses and a long list
+# dilutes the locale profile next to it.
+glossary_limit: 20
+
+# Sampling temperature of one translation request.
+#
+# `0` is policy, not taste: every English page exists in several version trees,
+# and the trees are translated by separate runs. At the endpoint's default
+# temperature the very same paragraph came back with different wordings, so the
+# site contradicted itself between versions. `translate` now consults the
+# translation memory before it queues a block — a hit is reused and costs
+# nothing — and this pin removes the remaining variance for the blocks that are
+# still sent: at 0 the answer is a function of the prompt, so the same English
+# always reads the same way.
+#
+# An endpoint that rejects the field is retried once without it and warns (see
+# `tools/translate/lib/provider.mjs`), so the pre-existing behaviour is the floor
+# rather than a hard failure.
+temperature: 0
+
+# How much the model may deliberate before it answers.
+#
+# The endpoint is a reasoning model, so with no parameter it spends most of its
+# completion budget on `reasoning_content` — text this pipeline throws away,
+# because only `content` is the translation. Measured on the same 8-block
+# request (1 259 prompt tokens) against the Go channel and deepseek-v4.1-flash:
+#
+#   off      reasoning_effort: "none"     ~310 completion,  0 reasoning,  ~6 s
+#   low      reasoning_effort: "low"      ~320 completion, 10 reasoning,  ~7 s
+#   default  no parameter                ~1 000 completion, 700 reasoning, ~10 s
+#
+# `minimal` is accepted by the endpoint but is not a middle ground: the same
+# request spent 3 648 reasoning tokens, more than `default`. It is listed
+# because the parameter exists, not because it is worth using.
+#
+# `off` is the default because the wording survives the spot check and the
+# block-count, script and keep-English guards still run; the saving is ~70 % of
+# the completion tokens, which is the batch's main cost. Read by
+# `tools/translate/lib/provider.mjs`; an endpoint that rejects
+# `reasoning_effort` is retried once without it, so the old behaviour is the
+# floor rather than a hard failure.
+reasoning: off
+
+# Output budget of one request, in tokens.
+#
+# A request carries at most `segmentation.max_blocks` (8) blocks, but
+# `segmentation.max_chars` (8000) is the real ceiling: an 8000-character
+# English segment becomes roughly 8000 Chinese characters, so a 4096-token
+# answer was cut at `finish_reason: "length"` on dense pages (wide tables, long
+# paragraphs); the block was retried three times and then skipped, which is how
+# the dense pages of every section stayed pending. 16384 covers a whole
+# `max_chars` segment in one answer. The provider bills actual output tokens,
+# so the higher ceiling costs nothing on the short answers that are the
+# majority. It must stay well above the reasoning budget while
+# `reasoning: default` is in use; otherwise the answer is cut at
+# `finish_reason: "length"` and the block is retried.
+max_tokens: 16384
+
+# How one translation request is cut. `max_blocks` is the number of blocks the
+# model gets at once and `max_chars` the size budget of that request; a page
+# that exceeds either is sent as several requests (see
+# `tools/translate/lib/segments.mjs`). These were command-line flags
+# (`--batch`, `--max-chars`) with the same defaults, which is how an oversized
+# page used to be split by hand after the endpoint refused it.
+segmentation:
+  max_blocks: 8
+  max_chars: 8000
+
+# How close a link's visible text must be to the target page's English title
+# before the label is replaced with that page's {{LOCALE_LABEL}} title.
+#
+# The English source is not consistent - "Quick start" links to a page titled
+# "Quick Start guide", "Routing" to "Routing decision" - so an exact comparison
+# left English labels pointing at {{LOCALE_LABEL}} pages. 0.6 is the Sørensen-Dice
+# overlap of the folded word sets: it catches the subtitle/short-form variants
+# (>= 0.67) while a single shared word out of three stays below it. Technical
+# identifiers (`tmpfs`, `poe-out`) and glossary terms are never re-labelled,
+# whatever the score. Read by `tools/translate/lib/links.mjs`; `verify:links`
+# counts a similar-but-untranslated label as `failedTitle`.
+link_text_similarity: 0.6
+
+# These structures are copied verbatim, never translated.
+preserve:
+  - frontmatter_keys
+  - code_fences
+  - inline_code
+  - urls
+  - cli_paths
+  - mdx_component_names
+  - image_paths
+
+frontmatter_keys:
+  - id
+  - slug
+  - sidebar_position
+  - sidebar_class_name
+  - displayed_sidebar
+  - tags
+  - keywords
+  - image
+  - draft
+
+# Only these frontmatter values may be translated.
+translatable_frontmatter:
+  - title
+  - sidebar_label
+  - description
+
+# Overlays kept as-is instead of being rebuilt from the English source.
+#
+# `hardware/iot-products/knot-lr9g-kit.md` comes from a bilingual legacy page
+# (each paragraph is an English block followed by a `→` {{LOCALE_LABEL}} block). Block
+# alignment cannot reconstruct it without duplicating text, and the reviewed
+# (empty: no overlay is preserved byte for byte any more)
+preserve_overlays: []

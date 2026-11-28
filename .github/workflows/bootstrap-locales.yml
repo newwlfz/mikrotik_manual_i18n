@@ -1,0 +1,495 @@
+name: Bootstrap locale repositories from the skeleton Release
+
+# 完全在线新增语种的核心缺口：用户删掉简繁仓后，两仓是**空仓**，本地无从 push。
+# 本 job 在 CI 里：
+#   1. 复用 tools/content/release-skeleton.mjs 从 hub 的 templates/locale-repo
+#      工作树生成一份 Release 骨架（tar.gz + manifest）到 $RUNNER_TEMP；
+#   2. 用模板自带的 templates/locale-repo/tools/bootstrap/from-release.mjs
+#      --asset-dir 离线渲染每个语种（先 --dry-run 校验，再实跑）；它校验
+#      archive.sha256 与每个文件 SHA-256、展开 11 个占位符并复核 0 残留；
+#   3. 对每个空仓 git init -b main → 首提交 → push（绝不 force push；目标分支
+#      非空即 fail-closed）；
+#   4. 全部成功后才在 hub 的 locales.json 注册这些语种（available: true，
+#      7 字段）并 push，然后显式 dispatch hub pages.yml（publish_only）把内容
+#      推到两语种仓，等待该 run 成功后用 PAT dispatch 两仓的 pages.yml 触发翻译。
+#
+# 顺序约束：bootstrap 必须先于 publish / fanout —— 空仓上 publish.mjs 的
+# `git rev-parse HEAD` 会 exit 128，dispatch 给没有 workflow 的仓也会失败。
+#
+# 权限前提（用户预先配好，文档尚未覆盖）：CROSS_REPO_TOKEN 除 Contents: R/W、
+# Actions: R/W 外，还需 **Workflows: R/W** —— 骨架首提交包含
+# `.github/workflows/pages.yml`。令牌只从 secrets 注入；跨仓 push 用隔离的
+# git config（GIT_CONFIG_GLOBAL=/dev/null + GIT_CONFIG_COUNT），remote URL
+# 保持明文 `https://github.com/<owner>/<repo>.git`，日志里不打印令牌。
+# dry_run 只写 $RUNNER_TEMP：不提交、不 push、不改 locales.json、不 dispatch。
+'on':
+  workflow_dispatch:
+    inputs:
+      locales:
+        description: '逗号分隔的 BCP 47 语种（内置映射：zh-Hans, zh-Hant）'
+        required: true
+        type: string
+        default: 'zh-Hans,zh-Hant'
+      dry_run:
+        description: '只校验与渲染：不提交、不 push、不改 locales.json、不 dispatch'
+        required: false
+        type: boolean
+        default: false
+      version:
+        description: '骨架版本 / Release tag'
+        required: false
+        type: string
+        default: 'skeleton-v0.1.0'
+
+permissions:
+  contents: write # 注册 locales.json 后 commit + push 回 hub
+  actions: write # 显式 dispatch hub 的 pages.yml（GITHUB_TOKEN push 不触发 workflow）
+
+# 两次 bootstrap 会写同一个 locales.json / 同一批空仓；排队，不取消。
+concurrency:
+  group: bootstrap-locales
+  cancel-in-progress: false
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      DRY_RUN: ${{ inputs.dry_run }}
+      HUB_REF: ${{ github.ref_name }}
+      SKELETON_VERSION: ${{ inputs.version || 'skeleton-v0.1.0' }}
+    steps:
+      - name: Checkout hub (worktree skeleton + git history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Prepare npm cache directory
+        env:
+          BOOTSTRAP_DIR: ${{ runner.temp }}/bootstrap-locales
+          NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
+        run: mkdir -p "$NPM_CONFIG_CACHE" "$BOOTSTRAP_DIR/assets"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        env:
+          NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      # release-skeleton.mjs 依赖 yaml；from-release.mjs 零第三方依赖。
+      - name: Install dependencies
+        env:
+          NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
+        run: npm ci
+
+      - name: Resolve locale plan and check secrets
+        id: plan
+        env:
+          BOOTSTRAP_DIR: ${{ runner.temp }}/bootstrap-locales
+          LOCALES_INPUT: ${{ inputs.locales }}
+          LOCALE_PLAN: ${{ runner.temp }}/bootstrap-locales/locale-plan.json
+          LOCALE_TSV: ${{ runner.temp }}/bootstrap-locales/locale-plan.tsv
+          CROSS_REPO_TOKEN: ${{ secrets.CROSS_REPO_TOKEN }}
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs = require('fs');
+
+          // 内置映射：只有这四个值是本地参数；baseUrl/site/assetOrigin/REPO
+          // 全部由 from-release.mjs 从 manifest.hub 取，不在这里重复。
+          const MAP = {
+            'zh-Hans': {
+              locale: 'zh-Hans', repo: 'newwlfz/mikrotik_manual_zh_hans',
+              slug: 'zh_hans', label: '简体中文',
+              siteTitle: 'RouterOS 手册',
+              tagline: 'MikroTik RouterOS 文档、硬件指南、新闻与 CLI 参考',
+            },
+            'zh-Hant': {
+              locale: 'zh-Hant', repo: 'newwlfz/mikrotik_manual_zh_hant',
+              slug: 'zh_hant', label: '繁體中文',
+              siteTitle: 'RouterOS 手冊',
+              tagline: 'MikroTik RouterOS 文檔、硬體指南、新聞與 CLI 參考',
+            },
+          };
+          const raw = String(process.env.LOCALES_INPUT || '').trim();
+          if (!raw) throw new Error('[plan] locales input is empty');
+          const seen = new Set();
+          const locales = [];
+          for (const token of raw.split(',')) {
+            const code = token.trim();
+            if (!code) continue;
+            if (seen.has(code)) throw new Error(`[plan] duplicate locale: ${code}`);
+            seen.add(code);
+            if (!Object.prototype.hasOwnProperty.call(MAP, code)) {
+              throw new Error(`[plan] unsupported locale "${code}"; built-in map has: ${Object.keys(MAP).join(', ')}`);
+            }
+            try { new Intl.Locale(code); } catch { throw new Error(`[plan] invalid BCP 47 tag: ${code}`); }
+            locales.push(MAP[code]);
+          }
+          if (!locales.length) throw new Error('[plan] no locales selected');
+          fs.writeFileSync(process.env.LOCALE_PLAN, JSON.stringify({locales}, null, 2) + '\n');
+          fs.writeFileSync(
+            process.env.LOCALE_TSV,
+            locales.map((x) => [x.locale, x.repo, x.slug, x.label].join('\t')).join('\n') + '\n',
+          );
+          console.log('[plan] ' + locales.map((x) => `${x.locale} -> ${x.repo} (${x.slug}, ${x.label})`).join('; '));
+          NODE
+          if [ "$DRY_RUN" != "true" ] && [ -z "${CROSS_REPO_TOKEN:-}" ]; then
+            echo "::error title=CROSS_REPO_TOKEN is not set::在 hub 的 Settings → Secrets and variables → Actions 添加 fine-grained PAT（目标仓 Contents: R/W、Actions: R/W、Workflows: R/W；骨架含 .github/workflows/pages.yml）。dry_run 不需要它。"
+            exit 1
+          fi
+          {
+            echo "### Bootstrap locales"
+            echo ''
+            echo "- dry_run: \`$DRY_RUN\`"
+            echo "- version: \`$SKELETON_VERSION\`"
+            echo "- locales: \`$LOCALES_INPUT\`"
+            echo ''
+          } > "$BOOTSTRAP_DIR/summary.md"
+
+      - name: Generate local Release skeleton (tar.gz + manifest)
+        id: skeleton
+        env:
+          BOOTSTRAP_DIR: ${{ runner.temp }}/bootstrap-locales
+        # release-skeleton.mjs 写 $GITHUB_OUTPUT: asset / manifest / version。
+        # 也可以改成下载已发布 Release 资产：from-release.mjs --asset-dir 同样
+        # 校验 archive.sha256 与逐文件 SHA-256，语义不变。
+        run: |
+          set -euo pipefail
+          node tools/content/release-skeleton.mjs \
+            --version "$SKELETON_VERSION" \
+            --out-dir "$BOOTSTRAP_DIR/assets"
+
+      - name: Verify skeleton archive and manifest
+        id: verify
+        env:
+          BOOTSTRAP_DIR: ${{ runner.temp }}/bootstrap-locales
+          SKELETON_ASSET: ${{ steps.skeleton.outputs.asset }}
+          SKELETON_MANIFEST: ${{ steps.skeleton.outputs.manifest }}
+        run: |
+          set -euo pipefail
+          actual=$(sha256sum "$SKELETON_ASSET" | awk '{print $1}')
+          node - "$SKELETON_MANIFEST" "$actual" <<'NODE'
+          const fs = require('fs');
+          const [file, actual] = process.argv.slice(2);
+          const m = JSON.parse(fs.readFileSync(file, 'utf8'));
+          const problems = [];
+          if (!m.checks || m.checks.required.status !== 'pass') problems.push('required files != pass');
+          if (!m.checks || m.checks.sensitive.status !== 'pass') problems.push('sensitive guard != pass');
+          if (!m.checks || m.checks.tar_readback.status !== 'pass') problems.push('tar readback != pass');
+          if (m.archive.file_count !== 245) problems.push(`file count ${m.archive.file_count} != 245`);
+          if (String(m.archive.sha256).toLowerCase() !== actual.toLowerCase()) problems.push('archive.sha256 mismatch');
+          if (!m.checks || m.checks.placeholders.names !== 11) problems.push('placeholder names != 11');
+          for (const key of ['repo', 'base_url', 'site', 'asset_origin']) {
+            if (!m.hub || !m.hub[key]) problems.push(`manifest.hub.${key} missing`);
+          }
+          if (problems.length) {
+            console.error('[verify] FAIL: ' + problems.join('; '));
+            process.exit(1);
+          }
+          console.log(`[verify] ${m.skeleton_version}: ${m.archive.file_count} files, sha256=${actual}, hub=${m.hub.repo}, assetOrigin=${m.hub.asset_origin}`);
+          NODE
+          echo "asset_sha=$actual" >> "$GITHUB_OUTPUT"
+          {
+            echo "- skeleton: \`$SKELETON_VERSION\` — sha256 \`$actual\` — 245 files, required/sensitive/readback pass"
+            echo ''
+          } >> "$BOOTSTRAP_DIR/summary.md"
+
+      - name: Render each locale (dry-run first, then real)
+        env:
+          ASSET_DIR: ${{ runner.temp }}/bootstrap-locales/assets
+          LOCALE_TSV: ${{ runner.temp }}/bootstrap-locales/locale-plan.tsv
+          SKELETON_MANIFEST: ${{ steps.skeleton.outputs.manifest }}
+        run: |
+          set -euo pipefail
+          tool="templates/locale-repo/tools/bootstrap/from-release.mjs"
+          while IFS=$'\t' read -r code repo slug label; do
+            [ -n "$code" ] || continue
+            render_dir="$RUNNER_TEMP/render-$code"
+            rm -rf "$render_dir"
+            common=(--asset-dir "$ASSET_DIR" --version "$SKELETON_VERSION"
+                    --locale "$code" --label "$label" --repo "$repo" --slug "$slug"
+                    --dir "$render_dir")
+
+            # 先 dry-run：下载/校验/展开的计划全跑一遍，目标目录不写。
+            echo "[render] $code: dry run"
+            node "$tool" "${common[@]}" --dry-run
+
+            if [ "$DRY_RUN" != "true" ]; then
+              echo "[render] $code: real render"
+              node "$tool" "${common[@]}"
+
+              # 渲染后独立复核：0 占位符、245 文件、无 build/VCS 产物混入。
+              # from-release.mjs 内部已做同样断言，这里再独立核一遍。
+              node - "$render_dir" "$SKELETON_MANIFEST" "$code" <<'NODE'
+              const fs = require('fs');
+              const path = require('path');
+              const [root, manifestPath, locale] = process.argv.slice(2);
+              const names = ['LOCALE', 'LOCALE_LABEL', 'SLUG', 'REPO', 'BASE_URL', 'SITE',
+                'SITE_ORIGIN', 'HUB_REPO', 'HUB_BASE_URL', 'ASSET_ORIGIN', 'LOCALE_ENV'];
+              const re = new RegExp('\\{\\{(?:' + names.join('|') + ')\\}\\}');
+              const expected = JSON.parse(fs.readFileSync(manifestPath, 'utf8')).archive.file_count;
+              const walk = (dir, out = []) => {
+                for (const entry of fs.readdirSync(dir, {withFileTypes: true})) {
+                  const full = path.join(dir, entry.name);
+                  if (entry.isDirectory()) walk(full, out);
+                  else if (entry.isFile()) out.push(full);
+                  else throw new Error(`non-regular entry: ${full}`);
+                }
+                return out;
+              };
+              const files = walk(root);
+              const bad = [];
+              for (const full of files) {
+                const rel = path.relative(root, full).split(path.sep).join('/');
+                if (re.test(rel)) bad.push(`${rel} (path placeholder)`);
+                // 与 from-release.mjs 的 FORBIDDEN_PATH_RE 同源：build/.docusaurus
+                // 只看仓库根（tools/build/ 是合法源码目录），.git/node_modules 任意层。
+                if (/(?:^|\/)(?:\.git|node_modules)(?:\/|$)/.test(rel) || /^(?:build|\.docusaurus)(?:\/|$)/.test(rel)) bad.push(`${rel} (artifact)`);
+                const buf = fs.readFileSync(full);
+                if (!buf.includes(0) && re.test(buf.toString('utf8'))) bad.push(`${rel} (content placeholder)`);
+              }
+              if (files.length !== 245) bad.push(`file count ${files.length} != 245`);
+              if (expected !== 245) bad.push(`manifest file count ${expected} != 245`);
+              if (!files.includes(path.join(root, 'i18n', locale, '.gitkeep'))) {
+                bad.push(`missing i18n/${locale}/.gitkeep`);
+              }
+              if (bad.length) throw new Error(`${root}: ` + bad.slice(0, 6).join('; '));
+              console.log(`[verify-render] ${files.length} files, 0 placeholders, no artifacts`);
+          NODE
+            else
+              echo "[render] $code: dry run only — target untouched, nothing committed"
+            fi
+          done < "$LOCALE_TSV"
+
+      - name: Commit and push skeleton to empty locale repos
+        if: ${{ inputs.dry_run != true }}
+        env:
+          BOOTSTRAP_DIR: ${{ runner.temp }}/bootstrap-locales
+          CROSS_REPO_TOKEN: ${{ secrets.CROSS_REPO_TOKEN }}
+          LOCALE_TSV: ${{ runner.temp }}/bootstrap-locales/locale-plan.tsv
+        run: |
+          set -euo pipefail
+          # 令牌只经 env → GIT_CONFIG_VALUE_0，不进命令行、不进 remote URL、不 echo。
+          # 隔离 checkout 的 GITHUB_TOKEN 凭据，避免把它发到其它仓。
+          export GIT_CONFIG_GLOBAL=/dev/null
+          export GIT_CONFIG_SYSTEM=/dev/null
+          export GIT_CONFIG_COUNT=1
+          export GIT_CONFIG_KEY_0=http.https://github.com/.extraheader
+          export GIT_CONFIG_VALUE_0="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$CROSS_REPO_TOKEN" | base64 -w0)"
+
+          while IFS=$'\t' read -r code repo slug label; do
+            [ -n "$code" ] || continue
+            render_dir="$RUNNER_TEMP/render-$code"
+            cd "$render_dir"
+            git init -b main
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -q -m "init: locale skeleton"
+            sha=$(git rev-parse HEAD)
+            # remote URL 不含令牌；日志里即使出现也可读。
+            git remote add origin "https://github.com/${repo}.git"
+
+            # fail-closed：目标分支已有提交就拒绝（不覆盖、不 force push）。
+            set +e
+            git ls-remote --exit-code --heads origin refs/heads/main \
+              > /dev/null 2> "$RUNNER_TEMP/lsremote-$code.err"
+            lscode=$?
+            set -e
+            case "$lscode" in
+              0)
+                echo "::error title=$repo 非空仓::$repo 的 main 已有提交，拒绝覆盖"
+                exit 1
+                ;;
+              2)
+                echo "[push] $repo: main is empty, proceeding"
+                ;;
+              *)
+                echo "::error title=$repo ls-remote 失败::exit $lscode; $(cat "$RUNNER_TEMP/lsremote-$code.err")"
+                exit 1
+                ;;
+            esac
+
+            if ! git push -u origin main; then
+              echo "::error title=$repo 首次推送失败::检查 CROSS_REPO_TOKEN 是否覆盖 $repo 且含 Contents: R/W 与 Workflows: R/W（骨架带 .github/workflows/pages.yml）"
+              exit 1
+            fi
+            echo "[push] $repo main $sha"
+            echo "- \`$repo\` (\`$code\`): commit \`$sha\` pushed to \`main\`" >> "$BOOTSTRAP_DIR/summary.md"
+          done < "$LOCALE_TSV"
+
+      - name: Register locales in hub locales.json
+        id: register
+        if: ${{ inputs.dry_run != true }}
+        env:
+          BOOTSTRAP_DIR: ${{ runner.temp }}/bootstrap-locales
+          LOCALE_PLAN: ${{ runner.temp }}/bootstrap-locales/locale-plan.json
+          SKELETON_MANIFEST: ${{ steps.skeleton.outputs.manifest }}
+          REGISTER_RESULT: ${{ runner.temp }}/bootstrap-locales/register.json
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs = require('fs');
+          const plan = JSON.parse(fs.readFileSync(process.env.LOCALE_PLAN, 'utf8'));
+          const manifest = JSON.parse(fs.readFileSync(process.env.SKELETON_MANIFEST, 'utf8'));
+          const registry = JSON.parse(fs.readFileSync('locales.json', 'utf8'));
+          const hub = manifest.hub || {};
+          const registered = (hub.locales || []).find((e) => e && e.repo && e.repo !== hub.repo) || null;
+          const origin = hub.site_origin || new URL(hub.site).origin;
+          registry.locales = registry.locales || {};
+          let changed = false;
+          for (const item of plan.locales) {
+            // 与 from-release.mjs buildValues() 同源：优先 manifest.hub.locales，
+            // 否则按仓库名派生（与 locales.json 现有简繁条目一致）。
+            const fromHub = (hub.locales || []).find((e) => e && (e.code === item.locale || e.repo === item.repo));
+            const repoName = item.repo.split('/')[1];
+            const baseUrl = fromHub && fromHub.base_url ? fromHub.base_url : `/${repoName}/`;
+            const site = fromHub && fromHub.site ? fromHub.site : `${origin}${baseUrl}`;
+            const entry = {
+              label: item.label,
+              available: true,
+              repo: item.repo,
+              baseUrl,
+              site,
+              siteTitle: item.siteTitle,
+              tagline: item.tagline,
+            };
+            if (JSON.stringify(registry.locales[item.locale]) !== JSON.stringify(entry)) {
+              registry.locales[item.locale] = entry;
+              changed = true;
+            }
+          }
+          if (changed) fs.writeFileSync('locales.json', `${JSON.stringify(registry, null, 2)}\n`);
+          fs.writeFileSync(process.env.REGISTER_RESULT, JSON.stringify({changed, locales: plan.locales.map((x) => x.locale)}, null, 2) + '\n');
+          console.log(`[register] locales.json ${changed ? 'updated' : 'already up to date'}: ${plan.locales.map((x) => x.locale).join(', ')}`);
+          NODE
+          if [ "$(node -p "String(JSON.parse(require('fs').readFileSync(process.env.REGISTER_RESULT,'utf8')).changed)")" = "true" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add locales.json
+            git commit -q -m "chore(i18n): register bootstrapped locales"
+            if ! git push origin "HEAD:$HUB_REF"; then
+              echo "[register] push rejected; rebase on origin/$HUB_REF and retry once (no force push)"
+              git fetch origin "$HUB_REF"
+              git rebase "origin/$HUB_REF"
+              git push origin "HEAD:$HUB_REF"
+            fi
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+          {
+            echo "- locales.json registration: \`available: true\` for $(node -p "JSON.parse(require('fs').readFileSync(process.env.REGISTER_RESULT,'utf8')).locales.join(', ')") (changed: \`$(node -p "String(JSON.parse(require('fs').readFileSync(process.env.REGISTER_RESULT,'utf8')).changed)")\`)"
+            echo ''
+          } >> "$BOOTSTRAP_DIR/summary.md"
+
+      - name: Dispatch hub pages.yml (publish_only)
+        id: hub_dispatch
+        if: ${{ inputs.dry_run != true }}
+        uses: actions/github-script@v7
+        env:
+          HUB_REF: ${{ github.ref_name }}
+          SUMMARY_FILE: ${{ runner.temp }}/bootstrap-locales/summary.md
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const dispatchedAt = new Date(Date.now() - 5000).toISOString();
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'pages.yml',
+              ref: process.env.HUB_REF,
+              inputs: {publish_only: 'true'},
+            });
+            core.info(`dispatched hub pages.yml on ${process.env.HUB_REF} (publish_only=true)`);
+            core.setOutput('dispatched_at', dispatchedAt);
+            fs.appendFileSync(process.env.SUMMARY_FILE, '- hub `pages.yml`: dispatched (`publish_only=true`, GITHUB_TOKEN)\n');
+
+      # GITHUB_TOKEN 的 push 不触发 workflow；上一步的 dispatch 负责把内容 +
+      # locales.json 推到两语种仓。等它成功后再 dispatch 两仓的 pages.yml，
+      # 否则 translate job 会因内容根缺失而直接失败。
+      - name: Wait for hub publish run to succeed
+        if: ${{ inputs.dry_run != true }}
+        uses: actions/github-script@v7
+        env:
+          DISPATCHED_AT: ${{ steps.hub_dispatch.outputs.dispatched_at }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const since = new Date(process.env.DISPATCHED_AT || 0);
+            const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+            let run = null;
+            for (let attempt = 0; attempt < 40; attempt += 1) {
+              const {data} = await github.rest.actions.listWorkflowRuns({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                workflow_id: 'pages.yml',
+                per_page: 30,
+              });
+              run = (data.workflow_runs || []).find((item) =>
+                item.event === 'workflow_dispatch' && new Date(item.created_at) >= since);
+              if (run && run.status === 'completed') break;
+              await sleep(15000);
+            }
+            if (!run || run.status !== 'completed') {
+              core.setFailed('hub pages.yml dispatch run did not complete within 10 minutes; locale dispatch skipped');
+              return;
+            }
+            if (run.conclusion !== 'success') {
+              core.setFailed(`hub pages.yml run ${run.id} concluded "${run.conclusion}"; locale dispatch skipped`);
+              return;
+            }
+            core.info(`hub pages.yml run ${run.id}: ${run.conclusion}`);
+
+      - name: Dispatch locale repositories' pages.yml (PAT)
+        if: ${{ inputs.dry_run != true }}
+        uses: actions/github-script@v7
+        env:
+          LOCALE_PLAN: ${{ runner.temp }}/bootstrap-locales/locale-plan.json
+          SUMMARY_FILE: ${{ runner.temp }}/bootstrap-locales/summary.md
+        with:
+          github-token: ${{ secrets.CROSS_REPO_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const plan = JSON.parse(fs.readFileSync(process.env.LOCALE_PLAN, 'utf8'));
+            let failed = 0;
+            for (const item of plan.locales) {
+              const [owner, repo] = item.repo.split('/');
+              try {
+                await github.rest.actions.createWorkflowDispatch({
+                  owner,
+                  repo,
+                  workflow_id: 'pages.yml',
+                  ref: 'main',
+                  inputs: {},
+                });
+                core.info(`pages.yml dispatched -> ${item.repo}`);
+                fs.appendFileSync(process.env.SUMMARY_FILE, `- \`${item.repo}\`: \`pages.yml\` dispatched (PAT, trigger translation)\n`);
+              } catch (error) {
+                failed += 1;
+                core.error(`pages.yml dispatch -> ${item.repo} failed: ${error.message}`);
+                fs.appendFileSync(process.env.SUMMARY_FILE, `- FAILED dispatch \`${item.repo}\`: ${error.message}\n`);
+              }
+            }
+            if (failed) core.setFailed(`${failed} locale dispatch(es) failed`);
+
+      - name: Write run summary
+        if: always()
+        env:
+          BOOTSTRAP_DIR: ${{ runner.temp }}/bootstrap-locales
+        run: |
+          {
+            echo ""
+            echo "Trigger: \`${{ github.event_name }}\` — run [\`${{ github.run_id }}\`](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+            echo ""
+            echo "> dry_run=\`$DRY_RUN\`: dry-run 只写 \$RUNNER_TEMP；不 push、不改 locales.json、不 dispatch。"
+            echo ""
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ -f "$BOOTSTRAP_DIR/summary.md" ]; then
+            cat "$BOOTSTRAP_DIR/summary.md" >> "$GITHUB_STEP_SUMMARY"
+          fi

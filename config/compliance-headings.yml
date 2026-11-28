@@ -1,0 +1,41 @@
+# Certification-mark sections on the Hardware Guides.
+#
+# Some Hardware pages end in a block of compliance notices; each notice is an
+# `## <heading>` followed by the certification mark (FCC, UKCA, EAC, CE). The
+# upstream Markdown mixes two spellings for the picture - `![](...)` and
+# `<p><Img width={1600} height={1598} /></p>` - so the same badges render at
+# wildly different sizes and are left-aligned. `src/remark/normalize-compliance-marks.mjs`
+# reads this file to decide *which* sections are compliance sections, then gives
+# every standalone picture in them `.complianceMark` (see `src/css/custom.css`
+# for the centred 160 px rule).
+#
+# The heading wording is data, not a regex in the script. This file mirrors the
+# locale-repo template so adding a new spelling is a policy change here, not an
+# edit in the plugin. If this file is missing or malformed the plugin falls back
+# to the built-in English + CE wordings, so the build never breaks over a
+# presentation fix.
+#
+# `headings` are regular expressions matched case-insensitively against the
+# heading's text (`UKCA marking {#ukca-marking}` is matched on `UKCA marking`,
+# the generated id is not part of the text). Keep one wording per line.
+schema: 1
+
+headings:
+  # --- English (the hub's original three) ----------------------------------
+  - 'UKCA\s*marking'
+  - 'Eurasian Conformity Mark'
+  - 'Federal Communication Commission'
+
+  # --- CE Declaration of Conformity ----------------------------------------
+  # Full English form, the short `CE Declaration` form, and the zh-Hant /
+  # zh-Hans `CE 符合性聲明/声明` forms.
+  - 'CE\s+(?:EC\s+)?[Dd]eclaration\s+of\s+[Cc]onformity'
+  - 'CE\s*[Dd]eclaration'
+  - 'CE\s*符合性(?:聲明|声明)'
+
+# How a compliance section is recognised when its heading is not listed above.
+# Kept for structural parity with the locale-repo template; the hub plugin uses
+# the `headings` list as the source of truth for matching.
+structure:
+  level: 2
+  require_matched_heading: true

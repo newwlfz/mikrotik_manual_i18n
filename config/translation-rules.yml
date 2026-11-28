@@ -1,0 +1,142 @@
+# Translation rule ledger.
+#
+# Every rule that a translator must follow lives here with three facts:
+#   layer       where it is fixed: prompt | pipeline | patch
+#   statement   what must be true in the output
+#   enforced_by the code or check that makes it true
+#
+# Add a rule here first. If it can be enforced by code, enforce it; if it can
+# only be worded, put it in the prompt and reference it here. A page-level
+# exception goes into config/translation-patches/<locale>/..., never into a
+# hand-edited overlay.
+schema: 1
+
+rules:
+  - id: code-verbatim
+    layer: pipeline
+    statement: Fenced code blocks and their fence lines are copied byte for byte from the English source, except the line-leading comments covered by code-comment-translated.
+    enforced_by: tools/translate/lib/apply.mjs (restoreCode), tools/translate/lib/verify.mjs (compareFence)
+
+  - id: code-comment-translated
+    layer: pipeline
+    statement: >-
+      In a fence whose language is ros, routeros, bash, sh or shell, a line-leading comment
+      (optional indentation, `#`, optional space) may be translated into Chinese. Only the comment
+      text changes; the indentation and the `#` run stay. RouterOS print headers, command output,
+      commented-out commands, banners, key/certificate blocks and `cat` file dumps stay English.
+    enforced_by: tools/translate/lib/code-comments.mjs (classifyComment, translateCodeComments), tools/translate/selftest.mjs, reports/code-comments-audit.md
+
+  - id: code-comment-memory
+    layer: pipeline
+    statement: >-
+      A comment translation is keyed by its language and comment text in a memory separate from the
+      block memory, so a changed English comment cannot reuse the old Chinese and a code edit cannot
+      invalidate a paragraph.
+    enforced_by: tools/translate/lib/comment-memory.mjs, tools/translate/index.mjs (comments), tools/translate/selftest.mjs
+
+  - id: tm-single-source
+    layer: pipeline
+    statement: >-
+      apply and derive read one merged memory keyed by kind + normalised English
+      (model > legacy 7.24 > legacy 7.25). A version or a section is a view, not
+      part of the key. A translation equal to its English source (legal wording,
+      identifiers) never overrides a real translation from a lower-priority source.
+    enforced_by: tools/translate/lib/tm.mjs, tools/translate/lib/apply.mjs, tools/translate/derive.mjs, tools/translate/selftest.mjs
+
+  - id: image-rebase
+    layer: pipeline
+    statement: Image paths stay identical to the English source and are rebased onto the source directory.
+    enforced_by: tools/translate/lib/apply.mjs (alignImages, rebaseImages)
+
+  - id: link-retarget
+    layer: pipeline
+    statement: Link targets in reused Chinese blocks are rewritten to the current English targets.
+    enforced_by: tools/translate/lib/blocks.mjs (retargetLinks)
+
+  - id: link-canonical-match
+    layer: pipeline
+    statement: Matching ignores link spelling (version prefix, .md suffix, /index, trailing slash) and image paths.
+    enforced_by: tools/translate/lib/blocks.mjs (normalize), tools/translate/lib/legacy.mjs (normalizeBody)
+
+  - id: admonition-untouched
+    layer: pipeline
+    statement: MDX scaffolding (:::info, :::warning, JSX lines, tables rules, console paths) is never sent to the model.
+    enforced_by: tools/translate/lib/blocks.mjs (isTranslatableProse)
+
+  - id: cli-heading-english
+    layer: pipeline
+    statement: CLI reference headings and menu paths stay in English on every page.
+    enforced_by: tools/translate/lib/blocks.mjs (isTranslatableProse heading branch)
+
+  - id: cli-metadata-labels
+    layer: pipeline
+    statement: >-
+      The page metadata labels above a CLI argument table are Chinese
+      (软件包： / 类型： / 系统能力：); only the label token changes, the value after
+      the colon and the English menu paths and headings stay as in the source.
+      compare-versions.md carries a mapped Chinese title and description.
+    enforced_by: tools/translate/normalize-cli-headers.mjs, tools/verify/cli-tables.mjs
+
+  - id: legal-text-english
+    layer: prompt
+    statement: Regulatory and compliance statements (FCC, IC, CE, UKCA) stay in their original language.
+    enforced_by: tools/translate/lib/translate prompt; review reports them separately
+
+  - id: frontmatter-shape
+    layer: pipeline
+    statement: Overlay front matter keeps every English key; only title, sidebar_label and description may be translated.
+    enforced_by: tools/translate/lib/frontmatter.mjs (withFields), tools/translate/verify.mjs
+
+  - id: frontmatter-tag-labels-english
+    layer: pipeline
+    statement: Blog `tags[].label` and `tags[].permalink` keep the English source values verbatim; a translated tag label would also change the tag archive URL.
+    enforced_by: tools/verify/labels.mjs (blog tag check), tools/translate/lib/frontmatter.mjs (withFields)
+
+  - id: newsletter-wording
+    layer: pipeline
+    statement: The recurring posts and the introduction say 新闻简报 for "newsletter" and 最新一期新闻简报 for the current issue; 新闻通讯/时事通讯/最新简报 are rewritten by a post-pass.
+    enforced_by: tools/translate/normalize-newsletter.mjs, tools/verify/labels.mjs, config/glossary/zh-Hans.yml
+
+  - id: title-identifier
+    layer: pipeline
+    statement: Product names, CLI page titles and single-token titles are not translated.
+    enforced_by: tools/translate/index.mjs (cliPage, needsTitle)
+
+  - id: structure-preserved
+    layer: pipeline
+    statement: The number and order of blocks is preserved; code, rules and images always come from the source.
+    enforced_by: tools/translate/lib/apply.mjs (rebuildFromPairs), tools/translate/verify.mjs
+
+  - id: cjk-not-reduced
+    layer: pipeline
+    statement: >-
+      A rebuild never writes an overlay that keeps less than 95% of the CJK characters its body
+      already has; such a page is kept byte for byte and reported as preserved, with
+      --allow-cjk-loss as the explicit opt-out. The 5% tolerance lets a wording update through
+      while a paragraph replaced by English is caught.
+    enforced_by: tools/translate/lib/apply.mjs (applySection), tools/translate/lib/cjk.mjs (CJK_REGRESSION_RATIO), tools/translate/selftest.mjs
+
+  - id: mdx-compiles
+    layer: pipeline
+    statement: Every overlay compiles with the same MDX compiler Docusaurus uses.
+    enforced_by: tools/translate/verify.mjs (mdxErrors)
+
+  - id: single-canonical
+    layer: pipeline
+    statement: Every version derives its wording from the canonical version block by block; a second version's translation is never imported wholesale.
+    enforced_by: tools/translate/derive.mjs (canonical memory, exact English block identity)
+
+  - id: official-assets
+    layer: pipeline
+    statement: Images are downloaded from the official origin and referenced relatively next to the page; unreferenced images are pruned.
+    enforced_by: tools/sync/fetch-assets.mjs
+
+  - id: orphan-prune
+    layer: pipeline
+    statement: Pages missing from the official inventory are removed with their overlays, except pages listed in sync.preserve_pages.
+    enforced_by: tools/sync/prune-orphans.mjs
+
+  - id: page-overrides
+    layer: patch
+    statement: A page-specific exception is expressed as a patch file, never as a manual overlay edit.
+    enforced_by: config/translation-patches/<locale>/<section>/<path>.yml

@@ -1,0 +1,33 @@
+# 已知译文（known translations）— scaffold.
+#
+# 这里放“翻译记忆里没有、模型也翻不动”的块，由
+# `tools/translate/apply-known-translations.mjs` 在 apply/derive 链尾强制替换。
+# 规则由翻译流水线（`npm run translate:ui` 之外的 apply/derive 批次）与人工审阅
+# 逐步填充：语种键已在下面写好，已审核的强制替换规则逐条累加。
+#
+# 为什么需要它：`translate apply` 与 `translate derive` 都用 TM 逐块重建正文，
+# 没有 TM 条目的块只能留在英文；`:::info` 这类容器一旦只翻了第一段，就会变成
+# “中文 + 英文”的混合块，`verify` 也看不出它整体是英文。
+# `config/translation-patches/<locale>/**` 里的 `replace` 只被 apply 读取，derive
+# 之后不会重新应用，所以把规则集中到这份文件，链尾再跑一次即可收敛。
+#
+# 顶层键就是语种（与 `docusaurus.config.ts` 的 `i18n.locales` 同名），脚本按
+# `--locale=` 取对应那一组；新增语种时加一组键即可，schema 不变。
+#
+#   schema: 1
+#   <locale>:                          # 例如 zh-Hans
+#     - paths: ["<overlay 相对路径>"]   # 可选；省略即全站
+#       from: "<英文原文，必须与 overlay 里的字节一致>"
+#       to: "<审核过的译文>"
+#
+# `from` 匹配不到任何页面时是空操作，所以同一条规则可以同时覆盖三个版本。
+schema: 1
+
+# Empty on purpose: this is a scaffold, not a source of locale-specific wording.
+# Each locale repository keeps its own reviewed rules here.
+"{{LOCALE}}": []
+# - paths:
+#     - <section>/<relative-path>.md
+#   from: "<English block, byte for byte as it lands in the overlay>"
+#   to: "<reviewed translation>"
+#   note: "<why this rule exists>"

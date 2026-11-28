@@ -1,0 +1,46 @@
+# Page-level translation exclusions.
+#
+# A hit keeps the page in the English source bytes: the planner does not queue
+# any block/title/label/description for the model, `apply` does not reuse a
+# translation from the TM, and an already-translated overlay is put
+# back into English. This is a whole-page rule, deliberately separate from the
+# block-level keep-English ledgers (keep-english.json, english-only-blocks.yml,
+# translation-patches) — those govern single blocks inside a translated page.
+#
+# Matching is generic and configuration-driven: no product slug is named here.
+# `source_prefixes` are repo-relative prefixes of the English source path
+# (the D-phase hardware/quick-guides/ tree); `overlay_segment_prefixes` match
+# any path segment of the overlay-relative path, which also covers a
+# pre-rebase tree where quick-guide-*.md pages sit under hardware/<category>/.
+#
+# Sidebar category labels are catalogue entries, NOT pages. They stay
+# translatable: the English key below keeps its reviewed per-locale wording in
+# sidebar-labels.yml and in the locale catalogue. `preserved_labels` records
+# that intent for the assertion in tools/verify/product-names.mjs. `expected`
+# is intentionally empty in this template — each locale maintainer fills in
+# its own wording; an empty value or the bare English key is rejected.
+schema: 1
+
+exclusions:
+  - id: official-multilingual-quick-guides
+    section: hardware
+    source_prefixes:
+      - 'hardware/quick-guides/'
+    overlay_segment_prefixes:
+      - 'quick-guide-'
+    preserved_labels:
+      - key: 'Quick Guides'
+        expected: ''
+    reason: >-
+      Every official Quick Guide already ships dozens of language sections in
+      the page itself (29 in the CCR2216 guide alone), including an official
+      PRC Chinese section. Translating the surrounding page only wraps that
+      multilingual document in a second Chinese frame. Only the category name
+      is translated.
+
+# Downstream note: tools/translate/normalize-hardware-titles.mjs (the POST stage
+# in tools/pipeline/translate-stages.mjs) rewrites hardware titles independently
+# of this pipeline and would turn "... ax series" into "... ax 系列" on an
+# excluded page. It must gain the same `isTranslationExcluded(section, rel)`
+# guard before the full zh-Hant pipeline is run. This file cannot fix that
+# script from here; verify:product-names reports any reintroduced translated title.

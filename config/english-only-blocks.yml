@@ -1,0 +1,25 @@
+# Blocks that stay in English on purpose.
+#
+# Most are console transcripts and command output: translating them would make
+# the manual *less* faithful, because a reader typing the command back needs the
+# exact bytes the device printed.
+#
+# `translate verify` counts them as `intentionalEnglish` instead of
+# `untranslatedBlocks`.
+prefixes:
+  - 'Press Ctrl+E to enter etherboot mode'
+  - 'Do you really want to format your storage device?'
+  - 'Board type:'
+  - 'Exit bios configuration menu and continues with system startup.'
+  - 'Please press "Enter" to continue!'
+  - 'Session is locked'
+  - 'Flags: X - disabled; R - running'
+  - 'VLAN  Mac Address'
+  - 'Vlan    Mac Address'
+  - 'L2TP Tunnel and Session Information'
+  # This sentence sits inside a code fence on both sites: the official Markdown
+  # export closes the fence early when a block contains a blank line, so the
+  # prose is swallowed and cannot be translated without changing the structure.
+  # Reported upstream (reports/upstream-issues.md).
+  - 'We will configure PPP secret for a particular user, and afterwards simply enable'
+  - 'Configure a PPP secret for a particular user, then enable the SSTP server:'

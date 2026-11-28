@@ -1,0 +1,150 @@
+# CLI label tables — scaffold.
+#
+# Every label here is structure, not prose: it is replaced deterministically and
+# never sent to the model. Attribute names and order are preserved by the
+# rewriter; only the values below change. Fill a pair from the translation pass
+# (`npm run translate:ui` produces the UI wording; these tables are the CLI
+# wording the same term must use in the overlay) and review it before shipping.
+#
+# An empty map is a valid, safe state: nothing is rewritten, so a fresh locale
+# keeps the English labels until its table is filled. A value must never be an
+# empty string — that would blank the label.
+schema: 1
+
+# The header row of `<ArgTable c1="..." c2="..." c3="...">`. English header ->
+# reviewed header, for example:
+#
+#   headers:
+#     'Argument': ''
+#     'Type': ''
+#     'Description': ''
+#     'Flag': ''
+#     'Name': ''
+#     'Read-only Argument': ''
+#     'Read-only Flag': ''
+headers: {}
+
+# Per-locale override of `headers` for cli-tables.mjs: `--locale` /
+# DEFAULT_TARGET_LOCALE picks the row and falls back to the flat `headers`
+# above. `{{LOCALE}}` is replaced by `locale:add`; keep both rows empty in the
+# scaffold so a new locale keeps English headers until its wording is reviewed.
+headers_by_locale:
+  '{{LOCALE}}':
+    'Argument': '参数'
+    'Type': '类型'
+    'Description': '描述'
+    'Flag': '标志'
+    'Name': '名称'
+    'Read-only Argument': '只读参数'
+    'Read-only Flag': '只读标志'
+
+# Bold metadata labels above the argument table (`**Type:**`, `**Package:**`,
+# `**Syscap:**`), keyed by locale tag — the same mechanism as
+# `compare_versions_frontmatter` below. `normalize-cli-headers.mjs` reads only
+# the requested locale's wording, so one locale's glyphs never reach another.
+# Empty values are skipped (no rewrite, no English fallback).
+cli_labels:
+  '{{LOCALE}}':
+    'Type': '类型'
+    'Package': '软件包'
+    'Syscap': '系统能力'
+
+# The `/cli-reference/compare-versions` page.
+#
+# Two consumers read this table:
+#
+#   - `normalize-cli-headers.mjs` rewrites the labels that appear in the page's
+#     own Markdown (the "How the comparison works" list names **Parameters**,
+#     **Flags**, *New commands* and *Removed commands*);
+#   - `src/components/CliCompare` renders the interactive widget. Its field
+#     labels (`From`, `To`, `Filter`), diff legend (`parameters added`, ...) and
+#     notices come from `src/components/CliCompare/labels.data.json`, a generated
+#     projection of this table onto the exact keys the widget passes to `t()`
+#     (the browser cannot import YAML). Fill this table, regenerate that JSON,
+#     and keep the two in sync.
+#
+# Keys are matched case-insensitively against a whole bold/italic span, so
+# `**Parameters**` and `**parameters**` both hit `parameters`.
+#
+# This table is the zh-Hans wording mirrored from the Simplified repository:
+# locale scaffolding replaces `{{LOCALE}}` in the locale-keyed tables below and
+# the translation pass reviews this wording for the new locale before its
+# generator run. Every key is spelled exactly as the widget passes it to `t()` /
+# `compareLabel()` in `src/components/CliCompare/{index.tsx,labels.ts}`; the
+# generator `tools/translate/build-cli-labels.mjs` projects it verbatim into
+# `labels.data.json`. The `en` wording is the identity mapping (the English key
+# itself, see `compareLabel`), so each locale has exactly one reviewed wording.
+compare_versions:
+  # Widget field labels.
+  'From': '起始版本'
+  'To': '目标版本'
+  'Filter': '筛选'
+  'Swap versions': '交换版本'
+  'Swap From and To versions': '交换起始版本与目标版本'
+  'path, e.g. ip/firewall': '路径，例如 ip/firewall'
+  # Diff legend and stat labels (both the lowercase stat key and the
+  # capitalized chip title are real t() calls).
+  'parameters added': '新增参数'
+  'parameters removed': '移除参数'
+  'commands changed': '变更命令'
+  'new commands': '新增命令'
+  'commands removed': '删除命令'
+  'New commands': '新增命令'
+  'Removed commands': '移除命令'
+  'Parameter changes': '参数变更'
+  'parameters': '参数'
+  'flags': '标志'
+  'commands': '命令'
+  'command': '命令'
+  'command measure word': '条'
+  # Notices and separators.
+  'Could not load': '无法加载'
+  'Loading CLI reference versions…': '正在加载 CLI 参考版本…'
+  'Not enough CLI reference versions to compare.': '可比较的 CLI 参考版本不足。'
+  'Select two different versions to compare.': '请选择两个不同的版本进行比较。'
+  'No parameter differences.': '无参数差异。'
+  'No parameter differences matching the filter.': '没有符合筛选条件的参数差异。'
+  ': ': '：'
+  ' of ': ' / '
+
+# Front matter of the `/cli-reference/compare-versions` page (title and
+# description), keyed by locale tag. Unlike `compare_versions`, these two
+# fields are prose the model never sees: fill both with reviewed wording for
+# the new locale. While either value is empty the pass leaves that locale's
+# front matter untouched — no English fallback and no other locale's text.
+compare_versions_frontmatter:
+  '{{LOCALE}}':
+    title: 'CLI 参考版本对比'
+    description: '比较两个 RouterOS CLI 参考版本之间的参数。'
+
+# Full prose of the four bullets under "How the comparison works" on the
+# `/cli-reference/compare-versions` page. `{{LOCALE}}` is replaced by
+# `locale:add`; the value is a replaceable multilingual structure so the new
+# repository carries every reviewed wording and `normalize-cli-headers.mjs`
+# selects only the one matching its own locale tag (a brand-new locale with no
+# matching key simply keeps the English block). All three values are the
+# COMPLETE four-bullet list; `en` is the English source byte for byte.
+compare_versions_body:
+  '{{LOCALE}}':
+    en: |-
+      - The data is generated from the versioned CLI reference pages in this
+        repository (`versioned_docs/version-*/cli-reference`), so it reflects the
+        published pages, not the RouterOS source itself.
+      - **Parameters** are the arguments of a command or menu, including read-only
+        arguments. **Flags** are item properties such as `disabled`, `running`, and
+        `invalid`.
+      - A command or menu is listed under *New commands* or *Removed commands* when
+        the whole page is missing from the other version.
+      - Directory pages (for example `ip/firewall`) list the parameters of every
+        entry of that menu, so a removed parameter there may actually have moved to
+        a submenu page.
+    'zh-Hans': |-
+      - 数据由本仓库中的版本化 CLI 参考页面生成（`versioned_docs/version-*/cli-reference`），因此它反映的是已发布的页面，而不是 RouterOS 源代码本身。
+      - **参数**是命令或菜单的参数，包括只读参数。**标志**是项目属性，例如 `disabled`、`running` 和 `invalid`。
+      - 当某个命令或菜单的整个页面在另一版本中缺失时，该命令或菜单会列在 *新增命令* 或 *移除命令* 下。
+      - 目录页面（例如 `ip/firewall`）会列出该菜单中每个条目的参数，因此其中被移除的参数实际上可能已移至子菜单页面。
+    'zh-Hant': |-
+      - 資料由本倉庫中具版本號的 CLI 參考頁面（`versioned_docs/version-*/cli-reference`）產生，因此反映的是已發布的頁面，而不是 RouterOS 原始碼本身。
+      - **參數**是命令或選單的引數，包括唯讀引數。**標誌**是項目的屬性，例如 `disabled`、`running` 和 `invalid`。
+      - 當某個命令或選單的整個頁面在另一版本中缺失時，該命令或選單會列在 *新增命令* 或 *移除命令* 下。
+      - 目錄頁面（例如 `ip/firewall`）會列出該選單中每個項目的參數，因此在那裡被移除的參數實際上可能已移至某個子選單頁面。

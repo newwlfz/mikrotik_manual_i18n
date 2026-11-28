@@ -1,0 +1,385 @@
+name: Build and deploy site
+
+# 英文站（本仓库）是**总管**：
+#   1. build + deploy：把 docs/ 构建成英文站，部署到
+#      https://newwlfz.github.io/mikrotik_manual_i18n/ ；
+#   2. publish-content：把 `tools/content/publish.mjs` 的 CONTENT_ROOTS（docs/、
+#      versioned_docs/、hardware/、blog/、changelog/、data/、sidebars.ts、
+#      sidebars-hardware.ts、versioned_sidebars/、versions.json）与 locales.json
+#      推到各语种仓（当前是 `mikrotik_manual_zh_hans`），由对方的工作流完成
+#      translate + build + deploy。跨仓写入用 fine-grained PAT（secret
+#      `CROSS_REPO_TOKEN`），不受本仓 `permissions` 的限制；本仓权限仍是
+#      `contents: read`。
+#
+# 语种清单与各语种部署地址在仓库根的 `locales.json`，不要在这里再加一份。
+# 架构与失败隔离见 guides/ARCHITECTURE-MULTISITE.md。
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      publish_only:
+        description: '只推送内容根 + locales.json 到语种仓（跳过本仓 build/deploy）'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 官方模板用 false：true 会在新 push 时取消正在进行的部署，
+# 留下「artifact 已上传但 deploy 被砍」的中间态。
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+# 站点身份仍可用环境变量覆盖（`locales.json` 已给出同样的默认值，这里显式写
+# 出来是为了让本仓的部署地址一眼可见，也方便 fork 改地址）。
+env:
+  SITE_LOCALE: en
+  SITE_URL: https://newwlfz.github.io
+  BASE_URL: /mikrotik_manual_i18n/
+  LOCALE_EN_URL: https://newwlfz.github.io
+  LOCALE_EN_BASE_URL: /mikrotik_manual_i18n/
+  # 其它语种站点的地址全部来自 `locales.json`。`LOCALE_<X>_*` 只按主语言子标签
+  # 匹配（`zh-Hans`、`zh-Hant` 都命中 `ZH`），在这里写 `LOCALE_ZH_BASE_URL` 会让
+  # 简体、繁体的语言下拉和 `hreflang` 都指向简体站；要覆盖中文站地址请用本地预览，
+  # 不要写进工作流。
+  # 静态渲染是峰值；6 GiB 堆在 16 GiB 的 runner 上留足余量。
+  BUILD_HEAP_MB: '6144'
+  # 注：`${{ runner.temp }}` 只在 job/step 级 env 可用，workflow 级 env 用了会
+  # 让整个 workflow 变成 invalid（run 直接失败且没有 job）。npm 缓存目录在
+  # 下面三个 step 里各自注入 NPM_CONFIG_CACHE。
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # 手动 publish_only：内容发布不依赖本仓构建产物，跳过 13–14 分钟的构建。
+    if: ${{ github.event_name != 'workflow_dispatch' || inputs.publish_only != true }}
+    # 构建约 13–14 分钟（6 GiB 堆）；默认 360 分钟过于宽松，卡住时要等 6 小时。
+    timeout-minutes: 45
+    env:
+      # 本仓是**资源宿主**：语种站通过 ASSET_ORIGIN 引用这里的 /img、/assets、
+      # /videos。`ASSET_HOST` 让 slim 保留完整的 build/img（约 99 MiB）——英文
+      # 页面的 Markdown 图片走 assets/images，`/img` 本来可以剪掉，但中文站的
+      # Markdown 图片指向 `/img/<hash>`，剪掉就会 404。见 guides/CI.md「Shared
+      # assets」。
+      ASSET_HOST: 'true'
+    steps:
+      - uses: actions/checkout@v4
+      # `.npmrc` 把缓存指到 ../work/npm-cache（本地便利）；CI 改用 runner 临时
+      # 目录，并让 setup-node 的 cache: npm 与 npm ci 看到同一个路径。
+      # setup-node 的 cache: npm 会先解析缓存目录；先建出来，避免空目录判断。
+      - name: Prepare npm cache directory
+        env:
+          NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
+        run: mkdir -p "$NPM_CONFIG_CACHE"
+      - uses: actions/setup-node@v4
+        env:
+          NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: package-lock.json
+      # 锁完整性门禁：只用 Node 内建模块读 package.json / package-lock.json，
+      # 必须在 npm ci 之前跑。optionalDependencies（pagefind 的 7 个平台包）缺
+      # 条目时 npm ci 照样成功，但真正需要该二进制的构建/部署会炸。
+      - name: Check package-lock integrity
+        run: npm run lock:check
+      - run: npm ci
+        env:
+          NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
+      # 工具链漂移门禁：`tools/` 与 `templates/locale-repo/tools/` 的差异必须只剩
+      # tools/verify/tools-template.mjs 白名单里的条目（每条都带理由）。CI 硬门禁：
+      # 紧邻 npm ci、放在 build 之前（也仍在 verify:deploy 之前）——漂移是仓库
+      # 结构问题，没理由让它拖到 13 分钟的构建或部署门禁才暴露。
+      - name: Check the shared toolchain against the locale template
+        run: npm run check:tools-template
+      # pages.yml 本身不调用 sync；冷启动契约是纯代码/JSON 断言（不联网、无需
+      # 产物），与漂移门禁放在一起，让每次 push 都能挡住 first-install 回归。
+      # 真正调用 sync 的门禁在 sync.yml（probe 之前）。
+      - name: Verify cold-start contract
+        run: npm run verify:cold-start
+      # 产物门禁：hardware/、blog/、changelog/ 现在由 fetch-hardware/fetch-blog/
+      # fetch-changelog 三个 stage 抓取生成（sync.yml 提交进 HEAD），每个 md 带
+      # source+captured_at，data/manifests/<section>.json 记录本轮 generated_at。
+      # verify:build-inputs 逐条对齐 manifest 与磁盘、校验 captured_at 新鲜度和
+      # changelog 最新 slug；缺失/过期请重跑这三个 fetch stage，不要 git checkout。
+      - name: Verify fetched build inputs
+        run: npm run verify:build-inputs
+      # favicon 溯源门禁：headTags 注入的 /img/favicon.svg 必须与 fetch-favicon
+      # 写下的 manifest 完全一致（246 B 占位图会在这里 fail-closed），离线、无网络依赖。
+      - name: Verify favicon provenance
+        run: npm run verify:favicon
+      # 单语种构建：CLI 数据 → Docusaurus（--locale en）→ Pagefind → llms.txt。
+      - name: Build site
+        run: npm run build
+      # 图片寻址前置断言：materialize 会把 HEAD 的 /img/<hash> 回退成 ./img/<name>，
+      # 而页内副本早已被上一轮 address-images 剪掉。build 之后立即 fail-closed 检查
+      # 两个内容根的引用都有 blob / 页内文件，别让回归拖到部署后才暴露。
+      - name: Verify image addressing is ready
+        run: npm run verify:addressing-ready
+      # 归档保真度门禁：检查每个归档版本的渲染结构缓存、表格单元格 <ul> 与
+      # pagination_prev: null 仍在，挡住 7.24/7.25 那种归档内容保真度回归。
+      # 断言只读源文件、不依赖 build 产物；放在 build 之后让源回归与构建结果
+      # 在同一轮 CI 中一起暴露。
+      - name: Verify archived content fidelity
+        run: npm run verify:archive-fidelity
+      # source+captured_at 溯源门禁（不联网）：三区 manifest 的 generated_at
+      # 必须与每篇 md 的 captured_at 一致；docs/versioned_docs 亦逐页校验。
+      - name: Verify source and Captured provenance
+        run: npm run verify:provenance
+      # 表格链接锚点保真门禁：确保修复后的页内锚点没有被后续 stage 改写丢失。
+      - name: Verify table link anchors preserved
+        run: npm run verify:anchor-fidelity
+      # 定点断言：blog/hardware 页的 <img src="/img/..."> 必须带部署前缀。
+      # 紧跟 build，先于 slim / verify:deploy，断言的是 build 的原始形态。
+      - name: Verify blog/hardware image prefixes
+        run: npm run verify:build-image-prefix
+      # 部署前门禁：先 slim（ASSET_HOST=true 时保留完整 build/img），再跑
+      # asset-refs / base-url-refs / orphan-assets / llms-links 四条断言。
+      # slim 会按 BASE_URL 重写绝对 URL，所以必须与 build 看到同一组环境变量。
+      - name: Slim and verify deploy shape
+        run: npm run verify:deploy
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+      - name: Report artifact size
+        run: du -sh build && find build -type f | wc -l
+      # 跨仓 fan-out 契约：fanout-check 只读、断言与阈值不变。当前 hub-docs 尚未
+      # publish 到两语种仓，--check 会以 presence=2 退出 1；先以**告警步骤**接入
+      # （continue-on-error: true + stdout/stderr 进 step summary + ::warning），
+      # 不挡本仓英文站构建/部署。漂移清零、CI 具备三仓工作区（含各语种仓 build
+      # meta）后再去掉 continue-on-error 升级为硬门禁；不要为凑绿放宽断言。
+      - name: Check cross-repo sync contract
+        continue-on-error: true
+        run: |
+          report="$RUNNER_TEMP/fanout-check.txt"
+          set +e
+          node tools/content/fanout-check.mjs --check > "$report" 2>&1
+          status=$?
+          set -e
+          cat "$report"
+          {
+            echo '### Cross-repo sync contract (fanout-check, advisory)'
+            echo ''
+            echo '```text'
+            cat "$report"
+            echo '```'
+            echo ''
+            echo "fanout-check exit: \`$status\` (continue-on-error: advisory, not a hard gate)"
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ "$status" -ne 0 ]; then
+            echo "::warning title=Cross-repo sync drift::fanout-check --check exited ${status}; see job summary (advisory only; do not relax assertions)."
+          fi
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  publish-content:
+    # 内容同步与本仓构建**解耦**：
+    #   - push 到 main：即使 build 失败也执行（内容根与 locales.json 是语种仓的
+    #     输入，本仓构建失败可能只是资源/页面问题；语种仓自己的 build 是第二道
+    #     门禁，失败时它不会部署）；
+    #   - workflow_dispatch + publish_only：build 被跳过，这里仍可用（修 secret、
+    #     或只想重推内容时不必等 13 分钟的构建）。
+    needs: build
+    if: ${{ always() && (github.ref == 'refs/heads/main' || inputs.publish_only == true) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      # 只读本仓；跨仓写入由 `CROSS_REPO_TOKEN`（PAT）完成。
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      # 先校验登记表：地址或仓库写错时立刻停，而不是 clone 到一半才失败。
+      - name: Validate locale registry
+        run: npm run locales:check
+      # secret 未设置时给出**明确错误**（带配置步骤），绝不静默跳过：静默跳过
+      # 会让语种站停在旧内容上，而下一次 push 看起来一切正常。
+      - name: Check CROSS_REPO_TOKEN
+        env:
+          CROSS_REPO_TOKEN: ${{ secrets.CROSS_REPO_TOKEN }}
+        run: |
+          set -eu
+          if [ -z "${CROSS_REPO_TOKEN:-}" ]; then
+            echo "::error title=CROSS_REPO_TOKEN is not set::发布内容需要 fine-grained PAT（Contents: Read and write，覆盖 locales.json 里的语种仓）。在 Settings → Secrets and variables → Actions 添加 secret CROSS_REPO_TOKEN；申请与权限见 guides/ARCHITECTURE-MULTISITE.md。"
+            exit 1
+          fi
+          echo "[publish] CROSS_REPO_TOKEN is present"
+      - name: Publish content to language repositories
+        env:
+          CROSS_REPO_TOKEN: ${{ secrets.CROSS_REPO_TOKEN }}
+        run: node tools/content/publish.mjs
+
+  fanout-locales:
+    # 层4 fan-out：publish-content 用 CROSS_REPO_TOKEN 推完内容根 + locales.json
+    # 之后，显式 dispatch 各语种仓的 pages.yml —— GITHUB_TOKEN 的 push 受 GitHub
+    # 递归规则限制，不会触发目标仓的 workflow（与 sync.yml 的约定相同）。
+    # 只在 locales.json 的 available 翻转或共享结构文件变化时 dispatch：纯内容
+    # 变更已由 publish 的 push 送达目标仓（内容 push 会触发那边按 paths 配置的
+    # workflow），无需再发事件，避免每个 push 都造成跨仓重建风暴。
+    needs: publish-content
+    if: ${{ always() && needs.publish-content.result == 'success' && (github.ref == 'refs/heads/main' || inputs.publish_only == true) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      # 本仓只读；跨仓 dispatch 由 CROSS_REPO_TOKEN（PAT）完成。
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # 需要父提交来比较 available / 结构文件；不要用浅克隆的单个提交。
+          fetch-depth: 2
+      - name: Compute fan-out scope from changed entries
+        id: scope
+        env:
+          EVENT_BEFORE: ${{ github.event.before }}
+        run: |
+          set -euo pipefail
+
+          # 单根提交（history 没有父提交）没有 HEAD^/before：拿不到比较基线就
+          # 无法计算 fan-out 范围。publish-content 已经推完内容，fan-out 只是
+          # 额外可选的一次 dispatch；这里优雅跳过（dispatch=false + exit 0），
+          # 不要因为 base 解析失败而 exit 128 拖垮整个 workflow。
+          no_parent_skip() {
+            echo "::notice title=fan-out skipped::单根提交或 base 缺少 locales.json，无法比较可用项/结构变化，跳过 fan-out dispatch"
+            {
+              echo "dispatch=false"
+              echo "reason=no-parent-commit (single-root history)"
+              echo "changed="
+            } >> "$GITHUB_OUTPUT"
+            {
+              echo "### hub → 语种仓 fan-out"
+              echo ""
+              echo "- changedEntries: \`none\`"
+              echo "- dispatch: \`false\`"
+              echo "- reason: no-parent-commit (single-root history)"
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          }
+
+          base="$EVENT_BEFORE"
+          if [ -z "$base" ] || [ "$base" = "0000000000000000000000000000000000000000" ]; then
+            # workflow_dispatch 没有 before：退回父提交。单根提交没有 HEAD^，优雅跳过。
+            base=$(git rev-parse HEAD^ 2>/dev/null) || no_parent_skip
+          fi
+          if ! git cat-file -e "${base}^{commit}" 2>/dev/null; then
+            echo "::warning title=fan-out base unavailable::${base} 不在浅克隆里，改用 HEAD^"
+            base=$(git rev-parse HEAD^ 2>/dev/null) || no_parent_skip
+          fi
+          # base 里必须有 locales.json，否则下面的 `git show ${base}:locales.json`
+          # 会抛错（单根提交 / 注册表是后来加入时常见），同样优雅跳过。
+          if ! git cat-file -e "${base}:locales.json" 2>/dev/null; then
+            no_parent_skip
+          fi
+
+          # changedEntries 的 CI 等价物：只比较登记的同步项（与
+          # tools/content/sync-contract.mjs 的 REGISTRY_FILE / 结构根一致）。
+          structure=$(git diff --name-only "$base" "$GITHUB_SHA" -- \
+            sidebars-hardware.ts sidebars.ts versions.json versioned_sidebars/)
+          flipped=$(node - "$base" <<'NODE'
+          const fs = require('fs');
+          const {execFileSync} = require('child_process');
+          const base = process.argv[2];
+          const cur = JSON.parse(fs.readFileSync('locales.json', 'utf8'));
+          const old = JSON.parse(execFileSync('git', ['show', `${base}:locales.json`], {encoding: 'utf8'}));
+          const flags = (data) =>
+            Object.fromEntries(
+              Object.entries(data.locales || {}).map(([slug, entry]) => [slug, entry.available !== false]),
+            );
+          const now = flags(cur), before = flags(old);
+          const out = [];
+          for (const slug of new Set([...Object.keys(before), ...Object.keys(now)])) {
+            if (before[slug] !== now[slug]) out.push(`${slug}=${now[slug]}`);
+          }
+          process.stdout.write(out.join(', '));
+          NODE
+          )
+
+          changed=$(printf '%s\n%s\n' "$structure" ${flipped:+"locales.json"} | sed '/^$/d' | sort -u | paste -sd, -)
+          if [ -n "$structure" ] || [ -n "$flipped" ]; then
+            dispatch=true
+            if [ -n "$flipped" ] && [ -n "$structure" ]; then
+              reason="locale registry available flip: ${flipped}; structure change: ${structure//$'\n'/, }"
+            elif [ -n "$flipped" ]; then
+              reason="locale registry available flip: ${flipped}"
+            else
+              reason="structure change: ${structure//$'\n'/, }"
+            fi
+          else
+            dispatch=false
+            reason="content-only change (no available flip / structure change)"
+          fi
+          {
+            echo "dispatch=$dispatch"
+            echo "reason=$reason"
+            echo "changed=$changed"
+          } >> "$GITHUB_OUTPUT"
+          {
+            echo "### hub → 语种仓 fan-out"
+            echo ""
+            echo "- changedEntries: \`${changed:-none}\`"
+            echo "- dispatch: \`$dispatch\`"
+            echo "- reason: $reason"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Dispatch content-fanout to locale repositories
+        if: ${{ steps.scope.outputs.dispatch == 'true' }}
+        uses: actions/github-script@v7
+        env:
+          CROSS_REPO_TOKEN: ${{ secrets.CROSS_REPO_TOKEN }}
+          FANOUT_REASON: ${{ steps.scope.outputs.reason }}
+          FANOUT_CHANGED: ${{ steps.scope.outputs.changed }}
+        with:
+          github-token: ${{ secrets.CROSS_REPO_TOKEN }}
+          script: |
+            // 令牌只从 secret 注入：既用于跨仓 REST 调用，也不打印任何值。
+            const fs = require('fs');
+            const registry = JSON.parse(fs.readFileSync('locales.json', 'utf8'));
+            const changed = String(process.env.FANOUT_CHANGED || '')
+              .split(',').map((s) => s.trim()).filter(Boolean);
+            const locales = Object.keys(registry.locales);
+            const targets = Object.entries(registry.locales)
+              .filter(([slug, entry]) => slug !== registry.default && entry.available !== false && entry.repo)
+              .map(([slug, entry]) => ({slug, repo: entry.repo}));
+            let failed = 0;
+            for (const {slug, repo} of targets) {
+              const [owner, name] = repo.split('/');
+              try {
+                await github.rest.repos.createDispatchEvent({
+                  owner,
+                  repo: name,
+                  event_type: 'content-fanout',
+                  client_payload: {
+                    repo,
+                    slug,
+                    reason: process.env.FANOUT_REASON,
+                    hub_sha: process.env.GITHUB_SHA,
+                    trigger: 'content:publish',
+                    changed,
+                    locales,
+                  },
+                });
+                core.info(`content-fanout -> ${repo} (${slug})`);
+                core.summary.addRaw(`- dispatched \`${repo}\` (\`${slug}\`)\n`);
+              } catch (error) {
+                failed++;
+                core.error(`content-fanout -> ${repo} failed: ${error.message}`);
+                core.summary.addRaw(`- FAILED \`${repo}\`: ${error.message}\n`);
+              }
+            }
+            await core.summary.write();
+            if (failed) core.setFailed(`${failed} locale repository dispatch(es) failed`);

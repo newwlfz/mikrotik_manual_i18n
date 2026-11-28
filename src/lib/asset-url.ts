@@ -1,0 +1,101 @@
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+
+/**
+ * 静态资源根，两个层级：
+ *
+ *   - `useAssetBaseUrl()` → `customFields.assetBaseUrl`：对外可见的共享资源根。
+ *     设置了 `ASSET_ORIGIN` 时它是**根绝对路径**（规范值
+ *     `/mikrotik_manual_i18n/`：语种仓不再保存 `static/`，图片/PDF/视频都由
+ *     英文站提供；浏览器按当前 origin 解析，本地任意 host 与 Pages 通用），
+ *     兼容的完整 URL 则原样保留；否则是不带 locale 的本站 baseUrl。
+ *     `<Img>`、导航 Logo 这类「站内资源」引用走它。
+ *   - `useLocalAssetBaseUrl()` → `customFields.localAssetBaseUrl`：**本产物自己
+ *     发布**的资源根，始终是站内路径。pagefind 索引（每次构建都在本站生成）
+ *     必须用它，否则中文站会去英文站搜索英文索引。
+ *
+ * 为什么不能用 `siteConfig.baseUrl`：Docusaurus 3.10 给非默认语种把
+ * `siteConfig.baseUrl` 改成 `/mikrotik_manual_i18n/zh-Hans/`
+ * （`@docusaurus/core/lib/server/site.js`），这个值被烘进
+ * `build/zh-Hans/assets/js/main.*.js`。`useBaseUrl` 用它产出
+ * `/mikrotik_manual_i18n/zh-Hans/img/<hash>`，而 `tools/build/slim.mjs` 只保留
+ * 根目录的那一份副本，所以中文页客户端新插入的 `<img>` 会 404。
+ *
+ * 路由仍用 `useBaseUrl`（页面 URL 必须带语种）；静态资源一律用这里的两个
+ * 资源根，两者解耦。
+ */
+
+/** 规范化成前后都带 `/` 的资源根（绝对地址只补尾斜杠）。 */
+export function normalizeAssetBase(value: string): string {
+  const trimmed = (value || '').trim();
+  if (/^[a-z][a-z0-9+.-]*:\/\//i.test(trimmed)) {
+    return trimmed.endsWith('/') ? trimmed : `${trimmed}/`;
+  }
+  const withLeading = trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
+  return withLeading.endsWith('/') ? withLeading : `${withLeading}/`;
+}
+
+/** 去掉 baseUrl 末尾的语种段（`/repo/zh-Hans/` -> `/repo/`）。 */
+function stripLocaleSuffix(baseUrl: string, locale?: string): string {
+  if (!locale) return baseUrl;
+  const suffix = `${locale}/`;
+  return baseUrl.endsWith(suffix) ? baseUrl.slice(0, -suffix.length) : baseUrl;
+}
+
+/**
+ * 站内绝对路径拼资源根；外链（`http(s)://`、`mailto:`、`data:`）、协议相对
+ * `//host/...` 与相对路径原样通过（因此**绝对 URL 不会被再拼一次 origin**）。
+ * 已经带资源根的路径不会重复拼接：base=`/mikrotik_manual_i18n/` 时
+ * `/img/x` -> `/mikrotik_manual_i18n/img/x`，而
+ * `/mikrotik_manual_i18n/img/x` 保持原样。
+ */
+export function assetUrl(src: string, base: string): string {
+  if (!src.startsWith('/') || src.startsWith('//')) return src;
+  const root = normalizeAssetBase(base);
+  if (src === root || src.startsWith(root)) return src;
+  return `${root}${src.replace(/^\/+/, '')}`;
+}
+
+/**
+ * 同 `assetUrl`，但把 `src` 当作**站内根路径**：`img/logo.svg` 与
+ * `/img/logo.svg` 等价。`themeConfig.navbar.logo.src` 这类 Docusaurus 配置值
+ * 是相对 `static/` 的（不带前导 `/`），不能交给 `assetUrl` 原样通过。
+ */
+export function assetUrlFromRoot(src: string, base: string): string {
+  return assetUrl(`/${src.replace(/^\/+/, '')}`, base);
+}
+
+/**
+ * React hook：读取构建期注入的**共享**资源根（`ASSET_ORIGIN` 的根绝对路径，
+ * 或本站 baseUrl；兼容模式下也可能是绝对 URL）。
+ *
+ * 优先 `siteConfig.customFields.assetBaseUrl`；旧构建没有该字段时退回
+ * 「siteConfig.baseUrl 去掉当前语种段」，行为与修复前一致而不是拼出
+ * `/zh-Hans/img/...`。
+ */
+export function useAssetBaseUrl(): string {
+  const {siteConfig, i18n} = useDocusaurusContext();
+  const configured = siteConfig.customFields?.assetBaseUrl;
+  if (typeof configured === 'string' && configured.trim()) {
+    return normalizeAssetBase(configured);
+  }
+  return normalizeAssetBase(stripLocaleSuffix(siteConfig.baseUrl, i18n?.currentLocale));
+}
+
+/**
+ * React hook：读取**本产物自己发布**的资源根。
+ *
+ * 与 `useAssetBaseUrl()` 的区别只在 `ASSET_ORIGIN` 模式：共享资源走英文站的
+ * basePath（根绝对路径），而 pagefind 索引、`build/assets/**` 永远在本站。
+ * 旧构建没有该字段时退回
+ * `siteConfig.baseUrl`（单语种构建里就是本站前缀）。
+ */
+export function useLocalAssetBaseUrl(): string {
+  const {siteConfig} = useDocusaurusContext();
+  const configured = siteConfig.customFields?.localAssetBaseUrl;
+  if (typeof configured === 'string' && configured.trim()) {
+    return normalizeAssetBase(configured);
+  }
+  return normalizeAssetBase(siteConfig.baseUrl);
+}
+
+export default useAssetBaseUrl;

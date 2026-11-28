@@ -1,0 +1,345 @@
+# Sidebar label policy per section.
+#
+# The rule that is hard to get right is the Hardware Guides: the first level is a
+# *category* ("Switches", "Antennas") and reads better in Chinese, while the
+# children are product names ("Wireless Wire Cube", "hAP ax3") that must stay
+# verbatim - a translated model name is unrecognisable and cannot be searched.
+#
+# `docs` is the source of truth for the docs sidebar's category labels; every
+# non-CLI category in sidebars.ts / versioned_sidebars is listed there, and
+# verify:labels asserts the map exactly covers the tree. Sections not listed
+# here keep the default behaviour (translate every label the glossary knows).
+schema: 1
+
+# Docs section: the single source of truth for sidebar.docs.category.* keys.
+# Keys are Docusaurus category keys from sidebars.ts / versioned_sidebars;
+# each value is the reviewed Chinese label emitted into the locale catalogue.
+# verify:labels asserts this map covers exactly every non-CLI category in the tree.
+docs:
+  categories:
+    'getting-started': '入门'
+    'getting-started/networking-fundamentals': '网络基础'
+    'getting-started/installation-and-upgrade': '安装与升级'
+    'getting-started/installation-and-upgrade/install': '安装'
+    'getting-started/installation-and-upgrade/install/chr-installation': 'CHR 安装'
+    'getting-started/installation-and-upgrade/netinstall': 'Netinstall 网络安装'
+    'getting-started/configuration-management': '配置管理'
+    'getting-started/routeros-licensing': 'RouterOS 授权'
+    'getting-started/routeros-licensing/chr': '云托管路由器（CHR）'
+    'getting-started/software-specifications': '软件规格'
+    'management-tools': '管理工具'
+    'management-tools/cmr': 'CMR 云管理'
+    'system-information-and-utilities': '系统信息与实用工具'
+    'diagnostics-monitoring-and-troubleshooting': '诊断与监控'
+    'diagnostics-monitoring-and-troubleshooting/log': '日志'
+    'diagnostics-monitoring-and-troubleshooting/traffic-flow': '流量分析'
+    'hardware': '硬件'
+    'hardware/disks': '磁盘'
+    'wired-connections': '有线连接'
+    'wireless': '无线'
+    'wireless/wifi': '无线 Wi-Fi 6/7（802.11ax/be）'
+    'wireless/abgn': '802.11 a/b/g/n 无线'
+    'wireless/abgn/capsman': 'CAPsMAN 无线管理'
+    'wireless/w60g': '60 GHz（W60G）无线'
+    'wireless/user-guides': '用户指南'
+    'mobile-networking': '移动网络'
+    'mobile-networking/gps': 'GPS 定位'
+    'mobile-networking/user-guides': '用户指南'
+    'mobile-networking/bg77-modem-at-commands': 'BG77 调制解调器 AT 命令'
+    'bridging-and-switching': '桥接与交换'
+    'bridging-and-switching/swos': 'SwOS 交换机系统'
+    'bridging-and-switching/user-guides': '用户指南'
+    'network-management': '网络服务'
+    'network-management/cloud': '云管理'
+    'network-management/dhcp': 'DHCP 服务'
+    'network-management/proxy': '代理'
+    'network-management/socks': 'SOCKS 代理'
+    'user-guides/routing-and-networking-protocols': '路由与网络协议'
+    'user-guides/routing-and-networking-protocols/unicast': '单播'
+    'user-guides/routing-and-networking-protocols/unicast/bgp': 'BGP 路由'
+    'user-guides/routing-and-networking-protocols/unicast/ospf': 'OSPF 路由'
+    'user-guides/routing-and-networking-protocols/mpls': '多协议标签交换（MPLS）'
+    'user-guides/routing-and-networking-protocols/mpls/vpls': 'VPLS 虚拟专线'
+    'user-guides/routing-and-networking-protocols/multicast': '组播'
+    'firewall-and-quality-of-service': '防火墙与服务质量'
+    'firewall-and-quality-of-service/firewall': '防火墙'
+    'firewall-and-quality-of-service/queues': '队列'
+    'firewall-and-quality-of-service/queues/queue-types': '队列类型'
+    'firewall-and-quality-of-service/user-guides': '用户指南'
+    'virtual-private-networks': '虚拟专用网络'
+    'virtual-private-networks/ipsec': 'IPsec 隧道'
+    'virtual-private-networks/l2tp': 'L2TP 隧道'
+    'virtual-private-networks/pppoe': 'PPPoE 拨号'
+    'authentication-authorization-accounting': 'AAA 与用户管理'
+    'authentication-authorization-accounting/hotspot-captive-portal': 'HotSpot 强制门户'
+    'high-availability-solutions': '高可用方案'
+    'high-availability-solutions/load-balancing': '负载均衡'
+    'high-availability-solutions/user-guides': '用户指南'
+    'internet-of-things': '物联网'
+    'internet-of-things/bluetooth': '蓝牙'
+    'internet-of-things/bluetooth/mikrotik-beacon-manager': 'MikroTik 信标管理器'
+    'internet-of-things/bluetooth/user-guides': '用户指南'
+    'internet-of-things/gpio': 'GPIO 接口'
+    'internet-of-things/lora': 'LoRa 物联网'
+    'internet-of-things/lora/user-guides': '用户指南'
+    'internet-of-things/mqtt': 'MQTT 消息'
+    'storage': '存储'
+    'storage/btrfs': 'Btrfs 文件系统'
+    'storage/raid': 'RAID 磁盘阵列'
+    'containers': '容器'
+    'containers/apps': '应用'
+    'containers/user-guides': '用户指南'
+    'developer-guides': '开发者指南'
+    'developer-guides/api': 'API 接口'
+    'developer-guides/scripting': '脚本'
+    'cli-reference': 'CLI 参考'
+  # Key prefixes whose whole subtree keeps the English label: RouterOS CLI
+  # menu names are identifiers. The `cli-reference` root itself is prose and
+  # is translated above, so only its children are held out.
+  keep_english:
+    - 'cli-reference/'
+
+hardware:
+  # Category labels, translated by hand because the legacy memory has no Chinese
+  # for them (the generator previously left all of them in English).
+  categories:
+    # First official /hardware/ nav category; 13 quick guides/safety sheets live
+    # in their own sidebar group instead of being folded into product groups.
+    'Quick Guides': '快速指南'
+    '60 GHz products': '60 GHz 产品'
+    'Accessories': '配件'
+    'Antennas': '天线'
+    'Data over Powerlines': '电力线通信'
+    'Ethernet routers': '以太网路由器'
+    'Indoor wireless': '室内无线'
+    'Interfaces': '接口'
+    'IoT products': '物联网产品'
+    'LTE products': 'LTE 产品'
+    'RouterBOARD': 'RouterBOARD'
+    'Switches': '交换机'
+    'Wireless systems': '无线系统'
+  # Product names are never translated. Listed so the intent is explicit and a
+  # future generator cannot quietly start translating them.
+  keep_product_names: true
+  # Category labels that are brand names too ("RouterBOARD" is a product line).
+  keep_english:
+    - 'RouterBOARD'
+  # A trailing "series" is the one part of a hardware title that *is* a category
+  # word, so it is the one part that may be translated ("mANT-series" ->
+  # "mANT 系列"). Both the post-pass (normalize-hardware-titles.mjs) and the
+  # verifier (verify/labels.mjs) read this list; a new spelling is a policy
+  # change here, not a regex edit in the script.
+  title_suffix:
+    from: ['series', '-series', '–series']
+    to: '系列'
+  # The landing page (`hardware/index.md`, or a page pinned to a category root
+  # with `slug: /`) and every category page are *not* models: they keep a Chinese
+  # title and label, so `normalize-hardware-titles` skips them. Their wording is
+  # pinned where the rest of the Chinese copy lives - the landing title in
+  # `config/translation-patches/zh-Hans/hardware/index.md.yml`, the category
+  # labels in `categories` above.
+
+# ---------------------------------------------------------------------------
+# Locale-keyed category wording (schema 2 addition; legacy maps above stay as
+# the zh-Hans default for tools that are not locale-aware).
+#
+# `en` has an empty map on purpose: the English label in sidebars.ts *is* the
+# source wording. `zh-Hant` is hand-reviewed Taiwan-Traditional wording -
+# script AND terminology (硬體 / 服務品質 / 交換器 / 介面 / 佇列 / ...).
+# A locale-aware generator must never fall back from zh-Hant to the legacy
+# Simplified values: a missing zh-Hant section is an error, and a key that is
+# not listed here keeps its English label.
+locales:
+  en:
+    docs:
+      categories: {}
+    hardware:
+      categories: {}
+  zh-Hans:
+    docs:
+      categories:
+        'getting-started': '入门'
+        'getting-started/networking-fundamentals': '网络基础'
+        'getting-started/installation-and-upgrade': '安装与升级'
+        'getting-started/installation-and-upgrade/install': '安装'
+        'getting-started/installation-and-upgrade/install/chr-installation': 'CHR 安装'
+        'getting-started/installation-and-upgrade/netinstall': 'Netinstall 网络安装'
+        'getting-started/configuration-management': '配置管理'
+        'getting-started/routeros-licensing': 'RouterOS 授权'
+        'getting-started/routeros-licensing/chr': '云托管路由器（CHR）'
+        'getting-started/software-specifications': '软件规格'
+        'management-tools': '管理工具'
+        'management-tools/cmr': 'CMR 云管理'
+        'system-information-and-utilities': '系统信息与实用工具'
+        'diagnostics-monitoring-and-troubleshooting': '诊断与监控'
+        'diagnostics-monitoring-and-troubleshooting/log': '日志'
+        'diagnostics-monitoring-and-troubleshooting/traffic-flow': '流量分析'
+        'hardware': '硬件'
+        'hardware/disks': '磁盘'
+        'wired-connections': '有线连接'
+        'wireless': '无线'
+        'wireless/wifi': '无线 Wi-Fi 6/7（802.11ax/be）'
+        'wireless/abgn': '802.11 a/b/g/n 无线'
+        'wireless/abgn/capsman': 'CAPsMAN 无线管理'
+        'wireless/w60g': '60 GHz（W60G）无线'
+        'wireless/user-guides': '用户指南'
+        'mobile-networking': '移动网络'
+        'mobile-networking/gps': 'GPS 定位'
+        'mobile-networking/user-guides': '用户指南'
+        'mobile-networking/bg77-modem-at-commands': 'BG77 调制解调器 AT 命令'
+        'bridging-and-switching': '桥接与交换'
+        'bridging-and-switching/swos': 'SwOS 交换机系统'
+        'bridging-and-switching/user-guides': '用户指南'
+        'network-management': '网络服务'
+        'network-management/cloud': '云管理'
+        'network-management/dhcp': 'DHCP 服务'
+        'network-management/proxy': '代理'
+        'network-management/socks': 'SOCKS 代理'
+        'user-guides/routing-and-networking-protocols': '路由与网络协议'
+        'user-guides/routing-and-networking-protocols/unicast': '单播'
+        'user-guides/routing-and-networking-protocols/unicast/bgp': 'BGP 路由'
+        'user-guides/routing-and-networking-protocols/unicast/ospf': 'OSPF 路由'
+        'user-guides/routing-and-networking-protocols/mpls': '多协议标签交换（MPLS）'
+        'user-guides/routing-and-networking-protocols/mpls/vpls': 'VPLS 虚拟专线'
+        'user-guides/routing-and-networking-protocols/multicast': '组播'
+        'firewall-and-quality-of-service': '防火墙与服务质量'
+        'firewall-and-quality-of-service/firewall': '防火墙'
+        'firewall-and-quality-of-service/queues': '队列'
+        'firewall-and-quality-of-service/queues/queue-types': '队列类型'
+        'firewall-and-quality-of-service/user-guides': '用户指南'
+        'virtual-private-networks': '虚拟专用网络'
+        'virtual-private-networks/ipsec': 'IPsec 隧道'
+        'virtual-private-networks/l2tp': 'L2TP 隧道'
+        'virtual-private-networks/pppoe': 'PPPoE 拨号'
+        'authentication-authorization-accounting': 'AAA 与用户管理'
+        'authentication-authorization-accounting/hotspot-captive-portal': 'HotSpot 强制门户'
+        'high-availability-solutions': '高可用方案'
+        'high-availability-solutions/load-balancing': '负载均衡'
+        'high-availability-solutions/user-guides': '用户指南'
+        'internet-of-things': '物联网'
+        'internet-of-things/bluetooth': '蓝牙'
+        'internet-of-things/bluetooth/mikrotik-beacon-manager': 'MikroTik 信标管理器'
+        'internet-of-things/bluetooth/user-guides': '用户指南'
+        'internet-of-things/gpio': 'GPIO 接口'
+        'internet-of-things/lora': 'LoRa 物联网'
+        'internet-of-things/lora/user-guides': '用户指南'
+        'internet-of-things/mqtt': 'MQTT 消息'
+        'storage': '存储'
+        'storage/btrfs': 'Btrfs 文件系统'
+        'storage/raid': 'RAID 磁盘阵列'
+        'containers': '容器'
+        'containers/apps': '应用'
+        'containers/user-guides': '用户指南'
+        'developer-guides': '开发者指南'
+        'developer-guides/api': 'API 接口'
+        'developer-guides/scripting': '脚本'
+        'cli-reference': 'CLI 参考'
+    hardware:
+      categories:
+        'Quick Guides': '快速指南'
+        '60 GHz products': '60 GHz 产品'
+        'Accessories': '配件'
+        'Antennas': '天线'
+        'Data over Powerlines': '电力线通信'
+        'Ethernet routers': '以太网路由器'
+        'Indoor wireless': '室内无线'
+        'Interfaces': '接口'
+        'IoT products': '物联网产品'
+        'LTE products': 'LTE 产品'
+        'RouterBOARD': 'RouterBOARD'
+        'Switches': '交换机'
+        'Wireless systems': '无线系统'
+  zh-Hant:
+    docs:
+      categories:
+        'getting-started': '入門'
+        'getting-started/networking-fundamentals': '網路基礎'
+        'getting-started/installation-and-upgrade': '安裝與升級'
+        'getting-started/installation-and-upgrade/install': '安裝'
+        'getting-started/installation-and-upgrade/install/chr-installation': 'CHR 安裝'
+        'getting-started/installation-and-upgrade/netinstall': 'Netinstall 網路安裝'
+        'getting-started/configuration-management': '設定管理'
+        'getting-started/routeros-licensing': 'RouterOS 授權'
+        'getting-started/routeros-licensing/chr': '雲端託管路由器（CHR）'
+        'getting-started/software-specifications': '軟體規格'
+        'management-tools': '管理工具'
+        'management-tools/cmr': 'CMR 雲端管理'
+        'system-information-and-utilities': '系統資訊與實用工具'
+        'diagnostics-monitoring-and-troubleshooting': '診斷與監控'
+        'diagnostics-monitoring-and-troubleshooting/log': '日誌'
+        'diagnostics-monitoring-and-troubleshooting/traffic-flow': '流量分析'
+        'hardware': '硬體'
+        'hardware/disks': '磁碟'
+        'wired-connections': '有線連線'
+        'wireless': '無線'
+        'wireless/wifi': '無線 Wi-Fi 6/7（802.11ax/be）'
+        'wireless/abgn': '802.11 a/b/g/n 無線'
+        'wireless/abgn/capsman': 'CAPsMAN 無線管理'
+        'wireless/w60g': '60 GHz（W60G）無線'
+        'wireless/user-guides': '使用者指南'
+        'mobile-networking': '行動網路'
+        'mobile-networking/gps': 'GPS 定位'
+        'mobile-networking/user-guides': '使用者指南'
+        'mobile-networking/bg77-modem-at-commands': 'BG77 數據機 AT 指令'
+        'bridging-and-switching': '橋接與交換'
+        'bridging-and-switching/swos': 'SwOS 交換器系統'
+        'bridging-and-switching/user-guides': '使用者指南'
+        'network-management': '網路服務'
+        'network-management/cloud': '雲端管理'
+        'network-management/dhcp': 'DHCP 服務'
+        'network-management/proxy': '代理'
+        'network-management/socks': 'SOCKS 代理'
+        'user-guides/routing-and-networking-protocols': '路由與網路協定'
+        'user-guides/routing-and-networking-protocols/unicast': '單播'
+        'user-guides/routing-and-networking-protocols/unicast/bgp': 'BGP 路由'
+        'user-guides/routing-and-networking-protocols/unicast/ospf': 'OSPF 路由'
+        'user-guides/routing-and-networking-protocols/mpls': '多協定標籤交換（MPLS）'
+        'user-guides/routing-and-networking-protocols/mpls/vpls': 'VPLS 虛擬專線'
+        'user-guides/routing-and-networking-protocols/multicast': '群播'
+        'firewall-and-quality-of-service': '防火牆與服務品質'
+        'firewall-and-quality-of-service/firewall': '防火牆'
+        'firewall-and-quality-of-service/queues': '佇列'
+        'firewall-and-quality-of-service/queues/queue-types': '佇列類型'
+        'firewall-and-quality-of-service/user-guides': '使用者指南'
+        'virtual-private-networks': '虛擬私人網路'
+        'virtual-private-networks/ipsec': 'IPsec 隧道'
+        'virtual-private-networks/l2tp': 'L2TP 隧道'
+        'virtual-private-networks/pppoe': 'PPPoE 撥號'
+        'authentication-authorization-accounting': 'AAA 與使用者管理'
+        'authentication-authorization-accounting/hotspot-captive-portal': 'HotSpot 強制門戶'
+        'high-availability-solutions': '高可用方案'
+        'high-availability-solutions/load-balancing': '負載平衡'
+        'high-availability-solutions/user-guides': '使用者指南'
+        'internet-of-things': '物聯網'
+        'internet-of-things/bluetooth': '藍牙'
+        'internet-of-things/bluetooth/mikrotik-beacon-manager': 'MikroTik 信標管理器'
+        'internet-of-things/bluetooth/user-guides': '使用者指南'
+        'internet-of-things/gpio': 'GPIO 介面'
+        'internet-of-things/lora': 'LoRa 物聯網'
+        'internet-of-things/lora/user-guides': '使用者指南'
+        'internet-of-things/mqtt': 'MQTT 訊息'
+        'storage': '儲存'
+        'storage/btrfs': 'Btrfs 檔案系統'
+        'storage/raid': 'RAID 磁碟陣列'
+        'containers': '容器'
+        'containers/apps': '應用程式'
+        'containers/user-guides': '使用者指南'
+        'developer-guides': '開發者指南'
+        'developer-guides/api': 'API 介面'
+        'developer-guides/scripting': '指令碼'
+        'cli-reference': 'CLI 參考'
+    hardware:
+      categories:
+        'Quick Guides': '快速指南'
+        '60 GHz products': '60 GHz 產品'
+        'Accessories': '配件'
+        'Antennas': '天線'
+        'Data over Powerlines': '電力線通訊'
+        'Ethernet routers': '乙太網路路由器'
+        'Indoor wireless': '室內無線'
+        'Interfaces': '介面'
+        'IoT products': '物聯網產品'
+        'LTE products': 'LTE 產品'
+        'RouterBOARD': 'RouterBOARD'
+        'Switches': '交換器'
+        'Wireless systems': '無線系統'

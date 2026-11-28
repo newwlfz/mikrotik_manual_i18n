@@ -1,0 +1,14 @@
+{
+  "default": "en",
+  "locales": {
+    "en": {
+      "label": "English",
+      "available": true,
+      "repo": "newwlfz/mikrotik_manual_i18n",
+      "baseUrl": "/mikrotik_manual_i18n/",
+      "site": "https://newwlfz.github.io/mikrotik_manual_i18n/",
+      "siteTitle": "RouterOS Manual",
+      "tagline": "MikroTik RouterOS documentation, hardware guides, news and CLI reference"
+    }
+  }
+}

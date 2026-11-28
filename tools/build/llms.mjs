@@ -1,0 +1,562 @@
+#!/usr/bin/env node
+/**
+ * 生成 llms.txt（llmstxt.org 结构，对齐官方 manual.mikrotik.com/llms.txt）。
+ *
+ * 官方结构：
+ *   # 标题
+ *   > 一句话摘要
+ *   （说明段）
+ *   [Complete documentation corpus](绝对 URL)
+ *   ## 分类
+ *   - [标题](绝对 URL.md): 描述
+ *
+ * 与官方一致：链接指向每页的 Markdown 副本（`generateMarkdownFiles` 产物），
+ * 分类按文档一级目录。语种来自 `docusaurus.config.ts` 的 `i18n.locales`：
+ * 默认语种输出到 `build/`，其余每个语种一份，标题/描述取其 overlay，
+ * URL 带 `/<locale>/` 前缀。
+ *
+ * `llms-full.txt` 的链接必须指向插件**实际写出**的位置（这是 404 的成因）：
+ * 当前版本由插件的 `current` 版本（`path: ''`）写在站点根，
+ *   build/llms-full.txt、build/<locale>/llms-full.txt；
+ * 归档版本写在各自的 `docs/<version>/`：
+ *   build/docs/<v>/llms-full.txt、build/<locale>/docs/<v>/llms-full.txt。
+ * 不要用路由前缀（`docs/`）去拼当前版本的全文链接。
+ * 不再输出 `-----------` 之类的分隔线。
+ *
+ * ## 共享资源（`ASSET_ORIGIN`）
+ *
+ * 语种仓不再保存 `static/`，但语料里的图片仍是 `/img/<hash>.webp` 这种站内
+ * 根路径——它在中文站上会 404。设置了 `ASSET_ORIGIN` 时，写完 llms.txt 之后
+ * 再把 `llms-full.txt` 与插件生成的每页 Markdown 副本里的资源链接改写到该
+ * 源站（与 `tools/build/remark-prefix-root-refs.mjs` 的 HTML 改写同一组前缀）。
+ * 未设置时行为不变。
+ *
+ *   node tools/build/llms.mjs                 # 写 build/ 下的全部 llms.txt
+ *   node tools/build/llms.mjs --out /tmp/x    # 写到别处（验证用）
+ *   node tools/build/llms.mjs --json          # 输出统计
+ */
+
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+
+import localeRegistry from '../content/locales.js';
+import {normalizeBaseUrl, normalizeSiteUrl, resolveBaseUrl, resolveLocales, resolveSiteUrl} from '../lib/site-config.mjs';
+import {overlayRootFor} from '../translate/lib/paths.mjs';
+
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
+const args = process.argv.slice(2);
+const outArg = args.indexOf('--out');
+const OUT = outArg >= 0 && args[outArg + 1] ? path.resolve(args[outArg + 1]) : path.join(REPO, 'build');
+const asJson = args.includes('--json');
+
+/**
+ * 共享资源源站（`ASSET_ORIGIN`，不带尾斜杠）或 `null`。
+ *
+ * 语料里的资源链接是源码 `/img/…` 的原样拷贝，浏览器/LLM 客户端按中文站
+ * 域名解析会 404；这里与 remark 插件用同一组前缀改写到英文站。
+ */
+const SHARED_ASSET_ORIGIN = (process.env.ASSET_ORIGIN || '').trim().replace(/\/+$/, '');
+
+/** 文档链接目标或 HTML 属性里的站内资源路径（`/img/`、`/assets/`、…）。 */
+const SHARED_ASSET_LINK_RE =
+  /(\]\(\s*["']?|\b(?:src|href|poster)\s*=\s*["'])(\/(?:img|assets|videos|official|cli)\/)/g;
+
+function walkFiles(root, visit) {
+  if (!fs.existsSync(root)) return;
+  for (const entry of fs.readdirSync(root, {withFileTypes: true})) {
+    const full = path.join(root, entry.name);
+    if (entry.isDirectory()) walkFiles(full, visit);
+    else if (entry.isFile()) visit(full);
+  }
+}
+
+/**
+ * 把 llms 语料里的资源链接改写到 `ASSET_ORIGIN`。
+ *
+ * 覆盖插件生成的每页 `.md` 副本和每份 `llms-full.txt`（`llms.txt` 本身只有
+ * 页面链接，没有资源链接）。返回改写统计，供 `--json` 与日志使用。
+ */
+function rewriteSharedAssetLinks(root) {
+  const result = {origin: SHARED_ASSET_ORIGIN, files: 0, refs: 0};
+  if (!SHARED_ASSET_ORIGIN) return result;
+  walkFiles(root, (file) => {
+    const name = path.basename(file);
+    if (!name.endsWith('.md') && name !== 'llms-full.txt') return;
+    const before = fs.readFileSync(file, 'utf8');
+    let refs = 0;
+    const after = before.replace(SHARED_ASSET_LINK_RE, (whole, prefix, assetPath) => {
+      refs += 1;
+      return `${prefix}${SHARED_ASSET_ORIGIN}${assetPath}`;
+    });
+    if (after === before) return;
+    fs.writeFileSync(file, after);
+    result.files += 1;
+    result.refs += refs;
+  });
+  return result;
+}
+
+// 与 docusaurus.config.ts 同源（环境变量优先），不维护第二套 fallback。
+const SITE_URL = normalizeSiteUrl(resolveSiteUrl().value);
+const BASE_URL = normalizeBaseUrl(resolveBaseUrl().value);
+const abs = (routePath) => `${SITE_URL}${BASE_URL}${routePath.replace(/^\/+/, '')}`;
+
+const currentVersion = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(REPO, 'data/manifests/current-version.json'), 'utf8')).version;
+  } catch {
+    return 'current';
+  }
+})();
+
+const versionedDocs = fs.existsSync(path.join(REPO, 'versioned_docs'))
+  ? fs
+      .readdirSync(path.join(REPO, 'versioned_docs'), {withFileTypes: true})
+      .filter((entry) => entry.isDirectory() && entry.name.startsWith('version-'))
+      .map((entry) => entry.name.replace(/^version-/, ''))
+      .sort((a, b) => {
+        const aa = a.split('.').map(Number);
+        const bb = b.split('.').map(Number);
+        for (let i = 0; i < Math.max(aa.length, bb.length); i += 1) {
+          const d = (aa[i] ?? 0) - (bb[i] ?? 0);
+          if (d) return d;
+        }
+        return a.localeCompare(b);
+      })
+  : [];
+
+/** 分类标签：优先取 sidebars.ts 顶层的 label，取不到就用人读化的目录名。 */
+function topLevelLabels() {
+  const labels = new Map();
+  let sidebarName = 'docs';
+  const humanize = (segment) =>
+    segment
+      .split('-')
+      .map((word) => (word === 'cli' ? 'CLI' : word.charAt(0).toUpperCase() + word.slice(1)))
+      .join(' ');
+  try {
+    const text = fs.readFileSync(path.join(REPO, 'sidebars.ts'), 'utf8');
+    // sidebars.ts 是生成文件：`const sidebars: SidebarsConfig = { ... };`
+    // 中间就是一个 JSON 对象（键名和字符串都有引号）。从 `= {` 起、
+    // 到最后一个 `};` 止，避免把文件开头的注释或类型里的花括号算进来。
+    const eq = text.indexOf('= {');
+    const end = text.lastIndexOf('};');
+    const tree = JSON.parse(text.slice(eq + 2, end + 1));
+    sidebarName = Object.keys(tree)[0] || sidebarName;
+    const walk = (items) => {
+      for (const item of items || []) {
+        if (item.type === 'category') {
+          const target = item.link?.id || firstDocId(item.items) || '';
+          const segment = target.split('/')[0];
+          if (segment && !labels.has(segment)) labels.set(segment, item.label);
+          walk(item.items);
+        }
+      }
+    };
+    walk(tree[sidebarName]);
+  } catch {
+    // sidebars.ts 结构变了也不要让生成失败：下面按目录名兜底。
+  }
+  return {labels, humanize, sidebarName};
+}
+
+/**
+ * 侧边栏分类标签的翻译覆盖。
+ *
+ * Docusaurus 构建时用 `i18n/<locale>/docusaurus-plugin-content-docs/<slot>.json`
+ * 里的 `sidebar.<sidebar>.<type>.<key>` 替换 `sidebars.ts` 的英文 label；
+ * `llms.txt` 的分类标题直接读 `sidebars.ts`，所以翻译语种必须优先查这份
+ * 映射，否则索引正文是中文、分类标题仍是英文。
+ */
+function sidebarTranslations(locale, slot) {
+  if (!locale) return {};
+  try {
+    return JSON.parse(
+      fs.readFileSync(
+        path.join(REPO, 'i18n', locale, 'docusaurus-plugin-content-docs', slot),
+        'utf8',
+      ),
+    );
+  } catch {
+    return {};
+  }
+}
+
+function firstDocId(items) {
+  for (const item of items || []) {
+    if (item.type === 'doc') return item.id;
+    if (item.type === 'category') {
+      const nested = item.link?.id || firstDocId(item.items);
+      if (nested) return nested;
+    }
+  }
+  return '';
+}
+
+const {labels, humanize, sidebarName} = topLevelLabels();
+
+function listMarkdown(dir) {
+  if (!fs.existsSync(dir)) return [];
+  const out = [];
+  for (const entry of fs.readdirSync(dir, {withFileTypes: true})) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) out.push(...listMarkdown(full));
+    else if (entry.isFile() && entry.name.endsWith('.md')) out.push(full);
+  }
+  return out;
+}
+
+/** 极简 front matter：只要 title / description，够用且不引依赖。 */
+function frontMatter(text) {
+  const data = {};
+  if (!text.startsWith('---')) return data;
+  const end = text.indexOf('\n---', 3);
+  if (end < 0) return data;
+  for (const line of text.slice(3, end).split('\n')) {
+    const match = /^([A-Za-z_][\w-]*):\s*(.*)$/.exec(line);
+    if (!match) continue;
+    // YAML 单引号里的转义是 ''，去掉外层引号后要还原成一个 '。
+    data[match[1]] = match[2]
+      .trim()
+      .replace(/^'(.*)'$/, '$1')
+      .replace(/^"(.*)"$/, '$1')
+      .replace(/''/g, "'");
+  }
+  data.__body = text.slice(end + 4);
+  return data;
+}
+
+function firstParagraph(body) {
+  for (const block of (body || '').split(/\n\s*\n/)) {
+    const plain = block
+      .replace(/^#+\s.*$/gm, '')
+      .replace(/<!--[\s\S]*?-->/g, '')
+      .replace(/<\/?[A-Za-z][^>]*>/g, '')
+      .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+      .replace(/[*_`>#]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+    if (plain.length >= 40) return plain;
+  }
+  return '';
+}
+
+const clip = (value, max = 240) => {
+  const text = String(value || '').replace(/\s+/g, ' ').trim();
+  return text.length > max ? `${text.slice(0, max - 1).trimEnd()}…` : text;
+};
+
+function pageInfo(file, rootDir, overlayRoot) {
+  const rel = path.relative(rootDir, file).split(path.sep).join('/');
+  const relId = rel.replace(/\.md$/, '').replace(/\/index$/, '');
+  const overlay = overlayRoot ? path.join(overlayRoot, rel) : null;
+  const overlayText =
+    overlay && fs.existsSync(overlay) ? fs.readFileSync(overlay, 'utf8') : null;
+  const base = frontMatter(fs.readFileSync(file, 'utf8'));
+  // The source locale has no overlay (`overlayRoot` is null), so `localized` is
+  // empty there and every field falls back to the English page. A translated
+  // locale prefers its overlay's title/description, then the English ones.
+  const localized = overlayText ? frontMatter(overlayText) : {};
+  const title =
+    localized.title ||
+    base.title ||
+    (localized.__body.match(/^#\s+(.+)$/m) || [])[1] ||
+    (base.__body.match(/^#\s+(.+)$/m) || [])[1] ||
+    relId.split('/').pop();
+  const description =
+    clip(localized.description || base.description) ||
+    clip(firstParagraph(overlayText ? localized.__body : base.__body));
+  return {relId, title: title.trim(), description};
+}
+
+/**
+ * 分类归属：一级目录 a/b.md 归到 a；根目录的 section 落地页 a.md（存在同名
+ * 目录 a/）也归到 a，与官方 llms.txt 把 section 首页放在该 section 顶部一致；
+ * 其余根目录单页（introduction）归「概览」。
+ */
+function sectionFor(relId, sectionDirs) {
+  if (relId.includes('/')) return relId.split('/')[0];
+  return sectionDirs.has(relId) ? relId : '__overview__';
+}
+
+/**
+ * llms.txt 索引文案。
+ *
+ * 标题与摘要优先取自 `locales.json` 的 `siteTitle` / `tagline`（站点 `<title>`
+ * 与首页副标题也读同一份数据），所以新增语种只需要登记 `locales.json`，不必
+ * 改这个文件。`INDEX_TEXT` 只保留 en 与首个翻译语种作为兜底：
+ *
+ *   - 某个语种没有条目，或登记表缺 `siteTitle` / `tagline` 时，标题和摘要
+ *     分别回落到 `INDEX_TEXT` 中该语种的标题/摘要；
+ *   - 未知语种的说明段、`corpus` 与 `overview` 标签一律用通用英文
+ *     （`INDEX_TEXT.en`），标题仍是该语种的 `siteTitle`，摘要优先 `tagline`、
+ *     缺省时用通用英文摘要。这样缺一份翻译不会让 `llms:build` 失败，URL
+ *     前缀仍按语种。
+ */
+const INDEX_TEXT = {
+  en: {
+    title: '# MikroTik RouterOS Documentation',
+    summary:
+      '> MikroTik RouterOS documentation: configuration reference, CLI reference, and user guides.',
+    note: (versionLabel) =>
+      `Index of the RouterOS ${versionLabel} manual, in documentation menu order. Links open Markdown copies of the pages.`,
+    corpus: 'Complete documentation corpus',
+    overview: 'Overview',
+  },
+  'zh-Hans': {
+    title: '# MikroTik RouterOS 文档',
+    summary: '> MikroTik RouterOS 官方文档：配置参考、CLI 参考与使用指南（简体中文镜像）。',
+    note: (versionLabel) =>
+      `RouterOS ${versionLabel} 手册索引，按文档目录顺序排列。链接指向页面的 Markdown 副本。`,
+    corpus: '完整文档语料',
+    overview: '概览',
+  },
+};
+
+/**
+ * 一个语种的索引文案：`locales.json` 的站点身份优先，`INDEX_TEXT` 兜底。
+ *
+ * 标题统一写成 Markdown 一级标题，摘要统一写成引用行，所以 `siteTitle`
+ * 与 `tagline` 不需要自带前缀。`locales.json` 由 hub 推送到每个语种仓，
+ * 独立构建的语种仓读到的就是自己那份登记表。
+ *
+ * 新语种的可扩展入口（不需要在这里硬编码第三套文案）：
+ *   1. 在 `locales.json` 登记 `siteTitle` / `tagline` —— 标题与摘要自动本地化；
+ *   2. 可选 `config/llms-index/<locale>.json` 提供 `note` / `corpus` /
+ *      `overview`（`note` 里的 `{version}` 会替换成版本号）。
+ * 两者都缺时只回落英文说明段，并在 stderr 提示一次，不阻断 `llms:build`。
+ */
+const warnedIncompleteIndexText = new Set();
+function indexTextFor(locale, defaultLocale) {
+  const localized = INDEX_TEXT[locale] || INDEX_TEXT[defaultLocale] || INDEX_TEXT.en;
+  let entry = {};
+  try {
+    entry = localeRegistry.readRegistry().locales[locale] || {};
+  } catch {
+    // 没有 locales.json 的模板仓：沿用 INDEX_TEXT 兜底。
+  }
+  const siteTitle = typeof entry.siteTitle === 'string' ? entry.siteTitle.trim() : '';
+  const tagline = typeof entry.tagline === 'string' ? entry.tagline.trim() : '';
+
+  const textFile = path.join(REPO, 'config/llms-index', `${locale}.json`);
+  let extra = {};
+  if (fs.existsSync(textFile)) {
+    try {
+      extra = JSON.parse(fs.readFileSync(textFile, 'utf8')) || {};
+    } catch (error) {
+      process.stderr.write(`note: cannot read ${path.relative(REPO, textFile)}: ${error.message}\n`);
+    }
+  }
+  if (locale !== defaultLocale && !INDEX_TEXT[locale] && !Object.keys(extra).length && !warnedIncompleteIndexText.has(locale)) {
+    warnedIncompleteIndexText.add(locale);
+    process.stderr.write(
+      `note: llms.txt text for "${locale}" is incomplete; title/summary come from locales.json ` +
+        `and the rest falls back to English. Add config/llms-index/${locale}.json to localize it.\n`,
+    );
+  }
+
+  return {
+    ...localized,
+    title: siteTitle ? `# ${siteTitle}` : localized.title,
+    summary: tagline ? `> ${tagline}` : localized.summary,
+    ...(typeof extra.note === 'string' ? {note: (versionLabel) => extra.note.replaceAll('{version}', versionLabel)} : {}),
+    ...(typeof extra.corpus === 'string' ? {corpus: extra.corpus} : {}),
+    ...(typeof extra.overview === 'string' ? {overview: extra.overview} : {}),
+  };
+}
+
+function buildLocale({
+  locale,
+  docsRoot,
+  routePrefix,
+  llmsFullPath,
+  overlayRoot,
+  versionLabel,
+  defaultLocale,
+  singleLocaleBuild,
+  sidebarName,
+  translationSlot,
+}) {
+  const entries = listMarkdown(docsRoot).map((file) => pageInfo(file, docsRoot, overlayRoot));
+  const sectionDirs = new Set(
+    entries.filter((entry) => entry.relId.includes('/')).map((entry) => entry.relId.split('/')[0]),
+  );
+  // 一级目录顺序：sidebars 里出现过的按出现顺序，其余按名称；单页（概览）在最前。
+  const order = [...labels.keys()];
+  const groups = new Map();
+  for (const entry of entries) {
+    const key = sectionFor(entry.relId, sectionDirs);
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(entry);
+  }
+  const keys = [...groups.keys()].sort((a, b) => {
+    if (a === '__overview__') return -1;
+    if (b === '__overview__') return 1;
+    const ia = order.indexOf(a);
+    const ib = order.indexOf(b);
+    if (ia !== ib) return (ia < 0 ? 999 : ia) - (ib < 0 ? 999 : ib);
+    return a.localeCompare(b);
+  });
+
+  // 翻译语种优先用 sidebars 的翻译覆盖；取不到再退回 sidebars.ts 的英文
+  // label / 目录名，未翻译的分类不会因此消失。
+  const translations = sidebarTranslations(locale, translationSlot);
+  const localizedLabel = (key) => {
+    for (const type of ['category', 'doc']) {
+      const entry = translations[`sidebar.${sidebarName}.${type}.${key}`];
+      if (entry?.message) return entry.message;
+    }
+    return null;
+  };
+
+  const text = indexTextFor(locale, defaultLocale);
+  // `docusaurus build --locale <X>` 把该语种写到 `build/` 根（`tools/build/
+  // index.mjs` 的单语种模式），没有 `/<locale>/` 路由前缀；只有同仓双语构建
+  // 才会把非默认语种放在 `/<locale>/` 下。跨仓镜像站（英文仓 / 中文仓各建
+  // 一个语种）属于前一种，URL 直接落在本站 baseUrl 下。
+  const prefix = singleLocaleBuild || locale === defaultLocale ? '' : `${locale}/`;
+  // The corpus file is written by the plugin next to this llms.txt, not at a
+  // route: current lives at the site/locale root, archives under docs/<v>/.
+  const corpusUrl = abs(`${prefix}${llmsFullPath}`);
+  const lines = [text.title, '', text.summary, '', text.note(versionLabel), '', `[${text.corpus}](${corpusUrl})`, ''];
+
+  for (const key of keys) {
+    const heading =
+      key === '__overview__'
+        ? text.overview
+        : localizedLabel(key) || labels.get(key) || humanize(key);
+    lines.push(`## ${heading}`, '');
+    const sorted = groups.get(key).sort((a, b) => {
+      // section 落地页（relId 与分类同名）排在最前，其余按路径。
+      const aLanding = a.relId === key ? 0 : 1;
+      const bLanding = b.relId === key ? 0 : 1;
+      if (aLanding !== bLanding) return aLanding - bLanding;
+      return a.relId.localeCompare(b.relId);
+    });
+    for (const entry of sorted) {
+      const url = abs(`${prefix}${routePrefix}${entry.relId}.md`);
+      const desc = entry.description ? `: ${entry.description}` : '';
+      lines.push(`- [${entry.title}](${url})${desc}`);
+    }
+    lines.push('');
+  }
+  return {text: `${lines.join('\n').replace(/\n+$/, '')}\n`, count: entries.length, groups: keys.length};
+}
+
+// 语种来自 `docusaurus.config.ts`（`i18n.locales`），这里不再维护第二份清单：
+// 新增语种只改配置。
+const {locales, defaultLocale} = resolveLocales();
+
+/**
+ * 只给**已构建**的语种写 llms.txt。
+ *
+ * `SITE_LOCALE=en`（本仓库的常态）时 Docusaurus 只建英文产物；若这里仍按
+ * `i18n.locales` 跑多个语种，就会在 `build/<locale>/` 下凭空造出其它站的目录，
+ * `tools/build/slim.mjs` 和 `verify` 随后会把产物当成多语种站处理，验收
+ * （"产物不含其它语种的 build/<locale>"）也会失败。`--locale` 优先于环境变量。
+ */
+const requestedLocale = (() => {
+  const inline = args.find((arg) => arg.startsWith('--locale='));
+  if (inline) return inline.slice('--locale='.length).trim();
+  const index = args.indexOf('--locale');
+  if (index >= 0 && args[index + 1]) return String(args[index + 1]).trim();
+  return (process.env.SITE_LOCALE || '').trim();
+})();
+const builtLocales = requestedLocale
+  ? locales.filter((locale) => locale === requestedLocale)
+  : locales;
+if (requestedLocale && builtLocales.length === 0) {
+  throw new Error(
+    `SITE_LOCALE/--locale "${requestedLocale}" is not declared in i18n.locales (${locales.join(', ')})`,
+  );
+}
+
+/**
+ * 文档树 + 路由前缀；`section` 是 `SECTIONS` 里的名字，用来按约定解析
+ * `i18n/<locale>/<plugin>/...` 这个 overlay 根。
+ */
+const scopes = [
+  {
+    docsRoot: path.join(REPO, 'docs'),
+    section: 'docs',
+    routePrefix: 'docs/',
+    // The plugin's `current` version uses `path: ''`, so its full text is the
+    // site-root one, not `docs/llms-full.txt`.
+    llmsFullPath: 'llms-full.txt',
+    versionLabel: currentVersion,
+    // 当前文档的侧边栏翻译槽位（Docusaurus 把 sidebars 标签抽出到这里）。
+    translationSlot: 'current.json',
+    outRoot: OUT,
+    versionOut: null,
+  },
+  ...versionedDocs.map((version) => ({
+    docsRoot: path.join(REPO, `versioned_docs/version-${version}`),
+    section: `docs-${version}`,
+    routePrefix: `docs/${version}/`,
+    llmsFullPath: `docs/${version}/llms-full.txt`,
+    versionLabel: version,
+    translationSlot: `version-${version}.json`,
+    outRoot: path.join(OUT, 'docs', version),
+    versionOut: version,
+  })),
+];
+
+// 顺序保持「先当前版本、再每个归档版本；每个 scope 内按配置顺序列语种」，
+// 让既有产物的生成顺序不变。
+const targets = scopes.flatMap((scope) =>
+  builtLocales.map((locale) => {
+    const isDefault = locale === defaultLocale;
+    // 单语种构建（`SITE_LOCALE`/`--locale`）：产物就是 `build/` 本身，没有
+    // `build/<locale>/` 这一层；被构建的语种即使不是 `defaultLocale`，也写在
+    // 站点根。同仓双语构建仍按语种子目录写。
+    const atSiteRoot = Boolean(requestedLocale) || isDefault;
+    return {
+      locale,
+      defaultLocale,
+      docsRoot: scope.docsRoot,
+      overlayRoot: isDefault ? null : path.join(REPO, overlayRootFor(locale, scope.section)),
+      routePrefix: scope.routePrefix,
+      llmsFullPath: scope.llmsFullPath,
+      versionLabel: scope.versionLabel,
+      singleLocaleBuild: Boolean(requestedLocale),
+      sidebarName,
+      translationSlot: scope.translationSlot,
+      outDir: atSiteRoot
+        ? scope.outRoot
+        : path.join(OUT, locale, scope.versionOut ? `docs/${scope.versionOut}` : ''),
+    };
+  }),
+);
+
+const written = [];
+for (const target of targets) {
+  const {text, count, groups} = buildLocale(target);
+  fs.mkdirSync(target.outDir, {recursive: true});
+  const file = path.join(target.outDir, 'llms.txt');
+  fs.writeFileSync(file, text);
+  written.push({
+    file: path.relative(REPO, file),
+    version: target.versionLabel,
+    locale: target.locale,
+    pages: count,
+    groups,
+  });
+}
+
+// 语料是源码 Markdown 的拷贝，资源链接仍是 `/img/…`；共享资源模式下改写到
+// 英文站。放在写 llms.txt 之后，`llms.txt` 自身不含资源链接。
+const sharedAssets = rewriteSharedAssetLinks(OUT);
+
+if (asJson) {
+  console.log(JSON.stringify({written, sharedAssets}, null, 2));
+} else {
+  if (SHARED_ASSET_ORIGIN) {
+    console.log(
+      `shared assets: ${sharedAssets.refs} refs in ${sharedAssets.files} file(s) -> ${SHARED_ASSET_ORIGIN}`,
+    );
+  }
+  for (const item of written) {
+    console.log(`${item.file}  (${item.locale} ${item.version}, ${item.pages} 页, ${item.groups} 个分类)`);
+  }
+}

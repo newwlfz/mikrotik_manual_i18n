@@ -1,0 +1,106 @@
+# CLI label tables.
+#
+# Every label here is structure, not prose: it is replaced deterministically and
+# never sent to the model. Attribute names and order are preserved by the
+# rewriter; only the values below change.
+#
+# `headers` is the header row of `<ArgTable c1="..." c2="..." c3="...">`.
+schema: 1
+
+headers:
+  'Argument': '参数'
+  'Type': '类型'
+  'Description': '描述'
+  'Flag': '标志'
+  'Name': '名称'
+  'Read-only Argument': '只读参数'
+  'Read-only Flag': '只读标志'
+
+# The `/cli-reference/compare-versions` page.
+#
+# Two consumers read this table:
+#
+#   - `normalize-cli-headers.mjs` rewrites the labels that appear in the page's
+#     own Markdown (the "How the comparison works" list names **Parameters**,
+#     **Flags**, *New commands* and *Removed commands*);
+#   - `src/components/CliCompare` renders the interactive widget whose field
+#     labels (`From`, `To`, `Filter`) and diff legend (`parameters added`, ...)
+#     are read from `src/components/CliCompare/labels.ts`, a literal copy of this
+#     table (the widget runs in the browser, where this YAML is not importable).
+#     Change a value in both places, or the rendered page and its legend drift.
+#
+# Keys are matched case-insensitively against a whole bold/italic span, so
+# `**Parameters**` and `**parameters**` both hit `parameters`.
+# Key set is the same fixed 27-key widget table as the three locale
+# repositories (the hub's browser widget keeps its own literal copy in
+# `src/components/CliCompare/labels.ts`; this table is the source wording).
+compare_versions:
+  # Widget field labels.
+  'From': '从'
+  'To': '到'
+  'Filter': '过滤'
+  'Swap versions': '交换版本'
+  'Swap From and To versions': '交换“从”和“到”版本'
+  'path, e.g. ip/firewall': '路径，例如 ip/firewall'
+  # Diff legend and stat labels.
+  'parameters added': '新增参数'
+  'parameters removed': '删除参数'
+  'commands changed': '变更命令'
+  'new commands': '新增命令'
+  'commands removed': '删除命令'
+  'New commands': '新增命令'
+  'Removed commands': '删除命令'
+  'Parameter changes': '参数变化'
+  'parameters': '参数'
+  'flags': '标志'
+  'commands': '命令'
+  'command': '命令'
+  'command measure word': '条'
+  # Notices and separators.
+  'Could not load': '无法加载'
+  'Loading CLI reference versions…': '正在加载 CLI 参考版本…'
+  'Not enough CLI reference versions to compare.': '可比较的 CLI 参考版本不足。'
+  'Select two different versions to compare.': '请选择两个不同的版本进行对比。'
+  'No parameter differences.': '无参数差异。'
+  'No parameter differences matching the filter.': '没有符合筛选条件的参数差异。'
+  ': ': '：'
+  ' of ': ' / '
+
+# Front matter of `/cli-reference/compare-versions`, keyed by locale; the `en`
+# row is the English source itself.
+compare_versions_frontmatter:
+  en:
+    title: 'CLI Reference Version Comparison'
+    description: 'Compare parameters between two RouterOS CLI reference versions.'
+  'zh-Hans':
+    title: 'CLI 参考版本对比'
+    description: '比较两个 RouterOS CLI 参考版本之间的参数。'
+  'zh-Hant':
+    title: 'CLI 參考版本對比'
+    description: '比較兩個 RouterOS CLI 參考版本之間的參數。'
+
+# Full four-bullet body of "How the comparison works", keyed by locale.
+# `normalize-cli-headers.mjs` replaces the whole list block, not four spans.
+compare_versions_body:
+  en: |-
+    - The data is generated from the versioned CLI reference pages in this
+      repository (`versioned_docs/version-*/cli-reference`), so it reflects the
+      published pages, not the RouterOS source itself.
+    - **Parameters** are the arguments of a command or menu, including read-only
+      arguments. **Flags** are item properties such as `disabled`, `running`, and
+      `invalid`.
+    - A command or menu is listed under *New commands* or *Removed commands* when
+      the whole page is missing from the other version.
+    - Directory pages (for example `ip/firewall`) list the parameters of every
+      entry of that menu, so a removed parameter there may actually have moved to
+      a submenu page.
+  'zh-Hans': |-
+    - 数据由本仓库中的版本化 CLI 参考页面生成（`versioned_docs/version-*/cli-reference`），因此它反映的是已发布的页面，而不是 RouterOS 源代码本身。
+    - **参数**是命令或菜单的参数，包括只读参数。**标志**是项目属性，例如 `disabled`、`running` 和 `invalid`。
+    - 当某个命令或菜单的整个页面在另一版本中缺失时，该命令或菜单会列在 *新增命令* 或 *移除命令* 下。
+    - 目录页面（例如 `ip/firewall`）会列出该菜单中每个条目的参数，因此其中被移除的参数实际上可能已移至子菜单页面。
+  'zh-Hant': |-
+    - 資料由本倉庫中具版本號的 CLI 參考頁面（`versioned_docs/version-*/cli-reference`）產生，因此反映的是已發布的頁面，而不是 RouterOS 原始碼本身。
+    - **參數**是命令或選單的引數，包括唯讀引數。**標誌**是項目的屬性，例如 `disabled`、`running` 和 `invalid`。
+    - 當某個命令或選單的整個頁面在另一版本中缺失時，該命令或選單會列在 *新增命令* 或 *移除命令* 下。
+    - 目錄頁面（例如 `ip/firewall`）會列出該選單中每個項目的參數，因此在那裡被移除的參數實際上可能已移至某個子選單頁面。

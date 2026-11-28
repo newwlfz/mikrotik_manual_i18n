@@ -1,0 +1,69 @@
+# Agreed terminology.
+#
+# Two places read this file: the translation prompt (`lib/provider.mjs`) and the
+# lookup layer (`lib/tm.mjs`), where the glossary outranks the translation
+# memory: a remembered paragraph that still carries an English product term is
+# corrected on the way out. A term whose `target` differs from its `source` is
+# therefore applied to prose, so keep the English spelling when the site does
+# (product and feature names) and give the Chinese wording when it helps.
+#
+# `kind: model` marks a hardware model / product name. Those self-mappings are
+# the single source of truth for the "model names stay verbatim" guards in
+# prompts, the planner, harvest, the TM read path and tools/verify/product-names.mjs.
+# A model is never translated — not in a title, H1/H2, sidebar label or TM hit.
+#
+# Extend this file instead of editing prompts in code.
+terms:
+  - source: RouterOS
+    target: RouterOS
+  - source: MikroTik
+    target: MikroTik
+  - source: WinBox
+    target: WinBox
+  - source: WebFig
+    target: WebFig
+  - source: CAPsMAN
+    target: CAPsMAN
+  - source: PoE
+    target: PoE
+  - source: SFP
+    target: SFP
+  - source: VLAN
+    target: VLAN
+  - source: VPN
+    target: VPN
+  - source: BGP
+    target: BGP
+  - source: OSPF
+    target: OSPF
+  - source: MPLS
+    target: MPLS
+  # Hardware models / product names: source == target, kind: model.
+  - source: Audience
+    target: Audience
+    kind: model
+  - source: hAP be³ Media
+    target: hAP be³ Media
+    kind: model
+  - source: Chateau
+    target: Chateau
+    kind: model
+  - source: Cube
+    target: Cube
+    kind: model
+  - source: Groove
+    target: Groove
+    kind: model
+  - source: hEX
+    target: hEX
+    kind: model
+  # Recurring blog series and the wording used for it everywhere.
+  - source: Newsletter
+    target: 新闻简报
+  # IP cloud feature; the Chinese manual explains it as "remote home access".
+  # The term itself stays bare: the explanation is written once, on the first
+  # occurrence of each page, by tools/translate/lib/term-annotate.mjs. Mapping
+  # the term to the parenthesised form made every mention read like a repeated
+  # glossary footnote.
+  - source: Back To Home
+    target: Back To Home

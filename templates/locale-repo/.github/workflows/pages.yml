@@ -1,0 +1,833 @@
+name: Translate, build and deploy
+
+# 中文站流水线：**先分批翻译，全部译完才构建发布**。
+#
+#   1. `translate` job：先跑**预检**（一个 `max_tokens=8` 的请求），再跑一批翻译
+#      （有时间预算、可中断），把进度提交回仓库。输出 `pending`（还剩多少待译
+#      单位）、`llm_error`（LLM 失败时的 HTTP 状态）。
+#   2. `build` job：`pending == 0`（或 `skip_translate`、或 LLM 失败且放行）才跑。
+#      构建 → 部署门禁 → 上传制品。
+#   3. `deploy` job：`build` 成功才部署；否则线上保持上一个成功版本。
+#
+# 预检的意义：402/429 这类「没额度」的错误会在**开始批量翻译之前**暴露，而不是
+# 花钱跑了 20 分钟才失败。预检失败时不启动批量翻译、不提交任何东西。
+#
+# 手动开关 `skip_translate`（默认 false）：勾选后跳过 `translate` job，直接用已提交
+# 的覆盖层构建。它**不会**跳过校验：build 仍断言全部内容根，并跑
+# `npm run translate:verify`（覆盖层结构校验），所以结构损坏的站不会被发布。
+# 用途与风险见 `guides/CI.md`「跳过翻译（skip_translate）」。
+#
+# 手动开关 `publish_on_llm_error`（默认 false）：LLM 额度/鉴权/限流失败（401/402/
+# 403/429）时是否仍然用**已提交的覆盖层**构建发布。默认不放行 —— job 失败、线上
+# 保持旧版。勾选后 job 成功并继续 `build`，但**未译内容会以英文上线**；build 仍跑
+# `translate:verify` 与全部部署门禁。适用场景与风险见 `guides/CI.md`「LLM 额度/失效」。
+#
+# 为什么进度要提交：翻译是**可续跑**的。每次批次结束把 `i18n/`、`work/translate/`
+# 的小状态（含显式 `work/translate/checkpoint.json`）和 `state/translation-state.json`
+# 提交回 `main`，下一批从断点继续，不重复翻译已完成的块。提交信息带 `[skip ci]`，
+# 避免自己再触发一轮翻译；真正驱动多轮的是下面的 `on.schedule`（每 2 小时），
+# 手动 `workflow_dispatch` 与内容 push 仍可随时插入一轮。轮与轮之间靠 checkpoint
+# 的 `previous_run` 与 TM 计数审计，而不是靠 cursor 精确跳转。
+#
+# **内容从哪来：总管仓 git 推送**。`newwlfz/mikrotik_manual_i18n` 的
+# `publish-content` job 把它的 `CONTENT_ROOTS`（`docs/`、`versioned_docs/`、
+# `hardware/`、`blog/`、`changelog/`、`data/`、`sidebars.ts`、
+# `sidebars-hardware.ts`、`versioned_sidebars/`、`versions.json`）与
+# `locales.json` 直接提交进本仓库（跨仓 PAT）。本 workflow 不再下载 content
+# release，也**不要**在 `.gitignore` 里忽略任何内容根：忽略会让每次构建都基于空
+# 内容、翻译计划少算待译块，总管仓的 publish 也会直接失败。见 `guides/CI.md` 与
+# 总管仓的 `guides/ARCHITECTURE-MULTISITE.md`。
+#
+# **`static/` 不下载、不发布。** 图片/PDF/视频等资源由英文站（资源宿主）提供，
+# 构建时把站内资源引用改写到 `ASSET_ORIGIN`。
+#
+# 部署到 {{SITE}} ；
+# 英文站由 `mikrotik_manual_i18n` 用同一份（`locales.json` 驱动的）
+# `docusaurus.config.ts` 构建。
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'versioned_docs/**'
+      - 'hardware/**'
+      - 'blog/**'
+      - 'changelog/**'
+      - 'data/**'
+      - 'sidebars.ts'
+      - 'sidebars-hardware.ts'
+      - 'versioned_sidebars/**'
+      - 'versions.json'
+      - 'locales.json'
+      - 'config/**'
+      - 'i18n/**'
+      - 'work/translate/**'
+      # 翻译器自己变了也要跑一批：否则改完 `tools/translate` 只能等下一次内容更新
+      # 才生效，而那时候很难判断是内容变化还是代码变化。
+      - 'tools/translate/**'
+      # 同一条流水线的 CI 门禁脚本（读摘要、算放行、写 summary）。
+      - 'tools/ci/**'
+      - 'docusaurus.config.ts'
+      - 'package.json'
+      - 'package-lock.json'
+  # 定时驱动多轮翻译。批次提交带 `[skip ci]`，不会自触发下一轮；push 只在内容
+  # 或工具变化时到达一轮，所以需要 schedule 按节奏把「下一批」真正跑起来。
+  # 选 `17 */2 * * *`（每 2 小时一次，UTC 偶数小时 17 分错峰避开整点拥塞）而不是更密的频率：单次预算 90 分钟，
+  # 加上预检/落盘/提交与 build，两小时间隔留出约 30 分钟余量，既不会与
+  # `cancel-in-progress: false` 下被排队的上一条长时间重叠，也不会空跑烧钱。
+  # 每次触发都从分支最新提交 checkout（见 translate job），因此天然按
+  # `work/translate/checkpoint.json` + 已提交覆盖层/TM shards 的断点续跑，
+  # planner 每次重算，不依赖上一轮 cursor 的精确性；`previous_run` 仅作审计。
+  schedule:
+    - cron: '17 */2 * * *'
+  workflow_dispatch:
+    inputs:
+      budget-minutes:
+        description: '本次翻译的时间预算（分钟）'
+        required: false
+        default: '90'
+      max-blocks:
+        description: '本次最多处理的翻译单位数（留空 = 不限，调试用）'
+        required: false
+        default: ''
+      skip_translate:
+        description: '跳过本轮翻译，直接用已提交的覆盖层构建（内容根断言与 translate:verify 仍会跑）'
+        required: false
+        type: boolean
+        default: false
+      publish_on_llm_error:
+        description: 'LLM 额度/鉴权/限流失败（401/402/403/429）时仍用已提交的覆盖层构建发布（未译内容保持英文，默认不放行）'
+        required: false
+        type: boolean
+        default: false
+      # 链内自驱动参数：由 translate job 末尾的 dispatch step 自动填写，手动触发
+      # 请都留默认（prev-pending='' 表示不做跨批下降比较，chain-depth=0 重新起链）。
+      prev-pending:
+        description: '上一批的权威 pending（链内自驱动用；手动触发请留空）'
+        required: false
+        type: string
+        default: ''
+      chain-depth:
+        description: '已连续自驱动的批次数（达到 24 硬停；手动触发请留 0）'
+        required: false
+        type: string
+        default: '0'
+  # 层4：hub 的 publish-content 推完内容根 + locales.json 后发 content-fanout。
+  # 注册表漂移 / 结构变化必须让本仓重建（默认 GITHUB_TOKEN 的 push 不会触发
+  # 目标仓 workflow），与 push / workflow_dispatch 并存；schedule（每 2 小时）
+  # 继续驱动多轮翻译。
+  repository_dispatch:
+    types: [content-fanout]
+
+permissions:
+  # 翻译 job 要提交进度；`contents: write` 也是 checkout 之后 push 的前提。
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  # 同一时间只跑一条中文站流水线，且**不取消**正在跑的那条：翻译花了钱，
+  # 被打断的一批白跑。
+  group: pages-{{SLUG}}
+  cancel-in-progress: false
+
+# 站点身份以仓库根的 `locales.json` 为准（`docusaurus.config.ts` 由它生成
+# `localeConfigs`）；这里显式写出来，让本仓的部署地址一眼可见，也方便 fork。
+# 注：`${{ runner.temp }}` 只在 job/step 级 env 可用，workflow 级 env 用了会
+# 让整个 workflow 变成 invalid（run 直接失败且没有 job）。npm 缓存目录在
+# 各 step 里注入 NPM_CONFIG_CACHE。
+env:
+  # 脚手架占位符加引号：保证模板本身也是合法 YAML（locale:add 的字符串替换
+  # 会把 {{...}} 换成具体值，引号原样保留，渲染结果仍是合法 YAML）。
+  SITE_LOCALE: "{{LOCALE}}"
+  SITE_URL: "{{SITE_ORIGIN}}"
+  BASE_URL: "{{BASE_URL}}"
+  LOCALE_EN_URL: "{{SITE_ORIGIN}}"
+  LOCALE_EN_BASE_URL: "{{HUB_BASE_URL}}"
+  # 其它语种站点的地址全部来自 `locales.json`。`LOCALE_<X>_*` 只按主语言子标签
+  # 匹配（`zh-Hans`、`zh-Hant` 都命中 `ZH`），在这里写 `LOCALE_ZH_BASE_URL` 会让
+  # 简体、繁体的语言下拉和 `hreflang` 都指向简体站；要覆盖中文站地址请用本地预览，
+  # 不要写进工作流。
+  # 共享资源源站 = 英文站的基址（不带尾斜杠）。改英文站域名/前缀时必须同步改这里，
+  # 否则所有语种站的图片、PDF、视频都会 404。见 guides/CI.md「共享资源」。
+  ASSET_ORIGIN: "{{ASSET_ORIGIN}}"
+  # 静态渲染是峰值；6 GiB 堆在 16 GiB 的 runner 上留足余量。
+  BUILD_HEAP_MB: '6144'
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # 1) 预检 + 一批翻译
+  # ---------------------------------------------------------------------------
+  translate:
+    # 手动触发勾选 `skip_translate` 时整块跳过；push 触发时 `inputs` 为空，
+    # `!inputs.skip_translate` 为 true，照常翻译。
+    if: ${{ !inputs.skip_translate }}
+    runs-on: ubuntu-latest
+    # 90 分钟预算 + 计划/落盘/提交余量。`--budget-minutes` 到点会优雅停止并落盘，
+    # 这个 timeout 只是兜底：真被杀掉时，已经写盘的批次仍然在磁盘上。
+    timeout-minutes: 120
+    # 末尾自驱动下一批需要 `actions: write` 才能 createWorkflowDispatch；
+    # job 级 permissions 会覆盖 workflow 级，故提交进度所需的 `contents: write`
+    # 必须一并保留。其余权限（pages / id-token）本 job 不需要。
+    permissions:
+      contents: write
+      actions: write
+    outputs:
+      # 权威 pending 取「清单重算值」（pending.json，与 release gate 同源），
+      # 不用批次摘要：批次进程里的 TM/keep-English 快照是批次开始时的旧值，
+      # 刚写入的 shards/locks 没刷新，会让摘要虚高（zh-Hans 曾报 24、实为 2）。
+      # 门禁口径只有这一个：build.if 与 release gate 读同一个数。
+      pending: ${{ steps.pending_manifest.outputs.pending }}
+      stopped: ${{ steps.summary.outputs.stopped }}
+      # LLM 失败的 HTTP 状态（401/402/403/429），空表示不是额度/鉴权类失败。
+      # build 的 `if` 与「部分英文发布」的告警都读它。
+      llm_error: ${{ steps.gate.outputs.llm_error }}
+      # 层4：统一发布门禁结论，build.if 用它收紧「翻译未完成不构建」。
+      release: ${{ steps.release_gate.outputs.release }}
+    steps:
+      # `ref: github.ref_name` 而不是默认的触发 SHA：排队/重跑时从本分支最新
+      # 进度继续，而不是从触发那一刻的旧状态重翻一遍。
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      # 内容契约的第一道断言：内容根由总管仓 git 推送，必须被 git 跟踪。
+      # 任一内容根被 `.gitignore` 忽略时，翻译计划会少算待译块并让 `pending`
+      # 提前归零 —— 那种“成功”比失败更贵。
+      - name: Verify published content is tracked
+        run: |
+          set -euo pipefail
+          content_roots=(docs versioned_docs hardware blog changelog data versioned_sidebars)
+          content_files=(locales.json sidebars.ts sidebars-hardware.ts versions.json)
+          ignored=0
+          for root in "${content_roots[@]}"; do
+            if git check-ignore -q "$root/"; then
+              echo "::error title=$root/ 被本仓 .gitignore 忽略::总管仓的 publish 推送该内容根；被忽略时它进不了仓库。请删除对应的 .gitignore 规则。"
+              ignored=1
+            fi
+          done
+          for file in "${content_files[@]}"; do
+            if git check-ignore -q "$file"; then
+              echo "::error title=$file 被本仓 .gitignore 忽略::总管仓的 publish 推送该文件；请删除对应的 .gitignore 规则。"
+              ignored=1
+            fi
+          done
+          test "$ignored" -eq 0
+          # 缺根时只告警：翻译仍能处理已到达的板块；build 的硬断言会拦住半站发布。
+          for root in docs locales.json versioned_docs hardware blog changelog data sidebars.ts sidebars-hardware.ts versioned_sidebars versions.json; do
+            if [ ! -e "$root" ]; then
+              echo "::warning title=缺少 $root::缺少 $root；应由总管 publish 推送。"
+            fi
+          done
+          test -d docs || { echo "::error title=缺少 docs/::缺少 docs/；应由总管 publish 推送。"; exit 1; }
+          test -f locales.json || { echo "::error title=缺少 locales.json::缺少 locales.json；应由总管 publish 推送。"; exit 1; }
+      - name: Prepare npm cache directory
+        env:
+          NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
+        run: mkdir -p "$NPM_CONFIG_CACHE"
+      - uses: actions/setup-node@v4
+        env:
+          NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+        env:
+          NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
+      # 预检：一个 `max_tokens=8` 的请求（约 1-2 秒），只为在**批量翻译之前**发现
+      # 401/402/403/429（没额度、key 失效、被限流），而不是跑了 20 分钟才失败。
+      # 输出 `ok` 与 `llm_error=<code>`；步骤本身**永远 exit 0** —— 是否放行由下面
+      # 的 gate 决定（`publish_on_llm_error` 允许时 job 要成功，不能在这里失败）。
+      - name: Preflight LLM check (fail fast on 401/402/403/429)
+        id: preflight
+        env:
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+        run: |
+          set -euo pipefail
+          log="$RUNNER_TEMP/preflight.log"
+          status=0
+          npm run --silent verify:llm -- --quick > "$log" 2>&1 || status=$?
+          cat "$log"
+          # `verify:llm --quick` 在 401/402/403/429 时打印一行 `llm_error=<code>`；
+          # 其他失败（404、5xx、网络、配置缺失）没有这一行，门禁也就不会放行。
+          code=$(sed -n 's/^llm_error=\([0-9][0-9][0-9]\)$/\1/p' "$log" | tail -1)
+          if [ "$status" -eq 0 ]; then
+            {
+              echo "ok=true"
+              echo "llm_error="
+            } >> "$GITHUB_OUTPUT"
+            echo "LLM preflight passed; starting the batch."
+            exit 0
+          fi
+          {
+            echo "ok=false"
+            echo "llm_error=$code"
+          } >> "$GITHUB_OUTPUT"
+          if [ -n "$code" ]; then
+            hint="额度/鉴权/限流（HTTP $code）"
+          else
+            hint="非额度类错误（见上方日志）"
+          fi
+          echo "::error title=LLM 预检失败：$hint::批量翻译未启动，未提交任何内容。"
+          if [ "${{ inputs.publish_on_llm_error }}" = "true" ] && [ -n "$code" ]; then
+            echo "publish_on_llm_error=true：gate 放行，继续 build（未译内容保持英文）。"
+          else
+            echo "默认不放行：gate 会让本次 job 失败，线上保持旧版。"
+          fi
+          exit 0
+      # 一批翻译：到 90 分钟（或 `--max-blocks`）就停，落盘后用 `--json` 报告
+      # `{"translated":N,"pending":M,"stopped":"budget|done|error"}`。
+      # 用 `|| status=$?` 接住退出码：翻译失败（401/402/429）时**也要**把已完成
+      # 的块提交回去，然后由 gate 决定 job 成败（见 `publish_on_llm_error`）。
+      - name: Translate one batch
+        id: run
+        # 预检失败就不启动：不翻译、不写盘、不提交。
+        if: steps.preflight.outputs.ok == 'true'
+        env:
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+        run: |
+          set -o pipefail
+          status=0
+          args=(--apply --budget-minutes="${{ inputs.budget-minutes || '90' }}" --json)
+          if [ -n "${{ inputs.max-blocks }}" ]; then
+            args+=(--max-blocks="${{ inputs.max-blocks }}")
+          fi
+          npm run translate:batch -- "${args[@]}" | tee "$RUNNER_TEMP/translate.json" || status=$?
+          echo "exit_code=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+      # 读回 JSON 摘要（npm 的 banner 行会被跳过），给 build job 的门禁和
+      # step summary 用。JSON 缺失时 pending 置空 —— build 的 `== '0'` 不成立。
+      # 只在这一批**真的跑了**时读：预检失败时没有摘要，也不该写「批次」summary。
+      - name: Read batch summary
+        id: summary
+        if: always() && steps.run.outputs.exit_code != ''
+        run: |
+          node tools/ci/read-translate-summary.mjs --file "$RUNNER_TEMP/translate.json" >> "$GITHUB_OUTPUT"
+      # 提交翻译进度：i18n 覆盖层 + 小型翻译状态 + 状态文件。大块 TM 是**入库
+      # 基线**（work/translate/{translation-memory,model-memory}.json），批次只追加
+      # shards/，不重写基线；见 guides/CI.md 与 work/translate/README.md。
+      # 预检失败时这一批根本没跑，**不提交任何东西**。
+      - name: Commit translation progress
+        id: commit_progress
+        if: always() && steps.run.outputs.exit_code != ''
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for target in i18n work/translate state; do
+            if [ -e "$target" ]; then git add -A "$target"; fi
+          done
+          if git diff --cached --quiet; then
+            echo "no translation progress to commit"
+            exit 0
+          fi
+          pending="${{ steps.summary.outputs.pending }}"
+          git commit -m "translate: batch (pending ${pending}) [skip ci]"
+          # 远端可能在 checkout 之后被 hub content sync / 另一轮提交推进：先 fetch，
+          # 再把本地翻译提交 rebase 到 origin/<branch> 顶端，最后普通 push（不 force、
+          # 不覆盖他人提交）。幂等：没有新提交时 rebase/push 都是 no-op。
+          branch="${{ github.ref_name }}"
+          attempt=0
+          while :; do
+            attempt=$((attempt + 1))
+            git fetch origin "$branch"
+            if ! git rebase "origin/$branch"; then
+              conflicted="$(git diff --name-only --diff-filter=U | sort -u | tr '\n' ' ')"
+              git rebase --abort
+              # 显式冲突策略，不静默覆盖：rebase 中 "theirs" 是正在重放的本地翻译
+              # 提交，冲突块取翻译内容；未冲突的他人改动照常保留，并留 warning。
+              echo "::warning title=翻译提交 rebase 冲突::冲突文件：${conflicted:-未知}；显式策略：保留本地翻译内容，未冲突的远端改动保留。"
+              if ! git rebase -X theirs "origin/$branch"; then
+                echo "::error title=翻译提交 rebase 重试仍失败::冲突文件：${conflicted:-未知}；已 git rebase --abort，未 push，需人工处理。"
+                git rebase --abort || true
+                exit 1
+              fi
+            fi
+            if git push origin "HEAD:$branch"; then
+              echo "pushed to $branch (attempt $attempt)"
+              break
+            fi
+            if [ "$attempt" -ge 3 ]; then
+              echo "::error title=推送失败::连续 3 次 push 被拒；未 force push，需人工重跑。"
+              exit 1
+            fi
+            echo "::warning title=push 被拒::第 $attempt 次被拒（远端又有新提交），重新 fetch+rebase 后重试。"
+            sleep "$((attempt * 3))"
+          done
+      # 站点外壳的文案（navbar / 页脚 / 侧栏分类标签 / 主题按钮）不在内容里，而在
+      # `i18n/<locale>/**.json`：这些文件缺失、或值仍是英文时，构建出来的站就是
+      # “中文页面 + 英文导航”（繁体站曾经 9 个文件全缺）。`translate:ui` 补这一层：
+      #   - 缺文件时才跑 `docusaurus write-translations`（不覆盖已有译文）；
+      #   - 只翻仍是英文的键，幂等：没有待译键时秒过，不请求任何接口；
+      #   - 小批量走同一个 Client（语种 profile + 术语表 + temperature 0）。
+      # 预检失败时不启动，和批量翻译一致；这一层失败即 job 失败，不发布半英文的壳。
+      - name: Translate UI strings (navbar, footer, sidebar labels)
+        id: ui
+        if: steps.preflight.outputs.ok == 'true'
+        env:
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+        run: |
+          set -euo pipefail
+          status=0
+          # Invoke each script directly: npm appends `-- ...` args to the end of
+          # the whole `&&` script, i.e. only to build-cli-labels, which rejects
+          # --json (exit 2). ui-strings accepts --locale/--json; build-cli-labels
+          # accepts --locale only. Keep them as separate commands with the right
+          # flags, preserving the tee'd JSON report and the fail-closed status.
+          node tools/translate/ui-strings.mjs --locale="$SITE_LOCALE" --json | tee "$RUNNER_TEMP/ui.json" || status=$?
+          if [ "$status" -eq 0 ]; then
+            node tools/translate/build-cli-labels.mjs --locale="$SITE_LOCALE" || status=$?
+          fi
+          echo "exit_code=$status" >> "$GITHUB_OUTPUT"
+          exit "$status"
+      # 仓库根 README.md 也是翻译产物：hub 推来的 hub-docs/README.md 是唯一英文源，
+      # 本仓 translate 工作流把它译成 SITE_LOCALE 写回根 README。失败只告警、不阻塞
+      # 主翻译链（README 本地化是增量增强），也不改变 build/deploy 门禁。
+      - name: Localize repository README
+        id: readme
+        if: steps.preflight.outputs.ok == 'true'
+        env:
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+        run: |
+          set +e
+          npm run --silent translate:readme -- --locale="$SITE_LOCALE" --json > "$RUNNER_TEMP/readme.json" 2> "$RUNNER_TEMP/readme.err"
+          status=$?
+          cat "$RUNNER_TEMP/readme.err"
+          cat "$RUNNER_TEMP/readme.json"
+          echo "exit_code=$status" >> "$GITHUB_OUTPUT"
+          node -e '
+            const fs=require("fs");
+            let d={};
+            try { d=JSON.parse(fs.readFileSync(process.argv[1],"utf8")); } catch {}
+            const row=(k,v)=>console.log(`| \`${k}\` | \`${v}\` |`);
+            console.log("### Repository README localization");
+            console.log("");
+            console.log("| item | value |");
+            console.log("| --- | --- |");
+            row("status", d.status || "unknown");
+            row("sourceSha", d.sourceSha || "n/a");
+            row("translatedSha", d.translatedSha || "n/a");
+            row("llm calls", String(d.calls ?? 0));
+            if (d.reason) row("reason", String(d.reason).split("\n")[0]);
+            console.log("");
+          ' "$RUNNER_TEMP/readme.json" >> "$GITHUB_STEP_SUMMARY"
+          if [ "$status" -ne 0 ]; then
+            echo "::warning title=README 本地化步骤异常::exit $status；README 保持原样，不阻塞翻译链。"
+          fi
+          exit 0
+      # 外壳目录有变化才提交；`[skip ci]` 避免再触发一轮。单独提交，job summary
+      # 里才能分辨“内容翻译”与“外壳文案”。README.md 与它的幂等状态一并提交。
+      - name: Commit UI strings
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A i18n README.md
+          if [ -f state/readme-translate.json ]; then git add state/readme-translate.json; fi
+          if git diff --cached --quiet; then
+            echo "no UI strings or README to commit"
+            exit 0
+          fi
+          git commit -m "translate: UI strings and README [skip ci]"
+          # 远端可能在 checkout 之后被 hub content sync / 另一轮提交推进：先 fetch，
+          # 再把本地翻译提交 rebase 到 origin/<branch> 顶端，最后普通 push（不 force、
+          # 不覆盖他人提交）。幂等：没有新提交时 rebase/push 都是 no-op。
+          branch="${{ github.ref_name }}"
+          attempt=0
+          while :; do
+            attempt=$((attempt + 1))
+            git fetch origin "$branch"
+            if ! git rebase "origin/$branch"; then
+              conflicted="$(git diff --name-only --diff-filter=U | sort -u | tr '\n' ' ')"
+              git rebase --abort
+              # 显式冲突策略，不静默覆盖：rebase 中 "theirs" 是正在重放的本地翻译
+              # 提交，冲突块取翻译内容；未冲突的他人改动照常保留，并留 warning。
+              echo "::warning title=翻译提交 rebase 冲突::冲突文件：${conflicted:-未知}；显式策略：保留本地翻译内容，未冲突的远端改动保留。"
+              if ! git rebase -X theirs "origin/$branch"; then
+                echo "::error title=翻译提交 rebase 重试仍失败::冲突文件：${conflicted:-未知}；已 git rebase --abort，未 push，需人工处理。"
+                git rebase --abort || true
+                exit 1
+              fi
+            fi
+            if git push origin "HEAD:$branch"; then
+              echo "pushed to $branch (attempt $attempt)"
+              break
+            fi
+            if [ "$attempt" -ge 3 ]; then
+              echo "::error title=推送失败::连续 3 次 push 被拒；未 force push，需人工重跑。"
+              exit 1
+            fi
+            echo "::warning title=push 被拒::第 $attempt 次被拒（远端又有新提交），重新 fetch+rebase 后重试。"
+            sleep "$((attempt * 3))"
+          done
+      # 「哪些页面仍是英文」的清单，来自**部署门禁用的同一个计划**
+      # （`translate:pending`），而不是 `state/translation-state.json`：后者的
+      # `pendingBlocks` 还包含「有意保留英文」的块，永远不会归零。
+      # 失败只告警：清单缺失不影响放行判断，summary 会写明「未读取到」。
+      - name: List pages that are still English
+        id: pending_manifest
+        if: always()
+        run: |
+          set +e
+          node tools/translate/index.mjs pending --json --pages > "$RUNNER_TEMP/pending.json" 2> "$RUNNER_TEMP/pending.err"
+          status=$?
+          if [ "$status" -ne 0 ]; then
+            echo "::warning title=待译页面清单生成失败::exit $status；job summary 不会列出仍为英文的页面。"
+            cat "$RUNNER_TEMP/pending.err"
+            rm -f "$RUNNER_TEMP/pending.json"
+            # 空值让 build 的 `== '0'` 不成立：fail-closed，不放行。
+            echo "pending=" >> "$GITHUB_OUTPUT"
+          else
+            head -c 600 "$RUNNER_TEMP/pending.json"; echo
+            # 清单重算值是权威 pending：release gate 也读这份 pending.json。
+            # 批次摘要只留作 job summary 展示，不再决定是否构建。
+            manifest_pending=$(node -e '
+              const fs=require("fs");
+              try {
+                const d=JSON.parse(fs.readFileSync(process.argv[1],"utf8"));
+                process.stdout.write(Number.isInteger(d.pending) ? String(d.pending) : "");
+              } catch { process.stdout.write(""); }
+            ' "$RUNNER_TEMP/pending.json")
+            echo "pending=$manifest_pending" >> "$GITHUB_OUTPUT"
+          fi
+          exit 0
+      # 放行判断（唯一一处）：预检/批次是否失败、`llm_error` 是多少、
+      # `publish_on_llm_error` 是否允许继续。同时写 job summary（pending、
+      # llm_error、是否放行、仍为英文的页面）。
+      - name: Decide whether this run may publish
+        id: gate
+        if: always()
+        env:
+          PREFLIGHT_OK: ${{ steps.preflight.outputs.ok }}
+          PREFLIGHT_LLM_ERROR: ${{ steps.preflight.outputs.llm_error }}
+          BATCH_EXIT: ${{ steps.run.outputs.exit_code }}
+          BATCH_PENDING: ${{ steps.summary.outputs.pending }}
+          BATCH_STOPPED: ${{ steps.summary.outputs.stopped }}
+          BATCH_LLM_ERROR: ${{ steps.summary.outputs.llm_error }}
+          PUBLISH_ON_ERROR: ${{ inputs.publish_on_llm_error }}
+        run: |
+          set -euo pipefail
+          node tools/ci/gate-translate.mjs \
+            --preflight-ok "$PREFLIGHT_OK" \
+            --preflight-llm-error "$PREFLIGHT_LLM_ERROR" \
+            --batch-exit "$BATCH_EXIT" \
+            --pending "$BATCH_PENDING" \
+            --stopped "$BATCH_STOPPED" \
+            --llm-error "$BATCH_LLM_ERROR" \
+            --publish-on-error "$PUBLISH_ON_ERROR" \
+            --pending-json "$RUNNER_TEMP/pending.json" \
+            >> "$GITHUB_OUTPUT"
+      # 层4 / 层2：统一发布门禁（pre-build）。复用本 job 已生成的 pending.json，
+      # translate:verify 在这里再跑一次拿退出码与欠账日志；verify:deploy 依赖
+      # build/，构建前无法取得真实值，这里传 0 只是「尚未执行」的参数占位，
+      # 不是放宽阈值 —— 真实结果由 build job 的 verify:deploy 与紧随其后的
+      # Final release gate 复核，任一失败都不会发布。
+      - name: Release gate
+        id: release_gate
+        if: ${{ always() && steps.gate.outputs.gate == 'pass' && steps.gate.outputs.publish_allowed != 'true' }}
+        run: |
+          set -uo pipefail
+          verify=0
+          npm run --silent translate:verify > "$RUNNER_TEMP/translate-verify.log" 2>&1 || verify=$?
+          cat "$RUNNER_TEMP/translate-verify.log"
+
+          stopped=$(node -e '
+          const fs=require("fs");
+          const p="work/translate/checkpoint.json";
+          if(!fs.existsSync(p)){process.stdout.write("not_applicable");process.exit(0);}
+          try{const d=JSON.parse(fs.readFileSync(p,"utf8"));process.stdout.write(String(d.stopped||"unknown"));}catch{process.stdout.write("unknown");}
+          ')
+          checkpoint=0
+          if [ -f tools/verify/checkpoint.mjs ]; then
+            node tools/verify/checkpoint.mjs || checkpoint=$?
+          fi
+
+          node tools/ci/release-gate.mjs \
+            --pending-json="$RUNNER_TEMP/pending.json" \
+            --translate-verify-exit="$verify" \
+            --verify-log="$RUNNER_TEMP/translate-verify.log" \
+            --verify-deploy-exit=0 \
+            --checkpoint-stopped="$stopped" \
+            --checkpoint-exit="$checkpoint" \
+            --json | tee "$RUNNER_TEMP/release-gate.json"
+          release=$(node -p "JSON.parse(require('fs').readFileSync(process.argv[1],'utf8')).release" "$RUNNER_TEMP/release-gate.json" || true)
+          if [ -z "$release" ]; then
+            echo "::error title=Release gate produced no decision::build will be skipped (fail-closed)"
+          fi
+          echo "release=$release" >> "$GITHUB_OUTPUT"
+          echo "- release gate (pre-build): \`$release\`" >> "$GITHUB_STEP_SUMMARY"
+
+      # 方案 A：批次末尾自驱动下一批（背靠背）。批间等待从 cron 的平均 60 分钟
+      # 降到 1–3 分钟，单仓收敛约 29h → 18.5h。
+      # 前置用 `always()` 而不是 `success()`：本步排在 pre-build Release gate 之后，
+      # 而 Release gate 对 pending>0 按设计必然 fail-closed（translate:verify 退出
+      # 非 0 → job 失败 → `success()=false`）；用 `success()` 会让第一批之后的每一轮
+      # 都被跳过，链断在第一批。`always()` 下由下面的显式前序成功判定兜底——前序
+      # step 被 skip 时其 outcome/outputs 为空，条件自然不成立：
+      #   1) steps.run.outcome == 'success' && steps.commit_progress.outcome == 'success'
+      #      —— 批次真的跑了、进度真的提交了；批次/提交失败都不续；
+      #   2) gate == 'pass' —— 门禁没过不续；
+      #   3) publish_allowed != 'true' —— 放行发布（不再翻译）的路径不续；
+      #   4) pending != '' 且 != '0' —— 译完即停；
+      #   5) 权威 pending 跨批下降 —— translated>0 但 pending 不降的顽固块不空转；
+      # 另加 chain-depth < 24 硬停（约 36h），防止异常链无限跑。cron 17 */2 保留
+      # 作兜底；concurrency(queue:single) 保证同时只有一条流水线；批次提交带
+      # `[skip ci]`，不会自触发，只有这里显式 dispatch 才续链。
+      - name: Dispatch next translation batch
+        id: chain_dispatch
+        if: ${{ always() && !inputs.skip_translate && steps.run.outcome == 'success' && steps.commit_progress.outcome == 'success' && steps.gate.outputs.gate == 'pass' && steps.gate.outputs.publish_allowed != 'true' && steps.pending_manifest.outputs.pending != '' && steps.pending_manifest.outputs.pending != '0' && (inputs['prev-pending'] == '' || fromJSON(steps.pending_manifest.outputs.pending || '0') < fromJSON(inputs['prev-pending'] || '2147483647')) && fromJSON(inputs['chain-depth'] || '0') < 24 }}
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ github.token }}
+          script: |
+            const pending = Number(process.env.PENDING || '0');
+            const prev = process.env.PREV_PENDING || '';
+            const depth = Number(process.env.CHAIN_DEPTH || '0');
+            // 与 step if 同口径再校验一次：即使 if 表达式被误改，pending 未下降 /
+            // 门禁未通过 / 链深超限也不会误触发下一批。
+            if (!Number.isSafeInteger(pending) || pending <= 0 ||
+                process.env.SKIP_TRANSLATE === 'true' ||
+                process.env.GATE !== 'pass' || process.env.PUBLISH_ALLOWED === 'true' ||
+                (prev !== '' && pending >= Number(prev)) || depth >= 24) {
+              core.info('chain dispatch skipped by safety re-check');
+              return;
+            }
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'pages.yml',
+              ref: context.ref,
+              inputs: {
+                'budget-minutes': process.env.BUDGET_MINUTES || '90',
+                'prev-pending': String(pending),
+                'chain-depth': String(depth + 1),
+              },
+            });
+            core.notice(`chain dispatch: pending ${pending} (prev ${prev || 'none'}), depth ${depth} -> ${depth + 1}`);
+        env:
+          PENDING: ${{ steps.pending_manifest.outputs.pending }}
+          PREV_PENDING: ${{ inputs['prev-pending'] }}
+          CHAIN_DEPTH: ${{ inputs['chain-depth'] }}
+          BUDGET_MINUTES: ${{ inputs.budget-minutes }}
+          GATE: ${{ steps.gate.outputs.gate }}
+          PUBLISH_ALLOWED: ${{ steps.gate.outputs.publish_allowed }}
+          SKIP_TRANSLATE: ${{ inputs.skip_translate }}
+
+      # 失败必须落在「真正失败」上：`gate != 'pass'` 而不是 `gate == 'fail'`，
+      # 这样 gate 自己崩掉（输出为空）也会失败，而不是被动放行。
+      - name: Fail when the run is not allowed to publish
+        if: always() && steps.gate.outputs.gate != 'pass'
+        run: |
+          echo "::error::translate job did not finish and publish_on_llm_error did not allow publishing; build skipped, site unchanged"
+          exit 1
+
+  # ---------------------------------------------------------------------------
+  # 2) 发布门禁通过时才构建（pending==0 / skip_translate / 放行）
+  # ---------------------------------------------------------------------------
+  build:
+    needs: translate
+    # 发布门禁：
+    #   - translate 正常跑完且 `pending == 0`；或
+    #   - 手动勾选 `skip_translate` 让 translate 被跳过（result == 'skipped'）；或
+    #   - LLM 失败（`llm_error` 非空：401/402/403/429）且手动勾选了
+    #     `publish_on_llm_error` —— 用已提交的覆盖层发布，未译内容保持英文。
+    # 翻译失败（result == 'failure'）永不构建 —— 线上保持旧版，而不是发布一个
+    # 半翻译/坏掉的站。`llm_error` 只在 gate 真正放行时才有值，其余 LLM 失败
+    # （超时、5xx、配置缺失）不带状态码，因此也不会走到这一支。
+    #
+    # `!cancelled()` 不能省：GitHub 在 `if` 里没有状态函数时会隐式套一个
+    # `success()`，而 `success()` 对**被跳过**的依赖 job 为 false，那样
+    # `skip_translate` 分支永远进不来。
+    # 层4：正常路径在 pending == '0' 之外还要求 release gate = pass；
+    # skip_translate / publish_on_llm_error 两条既有放行分支的语义保持不变。
+    if: ${{ !cancelled() && needs.translate.result != 'failure' && (needs.translate.result == 'skipped' || (needs.translate.outputs.llm_error != '' && inputs.publish_on_llm_error == true) || (needs.translate.outputs.pending == '0' && needs.translate.outputs.release == 'pass')) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      # 取分支最新提交：翻译 job 可能刚 push 了新的一批覆盖层。
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      # 构建前的硬断言：内容根一个都不能少。少了 `versioned_docs/` 就没有归档
+      # 版本，少了 `hardware/` 就少一整个板块——这些页面不会报错，只会消失。
+      # 内容根由总管仓的 `publish-content` 推送，所以缺失只有一个含义：publish
+      # 没跑或失败了。`static/` 不在名单里：资源来自 `ASSET_ORIGIN`。
+      - name: Verify content roots
+        run: |
+          set -euo pipefail
+          content_roots=(docs versioned_docs hardware blog changelog data versioned_sidebars)
+          content_files=(locales.json sidebars.ts sidebars-hardware.ts versions.json)
+          missing=0
+          for root in "${content_roots[@]}"; do
+            if git check-ignore -q "$root/"; then
+              echo "::error title=$root/ 被本仓 .gitignore 忽略::请删除对应的 .gitignore 规则；总管仓的 publish 也会因此失败。"
+              missing=1
+            fi
+          done
+          for file in "${content_files[@]}"; do
+            if git check-ignore -q "$file"; then
+              echo "::error title=$file 被本仓 .gitignore 忽略::请删除对应的 .gitignore 规则；总管仓的 publish 也会因此失败。"
+              missing=1
+            fi
+          done
+          for root in docs locales.json versioned_docs hardware blog changelog data sidebars.ts sidebars-hardware.ts versioned_sidebars versions.json; do
+            if [ ! -e "$root" ]; then
+              echo "::error title=缺少 $root::缺少 $root；应由总管 publish 推送。"
+              missing=1
+            fi
+          done
+          test "$missing" -eq 0
+          test ! -e static || { echo "::error title=static/ 不该存在::语种仓的资源来自 ASSET_ORIGIN（英文站），static/ 会被构建忽略并推高体积。"; exit 1; }
+          echo "content roots present: docs locales.json versioned_docs hardware blog changelog data sidebars.ts sidebars-hardware.ts versioned_sidebars versions.json"
+      - name: Prepare npm cache directory
+        env:
+          NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
+        run: mkdir -p "$NPM_CONFIG_CACHE"
+      - uses: actions/setup-node@v4
+        env:
+          NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+        env:
+          NPM_CONFIG_CACHE: ${{ runner.temp }}/npm-cache
+      # 人工补丁：`config/known-translations.yml` 与
+      # `config/translation-patches/<locale>/**` 的 `replace` 只改覆盖层，不进 TM。
+      # 构建前应用一次，把结果提交回仓库；否则下一批 `derive` 会把补丁覆盖掉。
+      # 先 `--check` 打印会改多少处（只读），再写入。脚本非 0 退出时 job 直接失败
+      # （`set -e`），不会带着半套补丁构建。
+      - name: Apply reviewed translation patches
+        run: |
+          set -euo pipefail
+          node tools/translate/apply-known-translations.mjs --locale="$SITE_LOCALE" --check
+          node tools/translate/apply-known-translations.mjs --locale="$SITE_LOCALE"
+      # 补丁确实改了 `i18n/` 才提交；没有差异时只打印一行并不产生提交。`[skip ci]`
+      # 保证这次 push 不会再触发一轮流水线。
+      - name: Commit applied translation patches
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- i18n; then
+            echo "no translation patches to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A i18n
+          git commit -m "chore($SITE_LOCALE): apply translation patches [skip ci]"
+          # 远端可能在 checkout 之后被 hub content sync / 另一轮提交推进：先 fetch，
+          # 再把本地翻译提交 rebase 到 origin/<branch> 顶端，最后普通 push（不 force、
+          # 不覆盖他人提交）。幂等：没有新提交时 rebase/push 都是 no-op。
+          branch="${{ github.ref_name }}"
+          attempt=0
+          while :; do
+            attempt=$((attempt + 1))
+            git fetch origin "$branch"
+            if ! git rebase "origin/$branch"; then
+              conflicted="$(git diff --name-only --diff-filter=U | sort -u | tr '\n' ' ')"
+              git rebase --abort
+              # 显式冲突策略，不静默覆盖：rebase 中 "theirs" 是正在重放的本地翻译
+              # 提交，冲突块取翻译内容；未冲突的他人改动照常保留，并留 warning。
+              echo "::warning title=翻译提交 rebase 冲突::冲突文件：${conflicted:-未知}；显式策略：保留本地翻译内容，未冲突的远端改动保留。"
+              if ! git rebase -X theirs "origin/$branch"; then
+                echo "::error title=翻译提交 rebase 重试仍失败::冲突文件：${conflicted:-未知}；已 git rebase --abort，未 push，需人工处理。"
+                git rebase --abort || true
+                exit 1
+              fi
+            fi
+            if git push origin "HEAD:$branch"; then
+              echo "pushed to $branch (attempt $attempt)"
+              break
+            fi
+            if [ "$attempt" -ge 3 ]; then
+              echo "::error title=推送失败::连续 3 次 push 被拒；未 force push，需人工重跑。"
+              exit 1
+            fi
+            echo "::warning title=push 被拒::第 $attempt 次被拒（远端又有新提交），重新 fetch+rebase 后重试。"
+            sleep "$((attempt * 3))"
+          done
+
+      # 覆盖层的**结构校验**，发布前永远要跑：文件对齐、代码围栏、图片、front
+      # matter、MDX 任一项坏了都不发布。三条路径都依赖它 ——
+      #   - `skip_translate`：没有翻译 job 兜底；
+      #   - `publish_on_llm_error` 放行：覆盖层只译了一部分，可能正好停在一页中间；
+      #   - 正常 `pending == 0`：`--apply` 落盘时已校验过本批，这里是额外的兜底
+      #     （约 50 秒，换「半翻译的站不会被发布」）。
+      - name: Verify translation overlays
+        run: npm run translate:verify
+      # 放行发布时把「有英文内容」写在 build 的 summary 里：部署页面上看到的
+      # 英文不再是意外。
+      - name: Note the untranslated content being published
+        if: ${{ needs.translate.outputs.llm_error != '' }}
+        run: |
+          pending="${{ needs.translate.outputs.pending }}"
+          {
+            echo "### ⚠️ 本次为放行发布：仍有英文内容"
+            echo ""
+            echo "| 项目 | 值 |"
+            echo "| --- | --- |"
+            echo "| \`llm_error\` | \`${{ needs.translate.outputs.llm_error }}\` |"
+            echo "| \`pending\` | \`${pending:-未知}\` |"
+            echo ""
+            echo "翻译因 LLM 额度/鉴权/限流失败而提前停止，本次用**已提交的覆盖层**发布；"
+            echo "构建已通过 \`translate:verify\` 与全部部署门禁，但**未译内容以英文上线**。"
+            echo "额度恢复后重跑一次翻译并重新部署即可补齐。"
+            echo ""
+          } >> "$GITHUB_STEP_SUMMARY"
+          echo "::warning title=放行发布（部分内容仍为英文）::llm_error=${{ needs.translate.outputs.llm_error }}，未译内容以英文上线。"
+      # 单语种构建：i18n/{{LOCALE}} 覆盖层 + 已提交的内容 → Docusaurus
+      # （--locale {{LOCALE}}）→ Pagefind → llms.txt。
+      - name: Build site
+        run: npm run build
+      # `verify:deploy`：slim（外部资源模式下只统计并报告）→ asset-refs（外链
+      # 计数、不查本地存在性）→ base-url-refs → orphan-assets（无 static 时跳过）
+      # → llms-links。
+      - name: Slim and verify deploy shape
+        run: npm run verify:deploy
+      # 层4 / 层2：构建完成后的最终统一判定。此时 verify:deploy 已有真实结果，
+      # release-gate 自跑四项检查（pending / translate:verify / verify:deploy /
+      # checkpoint），任一失败即 build 失败 → deploy 不运行，线上保持旧版。
+      - name: Final release gate
+        id: final_release_gate
+        if: ${{ !(needs.translate.outputs.llm_error != '' && inputs.publish_on_llm_error == true) }}
+        run: |
+          set -euo pipefail
+          node tools/ci/release-gate.mjs --json | tee "$RUNNER_TEMP/final-release-gate.json"
+          release=$(node -p "JSON.parse(require('fs').readFileSync(process.argv[1],'utf8')).release" "$RUNNER_TEMP/final-release-gate.json")
+          test "$release" = pass
+          echo "- release gate (final): \`$release\`" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+      - name: Report artifact size
+        run: du -sh build && find build -type f | wc -l
+
+  # ---------------------------------------------------------------------------
+  # 3) 部署（仅构建成功）
+  # ---------------------------------------------------------------------------
+  deploy:
+    needs: build
+    # 只认 build 的成功结果：构建失败、`pending > 0` 导致 build 被跳过、LLM 失败
+    # 又没放行、或 translate 被 skip_translate 跳过时，都不部署，线上保持上一个
+    # 成功版本。
+    # 用 `needs.build.result` 而不是 `success()`：依赖链里出现被跳过的 job 时，
+    # 显式比较结果最不容易误解。
+    if: ${{ !cancelled() && needs.build.result == 'success' }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

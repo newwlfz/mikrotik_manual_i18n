@@ -1,0 +1,69 @@
+# Blocks that stay in English on purpose.
+#
+# Most are console transcripts and command output: translating them would make
+# the manual *less* faithful, because a reader typing the command back needs the
+# exact bytes the device printed.
+#
+# `translate verify` counts them as `intentionalEnglish` instead of
+# `untranslatedBlocks`.
+prefixes:
+  - 'Press Ctrl+E to enter etherboot mode'
+  - 'Do you really want to format your storage device?'
+  - 'Board type:'
+  - 'Exit bios configuration menu and continues with system startup.'
+  - 'Please press "Enter" to continue!'
+  - 'Session is locked'
+  - 'Flags: X - disabled; R - running'
+  - 'VLAN  Mac Address'
+  - 'Vlan    Mac Address'
+  - 'L2TP Tunnel and Session Information'
+  # This sentence sits inside a code fence on both sites: the official Markdown
+  # export closes the fence early when a block contains a blank line, so the
+  # prose is swallowed and cannot be translated without changing the structure.
+  # Reported upstream (reports/upstream-issues.md).
+  - 'We will configure PPP secret for a particular user, and afterwards simply enable'
+  - 'Configure a PPP secret for a particular user, then enable the SSTP server:'
+  # Official multilingual regulatory notices shipped by the manufacturer inside
+  # otherwise-English hardware pages (ISED/IC radio-exposure and EEA update
+  # notices in French, Russian and Ukrainian). They are not untranslated English
+  # prose: the English paragraph right above them is translated, and these are
+  # the verbatim local-language versions of that same notice. Both the planner
+  # (`keepEnglishBlock`) and `translate verify` read this same prefix list, so
+  # they skip them consistently. Prefixes are deliberately sentence-specific:
+  # a genuine English paragraph that has not been translated is still queued.
+  - "Cet équipement est conforme aux limites d'exposition au rayonnement IC"
+  - "Cet équipement est conforme aux limites d'exposition aux rayonnements IC"
+  - "Cet equipement est conforme aux limites d'exposition au rayonnement IC"
+  - "L'émetteur/récepteur exempt de licence contenu dans le présent appareil"
+  - 'L’émetteur/récepteur exempt de licence contenu dans le présent appareil'
+  - 'Cet appareil numérique de la classe'
+  - 'Это устройство должно быть обновлено'
+  - 'Это устройство необходимо обновить'
+  - 'Это устройство MikroTik соответствует максимальным пределам'
+  - 'Данное устройство допускает ввод адаптера питания'
+  - 'Цей пристрій потрібно оновити'
+  - 'Цей пристрій відповідає вимогам Технічного регламенту'
+  - 'Цей пристрій приймає вхід'
+  # Mexican ISED/NOM regulatory section: the official heading itself is a
+  # local-language label shipped by the manufacturer. Treating it as an
+  # untranslated English unit made the two remaining hardware pages pending
+  # (TM held both an identity and a Chinese entry for it, so which one won
+  # depended on shard order). The body paragraphs are translated normally.
+  - '## Norma Oficial Mexicana'
+  - '### Norma Oficial Mexicana'
+  # Product-model lists under "This article covers" are identifiers (model
+  # names plus RB/CRS part numbers), not prose. The captured overlays write
+  # their parentheses full-width while the English source uses ASCII brackets;
+  # after `normalize()` folds the two spellings, `verify` sees these admonitions
+  # as byte-equal English and would report them as untranslated. They are data,
+  # so both the planner and verify skip them by their exact container prefix.
+  - ':::info[本文涵盖]'
+  - ':::info[本文介绍]'
+  # The same product list is reported by `translate verify` as its first
+  # English line (the container prefix is not part of that text).
+  - '- **wAP ac**（RBwAPG-5HacD2HnD）'
+  # Video titles are proper nouns; only the surrounding prose is translated.
+  - '- [Mass-config MikroTik with flashfig]'
+  # Acronym pair kept verbatim as a heading; no Chinese wording exists for it.
+  - '## CGNAT（NAT444）'
+  - 'CGNAT（NAT444）'

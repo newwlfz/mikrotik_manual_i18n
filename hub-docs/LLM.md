@@ -1,0 +1,151 @@
+# LLM configuration (translation)
+
+> **Status — the translation toolchain moved to the locale repositories.** The
+> hub (`repo_en`) publishes English only and carries no LLM client:
+> `translate:*` and `verify:llm` were removed from `package.json`, and
+> `tools/translate/` here keeps only the shared Markdown libraries its own
+> `sync/`, `verify/` and `build/` tools import. The provider that reads the
+> variables below runs in the locale repositories (`repo_zh_hans`,
+> `repo_zh_hant`), whose canonical toolchain is
+> `templates/locale-repo/tools/`. This file is kept as the historical
+> configuration reference: run every command below in the locale repository
+> (`npm run verify:llm` there), never in the hub.
+
+A locale repository's `tools/translate/` sends the blocks that are still English
+to an OpenAI-compatible chat-completions endpoint. The endpoint, model and key are
+connection settings, not repository content: they are never committed and
+`config/translation.yml` no longer stores them.
+
+## Variables
+
+| Name | Required | Default | Meaning |
+| --- | --- | --- | --- |
+| `LLM_BASE_URL` | yes | — | OpenAI-compatible API base URL, for example `https://opencode.ai/inference/go/v1`. A URL ending in `/v1` gets `/chat/completions` appended; a full `/chat/completions` URL is used as-is. A trailing slash is ignored; query strings and fragments are rejected. |
+| `LLM_MODEL` | yes | — | Exact model id, for example `deepseek-v4.1-flash`. |
+| `LLM_API_KEY` | yes | — | The provider key. This is the only accepted key variable. |
+| `LLM_TIMEOUT_MS` | no | `120000` | Per-request timeout in milliseconds. |
+| `LLM_MAX_RETRIES` | no | `3` | Retries after a retryable failure (`408`, `429`, `5xx`, timeout, network error). Set `0` to disable. |
+| `LLM_EXTRA_HEADERS` | no | — | JSON object of additional request headers, for example `{"X-Org":"team"}`. It must not set `Authorization`. |
+| `LLM_SESSION_ID` | no | per-process UUID | Value of `x-opencode-session` on the Go channel. Only read when the header is not set through `LLM_EXTRA_HEADERS`. |
+
+`LLM_API_KEY` is shown only as its first and last four characters
+(`oc_s…DKIc`) in every tool output and log line.
+
+`OPENCODE_API_KEY` is **deprecated (rename it)**: rename it to
+`LLM_API_KEY`. The tools warn when the old name is still present.
+
+## Channels: Go and zen
+
+OpenCode serves the same models through two endpoints with different rules:
+
+| Channel | `LLM_BASE_URL` | Requirement |
+| --- | --- | --- |
+| **Go** | `https://opencode.ai/inference/go/v1` | Every request must carry `x-opencode-session`; without it the endpoint answers `400 MissingSessionID`. |
+| **zen** | `https://opencode.ai/zen/v1` | Pay-as-you-go: no session header, but a zero account balance answers `402 payment_required`. |
+
+The provider adds the session header automatically whenever the base URL path
+contains `/inference/go`:
+
+1. an explicit `x-opencode-session` in `LLM_EXTRA_HEADERS` wins, whatever the
+   channel;
+2. otherwise `LLM_SESSION_ID` is used;
+3. otherwise one random UUID is generated for the process and reused by every
+   request (a batch shares one session).
+
+Endpoints that are not the Go channel (`zen`, a plain provider URL) get no such
+header. The locale repository's `verify:llm` prints the decision as
+`session header : auto` (or the configured value, or `(not needed)`), so a
+`400 MissingSessionID` can be told apart from a wrong key.
+
+## Where the values come from
+
+Resolution order, first non-empty value wins:
+
+1. `process.env` (this is how CI supplies the values);
+2. `<repository>/.env.local`;
+3. `<workspace>/.env.local`, the repository's parent directory.
+
+A value already present in `process.env` is never overwritten by a file. The
+parser supports `KEY=VALUE`, `export KEY=VALUE`, `#` comment lines, single- and
+double-quoted values, and trailing whitespace.
+
+## GitHub Actions
+
+Configure the values in the repository that runs the translation
+(`mikrotik_manual_zh_hans`):
+
+1. **Settings → Secrets and variables → Actions**;
+2. **Variables** tab (not secret, visible in logs):
+   - `LLM_BASE_URL`
+   - `LLM_MODEL`
+   - optional: `LLM_TIMEOUT_MS`, `LLM_MAX_RETRIES`, `LLM_EXTRA_HEADERS`,
+     `LLM_SESSION_ID`
+3. **Secrets** tab (masked):
+   - `LLM_API_KEY`
+
+The translation workflow must map them into the job environment, for example:
+
+```yaml
+env:
+  LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+  LLM_MODEL: ${{ vars.LLM_MODEL }}
+  LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+  LLM_TIMEOUT_MS: ${{ vars.LLM_TIMEOUT_MS }}
+  LLM_MAX_RETRIES: ${{ vars.LLM_MAX_RETRIES }}
+```
+
+If a variable is empty, the tool does not fall back to a default endpoint or
+model: the locale repository's `verify:llm --dry-run` and the translation run
+fail with the missing name.
+
+## Local use
+
+```bash
+# run inside a locale repository (repo_zh_hans / repo_zh_hant); the hub has no
+# tools/translate/verify-llm.mjs
+cp .env.local.example .env.local
+# fill in LLM_BASE_URL, LLM_MODEL and LLM_API_KEY
+node tools/translate/verify-llm.mjs --dry-run
+node tools/translate/verify-llm.mjs
+```
+
+`.env.local` is ignored by git in both repositories. Placing it at the
+repository root and at the workspace root both work; the repository root wins
+and `process.env` wins over both.
+
+## Checking the connection
+
+In a locale repository, `npm run verify:llm -- --dry-run` validates the
+variables, the URL shape and the numeric limits, prints the configuration with
+the key masked, and exits `0` (or `1` with the missing names and the files it
+searched). The hub has no such script.
+
+The same command sends one minimal request (`把 hello 翻译成中文`,
+`max_tokens: 256`), prints the masked base URL, the model, the session-header
+decision, the HTTP status, the elapsed time and the returned text. The answer
+must contain Chinese text such as `你好`.
+
+`max_tokens: 256` (not 32) is deliberate: a reasoning model streams its
+reasoning tokens before the answer, and at 32 the whole budget was spent on
+reasoning, leaving `content` empty. When that happens the tool says so, prints
+the first 120 characters of `reasoning_content`, and exits `1` instead of
+reporting a generic "no content".
+
+| Result | Meaning and fix |
+| --- | --- |
+| `200` + Chinese text | The connection works. |
+| `400` `MissingSessionID` | The Go channel got no `x-opencode-session`. The tools add it when `LLM_BASE_URL` contains `/inference/go`; check that the URL is the Go one, or set `LLM_SESSION_ID`. |
+| `401` | `LLM_API_KEY` is invalid or revoked. Update the key. |
+| `402` | The key is valid but the account has no balance (`zen` is pay-as-you-go). Top up, or use the Go channel. |
+| `404` | Wrong endpoint or model: check `LLM_BASE_URL` (usually ending in `/v1`) and the exact `LLM_MODEL` id. |
+| `429` | Rate limited: wait, use smaller batches, or raise `LLM_MAX_RETRIES`. |
+| timeout | Raise `LLM_TIMEOUT_MS` or check network access to the provider. |
+| empty `content` + non-empty `reasoning_content` | Reasoning consumed the output budget: raise `max_tokens` or use a non-reasoning model. |
+| missing variable | Set the name listed by the error in the environment, `<repo>/.env.local` or `<workspace>/.env.local`. |
+
+## Repositories that need no LLM configuration
+
+Only a repository that runs the translation toolchain needs `LLM_*`: that is
+each locale repository, not the hub. The hub/content repository and the English
+site build do not call the LLM, so they need no variables or secrets; keep the
+key in the locale repositories only.

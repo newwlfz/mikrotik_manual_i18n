@@ -1,0 +1,38 @@
+# Correction layer policy.
+#
+# This file is the switchboard for deterministic transforms. Per-page exceptions
+# live in corrections/pages/<section>/<path>.yml and are applied by
+# tools/sync/materialize.mjs. Nothing here overwrites upstream/.
+schema: 1
+
+links:
+  official_host: manual.mikrotik.com
+  current_version: "7.25"
+  # A versioned path inside a current page is rewritten to the current route.
+  # A versioned page keeps its own prefix.
+  versioned_prefixes:
+    "7.24": /docs/7.24
+  # Keep a local path and report the target when no route matches. Never point
+  # back at the official origin.
+  unresolved: keep-local
+
+structure:
+  restore_table_cells: true
+  # Add <WideTable> only when the official rendered page wraps the table in
+  # .wideTableInline. Do not invent a toolbar where the official page has none.
+  add_wide_table_only_when_official: true
+  audit_body: true
+  self_close_void_tags: true
+  escape_mdx_in_tables: true
+
+corrections:
+  require_source_sha256: true
+  require_translation_impact: true
+  note:
+    style: inline
+    marker: "†"
+    # The note text is data, not page HTML, so the translation pipeline can
+    # localise it in P3.
+    locales:
+      en: en
+      zh-Hans: zh-Hans

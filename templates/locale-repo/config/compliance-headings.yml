@@ -1,0 +1,67 @@
+# Certification-mark sections on the Hardware Guides.
+#
+# Some Hardware pages end in a block of compliance notices; each notice is an
+# `## <heading>` followed by the certification mark (FCC, UKCA, EAC, CE). The
+# upstream Markdown mixes two spellings for the picture - `![](...)` and
+# `<p><Img width={1600} height={1598} /></p>` - so the same three badges render
+# at wildly different sizes and are left-aligned. `src/remark/normalize-compliance-marks.mjs`
+# reads this file to decide *which* sections are compliance sections, then gives
+# every standalone picture in them `.complianceMark` (see `src/css/custom.css`
+# for the centred 160 px rule).
+#
+# The heading wording is data, not a regex in the script, because the mark must
+# also be recognised on the translated pages: a hard-coded English `/UKCA
+# marking/` never matched `## UKCA 標誌`, so the Chinese hardware tree rendered
+# every badge at its intrinsic size while the English tree did not.
+#
+# `headings` are regular expressions matched case-insensitively against the
+# heading's text (`UKCA 標誌 {#ukca-marking}` is matched on `UKCA 標誌`, the
+# generated id is not part of the text). Keep one wording per line: a new
+# spelling is a policy change here, not an edit in the plugin.
+schema: 1
+
+headings:
+  # --- English -------------------------------------------------------------
+  - 'UKCA\s*marking'
+  - 'Eurasian Conformity Mark'
+  - 'Federal Communication Commission'
+  # The FCC notice is also titled `FCC statement` on a few pages.
+  - '\bFCC\b'
+
+  # --- CE Declaration of Conformity ----------------------------------------
+  # Full English form, the short `CE Declaration` form, and the zh-Hant /
+  # zh-Hans `CE 符合性聲明/声明` forms (kept in sync with the hub config).
+  - 'CE\s+(?:EC\s+)?[Dd]eclaration\s+of\s+[Cc]onformity'
+  - 'CE\s*[Dd]eclaration'
+  - 'CE\s*符合性(?:聲明|声明)'
+
+  # --- zh-Hant -------------------------------------------------------------
+  # 標誌（標準）、標記／標章（部分頁面沿用的另一種寫法）。
+  - 'UKCA\s*(?:標誌|標記|標章)'
+  # 歐亞經濟聯盟符合性標誌, and the shorter 歐亞符合性標誌 on two pages.
+  - '(?:歐亞)(?:經濟聯盟)?符合性(?:標誌|標記)'
+  - '聯邦通訊委員會'
+  - '聯邦通信委員會'
+
+  # --- zh-Hans -------------------------------------------------------------
+  - 'UKCA\s*(?:标志|标识|標誌|標記)'
+  # 欧亚经济联盟符合性标志 and the shorter 欧亚符合性标志 the pipeline settled on.
+  - '(?:欧亚)(?:经济联盟)?符合性(?:标志|标识)'
+  - '联邦通讯委员会'
+  - '联邦通信委员会'
+
+  # --- Russian (the EAC notice is partly Cyrillic on some pages) -----------
+  - 'Евразийск'
+
+# How a compliance section is recognised when its heading is not listed above.
+#
+# The structural form of a mark is "level-2 heading whose next block is a
+# standalone picture", but that shape is not unique: `## Mounting` followed by a
+# product photo looks the same. The fallback therefore only applies *inside* the
+# certification tail: after the page has opened one compliance section, a further
+# `## heading` + picture is treated as another mark. `require_matched_heading`
+# keeps a page whose certification wording nobody listed untouched, so nothing
+# that renders today at full size is resized by accident.
+structure:
+  level: 2
+  require_matched_heading: true
