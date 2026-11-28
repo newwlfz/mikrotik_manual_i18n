@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/wireguard/wg-export.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireguard/wg-export.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/wireguard/wg-export",
+  "md_sha256": "570e8c4efe876cc71a2f1af9741dbdebb1d8222f51366b02197f2ee41e644082",
+  "html_sha256": "21718e10c5988b2ae3204ab8ed1e418a10024657a92cff733fa7a530a34012c7",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

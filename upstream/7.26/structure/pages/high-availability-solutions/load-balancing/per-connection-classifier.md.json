@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "high-availability-solutions/load-balancing/per-connection-classifier.md",
+  "source_url": "https://manual.mikrotik.com/docs/high-availability-solutions/load-balancing/per-connection-classifier.md",
+  "html_url": "https://manual.mikrotik.com/docs/high-availability-solutions/load-balancing/per-connection-classifier",
+  "md_sha256": "e68802217d3d5e19e99cabfae0a6376d9547a72cb41c7b820bfe6fc36a5fabf4",
+  "html_sha256": "c3737e3003e33e32d39bd84205563f1fa13f16d1d113b40736e3af771810d713",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 58,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 18,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 18,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

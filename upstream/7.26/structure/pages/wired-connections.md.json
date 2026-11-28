@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "wired-connections.md",
+  "source_url": "https://manual.mikrotik.com/docs/wired-connections.md",
+  "html_url": "https://manual.mikrotik.com/docs/wired-connections",
+  "md_sha256": "d05a9175141067ef1df20816f189ad4050d3be255649eb3027836e622268694a",
+  "html_sha256": "9ce8ee7eb522a22430fa0c95099fcc77ade6bc8d604bf3a3b87f780e3ca35bc6",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

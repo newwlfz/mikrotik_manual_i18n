@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "firewall-and-quality-of-service/user-guides/connection-rate.md",
+  "source_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/user-guides/connection-rate.md",
+  "html_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/user-guides/connection-rate",
+  "md_sha256": "808b5f3dca43671237277833641f2660f80502c1cdba9dad68ad2ebb68fff709",
+  "html_sha256": "12ea62b0de209a198646b7b8e441e143a4fccc9b842e30930ab106993096e5ea",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 43,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

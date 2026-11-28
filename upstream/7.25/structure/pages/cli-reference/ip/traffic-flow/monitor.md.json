@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/traffic-flow/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/traffic-flow/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/traffic-flow/monitor",
+  "md_sha256": "6ded7d8cadec9213b15ed9148fbb90c264e3c36ac16bcd8b93b38f482dd9a307",
+  "html_sha256": "4bc33e0a6755833df02a18ee6e1e816c3e4f1b64a4a652d1442bab16c8564c01",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/package/downgrade.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/package/downgrade.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/package/downgrade",
+  "md_sha256": "04e4331fe269b7ac4f728dfa84c3f1fd4723e426afe7f9ab0d42bd0713e2bc37",
+  "html_sha256": "ed4383aa4488c87aabee48b1cfd3fd22c3d7f296d41f13c75b432c3f1d18bedb",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

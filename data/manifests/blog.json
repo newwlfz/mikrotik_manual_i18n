@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "generated_at": "2026-11-28T10:15:43.507Z",
+  "base_url": "https://manual.mikrotik.com",
+  "index_url": "https://manual.mikrotik.com/blog/",
+  "concurrency": 4,
+  "pages": [
+    {
+      "slug": "news135",
+      "title": "Newsletter September 2026",
+      "date": "2026-09-30T00:00:00.000Z",
+      "local_path": "blog/news135.md",
+      "source_url": "https://manual.mikrotik.com/blog/news135",
+      "sha256": "bd2e27eee949bdbcab496acf88d807190561397155a28c7ce1b8effd9517f173",
+      "body_sha256": "f07cfdb21814b81833dafc08433084f6611f53bd08e25dcc4bdbba69bffa5bcf",
+      "bytes": 715
+    },
+    {
+      "slug": "news134",
+      "title": "Newsletter July 2026",
+      "date": "2026-07-09T00:00:00.000Z",
+      "local_path": "blog/news134.md",
+      "source_url": "https://manual.mikrotik.com/blog/news134",
+      "sha256": "d252d1988bb2f753861776b47941e090f16294096de0d1da99ed0f2648dc678c",
+      "body_sha256": "723803ab607a69afadd858ebbd2c50a2bb46a28ef04b51b85aa69f42a25d0866",
+      "bytes": 543
+    },
+    {
+      "slug": "news133",
+      "title": "Newsletter June 2026",
+      "date": "2026-06-12T00:00:00.000Z",
+      "local_path": "blog/news133.md",
+      "source_url": "https://manual.mikrotik.com/blog/news133",
+      "sha256": "a889ca0de9389c72b5e464d190f3838ad31810e5557c7a0792869c8452ed01f2",
+      "body_sha256": "dc4a16c4f2bc8ca93bec2e5efacc6714832490653a667ec84dc96b79bf1ff882",
+      "bytes": 751
+    },
+    {
+      "slug": "news132",
+      "title": "Newsletter April 2026",
+      "date": "2026-04-22T00:00:00.000Z",
+      "local_path": "blog/news132.md",
+      "source_url": "https://manual.mikrotik.com/blog/news132",
+      "sha256": "4ceb970eaed13d98dbf8c6a64d444ba2b87f8ac133c4926a4b6d8264b705506b",
+      "body_sha256": "9769db82297bd4e8218e985e98238a178e0baa514ed674a74b0193e26554b207",
+      "bytes": 826
+    },
+    {
+      "slug": "news131",
+      "title": "Newsletter January 2026",
+      "date": "2026-01-13T00:00:00.000Z",
+      "local_path": "blog/news131.md",
+      "source_url": "https://manual.mikrotik.com/blog/news131",
+      "sha256": "a022740ea2ce6d5c7527d0363ccf979de732038dc5798ae559114ff801b96165",
+      "body_sha256": "a71d48755ddee6fbc57f1134e611e5c404844e95173babe294b22acf9c6166c3",
+      "bytes": 734
+    },
+    {
+      "slug": "news130",
+      "title": "Newsletter December 2025",
+      "date": "2025-12-04T00:00:00.000Z",
+      "local_path": "blog/news130.md",
+      "source_url": "https://manual.mikrotik.com/blog/news130",
+      "sha256": "5fbed12dbbf77f32bfed885a92c600cd6a269b4544e8ef84aaba938dd238f65a",
+      "body_sha256": "23eb50afe79320909e7a9601229109af937a712b18fa8aba454949ca73dec82f",
+      "bytes": 647
+    }
+  ]
+}

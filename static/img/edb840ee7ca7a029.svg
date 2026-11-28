@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 420" width="1060" height="420" font-family="Helvetica, Arial, sans-serif">
+<title>burst-time=16s: two 4 MB downloads, at 0 s and at 17 s</title>
+<rect width="1060" height="420" fill="#ffffff"/>
+<text x="470" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#555">burst-time=16s: two 4 MB downloads, at 0 s and at 17 s</text>
+<line x1="60" y1="360.0" x2="880" y2="360.0" stroke="#ddd"/><text x="50" y="365.0" text-anchor="end" font-size="14" fill="#555">0</text>
+<line x1="60" y1="298.0" x2="880" y2="298.0" stroke="#ddd"/><text x="50" y="303.0" text-anchor="end" font-size="14" fill="#555">1</text>
+<line x1="60" y1="236.0" x2="880" y2="236.0" stroke="#ddd"/><text x="50" y="241.0" text-anchor="end" font-size="14" fill="#555">2</text>
+<line x1="60" y1="174.0" x2="880" y2="174.0" stroke="#ddd"/><text x="50" y="179.0" text-anchor="end" font-size="14" fill="#555">3</text>
+<line x1="60" y1="112.0" x2="880" y2="112.0" stroke="#ddd"/><text x="50" y="117.0" text-anchor="end" font-size="14" fill="#555">4</text>
+<line x1="60" y1="50.0" x2="880" y2="50.0" stroke="#ddd"/><text x="50" y="55.0" text-anchor="end" font-size="14" fill="#555">5</text>
+<text x="60.0" y="382" text-anchor="middle" font-size="14" fill="#555">0</text>
+<text x="111.25" y="382" text-anchor="middle" font-size="14" fill="#555">2</text>
+<text x="162.5" y="382" text-anchor="middle" font-size="14" fill="#555">4</text>
+<text x="213.75" y="382" text-anchor="middle" font-size="14" fill="#555">6</text>
+<text x="265.0" y="382" text-anchor="middle" font-size="14" fill="#555">8</text>
+<text x="316.25" y="382" text-anchor="middle" font-size="14" fill="#555">10</text>
+<text x="367.5" y="382" text-anchor="middle" font-size="14" fill="#555">12</text>
+<text x="418.75" y="382" text-anchor="middle" font-size="14" fill="#555">14</text>
+<text x="470.0" y="382" text-anchor="middle" font-size="14" fill="#555">16</text>
+<text x="521.25" y="382" text-anchor="middle" font-size="14" fill="#555">18</text>
+<text x="572.5" y="382" text-anchor="middle" font-size="14" fill="#555">20</text>
+<text x="623.75" y="382" text-anchor="middle" font-size="14" fill="#555">22</text>
+<text x="675.0" y="382" text-anchor="middle" font-size="14" fill="#555">24</text>
+<text x="726.25" y="382" text-anchor="middle" font-size="14" fill="#555">26</text>
+<text x="777.5" y="382" text-anchor="middle" font-size="14" fill="#555">28</text>
+<text x="828.75" y="382" text-anchor="middle" font-size="14" fill="#555">30</text>
+<text x="880.0" y="382" text-anchor="middle" font-size="14" fill="#555">32</text>
+<text x="470.0" y="408" text-anchor="middle" font-size="14" fill="#555">Time (s)</text>
+<text x="18" y="205.0" text-anchor="middle" font-size="14" fill="#555" transform="rotate(-90 18 205.0)">Mbit/s</text>
+<line x1="60" y1="112.0" x2="880" y2="112.0" stroke="#d9363e" stroke-width="2" stroke-dasharray="none"/><text x="888" y="117.0" font-size="13" fill="#d9363e">burst-limit 4M</text>
+<line x1="60" y1="236.0" x2="880" y2="236.0" stroke="#2a6fdb" stroke-width="2" stroke-dasharray="none"/><text x="888" y="241.0" font-size="13" fill="#2a6fdb">max-limit 2M</text>
+<line x1="60" y1="267.0" x2="880" y2="267.0" stroke="#1a9e4b" stroke-width="2" stroke-dasharray="6 4"/><text x="888" y="272.0" font-size="13" fill="#1a9e4b">burst-threshold 1500k</text>
+<line x1="60" y1="298.0" x2="880" y2="298.0" stroke="#999" stroke-width="2" stroke-dasharray="6 4"/><text x="888" y="303.0" font-size="13" fill="#999">limit-at 1M</text>
+<polyline fill="none" stroke="#222" stroke-width="3" points="60.0,112.0 85.6,112.0 85.6,112.0 111.2,112.0 111.2,112.0 136.9,112.0 136.9,112.0 162.5,112.0 162.5,112.0 188.1,112.0 188.1,112.0 213.8,112.0 213.8,236.0 239.4,236.0 239.4,236.0 265.0,236.0 265.0,236.0 290.6,236.0 290.6,236.0 316.2,236.0 316.2,360.0 341.9,360.0 341.9,360.0 367.5,360.0 367.5,360.0 393.1,360.0 393.1,360.0 418.8,360.0 418.8,360.0 444.4,360.0 444.4,360.0 470.0,360.0 470.0,360.0 495.6,360.0 495.6,236.0 521.2,236.0 521.2,236.0 546.9,236.0 546.9,112.0 572.5,112.0 572.5,112.0 598.1,112.0 598.1,112.0 623.8,112.0 623.8,112.0 649.4,112.0 649.4,236.0 675.0,236.0 675.0,236.0 700.6,236.0 700.6,236.0 726.2,236.0 726.2,236.0 751.9,236.0 751.9,236.0 777.5,236.0 777.5,236.0 803.1,236.0 803.1,360.0 828.8,360.0 828.8,360.0 854.4,360.0 854.4,360.0 880.0,360.0"/>
+<polyline fill="none" stroke="#f39c12" stroke-width="3" points="60.0,360.0 85.6,344.5 111.2,329.0 136.9,313.5 162.5,298.0 188.1,282.5 213.8,267.0 239.4,259.2 265.0,251.5 290.6,243.8 316.2,236.0 341.9,236.0 367.5,236.0 393.1,236.0 418.8,236.0 444.4,236.0 470.0,236.0 495.6,251.5 521.2,267.0 546.9,274.8 572.5,274.8 598.1,274.8 623.8,274.8 649.4,267.0 675.0,267.0 700.6,267.0 726.2,267.0 751.9,259.2 777.5,251.5 803.1,243.8 828.8,243.8 854.4,243.8"/>
+<line x1="70" y1="402" x2="100" y2="402" stroke="#222" stroke-width="3"/><text x="108" y="407" font-size="14" fill="#333">actual rate</text>
+<line x1="220" y1="402" x2="250" y2="402" stroke="#f39c12" stroke-width="3"/><text x="258" y="407" font-size="14" fill="#333">average rate</text>
+</svg>

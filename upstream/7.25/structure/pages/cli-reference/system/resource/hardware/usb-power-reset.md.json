@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/resource/hardware/usb-power-reset.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/resource/hardware/usb-power-reset.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/resource/hardware/usb-power-reset",
+  "md_sha256": "a6825b1a58bfc2ae57a39c08e04bbbc89aaf47bf12c2e724be0ffc97378244b7",
+  "html_sha256": "1516361b339d5af76b1eb1ee48fceebf77e359560a16f6ca6e39ca878be99d6a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

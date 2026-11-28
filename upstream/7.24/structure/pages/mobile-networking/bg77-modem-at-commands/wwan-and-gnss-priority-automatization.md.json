@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "mobile-networking/bg77-modem-at-commands/wwan-and-gnss-priority-automatization.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/mobile-networking/bg77-modem-at-commands/wwan-and-gnss-priority-automatization.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/mobile-networking/bg77-modem-at-commands/wwan-and-gnss-priority-automatization",
+  "md_sha256": "cedc85ede7f9e58876c247ac521bfbb406f5c1d6e2491f661498b188dba19991",
+  "html_sha256": "2bea353acb98b62d1fc88faa7c0bf1bb3ddb4dfc6f2c37479fcd42d6be6ffd26",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

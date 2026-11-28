@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/swos.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/swos.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/swos",
+  "md_sha256": "a826d3d6b707bd194dd268b1dfaf88ea9f4311a162b035d3414d29598f0f3c25",
+  "html_sha256": "3d987230a0f56780aa8b17640e160fb8697d09140d425a339378c5debb25a040",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

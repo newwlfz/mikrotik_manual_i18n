@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "management-tools/ssh.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/management-tools/ssh.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/management-tools/ssh",
+  "md_sha256": "fc5bd669a9668b7269361fd581cac511940c5885a012b9e177c01ef001dd6539",
+  "html_sha256": "e752c60eaf38aff1a49da45c47eb94a080d861a1396dcd8f8fff2b3a5818f7a0",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 54,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

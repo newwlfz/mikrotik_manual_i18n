@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "virtual-private-networks/ipsec/road-warrior-ikev2-eap.md",
+  "source_url": "https://manual.mikrotik.com/docs/virtual-private-networks/ipsec/road-warrior-ikev2-eap.md",
+  "html_url": "https://manual.mikrotik.com/docs/virtual-private-networks/ipsec/road-warrior-ikev2-eap",
+  "md_sha256": "451735d25da6a3164e4ae8bd5f5ea68954587df71654da29dc0e8c4939f37de3",
+  "html_sha256": "c603f286e240d9436a2603e311dad2ee811a83bbecf588daeda389d46c2dbb28",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 15,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

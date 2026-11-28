@@ -855,6 +855,12 @@ const sidebars: SidebarsConfig = {
             },
             {
               "type": "doc",
+              "id": "wireless/wifi/configuring-enterprise-and-mac-authentication",
+              "label": "Enterprise Wi-Fi and MAC authentication with User Manager",
+              "key": "wireless/wifi/configuring-enterprise-and-mac-authentication"
+            },
+            {
+              "type": "doc",
               "id": "wireless/wifi/configuring-meshpoint",
               "label": "Configuring MeshPoint",
               "key": "wireless/wifi/configuring-meshpoint"
@@ -867,6 +873,12 @@ const sidebars: SidebarsConfig = {
             },
             {
               "type": "doc",
+              "id": "wireless/wifi/configuring-ppsk",
+              "label": "Per-device passphrases and VLANs on one SSID",
+              "key": "wireless/wifi/configuring-ppsk"
+            },
+            {
+              "type": "doc",
               "id": "wireless/wifi/configuring-repeater",
               "label": "Configuring a wireless repeater",
               "key": "wireless/wifi/configuring-repeater"
@@ -876,6 +888,12 @@ const sidebars: SidebarsConfig = {
               "id": "wireless/wifi/configuring-standalone-access-point",
               "label": "Configuring standalone access point",
               "key": "wireless/wifi/configuring-standalone-access-point"
+            },
+            {
+              "type": "doc",
+              "id": "wireless/wifi/configuring-steering",
+              "label": "Steering clients between access points",
+              "key": "wireless/wifi/configuring-steering"
             },
             {
               "type": "doc",
@@ -1187,7 +1205,7 @@ const sidebars: SidebarsConfig = {
         },
         {
           "type": "category",
-          "label": "SwOS",
+          "label": "Introduction to SwitchOS (SwOS)",
           "link": {
             "type": "doc",
             "id": "bridging-and-switching/swos"
@@ -1269,6 +1287,12 @@ const sidebars: SidebarsConfig = {
               "id": "bridging-and-switching/user-guides/loop-protect",
               "label": "Loop Protect",
               "key": "bridging-and-switching/user-guides/loop-protect"
+            },
+            {
+              "type": "doc",
+              "id": "bridging-and-switching/user-guides/nvidia-dgx-spark",
+              "label": "NVIDIA DGX Spark clusters",
+              "key": "bridging-and-switching/user-guides/nvidia-dgx-spark"
             },
             {
               "type": "doc",
@@ -1387,7 +1411,7 @@ const sidebars: SidebarsConfig = {
         {
           "type": "doc",
           "id": "network-management/openflow",
-          "label": "Openflow",
+          "label": "OpenFlow",
           "key": "network-management/openflow"
         },
         {
@@ -1955,6 +1979,42 @@ const sidebars: SidebarsConfig = {
           "items": [
             {
               "type": "doc",
+              "id": "virtual-private-networks/ipsec/site-to-site",
+              "label": "Site-to-site tunnel",
+              "key": "virtual-private-networks/ipsec/site-to-site"
+            },
+            {
+              "type": "doc",
+              "id": "virtual-private-networks/ipsec/road-warrior-ikev2-certificates",
+              "label": "Road warrior with certificates",
+              "key": "virtual-private-networks/ipsec/road-warrior-ikev2-certificates"
+            },
+            {
+              "type": "doc",
+              "id": "virtual-private-networks/ipsec/road-warrior-ikev2-eap",
+              "label": "Road warrior with EAP and User Manager",
+              "key": "virtual-private-networks/ipsec/road-warrior-ikev2-eap"
+            },
+            {
+              "type": "doc",
+              "id": "virtual-private-networks/ipsec/route-based-ipsec-xfrm",
+              "label": "Route-based IPsec with XFRM",
+              "key": "virtual-private-networks/ipsec/route-based-ipsec-xfrm"
+            },
+            {
+              "type": "doc",
+              "id": "virtual-private-networks/ipsec/firewall-and-routing",
+              "label": "Firewall and routing for IPsec",
+              "key": "virtual-private-networks/ipsec/firewall-and-routing"
+            },
+            {
+              "type": "doc",
+              "id": "virtual-private-networks/ipsec/troubleshooting",
+              "label": "Troubleshooting",
+              "key": "virtual-private-networks/ipsec/troubleshooting"
+            },
+            {
+              "type": "doc",
               "id": "virtual-private-networks/ipsec/ikev2-eap-between-nordvpn-and-routeros",
               "label": "IKEv2 EAP between NordVPN and RouterOS",
               "key": "virtual-private-networks/ipsec/ikev2-eap-between-nordvpn-and-routeros"
@@ -2031,6 +2091,12 @@ const sidebars: SidebarsConfig = {
           "id": "virtual-private-networks/wireguard",
           "label": "WireGuard",
           "key": "virtual-private-networks/wireguard"
+        },
+        {
+          "type": "doc",
+          "id": "virtual-private-networks/zerotier-controller",
+          "label": "Self-hosted ZeroTier controller on a hAP ax³",
+          "key": "virtual-private-networks/zerotier-controller"
         },
         {
           "type": "doc",
@@ -2464,7 +2530,7 @@ const sidebars: SidebarsConfig = {
             {
               "type": "doc",
               "id": "storage/raid/hot-spare",
-              "label": "Setting a hot spare disk",
+              "label": "Set a hot spare disk",
               "key": "storage/raid/hot-spare"
             },
             {
@@ -2559,7 +2625,7 @@ const sidebars: SidebarsConfig = {
             {
               "type": "doc",
               "id": "containers/user-guides/container-freeradius-server",
-              "label": "Container - freeradius server",
+              "label": "Container - FreeRADIUS server",
               "key": "containers/user-guides/container-freeradius-server"
             },
             {
@@ -6205,12 +6271,6 @@ const sidebars: SidebarsConfig = {
                   "key": "cli-reference/iot/lora/reset-devices"
                 },
                 {
-                  "type": "doc",
-                  "id": "cli-reference/iot/lora/send",
-                  "label": "send",
-                  "key": "cli-reference/iot/lora/send"
-                },
-                {
                   "type": "category",
                   "label": "servers",
                   "link": {
@@ -8526,9 +8586,20 @@ const sidebars: SidebarsConfig = {
                   "key": "cli-reference/routing/bgp/connection"
                 },
                 {
-                  "type": "doc",
-                  "id": "cli-reference/routing/bgp/evpn",
+                  "type": "category",
                   "label": "evpn",
+                  "link": {
+                    "type": "doc",
+                    "id": "cli-reference/routing/bgp/evpn"
+                  },
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "cli-reference/routing/bgp/evpn/esi",
+                      "label": "esi",
+                      "key": "cli-reference/routing/bgp/evpn/esi"
+                    }
+                  ],
                   "key": "cli-reference/routing/bgp/evpn"
                 },
                 {
@@ -9928,6 +9999,29 @@ const sidebars: SidebarsConfig = {
                 }
               ],
               "key": "cli-reference/system/swos"
+            },
+            {
+              "type": "category",
+              "label": "sync-e",
+              "link": {
+                "type": "doc",
+                "id": "cli-reference/system/sync-e"
+              },
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/sync-e/monitor",
+                  "label": "monitor",
+                  "key": "cli-reference/system/sync-e/monitor"
+                },
+                {
+                  "type": "doc",
+                  "id": "cli-reference/system/sync-e/port",
+                  "label": "port",
+                  "key": "cli-reference/system/sync-e/port"
+                }
+              ],
+              "key": "cli-reference/system/sync-e"
             },
             {
               "type": "doc",

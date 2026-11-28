@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "getting-started/manual-network-setup.md",
+  "source_url": "https://manual.mikrotik.com/docs/getting-started/manual-network-setup.md",
+  "html_url": "https://manual.mikrotik.com/docs/getting-started/manual-network-setup",
+  "md_sha256": "fb65da052af2516e7005243590dbde5c9a0b70e19b5e4a9a4d712c303405a3b7",
+  "html_sha256": "17deb3d45e000498b9f2eb435f9c7c3f9e90781fe31dc98a3b61476fd20c083a",
+  "body": {
+    "html": {
+      "lists": 9,
+      "listItems": 24,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 20,
+      "listItems": 20,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 20,
+      "listItems": 20,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "listItems": [
+        24,
+        20
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

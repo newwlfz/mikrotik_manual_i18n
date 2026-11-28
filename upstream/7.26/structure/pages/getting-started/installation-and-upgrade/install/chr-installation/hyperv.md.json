@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "getting-started/installation-and-upgrade/install/chr-installation/hyperv.md",
+  "source_url": "https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation/hyperv.md",
+  "html_url": "https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation/hyperv",
+  "md_sha256": "8856a6cfd910a02989de1ff0a0b3c82bc63e748e8aca7460d938bb3686589110",
+  "html_sha256": "642e16e2d91f65129f3e9398f817223d68347f2a9eab20bc7b5562133b39cf2d",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

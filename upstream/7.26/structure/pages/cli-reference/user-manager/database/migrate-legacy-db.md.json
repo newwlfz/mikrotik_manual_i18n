@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/user-manager/database/migrate-legacy-db.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/database/migrate-legacy-db.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/database/migrate-legacy-db",
+  "md_sha256": "854fc0d23b20e7d6f81ba2c3f20f879319aaa5fb3b0192dc06a5e3c2d09aab6e",
+  "html_sha256": "7e2bfc3bcc149648331bc835ea61f81103382f6d600c6c0c6b9e89182a1da477",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

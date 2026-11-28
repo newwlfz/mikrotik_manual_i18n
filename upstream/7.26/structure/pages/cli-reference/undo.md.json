@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/undo.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/undo.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/undo",
+  "md_sha256": "37acbc5924dc7d3dbb904eb77a19a226f164bf38daa2356a0c7cc20070d68f2b",
+  "html_sha256": "9ba78caabe49efff2e7d94f5a0cd5e1672e80f1e5b64e05aefc7bb205908ec33",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

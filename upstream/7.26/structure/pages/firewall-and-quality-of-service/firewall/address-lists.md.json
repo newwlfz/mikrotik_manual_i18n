@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "firewall-and-quality-of-service/firewall/address-lists.md",
+  "source_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/firewall/address-lists.md",
+  "html_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/firewall/address-lists",
+  "md_sha256": "c8c0eaa2d5117bd6b242c62221f72aba9b8cdc00890629c6bec519f902545e8d",
+  "html_sha256": "39594e5ff00751f8409b450aba672096e56ba38119723d0c2aa042d72e1eadea",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 63,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 13,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 13,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

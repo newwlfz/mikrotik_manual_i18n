@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "virtual-private-networks/6to4.md",
+  "source_url": "https://manual.mikrotik.com/docs/virtual-private-networks/6to4.md",
+  "html_url": "https://manual.mikrotik.com/docs/virtual-private-networks/6to4",
+  "md_sha256": "4c4257cb1fcef12766f13581d3cebf79770582c93e358e264133b1d9882d5d97",
+  "html_sha256": "14037ee3087dafd0bce60320f2e603c884a3bddc81d03b9244e418208a0c5acb",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 8,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

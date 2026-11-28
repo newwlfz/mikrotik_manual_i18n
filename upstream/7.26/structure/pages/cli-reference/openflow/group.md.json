@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/openflow/group.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/openflow/group.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/openflow/group",
+  "md_sha256": "2ce2d86db5e82920c843ebdba614966d22a86504484a65af798101ca9f9be8de",
+  "html_sha256": "5c8b488b171f8ca64b486d8142e9b2d743a22f4b4c8c1ecaaee8494b0b4130f1",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

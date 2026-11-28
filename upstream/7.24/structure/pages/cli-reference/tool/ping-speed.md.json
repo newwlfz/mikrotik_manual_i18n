@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/tool/ping-speed.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/ping-speed.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/tool/ping-speed",
+  "md_sha256": "5267a4948d9b23f5870f907ccbc0407e04183111aa0f2e4f705c291e2b2b5125",
+  "html_sha256": "ad9ab0ae83dc78676b2ba76d475eef628427fb9854af6a6b27bb456eb23dc92c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

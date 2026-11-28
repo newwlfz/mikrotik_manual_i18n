@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/ethernet/reset-counters.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/reset-counters.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/reset-counters",
+  "md_sha256": "044e15a993654b79075e205055a08ecd9b90145726e73e7b9a3c3e68510325ae",
+  "html_sha256": "dffc93a20594a45d8ff9e9c214f99e6408d13ba4d4e512385f62cb9f4157f936",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

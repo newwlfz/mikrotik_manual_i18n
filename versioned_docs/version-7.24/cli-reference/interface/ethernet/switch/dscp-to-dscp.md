@@ -1,0 +1,24 @@
+---
+title: "dscp-to-dscp"
+source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/ethernet/switch/dscp-to-dscp
+captured_at: '2026-11-28T10:19:39.818Z'
+---
+
+-----------
+
+## interface/ethernet/switch/dscp-to-dscp 
+**Syscap:** musicswitch
+**Type:** Directory
+
+<ArgTable c1="Flag" c2="Name" c3="Description">
+<ArgTableRow arg="I" typ="invalid"></ArgTableRow>
+</ArgTable>
+
+<ArgTable c1="Argument" c2="Type" c3="Description">
+<ArgTableRow arg="new-dscp" typ="num"></ArgTableRow>
+</ArgTable>
+
+<ArgTable c1="Read-only Argument" c2="Type" c3="Description">
+<ArgTableRow arg="original-dscp" typ="num"></ArgTableRow>
+<ArgTableRow arg="hex" typ="num"></ArgTableRow>
+</ArgTable>

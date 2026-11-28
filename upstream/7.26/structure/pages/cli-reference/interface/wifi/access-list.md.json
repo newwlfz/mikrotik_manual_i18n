@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wifi/access-list.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/access-list.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/access-list",
+  "md_sha256": "0b58cf186c4ada23f34042072e610a2993bae98ad19c3144c8b920d7f3d73235",
+  "html_sha256": "dd8e2cdc567de567753ffdd9035210ce5fd628a84f681ba6cdd1ffa07d4ca833",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

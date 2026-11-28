@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "getting-started/installation-and-upgrade/install/chr-installation/aws.md",
+  "source_url": "https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation/aws.md",
+  "html_url": "https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/install/chr-installation/aws",
+  "md_sha256": "ab46912fde90453fc5f9c6f281d3b6762a55f47c7bec6c713e0e0d35e8c15a59",
+  "html_sha256": "65480f19778a82af5008a894d37b5d17bd1dd6ca95322f5dd2f4deb359e3cc69",
+  "body": {
+    "html": {
+      "lists": 6,
+      "listItems": 22,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 15,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 22,
+      "listItems": 22,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 22,
+      "listItems": 22,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

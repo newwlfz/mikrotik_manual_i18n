@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "firewall-and-quality-of-service/queues/queue-types/red.md",
+  "source_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/queue-types/red.md",
+  "html_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/queue-types/red",
+  "md_sha256": "d1a7e554ee4c20a581612d3bc443ff303ff4a048431f14eee0143a9472ae321d",
+  "html_sha256": "a584ddcaea739cf9261351aba643d62d31ec75b6354c9a112d4ed902a9dff566",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 11,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

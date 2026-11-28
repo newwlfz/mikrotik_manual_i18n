@@ -1,0 +1,9 @@
+{
+  "key": "data-over-powerlines",
+  "label": "Data over Powerlines",
+  "position": 6,
+  "link": {
+    "type": "doc",
+    "id": "data-over-powerlines/pwr-line-ap"
+  }
+}

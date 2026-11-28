@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wireless/align.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/align.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wireless/align",
+  "md_sha256": "72cb99facc8a2c8d75d41b60ae76b9acfc833fa9c5e43a2195a04a2fdcb660c4",
+  "html_sha256": "a2e2da0ce75aa60e5f583a856733846640ec54b84a4cfb1e6d6877ed3c50d529",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

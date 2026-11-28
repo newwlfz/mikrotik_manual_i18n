@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "authentication-authorization-accounting.md",
+  "source_url": "https://manual.mikrotik.com/docs/authentication-authorization-accounting.md",
+  "html_url": "https://manual.mikrotik.com/docs/authentication-authorization-accounting",
+  "md_sha256": "91b941bae58206c4566f3418826ec94973c418b75fa92ab2363da1e4c063cd91",
+  "html_sha256": "1bf2e94bbab434e8d98401393886960664e8f851a487a5e073490cb4ec6b29af",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

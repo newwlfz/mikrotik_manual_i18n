@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/ptp.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/ptp.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/ptp",
+  "md_sha256": "cc355bc6332982d5f5093be53a904b5a9dfebe18143b928e9cc383ffb9709ca3",
+  "html_sha256": "dba19236a9baaf393a4fec5233f02c392d54655e6f6254b8729ce1c7e0e5973c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

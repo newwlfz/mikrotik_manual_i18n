@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/ethernet/poe.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/poe.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/poe",
+  "md_sha256": "407b8237cc1fab33f91f4a434e0de9e90687142c72ca47ac7b572ff5b3d5a0eb",
+  "html_sha256": "9bb2ec351b532419e04e09ad1e903650def71054964a837dd4ddc1053c110d14",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

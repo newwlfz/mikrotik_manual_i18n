@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "management-tools.md",
+  "source_url": "https://manual.mikrotik.com/docs/management-tools.md",
+  "html_url": "https://manual.mikrotik.com/docs/management-tools",
+  "md_sha256": "8e5bd327da405f5aab6b6b6b83eb51f0ce8ccf4f6be9701e7749807bffa9ba33",
+  "html_sha256": "0da52a93fe23c470341ff8e29d963fd2d25b2954b8851007c62a7e55e654e2fa",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

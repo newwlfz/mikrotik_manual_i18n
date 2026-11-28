@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "wireless/wifi/configuring-ppsk.md",
+  "source_url": "https://manual.mikrotik.com/docs/wireless/wifi/configuring-ppsk.md",
+  "html_url": "https://manual.mikrotik.com/docs/wireless/wifi/configuring-ppsk",
+  "md_sha256": "31f602ea12703dcbe341d4463662882b47f83df6ec962f7ef490682fabf3c5c6",
+  "html_sha256": "b3a6f18d5200fd0efeb4604c86fd23f2ea4933119d3294c1a6e353b9500ee3e5",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 16,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 26,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 16,
+      "listItems": 16,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 16,
+      "listItems": 16,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

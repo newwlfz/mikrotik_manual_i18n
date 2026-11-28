@@ -1,0 +1,86 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "virtual-private-networks/ipsec.md",
+  "source_url": "https://manual.mikrotik.com/docs/virtual-private-networks/ipsec.md",
+  "html_url": "https://manual.mikrotik.com/docs/virtual-private-networks/ipsec",
+  "md_sha256": "5c794f6bf13ccc05fdcba1afcbd11854ce2ac9e8434fba8a995e0e07b1535cd0",
+  "html_sha256": "d136077d347111f54e8365561346d456cdde476b423e3279e69b8dc8cbb8043e",
+  "body": {
+    "html": {
+      "lists": 12,
+      "listItems": 43,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 21,
+      "wideTables": 1
+    },
+    "md": {
+      "lists": 43,
+      "listItems": 43,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 1
+    },
+    "local": {
+      "lists": 43,
+      "listItems": 43,
+      "br": 0,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 1
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 12,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 19,
+      "cols": 17,
+      "official_wide": true,
+      "md_wide": true,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

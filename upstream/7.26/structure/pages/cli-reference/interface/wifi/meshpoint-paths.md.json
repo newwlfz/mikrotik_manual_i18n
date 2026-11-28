@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wifi/meshpoint-paths.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/meshpoint-paths.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/meshpoint-paths",
+  "md_sha256": "222a73f3a408cca4c2dae6483b12d158793bcf31b6c8610cae6ae17120b0490a",
+  "html_sha256": "21709615eea28f0b6e1dc37e830a72f1029c6860f2faab933280b56f13700f0f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

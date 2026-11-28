@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/license/renew.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/license/renew.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/license/renew",
+  "md_sha256": "4fb3c6aa5db82ae15442bdcff85fab2c5a1bb49f0c0e00420cb6750f0e4cfaf2",
+  "html_sha256": "431acb8ab3abab7ff56d1f0d26d04b5525bd1e46aef8f0e45b203779e503c7fe",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

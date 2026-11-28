@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "management-tools/mikrotik-mobile-app.md",
+  "source_url": "https://manual.mikrotik.com/docs/management-tools/mikrotik-mobile-app.md",
+  "html_url": "https://manual.mikrotik.com/docs/management-tools/mikrotik-mobile-app",
+  "md_sha256": "c8f9d82ab7fb7063f199ced962283f5729f320a3524df5ac47a8ee184ca7b816",
+  "html_sha256": "3fc162c87cb8666353621f4523df30758227cb0b13deb25a6c34027e036be77e",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

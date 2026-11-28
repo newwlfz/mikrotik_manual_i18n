@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/firewall/connection.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/firewall/connection.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/firewall/connection",
+  "md_sha256": "8e676344874e41a42eb68a8805585b6fa580e10ac671ab507c33a95fa8f2f7f0",
+  "html_sha256": "ac2ac69553b92bbd63084a75b295c484cd5467505bb9b7145b9bca5a4f5294de",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

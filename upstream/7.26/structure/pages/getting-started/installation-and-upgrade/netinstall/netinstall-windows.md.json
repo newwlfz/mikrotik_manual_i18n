@@ -1,0 +1,68 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "getting-started/installation-and-upgrade/netinstall/netinstall-windows.md",
+  "source_url": "https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/netinstall/netinstall-windows.md",
+  "html_url": "https://manual.mikrotik.com/docs/getting-started/installation-and-upgrade/netinstall/netinstall-windows",
+  "md_sha256": "0e7b49818c5d1acde4f9815ec0c05efd90122179f346530eb550ce1e51ac6b3b",
+  "html_sha256": "1cb1068ae8f1252e022eb8b800bfc6209be09d0ec571316a8977ce1ab32154d5",
+  "body": {
+    "html": {
+      "lists": 11,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 5,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 26,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 26,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": [
+        {
+          "row": 5,
+          "col": 1,
+          "html": "Instructs Netinstall to retain the device branding package if present on the device. <br/>Factory-installed branding packages cannot be discarded and are always preserved."
+        }
+      ]
+    }
+  ],
+  "unaligned": []
+}

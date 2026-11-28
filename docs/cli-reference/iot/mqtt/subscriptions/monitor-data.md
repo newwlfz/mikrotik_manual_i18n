@@ -1,0 +1,23 @@
+---
+sidebar_key: "cli-reference/iot/mqtt/subscriptions/monitor-data"
+sidebar_position: 1
+title: "monitor-data"
+sidebar_label: 'monitor-data'
+source: https://manual.mikrotik.com/docs/cli-reference/iot/mqtt/subscriptions/monitor-data
+captured_at: '2026-11-28T10:14:44.799Z'
+pagination_prev: "cli-reference/iot/mqtt/subscriptions"
+pagination_next: "cli-reference/iot/mqtt/subscriptions/recv"
+---
+
+-----------
+
+## iot/mqtt/subscriptions/monitor-data 
+**Package:** iot
+**Type:** Command
+
+<ArgTable c1="Read-only Argument" c2="Type" c3="Description">
+<ArgTableRow arg="data" typ="string"></ArgTableRow>
+<ArgTableRow arg="time" typ="date"></ArgTableRow>
+<ArgTableRow arg="topic" typ="string"></ArgTableRow>
+<ArgTableRow arg="broker" typ="enum ()"></ArgTableRow>
+</ArgTable>

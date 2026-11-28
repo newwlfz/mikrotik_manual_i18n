@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/ethernet/switch.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ethernet/switch",
+  "md_sha256": "8aa054866a73d7d1172635f482610b91227db0769c8fdb63b29f9497bc717d28",
+  "html_sha256": "2c9ce4657922d9b170ba5d294e1e271695486393339280b4e63f3615125a8fa2",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 5,
+      "details": 0,
+      "tables": 5,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 14,
+      "listItems": 14,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 14,
+      "listItems": 14,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

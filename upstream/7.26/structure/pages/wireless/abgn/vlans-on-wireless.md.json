@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "wireless/abgn/vlans-on-wireless.md",
+  "source_url": "https://manual.mikrotik.com/docs/wireless/abgn/vlans-on-wireless.md",
+  "html_url": "https://manual.mikrotik.com/docs/wireless/abgn/vlans-on-wireless",
+  "md_sha256": "68e1633a6e1cca21877b3a36696675849de6a09aa9d934f75ebc8ea3979299af",
+  "html_sha256": "e1dddcb28b50fac06427d7e28853aedfe9725a92485304397693a0f821cb256b",
+  "body": {
+    "html": {
+      "lists": 5,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

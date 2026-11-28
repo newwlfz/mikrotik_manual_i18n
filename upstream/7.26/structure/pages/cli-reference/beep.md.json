@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/beep.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/beep.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/beep",
+  "md_sha256": "42d9b206a1a0bd8b1ff1cd4430a671e8b8272cb2b068432e4f5c48e770a23549",
+  "html_sha256": "305e68a5b9c4f471ce1f051baa0d002f21f3f3d2c400114ee91a044ad7362c2b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

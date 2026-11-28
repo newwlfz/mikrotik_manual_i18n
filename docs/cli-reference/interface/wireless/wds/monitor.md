@@ -1,0 +1,19 @@
+---
+sidebar_key: "cli-reference/interface/wireless/wds/monitor"
+sidebar_position: 1
+title: "monitor"
+sidebar_label: 'monitor'
+source: https://manual.mikrotik.com/docs/cli-reference/interface/wireless/wds/monitor
+captured_at: '2026-11-28T10:14:44.799Z'
+pagination_prev: "cli-reference/interface/wireless/wds"
+---
+
+-----------
+
+## interface/wireless/wds/monitor 
+**Package:** wireless-rep
+**Type:** Command
+
+<ArgTable c1="Read-only Argument" c2="Type" c3="Description">
+<ArgTableRow arg="active" typ="bool"></ArgTableRow>
+</ArgTable>

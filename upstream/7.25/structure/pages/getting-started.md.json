@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "getting-started.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/getting-started.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/getting-started",
+  "md_sha256": "f7884c813b02f61de088690b0f255d6b2277769374798f664c63a1b9f414c34b",
+  "html_sha256": "7cabaf2ff2dd0a9e90b5158489ab8d2c54983bb42e23762457946576b5f2622c",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

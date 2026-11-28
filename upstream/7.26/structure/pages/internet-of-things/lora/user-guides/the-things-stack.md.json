@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "internet-of-things/lora/user-guides/the-things-stack.md",
+  "source_url": "https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides/the-things-stack.md",
+  "html_url": "https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides/the-things-stack",
+  "md_sha256": "bb72fd31dcfa45af2a953478ed12ab908a33677de5d22737e5a023dd5dfd1db3",
+  "html_sha256": "d9fbecd9144d8eccdcf0173488589f6720fbef7ab29fd32f8f2b4c31e08d1390",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 12,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 12,
+      "listItems": 12,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

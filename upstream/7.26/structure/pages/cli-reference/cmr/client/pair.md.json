@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/cmr/client/pair.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/client/pair.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/client/pair",
+  "md_sha256": "57f304cb2db80023dc5a60f1c78827375cdae951e05dfcaa1aa1cc9852bc3373",
+  "html_sha256": "8526170ddf8c9bb3829a65bd8e2a268ca0cb443e695f86f48925ca1cd9f12598",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

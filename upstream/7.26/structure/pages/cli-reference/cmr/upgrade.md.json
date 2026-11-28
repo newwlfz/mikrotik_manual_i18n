@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/cmr/upgrade.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/upgrade.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/upgrade",
+  "md_sha256": "791d07c44cb6cf6caeba7c3b43d22dc711052b5921610bfd367fe78a01a279ea",
+  "html_sha256": "2ba7e4488eb4e5d8035be7e4d11bc70b70d36b38251ae0192e983e4d84474b7a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

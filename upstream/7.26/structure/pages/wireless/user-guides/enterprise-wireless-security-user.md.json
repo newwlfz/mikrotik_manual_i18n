@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "wireless/user-guides/enterprise-wireless-security-user.md",
+  "source_url": "https://manual.mikrotik.com/docs/wireless/user-guides/enterprise-wireless-security-user.md",
+  "html_url": "https://manual.mikrotik.com/docs/wireless/user-guides/enterprise-wireless-security-user",
+  "md_sha256": "ea357d03083af703c1f99c7ef6ad1ac6c6c19ac9c7c5208e862d17c3fe4b3cb1",
+  "html_sha256": "4e62cd57c5c8687a220dcd575c0d9a8316f4ba4bf443bacd5c66e5b2b04c1e1f",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 8,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 5,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

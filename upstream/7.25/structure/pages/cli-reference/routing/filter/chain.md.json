@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/routing/filter/chain.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/filter/chain.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/filter/chain",
+  "md_sha256": "9f2fa846a34276b8c816e49a0fabec5bde2ee506dc220fae51ccb06022fe05da",
+  "html_sha256": "017e3bb0ffc53b3b3c73664a9262e8689061ce4c6478723ce750e0105b1a48d1",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

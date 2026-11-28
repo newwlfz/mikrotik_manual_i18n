@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/certificate/sign-certificate-request.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/certificate/sign-certificate-request.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/certificate/sign-certificate-request",
+  "md_sha256": "da8e699df702677914dedccc7b214f5fc24878f07c68c35d6bb6d51c2a27daa2",
+  "html_sha256": "ac50e73ab3445f5d314511c0e93f85687e7a35dbd81c2ad288cb08677dd8a346",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

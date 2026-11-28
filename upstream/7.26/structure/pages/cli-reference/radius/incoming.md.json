@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/radius/incoming.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/radius/incoming.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/radius/incoming",
+  "md_sha256": "3b062e9def15379326b36987fe64a28cbd73489911980e248cc898d8ef127374",
+  "html_sha256": "b0f2965e6b01210d657be5eac2cab0ed45fb205db639733334dbcabdfc226ac9",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/user-manager/session/close-session.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/session/close-session.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/session/close-session",
+  "md_sha256": "925d49bf2f3d2a502c990933d2ddad2543537731818a894cee65a70f2423c957",
+  "html_sha256": "618fbee8dd9fc58b1df7578bbcdac87f12bb836a1c82cad5c62a21fbe350f171",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,62 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "management-tools/console.md",
+  "source_url": "https://manual.mikrotik.com/docs/management-tools/console.md",
+  "html_url": "https://manual.mikrotik.com/docs/management-tools/console",
+  "md_sha256": "7acbf41709010988071f060f8bce45e58314f43723d2e07c10a5f535c6b56621",
+  "html_sha256": "992f6ffa644adfb75eb53d25d6d170d3f14a7a1a8d06fc0c18308a2eb0faf2dc",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 51,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 6,
+      "listItems": 6,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 4,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 26,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

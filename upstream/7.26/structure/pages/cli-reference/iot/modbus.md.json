@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/iot/modbus.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/iot/modbus.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/iot/modbus",
+  "md_sha256": "e3d7deef82142d5bb659eb51f548b83377e611592e8d4ebe065dcc39f6435950",
+  "html_sha256": "dcd7e510106c0642a529efb3b01976a1c3ca0f5cd85e4b4d015679974162d264",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

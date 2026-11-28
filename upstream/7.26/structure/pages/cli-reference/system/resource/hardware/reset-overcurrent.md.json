@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/resource/hardware/reset-overcurrent.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/resource/hardware/reset-overcurrent.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/resource/hardware/reset-overcurrent",
+  "md_sha256": "6793e72866c4b3c45d1e6246c6895cd7019d40169a66aa5ef4ce8d9c861d1313",
+  "html_sha256": "b49efa5fc48c739067ad4f665e0c48b1bcf272448b05b6f84e93f1fbc0c2e555",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

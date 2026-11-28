@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/firewall/raw.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/firewall/raw.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/firewall/raw",
+  "md_sha256": "22fcf538e44fdfc820762457bc8f89fb2a6073de1eec498e85ce3debd91b63df",
+  "html_sha256": "1f796981fba3cae7e47c1336294e21410996c42e35edb60971ccb377a8d8fd07",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 59,
+      "listItems": 59,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 59,
+      "listItems": 59,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

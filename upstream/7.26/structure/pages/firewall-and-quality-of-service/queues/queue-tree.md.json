@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "firewall-and-quality-of-service/queues/queue-tree.md",
+  "source_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/queue-tree.md",
+  "html_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/queue-tree",
+  "md_sha256": "198b3dd73a940b9087abafffba0d17d4ec8d12f4d61b7e0e2eb69bda6c219359",
+  "html_sha256": "6bd3a4309d486175634027216a559698228b21a41bc53deec83c0039c1beb53a",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 30,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

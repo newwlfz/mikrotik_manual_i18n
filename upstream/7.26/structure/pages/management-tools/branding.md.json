@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "management-tools/branding.md",
+  "source_url": "https://manual.mikrotik.com/docs/management-tools/branding.md",
+  "html_url": "https://manual.mikrotik.com/docs/management-tools/branding",
+  "md_sha256": "d7098a0d61c07703b10e8e814561fb41aaa057591bccf2498fd7a7eb0ed63a8d",
+  "html_sha256": "8699394b76f2f99881720ef8df3b70ef39e2a80d377cbf847e5221e056b470f5",
+  "body": {
+    "html": {
+      "lists": 5,
+      "listItems": 20,
+      "br": 5,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 11,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 20,
+      "listItems": 20,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 20,
+      "listItems": 20,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

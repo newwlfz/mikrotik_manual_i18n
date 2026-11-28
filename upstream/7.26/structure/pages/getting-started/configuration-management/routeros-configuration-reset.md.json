@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "getting-started/configuration-management/routeros-configuration-reset.md",
+  "source_url": "https://manual.mikrotik.com/docs/getting-started/configuration-management/routeros-configuration-reset.md",
+  "html_url": "https://manual.mikrotik.com/docs/getting-started/configuration-management/routeros-configuration-reset",
+  "md_sha256": "9c08708e5ebddc5a03d966b30164471b039a668709bdb605e6fca40b30f666db",
+  "html_sha256": "84608c8e746f162bb4525fe7143f0635491717af333aeb03ec0d521e66a1ee95",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 5,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

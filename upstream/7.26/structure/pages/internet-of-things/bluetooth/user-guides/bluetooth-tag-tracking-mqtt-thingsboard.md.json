@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "internet-of-things/bluetooth/user-guides/bluetooth-tag-tracking-mqtt-thingsboard.md",
+  "source_url": "https://manual.mikrotik.com/docs/internet-of-things/bluetooth/user-guides/bluetooth-tag-tracking-mqtt-thingsboard.md",
+  "html_url": "https://manual.mikrotik.com/docs/internet-of-things/bluetooth/user-guides/bluetooth-tag-tracking-mqtt-thingsboard",
+  "md_sha256": "e8987acff49e2bb31c2a157bff7287a22e21e2a5c5a3cf1b4966c9708138fb07",
+  "html_sha256": "da818f0dda3846b1ef63aa079ce4ccf3d8ba78c145400d02e9afc3f54653ad48",
+  "body": {
+    "html": {
+      "lists": 7,
+      "listItems": 27,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 36,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 27,
+      "listItems": 27,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 27,
+      "listItems": 27,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

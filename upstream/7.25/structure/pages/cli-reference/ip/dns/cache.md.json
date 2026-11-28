@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/ip/dns/cache.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/dns/cache.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/ip/dns/cache",
+  "md_sha256": "db534278fdbbfa94fec401723b311e84cfa0a47d2b9207a20c37afb0ec2e55b8",
+  "html_sha256": "12f02694e51f14f77807e595e441a5414789ba88aeb9238f79cd1974854f838f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

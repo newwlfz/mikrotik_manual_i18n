@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "firewall-and-quality-of-service/kid-control.md",
+  "source_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/kid-control.md",
+  "html_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/kid-control",
+  "md_sha256": "03a4388fd510813dd22714684aa95511127f2815b03c16168c5d01aa5610f17e",
+  "html_sha256": "6bf0bdbf48a19f410764f586d1caab3c1864c1b9dc1dfa95fb636d54cb5b7325",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 30,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

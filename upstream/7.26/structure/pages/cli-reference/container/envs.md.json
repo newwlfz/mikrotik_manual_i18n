@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/container/envs.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/container/envs.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/container/envs",
+  "md_sha256": "dc899e99d9d4cf61ff1068c9bfe5c7e0bda65f98fd2b203a869db203e8c4136d",
+  "html_sha256": "37d8b0c441e29c2f0370bc3d7bd9e1799b7621d32f464aa3f77a44da35d7eb96",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

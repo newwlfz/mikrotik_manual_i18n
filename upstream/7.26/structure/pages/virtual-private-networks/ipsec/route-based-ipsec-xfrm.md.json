@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "virtual-private-networks/ipsec/route-based-ipsec-xfrm.md",
+  "source_url": "https://manual.mikrotik.com/docs/virtual-private-networks/ipsec/route-based-ipsec-xfrm.md",
+  "html_url": "https://manual.mikrotik.com/docs/virtual-private-networks/ipsec/route-based-ipsec-xfrm",
+  "md_sha256": "af1de96c3816b812f0fa6e92521544110b39404d0822119b5ea6b2c7d785d301",
+  "html_sha256": "0364e0fdeae1ed24e2ec11fd9327093e996373a470b428c81ef8619d56ae5e13",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 23,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

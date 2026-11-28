@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/iot/modbus/security-rules.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/iot/modbus/security-rules.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/iot/modbus/security-rules",
+  "md_sha256": "d17df29ba460d1d972b24c6be03d98985313df5b6503cf2d8593d47dfe165cb0",
+  "html_sha256": "9d91cb29146599a794215f86cb17ce3ea57c2e8506c16d0e5b0baacada347fbf",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

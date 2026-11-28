@@ -1,0 +1,99 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "management-tools/cmr.md",
+  "source_url": "https://manual.mikrotik.com/docs/management-tools/cmr.md",
+  "html_url": "https://manual.mikrotik.com/docs/management-tools/cmr",
+  "md_sha256": "e0a2ebf4adc5751593518b584b6c17f58149c05cf5268abf700d13fe11afb4eb",
+  "html_sha256": "48326072e672e65681b5bf484bf5ca243e28c8a74f439d1436a89d10a8e1ec71",
+  "body": {
+    "html": {
+      "lists": 33,
+      "listItems": 133,
+      "br": 4,
+      "details": 0,
+      "tables": 6,
+      "sup": 0,
+      "code": 703,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 133,
+      "listItems": 133,
+      "br": 0,
+      "details": 0,
+      "tables": 6,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 133,
+      "listItems": 133,
+      "br": 0,
+      "details": 0,
+      "tables": 6,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        4,
+        0
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 11,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 6,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 11,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 4,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 5,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

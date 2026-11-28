@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "storage/nvme-over-tcp.md",
+  "source_url": "https://manual.mikrotik.com/docs/storage/nvme-over-tcp.md",
+  "html_url": "https://manual.mikrotik.com/docs/storage/nvme-over-tcp",
+  "md_sha256": "bcdf529d9607ba9d249286793d82556a066ea4fb6fd7eb72c78fbc9ab3d7642a",
+  "html_sha256": "2b2bee89ac2bfd2eb758943bea137adee6a1f23df4a28d78e46b26a320457623",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 14,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 26,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 14,
+      "listItems": 14,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 14,
+      "listItems": 14,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

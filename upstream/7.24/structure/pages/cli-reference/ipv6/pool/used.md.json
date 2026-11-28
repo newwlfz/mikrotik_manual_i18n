@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ipv6/pool/used.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/pool/used.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ipv6/pool/used",
+  "md_sha256": "f24d5ad5d7076b3c60d7eb875b4b4ee000ef4e1bc15c8cf617c1be2eeb7d3d62",
+  "html_sha256": "4a5585a9c7c51e9f2eb54a62a059712dee90dd8d2663ec0ed298c844e5ad72b2",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

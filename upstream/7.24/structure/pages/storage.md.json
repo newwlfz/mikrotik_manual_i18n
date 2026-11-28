@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "storage.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/storage.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/storage",
+  "md_sha256": "895645675aaf5dd8ab2387b5626c03e2196efddcbd4d9e7a9394446e593ea274",
+  "html_sha256": "e7ed6599136f039420d710d66e830e22af43155574338067c1e7d794ea9df756",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

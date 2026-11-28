@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "hardware/disks/smart.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/hardware/disks/smart.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/hardware/disks/smart",
+  "md_sha256": "050203b5e050ba9fc5a26589637ed4ae097ffee1be35a28d5987bd86bf1bfc11",
+  "html_sha256": "065da8517ca9424b5b3a3deddeeee2bc635fe3da0d65e42a1948bec11f0e10e3",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

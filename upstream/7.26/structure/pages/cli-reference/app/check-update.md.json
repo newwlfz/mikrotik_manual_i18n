@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/app/check-update.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/app/check-update.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/app/check-update",
+  "md_sha256": "960bc6d075557d2aaca1c5b634101ab73a55b0057b803a69cc0cc017b62a5b9f",
+  "html_sha256": "46ae5a7da408c26f3631de52da962b4d39baa55b2b1c7f974d2bfbf6c6534476",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

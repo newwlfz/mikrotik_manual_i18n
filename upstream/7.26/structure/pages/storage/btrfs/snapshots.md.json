@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "storage/btrfs/snapshots.md",
+  "source_url": "https://manual.mikrotik.com/docs/storage/btrfs/snapshots.md",
+  "html_url": "https://manual.mikrotik.com/docs/storage/btrfs/snapshots",
+  "md_sha256": "60fe897ec3f278118c010b4657554b213967ed9382adfc9952092fc01f0a9cb2",
+  "html_sha256": "ae9cc867629c52ade9f5ae17e30e19d66eb5b4e7f5036912250e7509624f3ceb",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 16,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 44,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 16,
+      "listItems": 16,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 16,
+      "listItems": 16,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        0,
+        15
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "containers.md",
+  "source_url": "https://manual.mikrotik.com/docs/containers.md",
+  "html_url": "https://manual.mikrotik.com/docs/containers",
+  "md_sha256": "1dbb62eef09f640f9172b0c9693569de06db18dc16d0c2f8497cb6a2b34606a9",
+  "html_sha256": "d346f699f4209e9c8bf9cffa238bacb26c7394aa255088926cf1380ae7c568d7",
+  "body": {
+    "html": {
+      "lists": 16,
+      "listItems": 72,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 96,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 72,
+      "listItems": 72,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 72,
+      "listItems": 72,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        0,
+        33
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

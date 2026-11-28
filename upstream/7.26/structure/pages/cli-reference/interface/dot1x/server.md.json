@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/dot1x/server.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/dot1x/server.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/dot1x/server",
+  "md_sha256": "bc213fbb0d5f4d80a3251d2b7d82d418d79f80777c98cba3063b2636d6a755b6",
+  "html_sha256": "8cbe32609564fc0180ee679beca3a2e7684ec5e94071b1e426c381b852f83dfe",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

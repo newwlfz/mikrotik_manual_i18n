@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "containers/user-guides/container-matrix-synapse.md",
+  "source_url": "https://manual.mikrotik.com/docs/containers/user-guides/container-matrix-synapse.md",
+  "html_url": "https://manual.mikrotik.com/docs/containers/user-guides/container-matrix-synapse",
+  "md_sha256": "26062907357d1385dac616aa5af5ca18e4659796bcb8439a090e0db49edbbacf",
+  "html_sha256": "0bffceaa1b7c32171be170b617117a2c5ed4306e5913709b82d38f4603eeba46",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 55,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/eoip.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/eoip.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/eoip",
+  "md_sha256": "80ebcc3a4ca73eba49714eb11c7b958de9a49a1467b3dcbc18f703a4ec3bed28",
+  "html_sha256": "674bb2ce0c95081d086b01e431240abd35175a7650986780fef70d1950db086d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

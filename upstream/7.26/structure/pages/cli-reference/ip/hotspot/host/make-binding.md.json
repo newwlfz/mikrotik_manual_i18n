@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/hotspot/host/make-binding.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/host/make-binding.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/host/make-binding",
+  "md_sha256": "06dcea0f894132be6b2bd6f84a9dea8401d1353f21591f6e6c8f671de9804ea0",
+  "html_sha256": "bec6ecc4e54e59acda790916cab5a023d3202c0256204201b19e303df1aac53f",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

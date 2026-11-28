@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/hotspot/user/reset-counters.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/user/reset-counters.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/user/reset-counters",
+  "md_sha256": "019eb98ef07d3972184882d0b4f7b684d2f026f974f7b36790288e1cea1cb3fe",
+  "html_sha256": "e36c249ff8a2c032d4e2a68764f950b1ad914c28c826f8bc531661d31492bd82",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

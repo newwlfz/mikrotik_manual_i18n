@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "bridging-and-switching/swos.md",
+  "source_url": "https://manual.mikrotik.com/docs/bridging-and-switching/swos.md",
+  "html_url": "https://manual.mikrotik.com/docs/bridging-and-switching/swos",
+  "md_sha256": "67017600051964610e978bb092d8bb68afb7039056982283988a0e5a5670fd92",
+  "html_sha256": "dc5d495be9dcce4bfce3ee2a1d6385a65ccd3b047733849b218cc3b7d9019186",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/ssh.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/ssh.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/ssh",
+  "md_sha256": "ec6eda4638a5c7e920038d283d714d55892e723ecefc309b084de11dde599c0c",
+  "html_sha256": "4e1b458ee292875d5ad17f5755f690e5730d65303163811e947ca8e84590c374",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

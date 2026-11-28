@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "virtual-private-networks/ipsec/troubleshooting.md",
+  "source_url": "https://manual.mikrotik.com/docs/virtual-private-networks/ipsec/troubleshooting.md",
+  "html_url": "https://manual.mikrotik.com/docs/virtual-private-networks/ipsec/troubleshooting",
+  "md_sha256": "48049d47e5609705f54b99d1daef86aa9371d97284411833d7caf66b8be33a3c",
+  "html_sha256": "cc1a0d33cb784568758d7058ad50e00a43ef2e98a2d96da447bae3f9e13e1d24",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 26,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 13,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 13,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 7,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

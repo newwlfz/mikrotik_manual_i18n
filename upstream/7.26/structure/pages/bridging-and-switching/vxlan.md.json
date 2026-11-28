@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "bridging-and-switching/vxlan.md",
+  "source_url": "https://manual.mikrotik.com/docs/bridging-and-switching/vxlan.md",
+  "html_url": "https://manual.mikrotik.com/docs/bridging-and-switching/vxlan",
+  "md_sha256": "106f6fd94da2c3b88e3f07f058f93c746b97bb350fce5e6d8647f990257b6d9a",
+  "html_sha256": "34e6e2b96ddc92cb7d75bafb0da6dcb8107eee52f7023aa167a4d7e5b945d651",
+  "body": {
+    "html": {
+      "lists": 5,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 60,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 19,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 19,
+      "listItems": 19,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 5,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

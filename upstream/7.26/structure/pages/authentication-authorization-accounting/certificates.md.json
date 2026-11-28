@@ -1,0 +1,62 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "authentication-authorization-accounting/certificates.md",
+  "source_url": "https://manual.mikrotik.com/docs/authentication-authorization-accounting/certificates.md",
+  "html_url": "https://manual.mikrotik.com/docs/authentication-authorization-accounting/certificates",
+  "md_sha256": "4bf5855d3a106ac282ff1e255acb3371e70817204559da1dfab2abe874c1863c",
+  "html_sha256": "29777e5e351860697dedd8b5f5d7e0f06109a3007246a6b4e6087692a110d57e",
+  "body": {
+    "html": {
+      "lists": 5,
+      "listItems": 23,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 122,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 23,
+      "listItems": 23,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 23,
+      "listItems": 23,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 28,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 6,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

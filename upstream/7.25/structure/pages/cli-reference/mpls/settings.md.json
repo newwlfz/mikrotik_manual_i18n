@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/mpls/settings.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/settings.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/mpls/settings",
+  "md_sha256": "41a32a049e53aa95f2f05d6d911674a659f8d9e3022a72e456069bf66303f30a",
+  "html_sha256": "7a8745bd01cd12ef74aff87cf7b2bb14b69cae9fab64cfa4f6e63f56b596e2d2",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

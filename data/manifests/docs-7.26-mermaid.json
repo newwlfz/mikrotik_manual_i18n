@@ -1,0 +1,121 @@
+{
+ "version": "7.26",
+ "generated": "2026-11-28T10:24:30.373Z",
+ "pages": {
+  "bridging-and-switching/user-guides/nvidia-dgx-spark": [
+   "graph TB\n    lan[\"<b>Office LAN switch</b><br />SSH, model downloads,<br />model server users\"]\n    s1[\"<b>DGX Spark 1</b><br />192.168.100.21<br />192.168.101.21\"]\n    s2[\"<b>DGX Spark 2</b><br />192.168.100.22<br />192.168.101.22\"]\n    s3[\"<b>DGX Spark 3</b><br />192.168.100.23<br />192.168.101.23\"]\n    s4[\"<b>DGX Spark 4</b><br />192.168.100.24<br />192.168.101.24\"]\n    sw[\"<b>MikroTik switch: cluster fabric</b><br />bridge1, jumbo frames,<br />PFC on the CRS804\"]\n    lan -.- s1 & s2 & s3 & s4\n    s1 & s2 & s3 & s4 --- sw"
+  ],
+  "bridging-and-switching": [
+   "graph TB\n    gw[\"<b>Gateway router</b><br />sends the valid RAs\"] ---|\"ether1, trusted-ra=yes<br />RAs are forwarded\"| sw[\"<b>Access switch</b><br />bridge1 with ra-guard=yes\"]\n    sw ---|\"ether2, untrusted\"| h1[\"Host PC 1\"]\n    sw ---|\"ether3, untrusted\"| h2[\"Host PC 2\"]\n    sw ---|\"ether4, untrusted<br />RAs are dropped\"| rogue[\"Rogue router<br />sends RAs\"]"
+  ],
+  "diagnostics-monitoring-and-troubleshooting/traffic-flow/netflow-analysis-with-elasticsearch": [
+   "graph LR\n    ros[\"<b>RouterOS</b><br />10.0.0.1\"] -->|\"NetFlow\"| agent[\"<b>NetFlow integration</b><br />10.0.0.2\"]\n    agent --> fleet[\"<b>Fleet Server</b><br />10.0.0.3\"]\n    fleet --> es[\"<b>Elasticsearch</b><br />10.0.0.4\"]\n    kib[\"<b>Kibana</b><br />10.0.0.5\"] -->|\"queries\"| es"
+  ],
+  "firewall-and-quality-of-service/firewall/filter": [
+   "graph LR\n    in([\"In-interface\"]) --> pre[\"Prerouting<br />raw, connection tracking,<br />mangle, dst-nat\"] --> rd{\"Routing<br />decision\"}\n    rd -->|\"for the router\"| mi[\"Mangle input\"] --> fi[\"<b>Filter input</b>\"] --> proc[\"Router<br />processes\"]\n    rd -->|\"through the router\"| mf[\"Mangle forward\"] --> ff[\"<b>Filter forward</b>\"] --> post[\"Postrouting<br />mangle, src-nat, queues\"]\n    proc --> mo[\"Raw output, connection<br />tracking, mangle output\"] --> fo[\"<b>Filter output</b>\"] --> post\n    post --> out([\"Out-interface\"])"
+  ],
+  "firewall-and-quality-of-service/firewall/nat": [
+   "graph LR\n    pc[\"Office PC<br />10.0.0.2/24\"] --- gw\n    srv[\"Office server<br />10.0.0.3/24, SSH\"] --- gw\n    gw[\"<b>Gateway</b><br />bridge1 10.0.0.1/24<br />ether1 172.16.16.1\"] --- net((\"Internet\"))\n    net --- home[\"Home PC<br />192.168.88.1\"]"
+  ],
+  "firewall-and-quality-of-service/packet-flow-in-routeros": [
+   "graph LR\n    pin([\"Physical in-interface\"]) --> hw{\"In-interface<br />hardware offloaded?\"}\n    hw -->|\"yes\"| sw[\"Switching decision<br />in the switch chip\"]\n    sw -->|\"to another port\"| pout([\"Physical out-interface\"])\n    sw -->|\"to the CPU\"| cpu[\"Packet flow in the CPU<br />(overall diagram)\"]\n    hw -->|\"no\"| cpu\n    cpu --> pout",
+   "graph LR\n    in([\"In-interface\"]) --> ct{\"Connection tracking:<br />connection FastTracked?\"}\n    ct -->|\"yes\"| fp[\"<b>FastPath</b><br />skips the firewall, the queues<br />with parent=global and the simple queues\"]\n    ct -->|\"no\"| sp[\"Slow path<br />all the chains: mangle, NAT,<br />filter, queues\"]\n    fp --> out([\"Out-interface\"])\n    sp --> out"
+  ],
+  "firewall-and-quality-of-service/queues/htb-hierarchical-token-bucket": [
+   "graph TD\n    q1[\"<b>Queue01</b><br />parent=ether1<br />max-limit=10M\"] --> q2[\"<b>Queue02</b><br />parent=Queue01<br />limit-at=4M max-limit=10M\"]\n    q1 --> Queue03[\"<b>Queue03</b><br />parent=Queue01<br />limit-at=6M max-limit=10M<br />priority=1<br />receives 6 Mbit/s\"]\n    q2 --> Queue04[\"<b>Queue04</b><br />parent=Queue02<br />limit-at=2M max-limit=10M<br />priority=3<br />receives 2 Mbit/s\"]\n    q2 --> Queue05[\"<b>Queue05</b><br />parent=Queue02<br />limit-at=2M max-limit=10M<br />priority=5<br />receives 2 Mbit/s\"]",
+   "graph TD\n    q1[\"<b>Queue01</b><br />parent=ether1<br />max-limit=10M\"] --> q2[\"<b>Queue02</b><br />parent=Queue01<br />limit-at=4M max-limit=10M\"]\n    q1 --> Queue03[\"<b>Queue03</b><br />parent=Queue01<br />limit-at=2M max-limit=10M<br />priority=3<br />receives 2 Mbit/s\"]\n    q2 --> Queue04[\"<b>Queue04</b><br />parent=Queue02<br />limit-at=2M max-limit=10M<br />priority=1<br />receives 6 Mbit/s\"]\n    q2 --> Queue05[\"<b>Queue05</b><br />parent=Queue02<br />limit-at=2M max-limit=10M<br />priority=5<br />receives 2 Mbit/s\"]",
+   "graph TD\n    q1[\"<b>Queue01</b><br />parent=ether1<br />max-limit=10M\"] --> q2[\"<b>Queue02</b><br />parent=Queue01<br />limit-at=8M max-limit=10M\"]\n    q1 --> Queue03[\"<b>Queue03</b><br />parent=Queue01<br />limit-at=2M max-limit=10M<br />priority=1<br />receives 2 Mbit/s\"]\n    q2 --> Queue04[\"<b>Queue04</b><br />parent=Queue02<br />limit-at=2M max-limit=10M<br />priority=3<br />receives 6 Mbit/s\"]\n    q2 --> Queue05[\"<b>Queue05</b><br />parent=Queue02<br />limit-at=2M max-limit=10M<br />priority=5<br />receives 2 Mbit/s\"]",
+   "graph TD\n    q1[\"<b>Queue01</b><br />parent=ether1<br />max-limit=10M\"] --> q2[\"<b>Queue02</b><br />parent=Queue01<br />limit-at=4M max-limit=10M\"]\n    q1 --> Queue03[\"<b>Queue03</b><br />parent=Queue01<br />limit-at=6M max-limit=10M<br />priority=1<br />receives ~3 Mbit/s\"]\n    q2 --> Queue04[\"<b>Queue04</b><br />parent=Queue02<br />limit-at=2M max-limit=10M<br />priority=3<br />receives ~1 Mbit/s\"]\n    q2 --> Queue05[\"<b>Queue05</b><br />parent=Queue02<br />limit-at=12M max-limit=15M<br />priority=5<br />receives ~6 Mbit/s\"]"
+  ],
+  "getting-started/networking-fundamentals/ipv6-neighbor-discovery": [
+   "%%{init: {\"sequence\": {\"mirrorActors\": false, \"messageAlign\": \"left\"}}}%%\nsequenceDiagram\n    participant Tentative\n    participant Preferred\n    participant Deprecated\n    participant Invalid\n\n    Tentative->>Preferred: Preferred lifetime\n    Tentative->>Deprecated: Valid lifetime"
+  ],
+  "getting-started/networking-fundamentals": [
+   "flowchart LR\n  H1 --- H2\n\n  H1[\"**Host 1**<br />____________________<br /> **Address**: 192.168.0.1/32<br />**Network**: 192.168.0.2\"]\n  H2[\"**Host 2**<br />____________________<br /> **Address**: 192.168.0.2/32<br />**Network**: 192.168.0.1\"]\n\n  style H1 text-align:left\n  style H2 text-align:left",
+   "sequenceDiagram\n    HostA->>HostB: Syn sent\n    HostB->>HostA: Syn-Ack sent\n    HostA->>HostB: Ack sent\nNote right of HostB: Established",
+   "sequenceDiagram\n    HostA->>HostB: Window size of 1000\n    HostB->>HostA: Ack1 window size=2\n    HostA->>HostB: Window size of 2000\n    HostA->>HostB:\n    HostB->>HostA: Ack2 window size=3\nrect rgb(185, 50, 50)\n    HostA->>HostB: Window size of 3000\n    HostA->>HostB:\n    HostA->>HostB:\nNote left of HostB: Buffer is full, stop sending...\n    HostB->>HostA: Ack3 window size=0\nend\nNote left of HostB: Buffer have been freed, continue...\n    HostB->>HostA: Ack window size=1",
+   "sequenceDiagram\n    HostA->>HostB: Fin sent\nNote right of HostB: CLOSE_WAIT\n    HostB->>HostA: Ack sent\n    HostB->>HostA: Fin sent\nNote right of HostB: LAST_ACK\n    HostA->>HostB: Ack sent\nNote right of HostB: Terminated"
+  ],
+  "high-availability-solutions/load-balancing/per-connection-classifier": [
+   "graph TB\n    isp1[\"<b>ISP1 gateway</b><br />10.10.4.1\"] ---|\"ether_ISP1<br />10.10.4.100/24\"| r[\"<b>Router</b>\"]\n    isp2[\"<b>ISP2 gateway</b><br />10.10.5.1\"] ---|\"ether_ISP2<br />10.10.5.100/24\"| r\n    r ---|\"ether_LAN<br />192.168.100.1/24\"| lan[\"LAN<br />192.168.100.0/24\"]"
+  ],
+  "high-availability-solutions/user-guides/bonding-examples": [
+   "graph LR\n    r1[\"<b>R1</b><br />bond1 192.168.0.1/24\"] ---|\"link 1, 10.0.1.0/24<br />10.0.1.2 to 10.0.1.1<br />eoip-tunnel1, tunnel-id 1\"| r2[\"<b>R2</b><br />bond1 192.168.0.2/24\"]\n    r1 ---|\"link 2, 10.2.2.0/24<br />10.2.2.2 to 10.2.2.1<br />eoip-tunnel2, tunnel-id 2\"| r2"
+  ],
+  "high-availability-solutions/user-guides/vrrp-configuration-examples": [
+   "graph LR\n    hosts[\"LAN hosts<br />gateway 192.168.1.1\"] --> r1[\"<b>R1</b><br />192.168.1.10/24<br />priority 254<br />master\"]\n    hosts -.-> r2[\"<b>R2</b><br />192.168.1.20/24<br />priority 100<br />backup\"]"
+  ],
+  "high-availability-solutions/vrrp": [
+   "stateDiagram-v2\n    direction LR\n    Init --> Backup: instance starts\n    Backup --> Master: master down, priority 0 or preemption\n    Master --> Backup: higher priority advertisement\n    Backup --> Init: shutdown\n    Master --> Init: shutdown"
+  ],
+  "network-management/dhcp/relay": [
+   "graph TB\n    net((\"Internet\")) ---|\"Public<br />10.1.0.2/24\"| srv[\"<b>DHCP-Server</b>\"]\n    srv ---|\"To-DHCP-Relay 192.168.0.1/24<br />To-DHCP-Server 192.168.0.2/24\"| rel[\"<b>DHCP-Relay</b>\"]\n    rel ---|\"Local1<br />192.168.1.1/24\"| l1[\"Clients<br />192.168.1.0/24\"]\n    rel ---|\"Local2<br />192.168.2.1/24\"| l2[\"Clients<br />192.168.2.0/24\"]"
+  ],
+  "network-management/dhcp": [
+   "sequenceDiagram\n    participant C as DHCP client\n    participant S as DHCP server\n    C->>S: DHCPDISCOVER (broadcast)\n    S->>C: DHCPOFFER (offered address and settings)\n    C->>S: DHCPREQUEST (broadcast, names the chosen server)\n    S->>C: DHCPACK (address, lease time and settings)"
+  ],
+  "network-management/proxy/web-proxy": [
+   "sequenceDiagram\n    participant U as User\n    participant P as Web proxy\n    participant S as Web server\n    Note over P: No cached copy\n    U->>P: Request\n    P->>S: Request\n    S->>P: Response\n    P->>U: Response, stored in the cache\n    Note over P: Cached copy\n    U->>P: Request\n    P->>U: Response from the cache"
+  ],
+  "user-guides/routing-and-networking-protocols/mpls/ldp": [
+   "graph LR\n    R1[\"<b>R1</b><br/>(lo:111.111.111.1)\"]\n    R2[\"<b>R2</b><br/>(lo:111.111.111.2)\"]\n    R3[\"<b>R3</b><br/>(lo:111.111.111.3)\"]\n    R4[\"<b>R4</b><br/>(lo:111.111.111.4)\"]\n\n    R1 ---|\"111.11.0.0/24\"| R2\n    R2 ---|\"111.12.0.0/24\"| R3\n    R3 ---|\"111.13.0.0/24\"| R4"
+  ],
+  "user-guides/routing-and-networking-protocols/routing-decision": [
+   "---\nconfig:\n  layout: elk\n---\ngraph LR\n    subgraph **RIB**\n        direction LR\n        P[**Private**] --> F{\"in-filter\"}\n        F --> U[**Update**]\n        U --> calc{ Calculation }\n        calc --> C[**Current**]\n    end\n\n    A@{ shape: f-circ } -->|prefix in| P\n    C -->|BGP peer /<br /> protocol output| O@{ shape: f-circ }"
+  ],
+  "user-guides/routing-and-networking-protocols/unicast/bgp/peering-sessions": [
+   "graph LR\n    R1 <--> R2\n    R2 <--> R3\n    R3 <--> R1",
+   "graph TB\n    R2(R2 RR) <--> R1\n    R2 <--> R3"
+  ],
+  "user-guides/routing-and-networking-protocols/unicast/ospf/neighbour-relationship": [
+   "flowchart LR\n\n  subgraph OSPFH[\"<b>OSPF Header</b>\"]\n    OSPFHF[\"<b>Version</b>: 1byte<br/><b>Packet Type</b>: 1byte<br/><b>Packet Length</b>: 2bytes<br/><b>Router ID</b>: 4bytes<br/><b>Area ID</b>: 4bytes<br/><b>Checksum</b>: 2bytes<br/><b>AuthType</b>: 2bytes<br/><b>Authentication</b>: 8bytes\"]\n  end\n\n  IPH[\"IP Header\"] --> OSPFH --> DATA[\"Data\"]",
+   "flowchart LR\n\n  subgraph HDATA[\"<b>Hello Data</b>\"]\n  HDATAF[\"Netmask\n    Hello Interval\n    Options | Priority\n    Dead Interval\n    DR\n    BDR\n    1st neighbor ID\"]\n  end\n\n  IPH[\"IP Header\"] --> OSPFH[\"OSPF Header\"] --> HDATA"
+  ],
+  "user-guides/routing-and-networking-protocols/unicast/ospf/routing-calculation": [
+   "graph LR\n\n    R1[R1]\n    R2[R2]\n    R3[R3]\n    R4[R4]\n    N1[192.168.1.0]:::N1\n    N2[172.16.1.0]:::N2\n    N3[192.168.2.0]:::N3\n\n    %% Connections within 192.168.1.0\n    R1 -- \"cost:10\" --> N1\n    N1 --- R2\n    N1 --- R3\n\n    R2 -- \"cost:10\" --> N2\n    R4 -- \"cost:4\" --> N2\n\n    R3 -- \"cost:6\" --> N3\n    N3 --> R4\n\n%% Style the network node\n    classDef N1,N2,N3 stroke:#4682b4,stroke-width:3px,rx:50%,ry:30%",
+   "graph \n\n    R1[R1]\n    R2[R2]\n    R3[R3]\n    R4[R4]\n    N1[192.168.1.0]:::N1\n    N2[172.16.1.0]:::N2\n    N3[192.168.2.0]:::N3\n\n    %% Connections within 192.168.1.0\n    R1 -- \"cost:10\" --> N1\n    R1 -- \"cost:10\" --> R3\n    R1 -- \"cost:10\" --> R2\n\n    R2 -- \"cost:10\" --> N2\n    R4 -- \"cost:4\" --> N2\n\n    R3 -- \"cost:6\" --> N3\n    R3 -- \"cost:6\" --> R4\n\n    R1 -- \"Total cost:16\" --> N3\n    R1 --> R2\n    R2 -- \"Total cost:20\" --> N2\n\n    R1 --> R4\n    R4 -- \"Total cost:20\" --> N2\n\n%% Style all dotted lines red (including the new one)\n    linkStyle 7,8,9,10,11 stroke:#ff0000,stroke-width:2px,stroke-dasharray:5,5,color:#ff0000\n\n%% Style the network node\n    classDef N1,N2,N3 stroke:#4682b4,stroke-width:3px,rx:50%,ry:30%"
+  ],
+  "user-guides/routing-and-networking-protocols/vrf": [
+   "graph LR\n    client1[\"<b>client1</b>\nip (*.2)\"] -->|10.11.0.0/24| vrf1[\"<b>vrf1</b>\nip (*.1)\"]\n    vrf2[\"<b>vrf2</b>\nip (*.1)\"] -->|10.12.0.0/24| client2[\"<b>client2</b>\nip (*.2)\"]\n    subgraph Router[\"<b>Router</b>\"]\n        direction LR\n        vrf1 ~~~ vrf2\n    end",
+   "graph LR\n    ce1[\"<b>CE1</b><br />10.1.1.1\"] ---|\"cust-one<br />10.1.1.0/24\"| pe1[\"<b>PE1</b><br />10.1.1.2, 10.2.2.2<br />loopback 10.5.5.2\"]\n    pe1 ---|\"MPLS backbone<br />10.2.2.0/24\"| pe2[\"<b>PE2 (Cisco)</b><br />10.2.2.3, 10.3.3.3<br />loopback 10.5.5.3\"]\n    pe2 ---|\"cust-one<br />10.3.3.0/24\"| ce2[\"<b>CE2</b><br />10.3.3.4\"]",
+   "graph LR\n    ce1[\"<b>CE1, cust-one</b><br />10.1.1.1\"] ---|\"cust-one<br />10.1.1.0/24\"| pe1[\"<b>PE1</b><br />10.1.1.2, 10.2.2.2<br />loopback 10.5.5.2\"]\n    pe1 ---|\"MPLS backbone<br />10.2.2.0/24\"| pe2[\"<b>PE2 (Cisco)</b><br />10.2.2.3, 10.3.3.3, 10.4.4.3<br />loopback 10.5.5.3\"]\n    pe2 ---|\"cust-one<br />10.3.3.0/24\"| ce2[\"<b>CE2, cust-one</b><br />10.3.3.4\"]\n    pe2 ---|\"cust-two<br />10.4.4.0/24\"| ce1b[\"<b>CE1, cust-two</b><br />10.4.4.5\"]",
+   "graph LR\n    CUST_A1[\"<b>client1</b>\"] ---|10.12.0.0/24| cust_a1_vrf[\"<b>cust_a</b><br />vrf\"] ---|BGP VPN| cust_a2_vrf[\"<b>cust_a</b><br />vrf\"] ---|10.12.0.0/24| CUST_A2[\"<b>client2</b>\"]\n    subgraph PE1[\"<b>PE1</b>\"]\n        direction LR\n        cust_a1_vrf\n    end\n    subgraph PE2[\"<b>PE2</b>\"]\n        direction LR\n        cust_a2_vrf\n    end\n    PE1 --- PE2"
+  ],
+  "virtual-private-networks/6to4": [
+   "graph LR\n    r1[\"<b>R1</b><br />IPv4 10.0.1.1<br />6to4-tunnel1 2002:a00:101::/128\"] ---|\"IPv6 in IPv4, protocol 41\"| r2[\"<b>R2</b><br />IPv4 10.0.2.1<br />6to4-tunnel1 2002:a00:201::/128\"]"
+  ],
+  "virtual-private-networks/ipsec/road-warrior-ikev2-certificates": [
+   "graph LR\n    c1[\"<b>Laptop or phone</b><br />address from 192.168.77.0/24\"] ---|\"IKEv2 over the internet\"| s[\"<b>Office router</b><br />public 203.0.113.1\"]\n    c2[\"<b>RouterOS client</b><br />address from 192.168.77.0/24\"] ---|\"IKEv2 over the internet\"| s\n    s --- lan[\"Office network<br />10.1.202.0/24\"]",
+   "graph LR\n    lan2[\"Branch network<br />10.1.101.0/24\"] --- c[\"<b>Office2 (client)</b><br />public 203.0.113.2<br />192.168.77.254 from the server<br />source NAT 10.1.101.0/24 to 192.168.77.254\"]\n    c ---|\"IPsec tunnel\"| s[\"<b>Office1 (server)</b><br />public 203.0.113.1\"]\n    s --- lan1[\"Office network<br />10.1.202.0/24\"]"
+  ],
+  "virtual-private-networks/ipsec/road-warrior-ikev2-eap": [
+   "graph LR\n    c[\"<b>Laptop or phone</b><br />user1, built-in IKEv2 client<br />address from 192.168.77.0/24\"] ---|\"IKEv2 with EAP over the internet\"| s[\"<b>Office router</b><br />DNS name, Let's Encrypt certificate<br />User Manager on the same router\"]\n    s --- net[\"Office network and the internet\"]"
+  ],
+  "virtual-private-networks/ipsec/site-to-site": [
+   "graph LR\n    lan1[\"Office 1 network<br />10.1.202.0/24\"] --- r1[\"<b>Office 1</b><br />public 203.0.113.1\"]\n    r1 ---|\"IPsec tunnel over the internet\"| r2[\"<b>Office 2</b><br />public 203.0.113.2\"]\n    r2 --- lan2[\"Office 2 network<br />10.1.101.0/24\"]",
+   "graph LR\n    lan1[\"Office 1 network<br />10.1.202.0/24\"] --- r1[\"<b>Office 1 (server)</b><br />203.0.113.1 or a DNS name<br />loopback 192.168.99.1<br />gre-tunnel1 172.16.1.1/30\"]\n    r1 ---|\"GRE tunnel inside IPsec<br />192.168.99.1 to 192.168.99.2\"| r2[\"<b>Office 2 (client)</b><br />any address<br />192.168.99.2 from mode config<br />gre-tunnel1 172.16.1.2/30\"]\n    r2 --- lan2[\"Office 2 network<br />10.1.101.0/24\"]"
+  ],
+  "virtual-private-networks/l2tp": [
+   "graph LR\n    c[\"<b>L2TP client</b><br />public 203.0.113.2<br />tunnel 10.0.0.100\"] ---|\"L2TP tunnel over the internet<br />UDP 1701\"| s[\"<b>L2TP server</b><br />public 203.0.113.1<br />tunnel 10.0.0.1\"]\n    s --- lan[\"Office network<br />192.168.88.0/24\"]"
+  ],
+  "virtual-private-networks/openvpn": [
+   "graph LR\n    c1[\"<b>RouterOS client</b><br />ovpn-office\"] ---|\"OpenVPN, UDP 1194\"| s[\"<b>Office router</b><br />public 203.0.113.1<br />tunnel 10.0.0.1\"]\n    c2[\"<b>Laptop or phone</b><br />.ovpn file\"] ---|\"OpenVPN, UDP 1194\"| s\n    s --- lan[\"Office network<br />192.168.88.0/24\"]"
+  ],
+  "virtual-private-networks/pppoe/mlppp-over-single-and-multiple-links": [
+   "graph LR\n    lan[\"LAN\"] --- r[\"<b>Router</b><br />PPPoE client pppoe-out1<br />over ether1 and ether2\"]\n    r ---|\"ether1, link 1\"| isp[\"<b>Provider</b><br />PPPoE server<br />with MLPPP\"]\n    r ---|\"ether2, link 2\"| isp\n    isp --- net((\"Internet\"))"
+  ],
+  "virtual-private-networks/pppoe": [
+   "sequenceDiagram\n    participant C as PPPoE client\n    participant S as PPPoE server\n    C->>S: PADI (broadcast)\n    S->>C: PADO\n    C->>S: PADR\n    S->>C: PADS (session ID)\n    Note over C,S: Session phase: PPP (LCP, authentication, IPCP)\n    C-->>S: PADT (either side ends the session)"
+  ],
+  "virtual-private-networks/pptp": [
+   "graph LR\n    client[\"<b>PPTP client</b><br />ether5 192.0.2.2<br />tunnel 10.0.0.100\"] ---|\"TCP 1723, GRE 47\"| server[\"<b>PPTP server</b><br />ether5 192.0.2.1<br />tunnel 10.0.0.1\"]"
+  ],
+  "virtual-private-networks/sstp": [
+   "sequenceDiagram\n    participant C as SSTP client\n    participant S as SSTP server\n    C->>S: 1. TCP connection to port 443\n    C->>S: 2. TLS handshake\n    S->>C: server certificate\n    C->>S: 3. SSTP control packets inside HTTPS\n    S->>C: SSTP connection set up\n    C->>S: 4. PPP: authentication and addresses\n    Note over C,S: PPP traffic flows over SSTP",
+   "graph LR\n    c[\"<b>SSTP client</b><br />public 203.0.113.2<br />tunnel 10.0.0.99\"] ---|\"SSTP over HTTPS<br />TCP 443\"| s[\"<b>SSTP server</b><br />public 203.0.113.1<br />tunnel 10.0.0.1\"]"
+  ],
+  "wireless/wifi/configuring-meshpoint": [
+   "flowchart LR\n  R[Router] ---|Ethernet| G[Mesh gate]\n  G -.->|802.11s| B[Mesh point]\n  G -.->|802.11s| C[Mesh point]\n  C -.->|802.11s| D[Mesh point]\n  B --- BC[Client devices]\n  C --- CC[Client devices]\n  D --- DC[Client devices]"
+  ]
+ }
+}

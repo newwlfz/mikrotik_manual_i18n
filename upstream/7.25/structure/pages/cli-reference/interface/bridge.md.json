@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/interface/bridge.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/interface/bridge",
+  "md_sha256": "baaafd85a29685b9418502516c2db22c612986a0658f12020081b7b22741b481",
+  "html_sha256": "cd09db7ffabbf01d81c00c57802b9e91d6b107637b1cc68e03899b0ac425e17a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

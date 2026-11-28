@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/dhcp-relay/reset-counters.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-relay/reset-counters.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-relay/reset-counters",
+  "md_sha256": "b6efcc3bafe947b85a67c124863a736983f7d9e1578b26fb1ef8ce02fbfdb878",
+  "html_sha256": "362bf995d8cd9d15701e8baf39a6c79422f1deae425cc21f4b07a3495e8f861a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

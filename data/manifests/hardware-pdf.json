@@ -1,0 +1,396 @@
+{
+ "schema": 1,
+ "generated_at": "2026-11-28T10:46:56.982Z",
+ "pages": {
+  "https://manual.mikrotik.com/hardware/cube-60g-ac": {
+   "cube-60g-ac.pdf": "https://manual.mikrotik.com/assets/files/cube-60g-ac-0575326476d89f7f1ddf08a17bccceb7.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/cube-lite60": {
+   "cube-lite60.pdf": "https://manual.mikrotik.com/assets/files/cube-lite60-4d7ed9c7f2202d7a7a4f5a01d2a625ea.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/lhg-60g": {
+   "lhg-60g.pdf": "https://manual.mikrotik.com/assets/files/lhg-60g-d834c6f77e358b33f6d3fd47663765b4.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/lhg-lite60": {
+   "lhg-lite60.pdf": "https://manual.mikrotik.com/assets/files/lhg-lite60-78d98dce5497554c58a20e9c0f69791e.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/nray-series": {
+   "nray-series.pdf": "https://manual.mikrotik.com/assets/files/nray-series-8b1c8f47fdd8ce1e1b232581c0108acf.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/wap-60g-series": {
+   "wap-60g-series.pdf": "https://manual.mikrotik.com/assets/files/wap-60g-series-9b51ea18dc11beafdef583ebaff01300.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/wireless-wire-cube-pro-cube-60pro-ac": {
+   "wireless-wire-cube-pro-cube-60pro-ac.pdf": "https://manual.mikrotik.com/assets/files/wireless-wire-cube-pro-cube-60pro-ac-a657d8a471bc9a7bb7b1391f23f9879a.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/wireless-wire-cube": {
+   "wireless-wire-cube.pdf": "https://manual.mikrotik.com/assets/files/wireless-wire-cube-341547731816889727201641e27bbc3a.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/wireless-wire-dish": {
+   "wireless-wire-dish.pdf": "https://manual.mikrotik.com/assets/files/wireless-wire-dish-0b7f9054624012522cbc79e78af307a1.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/cme22-2n-bg77": {
+   "cme22-2n-bg77.pdf": "https://manual.mikrotik.com/assets/files/cme22-2n-bg77-d526c6030e99db740f8481f8d47777e7.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/iaqm-thc2pv-w-and-iaqm-thc2pv-g": {
+   "iaqm-thc2pv-w-and-iaqm-thc2pv-g.pdf": "https://manual.mikrotik.com/assets/files/iaqm-thc2pv-w-and-iaqm-thc2pv-g-ca07b49c7e0222e093e8d49c300e3b87.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/knot-embedded-lte4-ec25-eu-and-kne": {
+   "knot-embedded-lte4-ec25-eu-and-kne.pdf": "https://manual.mikrotik.com/assets/files/knot-embedded-lte4-ec25-eu-and-kne-1113311d8358f69531fb894713b38b2a.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/knot-embedded-lte4-global-eg25-g-and-kne": {
+   "knot-embedded-lte4-global-eg25-g-and-kne.pdf": "https://manual.mikrotik.com/assets/files/knot-embedded-lte4-global-eg25-g-and-kne-90ab457bdf749d4c1d6d36f3e9c20b44.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/knot-lr8-kit": {
+   "knot-lr8-kit.pdf": "https://manual.mikrotik.com/assets/files/knot-lr8-kit-14575ab2838632fcb5f7fa7175683a56.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/knot-lr8g-kit": {
+   "knot-lr8g-kit.pdf": "https://manual.mikrotik.com/assets/files/knot-lr8g-kit-eb514d60bec37cac504b3d907df8b108.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/knot-lr9-kit": {
+   "knot-lr9-kit.pdf": "https://manual.mikrotik.com/assets/files/knot-lr9-kit-ef58c68051243b5531c9c0a472008bf0.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/knot-lr9g-kit": {
+   "knot-lr9g-kit.pdf": "https://manual.mikrotik.com/assets/files/knot-lr9g-kit-b74fa0b50265ed036c2a40802b068492.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/knot": {
+   "knot.pdf": "https://manual.mikrotik.com/assets/files/knot-946091ad4c47a2e8a1e7e73892c75438.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/l14g-2ax-bt5-hl9-and-eg800q": {
+   "l14g-2ax-bt5-hl9-and-eg800q.pdf": "https://manual.mikrotik.com/assets/files/l14g-2ax-bt5-hl9-and-eg800q-87762c8938cbe57a3dcfaa63cee67b53.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/l14g-2ax-bt5-lr8-and-eg800k": {
+   "l14g-2ax-bt5-lr8-and-eg800k.pdf": "https://manual.mikrotik.com/assets/files/l14g-2ax-bt5-lr8-and-eg800k-ec6d57bb0b77794ca044e26fe7be0500.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/ltap-lr8-lte-kit": {
+   "ltap-lr8-lte-kit.pdf": "https://manual.mikrotik.com/assets/files/ltap-lr8-lte-kit-eeb73bd200953b5a8ca3fc070627ae4b.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/ltap-lr8-lte6-kit": {
+   "ltap-lr8-lte6-kit.pdf": "https://manual.mikrotik.com/assets/files/ltap-lr8-lte6-kit-71d41280de7103b44c39d02f829e279a.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/ltap-lr8g-lte6-kit": {
+   "ltap-lr8g-lte6-kit.pdf": "https://manual.mikrotik.com/assets/files/ltap-lr8g-lte6-kit-23522edeb754bc391b59ac9013a88060.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/r11e-lr2": {
+   "r11e-lr2.pdf": "https://manual.mikrotik.com/assets/files/r11e-lr2-31679419e5e4a56e1f4d2b5566cb004f.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/r11e-lr8": {
+   "r11e-lr8.pdf": "https://manual.mikrotik.com/assets/files/r11e-lr8-d0ac4256b0bb1ec57c362648c9c7ec3a.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/r11e-lr8g": {
+   "r11e-lr8g.pdf": "https://manual.mikrotik.com/assets/files/r11e-lr8g-bcf6bf714f70c7ec6186cd954670291d.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/r11e-lr9": {
+   "r11e-lr9.pdf": "https://manual.mikrotik.com/assets/files/r11e-lr9-43501007f1481be9eb0a4d0e5cd6fec0.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/r11e-lr9g": {
+   "r11e-lr9g.pdf": "https://manual.mikrotik.com/assets/files/r11e-lr9g-53967cbc5df54a2266a0515317a062b3.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/tg-bt5-in": {
+   "tg-bt5-in.pdf": "https://manual.mikrotik.com/assets/files/tg-bt5-in-c808773bd63bcc571c9cefe268e5bc79.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/tg-bt5-out": {
+   "tg-bt5-out.pdf": "https://manual.mikrotik.com/assets/files/tg-bt5-out-6701945c9c74459ee406756e165fb981.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/tg-lr82": {
+   "tg-lr82.pdf": "https://manual.mikrotik.com/assets/files/tg-lr82-69720aecca1b4446c1872862e03183cb.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/tg-lr92": {
+   "tg-lr92.pdf": "https://manual.mikrotik.com/assets/files/tg-lr92-8a6d0117f62f9c262e34369cb2d654fe.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/wap-lr2-kit": {
+   "wap-lr2-kit.pdf": "https://manual.mikrotik.com/assets/files/wap-lr2-kit-0ff0e8046d9b3541dfdd77380b8cc0f3.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/wap-lr8g-kit": {
+   "wap-lr8g-kit.pdf": "https://manual.mikrotik.com/assets/files/wap-lr8g-kit-082b4c6bbfcc22f5e953fc4f95bdcc16.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/wap-lr9-kit": {
+   "wap-lr9-kit.pdf": "https://manual.mikrotik.com/assets/files/wap-lr9-kit-122ca84be22e5dcfa960c751ce766fdb.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/wap-lr9g-kit": {
+   "wap-lr9g-kit.pdf": "https://manual.mikrotik.com/assets/files/wap-lr9g-kit-46c68ee366bf7ad6c33e4d51b7f68887.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-5ghz-routerboard-ax-series": {
+   "quick-guide-5ghz-routerboard-ax-series.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-5ghz-routerboard-ax-series-8c354a9251083a97b1eba839159dd44f.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-atl-lte18-kit": {
+   "quick-guide-atl-lte18-kit.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-atl-lte18-kit-bd2c5e07ece9033ce2fffc7d4858710c.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-audience-series": {
+   "quick-guide-audience-series.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-audience-series-d762b8a8e749c9834ed5867778250411.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-cap-ax": {
+   "quick-guide-cap-ax.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-cap-ax-76a7ceda3ee963be4cecde1b7b90d3d3.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-cap-xl-ac": {
+   "quick-guide-cap-xl-ac.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-cap-xl-ac-02421049e409fc439c41ebe501c57996.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-ccr2004-16g-2s-plus-pc": {
+   "quick-guide-ccr2004-16g-2s-plus-pc.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-ccr2004-16g-2s-plus-pc-615afe281ec3efbfbe7255dfcfe788f9.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-ccr2004-16g-2s-plus": {
+   "quick-guide-ccr2004-16g-2s-plus.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-ccr2004-16g-2s-plus-446296e6cd8ec1f62b78546dbdd5ac04.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-ccr2004-1g-12s-plus-2xs": {
+   "quick-guide-ccr2004-1g-12s-plus-2xs.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-ccr2004-1g-12s-plus-2xs-a64042ae685adb9f5dadd8a15963de62.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-ccr2004-1g-2xs-pcie": {
+   "quick-guide-ccr2004-1g-2xs-pcie.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-ccr2004-1g-2xs-pcie-76a2b8fab479e281068c1e9ffac0c212.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-ccr2116-12g-4s-plus": {
+   "quick-guide-ccr2116-12g-4s-plus.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-ccr2116-12g-4s-plus-be549b17d5b299d9bb712f1b150d1595.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-ccr2216-1g-12xs-2xq": {
+   "quick-guide-ccr2216-1g-12xs-2xq.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-ccr2216-1g-12xs-2xq-3d947853b0fccf62dd0e6c2788cca3cc.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-chateau-5g-ax": {
+   "quick-guide-chateau-5g-ax.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-chateau-5g-ax-b41aa70659b9bd4a16d7eab3bd1edfde.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-chateau-5g-r16": {
+   "quick-guide-chateau-5g-r16.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-chateau-5g-r16-dc37b528d66f2cca603d482a51c5d012.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-chateau-5g": {
+   "quick-guide-chateau-5g.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-chateau-5g-8557aae7b21043884e5ff8471187ba41.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-chateau-lte18-ax": {
+   "quick-guide-chateau-lte18-ax.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-chateau-lte18-ax-25d6f46dbb9345f93bc296b155b84f32.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-chateau-lte6-ax": {
+   "quick-guide-chateau-lte6-ax.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-chateau-lte6-ax-621543551b539e6aa27db7c7202dac5e.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-chateau-lte6-us-us-version": {
+   "quick-guide-chateau-lte6-us-us-version.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-chateau-lte6-us-us-version-1219c90fbaa3a0db80c86b3140d4098b.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-crs106-1c-5s": {
+   "quick-guide-crs106-1c-5s.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-crs106-1c-5s-87d745cf5e738cbcb08a6e7a41a2ba1a.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-crs112-8p-4s-in": {
+   "quick-guide-crs112-8p-4s-in.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-crs112-8p-4s-in-2b3d271468f4e0765c4830f529e3d33e.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-crs305-1g-4s-plus-out": {
+   "quick-guide-crs305-1g-4s-plus-out.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-crs305-1g-4s-plus-out-44c73b46ce7104e2c87ec6dd857a5567.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-crs310-1g-5s-4s-plus-in": {
+   "quick-guide-crs310-1g-5s-4s-plus-in.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-crs310-1g-5s-4s-plus-in-651004bf1d1605f2e1c5ac51f8719d50.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-crs310-8g-plus-2s-plus-in": {
+   "quick-guide-crs310-8g-plus-2s-plus-in.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-crs310-8g-plus-2s-plus-in-67f5033ac8fb5e281655dcccc6381808.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-crs312-4c-plus-8xg-rm": {
+   "quick-guide-crs312-4c-plus-8xg-rm.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-crs312-4c-plus-8xg-rm-dc7283dd1d1817ecdfc4ea9e0de3d100.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-crs318-16p-2s-plus-out": {
+   "quick-guide-crs318-16p-2s-plus-out.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-crs318-16p-2s-plus-out-f5fd1621f7a3198b856955d4b6fcb4f4.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-crs320-8p-8b-4s-plus-rm": {
+   "quick-guide-crs320-8p-8b-4s-plus-rm.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-crs320-8p-8b-4s-plus-rm-14a930fc8499e4648078c2cd49f6f315.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-crs326-24s-plus-2q-plus-rm": {
+   "quick-guide-crs326-24s-plus-2q-plus-rm.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-crs326-24s-plus-2q-plus-rm-79c8d83452bf5862af9b3439846eb617.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-crs354-48g-4s-plus-2q-plus": {
+   "quick-guide-crs354-48g-4s-plus-2q-plus.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-crs354-48g-4s-plus-2q-plus-ef563c32a90323708cc50697be9fb351.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-crs504-4xq-in": {
+   "quick-guide-crs504-4xq-in.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-crs504-4xq-in-c6567b84250e9136e7dcb41aba6a0cc2.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-crs504-4xq-out": {
+   "quick-guide-crs504-4xq-out.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-crs504-4xq-out-ba7bd8eabed8de7c911dbbbb283cd140.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-crs510-8xs-2xq-in": {
+   "quick-guide-crs510-8xs-2xq-in.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-crs510-8xs-2xq-in-304183d204ea36573f99540971d5e852.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-crs518-16xs-2xq-rm": {
+   "quick-guide-crs518-16xs-2xq-rm.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-crs518-16xs-2xq-rm-6ddbc810bc150cda36fae99fc7deed28.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-css610-1gi-7r-2s-plus-out": {
+   "quick-guide-css610-1gi-7r-2s-plus-out.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-css610-1gi-7r-2s-plus-out-3530ccbbd235db89b49dd97d65b077af.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-css610-8g-2s-plus-in": {
+   "quick-guide-css610-8g-2s-plus-in.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-css610-8g-2s-plus-in-387d7a15553e9ed16c407e379b9ef7e1.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-css610-8p-2s-plus-in": {
+   "quick-guide-css610-8p-2s-plus-in.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-css610-8p-2s-plus-in-eb65a4e672b3bef18fa72795fa8898a2.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-css610-8p-2s-plus-out": {
+   "quick-guide-css610-8p-2s-plus-out.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-css610-8p-2s-plus-out-6002502166fd70809316ce92be779504.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-cube-60g-series": {
+   "quick-guide-cube-60g-series.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-cube-60g-series-fb34dd5ec128e3da89305a5b7dd6672d.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-cube-60pro-series": {
+   "quick-guide-cube-60pro-series.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-cube-60pro-series-05274bf6933ebc428760a84108cd3500.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-ftc11xg": {
+   "quick-guide-ftc11xg.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-ftc11xg-0d0ac3390f99474693fc9530d0c4339a.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-ftc21-ups": {
+   "quick-guide-ftc21-ups.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-ftc21-ups-a7fba2b28844e94efff67f8f36380838.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-ftc21": {
+   "quick-guide-ftc21.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-ftc21-9680c8ca58e9bde21d528ea391614793.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g1-b": {
+   "quick-guide-g1-b.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g1-b-9069841a812993ec553b234b2b773b73.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g1-c": {
+   "quick-guide-g1-c.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g1-c-5835c8fd386ee662854ff114d2824f32.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g1-crs-series": {
+   "quick-guide-g1-crs-series.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g1-crs-series-7b562efeec3fdc6e7f0cd105794e81bf.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g1-css106-series": {
+   "quick-guide-g1-css106-series.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g1-css106-series-846019c930137c7a76e7fea74d9c0857.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g1-d": {
+   "quick-guide-g1-d.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g1-d-955521e6eb9e6b57649b3391eee59310.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g1-m-series": {
+   "quick-guide-g1-m-series.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g1-m-series-2b784580deec9760b94dcb67880213cb.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g10a": {
+   "quick-guide-g10a.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g10a-bc5a7aec6c1a9bd4e00f8b47b790dad1.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g10b": {
+   "quick-guide-g10b.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g10b-f92d503c77fe92d65da51a9fd9b236be.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g11": {
+   "quick-guide-g11.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g11-7a77dadd986f80b9836b3d55a58f25ce.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g12-a": {
+   "quick-guide-g12-a.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g12-a-02082da95bc31a824d86b9b14d3df612.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g12-b": {
+   "quick-guide-g12-b.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g12-b-9393f4adfb48b6b072b8005cc75ce354.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g14-a-hap-ac-lte6": {
+   "quick-guide-g14-a-hap-ac-lte6.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g14-a-hap-ac-lte6-2dd61684ae46f02ac6911969d2b05f07.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g14-b-chateau-lte12": {
+   "quick-guide-g14-b-chateau-lte12.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g14-b-chateau-lte12-8e5a617d5127bc8a06d915ce2bc5ed3b.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g15": {
+   "quick-guide-g15.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g15-2d91f5d1e1fd68762657499db8af6666.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g16-a-lhgr-kit-series": {
+   "quick-guide-g16-a-lhgr-kit-series.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g16-a-lhgr-kit-series-811d20c5c40bf4dbdaecf58413e44ef5.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g16-b-sxtr-kit-series": {
+   "quick-guide-g16-b-sxtr-kit-series.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g16-b-sxtr-kit-series-bb1c68329f05fecdf9c4bad3212054ce.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g17-a-wap-lr8-kit": {
+   "quick-guide-g17-a-wap-lr8-kit.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g17-a-wap-lr8-kit-6cf4606fc7409c3a68e10950548f8bb7.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g17-b-wap-lr9-kit": {
+   "quick-guide-g17-b-wap-lr9-kit.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g17-b-wap-lr9-kit-b10b7e50c79ee0c2860b5745453f8024.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g19-b-lr-mini-pcie-card": {
+   "quick-guide-g19-b-lr-mini-pcie-card.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g19-b-lr-mini-pcie-card-db9e3e76c6edbdb6e50140dfcf0db572.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g19-c-5ghz-mini-pcie-card": {
+   "quick-guide-g19-c-5ghz-mini-pcie-card.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g19-c-5ghz-mini-pcie-card-f4019585614bb4fd41a8f3bc20f599ef.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g19-d-2-4-ghz-mini-pcie": {
+   "quick-guide-g19-d-2-4-ghz-mini-pcie.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g19-d-2-4-ghz-mini-pcie-b3c6c5fbffa954c7da9bc0990aa625ca.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g19-lte-mini-pcie-card": {
+   "quick-guide-g19-lte-mini-pcie-card.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g19-lte-mini-pcie-card-7e4c0536146ece0c7b75545eb574f4ed.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g2": {
+   "quick-guide-g2.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g2-6a1474e02bfe5b5bdacff1685099a559.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g20-5ghz-routerboard-series": {
+   "quick-guide-g20-5ghz-routerboard-series.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g20-5ghz-routerboard-series-b2e967cd3f2b223d91fdaa31364e072c.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g3": {
+   "quick-guide-g3.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g3-f746147fd01e1e2876151bc6baa86ce9.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g4": {
+   "quick-guide-g4.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g4-a63271e8f7384efc97e2db469064cbfe.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g5": {
+   "quick-guide-g5.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g5-eec78cf1fe81ddd9f781154654b5f60b.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g6": {
+   "quick-guide-g6.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g6-43cb900acec6de9096c542e3582d5bc6.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g7-basebox-2": {
+   "quick-guide-g7-basebox-2.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g7-basebox-2-978643ffbb357de7c660823338156290.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g8-a-cube-lite60": {
+   "quick-guide-g8-a-cube-lite60.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g8-a-cube-lite60-c4c145c39fe7a8ddf386291d21de8355.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g8-b-wap-60g-series": {
+   "quick-guide-g8-b-wap-60g-series.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g8-b-wap-60g-series-e4407b99da6c7c3a06178ce83cbcd13b.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g8-c-lhg-60g-series": {
+   "quick-guide-g8-c-lhg-60g-series.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g8-c-lhg-60g-series-ae35e5558a26c3e36f9363d682efa303.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g9-a": {
+   "quick-guide-g9-a.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g9-a-6be1dfcefe503b6e81222d29640c3486.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-g9-b": {
+   "quick-guide-g9-b.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-g9-b-2377d24f10a8952107d20ae53ee7f4b0.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-gpen21": {
+   "quick-guide-gpen21.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-gpen21-87d181ba57fb770587d3207f0a989c7e.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-groovea-52": {
+   "quick-guide-groovea-52.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-groovea-52-eeb0fb47d923d56abdbb4b1e54ee3fde.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-hap-ac-3": {
+   "quick-guide-hap-ac-3.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-hap-ac-3-2e8e79d7617cfde3b42220d70c8be80e.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-hap-ac": {
+   "quick-guide-hap-ac.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-hap-ac-416b8950905c59476f4623b1aebdfe57.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-hap-ax-3": {
+   "quick-guide-hap-ax-3.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-hap-ax-3-49d8bb9a2c6c83eb0b0962a58beb1b25.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-hap-ax-lite-lte6": {
+   "quick-guide-hap-ax-lite-lte6.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-hap-ax-lite-lte6-3680be031a203f3c1117718abb8a5edd.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-hap-ax-lite": {
+   "quick-guide-hap-ax-lite.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-hap-ax-lite-dc1c1c21ddba825898dbc31663f328ed.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-hap-ax": {
+   "quick-guide-hap-ax.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-hap-ax-5c05411c932277abb1e651ff681ebf6e.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-hex": {
+   "quick-guide-hex.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-hex-b1ac757953ee54d5170d5b298510dab4.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-knot-lr8-kit": {
+   "quick-guide-knot-lr8-kit.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-knot-lr8-kit-ee67e590cf16e9a6acaacf102e64ee35.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-knot-lr9-kit": {
+   "quick-guide-knot-lr9-kit.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-knot-lr9-kit-9f48b6eba6551cc5b31f44b61587b49d.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-knot-r5": {
+   "quick-guide-knot-r5.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-knot-r5-697c70fb62508f946a7b4381988522c7.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-l009uigs-2haxd-in": {
+   "quick-guide-l009uigs-2haxd-in.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-l009uigs-2haxd-in-9664955e2e09ecb194532ca76a82bd6a.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-l009uigs-rm": {
+   "quick-guide-l009uigs-rm.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-l009uigs-rm-b6688f467ee3a6884554c2f6c0173d20.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-l23ugsr-5haxd2haxd": {
+   "quick-guide-l23ugsr-5haxd2haxd.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-l23ugsr-5haxd2haxd-112054f2c642723b8f35599878dcf3d2.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-ldf-lte6-kit": {
+   "quick-guide-ldf-lte6-kit.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-ldf-lte6-kit-853d44b6048affe5bb703efd0f8c40c3.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-lhgg-lte6-kit": {
+   "quick-guide-lhgg-lte6-kit.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-lhgg-lte6-kit-4a65f9c91aee6073ab036b5cfcd136dd.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-lhggm-and-eg18-ea": {
+   "quick-guide-lhggm-and-eg18-ea.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-lhggm-and-eg18-ea-91dc9e8693260d1d245337023018db37.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/quick-guide-ltap-lr8-lte6-kit": {
+   "quick-guide-ltap-lr8-lte6-kit.pdf": "https://manual.mikrotik.com/assets/files/quick-guide-ltap-lr8-lte6-kit-0978a3966853dc0e1a9d643681365fa0.pdf"
+  },
+  "https://manual.mikrotik.com/hardware/safety-regulatory-information-chateau": {
+   "safety-regulatory-information-chateau.pdf": "https://manual.mikrotik.com/assets/files/safety-regulatory-information-chateau-0bc4b72905ed2fea5fc681678f056cb0.pdf"
+  }
+ }
+}

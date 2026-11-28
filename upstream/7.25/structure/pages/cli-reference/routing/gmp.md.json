@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/routing/gmp.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/gmp.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/gmp",
+  "md_sha256": "39af8401e6541db1238c40a6d43ab5cd6796b315a0c289c9cbec2601d193b2f0",
+  "html_sha256": "cad493f9d7155282c4fd133b74345d4d053b5a3c4f7b0bfd8a829fd0fbd62f1b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

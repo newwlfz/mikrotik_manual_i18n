@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/iot/mqtt/subscriptions/recv.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/iot/mqtt/subscriptions/recv.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/iot/mqtt/subscriptions/recv",
+  "md_sha256": "1b3768a66ac9238e18d38ca0526fb355205014f9aadf7d725842704eef61544b",
+  "html_sha256": "e7f2c1ba048b5db0831bf2d080b665cf23a7685909d953da44a7364ad35178c5",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

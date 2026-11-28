@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/eoipv6.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/eoipv6.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/eoipv6",
+  "md_sha256": "4b698c9b80b37c277cbdeeced03407fe0ae3ba2d767396c4903050487032591e",
+  "html_sha256": "1311ffebd5a616734f41997e931bd8374d452a81b20f015b037251f3f512fffd",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/ip/upnp.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/upnp.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/ip/upnp",
+  "md_sha256": "8395e4cb3a713ca67950e8c7f0d436591dd7f1a7d876e84cf85305d213819db1",
+  "html_sha256": "ccd3e8c8e1b0705c4114fbcb4adbf33f1a7c46f13fef43d62e5bfae3da052f2d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

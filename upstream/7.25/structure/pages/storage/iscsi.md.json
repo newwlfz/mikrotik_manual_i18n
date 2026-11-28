@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "storage/iscsi.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/storage/iscsi.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/storage/iscsi",
+  "md_sha256": "b0746140a1ad7e50e63de444381a1e866e6edb4bcf69524b80a8c3cfe18a3cec",
+  "html_sha256": "73eba8ba7b67a11946be998942d2edb06bd7f91b9e37c3fb74093965d80d3d19",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 5,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/ssh/known-hosts.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/ssh/known-hosts.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/ssh/known-hosts",
+  "md_sha256": "8e215ccc2b2941769152a34887530da74aca18334a322028859ca47a2a89782e",
+  "html_sha256": "79043afc7226dbeeb5ef8bd9107ec4c6e64547eb0c290fd819c695b5b694a628",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 5,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

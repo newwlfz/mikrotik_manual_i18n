@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/lte/esim/deactivate.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim/deactivate.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/lte/esim/deactivate",
+  "md_sha256": "4b87201ab318fc32624141ef30aa063846dde190da35b912fbd76c8822c15c30",
+  "html_sha256": "909a6d1aae6e482d2c590e882c1736fa6105b2e4e1f3494550379766bc60f35e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

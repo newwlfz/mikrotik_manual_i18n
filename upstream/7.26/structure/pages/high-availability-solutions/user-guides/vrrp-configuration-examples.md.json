@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "high-availability-solutions/user-guides/vrrp-configuration-examples.md",
+  "source_url": "https://manual.mikrotik.com/docs/high-availability-solutions/user-guides/vrrp-configuration-examples.md",
+  "html_url": "https://manual.mikrotik.com/docs/high-availability-solutions/user-guides/vrrp-configuration-examples",
+  "md_sha256": "2bac1e0107f3c9008822606a89693116d6ae9a26461b633e985711425fae4363",
+  "html_sha256": "35e66b3e052da5656e6f2a493556863b64e15911ee40eb843f5f31166502848b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 7,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

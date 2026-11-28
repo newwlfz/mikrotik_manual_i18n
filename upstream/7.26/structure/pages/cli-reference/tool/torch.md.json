@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/tool/torch.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/tool/torch.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/tool/torch",
+  "md_sha256": "53abbc9c73de26e2263c45412559be1cf61ccacd1bf91d381ffe40aec7c9872a",
+  "html_sha256": "e48a8ba63fab55823bc87a2970a0cfa13b70405f18b4da84fba3cd3d8dcb5538",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

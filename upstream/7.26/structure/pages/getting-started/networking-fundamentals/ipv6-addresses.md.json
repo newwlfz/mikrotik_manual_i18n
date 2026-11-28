@@ -1,0 +1,70 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "getting-started/networking-fundamentals/ipv6-addresses.md",
+  "source_url": "https://manual.mikrotik.com/docs/getting-started/networking-fundamentals/ipv6-addresses.md",
+  "html_url": "https://manual.mikrotik.com/docs/getting-started/networking-fundamentals/ipv6-addresses",
+  "md_sha256": "17b760ef52804eac417cb035f83c4f0ac263f156b1e62491329dc38c88c8d244",
+  "html_sha256": "8786a21d15a68704823c1d48dbdf2e333bd3dfb39b44e9ededfb0786709464df",
+  "body": {
+    "html": {
+      "lists": 7,
+      "listItems": 30,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 15,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 30,
+      "listItems": 30,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 30,
+      "listItems": 30,
+      "br": 0,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

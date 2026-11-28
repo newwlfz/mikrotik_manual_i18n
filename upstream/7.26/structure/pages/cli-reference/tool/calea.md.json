@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/tool/calea.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/tool/calea.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/tool/calea",
+  "md_sha256": "6b756faf1709b3c081b36926e3b8f7d1d68542fbd37eaea03fe3cb01e7c1f154",
+  "html_sha256": "016a9e4e6e710590f7da701d0801b8daf4a570c4f62772c71b85569023ace5d6",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

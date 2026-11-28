@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/history.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/history.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/history",
+  "md_sha256": "172b61f6c23e12caab44ce526775c8ce29b415e9d22f349b69433b14fac38a37",
+  "html_sha256": "eba9d8fefe82c437e7bf03f7c8d50574e0d2d23e9aed7970efbd1a85aea4bf51",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 4,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/caps-man/interface/scan.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/caps-man/interface/scan.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/caps-man/interface/scan",
+  "md_sha256": "a9583a471219b23657718fa81c7704457b74c0bbd65cf2e862ab56848cde7ac2",
+  "html_sha256": "a7414c06702d5e7c863599304566f67b6038dcae44b935391216d64c452487a9",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

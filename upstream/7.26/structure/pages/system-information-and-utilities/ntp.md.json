@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "system-information-and-utilities/ntp.md",
+  "source_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/ntp.md",
+  "html_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/ntp",
+  "md_sha256": "aeea2993b597888a5ecb3ac5943a42758d2cf29e6eec2c13572ba91bc19068e2",
+  "html_sha256": "070fde5f87565d403bcbbcd2c089e2f358b2c79b397cb0038f39963f8de5e690",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 53,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

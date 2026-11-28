@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/radius/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/radius/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/radius/monitor",
+  "md_sha256": "51fb10be332db5cade673e4c78f5475f97183f8dbb973c36228c2e34eb0f1ba1",
+  "html_sha256": "f62c0423a4fc5a7ca435b39d157fab953e714ffa4ab8a4f083cae1cebccb9578",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

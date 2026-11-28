@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/user-manager/database.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/database.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/database",
+  "md_sha256": "292634a2b2bb5660024fe0cbf73e7a5e2d61780d1183da05ac2d692a82a03918",
+  "html_sha256": "4887da8333a4eeee7df9f71b2ae627a367b1c9c4505d7be3236e855294a8695c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

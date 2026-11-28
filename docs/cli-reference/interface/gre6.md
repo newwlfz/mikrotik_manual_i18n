@@ -1,0 +1,47 @@
+---
+sidebar_key: "cli-reference/interface/gre6"
+sidebar_position: 11
+title: "gre6"
+sidebar_label: 'gre6'
+source: https://manual.mikrotik.com/docs/cli-reference/interface/gre6
+captured_at: '2026-11-28T10:14:44.799Z'
+---
+
+-----------
+
+## interface/gre6 
+**Type:** Directory
+
+[Generic Routing Encapsulation (GRE)](/docs/virtual-private-networks/gre) is a tunneling protocol originally developed by Cisco to encapsulate a wide variety of network layer protocols over an IP network.
+
+<ArgTable c1="Flag" c2="Name" c3="Description">
+<ArgTableRow arg="X" typ="disabled">disabled</ArgTableRow>
+<ArgTableRow arg="R" typ="running">running</ArgTableRow>
+</ArgTable>
+
+<ArgTable c1="Argument" c2="Type" c3="Description">
+<ArgTableRow arg="name" typ="string">Name of the tunnel.</ArgTableRow>
+<ArgTableRow arg="mtu" typ="num">Layer3 maximum transmission unit of the tunnel. Default: `auto` — the router subtracts the 44-byte GRE/IPv6 overhead from the outgoing interface MTU (actual-mtu is 1456 on a 1500-byte interface).</ArgTableRow>
+<ArgTableRow arg="local-address" typ="ip6Addr">IPV6 address used for the local tunnel end.</ArgTableRow>
+<ArgTableRow arg="remote-address" typ="address (flags=6Dvi)" mandatory="1">IPv6 address or DNS name of the remote tunnel end. With a DNS name, the router resolves the name (AAAA record), shows the address in `current-remote-address`, and follows the record when it changes.</ArgTableRow>
+<ArgTableRow arg="keepalive" typ="super { keepalive-interval: time [1 .. ]
+, [keepalive-retries] [ ,num [1 .. ]]
+ }">
+The keepalive parameter sets how often the router checks the remote end of the tunnel: the router sends GRE echo probes to the remote end every `KeepaliveInterval` seconds, repeated up to `KeepaliveRetries` times. The minimum interval is 1 second and a 0-second setting is rejected. If the configured time and retries fail (the remote end does not answer the probes), the tunnel loses the running flag, about interval x retries after the last answered probe — about 100 s with the default. Without keepalive (unset), no probes are sent and the tunnel keeps the running flag even when the remote end stops answering; the tunneled traffic is then dropped until the remote end responds again. By default keepalive is set to 10 seconds and 10 retries.  
+Parameters are written in the following format: `KeepaliveInterval,KeepaliveRetries`  
+ where KeepaliveInterval is the time interval and KeepaliveRetries is the number of retry attempts.
+</ArgTableRow>
+<ArgTableRow arg="dscp" typ="num">DSCP value of the packet. Inherited means the DSCP value is inherited from the tunneled traffic.</ArgTableRow>
+<ArgTableRow arg="clamp-tcp-mss" typ="bool">Controls whether to change the MSS size for received TCP SYN packets. When enabled, the router changes the MSS size for received TCP SYN packets if the current MSS size exceeds the tunnel interface MTU (taking into account the TCP/IP overhead). The received encapsulated packet still contains the original MSS, and only after decapsulation the MSS is changed.</ArgTableRow>
+<ArgTableRow arg="dont-fragment" typ="bool">
+Whether to include the DF bit in related packets. Default: `no` — `yes` is rejected on RouterOS 7, only `no` and `inherit` are valid.
+- `no` - fragment if needed.
+- `inherit` - use the DF flag of the original packet.
+</ArgTableRow>
+<ArgTableRow arg="ipsec-secret" typ="string" syscap="security">When a secret is specified, the router adds a dynamic IPsec peer to remote-address with a pre-shared key and policy (by default phase2 uses sha1/aes128cbc).</ArgTableRow>
+</ArgTable>
+
+<ArgTable c1="Read-only Argument" c2="Type" c3="Description">
+<ArgTableRow arg="actual-mtu" typ="num">Actual maximum transmission unit of the tunnel.</ArgTableRow>
+<ArgTableRow arg="current-remote-address" typ="ip6Addr">IPv6 address the tunnel sends to. When `remote-address` is a DNS name, this is the address the name resolved to.</ArgTableRow>
+</ArgTable>

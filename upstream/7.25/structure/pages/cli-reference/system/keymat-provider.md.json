@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/keymat-provider.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/keymat-provider.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/keymat-provider",
+  "md_sha256": "16d1b05d71c050d5ff5afca57530b65fe013970f32ec1f3158cf53762dfcbcaf",
+  "html_sha256": "1992ca5b56ee5dafe0428b4541a042e97b7caf6435a3a2e64bbcf0899c96e7aa",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

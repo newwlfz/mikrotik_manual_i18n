@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "virtual-private-networks/ipsec/site-to-site.md",
+  "source_url": "https://manual.mikrotik.com/docs/virtual-private-networks/ipsec/site-to-site.md",
+  "html_url": "https://manual.mikrotik.com/docs/virtual-private-networks/ipsec/site-to-site",
+  "md_sha256": "ef4ce33968ffbccdaaf0a20211f0f413c6f41980b6ca32bc4461537226a98872",
+  "html_sha256": "98b656f427a958366c4b71d8db3188f847b06bea266d436e83e5e5f59539faba",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 27,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 7,
+      "listItems": 7,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

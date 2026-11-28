@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "firewall-and-quality-of-service/queues/simple-queue.md",
+  "source_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/simple-queue.md",
+  "html_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/queues/simple-queue",
+  "md_sha256": "4d67f0f0717a23a05f40663787155c90f11bd693838d80e967aee938d90ab651",
+  "html_sha256": "c9c102c7d2917e9c8ddfd0bddf80c31d238a8d56d3f0d53b3e7af6cbe0b12601",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 32,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

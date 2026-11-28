@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "virtual-private-networks/openvpn.md",
+  "source_url": "https://manual.mikrotik.com/docs/virtual-private-networks/openvpn.md",
+  "html_url": "https://manual.mikrotik.com/docs/virtual-private-networks/openvpn",
+  "md_sha256": "e81d3ded92c2479b94cf13db7bc661d648610e7cd95edb9051c5131afd799166",
+  "html_sha256": "6288bbc7bdbeec9244e40bf03e9c386c51e584be767db53033e20e70ef86c054",
+  "body": {
+    "html": {
+      "lists": 7,
+      "listItems": 21,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 65,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 21,
+      "listItems": 21,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 21,
+      "listItems": 21,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 5,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

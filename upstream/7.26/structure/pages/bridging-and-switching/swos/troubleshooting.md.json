@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "bridging-and-switching/swos/troubleshooting.md",
+  "source_url": "https://manual.mikrotik.com/docs/bridging-and-switching/swos/troubleshooting.md",
+  "html_url": "https://manual.mikrotik.com/docs/bridging-and-switching/swos/troubleshooting",
+  "md_sha256": "06ada40c735a0614a0248dc1c6858ea79f2c0d443e8ad713fbe10f6efb5934f8",
+  "html_sha256": "b895a4ba4a2c3cc88876d6bffcc698121a3907bdec6d7ceafa74875d58e7aaba",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 11,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 11,
+      "listItems": 11,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 11,
+      "listItems": 11,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 6,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

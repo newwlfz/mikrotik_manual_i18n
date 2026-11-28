@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/lte/run-modem-update.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/lte/run-modem-update.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/lte/run-modem-update",
+  "md_sha256": "212649227f7e1eb3e6344d91881aff37cbce5d358db97c74dbc4f1fdcaeffc74",
+  "html_sha256": "d2c4cf9109f9c432d0cca4abd15fa3df250b9063c1c163d68c8fe12d98b9737b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

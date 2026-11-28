@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/cmr/upgrade/job/run-next.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/upgrade/job/run-next.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/upgrade/job/run-next",
+  "md_sha256": "48465b0c465d4a629b10d2057580433f15a0f8ab9d3847a86290ee5525af311a",
+  "html_sha256": "b1ff01d4d45e715e8970d6544996e889ca5fdc980f241ea48335cd33117d49e9",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

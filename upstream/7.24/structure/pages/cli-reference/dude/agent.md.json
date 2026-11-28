@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/dude/agent.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/dude/agent.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/dude/agent",
+  "md_sha256": "08347e0b65114ba46fb957c211b1688c3089bb4f1b3780b23f31d014dd276bcb",
+  "html_sha256": "8b8be01eb67dff556eb42c6af3f67359d7b2bc3beace1e028b7d5c8965324598",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

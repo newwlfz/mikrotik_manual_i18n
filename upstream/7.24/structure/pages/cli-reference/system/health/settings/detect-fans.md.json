@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "cli-reference/system/health/settings/detect-fans.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/health/settings/detect-fans.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/cli-reference/system/health/settings/detect-fans",
+  "md_sha256": "33ce9d55eb80b1000b54e3a463d5f0e27f3c48694bc127428a4a3c0a96eb3e6e",
+  "html_sha256": "703b56f3f8d97d9e001909224cd755166f319d2b927c05163e14f6fda5d012dc",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 3,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

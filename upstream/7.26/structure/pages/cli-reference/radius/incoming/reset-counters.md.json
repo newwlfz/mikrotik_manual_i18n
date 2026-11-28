@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/radius/incoming/reset-counters.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/radius/incoming/reset-counters.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/radius/incoming/reset-counters",
+  "md_sha256": "8df2bbb0076526816ee8e156e03296cf8eee2e0d66fedf00aec716ac0f63d956",
+  "html_sha256": "1f5ae72dd1d46c0fd3eaf14bf09deb3269d7aaf4f2e1eaf2d0b732a1e69de2ea",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/bgp/evpn/esi.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/bgp/evpn/esi.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/bgp/evpn/esi",
+  "md_sha256": "314e4dad977cc33621eeed42695cce2b8fb85de8ece05415c89d448cfead47b4",
+  "html_sha256": "09e1788b1ab44e5e1eb3d797b4b144f727dcfc93dbcf3ae1cc11c1d3b523007c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/hotspot/walled-garden.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/walled-garden.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/walled-garden",
+  "md_sha256": "fc4ff1af27b7e42ee10227753835320095e0bbefa7a915d28e849f00f61538ae",
+  "html_sha256": "ec486c6472ff75675e5dc2d521e076b23920a79e5206ef42a166c773c6dc33a7",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

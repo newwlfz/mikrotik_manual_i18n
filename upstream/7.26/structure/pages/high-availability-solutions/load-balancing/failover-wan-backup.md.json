@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "high-availability-solutions/load-balancing/failover-wan-backup.md",
+  "source_url": "https://manual.mikrotik.com/docs/high-availability-solutions/load-balancing/failover-wan-backup.md",
+  "html_url": "https://manual.mikrotik.com/docs/high-availability-solutions/load-balancing/failover-wan-backup",
+  "md_sha256": "5dae566f70bd4ba606a5b56db9be0831969daa58224b687852d5def099a02b13",
+  "html_sha256": "84f29dbaa912fe887c08ade7e8d7975f5d51654bd60252866737c63f658dc365",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 26,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

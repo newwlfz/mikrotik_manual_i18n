@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "wireless/wifi/configuring-enterprise-and-mac-authentication.md",
+  "source_url": "https://manual.mikrotik.com/docs/wireless/wifi/configuring-enterprise-and-mac-authentication.md",
+  "html_url": "https://manual.mikrotik.com/docs/wireless/wifi/configuring-enterprise-and-mac-authentication",
+  "md_sha256": "16209ae61494b434dc2832bc6b3820f52aa842f998da62bba7e6913474cb871c",
+  "html_sha256": "82d9cc5e285cdb39e7f6849af076fb3b81dcd4882bd70c28a3965c8313f3d144",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 55,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

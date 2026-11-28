@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/package/local-update/download-all.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/package/local-update/download-all.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/package/local-update/download-all",
+  "md_sha256": "fa6646a5d44f6fce765fc63bf1d944769ee546ce06d9a49a87019ece7392c502",
+  "html_sha256": "a827e3200986ad4a35367c83ead28f5e642580cf9d32fe5023445f60f5f034d8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

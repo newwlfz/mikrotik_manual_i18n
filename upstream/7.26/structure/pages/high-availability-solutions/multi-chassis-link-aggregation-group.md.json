@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "high-availability-solutions/multi-chassis-link-aggregation-group.md",
+  "source_url": "https://manual.mikrotik.com/docs/high-availability-solutions/multi-chassis-link-aggregation-group.md",
+  "html_url": "https://manual.mikrotik.com/docs/high-availability-solutions/multi-chassis-link-aggregation-group",
+  "md_sha256": "1a4cd07e4e1a50cb25fa8f549e6121a5841187fe69d0e8980f609f3adc6119fb",
+  "html_sha256": "5f463baf9d3307c94a5939744714ee7be55b8f0a582b6a67990b0d9193c97d69",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 41,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {
+      "br": [
+        0,
+        2
+      ]
+    }
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/certificate/scep-server/requests/grant.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/certificate/scep-server/requests/grant.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/certificate/scep-server/requests/grant",
+  "md_sha256": "ae1b55daf51997b7a6e1f629e725aa31e8c6b0dbba8bc790cf96df54014baceb",
+  "html_sha256": "f1e3b977c5e2fe8dd8ba100e995348df2b35d6530f280adc6900345329bd478b",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

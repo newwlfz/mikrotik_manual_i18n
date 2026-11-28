@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/bridge/filter/reset-counters.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/bridge/filter/reset-counters.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/bridge/filter/reset-counters",
+  "md_sha256": "2ed516d776f0e6e228c1f110a2f1b153bb7e1fbb606f8fe5bea4ea468028df10",
+  "html_sha256": "3a69852ffd180302b35e2a8d903a90d5c7f59a46c32440271d2654dcfb2afaad",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

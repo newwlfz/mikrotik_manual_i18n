@@ -1,0 +1,12 @@
+---
+title: "replace-cancel"
+source: https://manual.mikrotik.com/docs/7.24/cli-reference/disk/btrfs/filesystem/replace-cancel
+captured_at: '2026-11-28T10:19:39.818Z'
+---
+
+-----------
+
+## disk/btrfs/filesystem/replace-cancel 
+**Conditions:** !smips
+**Syscap:** storage
+**Type:** Command

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/macvlan.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/macvlan.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/macvlan",
+  "md_sha256": "ca8d71393bde41d30e79ae0e440aa8c98a56a71a2a8f7b7c52ce1a0ef07b2b45",
+  "html_sha256": "b66297577870bd0b2f8926e274ea6a88be4977ed4cea43a9460bed67289961e9",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

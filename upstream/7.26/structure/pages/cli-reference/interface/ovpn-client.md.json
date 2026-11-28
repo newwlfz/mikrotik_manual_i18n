@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/ovpn-client.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ovpn-client.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/ovpn-client",
+  "md_sha256": "f74d0fccdbac54013c413de4d8ee6ba20d384f21da17c79ce509d3f44222c5ec",
+  "html_sha256": "c02c76fe678f153e01bb014f0cdb6cfa18695151837a1966340b0cae82cfa3e9",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

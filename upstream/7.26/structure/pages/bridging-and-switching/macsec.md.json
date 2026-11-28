@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "bridging-and-switching/macsec.md",
+  "source_url": "https://manual.mikrotik.com/docs/bridging-and-switching/macsec.md",
+  "html_url": "https://manual.mikrotik.com/docs/bridging-and-switching/macsec",
+  "md_sha256": "f38f4a3d37e36bf75823f860843f4dea2b62c422c8f12d5abb0530cefd38809d",
+  "html_sha256": "a4c3a0aab09fa0fb9b30453fc33bf3a85901620a4bac9cb16b113ddafa991b71",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 29,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

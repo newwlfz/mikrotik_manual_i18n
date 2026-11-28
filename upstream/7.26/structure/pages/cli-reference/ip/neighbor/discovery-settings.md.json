@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/neighbor/discovery-settings.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/neighbor/discovery-settings.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/neighbor/discovery-settings",
+  "md_sha256": "8d41c9ead5c40d5286fc03cd51883494350347f104a5cd468cba6b5c8cd1d70c",
+  "html_sha256": "a89a05459aa5933f9f8142ebffb36635ae2581bf29cf3cfd87948fb53e0c76dd",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/sync-e/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/sync-e/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/sync-e/monitor",
+  "md_sha256": "99879935ee192ae1c4cb16324d3cc1b62d0cc4b5a72f270efab6146c393c9e7e",
+  "html_sha256": "5ae31aaae566b377b7b578d27939514152fa867d5a154e256452ecd9c9f26ba7",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

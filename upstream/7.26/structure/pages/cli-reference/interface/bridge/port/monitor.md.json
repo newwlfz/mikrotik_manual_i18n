@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/bridge/port/monitor.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/bridge/port/monitor.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/bridge/port/monitor",
+  "md_sha256": "175d69274fdd1b8e8e1dfa07886ab1a399fbbc69c74e8acaeb80ae02be096289",
+  "html_sha256": "850365751a0d50c1b3167d3befe9dc91bf516897d2d8c86a7e91d24062a20ffa",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 8,
+      "listItems": 8,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "management-tools/dude.md",
+  "source_url": "https://manual.mikrotik.com/docs/management-tools/dude.md",
+  "html_url": "https://manual.mikrotik.com/docs/management-tools/dude",
+  "md_sha256": "727cad5f2dac9c8758a88e80683c9eee78a5cf57b0b952a1f6355da8433312dd",
+  "html_sha256": "aa0af6dc60a3c6b6946d5aec7e7a70a43fe8d89962b5f68bc3812e90858ae067",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 7,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

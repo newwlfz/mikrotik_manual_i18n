@@ -1,0 +1,9 @@
+{
+  "key": "quick-guides",
+  "label": "Quick Guides",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "quick-guides/quick-guide-5ghz-routerboard-ax-series"
+  }
+}

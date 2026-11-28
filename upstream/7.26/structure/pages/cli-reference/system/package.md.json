@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/package.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/package.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/package",
+  "md_sha256": "03156b6bccc007228a31a23cfee70873d299924dcadc1caf0b265ed1101e9c47",
+  "html_sha256": "a1b86751e2213a58d2ed671825f76edaa545d9e409579dec7501b755e8af0355",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

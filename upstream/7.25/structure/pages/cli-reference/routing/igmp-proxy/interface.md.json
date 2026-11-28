@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/routing/igmp-proxy/interface.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/igmp-proxy/interface.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/routing/igmp-proxy/interface",
+  "md_sha256": "3ac099d8a398f7d35e7ee988eb94595d3e1b10c53057a67ec7f5425e4aa025cd",
+  "html_sha256": "7645e086b0e4dfc70b93f9708a63a8a7fa52723bd9bfa648ffaa54836606d82c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

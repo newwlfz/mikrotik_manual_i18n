@@ -1,0 +1,78 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "authentication-authorization-accounting/hotspot-captive-portal.md",
+  "source_url": "https://manual.mikrotik.com/docs/authentication-authorization-accounting/hotspot-captive-portal.md",
+  "html_url": "https://manual.mikrotik.com/docs/authentication-authorization-accounting/hotspot-captive-portal",
+  "md_sha256": "c242e99c78029bc32fcfb39e32ba504c1ade80a478ab680844bef542ed3ca0a4",
+  "html_sha256": "ac3ab90bd709f6dcf71380277a0c380a699cf3bb0f6984cc88e79eba7fee2760",
+  "body": {
+    "html": {
+      "lists": 10,
+      "listItems": 38,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 127,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 38,
+      "listItems": 38,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 38,
+      "listItems": 38,
+      "br": 0,
+      "details": 0,
+      "tables": 4,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 10,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 9,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 2,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 3,
+      "rows": 5,
+      "cols": 3,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

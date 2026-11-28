@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/dashboard/settings.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/dashboard/settings.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/dashboard/settings",
+  "md_sha256": "424778b0dbc809fdc3e86aad7bcfa10232b07fe1ec01d33749b4cef4513b950a",
+  "html_sha256": "900b5f3eb2372e2ce1e41b924538bf0978e0b365ecb97f11cd3ffe70c4d1a8a4",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

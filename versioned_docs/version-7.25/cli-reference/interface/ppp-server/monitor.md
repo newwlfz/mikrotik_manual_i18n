@@ -1,0 +1,27 @@
+---
+title: "monitor"
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/interface/ppp-server/monitor
+captured_at: '2026-11-28T10:17:19.424Z'
+pagination_prev: "cli-reference/interface/ppp-server"
+pagination_next: "cli-reference/interface/pppoe-client"
+---
+
+-----------
+
+## interface/ppp-server/monitor 
+**Type:** Command
+
+<ArgTable c1="Read-only Argument" c2="Type" c3="Description">
+<ArgTableRow arg="status" typ="string"></ArgTableRow>
+<ArgTableRow arg="uptime" typ="time"></ArgTableRow>
+<ArgTableRow arg="user" typ="string"></ArgTableRow>
+<ArgTableRow arg="caller-id" typ="string"></ArgTableRow>
+<ArgTableRow arg="encoding" typ="string"></ArgTableRow>
+<ArgTableRow arg="connect-speed" typ="num"></ArgTableRow>
+<ArgTableRow arg="mtu" typ="num"></ArgTableRow>
+<ArgTableRow arg="mru" typ="num"></ArgTableRow>
+<ArgTableRow arg="local-address" typ="ipAddr"></ArgTableRow>
+<ArgTableRow arg="remote-address" typ="ipAddr"></ArgTableRow>
+<ArgTableRow arg="local-ipv6-address" typ="ip6Addr"></ArgTableRow>
+<ArgTableRow arg="remote-ipv6-address" typ="ip6Addr"></ArgTableRow>
+</ArgTable>

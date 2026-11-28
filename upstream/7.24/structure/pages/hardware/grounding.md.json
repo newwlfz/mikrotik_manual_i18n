@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.24",
+  "local_path": "hardware/grounding.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.24/hardware/grounding.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.24/hardware/grounding",
+  "md_sha256": "7c21cd22a9b03288757fb4e317b72acfe9d53642332793298ab96d3dde23e3ff",
+  "html_sha256": "25825fa8f4816f4c8b05965635ec8c2b6279c22341f388834a67b76cfe3fd5d4",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

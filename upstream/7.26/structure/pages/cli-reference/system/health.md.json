@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/system/health.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/system/health.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/system/health",
+  "md_sha256": "004c57d9534ea9b429b06cce8e1852b3d7771b10ea84a14752e9606865b593c6",
+  "html_sha256": "2a06f48d79267df88ee77b9ed42e768abe68ad1cc2adba332c38baa6aeafa589",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 5,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

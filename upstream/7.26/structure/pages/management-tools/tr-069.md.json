@@ -1,0 +1,62 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "management-tools/tr-069.md",
+  "source_url": "https://manual.mikrotik.com/docs/management-tools/tr-069.md",
+  "html_url": "https://manual.mikrotik.com/docs/management-tools/tr-069",
+  "md_sha256": "656b889956555e60b0e36872f8d8e55f6dd294c9c491719ce28c311e833dd0af",
+  "html_sha256": "fc8b2f7b0d036e2d58c1963e030602f8263b9a77ccbd03bc36b7669556f838ce",
+  "body": {
+    "html": {
+      "lists": 7,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 73,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 18,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 18,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    },
+    {
+      "index": 1,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "management-tools/cmr/client.md",
+  "source_url": "https://manual.mikrotik.com/docs/management-tools/cmr/client.md",
+  "html_url": "https://manual.mikrotik.com/docs/management-tools/cmr/client",
+  "md_sha256": "f89d5885da493e13428bafa692efa48616795f80d032a5dbd0ccec1bd64e4097",
+  "html_sha256": "1e3248b8b8ac8b08c8e4c8075583cbb727ae523c87e6d694d55470d43dcef4d7",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 43,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

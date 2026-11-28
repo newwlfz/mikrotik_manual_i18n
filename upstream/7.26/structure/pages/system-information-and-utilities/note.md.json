@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "system-information-and-utilities/note.md",
+  "source_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/note.md",
+  "html_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/note",
+  "md_sha256": "479766c554d605e8f33fa23c52df13f323a515037096be16a723ea12944f6905",
+  "html_sha256": "99ca42dada8ec0b2e6a4862c0474d906bcd8f085ad9beb96363bded39d067d26",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 11,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

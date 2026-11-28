@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/pppoe-client.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/pppoe-client.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/pppoe-client",
+  "md_sha256": "1bccf41d6582f9ac154ef55b7ce73ae5c8e14b29cbe4f4f876372e0ef11f6794",
+  "html_sha256": "28d66a8bf07581ecc163c44d32c9ed937458aff2928f18af87d68ab7ffdc9c41",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/user-manager/session.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/session.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/session",
+  "md_sha256": "6b84fd714b1a28bd689d5fb9eefde62cd00fdeee74a0f1aacf8bb92631ec610c",
+  "html_sha256": "a238c54c83ef24ebc8a0c0610c9f206e776d88abb333a764de48189e6baac152",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

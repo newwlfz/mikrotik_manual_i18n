@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "containers/user-guides/container-rke2-kubernetes.md",
+  "source_url": "https://manual.mikrotik.com/docs/containers/user-guides/container-rke2-kubernetes.md",
+  "html_url": "https://manual.mikrotik.com/docs/containers/user-guides/container-rke2-kubernetes",
+  "md_sha256": "086438d45991a94bd1a423e2cfba3c7911dbdf50ec5b8653017a53ad836f7d88",
+  "html_sha256": "d35488109f032e53c8ec54bae77b8ea57781dc6556138c71d5f5215fe133ab01",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 56,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 13,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 13,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 8,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

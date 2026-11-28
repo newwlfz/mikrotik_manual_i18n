@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "wireless/wifi/configuring-steering.md",
+  "source_url": "https://manual.mikrotik.com/docs/wireless/wifi/configuring-steering.md",
+  "html_url": "https://manual.mikrotik.com/docs/wireless/wifi/configuring-steering",
+  "md_sha256": "d31a282106dbdd30c81062072cde8c8fc91cfae0749b2afa3696253b401aef15",
+  "html_sha256": "388b3f62a86f17520ee9c8676e53dc24166f0a156c7042688a3fa4ec87b508c2",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 1,
+      "code": 31,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 13,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 1,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 13,
+      "listItems": 13,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 1,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/bridge/vlan.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/bridge/vlan.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/bridge/vlan",
+  "md_sha256": "9f7b18fb2c62e3189a22057391116b346bfdcc518224b54a8b440b01b7fd8878",
+  "html_sha256": "70c4974f8f8d1f7b382d70b79e0ea143dc5b8ec8863145c5b3672be743f1cbf8",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

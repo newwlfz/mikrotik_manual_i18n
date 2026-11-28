@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/cmr/layout/rebuild-links.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/layout/rebuild-links.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/cmr/layout/rebuild-links",
+  "md_sha256": "157d9ebd2e69962a5c8f51bb5c88fd44fb7a61c67ad3d8cfbf12e971f3b18313",
+  "html_sha256": "005408e8167fb18b402c73f37a95bdb6dc00c950f824086c1d2d68f5dce4bfd5",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

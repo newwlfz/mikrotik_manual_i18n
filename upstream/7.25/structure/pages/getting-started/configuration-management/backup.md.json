@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "getting-started/configuration-management/backup.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/getting-started/configuration-management/backup.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/getting-started/configuration-management/backup",
+  "md_sha256": "d4d6ef2881b45a97af30ab506c8254032e2831c6922a0e3e5d0ec54f0a69c5b8",
+  "html_sha256": "1ad34bc341da8ea4afc58c2c4bf919a45781534773f63437aae99c41de55a720",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 5,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

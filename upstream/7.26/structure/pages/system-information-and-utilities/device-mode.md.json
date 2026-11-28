@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "system-information-and-utilities/device-mode.md",
+  "source_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/device-mode.md",
+  "html_url": "https://manual.mikrotik.com/docs/system-information-and-utilities/device-mode",
+  "md_sha256": "576253c8f6063682b2a448aa439046ffa6e50adfcc2f5cd42ce61ecb7c1cec99",
+  "html_sha256": "771ab551cefb7b82a4d6b477ad8a5f0ea7ccfbf8cd2716de3b4b7f6acd0ba2ee",
+  "body": {
+    "html": {
+      "lists": 2,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 33,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 4,
+      "listItems": 4,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 20,
+      "cols": 6,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

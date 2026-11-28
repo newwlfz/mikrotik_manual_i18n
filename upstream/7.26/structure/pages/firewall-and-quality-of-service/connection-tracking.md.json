@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "firewall-and-quality-of-service/connection-tracking.md",
+  "source_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/connection-tracking.md",
+  "html_url": "https://manual.mikrotik.com/docs/firewall-and-quality-of-service/connection-tracking",
+  "md_sha256": "f604646cd339affe705b55a79ecf22a3b29b6cf431b4f7578e7634489c1d4df4",
+  "html_sha256": "f6616e1e9307a890c80465a904c98be5da09ed1d3ea34214f95815c88d34bece",
+  "body": {
+    "html": {
+      "lists": 9,
+      "listItems": 36,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 83,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 36,
+      "listItems": 36,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 36,
+      "listItems": 36,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

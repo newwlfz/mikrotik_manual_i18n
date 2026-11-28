@@ -1,0 +1,15 @@
+---
+title: "disconnect"
+source: https://manual.mikrotik.com/docs/7.25/cli-reference/iot/bluetooth/connections/disconnect
+captured_at: '2026-11-28T10:17:19.424Z'
+---
+
+-----------
+
+## iot/bluetooth/connections/disconnect 
+**Package:** iot
+**Type:** Command
+
+<ArgTable c1="Argument" c2="Type" c3="Description">
+<ArgTableRow arg="pdev" typ="enum ()"></ArgTableRow>
+</ArgTable>

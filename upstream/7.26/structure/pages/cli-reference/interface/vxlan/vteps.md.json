@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/vxlan/vteps.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/vxlan/vteps.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/vxlan/vteps",
+  "md_sha256": "6fd3b9c869f76604a2045b8bf811288cbb382ce713fe86a362adb2248fe793a5",
+  "html_sha256": "1516932d60fa6fc09bd7938492fccae0e8a57560e2b3f64f43351f6a0f158d15",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

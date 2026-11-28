@@ -1,0 +1,144 @@
+---
+sidebar_key: "virtual-private-networks/gre"
+sidebar_position: 3
+title: "GRE"
+sidebar_label: 'GRE'
+description: 'Generic Routing Encapsulation (GRE) is a tunneling protocol that encapsulates IP over IP as a virtual point-to-point link in RouterOS, with keepalive monitoring, MTU and MSS handling, DSCP settings and an optional IPsec-secret for encrypted tunnels.'
+tags:
+  - 'gre'
+source: https://manual.mikrotik.com/docs/virtual-private-networks/gre
+captured_at: '2026-11-28T10:14:44.799Z'
+---
+
+Generic Routing Encapsulation (GRE) is a tunneling protocol originally developed by Cisco to encapsulate a wide variety of network layer protocols over an IP network. It creates a virtual point-to-point link between tunnel endpoints, allowing different protocol traffic to be carried across routed infrastructure.
+
+In RouterOS, GRE is implemented as virtual interfaces in the [`/interface/gre`](/docs/cli-reference/interface/gre) (over IPv4) and [`/interface/gre6`](/docs/cli-reference/interface/gre6) (over IPv6) menus. The interfaces are routed (Layer 3) tunnels: a GRE tunnel carries only IP and IPv6 packets between the two endpoints. For Layer 2 connectivity over an IP network (bridging Ethernet frames), use [EoIP](/docs/virtual-private-networks/eoip) instead.
+
+## How the tunnel works
+
+GRE is a stateless tunnel, similar in behavior to [IPIP](/docs/virtual-private-networks/ipip) and EoIP. No session state is maintained between the endpoints: the router keeps forwarding packets toward the remote endpoint even if it becomes unreachable, and the tunneled traffic is dropped until connectivity is restored or the tunnel is reconfigured.
+
+The router considers the tunnel **running** (the `R` flag) after the remote end has responded at least once. Keepalive monitors the remote end from then on: the router sends GRE echo probes to the remote-address every keepalive interval and answers the remote end's probes while the tunnel is up. Keepalive is enabled by default (`10s,10` — interval 10 seconds, 10 retries) and the interval can be as short as 1 second for faster detection (a 0-second setting is rejected). If the remote end stops answering the probes, the router removes the running flag after the configured time and retries — about 100 s with the default, faster with a shorter interval — and the tunneled traffic is dropped until the remote end answers again. Without keepalive (unset) nothing removes the running flag, so a tunnel to an unreachable remote end stays running. If an automated failover must react to a dead tunnel, watch the running flag (its removal follows the keepalive timeouts) or probe the remote end directly.
+
+:::tip
+A GRE tunnel adds per-packet overhead: over IPv4 24 bytes (4-byte GRE header + 20-byte IP header), over IPv6 44 bytes (4-byte GRE header + 40-byte IPv6 header). With the default `mtu=auto` the router sets the tunnel MTU accordingly — `actual-mtu` is 1476 on a 1500-byte interface for GRE over IPv4 and 1456 for GRE over IPv6. The tunnel carries only IP and IPv6 packets (EtherType 0x0800 and 0x86DD). Do not use the "Check gateway" option `arp` when a GRE tunnel is used as a route gateway.
+:::
+
+All GRE properties are described in the [`/interface/gre`](/docs/cli-reference/interface/gre) and [`/interface/gre6`](/docs/cli-reference/interface/gre6) CLI references.
+
+## Example: connect two sites
+
+The example connects two sites over the internet with a GRE tunnel and gives each site Layer 3 access to the other site's local network.
+
+![GRE tunnel between two sites](/img/6412953c9c3ec94f.webp)
+
+**Site1** has the local network **10.1.101.0/24**, **Site2** the local network **10.1.202.0/24**. The tunnel endpoints are the routers' public addresses, here **192.168.80.1** (Site1) and **192.168.90.1** (Site2) — substitute your routers' own internet addresses.
+
+Create the tunnel on the Site1 router:
+
+```ros
+/interface/gre/add name=myGre \
+    remote-address=192.168.90.1 local-address=192.168.80.1
+```
+
+And on the Site2 router:
+
+```ros
+/interface/gre/add name=myGre \
+    remote-address=192.168.80.1 local-address=192.168.90.1
+```
+
+:::note
+The example leaves keepalive at its default (`10s,10`). The tunnel shows the running flag after the remote end has answered, and keeps it while the remote end answers the probes. GRE is stateless: if one end becomes unreachable, the running flag is removed after the keepalive timeouts (about 100 s with the default), and traffic into the tunnel is dropped until the remote end is reachable again.
+:::
+
+Both ends now have a tunnel, but need addresses to route over it. Give the tunnel ends addresses from a private range, and add routes to the remote site's local network. On the Site1 router:
+
+```ros
+/ip/address/add address=172.16.1.1/30 interface=myGre
+/ip/route/add dst-address=10.1.202.0/24 gateway=172.16.1.2
+```
+
+On the Site2 router:
+
+```ros
+/ip/address/add address=172.16.1.2/30 interface=myGre
+/ip/route/add dst-address=10.1.101.0/24 gateway=172.16.1.1
+```
+
+At this point both sites have Layer 3 connectivity over the GRE tunnel. Verify it end to end — the ping to the far tunnel address must be answered and the tunnel must show the `R` flag on both sites:
+
+```ros
+/ping 172.16.1.2
+/interface/gre/print where name=myGre
+```
+
+## Example: connect IPv4 networks over IPv6
+
+This example connects the IPv4 LANs of two sites that have IPv6-only internet connections, for example when the ISP gives no public IPv4 address. The tunnel runs over IPv6 (`/interface/gre6`) and carries IPv4 between the sites.
+
+Both routers run the default configuration. **Site1** has the LAN **192.168.1.0/24**, **Site2** the LAN **192.168.2.0/24**. Each router has a global IPv6 address that the other site can reach: **2001:db8:1::1** at Site1 and **2001:db8:2::1** at Site2. Check the addresses with `/ipv6/address/print` and substitute your own.
+
+On the Site1 router, create the tunnel, give it an address and route the Site2 LAN into it:
+
+```ros
+/interface/gre6/add name=gre-site2 local-address=2001:db8:1::1 \
+    remote-address=2001:db8:2::1
+/ip/address/add address=172.16.1.1/30 interface=gre-site2
+/ip/route/add dst-address=192.168.2.0/24 gateway=172.16.1.2
+```
+
+On the Site2 router, do the same in the other direction:
+
+```ros
+/interface/gre6/add name=gre-site1 local-address=2001:db8:2::1 \
+    remote-address=2001:db8:1::1
+/ip/address/add address=172.16.1.2/30 interface=gre-site1
+/ip/route/add dst-address=192.168.1.0/24 gateway=172.16.1.1
+```
+
+The default firewall needs no change. Both ends send keepalives, and the firewall accepts the GRE packets of the remote end as replies to the connection that the router itself started. The tunnel interface is in neither the `WAN` nor the `LAN` interface list. So the default firewall forwards new connections between the two LANs in both directions, and the remote site can ping the router but cannot connect to its services, such as WinBox.
+
+Check the tunnel on the Site1 router. The `R` flag shows that the remote end answers, and `actual-mtu` is 1456 on a 1500-byte path:
+
+```ros
+/interface/gre6/print where name=gre-site2
+```
+
+```text
+Flags: R - RUNNING
+0 R name="gre-site2" mtu=auto actual-mtu=1456 local-address=2001:db8:1::1
+    remote-address=2001:db8:2::1 keepalive=10s,10 clamp-tcp-mss=yes
+    dont-fragment=no
+```
+
+Then ping the Site2 router's LAN address from the Site1 LAN address:
+
+```ros
+/ping 192.168.2.1 src-address=192.168.1.1 count=3
+```
+
+```text
+  SEQ HOST                                     SIZE TTL TIME       STATUS      
+    0 192.168.2.1                                56  64 312us     
+    1 192.168.2.1                                56  64 322us     
+    2 192.168.2.1                                56  64 378us     
+    sent=3 received=3 packet-loss=0% min-rtt=312us avg-rtt=337us 
+   max-rtt=378us 
+```
+
+To manage the Site1 router from the Site2 LAN, add the tunnel to the `LAN` list on the Site1 router. The router then treats the remote site like its own LAN:
+
+```ros
+/interface/list/member/add list=LAN interface=gre-site2
+```
+
+If the ISP can change a site's IPv6 address, set `remote-address` to a DNS name with an AAAA record that follows the address. The router resolves the name, shows the address in `current-remote-address`, and follows the record when it changes.
+
+## Troubleshooting
+
+- **The tunnel has no running flag.** The remote end has not answered yet. Check with `/ping <remote-address>` that the tunnel endpoint is reachable, that the remote router has a matching tunnel with `remote-address` pointing back, and that the tunnel has `local-address` set correctly. The running flag appears only after the remote end responds.
+- **Traffic through the tunnel is lost.** GRE is stateless: when the remote end is unreachable, the router keeps sending tunneled traffic into the tunnel and it is dropped. Check the reachability of `remote-address`, and compare the tunnel's `actual-mtu` against the path MTU between the sites (an MTU mismatch drops oversized packets).
+- **The tunnel is up but no traffic passes between the sites.** The WAN firewalls between the sites must allow GRE (IP protocol 47) between the two tunnel endpoints — and the IPsec ports if the tunnel has an `ipsec-secret` — and the tunneled traffic must not be NATed.
+- **The remote end's address changed.** Update `remote-address` on the other end, or set it to a DNS name that follows the address. The router resolves the name and shows the address in `current-remote-address`.
+- **Non-IP traffic does not go through.** GRE is a routed tunnel and carries only IP and IPv6 packets. To bridge Ethernet frames over an IP network, use [EoIP](/docs/virtual-private-networks/eoip).

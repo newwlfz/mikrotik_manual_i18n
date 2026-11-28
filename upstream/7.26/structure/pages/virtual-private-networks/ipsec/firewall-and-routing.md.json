@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "virtual-private-networks/ipsec/firewall-and-routing.md",
+  "source_url": "https://manual.mikrotik.com/docs/virtual-private-networks/ipsec/firewall-and-routing.md",
+  "html_url": "https://manual.mikrotik.com/docs/virtual-private-networks/ipsec/firewall-and-routing",
+  "md_sha256": "4aacfe88152f72df5df16c806728c387539665c08127d26feaec5af400c74670",
+  "html_sha256": "2d5b247c2e94637021164a997a1aa50c8cbaf4b5943e32fc156b6434e35ffe55",
+  "body": {
+    "html": {
+      "lists": 3,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 19,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 10,
+      "listItems": 10,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

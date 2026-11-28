@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "cli-reference/system/backup/save.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/backup/save.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/cli-reference/system/backup/save",
+  "md_sha256": "a17f87835a6183ddb6fe266a750de45cb1932a7f5fb9f12b836134fc86b9ff01",
+  "html_sha256": "51875c6cd013d2ca3b9394df919aad12f963e324478d7f243b67b56002e6a6c3",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

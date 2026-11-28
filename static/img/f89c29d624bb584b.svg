@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 2365 1760 260" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#212121"/></marker><marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#868e96"/></marker><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3f3fc"/><stop offset="1" stop-color="#fcfcff"/></linearGradient></defs>
+<rect x="20" y="2365" width="1760" height="260" fill="#fff"/>
+<rect x="50.0" y="2492.0" width="180" height="56" rx="28.0" fill="#a5dca5" stroke="#3f9f3f" stroke-width="3"/>
+<text x="140" y="2512.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">PHYSICAL</text>
+<text x="140" y="2527.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">IN-INTERFACE</text>
+<polygon points="290.0,2520 390,2490.0 490.0,2520 390,2550.0" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="390" y="2513.4" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">HW</text>
+<text x="390" y="2526.6" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">OFFLOADED?</text>
+<rect x="280.0" y="2371.0" width="220" height="48" fill="#f8f9fa" stroke="#212121" stroke-width="2"/>
+<text x="390" y="2388.4" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">SWITCH CHIP</text>
+<text x="390" y="2401.6" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">(BRIDGE, L3HW)</text>
+<polygon points="550.0,2520 660,2490.0 770.0,2520 660,2550.0" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="660" y="2513.4" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">FASTTRACKED OR</text>
+<text x="660" y="2526.6" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">FASTPATH ALLOWED?</text>
+<rect x="820.0" y="2416.0" width="260" height="48" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="950" y="2433.4" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">FASTPATH HANDLER</text>
+<text x="950" y="2446.6" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">(IPv4, IPv6, BRIDGE, MPLS)</text>
+<rect x="820.0" y="2576.0" width="260" height="48" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="950" y="2593.4" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">SLOW PATH</text>
+<text x="950" y="2606.6" font-size="11" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">(FULL PACKET FLOW)</text>
+<rect x="1215.0" y="2498.0" width="170" height="44" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="1300" y="2520.0" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">INTERFACE HTB</text>
+<rect x="1490.0" y="2492.0" width="180" height="56" rx="28.0" fill="#ffb3b3" stroke="#c92a2a" stroke-width="3"/>
+<text x="1580" y="2512.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">PHYSICAL</text>
+<text x="1580" y="2527.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">OUT-INTERFACE</text>
+<polyline points="230,2520 288,2520" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="390,2490 390,2419" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<text x="402" y="2458.0" font-size="11" font-weight="normal" text-anchor="start" dominant-baseline="central" fill="#212121">YES</text>
+<polyline points="500,2395 1580,2395 1580,2490" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="490,2520 548,2520" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<text x="518" y="2506.0" font-size="11" font-weight="normal" text-anchor="middle" dominant-baseline="central" fill="#212121">NO</text>
+<polyline points="700,2498 818,2440" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<text x="752" y="2458.0" font-size="11" font-weight="normal" text-anchor="middle" dominant-baseline="central" fill="#212121">YES</text>
+<polyline points="700,2542 818,2600" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<text x="752" y="2582.0" font-size="11" font-weight="normal" text-anchor="middle" dominant-baseline="central" fill="#212121">NO</text>
+<polyline points="1080,2440 1215,2508" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="1080,2600 1215,2532" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="1385,2520 1488,2520" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+</svg>

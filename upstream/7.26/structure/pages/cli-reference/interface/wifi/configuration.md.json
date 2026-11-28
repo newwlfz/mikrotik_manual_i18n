@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/wifi/configuration.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/configuration.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/wifi/configuration",
+  "md_sha256": "27e21252de3b5790af2d65a2829d60aae1eb3c4ed76a1cb64f54dda54b2959f2",
+  "html_sha256": "1c77a915567630f288ce070b189c3cbb58476f650f9dba4daf888fd6ffc6d37d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

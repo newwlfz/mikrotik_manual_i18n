@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "bridging-and-switching/macvlan.md",
+  "source_url": "https://manual.mikrotik.com/docs/bridging-and-switching/macvlan.md",
+  "html_url": "https://manual.mikrotik.com/docs/bridging-and-switching/macvlan",
+  "md_sha256": "9392aa449e4e55e4927675ba177dfe9577f297644ecde738f47ffe368530156b",
+  "html_sha256": "2c2933d90eee84729031917900f93675b2fcd1865ec24e5b441abb68fad7d991",
+  "body": {
+    "html": {
+      "lists": 4,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 33,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 9,
+      "listItems": 9,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

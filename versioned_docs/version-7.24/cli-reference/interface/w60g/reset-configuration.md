@@ -1,0 +1,12 @@
+---
+title: "reset-configuration"
+source: https://manual.mikrotik.com/docs/7.24/cli-reference/interface/w60g/reset-configuration
+captured_at: '2026-11-28T10:19:39.818Z'
+---
+
+-----------
+
+## interface/w60g/reset-configuration 
+**Syscap:** 60ghz
+**Package:** wireless-rep
+**Type:** Command

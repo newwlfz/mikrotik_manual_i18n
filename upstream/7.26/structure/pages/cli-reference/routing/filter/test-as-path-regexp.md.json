@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/routing/filter/test-as-path-regexp.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/routing/filter/test-as-path-regexp.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/routing/filter/test-as-path-regexp",
+  "md_sha256": "5807fde3ecf31b18d52b717d369a0f0db1a1ce61d5ab60a0e014e0feb652076c",
+  "html_sha256": "a061d209e828cf167f5d5dbb7a8278a6e57934457c434d0dee2a02146e01732d",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

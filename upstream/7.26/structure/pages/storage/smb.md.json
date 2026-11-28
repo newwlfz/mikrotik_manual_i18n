@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "storage/smb.md",
+  "source_url": "https://manual.mikrotik.com/docs/storage/smb.md",
+  "html_url": "https://manual.mikrotik.com/docs/storage/smb",
+  "md_sha256": "ee56000bfd233974adf197f100029f2e1ec016d9d51db210340d24134b837ea4",
+  "html_sha256": "f5b388dd593389dc85e545e8364c8a2880c3bcac830a58ce7c0d6d240a78e5f2",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 28,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 3,
+      "listItems": 3,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

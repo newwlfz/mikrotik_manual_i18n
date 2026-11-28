@@ -1,0 +1,22 @@
+---
+title: "Documentation updates - June 26, 2026"
+date: 2026-06-26T00:00:00.000Z
+slug: /changelog-2026-06-26
+source: https://manual.mikrotik.com/changelog/changelog-2026-06-26
+captured_at: '2026-11-28T10:15:48.545Z'
+tags:
+  - label: "Documentation changelog"
+    permalink: changelog
+---
+
+# Documentation updates - June 26, 2026
+
+June 26, 2026
+
+Summary of documentation changes made on June 26, 2026.
+
+## Mobile Networking
+
+-   **[LTE/5G Interface](/docs/mobile-networking/lte-5g)**: Added the `show-capabilities` command documentation, which displays modem features such as supported bands, RAT modes, APN limits, and passthrough support.
+-   **[LTE/5G Interface](/docs/mobile-networking/lte-5g)**: Clarified that the `network-mode` parameter requires both `lte` and `5g` to be selected for 5G NSA; selecting `5g` alone only connects to 5G SA.
+-   **[LTE/5G Interface](/docs/mobile-networking/lte-5g)**: Rewrote the monitoring section with updated `/interface/lte/monitor` output example showing cell-level data and modem metadata.

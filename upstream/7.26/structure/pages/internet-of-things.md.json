@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "internet-of-things.md",
+  "source_url": "https://manual.mikrotik.com/docs/internet-of-things.md",
+  "html_url": "https://manual.mikrotik.com/docs/internet-of-things",
+  "md_sha256": "c12f45abdf6d4da51962d337d90687232b8c174fb04e40d567019aaf35c80047",
+  "html_sha256": "4a8c7a180a48c93b15ddfcdd192e448a482696a528bd8acd7d5a61163fdf1c5e",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "virtual-private-networks/gre.md",
+  "source_url": "https://manual.mikrotik.com/docs/virtual-private-networks/gre.md",
+  "html_url": "https://manual.mikrotik.com/docs/virtual-private-networks/gre",
+  "md_sha256": "58870b32f38aeae73edc95a31662fa18fb335616a06ba7a0a0bb090c5946ed65",
+  "html_sha256": "2741e5fd40f219e41ec2f00bf76c324ce3afb365b491062cc1e644d0ce7834df",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 30,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

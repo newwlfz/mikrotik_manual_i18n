@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/tool/fetch.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/tool/fetch.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/tool/fetch",
+  "md_sha256": "d5d2a8bcc41770b67b109e9457d1fe96db2442033bb304c9a6847ec3d576414d",
+  "html_sha256": "d4c61025e9a1fc38ccec26744c7ac196f4c9f4f4d234e92bb698ab3c92ed0ce9",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 21,
+      "listItems": 21,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 21,
+      "listItems": 21,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

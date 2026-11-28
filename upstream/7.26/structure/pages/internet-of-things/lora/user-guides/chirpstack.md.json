@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "internet-of-things/lora/user-guides/chirpstack.md",
+  "source_url": "https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides/chirpstack.md",
+  "html_url": "https://manual.mikrotik.com/docs/internet-of-things/lora/user-guides/chirpstack",
+  "md_sha256": "3d27ddd418aaf0db4dcb49f4f743aa8a6235969c146dc4d119ed0cd7ad2c95dd",
+  "html_sha256": "7c4b64479cbc367e9e963c363a83ef80df9ccb861de223daeeba96bfe2798836",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 2,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 2,
+      "listItems": 2,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/dhcp-client/renew.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-client/renew.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/dhcp-client/renew",
+  "md_sha256": "8fbe93b897a5ac3a3943a5caf961a745cd55a3be17ade839b60fbcdb0b84c05e",
+  "html_sha256": "e142455cbe8c7cddcd0d1e1e09922d4cf0b65586916e1dda96c65467c4954ee6",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

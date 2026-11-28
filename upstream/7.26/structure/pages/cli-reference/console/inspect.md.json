@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/console/inspect.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/console/inspect.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/console/inspect",
+  "md_sha256": "591378e497bb08281e6fe94dddab181ec9fc898190b2955dba83091784ee1987",
+  "html_sha256": "6e5f0d71c3fd7b2d2210bce649c11e55c6cf0397773b13d76ed97b1c5dbb1f13",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ip/hotspot/cookie.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/cookie.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ip/hotspot/cookie",
+  "md_sha256": "3ba6a86d49e90ae66d2112c54e749fa4cae1125a815a51fcfebdca6f9f22823e",
+  "html_sha256": "4d058c29ef0b77559d057c568195c5504e1512522e79bf49e7a2ab0d5635ef3a",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 3,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

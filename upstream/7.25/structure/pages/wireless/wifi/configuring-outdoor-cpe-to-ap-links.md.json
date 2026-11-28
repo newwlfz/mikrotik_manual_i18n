@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.25",
+  "local_path": "wireless/wifi/configuring-outdoor-cpe-to-ap-links.md",
+  "source_url": "https://manual.mikrotik.com/docs/7.25/wireless/wifi/configuring-outdoor-cpe-to-ap-links.md",
+  "html_url": "https://manual.mikrotik.com/docs/7.25/wireless/wifi/configuring-outdoor-cpe-to-ap-links",
+  "md_sha256": "712d53a1f96c9656acf921586b38e23b31cb6633defcc516de015650ed078482",
+  "html_sha256": "f16699036765470c05d8170fe55874d2e496224df5a59f35ea3e1eebe8ed3390",
+  "body": {
+    "html": {
+      "lists": 8,
+      "listItems": 29,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 30,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 29,
+      "listItems": 29,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 29,
+      "listItems": 29,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

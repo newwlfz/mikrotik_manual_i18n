@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "network-management/socks.md",
+  "source_url": "https://manual.mikrotik.com/docs/network-management/socks.md",
+  "html_url": "https://manual.mikrotik.com/docs/network-management/socks",
+  "md_sha256": "7838769cf27bd9aaec5a2abc8800608993e59f3a2ecfed21a08fa999c56957e5",
+  "html_sha256": "792497cdf63e9e17d51872df40b9e4695596f2c8540e68cdf9d5449e33118c6c",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 16,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

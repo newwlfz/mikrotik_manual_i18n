@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/container/mounts.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/container/mounts.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/container/mounts",
+  "md_sha256": "0956c2695c68e77ff46ca90a8d2c82fd192bac080d64e945b3698f73b9ea6559",
+  "html_sha256": "b7941719c2ad06c57cac8f1d570991ab63746715b50995f1cc64a0a6fb73ea64",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 2,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

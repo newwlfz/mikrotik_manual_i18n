@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/certificate/crl/download.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/certificate/crl/download.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/certificate/crl/download",
+  "md_sha256": "cdaf09b8d5753ecfda6ada3bd6b99278fe1864a579ad89c920ba1ed8885de684",
+  "html_sha256": "8b6e878162b8454696ef7ec6a79a5ba28805540adb95293bda176bdcbbde8560",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

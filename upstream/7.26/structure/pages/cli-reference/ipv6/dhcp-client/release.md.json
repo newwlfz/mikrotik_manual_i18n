@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/ipv6/dhcp-client/release.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/ipv6/dhcp-client/release.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/ipv6/dhcp-client/release",
+  "md_sha256": "5b539296a0fbf0f26e28e5a1f4b8ae2f533c0c0aadad43007ad4d429fa2a1c96",
+  "html_sha256": "4dddf1424f5b608b9ba6833b6559c55e04a9f7b8ce0c2c75aafbf4d54a12d432",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

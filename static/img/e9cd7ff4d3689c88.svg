@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 1540 1760 485" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#212121"/></marker><marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#868e96"/></marker><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3f3fc"/><stop offset="1" stop-color="#fcfcff"/></linearGradient></defs>
+<rect x="20" y="1540" width="1760" height="485" fill="#fff"/>
+<rect x="30.0" y="1553.0" width="180" height="54" fill="#e3e3e3" stroke="#212121" stroke-width="2.5"/>
+<line x1="42.0" y1="1553.0" x2="42.0" y2="1607.0" stroke="#212121" stroke-width="2.5"/>
+<line x1="198.0" y1="1553.0" x2="198.0" y2="1607.0" stroke="#212121" stroke-width="2.5"/>
+<text x="120" y="1580.0" font-size="14" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">PREROUTING</text>
+<line x1="232" y1="1574" x2="262" y2="1574" stroke="#212121" stroke-width="2.5"/><line x1="232" y1="1586" x2="262" y2="1586" stroke="#212121" stroke-width="2.5"/>
+<rect x="300.0" y="1553.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="375" y="1580.0" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">HOTSPOT-IN</text>
+<polyline points="450,1580 475,1580" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="475.0" y="1553.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="550" y="1572.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">RAW</text>
+<text x="550" y="1587.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">PREROUTING</text>
+<polyline points="625,1580 650,1580" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="650.0" y="1553.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="725" y="1572.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">CONNECTION</text>
+<text x="725" y="1587.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">TRACKING</text>
+<polyline points="800,1580 825,1580" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="825.0" y="1553.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="900" y="1572.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">MANGLE</text>
+<text x="900" y="1587.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">PREROUTING</text>
+<polyline points="975,1580 1000,1580" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1000.0" y="1553.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="1075" y="1580.0" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">DST-NAT</text>
+<rect x="30.0" y="1635.0" width="180" height="54" fill="#e3e3e3" stroke="#212121" stroke-width="2.5"/>
+<line x1="42.0" y1="1635.0" x2="42.0" y2="1689.0" stroke="#212121" stroke-width="2.5"/>
+<line x1="198.0" y1="1635.0" x2="198.0" y2="1689.0" stroke="#212121" stroke-width="2.5"/>
+<text x="120" y="1653.6" font-size="14" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">ROUTING</text>
+<text x="120" y="1670.4" font-size="14" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">DECISION</text>
+<line x1="232" y1="1656" x2="262" y2="1656" stroke="#212121" stroke-width="2.5"/><line x1="232" y1="1668" x2="262" y2="1668" stroke="#212121" stroke-width="2.5"/>
+<polygon points="314.0,1635.0 450.0,1635.0 436.0,1689.0 300.0,1689.0" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="375" y="1654.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">MANGLE</text>
+<text x="375" y="1669.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">ROUTING-MARK</text>
+<polyline points="450,1662 475,1662" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<polygon points="489.0,1635.0 625.0,1635.0 611.0,1689.0 475.0,1689.0" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="550" y="1654.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">VRF</text>
+<text x="550" y="1669.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">LOOKUP</text>
+<polyline points="625,1662 650,1662" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<polygon points="664.0,1635.0 800.0,1635.0 786.0,1689.0 650.0,1689.0" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="725" y="1654.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">VRF</text>
+<text x="725" y="1669.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">UNREACHABLE</text>
+<polyline points="800,1662 825,1662" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<polygon points="839.0,1635.0 975.0,1635.0 961.0,1689.0 825.0,1689.0" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="900" y="1662.0" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">LOCAL</text>
+<polyline points="975,1662 1000,1662" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<polygon points="1014.0,1635.0 1150.0,1635.0 1136.0,1689.0 1000.0,1689.0" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="1075" y="1654.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">ROUTING</text>
+<text x="1075" y="1669.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">RULES</text>
+<polyline points="1150,1662 1175,1662" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<polygon points="1189.0,1635.0 1325.0,1635.0 1311.0,1689.0 1175.0,1689.0" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="1250" y="1654.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">MAIN</text>
+<text x="1250" y="1669.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">TABLE</text>
+<rect x="30.0" y="1717.0" width="180" height="54" fill="#e3e3e3" stroke="#212121" stroke-width="2.5"/>
+<line x1="42.0" y1="1717.0" x2="42.0" y2="1771.0" stroke="#212121" stroke-width="2.5"/>
+<line x1="198.0" y1="1717.0" x2="198.0" y2="1771.0" stroke="#212121" stroke-width="2.5"/>
+<text x="120" y="1744.0" font-size="14" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">INPUT</text>
+<line x1="232" y1="1738" x2="262" y2="1738" stroke="#212121" stroke-width="2.5"/><line x1="232" y1="1750" x2="262" y2="1750" stroke="#212121" stroke-width="2.5"/>
+<rect x="300.0" y="1717.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="375" y="1736.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">MANGLE</text>
+<text x="375" y="1751.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">INPUT</text>
+<polyline points="450,1744 475,1744" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="475.0" y="1717.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="550" y="1736.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">FILTER</text>
+<text x="550" y="1751.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">INPUT</text>
+<polyline points="625,1744 650,1744" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="650.0" y="1717.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="725" y="1736.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">TRAFFIC</text>
+<text x="725" y="1751.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">FLOW</text>
+<polyline points="800,1744 825,1744" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="825.0" y="1717.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="900" y="1736.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">SRC-NAT</text>
+<text x="900" y="1751.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">(NAT INPUT)</text>
+<polyline points="975,1744 1000,1744" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1000.0" y="1717.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="1075" y="1736.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">HTB GLOBAL</text>
+<text x="1075" y="1751.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">(QUEUE TREE)</text>
+<polyline points="1150,1744 1175,1744" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1175.0" y="1717.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="1250" y="1736.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">SIMPLE</text>
+<text x="1250" y="1751.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">QUEUES</text>
+<rect x="30.0" y="1799.0" width="180" height="54" fill="#e3e3e3" stroke="#212121" stroke-width="2.5"/>
+<line x1="42.0" y1="1799.0" x2="42.0" y2="1853.0" stroke="#212121" stroke-width="2.5"/>
+<line x1="198.0" y1="1799.0" x2="198.0" y2="1853.0" stroke="#212121" stroke-width="2.5"/>
+<text x="120" y="1826.0" font-size="14" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">FORWARD</text>
+<line x1="232" y1="1820" x2="262" y2="1820" stroke="#212121" stroke-width="2.5"/><line x1="232" y1="1832" x2="262" y2="1832" stroke="#212121" stroke-width="2.5"/>
+<polygon points="314.0,1799.0 450.0,1799.0 436.0,1853.0 300.0,1853.0" fill="#fff" stroke="#212121" stroke-width="2" stroke-dasharray="3 3"/>
+<text x="375" y="1818.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">BRIDGE</text>
+<text x="375" y="1833.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">DECISION</text>
+<polyline points="450,1826 475,1826" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<polygon points="489.0,1799.0 625.0,1799.0 611.0,1853.0 475.0,1853.0" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="550" y="1826.0" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">TTL=TTL-1</text>
+<polyline points="625,1826 650,1826" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="650.0" y="1799.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="725" y="1818.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">MANGLE</text>
+<text x="725" y="1833.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">FORWARD</text>
+<polyline points="800,1826 825,1826" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="825.0" y="1799.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="900" y="1818.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">FILTER</text>
+<text x="900" y="1833.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">FORWARD</text>
+<polyline points="975,1826 1000,1826" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1000.0" y="1799.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="1075" y="1818.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">TRAFFIC</text>
+<text x="1075" y="1833.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">FLOW</text>
+<rect x="30.0" y="1881.0" width="180" height="54" fill="#e3e3e3" stroke="#212121" stroke-width="2.5"/>
+<line x1="42.0" y1="1881.0" x2="42.0" y2="1935.0" stroke="#212121" stroke-width="2.5"/>
+<line x1="198.0" y1="1881.0" x2="198.0" y2="1935.0" stroke="#212121" stroke-width="2.5"/>
+<text x="120" y="1908.0" font-size="14" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">OUTPUT</text>
+<line x1="232" y1="1902" x2="262" y2="1902" stroke="#212121" stroke-width="2.5"/><line x1="232" y1="1914" x2="262" y2="1914" stroke="#212121" stroke-width="2.5"/>
+<polygon points="314.0,1881.0 450.0,1881.0 436.0,1935.0 300.0,1935.0" fill="#fff" stroke="#212121" stroke-width="2" stroke-dasharray="3 3"/>
+<text x="375" y="1900.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">BRIDGE</text>
+<text x="375" y="1915.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">DECISION</text>
+<polyline points="450,1908 475,1908" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="475.0" y="1881.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="550" y="1900.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">RAW</text>
+<text x="550" y="1915.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">OUTPUT</text>
+<polyline points="625,1908 650,1908" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="650.0" y="1881.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="725" y="1900.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">CONNECTION</text>
+<text x="725" y="1915.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">TRACKING</text>
+<polyline points="800,1908 825,1908" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="825.0" y="1881.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="900" y="1900.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">MANGLE</text>
+<text x="900" y="1915.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">OUTPUT</text>
+<polyline points="975,1908 1000,1908" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1000.0" y="1881.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="1075" y="1900.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">DST-NAT</text>
+<text x="1075" y="1915.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">(NAT OUTPUT)</text>
+<polyline points="1150,1908 1175,1908" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1175.0" y="1881.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="1250" y="1900.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">FILTER</text>
+<text x="1250" y="1915.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">OUTPUT</text>
+<polyline points="1325,1908 1350,1908" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1350.0" y="1881.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="1425" y="1900.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">TRAFFIC</text>
+<text x="1425" y="1915.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">FLOW</text>
+<polyline points="1500,1908 1525,1908" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<polygon points="1539.0,1881.0 1675.0,1881.0 1661.0,1935.0 1525.0,1935.0" fill="#fff" stroke="#212121" stroke-width="2" stroke-dasharray="3 3"/>
+<text x="1600" y="1900.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">ROUTING</text>
+<text x="1600" y="1915.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">ADJUSTMENT</text>
+<rect x="30.0" y="1963.0" width="180" height="54" fill="#e3e3e3" stroke="#212121" stroke-width="2.5"/>
+<line x1="42.0" y1="1963.0" x2="42.0" y2="2017.0" stroke="#212121" stroke-width="2.5"/>
+<line x1="198.0" y1="1963.0" x2="198.0" y2="2017.0" stroke="#212121" stroke-width="2.5"/>
+<text x="120" y="1990.0" font-size="14" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">POSTROUTING</text>
+<line x1="232" y1="1984" x2="262" y2="1984" stroke="#212121" stroke-width="2.5"/><line x1="232" y1="1996" x2="262" y2="1996" stroke="#212121" stroke-width="2.5"/>
+<rect x="300.0" y="1963.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="375" y="1982.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">MANGLE</text>
+<text x="375" y="1997.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">POSTROUTING</text>
+<polyline points="450,1990 475,1990" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="475.0" y="1963.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="550" y="1990.0" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">SRC-NAT</text>
+<polyline points="625,1990 650,1990" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="650.0" y="1963.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="725" y="1990.0" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">HOTSPOT-OUT</text>
+<polyline points="800,1990 825,1990" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="825.0" y="1963.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="900" y="1982.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">HTB GLOBAL</text>
+<text x="900" y="1997.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">(QUEUE TREE)</text>
+<polyline points="975,1990 1000,1990" fill="none" stroke="#212121" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1000.0" y="1963.0" width="150" height="54" fill="#fff" stroke="#212121" stroke-width="2"/>
+<text x="1075" y="1982.8" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">SIMPLE</text>
+<text x="1075" y="1997.2" font-size="12" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="#212121">QUEUES</text>
+</svg>

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/interface/bridge/filter.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/interface/bridge/filter.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/interface/bridge/filter",
+  "md_sha256": "960be5ba39374607028e4f9ed8eed8316bdb2cafa17f06ca3cae05a84f1ab51a",
+  "html_sha256": "9eebd92525200d80caf7b1c722428cb06986960bd3f99a267e19aae6d0155107",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 1,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

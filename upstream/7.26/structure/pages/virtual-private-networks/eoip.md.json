@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "virtual-private-networks/eoip.md",
+  "source_url": "https://manual.mikrotik.com/docs/virtual-private-networks/eoip.md",
+  "html_url": "https://manual.mikrotik.com/docs/virtual-private-networks/eoip",
+  "md_sha256": "9d473d25afdfff328bf2fe27500669f9bcde599a1014610d3bbf5c5cb36d5f0d",
+  "html_sha256": "a99df5fa0824ded98a183e9f21de39465e90bc54079d63df710d996d2928e161",
+  "body": {
+    "html": {
+      "lists": 1,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 64,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 5,
+      "listItems": 5,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,54 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "virtual-private-networks/pppoe.md",
+  "source_url": "https://manual.mikrotik.com/docs/virtual-private-networks/pppoe.md",
+  "html_url": "https://manual.mikrotik.com/docs/virtual-private-networks/pppoe",
+  "md_sha256": "6b48ae3a35097d2347ad094fab88e2096f75421964bb846c2a86b04415dbef77",
+  "html_sha256": "f78b06529326fe6ef0cbf9b4b37b9ceffbc1442bcdee6eabef2272b2442bf336",
+  "body": {
+    "html": {
+      "lists": 8,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 22,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 26,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 26,
+      "listItems": 26,
+      "br": 0,
+      "details": 0,
+      "tables": 1,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [
+    {
+      "index": 0,
+      "rows": 3,
+      "cols": 2,
+      "official_wide": false,
+      "md_wide": false,
+      "cells": []
+    }
+  ],
+  "unaligned": []
+}

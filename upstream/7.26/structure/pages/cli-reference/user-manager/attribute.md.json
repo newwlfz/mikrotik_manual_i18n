@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "cli-reference/user-manager/attribute.md",
+  "source_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/attribute.md",
+  "html_url": "https://manual.mikrotik.com/docs/cli-reference/user-manager/attribute",
+  "md_sha256": "2f995aee9f0c3cf86d22d426419d700d99bfb0c6e58ffbb7ecc1e64a5c626585",
+  "html_sha256": "f102cfa43c033c843cd794e5da6abd01a49a2f80626edaf4bdbe9d3f31d0b444",
+  "body": {
+    "html": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 2,
+      "details": 0,
+      "tables": 3,
+      "sup": 0,
+      "code": 1,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 0,
+      "listItems": 0,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "cli",
+  "tables": [],
+  "unaligned": []
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "version": "7.26",
+  "local_path": "management-tools/flashfig.md",
+  "source_url": "https://manual.mikrotik.com/docs/management-tools/flashfig.md",
+  "html_url": "https://manual.mikrotik.com/docs/management-tools/flashfig",
+  "md_sha256": "bec499e4e44b1472f6124a700610724ee5b60ce946b83f2f2ef664cae9c1bd87",
+  "html_sha256": "93bf1bb4ec7f7ab8e3ad6dff78448468baf02f2f1bc232697416dc2a40a85313",
+  "body": {
+    "html": {
+      "lists": 10,
+      "listItems": 18,
+      "br": 1,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 5,
+      "wideTables": 0
+    },
+    "md": {
+      "lists": 18,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "local": {
+      "lists": 18,
+      "listItems": 18,
+      "br": 0,
+      "details": 0,
+      "tables": 0,
+      "sup": 0,
+      "code": 0,
+      "wideTables": 0
+    },
+    "flags": {}
+  },
+  "kind": "page",
+  "tables": [],
+  "unaligned": []
+}
